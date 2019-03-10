@@ -1,0 +1,173 @@
+{
+	# Blocks #
+    
+    # World
+    
+    "block.embellishcraft.basalt_block": "Basalt",
+    "block.embellishcraft.slate_block": "Slate",
+     
+     # Rocks
+    
+    "block.embellishcraft.basalt_cobblestone_block": "Basalt Cobblestone",
+    "block.embellishcraft.slate_cobblestone_block": "Slate Cobblestone",
+    
+    # Bricks
+    
+    "block.embellishcraft.basalt_brick_block": "Basalt Bricks",
+    "block.embellishcraft.basalt_brick_stairs": "Basalt Bricks Stairs",
+    "block.embellishcraft.basalt_brick_slab": "Basalt Bricks Slab",
+    "block.embellishcraft.basalt_brick_wall": "Basalt Bricks Wall",
+    
+    "block.embellishcraft.dark_brick_block": "Dark Bricks",
+    "block.embellishcraft.dark_brick_stairs": "Dark Bricks Stairs",
+    "block.embellishcraft.dark_brick_slab": "Dark Bricks Slab",
+    "block.embellishcraft.dark_brick_wall": "Dark Bricks Wall",
+    
+    "block.embellishcraft.diorite_brick_block": "Diorite Bricks",
+    "block.embellishcraft.diorite_brick_stairs": "Diorite Bricks Stairs",
+    "block.embellishcraft.diorite_brick_slab": "Diorite Bricks Slab",
+    "block.embellishcraft.diorite_brick_wall": "Diorite Bricks Wall",
+    
+    "block.embellishcraft.old_brick_block": "Old Bricks",
+    "block.embellishcraft.old_brick_stairs": "Old Bricks Stairs",
+    "block.embellishcraft.old_brick_slab": "Old Bricks Slab",
+    "block.embellishcraft.old_brick_wall": "Old Bricks Wall",
+    
+    "block.embellishcraft.sandstone_brick_block": "Sandstone Bricks",
+    "block.embellishcraft.sandstone_brick_stairs": "Sandstone Bricks Stairs",
+    "block.embellishcraft.sandstone_brick_slab": "Sandstone Bricks Slab",
+    "block.embellishcraft.sandstone_brick_wall": "Sandstone Bricks Wall",
+    
+    "block.embellishcraft.slate_brick_block": "Slate Bricks",
+    "block.embellishcraft.slate_brick_stairs": "Slate Bricks Stairs",
+    "block.embellishcraft.slate_brick_slab": "Slate Bricks Slab",
+    "block.embellishcraft.slate_brick_wall": "Slate Bricks Wall",
+    
+    "block.embellishcraft.terracotta_brick_block": "Terracotta Bricks",
+    "block.embellishcraft.terracotta_brick_stairs": "Terracotta Bricks Stairs",
+    "block.embellishcraft.terracotta_brick_slab": "Terracotta Bricks Slab",
+    "block.embellishcraft.terracotta_brick_wall": "Terracotta Bricks Wall",
+    
+    "block.embellishcraft.weared_brick_block": "Weared Bricks",
+    "block.embellishcraft.weared_brick_stairs": "Weared Bricks Stairs",
+    "block.embellishcraft.weared_brick_slab": "Weared Bricks Slab",
+    "block.embellishcraft.weared_brick_wall": "Weared Bricks Wall",
+    
+    # Paving
+    
+    "block.embellishcraft.concrete_paving_block": "Concrete Paving",
+    "block.embellishcraft.concrete_paving_stairs": "Concrete Paving Stairs",
+    "block.embellishcraft.concrete_paving_slab": "Concrete Paving Slab",
+    "block.embellishcraft.concrete_paving_pressure_plate": "Concrete Paving Pressure Plate",
+	
+    "block.embellishcraft.damaged_paving_block": "Damaged Paving",
+    "block.embellishcraft.damaged_paving_stairs": "Damaged Paving Stairs",
+    "block.embellishcraft.damaged_paving_slab": "Damaged Paving Slab",
+    "block.embellishcraft.damaged_paving_pressure_plate": "Damaged Paving Pressure Plate",
+	
+    "block.embellishcraft.dark_concrete_paving_block": "Dark Concrete Paving",
+    "block.embellishcraft.dark_concrete_paving_stairs": "Dark Concrete Paving Stairs",
+    "block.embellishcraft.dark_concrete_paving_slab": "Dark Concrete Paving Slab",
+    "block.embellishcraft.dark_concrete_paving_pressure_plate": "Dark Concrete Paving Pressure Plate",
+	
+    "block.embellishcraft.diorite_paving_block": "Diorite Paving",
+    "block.embellishcraft.diorite_paving_stairs": "Diorite Paving Stairs",
+    "block.embellishcraft.diorite_paving_slab": "Diorite Paving Slab",
+    "block.embellishcraft.diorite_paving_pressure_plate": "Diorite Paving Pressure Plate",
+	
+    "block.embellishcraft.moist_paving_block": "Moist Paving",
+    "block.embellishcraft.moist_paving_stairs": "Moist Paving Stairs",
+    "block.embellishcraft.moist_paving_slab": "Moist Paving Slab",
+    "block.embellishcraft.moist_paving_pressure_plate": "Moist Paving Pressure Plate",
+	
+    "block.embellishcraft.polished_paving_block": "Polished Paving",
+    "block.embellishcraft.polished_paving_stairs": "Polished Paving Stairs",
+    "block.embellishcraft.polished_paving_slab": "Polished Paving Slab",
+    "block.embellishcraft.polished_paving_pressure_plate": "Polished Paving Pressure Plate",
+	
+    "block.embellishcraft.slate_paving_block": "Slate Paving",
+    "block.embellishcraft.slate_paving_stairs": "Slate Paving Stairs",
+    "block.embellishcraft.slate_paving_slab": "Slate Paving Slab",
+    "block.embellishcraft.slate_paving_pressure_plate": "Slate Paving Pressure Plate",
+	
+	"block.embellishcraft.white_concrete_paving_block": "White Concrete Paving",
+    "block.embellishcraft.white_concrete_paving_stairs": "White Concrete Paving Stairs",
+    "block.embellishcraft.white_concrete_paving_slab": "White Concrete Paving Slab",
+    "block.embellishcraft.white_concrete_paving_pressure_plate": "White Concrete Paving Pressure Plate",
+    
+    # Tiles
+    
+    "block.embellishcraft.concrete_tiles_block": "Concrete Tiles",
+    "block.embellishcraft.concrete_tiles_stairs": "Concrete Tiles Stairs",
+    "block.embellishcraft.concrete_tiles_slab": "Concrete Tiles Slab",
+
+    "block.embellishcraft.skyblue_tiles_block": "Skyblue Tiles",
+    "block.embellishcraft.skyblue_tiles_stairs": "Skyblue Tiles Stairs",
+    "block.embellishcraft.skyblue_tiles_slab": "Skyblue Tiles Slab",
+    "block.embellishcraft.skyblue_tiles_pressure_plate": "Skyblue Tiles Pressure Plate",
+    
+    "block.embellishcraft.orange_tiles_block": "Orange Tiles",
+    "block.embellishcraft.orange_tiles_stairs": "Orange Tiles Stairs",
+    "block.embellishcraft.orange_tiles_slab": "Orange Tiles Slab",
+    "block.embellishcraft.orange_tiles_pressure_plate": "Orange Tiles Pressure Plate",
+    
+    "block.embellishcraft.blue_tiles_block": "Blue Tiles",
+    "block.embellishcraft.blue_tiles_stairs": "Blue Tiles Stairs",
+    "block.embellishcraft.blue_tiles_slab": "Blue Tiles Slab",
+    "block.embellishcraft.blue_tiles_pressure_plate": "Blue Tiles Pressure Plate",
+    
+    "block.embellishcraft.light_blue_tiles_block": "Light Blue Tiles",
+    "block.embellishcraft.light_blue_tiles_stairs": "Light Blue Tiles Stairs",
+    "block.embellishcraft.light_blue_tiles_slab": "Light Blue Tiles Slab",
+    "block.embellishcraft.light_blue_tiles_pressure_plate": "Light Blue Tiles Pressure Plate",
+    
+    "block.embellishcraft.red_tiles_block": "Red Tiles",
+    "block.embellishcraft.red_tiles_stairs": "Red Tiles Stairs",
+    "block.embellishcraft.red_tiles_slab": "Red Tiles Slab",
+    "block.embellishcraft.red_tiles_pressure_plate": "Red Tiles Pressure Plate",
+    
+    "block.embellishcraft.white_tiles_block": "White Tiles",
+    "block.embellishcraft.white_tiles_stairs": "White Tiles Stairs",
+    "block.embellishcraft.white_tiles_slab": "White Tiles Slab",
+    "block.embellishcraft.white_tiles_pressure_plate": "White Tiles Pressure Plate",
+    
+    "block.embellishcraft.yellow_tiles_block": "Yellow Tiles",
+    "block.embellishcraft.yellow_tiles_stairs": "Yellow Tiles Stairs",
+    "block.embellishcraft.yellow_tiles_slab": "Yellow Tiles Slab",
+    "block.embellishcraft.yellow_tiles_pressure_plate": "Yellow Tiles Pressure Plate",
+    
+    "block.embellishcraft.yellow_grey_tiles_block": "Yellow Grey Tiles",
+    "block.embellishcraft.yellow_grey_tiles_stairs": "Yellow Grey Tiles Stairs",
+    "block.embellishcraft.yellow_grey_tiles_slab": "Yellow Grey Tiles Slab",
+    "block.embellishcraft.yellow_grey_tiles_pressure_plate": "Yellow Grey Tiles Pressure Plate",
+    
+    # Wallpaper
+    
+    "block.embellishcraft.white_blue_wallpaper_block": "White Blue Wallpaper",
+    "block.embellishcraft.white_blue_wallpaper_stairs": "White Blue Wallpaper Stairs",
+    "block.embellishcraft.white_blue_wallpaper_slab": "White Blue Wallpaper Slab",
+    "block.embellishcraft.white_blue_wallpaper_plinth_block": "White Blue Wallpaper Plinth",
+    
+    "block.embellishcraft.beige_wallpaper_block": "Beige Wallpaper",
+    "block.embellishcraft.beige_wallpaper_stairs": "Beige Wallpaper Stairs",
+    "block.embellishcraft.beige_wallpaper_slab": "Beige Wallpaper Slab",
+    "block.embellishcraft.beige_wallpaper_plinth_block": "Beige Wallpaper Plinth",
+
+    "block.embellishcraft.pink_wallpaper_block": "Pink Wallpaper",
+    "block.embellishcraft.pink_wallpaper_stairs": "Pink Wallpaper Stairs",
+    "block.embellishcraft.pink_wallpaper_slab": "Pink Wallpaper Slab",
+    "block.embellishcraft.pink_wallpaper_plinth_block": "Pink Wallpaper Plinth",
+
+    "block.embellishcraft.beige_flower_wallpaper_block": "Beige Flower Wallpaper",
+    "block.embellishcraft.beige_flower_wallpaper_stairs": "Beige Flower Wallpaper Stairs",
+    "block.embellishcraft.beige_flower_wallpaper_slab": "Beige Flower Wallpaper Slab",
+    "block.embellishcraft.beige_flower_wallpaper_plinth_block": "Beige Flower Wallpaper Plinth",
+    
+    "block.embellishcraft.white_green_wallpaper_block": "White Green Wallpaper",
+    "block.embellishcraft.white_green_wallpaper_stairs": "White Green Wallpaper Stairs",
+    "block.embellishcraft.white_green_wallpaper_slab": "White Green Wallpaper Slab",
+    "block.embellishcraft.white_green_wallpaper_plinth_block": "White Green Wallpaper Plinth",
+    
+    # Creative Tabs (Item Groups) #
+    "itemGroup.embellishcraft_group": "EmbellishCraft"
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "embellishcraft:block/brick/terracotta_brick",
+        "top": "embellishcraft:block/brick/terracotta_brick",
+        "side": "embellishcraft:block/brick/terracotta_brick"
+    }
+}

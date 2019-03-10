@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "embellishcraft:block/basalt_brick_slab" },
+        "type=top": { "model": "embellishcraft:block/basalt_brick_slab_top" },
+        "type=double": { "model": "embellishcraft:block/basalt_brick_block" }
+    }
+}

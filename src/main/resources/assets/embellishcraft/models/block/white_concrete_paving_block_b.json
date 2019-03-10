@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "embellishcraft:block/paving/white_concrete_paving_b"
+    }
+}

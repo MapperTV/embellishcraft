@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": { "model": "embellishcraft:block/light_blue_tiles_pressure_plate" },
+        "powered=true": { "model": "embellishcraft:block/light_blue_tiles_pressure_plate_down" }
+    }
+}

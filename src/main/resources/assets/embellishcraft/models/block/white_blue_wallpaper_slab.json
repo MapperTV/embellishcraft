@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "embellishcraft:block/wallpaper/side_wallpaper",
+        "top": "embellishcraft:block/wallpaper/white_blue_wallpaper",
+        "side": "embellishcraft:block/wallpaper/white_blue_wallpaper"
+    }
+}
