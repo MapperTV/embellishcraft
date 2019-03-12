@@ -23,19 +23,49 @@ import tv.mapper.embellishcraft.item.ModItemGroups;
 public class ModBlocks
 {
     // World (blocks that generate in the world)
-    
+
     @ObjectHolder("embellishcraft:basalt_block")
     public static Block BASALT_BLOCK;
     @ObjectHolder("embellishcraft:slate_block")
     public static Block SLATE_BLOCK;
-    
-    // Rocks (cobblestone-like etc)
-    
+    @ObjectHolder("embellishcraft:marble_block")
+    public static Block MARBLE_BLOCK;
+
+    // Cobblestones
+
     @ObjectHolder("embellishcraft:basalt_cobblestone_block")
     public static Block BASALT_COBBLESTONE_BLOCK;
+    @ObjectHolder("embellishcraft:basalt_cobblestone_stairs")
+    public static Block BASALT_COBBLESTONE_STAIRS;
+    @ObjectHolder("embellishcraft:basalt_cobblestone_slab")
+    public static Block BASALT_COBBLESTONE_SLAB;
+    @ObjectHolder("embellishcraft:basalt_cobblestone_wall")
+    public static Block BASALT_COBBLESTONE_WALL;
+    @ObjectHolder("embellishcraft:basalt_cobblestone_pressure_plate")
+    public static Block BASALT_COBBLESTONE_PRESSURE_PLATE;
+
     @ObjectHolder("embellishcraft:slate_cobblestone_block")
     public static Block SLATE_COBBLESTONE_BLOCK;
-    
+    @ObjectHolder("embellishcraft:slate_cobblestone_stairs")
+    public static Block SLATE_COBBLESTONE_STAIRS;
+    @ObjectHolder("embellishcraft:slate_cobblestone_slab")
+    public static Block SLATE_COBBLESTONE_SLAB;
+    @ObjectHolder("embellishcraft:slate_cobblestone_wall")
+    public static Block SLATE_COBBLESTONE_WALL;
+    @ObjectHolder("embellishcraft:slate_cobblestone_pressure_plate")
+    public static Block SLATE_COBBLESTONE_PRESSURE_PLATE;
+
+    @ObjectHolder("embellishcraft:marble_cobblestone_block")
+    public static Block MARBLE_COBBLESTONE_BLOCK;
+    @ObjectHolder("embellishcraft:marble_cobblestone_stairs")
+    public static Block MARBLE_COBBLESTONE_STAIRS;
+    @ObjectHolder("embellishcraft:marble_cobblestone_slab")
+    public static Block MARBLE_COBBLESTONE_SLAB;
+    @ObjectHolder("embellishcraft:marble_cobblestone_wall")
+    public static Block MARBLE_COBBLESTONE_WALL;
+    @ObjectHolder("embellishcraft:marble_cobblestone_pressure_plate")
+    public static Block MARBLE_COBBLESTONE_PRESSURE_PLATE;
+
     // Bricks
 
     @ObjectHolder("embellishcraft:basalt_brick_block")
@@ -109,6 +139,15 @@ public class ModBlocks
     public static Block WEARED_BRICK_SLAB;
     @ObjectHolder("embellishcraft:weared_brick_wall")
     public static Block WEARED_BRICK_WALL;
+    
+    @ObjectHolder("embellishcraft:marble_brick_block")
+    public static Block MARBLE_BRICK_BLOCK;
+    @ObjectHolder("embellishcraft:marble_brick_stairs")
+    public static Block MARBLE_BRICK_STAIRS;
+    @ObjectHolder("embellishcraft:marble_brick_slab")
+    public static Block MARBLE_BRICK_SLAB;
+    @ObjectHolder("embellishcraft:marble_brick_wall")
+    public static Block MARBLE_BRICK_WALL;
 
     // Paving
 
@@ -266,9 +305,9 @@ public class ModBlocks
     public static Block YELLOW_GREY_TILES_SLAB;
     @ObjectHolder("embellishcraft:yellow_grey_tiles_pressure_plate")
     public static Block YELLOW_GREY_TILES_PRESSURE_PLATE;
-    
+
     // Wallpaper
-    
+
     @ObjectHolder("embellishcraft:white_blue_wallpaper_block")
     public static Block WHITE_BLUE_WALLPAPER_BLOCK;
     @ObjectHolder("embellishcraft:white_blue_wallpaper_stairs")
@@ -286,7 +325,7 @@ public class ModBlocks
     public static Block BEIGE_WALLPAPER_SLAB;
     @ObjectHolder("embellishcraft:beige_wallpaper_plinth_block")
     public static Block BEIGE_WALLPAPER_PLINTH_BLOCK;
-    
+
     @ObjectHolder("embellishcraft:pink_wallpaper_block")
     public static Block PINK_WALLPAPER_BLOCK;
     @ObjectHolder("embellishcraft:pink_wallpaper_stairs")
@@ -295,7 +334,7 @@ public class ModBlocks
     public static Block PINK_WALLPAPER_SLAB;
     @ObjectHolder("embellishcraft:pink_wallpaper_plinth_block")
     public static Block PINK_WALLPAPER_PLINTH_BLOCK;
-    
+
     @ObjectHolder("embellishcraft:beige_flower_wallpaper_block")
     public static Block BEIGE_FLOWER_WALLPAPER_BLOCK;
     @ObjectHolder("embellishcraft:beige_flower_wallpaper_stairs")
@@ -304,7 +343,7 @@ public class ModBlocks
     public static Block BEIGE_FLOWER_WALLPAPER_SLAB;
     @ObjectHolder("embellishcraft:beige_flower_wallpaper_plinth_block")
     public static Block BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK;
-    
+
     @ObjectHolder("embellishcraft:white_green_wallpaper_block")
     public static Block WHITE_GREEN_WALLPAPER_BLOCK;
     @ObjectHolder("embellishcraft:white_green_wallpaper_stairs")
@@ -313,21 +352,44 @@ public class ModBlocks
     public static Block WHITE_GREEN_WALLPAPER_SLAB;
     @ObjectHolder("embellishcraft:white_green_wallpaper_plinth_block")
     public static Block WHITE_GREEN_WALLPAPER_PLINTH_BLOCK;
-    
+
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        // Rocks
+        // Cobblestones
+
+        Block basalt, slate, marble;
         
-        Block basalt, slate;
-        event.getRegistry().register(basalt = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName("basalt_cobblestone_block"));
-        event.getRegistry().register(slate = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName("slate_cobblestone_block"));
+        // Todo: reorganize this mess
+        String name = "basalt_cobblestone";
+        event.getRegistry().register(basalt = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
+        event.getRegistry().register(new BlockCustomStairs(basalt.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
+        event.getRegistry().register(new BlockSlab(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
+        event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
+        event.getRegistry().register(new BlockCustomPressurePlate(BlockPressurePlate.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+
+        name = "slate_cobblestone";
+        event.getRegistry().register(slate = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
+        event.getRegistry().register(new BlockCustomStairs(slate.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
+        event.getRegistry().register(new BlockSlab(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
+        event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
+        event.getRegistry().register(new BlockCustomPressurePlate(BlockPressurePlate.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+
         
+        name = "marble_cobblestone";
+        event.getRegistry().register(marble = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
+        event.getRegistry().register(new BlockCustomStairs(marble.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
+        event.getRegistry().register(new BlockSlab(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
+        event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
+        event.getRegistry().register(new BlockCustomPressurePlate(BlockPressurePlate.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+
+
         // World
-        
+
         event.getRegistry().register(new BlockCustomRock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F), basalt).setRegistryName("basalt_block"));
         event.getRegistry().register(new BlockCustomRock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F), slate).setRegistryName("slate_block"));
-        
+        event.getRegistry().register(new BlockCustomRock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F), marble).setRegistryName("marble_block"));
+
         // Bricks
 
         createBlockWithVariants(event, "basalt_brick", true, true, true, false);
@@ -338,6 +400,8 @@ public class ModBlocks
         createBlockWithVariants(event, "slate_brick", true, true, true, false);
         createBlockWithVariants(event, "terracotta_brick", true, true, true, false);
         createBlockWithVariants(event, "weared_brick", true, true, true, false);
+        createBlockWithVariants(event, "marble_brick", true, true, true, false);
+
 
         // Paving
 
@@ -361,9 +425,9 @@ public class ModBlocks
         createBlockWithVariants(event, "white_tiles", true, true, false, true);
         createBlockWithVariants(event, "yellow_tiles", true, true, false, true);
         createBlockWithVariants(event, "yellow_grey_tiles", true, true, false, true);
-        
+
         // Wallpaper
-        
+
         createBlockWithVariants(event, "white_blue_wallpaper", true, true, false, false);
         event.getRegistry().register(new BlockUpDown(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_blue_wallpaper_plinth_block"));
         createBlockWithVariants(event, "beige_wallpaper", true, true, false, false);
@@ -379,17 +443,19 @@ public class ModBlocks
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
-    { 
+    {
         // World
-        
+
         event.getRegistry().register(new ItemBlock(BASALT_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BASALT_BLOCK.getRegistryName()));
         event.getRegistry().register(new ItemBlock(SLATE_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SLATE_BLOCK.getRegistryName()));
-        
-        // Rocks
-        
-        event.getRegistry().register(new ItemBlock(BASALT_COBBLESTONE_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BASALT_COBBLESTONE_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(SLATE_COBBLESTONE_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SLATE_COBBLESTONE_BLOCK.getRegistryName()));
-        
+        event.getRegistry().register(new ItemBlock(MARBLE_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(MARBLE_BLOCK.getRegistryName()));
+
+        // Cobblestones
+
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_COBBLESTONE_BLOCK, BASALT_COBBLESTONE_STAIRS, BASALT_COBBLESTONE_SLAB, BASALT_COBBLESTONE_WALL, BASALT_COBBLESTONE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_COBBLESTONE_BLOCK, SLATE_COBBLESTONE_STAIRS, SLATE_COBBLESTONE_SLAB, SLATE_COBBLESTONE_WALL, SLATE_COBBLESTONE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_COBBLESTONE_BLOCK, MARBLE_COBBLESTONE_STAIRS, MARBLE_COBBLESTONE_SLAB, MARBLE_COBBLESTONE_WALL, MARBLE_COBBLESTONE_PRESSURE_PLATE);
+
         // Bricks
 
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_BRICK_BLOCK, BASALT_BRICK_STAIRS, BASALT_BRICK_SLAB, BASALT_BRICK_WALL, null);
@@ -400,6 +466,8 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_BRICK_BLOCK, SLATE_BRICK_STAIRS, SLATE_BRICK_SLAB, SLATE_BRICK_WALL, null);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_BRICK_BLOCK, TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICK_SLAB, TERRACOTTA_BRICK_WALL, null);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_BRICK_BLOCK, WEARED_BRICK_STAIRS, WEARED_BRICK_SLAB, WEARED_BRICK_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_BRICK_BLOCK, MARBLE_BRICK_STAIRS, MARBLE_BRICK_SLAB, MARBLE_BRICK_WALL, null);
+
 
         // Paving
 
@@ -423,9 +491,9 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_TILES_BLOCK, WHITE_TILES_STAIRS, WHITE_TILES_SLAB, null, WHITE_TILES_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_TILES_BLOCK, YELLOW_TILES_STAIRS, YELLOW_TILES_SLAB, null, YELLOW_TILES_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_GREY_TILES_BLOCK, YELLOW_GREY_TILES_STAIRS, YELLOW_GREY_TILES_SLAB, null, YELLOW_GREY_TILES_PRESSURE_PLATE);
-        
+
         // Tests
-        
+
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_BLUE_WALLPAPER_BLOCK, WHITE_BLUE_WALLPAPER_STAIRS, WHITE_BLUE_WALLPAPER_SLAB, null, null);
         event.getRegistry().register(new ItemBlock(WHITE_BLUE_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_BLUE_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_WALLPAPER_BLOCK, BEIGE_WALLPAPER_STAIRS, BEIGE_WALLPAPER_SLAB, null, null);
@@ -436,17 +504,24 @@ public class ModBlocks
         event.getRegistry().register(new ItemBlock(BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_GREEN_WALLPAPER_BLOCK, WHITE_GREEN_WALLPAPER_STAIRS, WHITE_GREEN_WALLPAPER_SLAB, null, null);
         event.getRegistry().register(new ItemBlock(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
-        
+
     }
 
     /**
      * Registers a Block with its variants.
-     * @param event The RegistryEvent
-     * @param name The Block registry name
-     * @param stairs If true, stairs variant will be registered
-     * @param slab If true, slab variant will be registered
-     * @param wall If true, wall variant will be registered
-     * @param pressure If true, pressure plate variant will be registered
+     * 
+     * @param event
+     *            The RegistryEvent
+     * @param name
+     *            The Block registry name
+     * @param stairs
+     *            If true, stairs variant will be registered
+     * @param slab
+     *            If true, slab variant will be registered
+     * @param wall
+     *            If true, wall variant will be registered
+     * @param pressure
+     *            If true, pressure plate variant will be registered
      */
     private static void createBlockWithVariants(RegistryEvent.Register<Block> event, String name, boolean stairs, boolean slab, boolean wall, boolean pressure)
     {
@@ -466,13 +541,21 @@ public class ModBlocks
 
     /**
      * Registers a Block with its variants.
-     * @param event The RegistryEvent
-     * @param group The ItemGroup name
-     * @param block The associated block
-     * @param stairs The associated stairs (send null to no generate ItemBlock for it)
-     * @param slab The associated slab (send null to no generate ItemBlock for it)
-     * @param wall The associated wall (send null to no generate ItemBlock for it)
-     * @param pressure The associated pressure plate (send null to no generate ItemBlock for it)
+     * 
+     * @param event
+     *            The RegistryEvent
+     * @param group
+     *            The ItemGroup name
+     * @param block
+     *            The associated block
+     * @param stairs
+     *            The associated stairs (send null to no generate ItemBlock for it)
+     * @param slab
+     *            The associated slab (send null to no generate ItemBlock for it)
+     * @param wall
+     *            The associated wall (send null to no generate ItemBlock for it)
+     * @param pressure
+     *            The associated pressure plate (send null to no generate ItemBlock for it)
      */
     private static void createItemBlockWithVariants(RegistryEvent.Register<Item> event, ItemGroup group, Block block, Block stairs, Block slab, Block wall, Block pressure)
     {

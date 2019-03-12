@@ -5,11 +5,27 @@
     
     "block.embellishcraft.basalt_block": "Basalt",
     "block.embellishcraft.slate_block": "Slate",
-     
-     # Rocks
+    "block.embellishcraft.marble_block": "Marble",
+    
+     # Cobblestones
     
     "block.embellishcraft.basalt_cobblestone_block": "Basalt Cobblestone",
+    "block.embellishcraft.basalt_cobblestone_stairs": "Basalt Cobblestone Stairs",
+    "block.embellishcraft.basalt_cobblestone_slab": "Basalt Cobblestone Slab",
+    "block.embellishcraft.basalt_cobblestone_wall": "Basalt Cobblestone Wall",
+    "block.embellishcraft.basalt_cobblestone_pressure_plate": "Basalt Cobblestone Pressure Plate",
+    
     "block.embellishcraft.slate_cobblestone_block": "Slate Cobblestone",
+    "block.embellishcraft.slate_cobblestone_stairs": "Slate Cobblestone Stairs",
+    "block.embellishcraft.slate_cobblestone_slab": "Slate Cobblestone Slab",
+    "block.embellishcraft.slate_cobblestone_wall": "Slate Cobblestone Wall",
+    "block.embellishcraft.slate_cobblestone_pressure_plate": "Slate Cobblestone Pressure Plate",
+    
+    "block.embellishcraft.marble_cobblestone_block": "Marble Cobblestone",
+    "block.embellishcraft.marble_cobblestone_stairs": "Marble Cobblestone Stairs",
+    "block.embellishcraft.marble_cobblestone_slab": "Marble Cobblestone Slab",
+    "block.embellishcraft.marble_cobblestone_wall": "Marble Cobblestone Wall",
+    "block.embellishcraft.marble_cobblestone_pressure_plate": "Marble Cobblestone Pressure Plate",
     
     # Bricks
     
@@ -52,6 +68,11 @@
     "block.embellishcraft.weared_brick_stairs": "Weared Bricks Stairs",
     "block.embellishcraft.weared_brick_slab": "Weared Bricks Slab",
     "block.embellishcraft.weared_brick_wall": "Weared Bricks Wall",
+    
+    "block.embellishcraft.marble_brick_block": "Marble Brick",
+    "block.embellishcraft.marble_brick_stairs": "Marble Brick Stairs",
+    "block.embellishcraft.marble_brick_slab": "Marble Brick Slab",
+    "block.embellishcraft.marble_brick_wall": "Marble Brick Wall",
     
     # Paving
     
@@ -100,6 +121,7 @@
     "block.embellishcraft.concrete_tiles_block": "Concrete Tiles",
     "block.embellishcraft.concrete_tiles_stairs": "Concrete Tiles Stairs",
     "block.embellishcraft.concrete_tiles_slab": "Concrete Tiles Slab",
+    "block.embellishcraft.concrete_tiles_pressure_plate": "Concrete Tiles Pressure Plate",
 
     "block.embellishcraft.skyblue_tiles_block": "Skyblue Tiles",
     "block.embellishcraft.skyblue_tiles_stairs": "Skyblue Tiles Stairs",

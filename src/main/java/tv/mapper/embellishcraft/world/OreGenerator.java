@@ -18,6 +18,7 @@ public class OreGenerator
         {            
             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, new DimensionCompositeFeature<>(Feature.MINABLE, new MinableConfig(MinableConfig.IS_ROCK, ModBlocks.BASALT_BLOCK.getDefaultState(), 33), new CountRange(), new CountRangeConfig(10, 0, 0, 40), DimensionType.OVERWORLD));
             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, new DimensionCompositeFeature<>(Feature.MINABLE, new MinableConfig(MinableConfig.IS_ROCK, ModBlocks.SLATE_BLOCK.getDefaultState(), 33), new CountRange(), new CountRangeConfig(10, 40, 40, 70), DimensionType.OVERWORLD));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, new DimensionCompositeFeature<>(Feature.MINABLE, new MinableConfig(MinableConfig.IS_ROCK, ModBlocks.MARBLE_BLOCK.getDefaultState(), 25), new CountRange(), new CountRangeConfig(10, 50, 40, 100), DimensionType.OVERWORLD));
         }
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "embellishcraft:block/rock/basalt_cobblestone"
+        "all": "embellishcraft:block/cobblestone/basalt_cobblestone"
     }
 }
