@@ -23,14 +23,12 @@ public class EmbellishCraft
 
     public EmbellishCraft()
     {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, EmbellishCraftConfig.CLIENT_CONFIG);
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, EmbellishCraftConfig.SERVER_CONFIG);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::serverSetup);
 
-        EmbellishCraftConfig.loadConfig(EmbellishCraftConfig.CLIENT_CONFIG, FMLPaths.CONFIGDIR.get().resolve("embellishcraft-client.toml"));
         EmbellishCraftConfig.loadConfig(EmbellishCraftConfig.SERVER_CONFIG, FMLPaths.CONFIGDIR.get().resolve("embellishcraft-server.toml"));
     }
 

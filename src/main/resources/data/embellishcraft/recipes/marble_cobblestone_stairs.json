@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:marble_cobblestone_block"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:marble_cobblestone_stairs",
+        "count": 4
+    }
+}
