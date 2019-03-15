@@ -12,6 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
+import tv.mapper.embellishcraft.block.BlockChair;
 import tv.mapper.embellishcraft.block.BlockCustomPressurePlate;
 import tv.mapper.embellishcraft.block.BlockCustomRock;
 import tv.mapper.embellishcraft.block.BlockCustomStairs;
@@ -352,6 +353,11 @@ public class ModBlocks
     public static Block WHITE_GREEN_WALLPAPER_SLAB;
     @ObjectHolder("embellishcraft:white_green_wallpaper_plinth_block")
     public static Block WHITE_GREEN_WALLPAPER_PLINTH_BLOCK;
+    
+    // Special
+    
+    @ObjectHolder("embellishcraft:chair_block")
+    public static Block CHAIR_BLOCK;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -438,6 +444,10 @@ public class ModBlocks
         event.getRegistry().register(new BlockUpDown(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_flower_wallpaper_plinth_block"));
         createBlockWithVariants(event, "white_green_wallpaper", true, true, false, false);
         event.getRegistry().register(new BlockUpDown(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_green_wallpaper_plinth_block"));
+        
+        // Special
+        
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("chair_block"));
 
     }
 
@@ -505,6 +515,10 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_GREEN_WALLPAPER_BLOCK, WHITE_GREEN_WALLPAPER_STAIRS, WHITE_GREEN_WALLPAPER_SLAB, null, null);
         event.getRegistry().register(new ItemBlock(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
 
+        // Special
+        
+        event.getRegistry().register(new ItemBlock(CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(CHAIR_BLOCK.getRegistryName()));
+        
     }
 
     /**

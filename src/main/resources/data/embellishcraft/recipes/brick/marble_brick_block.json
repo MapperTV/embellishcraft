@@ -6,11 +6,11 @@
     ],
     "key": {
         "#": {
-            "item": "minecraft:polished_diorite"
+            "item": "embellishcraft:marble_cobblestone_block"
         }
     },
     "result": {
-        "item": "embellishcraft:diorite_brick_block",
+        "item": "embellishcraft:marble_brick_block",
         "count": 4
     }
 }
