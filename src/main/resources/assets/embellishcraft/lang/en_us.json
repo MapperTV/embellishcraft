@@ -190,6 +190,15 @@
     "block.embellishcraft.white_green_wallpaper_slab": "White Green Wallpaper Slab",
     "block.embellishcraft.white_green_wallpaper_plinth_block": "White Green Wallpaper Plinth",
     
+    # Special
+    
+    "block.embellishcraft.oak_chair_block": "Oak Chair",
+    "block.embellishcraft.dark_oak_chair_block": "Dark Oak Chair",
+    "block.embellishcraft.spruce_chair_block": "Spruce Chair",
+    "block.embellishcraft.birch_chair_block": "Birch Chair",
+    "block.embellishcraft.jungle_chair_block": "Jungle Chair",
+    "block.embellishcraft.acacia_chair_block": "Acacia Chair",
+    
     # Creative Tabs (Item Groups) #
     "itemGroup.embellishcraft_group": "EmbellishCraft"
 }

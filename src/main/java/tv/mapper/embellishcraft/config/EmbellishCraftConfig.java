@@ -23,7 +23,7 @@ public class EmbellishCraftConfig
 
     public static void loadConfig(ForgeConfigSpec spec, Path path)
     {
-        EmbellishCraft.LOGGER.debug("Loading configl file {}", path);
+        EmbellishCraft.LOGGER.debug("Loading config file {}", path);
 
         final CommentedFileConfig configData = CommentedFileConfig.builder(path).sync().autosave().writingMode(WritingMode.REPLACE).build();
 

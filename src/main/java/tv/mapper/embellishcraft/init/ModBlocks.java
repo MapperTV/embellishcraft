@@ -354,10 +354,20 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:white_green_wallpaper_plinth_block")
     public static Block WHITE_GREEN_WALLPAPER_PLINTH_BLOCK;
     
-    // Special
+    // Furniture
     
-    @ObjectHolder("embellishcraft:chair_block")
-    public static Block CHAIR_BLOCK;
+    @ObjectHolder("embellishcraft:oak_chair_block")
+    public static Block OAK_CHAIR_BLOCK;
+    @ObjectHolder("embellishcraft:dark_oak_chair_block")
+    public static Block DARK_OAK_CHAIR_BLOCK;
+    @ObjectHolder("embellishcraft:birch_chair_block")
+    public static Block BIRCH_CHAIR_BLOCK;
+    @ObjectHolder("embellishcraft:jungle_chair_block")
+    public static Block JUNGLE_CHAIR_BLOCK;
+    @ObjectHolder("embellishcraft:spruce_chair_block")
+    public static Block SPRUCE_CHAIR_BLOCK;
+    @ObjectHolder("embellishcraft:acacia_chair_block")
+    public static Block ACACIA_CHAIR_BLOCK;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -445,9 +455,14 @@ public class ModBlocks
         createBlockWithVariants(event, "white_green_wallpaper", true, true, false, false);
         event.getRegistry().register(new BlockUpDown(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_green_wallpaper_plinth_block"));
         
-        // Special
+        // Furniture
         
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("oak_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("dark_oak_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("birch_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("jungle_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("spruce_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("acacia_chair_block"));
 
     }
 
@@ -515,9 +530,14 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_GREEN_WALLPAPER_BLOCK, WHITE_GREEN_WALLPAPER_STAIRS, WHITE_GREEN_WALLPAPER_SLAB, null, null);
         event.getRegistry().register(new ItemBlock(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
 
-        // Special
+        // Furniture
         
-        event.getRegistry().register(new ItemBlock(CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(OAK_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(DARK_OAK_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(BIRCH_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(JUNGLE_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(SPRUCE_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ACACIA_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_CHAIR_BLOCK.getRegistryName()));
         
     }
 

@@ -19,7 +19,7 @@ import tv.mapper.embellishcraft.entity.EntityChair;
 
 public class BlockChair extends Block
 {
-    protected static final VoxelShape CHAIR_AABB = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 18.0D, 14.0D);
+    protected static final VoxelShape CHAIR_AABB = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
     public static final DirectionProperty FACING = DirectionProperty.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     public BlockChair(Properties properties)

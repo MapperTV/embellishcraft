@@ -6,21 +6,23 @@ import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.block.BlockChair;
 
 public class EntityChair extends Entity
 {
     public EntityChair(World world)
     {
-        super(ModEntities.TYPE_CHAIR, world);
+        super(EmbellishCraft.TYPE_CHAIR, world);
         setSize(0F, 0F);
+
     }
-    
+
     public EntityChair(World world, BlockPos pos)
     {
-        super(ModEntities.TYPE_CHAIR, world);
-        setPosition(pos.getX() + 0.5, pos.getY() + 0.4, pos.getZ() + 0.5);
+        super(EmbellishCraft.TYPE_CHAIR, world);
         setSize(0F, 0F);
+        setPosition(pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5);
     }
 
     @Override

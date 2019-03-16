@@ -1,7 +1,7 @@
 {
     "textures": {
-        "0": "embellishcraft:block/chair/chair_oak",
-        "particle": "embellishcraft:block/chair/chair_oak"
+        "0": "embellishcraft:block/furniture/oak_chair",
+        "particle": "embellishcraft:block/furniture/oak_chair"
     },
     "elements": [
         {
