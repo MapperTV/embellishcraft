@@ -46,14 +46,24 @@ public class BlockChair extends Block
     @Override
     public boolean onBlockActivated(IBlockState state, World world, BlockPos pos, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ)
     {
-        List<EntityChair> chairs = world.getEntitiesWithinAABB(EntityChair.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)));
-        if(chairs.isEmpty())
+        if(player.isSneaking())
         {
-            EntityChair chair = new EntityChair(world, pos);
-            world.spawnEntity(chair);
-            player.startRiding(chair);
+            return false;
         }
-        return true;
+        else
+        {
+            if(world.isRemote)
+            {
+                List<EntityChair> chairs = world.getEntitiesWithinAABB(EntityChair.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)));
+                if(chairs.isEmpty())
+                {
+                    EntityChair chair = new EntityChair(world, pos);
+                    world.spawnEntity(chair);
+                    player.startRiding(chair);
+                }
+            }
+            return true;
+        }
     }
 
     @Override

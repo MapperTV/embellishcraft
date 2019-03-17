@@ -14,6 +14,7 @@ public class EntityChair extends Entity
     public EntityChair(World world)
     {
         super(EmbellishCraft.TYPE_CHAIR, world);
+        this.noClip = true;
         setSize(0F, 0F);
 
     }
@@ -21,6 +22,7 @@ public class EntityChair extends Entity
     public EntityChair(World world, BlockPos pos)
     {
         super(EmbellishCraft.TYPE_CHAIR, world);
+        this.noClip = true;
         setSize(0F, 0F);
         setPosition(pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5);
     }
