@@ -1,49 +1,41 @@
 package tv.mapper.embellishcraft.entity;
 
-import java.util.List;
+import java.util.HashMap;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import tv.mapper.embellishcraft.EmbellishCraft;
-import tv.mapper.embellishcraft.block.BlockChair;
 
 public class EntityChair extends Entity
 {
+    public static final HashMap<BlockPos, EntityChair> OCCUPIED = new HashMap<BlockPos, EntityChair>();
+
     public EntityChair(World world)
     {
         super(EmbellishCraft.TYPE_CHAIR, world);
-        this.noClip = true;
-        setSize(0F, 0F);
+        noClip = true;
+        setSize(0.0001F, 0.0001F);
 
     }
 
     public EntityChair(World world, BlockPos pos)
     {
         super(EmbellishCraft.TYPE_CHAIR, world);
-        this.noClip = true;
-        setSize(0F, 0F);
         setPosition(pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5);
+        noClip = true;
+        setSize(0.0001F, 0.0001F);
+        OCCUPIED.put(pos, this);
     }
 
     @Override
     public void tick()
     {
-        BlockPos pos = getPosition();
-        if(pos != null && !(getEntityWorld().getBlockState(pos).getBlock() instanceof BlockChair))
+
+        if(!this.world.isRemote)
         {
-            this.remove();
-            return;
-        }
-        List<Entity> passengers = getPassengers();
-        if(passengers.isEmpty())
-        {
-            this.remove();
-        }
-        for(Entity e : passengers)
-        {
-            if(e.isSneaking())
+            if(!this.isBeingRidden() || this.world.isAirBlock(new BlockPos(this.posX, this.posY, this.posZ)))
             {
                 this.remove();
             }

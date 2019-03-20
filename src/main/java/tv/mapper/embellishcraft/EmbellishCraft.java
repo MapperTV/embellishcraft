@@ -24,7 +24,7 @@ public class EmbellishCraft
     public static final Logger LOGGER = LogManager.getLogger();
 
     // Creating chair entity for players to sit down; not sure this is good doing this here like that but it works now
-    public static final EntityType<EntityChair> TYPE_CHAIR = EntityType.register(MODID + ":entity_sit", EntityType.Builder.create(EntityChair.class, EntityChair::new));
+    public static final EntityType<EntityChair> TYPE_CHAIR = EntityType.register(MODID + ":entity_sit", EntityType.Builder.create(EntityChair.class, EntityChair::new).tracker(256, 20, false));
 
     public EmbellishCraft()
     {
