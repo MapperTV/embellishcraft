@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "embellishcraft:block/world/basalt",
+        "top": "embellishcraft:block/world/basalt",
+        "side": "embellishcraft:block/world/basalt"
+    }
+}

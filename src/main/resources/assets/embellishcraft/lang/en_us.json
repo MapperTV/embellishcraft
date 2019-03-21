@@ -4,7 +4,17 @@
     # World
     
     "block.embellishcraft.basalt_block": "Basalt",
+    "block.embellishcraft.basalt_stairs": "Basalt Stairs",
+    "block.embellishcraft.basalt_slab": "Basalt Slab",
+    "block.embellishcraft.basalt_wall": "Basalt Wall",
+    "block.embellishcraft.basalt_pressure_plate": "Basalt Pressure Plate",
+
     "block.embellishcraft.slate_block": "Slate",
+    "block.embellishcraft.slate_stairs": "Slate Stairs",
+    "block.embellishcraft.slate_slab": "Slate Slab",
+    "block.embellishcraft.slate_wall": "Slate Wall",
+    "block.embellishcraft.slate_pressure_plate": "Slate Pressure Plate",
+    
     "block.embellishcraft.marble_block": "Marble",
     
      # Cobblestones
