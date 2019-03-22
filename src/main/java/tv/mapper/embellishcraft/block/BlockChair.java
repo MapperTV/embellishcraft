@@ -36,19 +36,6 @@ public class BlockChair extends Block
         return false;
     }
 
-//    @Override
-//    public boolean onBlockActivated(IBlockState state, World world, BlockPos pos, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ)
-//    {
-//        if(!player.isSneaking())
-//        {
-//            if(SeatUtil.sitOnBlock(world, pos, player))
-//            {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-
     @Override
     @Deprecated
     public boolean isFullCube(IBlockState state)

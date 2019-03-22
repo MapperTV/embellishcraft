@@ -21,7 +21,7 @@ public class SeatUtil
     @SubscribeEvent
     public static void onRightClickBlock(RightClickBlock event)
     {
-        if(!event.getWorld().isRemote)
+        if(!event.getWorld().isRemote && !event.getEntityPlayer().isSneaking())
         {
             World world = event.getWorld();
             BlockPos pos = event.getPos();
