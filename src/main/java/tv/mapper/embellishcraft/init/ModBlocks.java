@@ -49,6 +49,14 @@ public class ModBlocks
 
     @ObjectHolder("embellishcraft:marble_block")
     public static Block MARBLE_BLOCK;
+    @ObjectHolder("embellishcraft:marble_stairs")
+    public static Block MARBLE_STAIRS;
+    @ObjectHolder("embellishcraft:marble_slab")
+    public static Block MARBLE_SLAB;
+    @ObjectHolder("embellishcraft:marble_wall")
+    public static Block MARBLE_WALL;
+    @ObjectHolder("embellishcraft:marble_pressure_plate")
+    public static Block MARBLE_PRESSURE_PLATE;
 
     // Cobblestones
 
@@ -423,7 +431,9 @@ public class ModBlocks
         event.getRegistry().register(new BlockCustomRock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F), slate).setRegistryName("slate_block"));
         createOnlyVariants(event, "slate", true, true, true, true);
         event.getRegistry().register(new BlockCustomRock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F), marble).setRegistryName("marble_block"));
+        createOnlyVariants(event, "marble", true, true, true, true);
 
+        
         // Bricks
 
         createBlockWithVariants(event, "basalt_brick", true, true, true, false);
@@ -490,8 +500,7 @@ public class ModBlocks
 
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_BLOCK, BASALT_STAIRS, BASALT_SLAB, BASALT_WALL, BASALT_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_BLOCK, SLATE_STAIRS, SLATE_SLAB, SLATE_WALL, SLATE_PRESSURE_PLATE);
-
-        event.getRegistry().register(new ItemBlock(MARBLE_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(MARBLE_BLOCK.getRegistryName()));
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_BLOCK, MARBLE_STAIRS, MARBLE_SLAB, MARBLE_WALL, MARBLE_PRESSURE_PLATE);
 
         // Cobblestones
 
