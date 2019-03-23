@@ -28,7 +28,7 @@ public class SeatUtil
             Block block = world.getBlockState(pos).getBlock();
             EntityPlayer player = event.getEntityPlayer();
 
-            if((block instanceof BlockChair) && !EntityChair.OCCUPIED.containsKey(pos) && player.getHeldItemMainhand().isEmpty())
+            if((block instanceof BlockChair) && !EntityChair.OCCUPIED.containsKey(pos))
             {
                 EntityChair sit = new EntityChair(world, pos);
                 world.spawnEntity(sit);
