@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:slate_brick_block"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:slate_brick_stairs",
+        "count": 4
+    }
+}

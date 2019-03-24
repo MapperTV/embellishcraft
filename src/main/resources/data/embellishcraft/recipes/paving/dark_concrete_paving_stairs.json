@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:dark_concrete_paving_block"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:dark_concrete_paving_stairs",
+        "count": 4
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "  #",
+        "LP#",
+        "  #"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:stone"
+        },
+        "L": {
+            "item": "minecraft:light_blue_dye"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:white_blue_wallpaper_block",
+        "count": 3
+    }
+}

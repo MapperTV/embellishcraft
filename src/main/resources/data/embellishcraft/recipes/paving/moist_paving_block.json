@@ -1,0 +1,15 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:vine"
+        },
+        {
+            "item": "embellishcraft:polished_paving_block"
+        }
+    ],
+    "result": {
+        "item": "embellishcraft:moist_paving_block",
+        "count": 1
+    }
+}

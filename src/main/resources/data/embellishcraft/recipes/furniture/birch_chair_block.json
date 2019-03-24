@@ -1,0 +1,20 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "S  ",
+        "SWS",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:birch_slab"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:birch_chair_block",
+        "count": 1
+    }
+}

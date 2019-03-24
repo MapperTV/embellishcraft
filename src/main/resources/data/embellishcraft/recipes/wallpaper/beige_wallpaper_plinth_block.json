@@ -1,0 +1,19 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#",
+        "_"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:beige_wallpaper_block"
+        },
+        "_": {
+            "item": "minecraft:oak_slab"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:beige_wallpaper_plinth_block",
+        "count": 1
+    }
+}

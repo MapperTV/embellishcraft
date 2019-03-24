@@ -1,0 +1,15 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:pink_wallpaper_block"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:pink_wallpaper_slab",
+        "count": 6
+    }
+}

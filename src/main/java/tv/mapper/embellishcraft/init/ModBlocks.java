@@ -402,27 +402,17 @@ public class ModBlocks
 
         Block basalt, slate, marble;
 
-        // Todo: reorganize this mess
         String name = "basalt_cobblestone";
         event.getRegistry().register(basalt = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
-        event.getRegistry().register(new BlockCustomStairs(basalt.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
-        event.getRegistry().register(new BlockSlab(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
-        event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
-        event.getRegistry().register(new BlockCustomPressurePlate(BlockPressurePlate.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+        createOnlyVariants(event, name, true, true, true, true);
 
         name = "slate_cobblestone";
         event.getRegistry().register(slate = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
-        event.getRegistry().register(new BlockCustomStairs(slate.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
-        event.getRegistry().register(new BlockSlab(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
-        event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
-        event.getRegistry().register(new BlockCustomPressurePlate(BlockPressurePlate.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+        createOnlyVariants(event, name, true, true, true, true);
 
         name = "marble_cobblestone";
         event.getRegistry().register(marble = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
-        event.getRegistry().register(new BlockCustomStairs(marble.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
-        event.getRegistry().register(new BlockSlab(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
-        event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
-        event.getRegistry().register(new BlockCustomPressurePlate(BlockPressurePlate.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+        createOnlyVariants(event, name, true, true, true, true);
 
         // World
 
@@ -433,7 +423,6 @@ public class ModBlocks
         event.getRegistry().register(new BlockCustomRock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F), marble).setRegistryName("marble_block"));
         createOnlyVariants(event, "marble", true, true, true, true);
 
-        
         // Bricks
 
         createBlockWithVariants(event, "basalt_brick", true, true, true, false);

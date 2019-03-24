@@ -1,0 +1,15 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:slate_block"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:slate_slab",
+        "count": 6
+    }
+}
