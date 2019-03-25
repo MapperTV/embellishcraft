@@ -3,6 +3,7 @@ package tv.mapper.embellishcraft.init;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPressurePlate;
 import net.minecraft.block.BlockSlab;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -473,12 +474,12 @@ public class ModBlocks
 
         // Furniture
 
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("oak_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("dark_oak_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("birch_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("jungle_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("spruce_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f)).setRegistryName("acacia_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("oak_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("birch_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_chair_block"));
+        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_chair_block"));
 
     }
 
