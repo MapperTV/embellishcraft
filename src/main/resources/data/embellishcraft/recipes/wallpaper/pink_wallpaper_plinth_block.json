@@ -9,7 +9,7 @@
             "item": "embellishcraft:pink_wallpaper_block"
         },
         "_": {
-            "item": "minecraft:oak_slab"
+            "tag": "minecraft:wooden_slabs"
         }
     },
     "result": {
