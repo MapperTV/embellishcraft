@@ -1,11 +1,11 @@
 package tv.mapper.embellishcraft.block;
 
-import net.minecraft.block.BlockWall;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.WallBlock;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorldReaderBase;
+import net.minecraft.world.IWorldReader;
 
-public class BlockCustomWall extends BlockWall
+public class BlockCustomWall extends WallBlock
 {
 
     public BlockCustomWall(Properties builder)
@@ -13,7 +13,7 @@ public class BlockCustomWall extends BlockWall
         super(builder);
     }
 
-    public boolean canPlaceTorchOnTop(IBlockState state, IWorldReaderBase world, BlockPos pos)
+    public boolean canPlaceTorchOnTop(BlockState state, IWorldReader world, BlockPos pos)
     {
         return true;
     }

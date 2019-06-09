@@ -1,12 +1,12 @@
 package tv.mapper.embellishcraft.block;
 
-import net.minecraft.block.BlockStairs;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.StairsBlock;
 
-public class BlockCustomStairs extends BlockStairs
+public class BlockCustomStairs extends StairsBlock
 {
 
-    public BlockCustomStairs(IBlockState state, Properties properties)
+    public BlockCustomStairs(BlockState state, Properties properties)
     {
         super(state, properties);
     }

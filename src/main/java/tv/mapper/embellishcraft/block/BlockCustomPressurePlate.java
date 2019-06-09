@@ -1,13 +1,13 @@
 package tv.mapper.embellishcraft.block;
 
-import net.minecraft.block.BlockPressurePlate;
+import net.minecraft.block.PressurePlateBlock;
 
-public class BlockCustomPressurePlate extends BlockPressurePlate
+public class BlockCustomPressurePlate extends PressurePlateBlock
 {
 
-    public BlockCustomPressurePlate(Sensitivity p_i48348_1_, Properties p_i48348_2_)
+    public BlockCustomPressurePlate(Sensitivity sensitivity, Properties properties)
     {
-        super(p_i48348_1_, p_i48348_2_);
+        super(sensitivity, properties);
     }
 
 }

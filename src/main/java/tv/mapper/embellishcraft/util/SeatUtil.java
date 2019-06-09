@@ -2,7 +2,7 @@ package tv.mapper.embellishcraft.util;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.EntityMountEvent;
@@ -26,12 +26,12 @@ public class SeatUtil
             World world = event.getWorld();
             BlockPos pos = event.getPos();
             Block block = world.getBlockState(pos).getBlock();
-            EntityPlayer player = event.getEntityPlayer();
+            PlayerEntity player = event.getEntityPlayer();
 
             if((block instanceof BlockChair) && !EntityChair.OCCUPIED.containsKey(pos))
             {
                 EntityChair sit = new EntityChair(world, pos);
-                world.spawnEntity(sit);
+                world.addEntity(sit);
                 player.startRiding(sit);
             }
         }

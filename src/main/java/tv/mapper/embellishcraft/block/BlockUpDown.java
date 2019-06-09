@@ -3,11 +3,11 @@ package tv.mapper.embellishcraft.block;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.BlockState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.util.EnumFacing;
+import net.minecraft.util.Direction;
 
 public class BlockUpDown extends Block
 {
@@ -19,17 +19,17 @@ public class BlockUpDown extends Block
         this.setDefaultState(this.getDefaultState().with(UPSIDE_DOWN, Boolean.valueOf(false)));
     }
 
-    protected void fillStateContainer(StateContainer.Builder<Block, IBlockState> builder)
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
     {
         builder.add(UPSIDE_DOWN);
     }
 
     @Nullable
-    public IBlockState getStateForPlacement(BlockItemUseContext context)
+    public BlockState getStateForPlacement(BlockItemUseContext context)
     {
-        IBlockState state = this.getDefaultState().with(UPSIDE_DOWN, false);
-        EnumFacing facing = context.getFace();
-        return facing != EnumFacing.DOWN && (facing == EnumFacing.UP || !((double)context.getHitY() > 0.5D)) ? state : state.with(UPSIDE_DOWN, Boolean.valueOf(true));
+        BlockState state = this.getDefaultState().with(UPSIDE_DOWN, false);
+        Direction facing = context.getFace();
+        return facing != Direction.DOWN && (facing == Direction.UP || !((double)context.func_221532_j().getY() > 0.5D)) ? state : state.with(UPSIDE_DOWN, Boolean.valueOf(true));
     }
 
 }

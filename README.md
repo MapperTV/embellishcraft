@@ -1,3 +1,3 @@
 # EmbellishCraft
 
-A decorative mod for Minecraft 1.13.2.
+A decorative mod for Minecraft 1.14.x.

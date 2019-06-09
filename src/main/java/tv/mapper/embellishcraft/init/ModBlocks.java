@@ -1,12 +1,12 @@
 package tv.mapper.embellishcraft.init;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockPressurePlate;
-import net.minecraft.block.BlockSlab;
+import net.minecraft.block.PressurePlateBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -536,42 +536,41 @@ public class ModBlocks
         // Wallpapers
 
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_BLUE_WALLPAPER_BLOCK, WHITE_BLUE_WALLPAPER_STAIRS, WHITE_BLUE_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new ItemBlock(WHITE_BLUE_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_BLUE_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(WHITE_BLUE_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_BLUE_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_WALLPAPER_BLOCK, BEIGE_WALLPAPER_STAIRS, BEIGE_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new ItemBlock(BEIGE_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BEIGE_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, PINK_WALLPAPER_BLOCK, PINK_WALLPAPER_STAIRS, PINK_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new ItemBlock(PINK_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PINK_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(PINK_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PINK_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_FLOWER_WALLPAPER_BLOCK, BEIGE_FLOWER_WALLPAPER_STAIRS, BEIGE_FLOWER_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new ItemBlock(BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_GREEN_WALLPAPER_BLOCK, WHITE_GREEN_WALLPAPER_STAIRS, WHITE_GREEN_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new ItemBlock(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
 
         // Furniture
 
-        event.getRegistry().register(new ItemBlock(OAK_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(DARK_OAK_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(BIRCH_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(JUNGLE_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(SPRUCE_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(ACACIA_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(OAK_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(DARK_OAK_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BIRCH_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(JUNGLE_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(SPRUCE_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new BlockItem(ACACIA_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_CHAIR_BLOCK.getRegistryName()));
 
     }
 
     /**
      * Registers a Block with its variants.
-     * 
      * @param event
-     *            The RegistryEvent
+     *        The RegistryEvent
      * @param name
-     *            The Block registry name
+     *        The Block registry name
      * @param stairs
-     *            If true, stairs variant will be registered
+     *        If true, stairs variant will be registered
      * @param slab
-     *            If true, slab variant will be registered
+     *        If true, slab variant will be registered
      * @param wall
-     *            If true, wall variant will be registered
+     *        If true, wall variant will be registered
      * @param pressure
-     *            If true, pressure plate variant will be registered
+     *        If true, pressure plate variant will be registered
      */
     private static void createBlockWithVariants(RegistryEvent.Register<Block> event, String name, boolean stairs, boolean slab, boolean wall, boolean pressure)
     {
@@ -581,29 +580,28 @@ public class ModBlocks
         if(stairs)
             event.getRegistry().register(new BlockCustomStairs(block.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
         if(slab)
-            event.getRegistry().register(new BlockSlab(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
+            event.getRegistry().register(new SlabBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
         if(wall)
             event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
         if(pressure)
-            event.getRegistry().register(new BlockCustomPressurePlate(BlockPressurePlate.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+            event.getRegistry().register(new BlockCustomPressurePlate(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
 
     }
 
     /**
      * Registers only variants of specified block.
-     * 
      * @param event
-     *            The RegistryEvent
+     *        The RegistryEvent
      * @param name
-     *            The Block registry name
+     *        The Block registry name
      * @param stairs
-     *            If true, stairs variant will be registered
+     *        If true, stairs variant will be registered
      * @param slab
-     *            If true, slab variant will be registered
+     *        If true, slab variant will be registered
      * @param wall
-     *            If true, wall variant will be registered
+     *        If true, wall variant will be registered
      * @param pressure
-     *            If true, pressure plate variant will be registered
+     *        If true, pressure plate variant will be registered
      */
     private static void createOnlyVariants(RegistryEvent.Register<Block> event, String name, boolean stairs, boolean slab, boolean wall, boolean pressure)
     {
@@ -611,42 +609,41 @@ public class ModBlocks
         if(stairs)
             event.getRegistry().register(new BlockCustomStairs(block.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
         if(slab)
-            event.getRegistry().register(new BlockSlab(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
+            event.getRegistry().register(new SlabBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
         if(wall)
             event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
         if(pressure)
-            event.getRegistry().register(new BlockCustomPressurePlate(BlockPressurePlate.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+            event.getRegistry().register(new BlockCustomPressurePlate(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
 
     }
 
     /**
      * Registers a Block with its variants.
-     * 
      * @param event
-     *            The RegistryEvent
+     *        The RegistryEvent
      * @param group
-     *            The ItemGroup name
+     *        The ItemGroup name
      * @param block
-     *            The associated block
+     *        The associated block
      * @param stairs
-     *            The associated stairs (send null to no generate ItemBlock for it)
+     *        The associated stairs (send null to no generate ItemBlock for it)
      * @param slab
-     *            The associated slab (send null to no generate ItemBlock for it)
+     *        The associated slab (send null to no generate ItemBlock for it)
      * @param wall
-     *            The associated wall (send null to no generate ItemBlock for it)
+     *        The associated wall (send null to no generate ItemBlock for it)
      * @param pressure
-     *            The associated pressure plate (send null to no generate ItemBlock for it)
+     *        The associated pressure plate (send null to no generate ItemBlock for it)
      */
     private static void createItemBlockWithVariants(RegistryEvent.Register<Item> event, ItemGroup group, Block block, Block stairs, Block slab, Block wall, Block pressure)
     {
-        event.getRegistry().register(new ItemBlock(block, new Item.Properties().group(group)).setRegistryName(block.getRegistryName()));
+        event.getRegistry().register(new BlockItem(block, new Item.Properties().group(group)).setRegistryName(block.getRegistryName()));
         if(stairs != null)
-            event.getRegistry().register(new ItemBlock(stairs, new Item.Properties().group(group)).setRegistryName(stairs.getRegistryName()));
+            event.getRegistry().register(new BlockItem(stairs, new Item.Properties().group(group)).setRegistryName(stairs.getRegistryName()));
         if(slab != null)
-            event.getRegistry().register(new ItemBlock(slab, new Item.Properties().group(group)).setRegistryName(slab.getRegistryName()));
+            event.getRegistry().register(new BlockItem(slab, new Item.Properties().group(group)).setRegistryName(slab.getRegistryName()));
         if(wall != null)
-            event.getRegistry().register(new ItemBlock(wall, new Item.Properties().group(group)).setRegistryName(wall.getRegistryName()));
+            event.getRegistry().register(new BlockItem(wall, new Item.Properties().group(group)).setRegistryName(wall.getRegistryName()));
         if(pressure != null)
-            event.getRegistry().register(new ItemBlock(pressure, new Item.Properties().group(group)).setRegistryName(pressure.getRegistryName()));
+            event.getRegistry().register(new BlockItem(pressure, new Item.Properties().group(group)).setRegistryName(pressure.getRegistryName()));
     }
 }

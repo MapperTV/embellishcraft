@@ -17,7 +17,7 @@ public class EmbellishCraftConfig
     static
     {
         WorldgenConfig.init(SERVER_BUILDER);
-        
+
         SERVER_CONFIG = SERVER_BUILDER.build();
     }
 
