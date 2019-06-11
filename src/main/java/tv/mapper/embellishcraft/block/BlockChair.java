@@ -17,6 +17,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
@@ -67,7 +68,8 @@ public class BlockChair extends Block implements IBucketPickupHandler, ILiquidCo
         this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos)
+    @Override
+    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
     {
         switch((Direction)state.get(FACING))
         {
@@ -84,7 +86,8 @@ public class BlockChair extends Block implements IBucketPickupHandler, ILiquidCo
         }
     }
 
-    public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos)
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
     {
         switch((Direction)state.get(FACING))
         {
@@ -101,6 +104,7 @@ public class BlockChair extends Block implements IBucketPickupHandler, ILiquidCo
         }
     }
 
+    @Override
     public boolean isSolid(BlockState state)
     {
         return false;

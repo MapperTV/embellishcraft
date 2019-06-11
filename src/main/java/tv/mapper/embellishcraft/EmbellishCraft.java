@@ -12,7 +12,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
-import tv.mapper.embellishcraft.world.OreGenerator;
 
 @Mod(EmbellishCraft.MODID)
 public class EmbellishCraft
@@ -36,7 +35,7 @@ public class EmbellishCraft
     {
         LOGGER.info("EmbellishCraft setup");
 
-        OreGenerator.setupOregen();
+        //OreGenerator.setupOregen();
     }
 
     private void clientSetup(final FMLClientSetupEvent event)

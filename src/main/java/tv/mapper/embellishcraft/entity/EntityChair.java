@@ -19,7 +19,7 @@ public class EntityChair extends Entity
         noClip = true;
     }
 
-    public EntityChair(EntityType<?> type, World world, BlockPos pos)
+    public EntityChair(EntityType<? extends EntityChair> type, World world, BlockPos pos)
     {
         super(type, world);
         setPosition(pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5);
