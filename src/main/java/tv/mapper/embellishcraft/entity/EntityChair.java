@@ -8,20 +8,22 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.IPacket;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.network.NetworkHooks;
+import tv.mapper.embellishcraft.init.ModEntities;
 
 public class EntityChair extends Entity
 {
     public static final HashMap<BlockPos, EntityChair> OCCUPIED = new HashMap<BlockPos, EntityChair>();
 
-    public EntityChair(EntityType<?> type, World world)
+    public EntityChair(EntityType<EntityChair> type, World world)
     {
         super(type, world);
-        noClip = true;
+        // noClip = true;
     }
 
-    public EntityChair(EntityType<? extends EntityChair> type, World world, BlockPos pos)
+    public EntityChair(World world, BlockPos pos)
     {
-        super(type, world);
+        super(ModEntities.TYPE_CHAIR, world);
         setPosition(pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5);
         noClip = true;
         OCCUPIED.put(pos, this);
@@ -61,6 +63,6 @@ public class EntityChair extends Entity
     @Override
     public IPacket<?> createSpawnPacket()
     {
-        return null;
+        return NetworkHooks.getEntitySpawningPacket(this);
     }
 }

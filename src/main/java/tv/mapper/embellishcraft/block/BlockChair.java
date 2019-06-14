@@ -22,6 +22,7 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 
 public class BlockChair extends Block implements IBucketPickupHandler, ILiquidContainer
@@ -110,12 +111,13 @@ public class BlockChair extends Block implements IBucketPickupHandler, ILiquidCo
         return false;
     }
 
-    // @Override
-    // @Deprecated
-    // public boolean isFullCube(BlockState state)
-    // {
-    // return false;
-    // }
+    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
+        BlockPos blockpos = pos.down();
+        BlockState blockstate = worldIn.getBlockState(blockpos);
+        if(blockstate.getBlock() instanceof BlockChair)
+            return false;
+        return true;
+     }
 
     @SuppressWarnings("deprecation")
     public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)

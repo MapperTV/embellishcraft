@@ -12,7 +12,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import tv.mapper.embellishcraft.block.BlockChair;
 import tv.mapper.embellishcraft.entity.EntityChair;
-import tv.mapper.embellishcraft.init.ModEntities;
 
 // Big thanks to bl4ckscor3 and its mod "Sit" for this code!
 
@@ -31,9 +30,9 @@ public class SeatUtil
 
             if((block instanceof BlockChair) && !EntityChair.OCCUPIED.containsKey(pos))
             {
-                EntityChair sit = new EntityChair(ModEntities.TYPE_CHAIR, world, pos);
-                world.addEntity(sit);
-                player.startRiding(sit);
+                EntityChair chair = new EntityChair(world, pos);
+                world.addEntity(chair);
+                player.startRiding(chair);
             }
         }
     }

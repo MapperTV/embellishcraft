@@ -29,7 +29,7 @@ public class BlockUpDown extends Block
     {
         BlockState state = this.getDefaultState().with(UPSIDE_DOWN, false);
         Direction facing = context.getFace();
-        return facing != Direction.DOWN && (facing == Direction.UP || !((double)context.func_221532_j().getY() > 0.5D)) ? state : state.with(UPSIDE_DOWN, Boolean.valueOf(true));
+        return facing != Direction.DOWN && (facing == Direction.UP || !((double)context.getHitVec().getY() > 0.5D)) ? state : state.with(UPSIDE_DOWN, Boolean.valueOf(true));
     }
 
 }
