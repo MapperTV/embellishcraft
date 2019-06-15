@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBloc
 import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import tv.mapper.embellishcraft.block.BlockChair;
+import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.entity.EntityChair;
 
 // Big thanks to bl4ckscor3 and its mod "Sit" for this code!
@@ -28,7 +28,7 @@ public class SeatUtil
             Block block = world.getBlockState(pos).getBlock();
             PlayerEntity player = event.getEntityPlayer();
 
-            if((block instanceof BlockChair) && !EntityChair.OCCUPIED.containsKey(pos))
+            if((block instanceof ChairBlock) && !EntityChair.OCCUPIED.containsKey(pos))
             {
                 EntityChair chair = new EntityChair(world, pos);
                 world.addEntity(chair);

@@ -25,7 +25,7 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 
-public class BlockChair extends Block implements IBucketPickupHandler, ILiquidContainer
+public class ChairBlock extends Block implements IBucketPickupHandler, ILiquidContainer
 {
     // Need to figure a way to rotate VoxelShapes because this is just stupid
     private static final VoxelShape SOUTH_LEFT_FRONT_LEG = Block.makeCuboidShape(11.0D, 0.0D, 11.0D, 13.0D, 7.0D, 13.0D);
@@ -63,7 +63,7 @@ public class BlockChair extends Block implements IBucketPickupHandler, ILiquidCo
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public BlockChair(Properties properties)
+    public ChairBlock(Properties properties)
     {
         super(properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
@@ -114,7 +114,7 @@ public class BlockChair extends Block implements IBucketPickupHandler, ILiquidCo
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
         BlockPos blockpos = pos.down();
         BlockState blockstate = worldIn.getBlockState(blockpos);
-        if(blockstate.getBlock() instanceof BlockChair)
+        if(blockstate.getBlock() instanceof ChairBlock)
             return false;
         return true;
      }

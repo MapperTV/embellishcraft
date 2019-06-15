@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.WallBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,12 +14,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
-import tv.mapper.embellishcraft.block.BlockChair;
-import tv.mapper.embellishcraft.block.BlockCustomPressurePlate;
-import tv.mapper.embellishcraft.block.BlockCustomRock;
-import tv.mapper.embellishcraft.block.BlockCustomStairs;
-import tv.mapper.embellishcraft.block.BlockCustomWall;
-import tv.mapper.embellishcraft.block.BlockUpDown;
+import tv.mapper.embellishcraft.block.ChairBlock;
+import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
+import tv.mapper.embellishcraft.block.CustomStairsBlock;
+import tv.mapper.embellishcraft.block.UpDownBlock;
 import tv.mapper.embellishcraft.item.ModItemGroups;
 
 @EventBusSubscriber(bus = Bus.MOD)
@@ -401,28 +400,15 @@ public class ModBlocks
     {
         // Cobblestones
 
-        Block basalt, slate, marble;
-
-        String name = "basalt_cobblestone";
-        event.getRegistry().register(basalt = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
-        createOnlyVariants(event, name, true, true, true, true);
-
-        name = "slate_cobblestone";
-        event.getRegistry().register(slate = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
-        createOnlyVariants(event, name, true, true, true, true);
-
-        name = "marble_cobblestone";
-        event.getRegistry().register(marble = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
-        createOnlyVariants(event, name, true, true, true, true);
+        createBlockWithVariants(event, "basalt_cobblestone", true, true, true, true);
+        createBlockWithVariants(event, "slate_cobblestone", true, true, true, true);
+        createBlockWithVariants(event, "marble_cobblestone", true, true, true, true);
 
         // World
 
-        event.getRegistry().register(new BlockCustomRock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F), basalt).setRegistryName("basalt_block"));
-        createOnlyVariants(event, "basalt", true, true, true, true);
-        event.getRegistry().register(new BlockCustomRock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F), slate).setRegistryName("slate_block"));
-        createOnlyVariants(event, "slate", true, true, true, true);
-        event.getRegistry().register(new BlockCustomRock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F), marble).setRegistryName("marble_block"));
-        createOnlyVariants(event, "marble", true, true, true, true);
+        createBlockWithVariants(event, "basalt", true, true, true, true);
+        createBlockWithVariants(event, "slate", true, true, true, true);
+        createBlockWithVariants(event, "marble", true, true, true, true);
 
         // Bricks
 
@@ -462,24 +448,24 @@ public class ModBlocks
         // Wallpaper
 
         createBlockWithVariants(event, "white_blue_wallpaper", true, true, false, false);
-        event.getRegistry().register(new BlockUpDown(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_blue_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_blue_wallpaper_plinth_block"));
         createBlockWithVariants(event, "beige_wallpaper", true, true, false, false);
-        event.getRegistry().register(new BlockUpDown(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_wallpaper_plinth_block"));
         createBlockWithVariants(event, "pink_wallpaper", true, true, false, false);
-        event.getRegistry().register(new BlockUpDown(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("pink_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("pink_wallpaper_plinth_block"));
         createBlockWithVariants(event, "beige_flower_wallpaper", true, true, false, false);
-        event.getRegistry().register(new BlockUpDown(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_flower_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_flower_wallpaper_plinth_block"));
         createBlockWithVariants(event, "white_green_wallpaper", true, true, false, false);
-        event.getRegistry().register(new BlockUpDown(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_green_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_green_wallpaper_plinth_block"));
 
         // Furniture
 
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("oak_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("birch_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_chair_block"));
-        event.getRegistry().register(new BlockChair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_chair_block"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("oak_chair_block"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_chair_block"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("birch_chair_block"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_chair_block"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_chair_block"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_chair_block"));
 
     }
 
@@ -577,13 +563,13 @@ public class ModBlocks
         Block block; // Needed to register the stairs
         event.getRegistry().register(block = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
         if(stairs)
-            event.getRegistry().register(new BlockCustomStairs(block.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
+            event.getRegistry().register(new CustomStairsBlock(block.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
         if(slab)
             event.getRegistry().register(new SlabBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
         if(wall)
-            event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
+            event.getRegistry().register(new WallBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
         if(pressure)
-            event.getRegistry().register(new BlockCustomPressurePlate(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+            event.getRegistry().register(new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
 
     }
 
@@ -606,13 +592,13 @@ public class ModBlocks
     {
         Block block = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block");; // Needed to register the stairs
         if(stairs)
-            event.getRegistry().register(new BlockCustomStairs(block.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
+            event.getRegistry().register(new CustomStairsBlock(block.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
         if(slab)
             event.getRegistry().register(new SlabBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
         if(wall)
-            event.getRegistry().register(new BlockCustomWall(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
+            event.getRegistry().register(new WallBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
         if(pressure)
-            event.getRegistry().register(new BlockCustomPressurePlate(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+            event.getRegistry().register(new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
 
     }
 

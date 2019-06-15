@@ -9,11 +9,11 @@ import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 
-public class BlockUpDown extends Block
+public class UpDownBlock extends Block
 {
     public static final BooleanProperty UPSIDE_DOWN = BooleanProperty.create("upside_down");
 
-    public BlockUpDown(Properties properties)
+    public UpDownBlock(Properties properties)
     {
         super(properties);
         this.setDefaultState(this.getDefaultState().with(UPSIDE_DOWN, Boolean.valueOf(false)));
