@@ -2,6 +2,7 @@ package tv.mapper.embellishcraft.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.IBucketPickupHandler;
 import net.minecraft.block.ILiquidContainer;
 import net.minecraft.entity.player.PlayerEntity;
@@ -114,7 +115,7 @@ public class ChairBlock extends Block implements IBucketPickupHandler, ILiquidCo
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
         BlockPos blockpos = pos.down();
         BlockState blockstate = worldIn.getBlockState(blockpos);
-        if(blockstate.getBlock() instanceof ChairBlock)
+        if(blockstate.getBlock() instanceof ChairBlock || blockstate.getBlock() == Blocks.AIR)
             return false;
         return true;
      }
