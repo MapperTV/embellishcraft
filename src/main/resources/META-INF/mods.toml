@@ -1,13 +1,13 @@
 modLoader="javafml" #mandatory
 loaderVersion="[27,)"
 issueTrackerURL="http://my.issue.tracker/" #optional
+logoFile="embellishcraft_logo.png" #optional
 [[mods]] #mandatory
 modId="embellishcraft" #mandatory
 version="${file.jarVersion}" #mandatory
 displayName="EmbellishCraft" #mandatory
 #updateJSONURL="http://myurl.me/" #optional
 displayURL="http://mapper.tv/embellishcraft/" #optional
-logoFile="embellishcraft_logo.png" #optional
 credits="Thanks for Forge devs and modders that let their mods open-source." #optional
 authors="Mapper" #optional
 description='''EmbellishCraft is a mod that adds various decorative elements to Minecraft.'''
