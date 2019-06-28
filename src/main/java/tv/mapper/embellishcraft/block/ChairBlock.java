@@ -137,19 +137,10 @@ public class ChairBlock extends Block implements IBucketPickupHandler, ILiquidCo
         return true;
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockItemUseContext context)
     {
         return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite()).with(WATERLOGGED, Boolean.valueOf(false));
-    }
-
-    public BlockState getStateFromMeta(int meta)
-    {
-        return this.getDefaultState().with(FACING, Direction.byHorizontalIndex(meta));
-    }
-
-    public int getMetaFromState(BlockState state)
-    {
-        return ((Direction)state.get(FACING)).getHorizontalIndex();
     }
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
