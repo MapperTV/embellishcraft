@@ -2,8 +2,8 @@
     "variants": {
         "type=bottom": { "model": "embellishcraft:block/moist_paving_slab" },
         "type=top": { "model": "embellishcraft:block/moist_paving_slab_top" },
-        "type=double": [{ "model": "embellishcraft:block/moist_paving_block_a" },
-                        { "model": "embellishcraft:block/moist_paving_block_b" },
-                        { "model": "embellishcraft:block/moist_paving_block_c" }]
+        "type=double": [{ "model": "embellishcraft:block/moist_paving_a" },
+                        { "model": "embellishcraft:block/moist_paving_b" },
+                        { "model": "embellishcraft:block/moist_paving_c" }]
     }
 }

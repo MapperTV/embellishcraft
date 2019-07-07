@@ -2,6 +2,6 @@
     "variants": {
         "type=bottom": { "model": "embellishcraft:block/damaged_paving_slab" },
         "type=top": { "model": "embellishcraft:block/damaged_paving_slab_top" },
-        "type=double": { "model": "embellishcraft:block/damaged_paving_block_a" }
+        "type=double": { "model": "embellishcraft:block/damaged_paving_a" }
     }
 }

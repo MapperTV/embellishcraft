@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "upside_down=false": { "model": "embellishcraft:block/beige_flower_wallpaper_plinth_block" },
-        "upside_down=true": { "model": "embellishcraft:block/beige_flower_wallpaper_plinth_block", "x": 180 }
-    }
-}

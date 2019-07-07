@@ -2,6 +2,6 @@
     "variants": {
         "type=bottom": { "model": "embellishcraft:block/concrete_tiles_slab" },
         "type=top": { "model": "embellishcraft:block/concrete_tiles_slab_top" },
-        "type=double": { "model": "embellishcraft:block/concrete_tiles_block" }
+        "type=double": { "model": "embellishcraft:block/concrete_tiles" }
     }
 }

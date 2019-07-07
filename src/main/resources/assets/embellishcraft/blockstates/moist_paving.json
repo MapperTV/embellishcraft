@@ -1,0 +1,15 @@
+{
+    "variants": 
+    {
+        "":[
+        {
+            "model": "embellishcraft:block/moist_paving_a"
+        },
+        {
+            "model": "embellishcraft:block/moist_paving_b"
+        },
+        {
+            "model": "embellishcraft:block/moist_paving_c"
+        }]
+    }
+}

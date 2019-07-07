@@ -11,7 +11,7 @@ public class ModItemGroups
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(ModBlocks.SPRUCE_CHAIR_BLOCK);
+            return new ItemStack(ModBlocks.SPRUCE_CHAIR);
         }
     };
 }

@@ -1,0 +1,12 @@
+{
+    "variants": 
+    {
+        "":[
+        {
+            "model": "embellishcraft:block/polished_paving_a"
+        },
+        {
+            "model": "embellishcraft:block/polished_paving_b"
+        }]
+    }
+}

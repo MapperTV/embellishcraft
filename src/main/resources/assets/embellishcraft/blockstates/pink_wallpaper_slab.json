@@ -2,6 +2,6 @@
     "variants": {
         "type=bottom": { "model": "embellishcraft:block/pink_wallpaper_slab" },
         "type=top": { "model": "embellishcraft:block/pink_wallpaper_slab_top" },
-        "type=double": { "model": "embellishcraft:block/pink_wallpaper_block" }
+        "type=double": { "model": "embellishcraft:block/pink_wallpaper" }
     }
 }

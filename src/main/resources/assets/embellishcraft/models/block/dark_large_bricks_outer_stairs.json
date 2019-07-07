@@ -1,0 +1,8 @@
+{
+    "parent": "block/outer_stairs",
+    "textures": {
+        "bottom": "embellishcraft:block/large_bricks/dark_large_bricks",
+        "top": "embellishcraft:block/large_bricks/dark_large_bricks",
+        "side": "embellishcraft:block/large_bricks/dark_large_bricks"
+    }
+}

@@ -26,8 +26,8 @@ public class ModBlocks
 {
     // World (blocks that generate in the world)
 
-    @ObjectHolder("embellishcraft:basalt_block")
-    public static Block BASALT_BLOCK;
+    @ObjectHolder("embellishcraft:basalt")
+    public static Block BASALT;
     @ObjectHolder("embellishcraft:basalt_stairs")
     public static Block BASALT_STAIRS;
     @ObjectHolder("embellishcraft:basalt_slab")
@@ -37,8 +37,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:basalt_pressure_plate")
     public static Block BASALT_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:slate_block")
-    public static Block SLATE_BLOCK;
+    @ObjectHolder("embellishcraft:slate")
+    public static Block SLATE;
     @ObjectHolder("embellishcraft:slate_stairs")
     public static Block SLATE_STAIRS;
     @ObjectHolder("embellishcraft:slate_slab")
@@ -48,8 +48,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:slate_pressure_plate")
     public static Block SLATE_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:marble_block")
-    public static Block MARBLE_BLOCK;
+    @ObjectHolder("embellishcraft:marble")
+    public static Block MARBLE;
     @ObjectHolder("embellishcraft:marble_stairs")
     public static Block MARBLE_STAIRS;
     @ObjectHolder("embellishcraft:marble_slab")
@@ -61,8 +61,8 @@ public class ModBlocks
 
     // Cobblestones
 
-    @ObjectHolder("embellishcraft:basalt_cobblestone_block")
-    public static Block BASALT_COBBLESTONE_BLOCK;
+    @ObjectHolder("embellishcraft:basalt_cobblestone")
+    public static Block BASALT_COBBLESTONE;
     @ObjectHolder("embellishcraft:basalt_cobblestone_stairs")
     public static Block BASALT_COBBLESTONE_STAIRS;
     @ObjectHolder("embellishcraft:basalt_cobblestone_slab")
@@ -72,8 +72,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:basalt_cobblestone_pressure_plate")
     public static Block BASALT_COBBLESTONE_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:slate_cobblestone_block")
-    public static Block SLATE_COBBLESTONE_BLOCK;
+    @ObjectHolder("embellishcraft:slate_cobblestone")
+    public static Block SLATE_COBBLESTONE;
     @ObjectHolder("embellishcraft:slate_cobblestone_stairs")
     public static Block SLATE_COBBLESTONE_STAIRS;
     @ObjectHolder("embellishcraft:slate_cobblestone_slab")
@@ -83,8 +83,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:slate_cobblestone_pressure_plate")
     public static Block SLATE_COBBLESTONE_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:marble_cobblestone_block")
-    public static Block MARBLE_COBBLESTONE_BLOCK;
+    @ObjectHolder("embellishcraft:marble_cobblestone")
+    public static Block MARBLE_COBBLESTONE;
     @ObjectHolder("embellishcraft:marble_cobblestone_stairs")
     public static Block MARBLE_COBBLESTONE_STAIRS;
     @ObjectHolder("embellishcraft:marble_cobblestone_slab")
@@ -96,91 +96,102 @@ public class ModBlocks
 
     // Bricks
 
-    @ObjectHolder("embellishcraft:basalt_brick_block")
-    public static Block BASALT_BRICK_BLOCK;
-    @ObjectHolder("embellishcraft:basalt_brick_stairs")
-    public static Block BASALT_BRICK_STAIRS;
-    @ObjectHolder("embellishcraft:basalt_brick_slab")
-    public static Block BASALT_BRICK_SLAB;
-    @ObjectHolder("embellishcraft:basalt_brick_wall")
-    public static Block BASALT_BRICK_WALL;
+    @ObjectHolder("embellishcraft:basalt_bricks")
+    public static Block BASALT_BRICKS;
+    @ObjectHolder("embellishcraft:basalt_bricks_stairs")
+    public static Block BASALT_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:basalt_bricks_slab")
+    public static Block BASALT_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:basalt_bricks_wall")
+    public static Block BASALT_BRICKS_WALL;
 
-    @ObjectHolder("embellishcraft:dark_brick_block")
-    public static Block DARK_BRICK_BLOCK;
-    @ObjectHolder("embellishcraft:dark_brick_stairs")
-    public static Block DARK_BRICK_STAIRS;
-    @ObjectHolder("embellishcraft:dark_brick_slab")
-    public static Block DARK_BRICK_SLAB;
-    @ObjectHolder("embellishcraft:dark_brick_wall")
-    public static Block DARK_BRICK_WALL;
+    @ObjectHolder("embellishcraft:dark_bricks")
+    public static Block DARK_BRICKS;
+    @ObjectHolder("embellishcraft:dark_bricks_stairs")
+    public static Block DARK_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:dark_bricks_slab")
+    public static Block DARK_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:dark_bricks_wall")
+    public static Block DARK_BRICKS_WALL;
 
-    @ObjectHolder("embellishcraft:diorite_brick_block")
-    public static Block DIORITE_BRICK_BLOCK;
-    @ObjectHolder("embellishcraft:diorite_brick_stairs")
-    public static Block DIORITE_BRICK_STAIRS;
-    @ObjectHolder("embellishcraft:diorite_brick_slab")
-    public static Block DIORITE_BRICK_SLAB;
-    @ObjectHolder("embellishcraft:diorite_brick_wall")
-    public static Block DIORITE_BRICK_WALL;
+    @ObjectHolder("embellishcraft:diorite_bricks")
+    public static Block DIORITE_BRICKS;
+    @ObjectHolder("embellishcraft:diorite_bricks_stairs")
+    public static Block DIORITE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:diorite_bricks_slab")
+    public static Block DIORITE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:diorite_bricks_wall")
+    public static Block DIORITE_BRICKS_WALL;
 
-    @ObjectHolder("embellishcraft:old_brick_block")
-    public static Block OLD_BRICK_BLOCK;
-    @ObjectHolder("embellishcraft:old_brick_stairs")
-    public static Block OLD_BRICK_STAIRS;
-    @ObjectHolder("embellishcraft:old_brick_slab")
-    public static Block OLD_BRICK_SLAB;
-    @ObjectHolder("embellishcraft:old_brick_wall")
-    public static Block OLD_BRICK_WALL;
+    @ObjectHolder("embellishcraft:old_bricks")
+    public static Block OLD_BRICKS;
+    @ObjectHolder("embellishcraft:old_bricks_stairs")
+    public static Block OLD_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:old_bricks_slab")
+    public static Block OLD_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:old_bricks_wall")
+    public static Block OLD_BRICKS_WALL;
 
-    @ObjectHolder("embellishcraft:sandstone_brick_block")
-    public static Block SANDSTONE_BRICK_BLOCK;
-    @ObjectHolder("embellishcraft:sandstone_brick_stairs")
-    public static Block SANDSTONE_BRICK_STAIRS;
-    @ObjectHolder("embellishcraft:sandstone_brick_slab")
-    public static Block SANDSTONE_BRICK_SLAB;
-    @ObjectHolder("embellishcraft:sandstone_brick_wall")
-    public static Block SANDSTONE_BRICK_WALL;
+    @ObjectHolder("embellishcraft:sandstone_bricks")
+    public static Block SANDSTONE_BRICKS;
+    @ObjectHolder("embellishcraft:sandstone_bricks_stairs")
+    public static Block SANDSTONE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:sandstone_bricks_slab")
+    public static Block SANDSTONE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:sandstone_bricks_wall")
+    public static Block SANDSTONE_BRICKS_WALL;
 
-    @ObjectHolder("embellishcraft:slate_brick_block")
-    public static Block SLATE_BRICK_BLOCK;
-    @ObjectHolder("embellishcraft:slate_brick_stairs")
-    public static Block SLATE_BRICK_STAIRS;
-    @ObjectHolder("embellishcraft:slate_brick_slab")
-    public static Block SLATE_BRICK_SLAB;
-    @ObjectHolder("embellishcraft:slate_brick_wall")
-    public static Block SLATE_BRICK_WALL;
+    @ObjectHolder("embellishcraft:slate_bricks")
+    public static Block SLATE_BRICKS;
+    @ObjectHolder("embellishcraft:slate_bricks_stairs")
+    public static Block SLATE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:slate_bricks_slab")
+    public static Block SLATE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:slate_bricks_wall")
+    public static Block SLATE_BRICKS_WALL;
 
-    @ObjectHolder("embellishcraft:terracotta_brick_block")
-    public static Block TERRACOTTA_BRICK_BLOCK;
-    @ObjectHolder("embellishcraft:terracotta_brick_stairs")
-    public static Block TERRACOTTA_BRICK_STAIRS;
-    @ObjectHolder("embellishcraft:terracotta_brick_slab")
-    public static Block TERRACOTTA_BRICK_SLAB;
-    @ObjectHolder("embellishcraft:terracotta_brick_wall")
-    public static Block TERRACOTTA_BRICK_WALL;
+    @ObjectHolder("embellishcraft:terracotta_bricks")
+    public static Block TERRACOTTA_BRICKS;
+    @ObjectHolder("embellishcraft:terracotta_bricks_stairs")
+    public static Block TERRACOTTA_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:terracotta_bricks_slab")
+    public static Block TERRACOTTA_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:terracotta_bricks_wall")
+    public static Block TERRACOTTA_BRICKS_WALL;
 
-    @ObjectHolder("embellishcraft:weared_brick_block")
-    public static Block WEARED_BRICK_BLOCK;
-    @ObjectHolder("embellishcraft:weared_brick_stairs")
-    public static Block WEARED_BRICK_STAIRS;
-    @ObjectHolder("embellishcraft:weared_brick_slab")
-    public static Block WEARED_BRICK_SLAB;
-    @ObjectHolder("embellishcraft:weared_brick_wall")
-    public static Block WEARED_BRICK_WALL;
+    @ObjectHolder("embellishcraft:weared_bricks")
+    public static Block WEARED_BRICKS;
+    @ObjectHolder("embellishcraft:weared_bricks_stairs")
+    public static Block WEARED_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:weared_bricks_slab")
+    public static Block WEARED_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:weared_bricks_wall")
+    public static Block WEARED_BRICKS_WALL;
 
-    @ObjectHolder("embellishcraft:marble_brick_block")
-    public static Block MARBLE_BRICK_BLOCK;
-    @ObjectHolder("embellishcraft:marble_brick_stairs")
-    public static Block MARBLE_BRICK_STAIRS;
-    @ObjectHolder("embellishcraft:marble_brick_slab")
-    public static Block MARBLE_BRICK_SLAB;
-    @ObjectHolder("embellishcraft:marble_brick_wall")
-    public static Block MARBLE_BRICK_WALL;
+    @ObjectHolder("embellishcraft:marble_bricks")
+    public static Block MARBLE_BRICKS;
+    @ObjectHolder("embellishcraft:marble_bricks_stairs")
+    public static Block MARBLE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:marble_bricks_slab")
+    public static Block MARBLE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:marble_bricks_wall")
+    public static Block MARBLE_BRICKS_WALL;
+
+    // Large bricks
+
+    @ObjectHolder("embellishcraft:dark_large_bricks")
+    public static Block DARK_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:dark_large_bricks_stairs")
+    public static Block DARK_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:dark_large_bricks_slab")
+    public static Block DARK_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:dark_large_bricks_wall")
+    public static Block DARK_LARGE_BRICKS_WALL;
 
     // Paving
 
-    @ObjectHolder("embellishcraft:concrete_paving_block")
-    public static Block CONCRETE_PAVING_BLOCK;
+    @ObjectHolder("embellishcraft:concrete_paving")
+    public static Block CONCRETE_PAVING;
     @ObjectHolder("embellishcraft:concrete_paving_stairs")
     public static Block CONCRETE_PAVING_STAIRS;
     @ObjectHolder("embellishcraft:concrete_paving_slab")
@@ -188,8 +199,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:concrete_paving_pressure_plate")
     public static Block CONCRETE_PAVING_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:damaged_paving_block")
-    public static Block DAMAGED_PAVING_BLOCK;
+    @ObjectHolder("embellishcraft:damaged_paving")
+    public static Block DAMAGED_PAVING;
     @ObjectHolder("embellishcraft:damaged_paving_stairs")
     public static Block DAMAGED_PAVING_STAIRS;
     @ObjectHolder("embellishcraft:damaged_paving_slab")
@@ -197,8 +208,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:damaged_paving_pressure_plate")
     public static Block DAMAGED_PAVING_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:dark_concrete_paving_block")
-    public static Block DARK_CONCRETE_PAVING_BLOCK;
+    @ObjectHolder("embellishcraft:dark_concrete_paving")
+    public static Block DARK_CONCRETE_PAVING;
     @ObjectHolder("embellishcraft:dark_concrete_paving_stairs")
     public static Block DARK_CONCRETE_PAVING_STAIRS;
     @ObjectHolder("embellishcraft:dark_concrete_paving_slab")
@@ -206,8 +217,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:dark_concrete_paving_pressure_plate")
     public static Block DARK_CONCRETE_PAVING_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:diorite_paving_block")
-    public static Block DIORITE_PAVING_BLOCK;
+    @ObjectHolder("embellishcraft:diorite_paving")
+    public static Block DIORITE_PAVING;
     @ObjectHolder("embellishcraft:diorite_paving_stairs")
     public static Block DIORITE_PAVING_STAIRS;
     @ObjectHolder("embellishcraft:diorite_paving_slab")
@@ -215,8 +226,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:diorite_paving_pressure_plate")
     public static Block DIORITE_PAVING_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:moist_paving_block")
-    public static Block MOIST_PAVING_BLOCK;
+    @ObjectHolder("embellishcraft:moist_paving")
+    public static Block MOIST_PAVING;
     @ObjectHolder("embellishcraft:moist_paving_stairs")
     public static Block MOIST_PAVING_STAIRS;
     @ObjectHolder("embellishcraft:moist_paving_slab")
@@ -224,8 +235,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:moist_paving_pressure_plate")
     public static Block MOIST_PAVING_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:polished_paving_block")
-    public static Block POLISHED_PAVING_BLOCK;
+    @ObjectHolder("embellishcraft:polished_paving")
+    public static Block POLISHED_PAVING;
     @ObjectHolder("embellishcraft:polished_paving_stairs")
     public static Block POLISHED_PAVING_STAIRS;
     @ObjectHolder("embellishcraft:polished_paving_slab")
@@ -233,8 +244,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:polished_paving_pressure_plate")
     public static Block POLISHED_PAVING_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:slate_paving_block")
-    public static Block SLATE_PAVING_BLOCK;
+    @ObjectHolder("embellishcraft:slate_paving")
+    public static Block SLATE_PAVING;
     @ObjectHolder("embellishcraft:slate_paving_stairs")
     public static Block SLATE_PAVING_STAIRS;
     @ObjectHolder("embellishcraft:slate_paving_slab")
@@ -242,8 +253,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:slate_paving_pressure_plate")
     public static Block SLATE_PAVING_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:white_concrete_paving_block")
-    public static Block WHITE_CONCRETE_PAVING_BLOCK;
+    @ObjectHolder("embellishcraft:white_concrete_paving")
+    public static Block WHITE_CONCRETE_PAVING;
     @ObjectHolder("embellishcraft:white_concrete_paving_stairs")
     public static Block WHITE_CONCRETE_PAVING_STAIRS;
     @ObjectHolder("embellishcraft:white_concrete_paving_slab")
@@ -253,8 +264,8 @@ public class ModBlocks
 
     // Tiles
 
-    @ObjectHolder("embellishcraft:concrete_tiles_block")
-    public static Block CONCRETE_TILES_BLOCK;
+    @ObjectHolder("embellishcraft:concrete_tiles")
+    public static Block CONCRETE_TILES;
     @ObjectHolder("embellishcraft:concrete_tiles_stairs")
     public static Block CONCRETE_TILES_STAIRS;
     @ObjectHolder("embellishcraft:concrete_tiles_slab")
@@ -262,8 +273,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:concrete_tiles_pressure_plate")
     public static Block CONCRETE_TILES_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:skyblue_tiles_block")
-    public static Block SKYBLUE_TILES_BLOCK;
+    @ObjectHolder("embellishcraft:skyblue_tiles")
+    public static Block SKYBLUE_TILES;
     @ObjectHolder("embellishcraft:skyblue_tiles_stairs")
     public static Block SKYBLUE_TILES_STAIRS;
     @ObjectHolder("embellishcraft:skyblue_tiles_slab")
@@ -271,8 +282,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:skyblue_tiles_pressure_plate")
     public static Block SKYBLUE_TILES_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:orange_tiles_block")
-    public static Block ORANGE_TILES_BLOCK;
+    @ObjectHolder("embellishcraft:orange_tiles")
+    public static Block ORANGE_TILES;
     @ObjectHolder("embellishcraft:orange_tiles_stairs")
     public static Block ORANGE_TILES_STAIRS;
     @ObjectHolder("embellishcraft:orange_tiles_slab")
@@ -280,8 +291,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:orange_tiles_pressure_plate")
     public static Block ORANGE_TILES_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:blue_tiles_block")
-    public static Block BLUE_TILES_BLOCK;
+    @ObjectHolder("embellishcraft:blue_tiles")
+    public static Block BLUE_TILES;
     @ObjectHolder("embellishcraft:blue_tiles_stairs")
     public static Block BLUE_TILES_STAIRS;
     @ObjectHolder("embellishcraft:blue_tiles_slab")
@@ -289,8 +300,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:blue_tiles_pressure_plate")
     public static Block BLUE_TILES_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:light_blue_tiles_block")
-    public static Block LIGHT_BLUE_TILES_BLOCK;
+    @ObjectHolder("embellishcraft:light_blue_tiles")
+    public static Block LIGHT_BLUE_TILES;
     @ObjectHolder("embellishcraft:light_blue_tiles_stairs")
     public static Block LIGHT_BLUE_TILES_STAIRS;
     @ObjectHolder("embellishcraft:light_blue_tiles_slab")
@@ -298,8 +309,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:light_blue_tiles_pressure_plate")
     public static Block LIGHT_BLUE_TILES_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:red_tiles_block")
-    public static Block RED_TILES_BLOCK;
+    @ObjectHolder("embellishcraft:red_tiles")
+    public static Block RED_TILES;
     @ObjectHolder("embellishcraft:red_tiles_stairs")
     public static Block RED_TILES_STAIRS;
     @ObjectHolder("embellishcraft:red_tiles_slab")
@@ -307,8 +318,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:red_tiles_pressure_plate")
     public static Block RED_TILES_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:white_tiles_block")
-    public static Block WHITE_TILES_BLOCK;
+    @ObjectHolder("embellishcraft:white_tiles")
+    public static Block WHITE_TILES;
     @ObjectHolder("embellishcraft:white_tiles_stairs")
     public static Block WHITE_TILES_STAIRS;
     @ObjectHolder("embellishcraft:white_tiles_slab")
@@ -316,8 +327,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:white_tiles_pressure_plate")
     public static Block WHITE_TILES_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:yellow_tiles_block")
-    public static Block YELLOW_TILES_BLOCK;
+    @ObjectHolder("embellishcraft:yellow_tiles")
+    public static Block YELLOW_TILES;
     @ObjectHolder("embellishcraft:yellow_tiles_stairs")
     public static Block YELLOW_TILES_STAIRS;
     @ObjectHolder("embellishcraft:yellow_tiles_slab")
@@ -325,8 +336,8 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:yellow_tiles_pressure_plate")
     public static Block YELLOW_TILES_PRESSURE_PLATE;
 
-    @ObjectHolder("embellishcraft:yellow_grey_tiles_block")
-    public static Block YELLOW_GREY_TILES_BLOCK;
+    @ObjectHolder("embellishcraft:yellow_grey_tiles")
+    public static Block YELLOW_GREY_TILES;
     @ObjectHolder("embellishcraft:yellow_grey_tiles_stairs")
     public static Block YELLOW_GREY_TILES_STAIRS;
     @ObjectHolder("embellishcraft:yellow_grey_tiles_slab")
@@ -336,65 +347,65 @@ public class ModBlocks
 
     // Wallpaper
 
-    @ObjectHolder("embellishcraft:white_blue_wallpaper_block")
-    public static Block WHITE_BLUE_WALLPAPER_BLOCK;
+    @ObjectHolder("embellishcraft:white_blue_wallpaper")
+    public static Block WHITE_BLUE_WALLPAPER;
     @ObjectHolder("embellishcraft:white_blue_wallpaper_stairs")
     public static Block WHITE_BLUE_WALLPAPER_STAIRS;
     @ObjectHolder("embellishcraft:white_blue_wallpaper_slab")
     public static Block WHITE_BLUE_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:white_blue_wallpaper_plinth_block")
-    public static Block WHITE_BLUE_WALLPAPER_PLINTH_BLOCK;
+    @ObjectHolder("embellishcraft:white_blue_wallpaper_plinth")
+    public static Block WHITE_BLUE_WALLPAPER_PLINTH;
 
-    @ObjectHolder("embellishcraft:beige_wallpaper_block")
-    public static Block BEIGE_WALLPAPER_BLOCK;
+    @ObjectHolder("embellishcraft:beige_wallpaper")
+    public static Block BEIGE_WALLPAPER;
     @ObjectHolder("embellishcraft:beige_wallpaper_stairs")
     public static Block BEIGE_WALLPAPER_STAIRS;
     @ObjectHolder("embellishcraft:beige_wallpaper_slab")
     public static Block BEIGE_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:beige_wallpaper_plinth_block")
-    public static Block BEIGE_WALLPAPER_PLINTH_BLOCK;
+    @ObjectHolder("embellishcraft:beige_wallpaper_plinth")
+    public static Block BEIGE_WALLPAPER_PLINTH;
 
-    @ObjectHolder("embellishcraft:pink_wallpaper_block")
-    public static Block PINK_WALLPAPER_BLOCK;
+    @ObjectHolder("embellishcraft:pink_wallpaper")
+    public static Block PINK_WALLPAPER;
     @ObjectHolder("embellishcraft:pink_wallpaper_stairs")
     public static Block PINK_WALLPAPER_STAIRS;
     @ObjectHolder("embellishcraft:pink_wallpaper_slab")
     public static Block PINK_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:pink_wallpaper_plinth_block")
-    public static Block PINK_WALLPAPER_PLINTH_BLOCK;
+    @ObjectHolder("embellishcraft:pink_wallpaper_plinth")
+    public static Block PINK_WALLPAPER_PLINTH;
 
-    @ObjectHolder("embellishcraft:beige_flower_wallpaper_block")
-    public static Block BEIGE_FLOWER_WALLPAPER_BLOCK;
+    @ObjectHolder("embellishcraft:beige_flower_wallpaper")
+    public static Block BEIGE_FLOWER_WALLPAPER;
     @ObjectHolder("embellishcraft:beige_flower_wallpaper_stairs")
     public static Block BEIGE_FLOWER_WALLPAPER_STAIRS;
     @ObjectHolder("embellishcraft:beige_flower_wallpaper_slab")
     public static Block BEIGE_FLOWER_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:beige_flower_wallpaper_plinth_block")
-    public static Block BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK;
+    @ObjectHolder("embellishcraft:beige_flower_wallpaper_plinth")
+    public static Block BEIGE_FLOWER_WALLPAPER_PLINTH;
 
-    @ObjectHolder("embellishcraft:white_green_wallpaper_block")
-    public static Block WHITE_GREEN_WALLPAPER_BLOCK;
+    @ObjectHolder("embellishcraft:white_green_wallpaper")
+    public static Block WHITE_GREEN_WALLPAPER;
     @ObjectHolder("embellishcraft:white_green_wallpaper_stairs")
     public static Block WHITE_GREEN_WALLPAPER_STAIRS;
     @ObjectHolder("embellishcraft:white_green_wallpaper_slab")
     public static Block WHITE_GREEN_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:white_green_wallpaper_plinth_block")
-    public static Block WHITE_GREEN_WALLPAPER_PLINTH_BLOCK;
+    @ObjectHolder("embellishcraft:white_green_wallpaper_plinth")
+    public static Block WHITE_GREEN_WALLPAPER_PLINTH;
 
     // Furniture
 
-    @ObjectHolder("embellishcraft:oak_chair_block")
-    public static Block OAK_CHAIR_BLOCK;
-    @ObjectHolder("embellishcraft:dark_oak_chair_block")
-    public static Block DARK_OAK_CHAIR_BLOCK;
-    @ObjectHolder("embellishcraft:birch_chair_block")
-    public static Block BIRCH_CHAIR_BLOCK;
-    @ObjectHolder("embellishcraft:jungle_chair_block")
-    public static Block JUNGLE_CHAIR_BLOCK;
-    @ObjectHolder("embellishcraft:spruce_chair_block")
-    public static Block SPRUCE_CHAIR_BLOCK;
-    @ObjectHolder("embellishcraft:acacia_chair_block")
-    public static Block ACACIA_CHAIR_BLOCK;
+    @ObjectHolder("embellishcraft:oak_chair")
+    public static Block OAK_CHAIR;
+    @ObjectHolder("embellishcraft:dark_oak_chair")
+    public static Block DARK_OAK_CHAIR;
+    @ObjectHolder("embellishcraft:birch_chair")
+    public static Block BIRCH_CHAIR;
+    @ObjectHolder("embellishcraft:jungle_chair")
+    public static Block JUNGLE_CHAIR;
+    @ObjectHolder("embellishcraft:spruce_chair")
+    public static Block SPRUCE_CHAIR;
+    @ObjectHolder("embellishcraft:acacia_chair")
+    public static Block ACACIA_CHAIR;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -413,15 +424,19 @@ public class ModBlocks
 
         // Bricks
 
-        createBlockWithVariants(event, "basalt_brick", true, true, true, false);
-        createBlockWithVariants(event, "dark_brick", true, true, true, false);
-        createBlockWithVariants(event, "diorite_brick", true, true, true, false);
-        createBlockWithVariants(event, "old_brick", true, true, true, false);
-        createBlockWithVariants(event, "sandstone_brick", true, true, true, false);
-        createBlockWithVariants(event, "slate_brick", true, true, true, false);
-        createBlockWithVariants(event, "terracotta_brick", true, true, true, false);
-        createBlockWithVariants(event, "weared_brick", true, true, true, false);
-        createBlockWithVariants(event, "marble_brick", true, true, true, false);
+        createBlockWithVariants(event, "basalt_bricks", true, true, true, false);
+        createBlockWithVariants(event, "dark_bricks", true, true, true, false);
+        createBlockWithVariants(event, "diorite_bricks", true, true, true, false);
+        createBlockWithVariants(event, "old_bricks", true, true, true, false);
+        createBlockWithVariants(event, "sandstone_bricks", true, true, true, false);
+        createBlockWithVariants(event, "slate_bricks", true, true, true, false);
+        createBlockWithVariants(event, "terracotta_bricks", true, true, true, false);
+        createBlockWithVariants(event, "weared_bricks", true, true, true, false);
+        createBlockWithVariants(event, "marble_bricks", true, true, true, false);
+
+        // Large bricks
+
+        createBlockWithVariants(event, "dark_large_bricks", true, true, true, false);
 
         // Paving
 
@@ -449,24 +464,24 @@ public class ModBlocks
         // Wallpaper
 
         createBlockWithVariants(event, "white_blue_wallpaper", true, true, false, false);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_blue_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_blue_wallpaper_plinth"));
         createBlockWithVariants(event, "beige_wallpaper", true, true, false, false);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_wallpaper_plinth"));
         createBlockWithVariants(event, "pink_wallpaper", true, true, false, false);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("pink_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("pink_wallpaper_plinth"));
         createBlockWithVariants(event, "beige_flower_wallpaper", true, true, false, false);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_flower_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_flower_wallpaper_plinth"));
         createBlockWithVariants(event, "white_green_wallpaper", true, true, false, false);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_green_wallpaper_plinth_block"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_green_wallpaper_plinth"));
 
         // Furniture
 
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("oak_chair_block"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_chair_block"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("birch_chair_block"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_chair_block"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_chair_block"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_chair_block"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("oak_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("birch_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_chair"));
 
     }
 
@@ -475,72 +490,76 @@ public class ModBlocks
     {
         // World
 
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_BLOCK, BASALT_STAIRS, BASALT_SLAB, BASALT_WALL, BASALT_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_BLOCK, SLATE_STAIRS, SLATE_SLAB, SLATE_WALL, SLATE_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_BLOCK, MARBLE_STAIRS, MARBLE_SLAB, MARBLE_WALL, MARBLE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT, BASALT_STAIRS, BASALT_SLAB, BASALT_WALL, BASALT_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE, SLATE_STAIRS, SLATE_SLAB, SLATE_WALL, SLATE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE, MARBLE_STAIRS, MARBLE_SLAB, MARBLE_WALL, MARBLE_PRESSURE_PLATE);
 
         // Cobblestones
 
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_COBBLESTONE_BLOCK, BASALT_COBBLESTONE_STAIRS, BASALT_COBBLESTONE_SLAB, BASALT_COBBLESTONE_WALL, BASALT_COBBLESTONE_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_COBBLESTONE_BLOCK, SLATE_COBBLESTONE_STAIRS, SLATE_COBBLESTONE_SLAB, SLATE_COBBLESTONE_WALL, SLATE_COBBLESTONE_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_COBBLESTONE_BLOCK, MARBLE_COBBLESTONE_STAIRS, MARBLE_COBBLESTONE_SLAB, MARBLE_COBBLESTONE_WALL, MARBLE_COBBLESTONE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_COBBLESTONE, BASALT_COBBLESTONE_STAIRS, BASALT_COBBLESTONE_SLAB, BASALT_COBBLESTONE_WALL, BASALT_COBBLESTONE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_COBBLESTONE, SLATE_COBBLESTONE_STAIRS, SLATE_COBBLESTONE_SLAB, SLATE_COBBLESTONE_WALL, SLATE_COBBLESTONE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_COBBLESTONE, MARBLE_COBBLESTONE_STAIRS, MARBLE_COBBLESTONE_SLAB, MARBLE_COBBLESTONE_WALL, MARBLE_COBBLESTONE_PRESSURE_PLATE);
 
         // Bricks
 
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_BRICK_BLOCK, BASALT_BRICK_STAIRS, BASALT_BRICK_SLAB, BASALT_BRICK_WALL, null);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_BRICK_BLOCK, DARK_BRICK_STAIRS, DARK_BRICK_SLAB, DARK_BRICK_WALL, null);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_BRICK_BLOCK, DIORITE_BRICK_STAIRS, DIORITE_BRICK_SLAB, DIORITE_BRICK_WALL, null);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_BRICK_BLOCK, OLD_BRICK_STAIRS, OLD_BRICK_SLAB, OLD_BRICK_WALL, null);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_BRICK_BLOCK, SANDSTONE_BRICK_STAIRS, SANDSTONE_BRICK_SLAB, SANDSTONE_BRICK_WALL, null);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_BRICK_BLOCK, SLATE_BRICK_STAIRS, SLATE_BRICK_SLAB, SLATE_BRICK_WALL, null);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_BRICK_BLOCK, TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICK_SLAB, TERRACOTTA_BRICK_WALL, null);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_BRICK_BLOCK, WEARED_BRICK_STAIRS, WEARED_BRICK_SLAB, WEARED_BRICK_WALL, null);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_BRICK_BLOCK, MARBLE_BRICK_STAIRS, MARBLE_BRICK_SLAB, MARBLE_BRICK_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_BRICKS, BASALT_BRICKS_STAIRS, BASALT_BRICKS_SLAB, BASALT_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_BRICKS, DARK_BRICKS_STAIRS, DARK_BRICKS_SLAB, DARK_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_BRICKS, DIORITE_BRICKS_STAIRS, DIORITE_BRICKS_SLAB, DIORITE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_BRICKS, OLD_BRICKS_STAIRS, OLD_BRICKS_SLAB, OLD_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_BRICKS, SANDSTONE_BRICKS_STAIRS, SANDSTONE_BRICKS_SLAB, SANDSTONE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_BRICKS, SLATE_BRICKS_STAIRS, SLATE_BRICKS_SLAB, SLATE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_BRICKS, TERRACOTTA_BRICKS_STAIRS, TERRACOTTA_BRICKS_SLAB, TERRACOTTA_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_BRICKS, WEARED_BRICKS_STAIRS, WEARED_BRICKS_SLAB, WEARED_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_BRICKS, MARBLE_BRICKS_STAIRS, MARBLE_BRICKS_SLAB, MARBLE_BRICKS_WALL, null);
+
+        // Large bricks
+
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_LARGE_BRICKS, DARK_LARGE_BRICKS_STAIRS, DARK_LARGE_BRICKS_SLAB, DARK_LARGE_BRICKS_WALL, null);
 
         // Paving
 
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_PAVING_BLOCK, CONCRETE_PAVING_STAIRS, CONCRETE_PAVING_SLAB, null, CONCRETE_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DAMAGED_PAVING_BLOCK, DAMAGED_PAVING_STAIRS, DAMAGED_PAVING_SLAB, null, DAMAGED_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_CONCRETE_PAVING_BLOCK, DARK_CONCRETE_PAVING_STAIRS, DARK_CONCRETE_PAVING_SLAB, null, DARK_CONCRETE_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_PAVING_BLOCK, DIORITE_PAVING_STAIRS, DIORITE_PAVING_SLAB, null, DIORITE_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MOIST_PAVING_BLOCK, MOIST_PAVING_STAIRS, MOIST_PAVING_SLAB, null, MOIST_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, POLISHED_PAVING_BLOCK, POLISHED_PAVING_STAIRS, POLISHED_PAVING_SLAB, null, POLISHED_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_PAVING_BLOCK, SLATE_PAVING_STAIRS, SLATE_PAVING_SLAB, null, SLATE_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CONCRETE_PAVING_BLOCK, WHITE_CONCRETE_PAVING_STAIRS, WHITE_CONCRETE_PAVING_SLAB, null, WHITE_CONCRETE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_PAVING, CONCRETE_PAVING_STAIRS, CONCRETE_PAVING_SLAB, null, CONCRETE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DAMAGED_PAVING, DAMAGED_PAVING_STAIRS, DAMAGED_PAVING_SLAB, null, DAMAGED_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_CONCRETE_PAVING, DARK_CONCRETE_PAVING_STAIRS, DARK_CONCRETE_PAVING_SLAB, null, DARK_CONCRETE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_PAVING, DIORITE_PAVING_STAIRS, DIORITE_PAVING_SLAB, null, DIORITE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MOIST_PAVING, MOIST_PAVING_STAIRS, MOIST_PAVING_SLAB, null, MOIST_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, POLISHED_PAVING, POLISHED_PAVING_STAIRS, POLISHED_PAVING_SLAB, null, POLISHED_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_PAVING, SLATE_PAVING_STAIRS, SLATE_PAVING_SLAB, null, SLATE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CONCRETE_PAVING, WHITE_CONCRETE_PAVING_STAIRS, WHITE_CONCRETE_PAVING_SLAB, null, WHITE_CONCRETE_PAVING_PRESSURE_PLATE);
 
         // Tiles
 
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_TILES_BLOCK, CONCRETE_TILES_STAIRS, CONCRETE_TILES_SLAB, null, CONCRETE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SKYBLUE_TILES_BLOCK, SKYBLUE_TILES_STAIRS, SKYBLUE_TILES_SLAB, null, SKYBLUE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, ORANGE_TILES_BLOCK, ORANGE_TILES_STAIRS, ORANGE_TILES_SLAB, null, ORANGE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BLUE_TILES_BLOCK, BLUE_TILES_STAIRS, BLUE_TILES_SLAB, null, BLUE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_TILES_BLOCK, LIGHT_BLUE_TILES_STAIRS, LIGHT_BLUE_TILES_SLAB, null, LIGHT_BLUE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RED_TILES_BLOCK, RED_TILES_STAIRS, RED_TILES_SLAB, null, RED_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_TILES_BLOCK, WHITE_TILES_STAIRS, WHITE_TILES_SLAB, null, WHITE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_TILES_BLOCK, YELLOW_TILES_STAIRS, YELLOW_TILES_SLAB, null, YELLOW_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_GREY_TILES_BLOCK, YELLOW_GREY_TILES_STAIRS, YELLOW_GREY_TILES_SLAB, null, YELLOW_GREY_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_TILES, CONCRETE_TILES_STAIRS, CONCRETE_TILES_SLAB, null, CONCRETE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SKYBLUE_TILES, SKYBLUE_TILES_STAIRS, SKYBLUE_TILES_SLAB, null, SKYBLUE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, ORANGE_TILES, ORANGE_TILES_STAIRS, ORANGE_TILES_SLAB, null, ORANGE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BLUE_TILES, BLUE_TILES_STAIRS, BLUE_TILES_SLAB, null, BLUE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_TILES, LIGHT_BLUE_TILES_STAIRS, LIGHT_BLUE_TILES_SLAB, null, LIGHT_BLUE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RED_TILES, RED_TILES_STAIRS, RED_TILES_SLAB, null, RED_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_TILES, WHITE_TILES_STAIRS, WHITE_TILES_SLAB, null, WHITE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_TILES, YELLOW_TILES_STAIRS, YELLOW_TILES_SLAB, null, YELLOW_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_GREY_TILES, YELLOW_GREY_TILES_STAIRS, YELLOW_GREY_TILES_SLAB, null, YELLOW_GREY_TILES_PRESSURE_PLATE);
 
         // Wallpapers
 
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_BLUE_WALLPAPER_BLOCK, WHITE_BLUE_WALLPAPER_STAIRS, WHITE_BLUE_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(WHITE_BLUE_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_BLUE_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_WALLPAPER_BLOCK, BEIGE_WALLPAPER_STAIRS, BEIGE_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(BEIGE_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, PINK_WALLPAPER_BLOCK, PINK_WALLPAPER_STAIRS, PINK_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(PINK_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PINK_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_FLOWER_WALLPAPER_BLOCK, BEIGE_FLOWER_WALLPAPER_STAIRS, BEIGE_FLOWER_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_FLOWER_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_GREEN_WALLPAPER_BLOCK, WHITE_GREEN_WALLPAPER_STAIRS, WHITE_GREEN_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH_BLOCK.getRegistryName()));
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_BLUE_WALLPAPER, WHITE_BLUE_WALLPAPER_STAIRS, WHITE_BLUE_WALLPAPER_SLAB, null, null);
+        event.getRegistry().register(new BlockItem(WHITE_BLUE_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_BLUE_WALLPAPER_PLINTH.getRegistryName()));
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_WALLPAPER, BEIGE_WALLPAPER_STAIRS, BEIGE_WALLPAPER_SLAB, null, null);
+        event.getRegistry().register(new BlockItem(BEIGE_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_WALLPAPER_PLINTH.getRegistryName()));
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, PINK_WALLPAPER, PINK_WALLPAPER_STAIRS, PINK_WALLPAPER_SLAB, null, null);
+        event.getRegistry().register(new BlockItem(PINK_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PINK_WALLPAPER_PLINTH.getRegistryName()));
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_FLOWER_WALLPAPER, BEIGE_FLOWER_WALLPAPER_STAIRS, BEIGE_FLOWER_WALLPAPER_SLAB, null, null);
+        event.getRegistry().register(new BlockItem(BEIGE_FLOWER_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_FLOWER_WALLPAPER_PLINTH.getRegistryName()));
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_GREEN_WALLPAPER, WHITE_GREEN_WALLPAPER_STAIRS, WHITE_GREEN_WALLPAPER_SLAB, null, null);
+        event.getRegistry().register(new BlockItem(WHITE_GREEN_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH.getRegistryName()));
 
         // Furniture
 
-        event.getRegistry().register(new ChairItemBlock(OAK_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(DARK_OAK_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(BIRCH_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(JUNGLE_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(SPRUCE_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_CHAIR_BLOCK.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(ACACIA_CHAIR_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_CHAIR_BLOCK.getRegistryName()));
+        event.getRegistry().register(new ChairItemBlock(OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_CHAIR.getRegistryName()));
+        event.getRegistry().register(new ChairItemBlock(DARK_OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_CHAIR.getRegistryName()));
+        event.getRegistry().register(new ChairItemBlock(BIRCH_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_CHAIR.getRegistryName()));
+        event.getRegistry().register(new ChairItemBlock(JUNGLE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new ChairItemBlock(SPRUCE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new ChairItemBlock(ACACIA_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_CHAIR.getRegistryName()));
 
     }
 
@@ -562,7 +581,7 @@ public class ModBlocks
     private static void createBlockWithVariants(RegistryEvent.Register<Block> event, String name, boolean stairs, boolean slab, boolean wall, boolean pressure)
     {
         Block block; // Needed to register the stairs
-        event.getRegistry().register(block = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block"));
+        event.getRegistry().register(block = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name));
         if(stairs)
             event.getRegistry().register(new CustomStairsBlock(block.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
         if(slab)
@@ -589,19 +608,20 @@ public class ModBlocks
      * @param pressure
      *        If true, pressure plate variant will be registered
      */
-    private static void createOnlyVariants(RegistryEvent.Register<Block> event, String name, boolean stairs, boolean slab, boolean wall, boolean pressure)
-    {
-        Block block = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_block");; // Needed to register the stairs
-        if(stairs)
-            event.getRegistry().register(new CustomStairsBlock(block.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
-        if(slab)
-            event.getRegistry().register(new SlabBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
-        if(wall)
-            event.getRegistry().register(new WallBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
-        if(pressure)
-            event.getRegistry().register(new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
-
-    }
+    // private static void createOnlyVariants(RegistryEvent.Register<Block> event, String name, boolean stairs, boolean slab, boolean wall, boolean pressure)
+    // {
+    // Block block = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name);; // Needed to register the stairs
+    // if(stairs)
+    // event.getRegistry().register(new CustomStairsBlock(block.getDefaultState(), Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_stairs"));
+    // if(slab)
+    // event.getRegistry().register(new SlabBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_slab"));
+    // if(wall)
+    // event.getRegistry().register(new WallBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
+    // if(pressure)
+    // event.getRegistry().register(new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name +
+    // "_pressure_plate"));
+    //
+    // }
 
     /**
      * Registers a Block with its variants.
@@ -612,13 +632,13 @@ public class ModBlocks
      * @param block
      *        The associated block
      * @param stairs
-     *        The associated stairs (send null to no generate ItemBlock for it)
+     *        The associated stairs (send null to not generate ItemBlock for it)
      * @param slab
-     *        The associated slab (send null to no generate ItemBlock for it)
+     *        The associated slab (send null to not generate ItemBlock for it)
      * @param wall
-     *        The associated wall (send null to no generate ItemBlock for it)
+     *        The associated wall (send null to not generate ItemBlock for it)
      * @param pressure
-     *        The associated pressure plate (send null to no generate ItemBlock for it)
+     *        The associated pressure plate (send null tot no generate ItemBlock for it)
      */
     private static void createItemBlockWithVariants(RegistryEvent.Register<Item> event, ItemGroup group, Block block, Block stairs, Block slab, Block wall, Block pressure)
     {

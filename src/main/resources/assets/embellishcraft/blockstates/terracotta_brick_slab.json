@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "embellishcraft:block/terracotta_brick_slab" },
-        "type=top": { "model": "embellishcraft:block/terracotta_brick_slab_top" },
-        "type=double": { "model": "embellishcraft:block/terracotta_brick_block" }
-    }
-}
