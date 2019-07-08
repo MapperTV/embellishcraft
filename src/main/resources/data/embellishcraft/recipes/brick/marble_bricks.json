@@ -6,11 +6,11 @@
     ],
     "key": {
         "#": {
-            "item": "minecraft:terracotta"
+            "item": "embellishcraft:marble_cobblestone"
         }
     },
     "result": {
-        "item": "embellishcraft:terracotta_bricks_block",
+        "item": "embellishcraft:marble_bricks",
         "count": 4
     }
 }

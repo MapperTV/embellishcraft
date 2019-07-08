@@ -6,11 +6,11 @@
     ],
     "key": {
         "#": {
-            "item": "embellishcraft:marble_cobblestone_block"
+            "item": "embellishcraft:slate_cobblestone"
         }
     },
     "result": {
-        "item": "embellishcraft:marble_bricks_block",
+        "item": "embellishcraft:slate_bricks",
         "count": 4
     }
 }

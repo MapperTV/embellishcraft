@@ -2,19 +2,19 @@
     "type": "crafting_shaped",
     "pattern": [
         "###",
-        "#B#",
+        "#N#",
         "###"
     ],
     "key": {
         "#": {
-            "item": "minecraft:diorite"
-        },
-        "B": {
             "item": "minecraft:bricks"
+        },
+        "N": {
+            "item": "minecraft:netherrack"
         }
     },
     "result": {
-        "item": "embellishcraft:diorite_bricks_block",
-        "count": 8
+        "item": "embellishcraft:weared_bricks",
+        "count": 9
     }
 }

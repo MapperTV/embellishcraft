@@ -7,14 +7,14 @@
     ],
     "key": {
         "#": {
-            "item": "embellishcraft:weared_bricks_block"
+            "item": "embellishcraft:weared_bricks"
         },
         "N": {
             "item": "minecraft:netherrack"
         }
     },
     "result": {
-        "item": "embellishcraft:old_bricks_block",
+        "item": "embellishcraft:old_bricks",
         "count": 9
     }
 }
