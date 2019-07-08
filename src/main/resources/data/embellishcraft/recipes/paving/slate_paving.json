@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:slate"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:slate_paving",
+        "count": 4
+    }
+}

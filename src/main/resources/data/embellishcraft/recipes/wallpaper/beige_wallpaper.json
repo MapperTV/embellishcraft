@@ -1,0 +1,26 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "# S",
+        "PWS",
+        "  S"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:white_dye"
+        },
+        "S": {
+            "item": "minecraft:stone"
+        },
+        "P": {
+            "item": "minecraft:pink_dye"
+        },
+        "W": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:beige_wallpaper",
+        "count": 3
+    }
+}

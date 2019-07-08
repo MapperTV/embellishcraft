@@ -1,0 +1,15 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:sandstone_bricks_block"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:sandstone_bricks_slab",
+        "count": 6
+    }
+}

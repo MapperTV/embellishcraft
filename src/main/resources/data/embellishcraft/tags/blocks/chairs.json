@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "embellishcraft:oak_chair_block",
-    "embellishcraft:spruce_chair_block",
-    "embellishcraft:birch_chair_block",
-    "embellishcraft:jungle_chair_block",
-    "embellishcraft:acacia_chair_block",
-    "embellishcraft:dark_oak_chair_block"
+    "embellishcraft:oak_chair",
+    "embellishcraft:spruce_chair",
+    "embellishcraft:birch_chair",
+    "embellishcraft:jungle_chair",
+    "embellishcraft:acacia_chair",
+    "embellishcraft:dark_oak_chair"
   ]
 }

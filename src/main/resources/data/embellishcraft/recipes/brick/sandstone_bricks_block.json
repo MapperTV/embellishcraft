@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:cut_sandstone"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:sandstone_bricks_block",
+        "count": 4
+    }
+}

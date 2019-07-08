@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:concrete_paving"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:concrete_tiles",
+        "count": 4
+    }
+}

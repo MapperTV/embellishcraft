@@ -21,14 +21,15 @@
     "embellishcraft:basalt_cobblestone_wall",
     "embellishcraft:slate_cobblestone_wall",
     "embellishcraft:marble_cobblestone_wall",
-    "embellishcraft:basalt_brick_wall",
-    "embellishcraft:dark_brick_wall",
-    "embellishcraft:diorite_brick_wall",
-    "embellishcraft:old_brick_wall",
+    "embellishcraft:basalt_bricks_wall",
+    "embellishcraft:dark_bricks_wall",
+    "embellishcraft:diorite_bricks_wall",
+    "embellishcraft:old_bricks_wall",
     "embellishcraft:sandstone_brick_wall",
-    "embellishcraft:slate_brick_wall",
-    "embellishcraft:terracotta_brick_wall",
-    "embellishcraft:weared_brick_wall",
-    "embellishcraft:marble_brick_wall"
+    "embellishcraft:slate_bricks_wall",
+    "embellishcraft:terracotta_bricks_wall",
+    "embellishcraft:weared_bricks_wall",
+    "embellishcraft:marble_bricks_wall",
+    "embellishcraft:dark_large_bricks_wall"
   ]
 }

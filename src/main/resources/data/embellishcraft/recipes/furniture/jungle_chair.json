@@ -1,0 +1,21 @@
+{
+    "type": "crafting_shaped",
+    "group": "chairs",
+    "pattern": [
+        "S  ",
+        "SWS",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:jungle_slab"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:jungle_chair",
+        "count": 1
+    }
+}
