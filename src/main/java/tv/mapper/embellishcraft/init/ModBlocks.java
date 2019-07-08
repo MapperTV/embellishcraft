@@ -178,7 +178,24 @@ public class ModBlocks
     public static Block MARBLE_BRICKS_WALL;
 
     // Large bricks
-
+    @ObjectHolder("embellishcraft:basalt_large_bricks")
+    public static Block BASALT_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:basalt_large_bricks_stairs")
+    public static Block BASALT_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:basalt_large_bricks_slab")
+    public static Block BASALT_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:basalt_large_bricks_wall")
+    public static Block BASALT_LARGE_BRICKS_WALL;
+    
+    @ObjectHolder("embellishcraft:diorite_large_bricks")
+    public static Block DIORITE_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:diorite_large_bricks_stairs")
+    public static Block DIORITE_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:diorite_large_bricks_slab")
+    public static Block DIORITE_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:diorite_large_bricks_wall")
+    public static Block DIORITE_LARGE_BRICKS_WALL;
+    
     @ObjectHolder("embellishcraft:dark_large_bricks")
     public static Block DARK_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:dark_large_bricks_stairs")
@@ -187,6 +204,60 @@ public class ModBlocks
     public static Block DARK_LARGE_BRICKS_SLAB;
     @ObjectHolder("embellishcraft:dark_large_bricks_wall")
     public static Block DARK_LARGE_BRICKS_WALL;
+    
+    @ObjectHolder("embellishcraft:marble_large_bricks")
+    public static Block MARBLE_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:marble_large_bricks_stairs")
+    public static Block MARBLE_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:marble_large_bricks_slab")
+    public static Block MARBLE_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:marble_large_bricks_wall")
+    public static Block MARBLE_LARGE_BRICKS_WALL;
+    
+    @ObjectHolder("embellishcraft:old_large_bricks")
+    public static Block OLD_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:old_large_bricks_stairs")
+    public static Block OLD_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:old_large_bricks_slab")
+    public static Block OLD_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:old_large_bricks_wall")
+    public static Block OLD_LARGE_BRICKS_WALL;
+    
+    @ObjectHolder("embellishcraft:sandstone_large_bricks")
+    public static Block SANDSTONE_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:sandstone_large_bricks_stairs")
+    public static Block SANDSTONE_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:sandstone_large_bricks_slab")
+    public static Block SANDSTONE_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:sandstone_large_bricks_wall")
+    public static Block SANDSTONE_LARGE_BRICKS_WALL;
+    
+    @ObjectHolder("embellishcraft:slate_large_bricks")
+    public static Block SLATE_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:slate_large_bricks_stairs")
+    public static Block SLATE_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:slate_large_bricks_slab")
+    public static Block SLATE_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:slate_large_bricks_wall")
+    public static Block SLATE_LARGE_BRICKS_WALL;
+    
+    @ObjectHolder("embellishcraft:terracotta_large_bricks")
+    public static Block TERRACOTTA_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:terracotta_large_bricks_stairs")
+    public static Block TERRACOTTA_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:terracotta_large_bricks_slab")
+    public static Block TERRACOTTA_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:terracotta_large_bricks_wall")
+    public static Block TERRACOTTA_LARGE_BRICKS_WALL;
+    
+    @ObjectHolder("embellishcraft:weared_large_bricks")
+    public static Block WEARED_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:weared_large_bricks_stairs")
+    public static Block WEARED_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:weared_large_bricks_slab")
+    public static Block WEARED_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:weared_large_bricks_wall")
+    public static Block WEARED_LARGE_BRICKS_WALL;
 
     // Paving
 
@@ -436,7 +507,16 @@ public class ModBlocks
 
         // Large bricks
 
+        createBlockWithVariants(event, "basalt_large_bricks", true, true, true, false);
+        createBlockWithVariants(event, "diorite_large_bricks", true, true, true, false);
         createBlockWithVariants(event, "dark_large_bricks", true, true, true, false);
+        createBlockWithVariants(event, "marble_large_bricks", true, true, true, false);
+        createBlockWithVariants(event, "old_large_bricks", true, true, true, false);
+        createBlockWithVariants(event, "sandstone_large_bricks", true, true, true, false);
+        createBlockWithVariants(event, "slate_large_bricks", true, true, true, false);
+        createBlockWithVariants(event, "terracotta_large_bricks", true, true, true, false);
+        createBlockWithVariants(event, "weared_large_bricks", true, true, true, false);
+
 
         // Paving
 
@@ -514,7 +594,15 @@ public class ModBlocks
 
         // Large bricks
 
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_LARGE_BRICKS, BASALT_LARGE_BRICKS_STAIRS, BASALT_LARGE_BRICKS_SLAB, BASALT_LARGE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_LARGE_BRICKS, DIORITE_LARGE_BRICKS_STAIRS, DIORITE_LARGE_BRICKS_SLAB, DIORITE_LARGE_BRICKS_WALL, null);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_LARGE_BRICKS, DARK_LARGE_BRICKS_STAIRS, DARK_LARGE_BRICKS_SLAB, DARK_LARGE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_LARGE_BRICKS, MARBLE_LARGE_BRICKS_STAIRS, MARBLE_LARGE_BRICKS_SLAB, MARBLE_LARGE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_LARGE_BRICKS, OLD_LARGE_BRICKS_STAIRS, OLD_LARGE_BRICKS_SLAB, OLD_LARGE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_LARGE_BRICKS, SANDSTONE_LARGE_BRICKS_STAIRS, SANDSTONE_LARGE_BRICKS_SLAB, SANDSTONE_LARGE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_LARGE_BRICKS, SLATE_LARGE_BRICKS_STAIRS, SLATE_LARGE_BRICKS_SLAB, SLATE_LARGE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_LARGE_BRICKS, TERRACOTTA_LARGE_BRICKS_STAIRS, TERRACOTTA_LARGE_BRICKS_SLAB, TERRACOTTA_LARGE_BRICKS_WALL, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_LARGE_BRICKS, WEARED_LARGE_BRICKS_STAIRS, WEARED_LARGE_BRICKS_SLAB, WEARED_LARGE_BRICKS_WALL, null);
 
         // Paving
 

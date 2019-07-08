@@ -1,0 +1,6 @@
+{
+    "parent": "block/wall_inventory",
+    "textures": {
+        "wall": "embellishcraft:block/large_bricks/diorite_large_bricks"
+    }
+}

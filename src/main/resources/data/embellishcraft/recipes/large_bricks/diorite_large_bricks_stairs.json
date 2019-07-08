@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:diorite_large_bricks"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:diorite_large_bricks_stairs",
+        "count": 4
+    }
+}

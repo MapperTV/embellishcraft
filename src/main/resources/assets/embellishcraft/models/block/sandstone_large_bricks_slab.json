@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "embellishcraft:block/large_bricks/sandstone_large_bricks",
+        "top": "embellishcraft:block/large_bricks/sandstone_large_bricks",
+        "side": "embellishcraft:block/large_bricks/sandstone_large_bricks"
+    }
+}
