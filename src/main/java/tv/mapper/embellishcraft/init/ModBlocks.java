@@ -589,7 +589,7 @@ public class ModBlocks
         if(wall)
             event.getRegistry().register(new WallBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)).setRegistryName(name + "_wall"));
         if(pressure)
-            event.getRegistry().register(new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
+            event.getRegistry().register(new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK).doesNotBlockMovement().hardnessAndResistance(0.5F)).setRegistryName(name + "_pressure_plate"));
 
     }
 
