@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:old_bricks"
+  },
+  "result": "embellishcraft:old_bricks_wall",
+  "count": 1
+}
