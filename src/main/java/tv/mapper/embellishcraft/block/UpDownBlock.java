@@ -8,6 +8,7 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
+import net.minecraft.util.math.BlockPos;
 
 public class UpDownBlock extends Block
 {
@@ -27,9 +28,10 @@ public class UpDownBlock extends Block
     @Nullable
     public BlockState getStateForPlacement(BlockItemUseContext context)
     {
+        BlockPos blockpos = context.getPos();
         BlockState state = this.getDefaultState().with(UPSIDE_DOWN, false);
         Direction facing = context.getFace();
-        return facing != Direction.DOWN && (facing == Direction.UP || !((double)context.getHitVec().getY() > 0.5D)) ? state : state.with(UPSIDE_DOWN, Boolean.valueOf(true));
+        return facing != Direction.DOWN && (facing == Direction.UP || !(context.getHitVec().y - (double)blockpos.getY() > 0.5D)) ? state : state.with(UPSIDE_DOWN, Boolean.valueOf(true));
     }
 
 }
