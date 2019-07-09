@@ -21,6 +21,13 @@
     "block.embellishcraft.marble_wall": "Marble Wall",
     "block.embellishcraft.marble_pressure_plate": "Marble Pressure Plate",
     
+    "block.embellishcraft.gneiss": "Gneiss",
+    "block.embellishcraft.gneiss_stairs": "Gneiss Stairs",
+    "block.embellishcraft.gneiss_slab": "Gneiss Slab",
+    "block.embellishcraft.gneiss_wall": "Gneiss Wall",
+    "block.embellishcraft.gneiss_pressure_plate": "Gneiss Pressure Plate",
+
+    
     "comment_A2": "Cobblestones",
     
     "block.embellishcraft.basalt_cobblestone": "Basalt Cobblestone",

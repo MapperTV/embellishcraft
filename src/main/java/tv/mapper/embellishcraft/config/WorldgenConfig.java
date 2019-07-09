@@ -21,6 +21,12 @@ public class WorldgenConfig
     public static ForgeConfigSpec.IntValue MARBLE_SIZE;
     public static ForgeConfigSpec.IntValue MARBLE_MIN_HEIGHT;
     public static ForgeConfigSpec.IntValue MARBLE_MAX_HEIGHT;
+    
+    public static ForgeConfigSpec.BooleanValue GNEISS_GENERATION;
+    public static ForgeConfigSpec.IntValue GNEISS_CHANCE;
+    public static ForgeConfigSpec.IntValue GNEISS_SIZE;
+    public static ForgeConfigSpec.IntValue GNEISS_MIN_HEIGHT;
+    public static ForgeConfigSpec.IntValue GNEISS_MAX_HEIGHT;
 
     public static void init(ForgeConfigSpec.Builder SERVER_BUILDER)
     {
@@ -49,6 +55,15 @@ public class WorldgenConfig
         MARBLE_CHANCE = SERVER_BUILDER.comment("Chances of marble pocket being generated [0-100, default: 10]").defineInRange("marbleChance", 10, 0, 100);
         MARBLE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimal height for marble pocket generation, [0-255, default: 50]").defineInRange("marbleMinHeight", 60, 0, 255);
         MARBLE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for marble pocket generation [0-255, default: 100]").defineInRange("marbleMaxHeight", 100, 0, 255);
+
+        SERVER_BUILDER.pop();
+        SERVER_BUILDER.comment("Gneiss Generation").push("gneiss");
+
+        GNEISS_GENERATION = SERVER_BUILDER.comment("Generate gneiss in the world [true / false]").define("gneissGeneration", true);
+        GNEISS_SIZE = SERVER_BUILDER.comment("Size of gneiss pockets [0-100, default: 25]").defineInRange("gneissSize", 33, 0, 100);
+        GNEISS_CHANCE = SERVER_BUILDER.comment("Chances of gneiss pocket being generated [0-100, default: 10]").defineInRange("gneissChance", 10, 0, 100);
+        GNEISS_MIN_HEIGHT = SERVER_BUILDER.comment("Minimal height for gneiss pocket generation, [0-255, default: 50]").defineInRange("gneissMinHeight", 35, 0, 255);
+        GNEISS_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for gneiss pocket generation [0-255, default: 100]").defineInRange("gneissMaxHeight", 65, 0, 255);
 
         SERVER_BUILDER.pop();
     }

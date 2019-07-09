@@ -58,6 +58,17 @@ public class ModBlocks
     public static Block MARBLE_WALL;
     @ObjectHolder("embellishcraft:marble_pressure_plate")
     public static Block MARBLE_PRESSURE_PLATE;
+    
+    @ObjectHolder("embellishcraft:gneiss")
+    public static Block GNEISS;
+    @ObjectHolder("embellishcraft:gneiss_stairs")
+    public static Block GNEISS_STAIRS;
+    @ObjectHolder("embellishcraft:gneiss_slab")
+    public static Block GNEISS_SLAB;
+    @ObjectHolder("embellishcraft:gneiss_wall")
+    public static Block GNEISS_WALL;
+    @ObjectHolder("embellishcraft:gneiss_pressure_plate")
+    public static Block GNEISS_PRESSURE_PLATE;
 
     // Cobblestones
 
@@ -557,6 +568,8 @@ public class ModBlocks
         createBlockWithVariants(event, "basalt_cobblestone", true, true, true, true);
         createBlockWithVariants(event, "slate_cobblestone", true, true, true, true);
         createBlockWithVariants(event, "marble_cobblestone", true, true, true, true);
+        createBlockWithVariants(event, "gneiss", true, true, true, true);
+
 
         // World
 
@@ -644,6 +657,8 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT, BASALT_STAIRS, BASALT_SLAB, BASALT_WALL, BASALT_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE, SLATE_STAIRS, SLATE_SLAB, SLATE_WALL, SLATE_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE, MARBLE_STAIRS, MARBLE_SLAB, MARBLE_WALL, MARBLE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS, GNEISS_STAIRS, GNEISS_SLAB, GNEISS_WALL, GNEISS_PRESSURE_PLATE);
+
 
         // Cobblestones
 

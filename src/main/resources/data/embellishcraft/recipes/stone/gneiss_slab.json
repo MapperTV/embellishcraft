@@ -1,0 +1,15 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:gneiss"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:gneiss_slab",
+        "count": 6
+    }
+}
