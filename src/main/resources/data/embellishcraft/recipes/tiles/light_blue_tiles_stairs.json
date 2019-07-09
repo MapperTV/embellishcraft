@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:light_blue_tiles"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:light_blue_tiles_stairs",
+        "count": 4
+    }
+}
