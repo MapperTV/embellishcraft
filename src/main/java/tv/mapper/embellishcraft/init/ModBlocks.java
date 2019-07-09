@@ -178,6 +178,7 @@ public class ModBlocks
     public static Block MARBLE_BRICKS_WALL;
 
     // Large bricks
+    
     @ObjectHolder("embellishcraft:basalt_large_bricks")
     public static Block BASALT_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:basalt_large_bricks_stairs")
@@ -269,6 +270,8 @@ public class ModBlocks
     public static Block CONCRETE_PAVING_SLAB;
     @ObjectHolder("embellishcraft:concrete_paving_pressure_plate")
     public static Block CONCRETE_PAVING_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:concrete_paving_wall")
+    public static Block CONCRETE_PAVING_WALL;
 
     @ObjectHolder("embellishcraft:damaged_paving")
     public static Block DAMAGED_PAVING;
@@ -278,6 +281,8 @@ public class ModBlocks
     public static Block DAMAGED_PAVING_SLAB;
     @ObjectHolder("embellishcraft:damaged_paving_pressure_plate")
     public static Block DAMAGED_PAVING_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:damaged_paving_wall")
+    public static Block DAMAGED_PAVING_WALL;
 
     @ObjectHolder("embellishcraft:dark_concrete_paving")
     public static Block DARK_CONCRETE_PAVING;
@@ -287,6 +292,8 @@ public class ModBlocks
     public static Block DARK_CONCRETE_PAVING_SLAB;
     @ObjectHolder("embellishcraft:dark_concrete_paving_pressure_plate")
     public static Block DARK_CONCRETE_PAVING_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:dark_concrete_paving_wall")
+    public static Block DARK_CONCRETE_PAVING_WALL;
 
     @ObjectHolder("embellishcraft:diorite_paving")
     public static Block DIORITE_PAVING;
@@ -296,6 +303,8 @@ public class ModBlocks
     public static Block DIORITE_PAVING_SLAB;
     @ObjectHolder("embellishcraft:diorite_paving_pressure_plate")
     public static Block DIORITE_PAVING_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:diorite_paving_wall")
+    public static Block DIORITE_PAVING_WALL;
 
     @ObjectHolder("embellishcraft:moist_paving")
     public static Block MOIST_PAVING;
@@ -305,6 +314,8 @@ public class ModBlocks
     public static Block MOIST_PAVING_SLAB;
     @ObjectHolder("embellishcraft:moist_paving_pressure_plate")
     public static Block MOIST_PAVING_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:moist_paving_wall")
+    public static Block MOIST_PAVING_WALL;
 
     @ObjectHolder("embellishcraft:polished_paving")
     public static Block POLISHED_PAVING;
@@ -314,6 +325,8 @@ public class ModBlocks
     public static Block POLISHED_PAVING_SLAB;
     @ObjectHolder("embellishcraft:polished_paving_pressure_plate")
     public static Block POLISHED_PAVING_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:polished_paving_wall")
+    public static Block POLISHED_PAVING_WALL;
 
     @ObjectHolder("embellishcraft:slate_paving")
     public static Block SLATE_PAVING;
@@ -323,6 +336,8 @@ public class ModBlocks
     public static Block SLATE_PAVING_SLAB;
     @ObjectHolder("embellishcraft:slate_paving_pressure_plate")
     public static Block SLATE_PAVING_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:slate_paving_wall")
+    public static Block SLATE_PAVING_WALL;
 
     @ObjectHolder("embellishcraft:white_concrete_paving")
     public static Block WHITE_CONCRETE_PAVING;
@@ -332,6 +347,8 @@ public class ModBlocks
     public static Block WHITE_CONCRETE_PAVING_SLAB;
     @ObjectHolder("embellishcraft:white_concrete_paving_pressure_plate")
     public static Block WHITE_CONCRETE_PAVING_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:white_concrete_paving_wall")
+    public static Block WHITE_CONCRETE_PAVING_WALL;
 
     // Tiles
 
@@ -343,6 +360,8 @@ public class ModBlocks
     public static Block CONCRETE_TILES_SLAB;
     @ObjectHolder("embellishcraft:concrete_tiles_pressure_plate")
     public static Block CONCRETE_TILES_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:concrete_tiles_wall")
+    public static Block CONCRETE_TILES_WALL;
 
     @ObjectHolder("embellishcraft:skyblue_tiles")
     public static Block SKYBLUE_TILES;
@@ -352,6 +371,8 @@ public class ModBlocks
     public static Block SKYBLUE_TILES_SLAB;
     @ObjectHolder("embellishcraft:skyblue_tiles_pressure_plate")
     public static Block SKYBLUE_TILES_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:skyblue_tiles_wall")
+    public static Block SKYBLUE_TILES_WALL;
 
     @ObjectHolder("embellishcraft:orange_tiles")
     public static Block ORANGE_TILES;
@@ -361,6 +382,8 @@ public class ModBlocks
     public static Block ORANGE_TILES_SLAB;
     @ObjectHolder("embellishcraft:orange_tiles_pressure_plate")
     public static Block ORANGE_TILES_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:orange_tiles_wall")
+    public static Block ORANGE_TILES_WALL;
 
     @ObjectHolder("embellishcraft:blue_tiles")
     public static Block BLUE_TILES;
@@ -370,6 +393,8 @@ public class ModBlocks
     public static Block BLUE_TILES_SLAB;
     @ObjectHolder("embellishcraft:blue_tiles_pressure_plate")
     public static Block BLUE_TILES_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:blue_tiles_wall")
+    public static Block BLUE_TILES_WALL;
 
     @ObjectHolder("embellishcraft:light_blue_tiles")
     public static Block LIGHT_BLUE_TILES;
@@ -379,6 +404,8 @@ public class ModBlocks
     public static Block LIGHT_BLUE_TILES_SLAB;
     @ObjectHolder("embellishcraft:light_blue_tiles_pressure_plate")
     public static Block LIGHT_BLUE_TILES_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:light_blue_tiles_wall")
+    public static Block LIGHT_BLUE_TILES_WALL;
 
     @ObjectHolder("embellishcraft:red_tiles")
     public static Block RED_TILES;
@@ -388,6 +415,8 @@ public class ModBlocks
     public static Block RED_TILES_SLAB;
     @ObjectHolder("embellishcraft:red_tiles_pressure_plate")
     public static Block RED_TILES_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:red_tiles_wall")
+    public static Block RED_TILES_WALL;
 
     @ObjectHolder("embellishcraft:white_tiles")
     public static Block WHITE_TILES;
@@ -397,6 +426,8 @@ public class ModBlocks
     public static Block WHITE_TILES_SLAB;
     @ObjectHolder("embellishcraft:white_tiles_pressure_plate")
     public static Block WHITE_TILES_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:white_tiles_wall")
+    public static Block WHITE_TILES_WALL;
 
     @ObjectHolder("embellishcraft:yellow_tiles")
     public static Block YELLOW_TILES;
@@ -406,6 +437,8 @@ public class ModBlocks
     public static Block YELLOW_TILES_SLAB;
     @ObjectHolder("embellishcraft:yellow_tiles_pressure_plate")
     public static Block YELLOW_TILES_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:yellow_tiles_wall")
+    public static Block YELLOW_TILES_WALL;
 
     @ObjectHolder("embellishcraft:yellow_grey_tiles")
     public static Block YELLOW_GREY_TILES;
@@ -415,6 +448,8 @@ public class ModBlocks
     public static Block YELLOW_GREY_TILES_SLAB;
     @ObjectHolder("embellishcraft:yellow_grey_tiles_pressure_plate")
     public static Block YELLOW_GREY_TILES_PRESSURE_PLATE;
+    @ObjectHolder("embellishcraft:yellow_grey_tiles_wall")
+    public static Block YELLOW_GREY_TILES_WALL;
 
     // Wallpaper
 
@@ -520,26 +555,26 @@ public class ModBlocks
 
         // Paving
 
-        createBlockWithVariants(event, "concrete_paving", true, true, false, true);
-        createBlockWithVariants(event, "damaged_paving", true, true, false, true);
-        createBlockWithVariants(event, "dark_concrete_paving", true, true, false, true);
-        createBlockWithVariants(event, "diorite_paving", true, true, false, true);
-        createBlockWithVariants(event, "moist_paving", true, true, false, true);
-        createBlockWithVariants(event, "polished_paving", true, true, false, true);
-        createBlockWithVariants(event, "slate_paving", true, true, false, true);
-        createBlockWithVariants(event, "white_concrete_paving", true, true, false, true);
+        createBlockWithVariants(event, "concrete_paving", true, true, true, true);
+        createBlockWithVariants(event, "damaged_paving", true, true, true, true);
+        createBlockWithVariants(event, "dark_concrete_paving", true, true, true, true);
+        createBlockWithVariants(event, "diorite_paving", true, true, true, true);
+        createBlockWithVariants(event, "moist_paving", true, true, true, true);
+        createBlockWithVariants(event, "polished_paving", true, true, true, true);
+        createBlockWithVariants(event, "slate_paving", true, true, true, true);
+        createBlockWithVariants(event, "white_concrete_paving", true, true, true, true);
 
         // Tiles
 
-        createBlockWithVariants(event, "concrete_tiles", true, true, false, true);
-        createBlockWithVariants(event, "skyblue_tiles", true, true, false, true);
-        createBlockWithVariants(event, "orange_tiles", true, true, false, true);
-        createBlockWithVariants(event, "blue_tiles", true, true, false, true);
-        createBlockWithVariants(event, "light_blue_tiles", true, true, false, true);
-        createBlockWithVariants(event, "red_tiles", true, true, false, true);
-        createBlockWithVariants(event, "white_tiles", true, true, false, true);
-        createBlockWithVariants(event, "yellow_tiles", true, true, false, true);
-        createBlockWithVariants(event, "yellow_grey_tiles", true, true, false, true);
+        createBlockWithVariants(event, "concrete_tiles", true, true, true, true);
+        createBlockWithVariants(event, "skyblue_tiles", true, true, true, true);
+        createBlockWithVariants(event, "orange_tiles", true, true, true, true);
+        createBlockWithVariants(event, "blue_tiles", true, true, true, true);
+        createBlockWithVariants(event, "light_blue_tiles", true, true, true, true);
+        createBlockWithVariants(event, "red_tiles", true, true, true, true);
+        createBlockWithVariants(event, "white_tiles", true, true, true, true);
+        createBlockWithVariants(event, "yellow_tiles", true, true, true, true);
+        createBlockWithVariants(event, "yellow_grey_tiles", true, true, true, true);
 
         // Wallpaper
 
@@ -606,26 +641,26 @@ public class ModBlocks
 
         // Paving
 
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_PAVING, CONCRETE_PAVING_STAIRS, CONCRETE_PAVING_SLAB, null, CONCRETE_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DAMAGED_PAVING, DAMAGED_PAVING_STAIRS, DAMAGED_PAVING_SLAB, null, DAMAGED_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_CONCRETE_PAVING, DARK_CONCRETE_PAVING_STAIRS, DARK_CONCRETE_PAVING_SLAB, null, DARK_CONCRETE_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_PAVING, DIORITE_PAVING_STAIRS, DIORITE_PAVING_SLAB, null, DIORITE_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MOIST_PAVING, MOIST_PAVING_STAIRS, MOIST_PAVING_SLAB, null, MOIST_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, POLISHED_PAVING, POLISHED_PAVING_STAIRS, POLISHED_PAVING_SLAB, null, POLISHED_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_PAVING, SLATE_PAVING_STAIRS, SLATE_PAVING_SLAB, null, SLATE_PAVING_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CONCRETE_PAVING, WHITE_CONCRETE_PAVING_STAIRS, WHITE_CONCRETE_PAVING_SLAB, null, WHITE_CONCRETE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_PAVING, CONCRETE_PAVING_STAIRS, CONCRETE_PAVING_SLAB, CONCRETE_PAVING_WALL, CONCRETE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DAMAGED_PAVING, DAMAGED_PAVING_STAIRS, DAMAGED_PAVING_SLAB, DAMAGED_PAVING_WALL, DAMAGED_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_CONCRETE_PAVING, DARK_CONCRETE_PAVING_STAIRS, DARK_CONCRETE_PAVING_SLAB, DARK_CONCRETE_PAVING_WALL, DARK_CONCRETE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_PAVING, DIORITE_PAVING_STAIRS, DIORITE_PAVING_SLAB, DIORITE_PAVING_WALL, DIORITE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MOIST_PAVING, MOIST_PAVING_STAIRS, MOIST_PAVING_SLAB, MOIST_PAVING_WALL, MOIST_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, POLISHED_PAVING, POLISHED_PAVING_STAIRS, POLISHED_PAVING_SLAB, POLISHED_PAVING_WALL, POLISHED_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_PAVING, SLATE_PAVING_STAIRS, SLATE_PAVING_SLAB, SLATE_PAVING_WALL, SLATE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CONCRETE_PAVING, WHITE_CONCRETE_PAVING_STAIRS, WHITE_CONCRETE_PAVING_SLAB, WHITE_CONCRETE_PAVING_WALL, WHITE_CONCRETE_PAVING_PRESSURE_PLATE);
 
         // Tiles
 
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_TILES, CONCRETE_TILES_STAIRS, CONCRETE_TILES_SLAB, null, CONCRETE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SKYBLUE_TILES, SKYBLUE_TILES_STAIRS, SKYBLUE_TILES_SLAB, null, SKYBLUE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, ORANGE_TILES, ORANGE_TILES_STAIRS, ORANGE_TILES_SLAB, null, ORANGE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BLUE_TILES, BLUE_TILES_STAIRS, BLUE_TILES_SLAB, null, BLUE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_TILES, LIGHT_BLUE_TILES_STAIRS, LIGHT_BLUE_TILES_SLAB, null, LIGHT_BLUE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RED_TILES, RED_TILES_STAIRS, RED_TILES_SLAB, null, RED_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_TILES, WHITE_TILES_STAIRS, WHITE_TILES_SLAB, null, WHITE_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_TILES, YELLOW_TILES_STAIRS, YELLOW_TILES_SLAB, null, YELLOW_TILES_PRESSURE_PLATE);
-        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_GREY_TILES, YELLOW_GREY_TILES_STAIRS, YELLOW_GREY_TILES_SLAB, null, YELLOW_GREY_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_TILES, CONCRETE_TILES_STAIRS, CONCRETE_TILES_SLAB, CONCRETE_TILES_WALL, CONCRETE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SKYBLUE_TILES, SKYBLUE_TILES_STAIRS, SKYBLUE_TILES_SLAB, SKYBLUE_TILES_WALL, SKYBLUE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, ORANGE_TILES, ORANGE_TILES_STAIRS, ORANGE_TILES_SLAB, ORANGE_TILES_WALL, ORANGE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BLUE_TILES, BLUE_TILES_STAIRS, BLUE_TILES_SLAB, BLUE_TILES_WALL, BLUE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_TILES, LIGHT_BLUE_TILES_STAIRS, LIGHT_BLUE_TILES_SLAB, LIGHT_BLUE_TILES_WALL, LIGHT_BLUE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RED_TILES, RED_TILES_STAIRS, RED_TILES_SLAB, RED_TILES_WALL, RED_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_TILES, WHITE_TILES_STAIRS, WHITE_TILES_SLAB, WHITE_TILES_WALL, WHITE_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_TILES, YELLOW_TILES_STAIRS, YELLOW_TILES_SLAB, YELLOW_TILES_WALL, YELLOW_TILES_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_GREY_TILES, YELLOW_GREY_TILES_STAIRS, YELLOW_GREY_TILES_SLAB, YELLOW_GREY_TILES_WALL, YELLOW_GREY_TILES_PRESSURE_PLATE);
 
         // Wallpapers
 

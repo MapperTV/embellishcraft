@@ -141,41 +141,49 @@
     "block.embellishcraft.concrete_paving_stairs": "Concrete Paving Stairs",
     "block.embellishcraft.concrete_paving_slab": "Concrete Paving Slab",
     "block.embellishcraft.concrete_paving_pressure_plate": "Concrete Paving Pressure Plate",
+    "block.embellishcraft.concrete_paving_wall": "Concrete Paving Wall",
 	
     "block.embellishcraft.damaged_paving": "Damaged Paving",
     "block.embellishcraft.damaged_paving_stairs": "Damaged Paving Stairs",
     "block.embellishcraft.damaged_paving_slab": "Damaged Paving Slab",
     "block.embellishcraft.damaged_paving_pressure_plate": "Damaged Paving Pressure Plate",
+    "block.embellishcraft.damaged_paving_wall": "Damaged Paving Wall",
 	
     "block.embellishcraft.dark_concrete_paving": "Dark Concrete Paving",
     "block.embellishcraft.dark_concrete_paving_stairs": "Dark Concrete Paving Stairs",
     "block.embellishcraft.dark_concrete_paving_slab": "Dark Concrete Paving Slab",
     "block.embellishcraft.dark_concrete_paving_pressure_plate": "Dark Concrete Paving Pressure Plate",
+    "block.embellishcraft.dark_concrete_paving_wall": "Dark Concrete Paving Wall",
 	
     "block.embellishcraft.diorite_paving": "Diorite Paving",
     "block.embellishcraft.diorite_paving_stairs": "Diorite Paving Stairs",
     "block.embellishcraft.diorite_paving_slab": "Diorite Paving Slab",
     "block.embellishcraft.diorite_paving_pressure_plate": "Diorite Paving Pressure Plate",
+    "block.embellishcraft.diorite_paving_wall": "Diorite Paving Wall",
 	
     "block.embellishcraft.moist_paving": "Moist Paving",
     "block.embellishcraft.moist_paving_stairs": "Moist Paving Stairs",
     "block.embellishcraft.moist_paving_slab": "Moist Paving Slab",
     "block.embellishcraft.moist_paving_pressure_plate": "Moist Paving Pressure Plate",
+    "block.embellishcraft.moist_paving_wall": "Moist Paving Wall",
 	
     "block.embellishcraft.polished_paving": "Polished Paving",
     "block.embellishcraft.polished_paving_stairs": "Polished Paving Stairs",
     "block.embellishcraft.polished_paving_slab": "Polished Paving Slab",
     "block.embellishcraft.polished_paving_pressure_plate": "Polished Paving Pressure Plate",
+    "block.embellishcraft.polished_paving_wall": "Polished Paving Wall",
 	
     "block.embellishcraft.slate_paving": "Slate Paving",
     "block.embellishcraft.slate_paving_stairs": "Slate Paving Stairs",
     "block.embellishcraft.slate_paving_slab": "Slate Paving Slab",
     "block.embellishcraft.slate_paving_pressure_plate": "Slate Paving Pressure Plate",
+    "block.embellishcraft.slate_paving_wall": "Slate Paving Wall",
 	
 	"block.embellishcraft.white_concrete_paving": "White Concrete Paving",
     "block.embellishcraft.white_concrete_paving_stairs": "White Concrete Paving Stairs",
     "block.embellishcraft.white_concrete_paving_slab": "White Concrete Paving Slab",
     "block.embellishcraft.white_concrete_paving_pressure_plate": "White Concrete Paving Pressure Plate",
+    "block.embellishcraft.white_concrete_paving_wall": "White Concrete Paving Wall",
     
     "comment_A6": "Tiles",
     
@@ -183,46 +191,55 @@
     "block.embellishcraft.concrete_tiles_stairs": "Concrete Tiles Stairs",
     "block.embellishcraft.concrete_tiles_slab": "Concrete Tiles Slab",
     "block.embellishcraft.concrete_tiles_pressure_plate": "Concrete Tiles Pressure Plate",
+    "block.embellishcraft.concrete_tiles_wall": "Concrete Tiles Wall",
 
     "block.embellishcraft.skyblue_tiles": "Skyblue Tiles",
     "block.embellishcraft.skyblue_tiles_stairs": "Skyblue Tiles Stairs",
     "block.embellishcraft.skyblue_tiles_slab": "Skyblue Tiles Slab",
     "block.embellishcraft.skyblue_tiles_pressure_plate": "Skyblue Tiles Pressure Plate",
+    "block.embellishcraft.skyblue_tiles_wall": "Skyblue Tiles Wall",
     
     "block.embellishcraft.orange_tiles": "Orange Tiles",
     "block.embellishcraft.orange_tiles_stairs": "Orange Tiles Stairs",
     "block.embellishcraft.orange_tiles_slab": "Orange Tiles Slab",
     "block.embellishcraft.orange_tiles_pressure_plate": "Orange Tiles Pressure Plate",
+    "block.embellishcraft.orange_tiles_wall": "Orange Tiles Wall",
     
     "block.embellishcraft.blue_tiles": "Blue Tiles",
     "block.embellishcraft.blue_tiles_stairs": "Blue Tiles Stairs",
     "block.embellishcraft.blue_tiles_slab": "Blue Tiles Slab",
     "block.embellishcraft.blue_tiles_pressure_plate": "Blue Tiles Pressure Plate",
+    "block.embellishcraft.blue_tiles_wall": "Blue Tiles Wall",
     
     "block.embellishcraft.light_blue_tiles": "Light Blue Tiles",
     "block.embellishcraft.light_blue_tiles_stairs": "Light Blue Tiles Stairs",
     "block.embellishcraft.light_blue_tiles_slab": "Light Blue Tiles Slab",
     "block.embellishcraft.light_blue_tiles_pressure_plate": "Light Blue Tiles Pressure Plate",
+    "block.embellishcraft.light_blue_tiles_wall": "Light Blue Tiles Wall",
     
     "block.embellishcraft.red_tiles": "Red Tiles",
     "block.embellishcraft.red_tiles_stairs": "Red Tiles Stairs",
     "block.embellishcraft.red_tiles_slab": "Red Tiles Slab",
     "block.embellishcraft.red_tiles_pressure_plate": "Red Tiles Pressure Plate",
+    "block.embellishcraft.red_tiles_wall": "Red Tiles Wall",
     
     "block.embellishcraft.white_tiles": "White Tiles",
     "block.embellishcraft.white_tiles_stairs": "White Tiles Stairs",
     "block.embellishcraft.white_tiles_slab": "White Tiles Slab",
     "block.embellishcraft.white_tiles_pressure_plate": "White Tiles Pressure Plate",
+    "block.embellishcraft.white_tiles_wall": "White Tiles Wall",
     
     "block.embellishcraft.yellow_tiles": "Yellow Tiles",
     "block.embellishcraft.yellow_tiles_stairs": "Yellow Tiles Stairs",
     "block.embellishcraft.yellow_tiles_slab": "Yellow Tiles Slab",
     "block.embellishcraft.yellow_tiles_pressure_plate": "Yellow Tiles Pressure Plate",
+    "block.embellishcraft.yellow_tiles_wall": "Yellow Tiles Wall",
     
     "block.embellishcraft.yellow_grey_tiles": "Yellow Grey Tiles",
     "block.embellishcraft.yellow_grey_tiles_stairs": "Yellow Grey Tiles Stairs",
     "block.embellishcraft.yellow_grey_tiles_slab": "Yellow Grey Tiles Slab",
     "block.embellishcraft.yellow_grey_tiles_pressure_plate": "Yellow Grey Tiles Pressure Plate",
+    "block.embellishcraft.yellow_grey_tiles_wall": "Yellow Grey Tiles Wall",
     
     "comment_A7": "Wallpaper",
     

@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:diorite_paving"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:diorite_paving_wall",
+        "count": 6
+    }
+}
