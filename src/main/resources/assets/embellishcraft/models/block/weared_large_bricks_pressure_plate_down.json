@@ -1,0 +1,6 @@
+{
+    "parent": "block/pressure_plate_down",
+    "textures": {
+        "texture": "embellishcraft:block/large_bricks/weared_large_bricks"
+    }
+}

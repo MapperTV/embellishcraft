@@ -103,46 +103,55 @@
     "block.embellishcraft.basalt_large_bricks_stairs": "Basalt Large Bricks Stairs",
     "block.embellishcraft.basalt_large_bricks_slab": "Basalt Large Bricks Slab",
     "block.embellishcraft.basalt_large_bricks_wall": "Basalt Large Bricks Wall",
+    "block.embellishcraft.basalt_large_bricks_pressure_plate": "Basalt Large Bricks Pressure Plate",
     
     "block.embellishcraft.diorite_large_bricks": "Diorite Large Bricks",
     "block.embellishcraft.diorite_large_bricks_stairs": "Diorite Large Bricks Stairs",
     "block.embellishcraft.diorite_large_bricks_slab": "Diorite Large Bricks Slab",
     "block.embellishcraft.diorite_large_bricks_wall": "Diorite Large Bricks Wall",
+    "block.embellishcraft.diorite_large_bricks_pressure_plate": "Diorite Large Bricks Pressure Plate",
     
     "block.embellishcraft.dark_large_bricks": "Dark Large Bricks",
     "block.embellishcraft.dark_large_bricks_stairs": "Dark Large Bricks Stairs",
     "block.embellishcraft.dark_large_bricks_slab": "Dark Large Bricks Slab",
     "block.embellishcraft.dark_large_bricks_wall": "Dark Large Bricks Wall",
+    "block.embellishcraft.dark_large_bricks_pressure_plate": "Dark Large Bricks Pressure Plate",
     
     "block.embellishcraft.marble_large_bricks": "Marble Large Bricks",
     "block.embellishcraft.marble_large_bricks_stairs": "Marble Large Bricks Stairs",
     "block.embellishcraft.marble_large_bricks_slab": "Marble Large Bricks Slab",
     "block.embellishcraft.marble_large_bricks_wall": "Marble Large Bricks Wall",
+    "block.embellishcraft.marble_large_bricks_pressure_plate": "Marble Large Bricks Pressure Plate",
     
     "block.embellishcraft.old_large_bricks": "Old Large Bricks",
     "block.embellishcraft.old_large_bricks_stairs": "Old Large Bricks Stairs",
     "block.embellishcraft.old_large_bricks_slab": "Old Large Bricks Slab",
     "block.embellishcraft.old_large_bricks_wall": "Old Large Bricks Wall",
+    "block.embellishcraft.old_large_bricks_pressure_plate": "Old Large Bricks Pressure Plate",
     
     "block.embellishcraft.sandstone_large_bricks": "Sandstone Large Bricks",
     "block.embellishcraft.sandstone_large_bricks_stairs": "Sandstone Large Bricks Stairs",
     "block.embellishcraft.sandstone_large_bricks_slab": "Sandstone Large Bricks Slab",
     "block.embellishcraft.sandstone_large_bricks_wall": "Sandstone Large Bricks Wall",
+    "block.embellishcraft.sandstone_large_bricks_pressure_plate": "Sandstone Large Bricks Pressure Plate",
     
     "block.embellishcraft.slate_large_bricks": "Slate Large Bricks",
     "block.embellishcraft.slate_large_bricks_stairs": "Slate Large Bricks Stairs",
     "block.embellishcraft.slate_large_bricks_slab": "Slate Large Bricks Slab",
     "block.embellishcraft.slate_large_bricks_wall": "Slate Large Bricks Wall",
+    "block.embellishcraft.slate_large_bricks_pressure_plate": "Slate Large Bricks Pressure Plate",
     
     "block.embellishcraft.terracotta_large_bricks": "Terracotta Large Bricks",
     "block.embellishcraft.terracotta_large_bricks_stairs": "Terracotta Large Bricks Stairs",
     "block.embellishcraft.terracotta_large_bricks_slab": "Terracotta Large Bricks Slab",
     "block.embellishcraft.terracotta_large_bricks_wall": "Terracotta Large Bricks Wall",
+    "block.embellishcraft.terracotta_large_bricks_pressure_plate": "Terracotta Large Bricks Pressure Plate",
     
     "block.embellishcraft.weared_large_bricks": "Weared Large Bricks",
     "block.embellishcraft.weared_large_bricks_stairs": "Weared Large Bricks Stairs",
     "block.embellishcraft.weared_large_bricks_slab": "Weared Large Bricks Slab",
     "block.embellishcraft.weared_large_bricks_wall": "Weared Large Bricks Wall",
+    "block.embellishcraft.weared_large_bricks_pressure_plate": "Weared Large Bricks Pressure Plate",
     
     "comment_A5": "Paving",
     

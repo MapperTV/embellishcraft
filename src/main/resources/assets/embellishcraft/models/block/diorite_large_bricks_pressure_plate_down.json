@@ -1,0 +1,6 @@
+{
+    "parent": "block/pressure_plate_down",
+    "textures": {
+        "texture": "embellishcraft:block/large_bricks/diorite_large_bricks"
+    }
+}

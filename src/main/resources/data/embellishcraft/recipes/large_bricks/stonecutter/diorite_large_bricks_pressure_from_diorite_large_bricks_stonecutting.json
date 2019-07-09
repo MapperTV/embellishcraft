@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:diorite_large_bricks"
+  },
+  "result": "embellishcraft:diorite_large_bricks_pressure_plate",
+  "count": 1
+}
