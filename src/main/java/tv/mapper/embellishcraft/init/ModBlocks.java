@@ -58,7 +58,7 @@ public class ModBlocks
     public static Block MARBLE_WALL;
     @ObjectHolder("embellishcraft:marble_pressure_plate")
     public static Block MARBLE_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:gneiss")
     public static Block GNEISS;
     @ObjectHolder("embellishcraft:gneiss_stairs")
@@ -104,6 +104,17 @@ public class ModBlocks
     public static Block MARBLE_COBBLESTONE_WALL;
     @ObjectHolder("embellishcraft:marble_cobblestone_pressure_plate")
     public static Block MARBLE_COBBLESTONE_PRESSURE_PLATE;
+
+    @ObjectHolder("embellishcraft:gneiss_cobblestone")
+    public static Block GNEISS_COBBLESTONE;
+    @ObjectHolder("embellishcraft:gneiss_cobblestone_stairs")
+    public static Block GNEISS_COBBLESTONE_STAIRS;
+    @ObjectHolder("embellishcraft:gneiss_cobblestone_slab")
+    public static Block GNEISS_COBBLESTONE_SLAB;
+    @ObjectHolder("embellishcraft:gneiss_cobblestone_wall")
+    public static Block GNEISS_COBBLESTONE_WALL;
+    @ObjectHolder("embellishcraft:gneiss_cobblestone_pressure_plate")
+    public static Block GNEISS_COBBLESTONE_PRESSURE_PLATE;
 
     // Bricks
 
@@ -207,7 +218,7 @@ public class ModBlocks
     public static Block MARBLE_BRICKS_PRESSURE_PLATE;
 
     // Large bricks
-    
+
     @ObjectHolder("embellishcraft:basalt_large_bricks")
     public static Block BASALT_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:basalt_large_bricks_stairs")
@@ -218,7 +229,7 @@ public class ModBlocks
     public static Block BASALT_LARGE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:basalt_large_bricks_pressure_plate")
     public static Block BASALT_LARGE_BRICKS_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:diorite_large_bricks")
     public static Block DIORITE_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:diorite_large_bricks_stairs")
@@ -229,7 +240,7 @@ public class ModBlocks
     public static Block DIORITE_LARGE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:diorite_large_bricks_pressure_plate")
     public static Block DIORITE_LARGE_BRICKS_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:dark_large_bricks")
     public static Block DARK_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:dark_large_bricks_stairs")
@@ -240,7 +251,7 @@ public class ModBlocks
     public static Block DARK_LARGE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:dark_large_bricks_pressure_plate")
     public static Block DARK_LARGE_BRICKS_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:marble_large_bricks")
     public static Block MARBLE_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:marble_large_bricks_stairs")
@@ -251,7 +262,7 @@ public class ModBlocks
     public static Block MARBLE_LARGE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:marble_large_bricks_pressure_plate")
     public static Block MARBLE_LARGE_BRICKS_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:old_large_bricks")
     public static Block OLD_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:old_large_bricks_stairs")
@@ -262,7 +273,7 @@ public class ModBlocks
     public static Block OLD_LARGE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:old_large_bricks_pressure_plate")
     public static Block OLD_LARGE_BRICKS_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:sandstone_large_bricks")
     public static Block SANDSTONE_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:sandstone_large_bricks_stairs")
@@ -273,7 +284,7 @@ public class ModBlocks
     public static Block SANDSTONE_LARGE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:sandstone_large_bricks_pressure_plate")
     public static Block SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:slate_large_bricks")
     public static Block SLATE_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:slate_large_bricks_stairs")
@@ -284,7 +295,7 @@ public class ModBlocks
     public static Block SLATE_LARGE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:slate_large_bricks_pressure_plate")
     public static Block SLATE_LARGE_BRICKS_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:terracotta_large_bricks")
     public static Block TERRACOTTA_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:terracotta_large_bricks_stairs")
@@ -295,7 +306,7 @@ public class ModBlocks
     public static Block TERRACOTTA_LARGE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:terracotta_large_bricks_pressure_plate")
     public static Block TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:weared_large_bricks")
     public static Block WEARED_LARGE_BRICKS;
     @ObjectHolder("embellishcraft:weared_large_bricks_stairs")
@@ -563,19 +574,19 @@ public class ModBlocks
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        // Cobblestones
-
-        createBlockWithVariants(event, "basalt_cobblestone", true, true, true, true);
-        createBlockWithVariants(event, "slate_cobblestone", true, true, true, true);
-        createBlockWithVariants(event, "marble_cobblestone", true, true, true, true);
-        createBlockWithVariants(event, "gneiss", true, true, true, true);
-
-
         // World
 
         createBlockWithVariants(event, "basalt", true, true, true, true);
         createBlockWithVariants(event, "slate", true, true, true, true);
         createBlockWithVariants(event, "marble", true, true, true, true);
+        createBlockWithVariants(event, "gneiss", true, true, true, true);
+
+        // Cobblestones
+
+        createBlockWithVariants(event, "basalt_cobblestone", true, true, true, true);
+        createBlockWithVariants(event, "slate_cobblestone", true, true, true, true);
+        createBlockWithVariants(event, "marble_cobblestone", true, true, true, true);
+        createBlockWithVariants(event, "gneiss_cobblestone", true, true, true, true);
 
         // Bricks
 
@@ -600,7 +611,6 @@ public class ModBlocks
         createBlockWithVariants(event, "slate_large_bricks", true, true, true, true);
         createBlockWithVariants(event, "terracotta_large_bricks", true, true, true, true);
         createBlockWithVariants(event, "weared_large_bricks", true, true, true, true);
-
 
         // Paving
 
@@ -659,12 +669,12 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE, MARBLE_STAIRS, MARBLE_SLAB, MARBLE_WALL, MARBLE_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS, GNEISS_STAIRS, GNEISS_SLAB, GNEISS_WALL, GNEISS_PRESSURE_PLATE);
 
-
         // Cobblestones
 
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_COBBLESTONE, BASALT_COBBLESTONE_STAIRS, BASALT_COBBLESTONE_SLAB, BASALT_COBBLESTONE_WALL, BASALT_COBBLESTONE_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_COBBLESTONE, SLATE_COBBLESTONE_STAIRS, SLATE_COBBLESTONE_SLAB, SLATE_COBBLESTONE_WALL, SLATE_COBBLESTONE_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_COBBLESTONE, MARBLE_COBBLESTONE_STAIRS, MARBLE_COBBLESTONE_SLAB, MARBLE_COBBLESTONE_WALL, MARBLE_COBBLESTONE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_COBBLESTONE, GNEISS_COBBLESTONE_STAIRS, GNEISS_COBBLESTONE_SLAB, GNEISS_COBBLESTONE_WALL, GNEISS_COBBLESTONE_PRESSURE_PLATE);
 
         // Bricks
 

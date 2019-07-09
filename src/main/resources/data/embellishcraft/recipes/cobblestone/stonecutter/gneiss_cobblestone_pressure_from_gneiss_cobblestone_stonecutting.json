@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:gneiss_cobblestone"
+  },
+  "result": "embellishcraft:gneiss_cobblestone_pressure_plate",
+  "count": 1
+}

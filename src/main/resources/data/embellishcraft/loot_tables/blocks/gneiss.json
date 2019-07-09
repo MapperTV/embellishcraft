@@ -2,17 +2,41 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "gneiss",
+      "name": "gneiss_cobblestone",
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "embellishcraft:gneiss"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "name": "embellishcraft:gneiss"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ],
+              "name": "embellishcraft:gneiss_cobblestone"
+            }
+          ]
         }
       ]
     }

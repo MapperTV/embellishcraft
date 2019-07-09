@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "embellishcraft:block/cobblestone/gneiss_cobblestone",
+        "top": "embellishcraft:block/cobblestone/gneiss_cobblestone",
+        "side": "embellishcraft:block/cobblestone/gneiss_cobblestone"
+    }
+}
