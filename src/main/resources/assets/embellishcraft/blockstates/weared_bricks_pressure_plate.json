@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": { "model": "embellishcraft:block/weared_bricks_pressure_plate" },
+        "powered=true": { "model": "embellishcraft:block/weared_bricks_pressure_plate_down" }
+    }
+}
