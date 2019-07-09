@@ -216,7 +216,7 @@ public class ModBlocks
     public static Block MARBLE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:marble_bricks_pressure_plate")
     public static Block MARBLE_BRICKS_PRESSURE_PLATE;
-    
+
     @ObjectHolder("embellishcraft:gneiss_bricks")
     public static Block GNEISS_BRICKS;
     @ObjectHolder("embellishcraft:gneiss_bricks_stairs")
@@ -328,6 +328,17 @@ public class ModBlocks
     public static Block WEARED_LARGE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:weared_large_bricks_pressure_plate")
     public static Block WEARED_LARGE_BRICKS_PRESSURE_PLATE;
+
+    @ObjectHolder("embellishcraft:gneiss_large_bricks")
+    public static Block GNEISS_LARGE_BRICKS;
+    @ObjectHolder("embellishcraft:gneiss_large_bricks_stairs")
+    public static Block GNEISS_LARGE_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:gneiss_large_bricks_slab")
+    public static Block GNEISS_LARGE_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:gneiss_large_bricks_wall")
+    public static Block GNEISS_LARGE_BRICKS_WALL;
+    @ObjectHolder("embellishcraft:gneiss_large_bricks_pressure_plate")
+    public static Block GNEISS_LARGE_BRICKS_PRESSURE_PLATE;
 
     // Paving
 
@@ -623,6 +634,7 @@ public class ModBlocks
         createBlockWithVariants(event, "slate_large_bricks", true, true, true, true);
         createBlockWithVariants(event, "terracotta_large_bricks", true, true, true, true);
         createBlockWithVariants(event, "weared_large_bricks", true, true, true, true);
+        createBlockWithVariants(event, "gneiss_large_bricks", true, true, true, true);
 
         // Paving
 
@@ -712,6 +724,7 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_LARGE_BRICKS, SLATE_LARGE_BRICKS_STAIRS, SLATE_LARGE_BRICKS_SLAB, SLATE_LARGE_BRICKS_WALL, SLATE_LARGE_BRICKS_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_LARGE_BRICKS, TERRACOTTA_LARGE_BRICKS_STAIRS, TERRACOTTA_LARGE_BRICKS_SLAB, TERRACOTTA_LARGE_BRICKS_WALL, TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_LARGE_BRICKS, WEARED_LARGE_BRICKS_STAIRS, WEARED_LARGE_BRICKS_SLAB, WEARED_LARGE_BRICKS_WALL, WEARED_LARGE_BRICKS_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_LARGE_BRICKS, GNEISS_LARGE_BRICKS_STAIRS, GNEISS_LARGE_BRICKS_SLAB, GNEISS_LARGE_BRICKS_WALL, GNEISS_LARGE_BRICKS_PRESSURE_PLATE);
 
         // Paving
 
