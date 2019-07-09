@@ -216,6 +216,17 @@ public class ModBlocks
     public static Block MARBLE_BRICKS_WALL;
     @ObjectHolder("embellishcraft:marble_bricks_pressure_plate")
     public static Block MARBLE_BRICKS_PRESSURE_PLATE;
+    
+    @ObjectHolder("embellishcraft:gneiss_bricks")
+    public static Block GNEISS_BRICKS;
+    @ObjectHolder("embellishcraft:gneiss_bricks_stairs")
+    public static Block GNEISS_BRICKS_STAIRS;
+    @ObjectHolder("embellishcraft:gneiss_bricks_slab")
+    public static Block GNEISS_BRICKS_SLAB;
+    @ObjectHolder("embellishcraft:gneiss_bricks_wall")
+    public static Block GNEISS_BRICKS_WALL;
+    @ObjectHolder("embellishcraft:gneiss_bricks_pressure_plate")
+    public static Block GNEISS_BRICKS_PRESSURE_PLATE;
 
     // Large bricks
 
@@ -599,6 +610,7 @@ public class ModBlocks
         createBlockWithVariants(event, "terracotta_bricks", true, true, true, true);
         createBlockWithVariants(event, "weared_bricks", true, true, true, true);
         createBlockWithVariants(event, "marble_bricks", true, true, true, true);
+        createBlockWithVariants(event, "gneiss_bricks", true, true, true, true);
 
         // Large bricks
 
@@ -687,6 +699,7 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_BRICKS, TERRACOTTA_BRICKS_STAIRS, TERRACOTTA_BRICKS_SLAB, TERRACOTTA_BRICKS_WALL, TERRACOTTA_BRICKS_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_BRICKS, WEARED_BRICKS_STAIRS, WEARED_BRICKS_SLAB, WEARED_BRICKS_WALL, WEARED_BRICKS_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_BRICKS, MARBLE_BRICKS_STAIRS, MARBLE_BRICKS_SLAB, MARBLE_BRICKS_WALL, MARBLE_BRICKS_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_BRICKS, GNEISS_BRICKS_STAIRS, GNEISS_BRICKS_SLAB, GNEISS_BRICKS_WALL, GNEISS_BRICKS_PRESSURE_PLATE);
 
         // Large bricks
 
