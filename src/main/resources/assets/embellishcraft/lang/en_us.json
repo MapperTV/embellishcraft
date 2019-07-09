@@ -228,6 +228,12 @@
     "block.embellishcraft.white_concrete_paving_pressure_plate": "White Concrete Paving Pressure Plate",
     "block.embellishcraft.white_concrete_paving_wall": "White Concrete Paving Wall",
     
+    "block.embellishcraft.gneiss_paving": "Gneiss Paving",
+    "block.embellishcraft.gneiss_paving_stairs": "Gneiss Paving Stairs",
+    "block.embellishcraft.gneiss_paving_slab": "Gneiss Paving Slab",
+    "block.embellishcraft.gneiss_paving_wall": "Gneiss Paving Wall",
+    "block.embellishcraft.gneiss_paving_pressure_plate": "Gneiss Paving Pressure Plate",
+    
     "comment_A6": "Tiles",
     
     "block.embellishcraft.concrete_tiles": "Concrete Tiles",

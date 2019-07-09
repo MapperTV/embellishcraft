@@ -430,6 +430,17 @@ public class ModBlocks
     @ObjectHolder("embellishcraft:white_concrete_paving_wall")
     public static Block WHITE_CONCRETE_PAVING_WALL;
 
+    @ObjectHolder("embellishcraft:gneiss_paving")
+    public static Block GNEISS_PAVING;
+    @ObjectHolder("embellishcraft:gneiss_paving_stairs")
+    public static Block GNEISS_PAVING_STAIRS;
+    @ObjectHolder("embellishcraft:gneiss_paving_slab")
+    public static Block GNEISS_PAVING_SLAB;
+    @ObjectHolder("embellishcraft:gneiss_paving_wall")
+    public static Block GNEISS_PAVING_WALL;
+    @ObjectHolder("embellishcraft:gneiss_paving_pressure_plate")
+    public static Block GNEISS_PAVING_PRESSURE_PLATE;
+
     // Tiles
 
     @ObjectHolder("embellishcraft:concrete_tiles")
@@ -646,6 +657,7 @@ public class ModBlocks
         createBlockWithVariants(event, "polished_paving", true, true, true, true);
         createBlockWithVariants(event, "slate_paving", true, true, true, true);
         createBlockWithVariants(event, "white_concrete_paving", true, true, true, true);
+        createBlockWithVariants(event, "gneiss_paving", true, true, true, true);
 
         // Tiles
 
@@ -736,6 +748,7 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, POLISHED_PAVING, POLISHED_PAVING_STAIRS, POLISHED_PAVING_SLAB, POLISHED_PAVING_WALL, POLISHED_PAVING_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_PAVING, SLATE_PAVING_STAIRS, SLATE_PAVING_SLAB, SLATE_PAVING_WALL, SLATE_PAVING_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CONCRETE_PAVING, WHITE_CONCRETE_PAVING_STAIRS, WHITE_CONCRETE_PAVING_SLAB, WHITE_CONCRETE_PAVING_WALL, WHITE_CONCRETE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_PAVING, GNEISS_PAVING_STAIRS, GNEISS_PAVING_SLAB, GNEISS_PAVING_WALL, GNEISS_PAVING_PRESSURE_PLATE);
 
         // Tiles
 
