@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iii",
+        " I ",
+        " I "
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "I": {
+            "item": "minecraft:iron_bars"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:metallic_terrace_table",
+        "count": 1
+    }
+}

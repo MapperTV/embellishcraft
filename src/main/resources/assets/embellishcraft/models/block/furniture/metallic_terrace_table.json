@@ -1,0 +1,7 @@
+{
+    "parent": "embellishcraft:block/furniture/terrace_table",
+    "textures": {
+        "material": "embellishcraft:block/furniture/metallic_terrace_table",
+        "particle": "embellishcraft:block/furniture/metallic_terrace_table"
+    }
+}
