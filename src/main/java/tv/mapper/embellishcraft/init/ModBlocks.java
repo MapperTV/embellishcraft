@@ -790,7 +790,7 @@ public class ModBlocks
         event.getRegistry().register(new ChairItemBlock(SPRUCE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_CHAIR.getRegistryName()));
         event.getRegistry().register(new ChairItemBlock(ACACIA_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_CHAIR.getRegistryName()));
         
-        event.getRegistry().register(new ChairItemBlock(METALLIC_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_TABLE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(METALLIC_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_TABLE.getRegistryName()));
 
     }
 
