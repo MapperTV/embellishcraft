@@ -4,18 +4,20 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 
-public class ChairItemBlock extends BlockItem
+public class FuelBlockItem extends BlockItem
 {
-
-    public ChairItemBlock(Block blockIn, Properties builder)
+    private int burnTime;
+    
+    public FuelBlockItem(Block blockIn, Properties builder, int burnTime)
     {
         super(blockIn, builder);
+        this.burnTime = burnTime;
     }
     
     @Override
     public int getBurnTime(ItemStack itemBlock)
     {
-        return 600;
+        return burnTime;
     }
 
 }

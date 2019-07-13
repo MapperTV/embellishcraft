@@ -14,12 +14,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
+import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
 import tv.mapper.embellishcraft.block.CustomStairsBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
 import tv.mapper.embellishcraft.block.UpDownBlock;
-import tv.mapper.embellishcraft.item.ChairItemBlock;
+import tv.mapper.embellishcraft.item.FuelBlockItem;
 import tv.mapper.embellishcraft.item.ModItemGroups;
 
 @EventBusSubscriber(bus = Bus.MOD)
@@ -783,12 +784,12 @@ public class ModBlocks
 
         // Furniture
 
-        event.getRegistry().register(new ChairItemBlock(OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_CHAIR.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(DARK_OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_CHAIR.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(BIRCH_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_CHAIR.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(JUNGLE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_CHAIR.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(SPRUCE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_CHAIR.getRegistryName()));
-        event.getRegistry().register(new ChairItemBlock(ACACIA_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(OAK_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(DARK_OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(DARK_OAK_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BIRCH_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(BIRCH_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(JUNGLE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(JUNGLE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(SPRUCE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(SPRUCE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ACACIA_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(ACACIA_CHAIR.getRegistryName()));
         
         event.getRegistry().register(new BlockItem(METALLIC_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_TABLE.getRegistryName()));
 

@@ -14,11 +14,9 @@ import net.minecraftforge.fml.loading.FMLPaths;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
 import tv.mapper.embellishcraft.world.OreGenerator;
 
-@Mod(EmbellishCraft.MODID)
+@Mod(Constants.MODID)
 public class EmbellishCraft
 {
-    public static final String MODID = "embellishcraft";
-
     public static final Logger LOGGER = LogManager.getLogger();
 
     public EmbellishCraft()
