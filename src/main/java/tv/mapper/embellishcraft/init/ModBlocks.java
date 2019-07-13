@@ -23,591 +23,335 @@ import tv.mapper.embellishcraft.block.UpDownBlock;
 import tv.mapper.embellishcraft.item.FuelBlockItem;
 import tv.mapper.embellishcraft.item.ModItemGroups;
 
+@ObjectHolder(Constants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
 public class ModBlocks
 {
     // World (blocks that generate in the world)
 
-    @ObjectHolder("embellishcraft:basalt")
-    public static Block BASALT;
-    @ObjectHolder("embellishcraft:basalt_stairs")
-    public static Block BASALT_STAIRS;
-    @ObjectHolder("embellishcraft:basalt_slab")
-    public static Block BASALT_SLAB;
-    @ObjectHolder("embellishcraft:basalt_wall")
-    public static Block BASALT_WALL;
-    @ObjectHolder("embellishcraft:basalt_pressure_plate")
-    public static Block BASALT_PRESSURE_PLATE;
+    public static final Block BASALT = null;
+    public static final Block BASALT_STAIRS = null;
+    public static final Block BASALT_SLAB = null;
+    public static final Block BASALT_WALL = null;
+    public static final Block BASALT_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:slate")
-    public static Block SLATE;
-    @ObjectHolder("embellishcraft:slate_stairs")
-    public static Block SLATE_STAIRS;
-    @ObjectHolder("embellishcraft:slate_slab")
-    public static Block SLATE_SLAB;
-    @ObjectHolder("embellishcraft:slate_wall")
-    public static Block SLATE_WALL;
-    @ObjectHolder("embellishcraft:slate_pressure_plate")
-    public static Block SLATE_PRESSURE_PLATE;
+    public static final Block SLATE = null;
+    public static final Block SLATE_STAIRS = null;
+    public static final Block SLATE_SLAB = null;
+    public static final Block SLATE_WALL = null;
+    public static final Block SLATE_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:marble")
-    public static Block MARBLE;
-    @ObjectHolder("embellishcraft:marble_stairs")
-    public static Block MARBLE_STAIRS;
-    @ObjectHolder("embellishcraft:marble_slab")
-    public static Block MARBLE_SLAB;
-    @ObjectHolder("embellishcraft:marble_wall")
-    public static Block MARBLE_WALL;
-    @ObjectHolder("embellishcraft:marble_pressure_plate")
-    public static Block MARBLE_PRESSURE_PLATE;
+    public static final Block MARBLE = null;
+    public static final Block MARBLE_STAIRS = null;
+    public static final Block MARBLE_SLAB = null;
+    public static final Block MARBLE_WALL = null;
+    public static final Block MARBLE_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:gneiss")
-    public static Block GNEISS;
-    @ObjectHolder("embellishcraft:gneiss_stairs")
-    public static Block GNEISS_STAIRS;
-    @ObjectHolder("embellishcraft:gneiss_slab")
-    public static Block GNEISS_SLAB;
-    @ObjectHolder("embellishcraft:gneiss_wall")
-    public static Block GNEISS_WALL;
-    @ObjectHolder("embellishcraft:gneiss_pressure_plate")
-    public static Block GNEISS_PRESSURE_PLATE;
+    public static final Block GNEISS = null;
+    public static final Block GNEISS_STAIRS = null;
+    public static final Block GNEISS_SLAB = null;
+    public static final Block GNEISS_WALL = null;
+    public static final Block GNEISS_PRESSURE_PLATE = null;
 
     // Cobblestones
 
-    @ObjectHolder("embellishcraft:basalt_cobblestone")
-    public static Block BASALT_COBBLESTONE;
-    @ObjectHolder("embellishcraft:basalt_cobblestone_stairs")
-    public static Block BASALT_COBBLESTONE_STAIRS;
-    @ObjectHolder("embellishcraft:basalt_cobblestone_slab")
-    public static Block BASALT_COBBLESTONE_SLAB;
-    @ObjectHolder("embellishcraft:basalt_cobblestone_wall")
-    public static Block BASALT_COBBLESTONE_WALL;
-    @ObjectHolder("embellishcraft:basalt_cobblestone_pressure_plate")
-    public static Block BASALT_COBBLESTONE_PRESSURE_PLATE;
+    public static final Block BASALT_COBBLESTONE = null;
+    public static final Block BASALT_COBBLESTONE_STAIRS = null;
+    public static final Block BASALT_COBBLESTONE_SLAB = null;
+    public static final Block BASALT_COBBLESTONE_WALL = null;
+    public static final Block BASALT_COBBLESTONE_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:slate_cobblestone")
-    public static Block SLATE_COBBLESTONE;
-    @ObjectHolder("embellishcraft:slate_cobblestone_stairs")
-    public static Block SLATE_COBBLESTONE_STAIRS;
-    @ObjectHolder("embellishcraft:slate_cobblestone_slab")
-    public static Block SLATE_COBBLESTONE_SLAB;
-    @ObjectHolder("embellishcraft:slate_cobblestone_wall")
-    public static Block SLATE_COBBLESTONE_WALL;
-    @ObjectHolder("embellishcraft:slate_cobblestone_pressure_plate")
-    public static Block SLATE_COBBLESTONE_PRESSURE_PLATE;
+    public static final Block SLATE_COBBLESTONE = null;
+    public static final Block SLATE_COBBLESTONE_STAIRS = null;
+    public static final Block SLATE_COBBLESTONE_SLAB = null;
+    public static final Block SLATE_COBBLESTONE_WALL = null;
+    public static final Block SLATE_COBBLESTONE_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:marble_cobblestone")
-    public static Block MARBLE_COBBLESTONE;
-    @ObjectHolder("embellishcraft:marble_cobblestone_stairs")
-    public static Block MARBLE_COBBLESTONE_STAIRS;
-    @ObjectHolder("embellishcraft:marble_cobblestone_slab")
-    public static Block MARBLE_COBBLESTONE_SLAB;
-    @ObjectHolder("embellishcraft:marble_cobblestone_wall")
-    public static Block MARBLE_COBBLESTONE_WALL;
-    @ObjectHolder("embellishcraft:marble_cobblestone_pressure_plate")
-    public static Block MARBLE_COBBLESTONE_PRESSURE_PLATE;
+    public static final Block MARBLE_COBBLESTONE = null;
+    public static final Block MARBLE_COBBLESTONE_STAIRS = null;
+    public static final Block MARBLE_COBBLESTONE_SLAB = null;
+    public static final Block MARBLE_COBBLESTONE_WALL = null;
+    public static final Block MARBLE_COBBLESTONE_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:gneiss_cobblestone")
-    public static Block GNEISS_COBBLESTONE;
-    @ObjectHolder("embellishcraft:gneiss_cobblestone_stairs")
-    public static Block GNEISS_COBBLESTONE_STAIRS;
-    @ObjectHolder("embellishcraft:gneiss_cobblestone_slab")
-    public static Block GNEISS_COBBLESTONE_SLAB;
-    @ObjectHolder("embellishcraft:gneiss_cobblestone_wall")
-    public static Block GNEISS_COBBLESTONE_WALL;
-    @ObjectHolder("embellishcraft:gneiss_cobblestone_pressure_plate")
-    public static Block GNEISS_COBBLESTONE_PRESSURE_PLATE;
+    public static final Block GNEISS_COBBLESTONE = null;
+    public static final Block GNEISS_COBBLESTONE_STAIRS = null;
+    public static final Block GNEISS_COBBLESTONE_SLAB = null;
+    public static final Block GNEISS_COBBLESTONE_WALL = null;
+    public static final Block GNEISS_COBBLESTONE_PRESSURE_PLATE = null;
 
     // Bricks
 
-    @ObjectHolder("embellishcraft:basalt_bricks")
-    public static Block BASALT_BRICKS;
-    @ObjectHolder("embellishcraft:basalt_bricks_stairs")
-    public static Block BASALT_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:basalt_bricks_slab")
-    public static Block BASALT_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:basalt_bricks_wall")
-    public static Block BASALT_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:basalt_bricks_pressure_plate")
-    public static Block BASALT_BRICKS_PRESSURE_PLATE;
+    public static final Block BASALT_BRICKS = null;
+    public static final Block BASALT_BRICKS_STAIRS = null;
+    public static final Block BASALT_BRICKS_SLAB = null;
+    public static final Block BASALT_BRICKS_WALL = null;
+    public static final Block BASALT_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:dark_bricks")
-    public static Block DARK_BRICKS;
-    @ObjectHolder("embellishcraft:dark_bricks_stairs")
-    public static Block DARK_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:dark_bricks_slab")
-    public static Block DARK_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:dark_bricks_wall")
-    public static Block DARK_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:dark_bricks_pressure_plate")
-    public static Block DARK_BRICKS_PRESSURE_PLATE;
+    public static final Block DARK_BRICKS = null;
+    public static final Block DARK_BRICKS_STAIRS = null;
+    public static final Block DARK_BRICKS_SLAB = null;
+    public static final Block DARK_BRICKS_WALL = null;
+    public static final Block DARK_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:diorite_bricks")
-    public static Block DIORITE_BRICKS;
-    @ObjectHolder("embellishcraft:diorite_bricks_stairs")
-    public static Block DIORITE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:diorite_bricks_slab")
-    public static Block DIORITE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:diorite_bricks_wall")
-    public static Block DIORITE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:diorite_bricks_pressure_plate")
-    public static Block DIORITE_BRICKS_PRESSURE_PLATE;
+    public static final Block DIORITE_BRICKS = null;
+    public static final Block DIORITE_BRICKS_STAIRS = null;
+    public static final Block DIORITE_BRICKS_SLAB = null;
+    public static final Block DIORITE_BRICKS_WALL = null;
+    public static final Block DIORITE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:old_bricks")
-    public static Block OLD_BRICKS;
-    @ObjectHolder("embellishcraft:old_bricks_stairs")
-    public static Block OLD_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:old_bricks_slab")
-    public static Block OLD_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:old_bricks_wall")
-    public static Block OLD_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:old_bricks_pressure_plate")
-    public static Block OLD_BRICKS_PRESSURE_PLATE;
+    public static final Block OLD_BRICKS = null;
+    public static final Block OLD_BRICKS_STAIRS = null;
+    public static final Block OLD_BRICKS_SLAB = null;
+    public static final Block OLD_BRICKS_WALL = null;
+    public static final Block OLD_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:sandstone_bricks")
-    public static Block SANDSTONE_BRICKS;
-    @ObjectHolder("embellishcraft:sandstone_bricks_stairs")
-    public static Block SANDSTONE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:sandstone_bricks_slab")
-    public static Block SANDSTONE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:sandstone_bricks_wall")
-    public static Block SANDSTONE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:sandstone_bricks_pressure_plate")
-    public static Block SANDSTONE_BRICKS_PRESSURE_PLATE;
+    public static final Block SANDSTONE_BRICKS = null;
+    public static final Block SANDSTONE_BRICKS_STAIRS = null;
+    public static final Block SANDSTONE_BRICKS_SLAB = null;
+    public static final Block SANDSTONE_BRICKS_WALL = null;
+    public static final Block SANDSTONE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:slate_bricks")
-    public static Block SLATE_BRICKS;
-    @ObjectHolder("embellishcraft:slate_bricks_stairs")
-    public static Block SLATE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:slate_bricks_slab")
-    public static Block SLATE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:slate_bricks_wall")
-    public static Block SLATE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:slate_bricks_pressure_plate")
-    public static Block SLATE_BRICKS_PRESSURE_PLATE;
+    public static final Block SLATE_BRICKS = null;
+    public static final Block SLATE_BRICKS_STAIRS = null;
+    public static final Block SLATE_BRICKS_SLAB = null;
+    public static final Block SLATE_BRICKS_WALL = null;
+    public static final Block SLATE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:terracotta_bricks")
-    public static Block TERRACOTTA_BRICKS;
-    @ObjectHolder("embellishcraft:terracotta_bricks_stairs")
-    public static Block TERRACOTTA_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:terracotta_bricks_slab")
-    public static Block TERRACOTTA_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:terracotta_bricks_wall")
-    public static Block TERRACOTTA_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:terracotta_bricks_pressure_plate")
-    public static Block TERRACOTTA_BRICKS_PRESSURE_PLATE;
+    public static final Block TERRACOTTA_BRICKS = null;
+    public static final Block TERRACOTTA_BRICKS_STAIRS = null;
+    public static final Block TERRACOTTA_BRICKS_SLAB = null;
+    public static final Block TERRACOTTA_BRICKS_WALL = null;
+    public static final Block TERRACOTTA_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:weared_bricks")
-    public static Block WEARED_BRICKS;
-    @ObjectHolder("embellishcraft:weared_bricks_stairs")
-    public static Block WEARED_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:weared_bricks_slab")
-    public static Block WEARED_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:weared_bricks_wall")
-    public static Block WEARED_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:weared_bricks_pressure_plate")
-    public static Block WEARED_BRICKS_PRESSURE_PLATE;
+    public static final Block WEARED_BRICKS = null;
+    public static final Block WEARED_BRICKS_STAIRS = null;
+    public static final Block WEARED_BRICKS_SLAB = null;
+    public static final Block WEARED_BRICKS_WALL = null;
+    public static final Block WEARED_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:marble_bricks")
-    public static Block MARBLE_BRICKS;
-    @ObjectHolder("embellishcraft:marble_bricks_stairs")
-    public static Block MARBLE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:marble_bricks_slab")
-    public static Block MARBLE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:marble_bricks_wall")
-    public static Block MARBLE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:marble_bricks_pressure_plate")
-    public static Block MARBLE_BRICKS_PRESSURE_PLATE;
+    public static final Block MARBLE_BRICKS = null;
+    public static final Block MARBLE_BRICKS_STAIRS = null;
+    public static final Block MARBLE_BRICKS_SLAB = null;
+    public static final Block MARBLE_BRICKS_WALL = null;
+    public static final Block MARBLE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:gneiss_bricks")
-    public static Block GNEISS_BRICKS;
-    @ObjectHolder("embellishcraft:gneiss_bricks_stairs")
-    public static Block GNEISS_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:gneiss_bricks_slab")
-    public static Block GNEISS_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:gneiss_bricks_wall")
-    public static Block GNEISS_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:gneiss_bricks_pressure_plate")
-    public static Block GNEISS_BRICKS_PRESSURE_PLATE;
+    public static final Block GNEISS_BRICKS = null;
+    public static final Block GNEISS_BRICKS_STAIRS = null;
+    public static final Block GNEISS_BRICKS_SLAB = null;
+    public static final Block GNEISS_BRICKS_WALL = null;
+    public static final Block GNEISS_BRICKS_PRESSURE_PLATE = null;
 
     // Large bricks
 
-    @ObjectHolder("embellishcraft:basalt_large_bricks")
-    public static Block BASALT_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:basalt_large_bricks_stairs")
-    public static Block BASALT_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:basalt_large_bricks_slab")
-    public static Block BASALT_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:basalt_large_bricks_wall")
-    public static Block BASALT_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:basalt_large_bricks_pressure_plate")
-    public static Block BASALT_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block BASALT_LARGE_BRICKS = null;
+    public static final Block BASALT_LARGE_BRICKS_STAIRS = null;
+    public static final Block BASALT_LARGE_BRICKS_SLAB = null;
+    public static final Block BASALT_LARGE_BRICKS_WALL = null;
+    public static final Block BASALT_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:diorite_large_bricks")
-    public static Block DIORITE_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:diorite_large_bricks_stairs")
-    public static Block DIORITE_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:diorite_large_bricks_slab")
-    public static Block DIORITE_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:diorite_large_bricks_wall")
-    public static Block DIORITE_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:diorite_large_bricks_pressure_plate")
-    public static Block DIORITE_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block DIORITE_LARGE_BRICKS = null;
+    public static final Block DIORITE_LARGE_BRICKS_STAIRS = null;
+    public static final Block DIORITE_LARGE_BRICKS_SLAB = null;
+    public static final Block DIORITE_LARGE_BRICKS_WALL = null;
+    public static final Block DIORITE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:dark_large_bricks")
-    public static Block DARK_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:dark_large_bricks_stairs")
-    public static Block DARK_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:dark_large_bricks_slab")
-    public static Block DARK_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:dark_large_bricks_wall")
-    public static Block DARK_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:dark_large_bricks_pressure_plate")
-    public static Block DARK_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block DARK_LARGE_BRICKS = null;
+    public static final Block DARK_LARGE_BRICKS_STAIRS = null;
+    public static final Block DARK_LARGE_BRICKS_SLAB = null;
+    public static final Block DARK_LARGE_BRICKS_WALL = null;
+    public static final Block DARK_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:marble_large_bricks")
-    public static Block MARBLE_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:marble_large_bricks_stairs")
-    public static Block MARBLE_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:marble_large_bricks_slab")
-    public static Block MARBLE_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:marble_large_bricks_wall")
-    public static Block MARBLE_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:marble_large_bricks_pressure_plate")
-    public static Block MARBLE_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block MARBLE_LARGE_BRICKS = null;
+    public static final Block MARBLE_LARGE_BRICKS_STAIRS = null;
+    public static final Block MARBLE_LARGE_BRICKS_SLAB = null;
+    public static final Block MARBLE_LARGE_BRICKS_WALL = null;
+    public static final Block MARBLE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:old_large_bricks")
-    public static Block OLD_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:old_large_bricks_stairs")
-    public static Block OLD_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:old_large_bricks_slab")
-    public static Block OLD_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:old_large_bricks_wall")
-    public static Block OLD_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:old_large_bricks_pressure_plate")
-    public static Block OLD_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block OLD_LARGE_BRICKS = null;
+    public static final Block OLD_LARGE_BRICKS_STAIRS = null;
+    public static final Block OLD_LARGE_BRICKS_SLAB = null;
+    public static final Block OLD_LARGE_BRICKS_WALL = null;
+    public static final Block OLD_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:sandstone_large_bricks")
-    public static Block SANDSTONE_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:sandstone_large_bricks_stairs")
-    public static Block SANDSTONE_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:sandstone_large_bricks_slab")
-    public static Block SANDSTONE_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:sandstone_large_bricks_wall")
-    public static Block SANDSTONE_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:sandstone_large_bricks_pressure_plate")
-    public static Block SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block SANDSTONE_LARGE_BRICKS = null;
+    public static final Block SANDSTONE_LARGE_BRICKS_STAIRS = null;
+    public static final Block SANDSTONE_LARGE_BRICKS_SLAB = null;
+    public static final Block SANDSTONE_LARGE_BRICKS_WALL = null;
+    public static final Block SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:slate_large_bricks")
-    public static Block SLATE_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:slate_large_bricks_stairs")
-    public static Block SLATE_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:slate_large_bricks_slab")
-    public static Block SLATE_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:slate_large_bricks_wall")
-    public static Block SLATE_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:slate_large_bricks_pressure_plate")
-    public static Block SLATE_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block SLATE_LARGE_BRICKS = null;
+    public static final Block SLATE_LARGE_BRICKS_STAIRS = null;
+    public static final Block SLATE_LARGE_BRICKS_SLAB = null;
+    public static final Block SLATE_LARGE_BRICKS_WALL = null;
+    public static final Block SLATE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:terracotta_large_bricks")
-    public static Block TERRACOTTA_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:terracotta_large_bricks_stairs")
-    public static Block TERRACOTTA_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:terracotta_large_bricks_slab")
-    public static Block TERRACOTTA_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:terracotta_large_bricks_wall")
-    public static Block TERRACOTTA_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:terracotta_large_bricks_pressure_plate")
-    public static Block TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block TERRACOTTA_LARGE_BRICKS = null;
+    public static final Block TERRACOTTA_LARGE_BRICKS_STAIRS = null;
+    public static final Block TERRACOTTA_LARGE_BRICKS_SLAB = null;
+    public static final Block TERRACOTTA_LARGE_BRICKS_WALL = null;
+    public static final Block TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:weared_large_bricks")
-    public static Block WEARED_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:weared_large_bricks_stairs")
-    public static Block WEARED_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:weared_large_bricks_slab")
-    public static Block WEARED_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:weared_large_bricks_wall")
-    public static Block WEARED_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:weared_large_bricks_pressure_plate")
-    public static Block WEARED_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block WEARED_LARGE_BRICKS = null;
+    public static final Block WEARED_LARGE_BRICKS_STAIRS = null;
+    public static final Block WEARED_LARGE_BRICKS_SLAB = null;
+    public static final Block WEARED_LARGE_BRICKS_WALL = null;
+    public static final Block WEARED_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    @ObjectHolder("embellishcraft:gneiss_large_bricks")
-    public static Block GNEISS_LARGE_BRICKS;
-    @ObjectHolder("embellishcraft:gneiss_large_bricks_stairs")
-    public static Block GNEISS_LARGE_BRICKS_STAIRS;
-    @ObjectHolder("embellishcraft:gneiss_large_bricks_slab")
-    public static Block GNEISS_LARGE_BRICKS_SLAB;
-    @ObjectHolder("embellishcraft:gneiss_large_bricks_wall")
-    public static Block GNEISS_LARGE_BRICKS_WALL;
-    @ObjectHolder("embellishcraft:gneiss_large_bricks_pressure_plate")
-    public static Block GNEISS_LARGE_BRICKS_PRESSURE_PLATE;
+    public static final Block GNEISS_LARGE_BRICKS = null;
+    public static final Block GNEISS_LARGE_BRICKS_STAIRS = null;
+    public static final Block GNEISS_LARGE_BRICKS_SLAB = null;
+    public static final Block GNEISS_LARGE_BRICKS_WALL = null;
+    public static final Block GNEISS_LARGE_BRICKS_PRESSURE_PLATE = null;
 
     // Paving
 
-    @ObjectHolder("embellishcraft:concrete_paving")
-    public static Block CONCRETE_PAVING;
-    @ObjectHolder("embellishcraft:concrete_paving_stairs")
-    public static Block CONCRETE_PAVING_STAIRS;
-    @ObjectHolder("embellishcraft:concrete_paving_slab")
-    public static Block CONCRETE_PAVING_SLAB;
-    @ObjectHolder("embellishcraft:concrete_paving_pressure_plate")
-    public static Block CONCRETE_PAVING_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:concrete_paving_wall")
-    public static Block CONCRETE_PAVING_WALL;
+    public static final Block CONCRETE_PAVING = null;
+    public static final Block CONCRETE_PAVING_STAIRS = null;
+    public static final Block CONCRETE_PAVING_SLAB = null;
+    public static final Block CONCRETE_PAVING_PRESSURE_PLATE = null;
+    public static final Block CONCRETE_PAVING_WALL = null;
 
-    @ObjectHolder("embellishcraft:damaged_paving")
-    public static Block DAMAGED_PAVING;
-    @ObjectHolder("embellishcraft:damaged_paving_stairs")
-    public static Block DAMAGED_PAVING_STAIRS;
-    @ObjectHolder("embellishcraft:damaged_paving_slab")
-    public static Block DAMAGED_PAVING_SLAB;
-    @ObjectHolder("embellishcraft:damaged_paving_pressure_plate")
-    public static Block DAMAGED_PAVING_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:damaged_paving_wall")
-    public static Block DAMAGED_PAVING_WALL;
+    public static final Block DAMAGED_PAVING = null;
+    public static final Block DAMAGED_PAVING_STAIRS = null;
+    public static final Block DAMAGED_PAVING_SLAB = null;
+    public static final Block DAMAGED_PAVING_PRESSURE_PLATE = null;
+    public static final Block DAMAGED_PAVING_WALL = null;
 
-    @ObjectHolder("embellishcraft:dark_concrete_paving")
-    public static Block DARK_CONCRETE_PAVING;
-    @ObjectHolder("embellishcraft:dark_concrete_paving_stairs")
-    public static Block DARK_CONCRETE_PAVING_STAIRS;
-    @ObjectHolder("embellishcraft:dark_concrete_paving_slab")
-    public static Block DARK_CONCRETE_PAVING_SLAB;
-    @ObjectHolder("embellishcraft:dark_concrete_paving_pressure_plate")
-    public static Block DARK_CONCRETE_PAVING_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:dark_concrete_paving_wall")
-    public static Block DARK_CONCRETE_PAVING_WALL;
+    public static final Block DARK_CONCRETE_PAVING = null;
+    public static final Block DARK_CONCRETE_PAVING_STAIRS = null;
+    public static final Block DARK_CONCRETE_PAVING_SLAB = null;
+    public static final Block DARK_CONCRETE_PAVING_PRESSURE_PLATE = null;
+    public static final Block DARK_CONCRETE_PAVING_WALL = null;
 
-    @ObjectHolder("embellishcraft:diorite_paving")
-    public static Block DIORITE_PAVING;
-    @ObjectHolder("embellishcraft:diorite_paving_stairs")
-    public static Block DIORITE_PAVING_STAIRS;
-    @ObjectHolder("embellishcraft:diorite_paving_slab")
-    public static Block DIORITE_PAVING_SLAB;
-    @ObjectHolder("embellishcraft:diorite_paving_pressure_plate")
-    public static Block DIORITE_PAVING_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:diorite_paving_wall")
-    public static Block DIORITE_PAVING_WALL;
+    public static final Block DIORITE_PAVING = null;
+    public static final Block DIORITE_PAVING_STAIRS = null;
+    public static final Block DIORITE_PAVING_SLAB = null;
+    public static final Block DIORITE_PAVING_PRESSURE_PLATE = null;
+    public static final Block DIORITE_PAVING_WALL = null;
 
-    @ObjectHolder("embellishcraft:moist_paving")
-    public static Block MOIST_PAVING;
-    @ObjectHolder("embellishcraft:moist_paving_stairs")
-    public static Block MOIST_PAVING_STAIRS;
-    @ObjectHolder("embellishcraft:moist_paving_slab")
-    public static Block MOIST_PAVING_SLAB;
-    @ObjectHolder("embellishcraft:moist_paving_pressure_plate")
-    public static Block MOIST_PAVING_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:moist_paving_wall")
-    public static Block MOIST_PAVING_WALL;
+    public static final Block MOIST_PAVING = null;
+    public static final Block MOIST_PAVING_STAIRS = null;
+    public static final Block MOIST_PAVING_SLAB = null;
+    public static final Block MOIST_PAVING_PRESSURE_PLATE = null;
+    public static final Block MOIST_PAVING_WALL = null;
 
-    @ObjectHolder("embellishcraft:polished_paving")
-    public static Block POLISHED_PAVING;
-    @ObjectHolder("embellishcraft:polished_paving_stairs")
-    public static Block POLISHED_PAVING_STAIRS;
-    @ObjectHolder("embellishcraft:polished_paving_slab")
-    public static Block POLISHED_PAVING_SLAB;
-    @ObjectHolder("embellishcraft:polished_paving_pressure_plate")
-    public static Block POLISHED_PAVING_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:polished_paving_wall")
-    public static Block POLISHED_PAVING_WALL;
+    public static final Block POLISHED_PAVING = null;
+    public static final Block POLISHED_PAVING_STAIRS = null;
+    public static final Block POLISHED_PAVING_SLAB = null;
+    public static final Block POLISHED_PAVING_PRESSURE_PLATE = null;
+    public static final Block POLISHED_PAVING_WALL = null;
 
-    @ObjectHolder("embellishcraft:slate_paving")
-    public static Block SLATE_PAVING;
-    @ObjectHolder("embellishcraft:slate_paving_stairs")
-    public static Block SLATE_PAVING_STAIRS;
-    @ObjectHolder("embellishcraft:slate_paving_slab")
-    public static Block SLATE_PAVING_SLAB;
-    @ObjectHolder("embellishcraft:slate_paving_pressure_plate")
-    public static Block SLATE_PAVING_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:slate_paving_wall")
-    public static Block SLATE_PAVING_WALL;
+    public static final Block SLATE_PAVING = null;
+    public static final Block SLATE_PAVING_STAIRS = null;
+    public static final Block SLATE_PAVING_SLAB = null;
+    public static final Block SLATE_PAVING_PRESSURE_PLATE = null;
+    public static final Block SLATE_PAVING_WALL = null;
 
-    @ObjectHolder("embellishcraft:white_concrete_paving")
-    public static Block WHITE_CONCRETE_PAVING;
-    @ObjectHolder("embellishcraft:white_concrete_paving_stairs")
-    public static Block WHITE_CONCRETE_PAVING_STAIRS;
-    @ObjectHolder("embellishcraft:white_concrete_paving_slab")
-    public static Block WHITE_CONCRETE_PAVING_SLAB;
-    @ObjectHolder("embellishcraft:white_concrete_paving_pressure_plate")
-    public static Block WHITE_CONCRETE_PAVING_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:white_concrete_paving_wall")
-    public static Block WHITE_CONCRETE_PAVING_WALL;
+    public static final Block WHITE_CONCRETE_PAVING = null;
+    public static final Block WHITE_CONCRETE_PAVING_STAIRS = null;
+    public static final Block WHITE_CONCRETE_PAVING_SLAB = null;
+    public static final Block WHITE_CONCRETE_PAVING_PRESSURE_PLATE = null;
+    public static final Block WHITE_CONCRETE_PAVING_WALL = null;
 
-    @ObjectHolder("embellishcraft:gneiss_paving")
-    public static Block GNEISS_PAVING;
-    @ObjectHolder("embellishcraft:gneiss_paving_stairs")
-    public static Block GNEISS_PAVING_STAIRS;
-    @ObjectHolder("embellishcraft:gneiss_paving_slab")
-    public static Block GNEISS_PAVING_SLAB;
-    @ObjectHolder("embellishcraft:gneiss_paving_wall")
-    public static Block GNEISS_PAVING_WALL;
-    @ObjectHolder("embellishcraft:gneiss_paving_pressure_plate")
-    public static Block GNEISS_PAVING_PRESSURE_PLATE;
+    public static final Block GNEISS_PAVING = null;
+    public static final Block GNEISS_PAVING_STAIRS = null;
+    public static final Block GNEISS_PAVING_SLAB = null;
+    public static final Block GNEISS_PAVING_WALL = null;
+    public static final Block GNEISS_PAVING_PRESSURE_PLATE = null;
 
     // Tiles
 
-    @ObjectHolder("embellishcraft:concrete_tiles")
-    public static Block CONCRETE_TILES;
-    @ObjectHolder("embellishcraft:concrete_tiles_stairs")
-    public static Block CONCRETE_TILES_STAIRS;
-    @ObjectHolder("embellishcraft:concrete_tiles_slab")
-    public static Block CONCRETE_TILES_SLAB;
-    @ObjectHolder("embellishcraft:concrete_tiles_pressure_plate")
-    public static Block CONCRETE_TILES_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:concrete_tiles_wall")
-    public static Block CONCRETE_TILES_WALL;
+    public static final Block CONCRETE_TILES = null;
+    public static final Block CONCRETE_TILES_STAIRS = null;
+    public static final Block CONCRETE_TILES_SLAB = null;
+    public static final Block CONCRETE_TILES_PRESSURE_PLATE = null;
+    public static final Block CONCRETE_TILES_WALL = null;
 
-    @ObjectHolder("embellishcraft:skyblue_tiles")
-    public static Block SKYBLUE_TILES;
-    @ObjectHolder("embellishcraft:skyblue_tiles_stairs")
-    public static Block SKYBLUE_TILES_STAIRS;
-    @ObjectHolder("embellishcraft:skyblue_tiles_slab")
-    public static Block SKYBLUE_TILES_SLAB;
-    @ObjectHolder("embellishcraft:skyblue_tiles_pressure_plate")
-    public static Block SKYBLUE_TILES_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:skyblue_tiles_wall")
-    public static Block SKYBLUE_TILES_WALL;
+    public static final Block SKYBLUE_TILES = null;
+    public static final Block SKYBLUE_TILES_STAIRS = null;
+    public static final Block SKYBLUE_TILES_SLAB = null;
+    public static final Block SKYBLUE_TILES_PRESSURE_PLATE = null;
+    public static final Block SKYBLUE_TILES_WALL = null;
 
-    @ObjectHolder("embellishcraft:orange_tiles")
-    public static Block ORANGE_TILES;
-    @ObjectHolder("embellishcraft:orange_tiles_stairs")
-    public static Block ORANGE_TILES_STAIRS;
-    @ObjectHolder("embellishcraft:orange_tiles_slab")
-    public static Block ORANGE_TILES_SLAB;
-    @ObjectHolder("embellishcraft:orange_tiles_pressure_plate")
-    public static Block ORANGE_TILES_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:orange_tiles_wall")
-    public static Block ORANGE_TILES_WALL;
+    public static final Block ORANGE_TILES = null;
+    public static final Block ORANGE_TILES_STAIRS = null;
+    public static final Block ORANGE_TILES_SLAB = null;
+    public static final Block ORANGE_TILES_PRESSURE_PLATE = null;
+    public static final Block ORANGE_TILES_WALL = null;
 
-    @ObjectHolder("embellishcraft:blue_tiles")
-    public static Block BLUE_TILES;
-    @ObjectHolder("embellishcraft:blue_tiles_stairs")
-    public static Block BLUE_TILES_STAIRS;
-    @ObjectHolder("embellishcraft:blue_tiles_slab")
-    public static Block BLUE_TILES_SLAB;
-    @ObjectHolder("embellishcraft:blue_tiles_pressure_plate")
-    public static Block BLUE_TILES_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:blue_tiles_wall")
-    public static Block BLUE_TILES_WALL;
+    public static final Block BLUE_TILES = null;
+    public static final Block BLUE_TILES_STAIRS = null;
+    public static final Block BLUE_TILES_SLAB = null;
+    public static final Block BLUE_TILES_PRESSURE_PLATE = null;
+    public static final Block BLUE_TILES_WALL = null;
 
-    @ObjectHolder("embellishcraft:light_blue_tiles")
-    public static Block LIGHT_BLUE_TILES;
-    @ObjectHolder("embellishcraft:light_blue_tiles_stairs")
-    public static Block LIGHT_BLUE_TILES_STAIRS;
-    @ObjectHolder("embellishcraft:light_blue_tiles_slab")
-    public static Block LIGHT_BLUE_TILES_SLAB;
-    @ObjectHolder("embellishcraft:light_blue_tiles_pressure_plate")
-    public static Block LIGHT_BLUE_TILES_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:light_blue_tiles_wall")
-    public static Block LIGHT_BLUE_TILES_WALL;
+    public static final Block LIGHT_BLUE_TILES = null;
+    public static final Block LIGHT_BLUE_TILES_STAIRS = null;
+    public static final Block LIGHT_BLUE_TILES_SLAB = null;
+    public static final Block LIGHT_BLUE_TILES_PRESSURE_PLATE = null;
+    public static final Block LIGHT_BLUE_TILES_WALL = null;
 
-    @ObjectHolder("embellishcraft:red_tiles")
-    public static Block RED_TILES;
-    @ObjectHolder("embellishcraft:red_tiles_stairs")
-    public static Block RED_TILES_STAIRS;
-    @ObjectHolder("embellishcraft:red_tiles_slab")
-    public static Block RED_TILES_SLAB;
-    @ObjectHolder("embellishcraft:red_tiles_pressure_plate")
-    public static Block RED_TILES_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:red_tiles_wall")
-    public static Block RED_TILES_WALL;
+    public static final Block RED_TILES = null;
+    public static final Block RED_TILES_STAIRS = null;
+    public static final Block RED_TILES_SLAB = null;
+    public static final Block RED_TILES_PRESSURE_PLATE = null;
+    public static final Block RED_TILES_WALL = null;
 
-    @ObjectHolder("embellishcraft:white_tiles")
-    public static Block WHITE_TILES;
-    @ObjectHolder("embellishcraft:white_tiles_stairs")
-    public static Block WHITE_TILES_STAIRS;
-    @ObjectHolder("embellishcraft:white_tiles_slab")
-    public static Block WHITE_TILES_SLAB;
-    @ObjectHolder("embellishcraft:white_tiles_pressure_plate")
-    public static Block WHITE_TILES_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:white_tiles_wall")
-    public static Block WHITE_TILES_WALL;
+    public static final Block WHITE_TILES = null;
+    public static final Block WHITE_TILES_STAIRS = null;
+    public static final Block WHITE_TILES_SLAB = null;
+    public static final Block WHITE_TILES_PRESSURE_PLATE = null;
+    public static final Block WHITE_TILES_WALL = null;
 
-    @ObjectHolder("embellishcraft:yellow_tiles")
-    public static Block YELLOW_TILES;
-    @ObjectHolder("embellishcraft:yellow_tiles_stairs")
-    public static Block YELLOW_TILES_STAIRS;
-    @ObjectHolder("embellishcraft:yellow_tiles_slab")
-    public static Block YELLOW_TILES_SLAB;
-    @ObjectHolder("embellishcraft:yellow_tiles_pressure_plate")
-    public static Block YELLOW_TILES_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:yellow_tiles_wall")
-    public static Block YELLOW_TILES_WALL;
+    public static final Block YELLOW_TILES = null;
+    public static final Block YELLOW_TILES_STAIRS = null;
+    public static final Block YELLOW_TILES_SLAB = null;
+    public static final Block YELLOW_TILES_PRESSURE_PLATE = null;
+    public static final Block YELLOW_TILES_WALL = null;
 
-    @ObjectHolder("embellishcraft:yellow_grey_tiles")
-    public static Block YELLOW_GREY_TILES;
-    @ObjectHolder("embellishcraft:yellow_grey_tiles_stairs")
-    public static Block YELLOW_GREY_TILES_STAIRS;
-    @ObjectHolder("embellishcraft:yellow_grey_tiles_slab")
-    public static Block YELLOW_GREY_TILES_SLAB;
-    @ObjectHolder("embellishcraft:yellow_grey_tiles_pressure_plate")
-    public static Block YELLOW_GREY_TILES_PRESSURE_PLATE;
-    @ObjectHolder("embellishcraft:yellow_grey_tiles_wall")
-    public static Block YELLOW_GREY_TILES_WALL;
+    public static final Block YELLOW_GREY_TILES = null;
+    public static final Block YELLOW_GREY_TILES_STAIRS = null;
+    public static final Block YELLOW_GREY_TILES_SLAB = null;
+    public static final Block YELLOW_GREY_TILES_PRESSURE_PLATE = null;
+    public static final Block YELLOW_GREY_TILES_WALL = null;
 
     // Wallpaper
 
-    @ObjectHolder("embellishcraft:white_blue_wallpaper")
-    public static Block WHITE_BLUE_WALLPAPER;
-    @ObjectHolder("embellishcraft:white_blue_wallpaper_stairs")
-    public static Block WHITE_BLUE_WALLPAPER_STAIRS;
-    @ObjectHolder("embellishcraft:white_blue_wallpaper_slab")
-    public static Block WHITE_BLUE_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:white_blue_wallpaper_plinth")
-    public static Block WHITE_BLUE_WALLPAPER_PLINTH;
+    public static final Block WHITE_BLUE_WALLPAPER = null;
+    public static final Block WHITE_BLUE_WALLPAPER_STAIRS = null;
+    public static final Block WHITE_BLUE_WALLPAPER_SLAB = null;
+    public static final Block WHITE_BLUE_WALLPAPER_PLINTH = null;
 
-    @ObjectHolder("embellishcraft:beige_wallpaper")
-    public static Block BEIGE_WALLPAPER;
-    @ObjectHolder("embellishcraft:beige_wallpaper_stairs")
-    public static Block BEIGE_WALLPAPER_STAIRS;
-    @ObjectHolder("embellishcraft:beige_wallpaper_slab")
-    public static Block BEIGE_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:beige_wallpaper_plinth")
-    public static Block BEIGE_WALLPAPER_PLINTH;
+    public static final Block BEIGE_WALLPAPER = null;
+    public static final Block BEIGE_WALLPAPER_STAIRS = null;
+    public static final Block BEIGE_WALLPAPER_SLAB = null;
+    public static final Block BEIGE_WALLPAPER_PLINTH = null;
 
-    @ObjectHolder("embellishcraft:pink_wallpaper")
-    public static Block PINK_WALLPAPER;
-    @ObjectHolder("embellishcraft:pink_wallpaper_stairs")
-    public static Block PINK_WALLPAPER_STAIRS;
-    @ObjectHolder("embellishcraft:pink_wallpaper_slab")
-    public static Block PINK_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:pink_wallpaper_plinth")
-    public static Block PINK_WALLPAPER_PLINTH;
+    public static final Block PINK_WALLPAPER = null;
+    public static final Block PINK_WALLPAPER_STAIRS = null;
+    public static final Block PINK_WALLPAPER_SLAB = null;
+    public static final Block PINK_WALLPAPER_PLINTH = null;
 
-    @ObjectHolder("embellishcraft:beige_flower_wallpaper")
-    public static Block BEIGE_FLOWER_WALLPAPER;
-    @ObjectHolder("embellishcraft:beige_flower_wallpaper_stairs")
-    public static Block BEIGE_FLOWER_WALLPAPER_STAIRS;
-    @ObjectHolder("embellishcraft:beige_flower_wallpaper_slab")
-    public static Block BEIGE_FLOWER_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:beige_flower_wallpaper_plinth")
-    public static Block BEIGE_FLOWER_WALLPAPER_PLINTH;
+    public static final Block BEIGE_FLOWER_WALLPAPER = null;
+    public static final Block BEIGE_FLOWER_WALLPAPER_STAIRS = null;
+    public static final Block BEIGE_FLOWER_WALLPAPER_SLAB = null;
+    public static final Block BEIGE_FLOWER_WALLPAPER_PLINTH = null;
 
-    @ObjectHolder("embellishcraft:white_green_wallpaper")
-    public static Block WHITE_GREEN_WALLPAPER;
-    @ObjectHolder("embellishcraft:white_green_wallpaper_stairs")
-    public static Block WHITE_GREEN_WALLPAPER_STAIRS;
-    @ObjectHolder("embellishcraft:white_green_wallpaper_slab")
-    public static Block WHITE_GREEN_WALLPAPER_SLAB;
-    @ObjectHolder("embellishcraft:white_green_wallpaper_plinth")
-    public static Block WHITE_GREEN_WALLPAPER_PLINTH;
+    public static final Block WHITE_GREEN_WALLPAPER = null;
+    public static final Block WHITE_GREEN_WALLPAPER_STAIRS = null;
+    public static final Block WHITE_GREEN_WALLPAPER_SLAB = null;
+    public static final Block WHITE_GREEN_WALLPAPER_PLINTH = null;
 
     // Furniture
 
-    @ObjectHolder("embellishcraft:oak_chair")
-    public static Block OAK_CHAIR;
-    @ObjectHolder("embellishcraft:dark_oak_chair")
-    public static Block DARK_OAK_CHAIR;
-    @ObjectHolder("embellishcraft:birch_chair")
-    public static Block BIRCH_CHAIR;
-    @ObjectHolder("embellishcraft:jungle_chair")
-    public static Block JUNGLE_CHAIR;
-    @ObjectHolder("embellishcraft:spruce_chair")
-    public static Block SPRUCE_CHAIR;
-    @ObjectHolder("embellishcraft:acacia_chair")
-    public static Block ACACIA_CHAIR;
-    
-    @ObjectHolder("embellishcraft:metallic_terrace_table")
-    public static Block METALLIC_TERRACE_TABLE;
+    public static final Block OAK_CHAIR = null;
+    public static final Block DARK_OAK_CHAIR = null;
+    public static final Block BIRCH_CHAIR = null;
+    public static final Block JUNGLE_CHAIR = null;
+    public static final Block SPRUCE_CHAIR = null;
+    public static final Block ACACIA_CHAIR = null;
+
+    public static final Block METALLIC_TERRACE_TABLE = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -697,7 +441,7 @@ public class ModBlocks
         event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_chair"));
         event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_chair"));
         event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_chair"));
-        
+
         event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN)).setRegistryName("metallic_terrace_table"));
 
     }
@@ -790,7 +534,7 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(JUNGLE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(JUNGLE_CHAIR.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(SPRUCE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(SPRUCE_CHAIR.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(ACACIA_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(ACACIA_CHAIR.getRegistryName()));
-        
+
         event.getRegistry().register(new BlockItem(METALLIC_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_TABLE.getRegistryName()));
 
     }
