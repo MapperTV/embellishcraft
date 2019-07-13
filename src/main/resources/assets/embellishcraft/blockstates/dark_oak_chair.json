@@ -1,18 +1,18 @@
 {
     "variants": {
         "facing=north": {
-            "model": "embellishcraft:block/dark_oak_chair",
+            "model": "embellishcraft:block/furniture/dark_oak_chair",
             "y": 180
         },
         "facing=east": {
-            "model": "embellishcraft:block/dark_oak_chair",
+            "model": "embellishcraft:block/furniture/dark_oak_chair",
             "y": 270
         },
         "facing=south": {
-            "model": "embellishcraft:block/dark_oak_chair"
+            "model": "embellishcraft:block/furniture/dark_oak_chair"
         },
         "facing=west": {
-            "model": "embellishcraft:block/dark_oak_chair",
+            "model": "embellishcraft:block/furniture/dark_oak_chair",
             "y": 90
         }
     }

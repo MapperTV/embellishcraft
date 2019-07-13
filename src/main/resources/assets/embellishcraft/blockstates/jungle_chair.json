@@ -1,18 +1,18 @@
 {
     "variants": {
         "facing=north": {
-            "model": "embellishcraft:block/jungle_chair",
+            "model": "embellishcraft:block/furniture/jungle_chair",
             "y": 180
         },
         "facing=east": {
-            "model": "embellishcraft:block/jungle_chair",
+            "model": "embellishcraft:block/furniture/jungle_chair",
             "y": 270
         },
         "facing=south": {
-            "model": "embellishcraft:block/jungle_chair"
+            "model": "embellishcraft:block/furniture/jungle_chair"
         },
         "facing=west": {
-            "model": "embellishcraft:block/jungle_chair",
+            "model": "embellishcraft:block/furniture/jungle_chair",
             "y": 90
         }
     }
