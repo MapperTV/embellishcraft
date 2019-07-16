@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:slate",
+    "embellishcraft:gneiss",
+    "embellishcraft:basalt",
+    "embellishcraft:marble"
+  ]
+}

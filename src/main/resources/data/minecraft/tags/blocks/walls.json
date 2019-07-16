@@ -4,9 +4,13 @@
     "embellishcraft:basalt_wall",
     "embellishcraft:slate_wall",
     "embellishcraft:marble_wall",
+    "embellishcraft:gneiss_wall",
+    
     "embellishcraft:basalt_cobblestone_wall",
     "embellishcraft:slate_cobblestone_wall",
     "embellishcraft:marble_cobblestone_wall",
+    "embellishcraft:gneiss_cobblestone_wall",
+    
     "embellishcraft:basalt_bricks_wall",
     "embellishcraft:dark_bricks_wall",
     "embellishcraft:diorite_bricks_wall",
@@ -16,7 +20,19 @@
     "embellishcraft:terracotta_bricks_wall",
     "embellishcraft:weared_bricks_wall",
     "embellishcraft:marble_bricks_wall",
+    "embellishcraft:gneiss_bricks_wall",
+    
+    "embellishcraft:basalt_large_bricks_wall",
     "embellishcraft:dark_large_bricks_wall",
+    "embellishcraft:diorite_large_bricks_wall",
+    "embellishcraft:old_large_bricks_wall",
+    "embellishcraft:sandstone_large_bricks_wall",
+    "embellishcraft:slate_large_bricks_wall",
+    "embellishcraft:terracotta_large_bricks_wall",
+    "embellishcraft:weared_large_bricks_wall",
+    "embellishcraft:marble_large_bricks_wall",
+    "embellishcraft:gneiss_large_bricks_wall",
+
     "embellishcraft:concrete_paving_wall",
     "embellishcraft:damaged_paving_wall",
     "embellishcraft:dark_concrete_paving_wall",
@@ -25,6 +41,8 @@
     "embellishcraft:polished_paving_wall",
     "embellishcraft:slate_paving_wall",
     "embellishcraft:white_concrete_paving_wall",
+    "embellishcraft:gneiss_paving_wall",
+    
     "embellishcraft:concrete_tiles_wall",
     "embellishcraft:skyblue_tiles_wall",
     "embellishcraft:orange_tiles_wall",
@@ -33,11 +51,6 @@
     "embellishcraft:red_tiles_wall",
     "embellishcraft:white_tiles_wall",
     "embellishcraft:yellow_tiles_wall",
-    "embellishcraft:yellow_grey_tiles_wall",
-    "embellishcraft:gneiss_wall",
-    "embellishcraft:gneiss_cobblestone_wall",
-    "embellishcraft:gneiss_bricks_wall",
-    "embellishcraft:gneiss_large_bricks_wall",
-    "embellishcraft:gneiss_paving_wall"
+    "embellishcraft:yellow_grey_tiles_wall" 
   ]
 }
