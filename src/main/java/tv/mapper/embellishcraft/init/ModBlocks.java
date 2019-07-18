@@ -18,6 +18,7 @@ import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
 import tv.mapper.embellishcraft.block.CustomStairsBlock;
+import tv.mapper.embellishcraft.block.TerraceChairBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
 import tv.mapper.embellishcraft.block.UpDownBlock;
 import tv.mapper.embellishcraft.item.FuelBlockItem;
@@ -359,6 +360,14 @@ public class ModBlocks
     public static final Block DARK_OAK_TERRACE_TABLE = null;
     public static final Block ACACIA_TERRACE_TABLE = null;
 
+    public static final Block METALLIC_TERRACE_CHAIR = null;
+    public static final Block OAK_TERRACE_CHAIR = null;
+    public static final Block DARK_OAK_TERRACE_CHAIR = null;
+    public static final Block BIRCH_TERRACE_CHAIR = null;
+    public static final Block SPRUCE_TERRACE_CHAIR = null;
+    public static final Block JUNGLE_TERRACE_CHAIR = null;
+    public static final Block ACACIA_TERRACE_CHAIR = null;
+
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
@@ -456,6 +465,13 @@ public class ModBlocks
         event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_terrace_table"));
         event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_terrace_table"));
 
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN)).setRegistryName("metallic_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("oak_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("birch_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_terrace_chair"));
     }
 
     @SubscribeEvent
@@ -554,6 +570,14 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(JUNGLE_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(JUNGLE_TERRACE_TABLE.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(DARK_OAK_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(DARK_OAK_TERRACE_TABLE.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(ACACIA_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(ACACIA_TERRACE_TABLE.getRegistryName()));
+
+        event.getRegistry().register(new BlockItem(METALLIC_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(OAK_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_TERRACE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(DARK_OAK_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_TERRACE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BIRCH_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_TERRACE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(SPRUCE_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_TERRACE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(JUNGLE_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_TERRACE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(ACACIA_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_TERRACE_CHAIR.getRegistryName()));
 
     }
 
