@@ -1,9 +1,9 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "iii",
-        " I ",
-        " I "
+        "I  ",
+        "IiI",
+        "I I"
     ],
     "key": {
         "i": {
@@ -14,7 +14,7 @@
         }
     },
     "result": {
-        "item": "embellishcraft:birch_terrace_table",
+        "item": "embellishcraft:birch_terrace_chair",
         "count": 1
     }
 }
