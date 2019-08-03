@@ -9,19 +9,20 @@ import net.minecraftforge.event.entity.EntityMountEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.LogicalSide;
+import net.minecraftforge.fml.common.Mod;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.entity.EntityChair;
 
 // Big thanks to bl4ckscor3 and its mod "Sit" for this code!
 
-@EventBusSubscriber
+@Mod.EventBusSubscriber
 public class SeatUtil
 {
     @SubscribeEvent
     public static void onRightClickBlock(RightClickBlock event)
     {
-        if(!event.getWorld().isRemote && !event.getEntityPlayer().isSneaking())
+        if(event.getSide() == LogicalSide.SERVER && !event.getEntityPlayer().isSneaking())
         {
             World world = event.getWorld();
             BlockPos pos = event.getPos();
