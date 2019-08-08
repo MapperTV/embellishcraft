@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": { "model": "embellishcraft:block/metal/floor/dark_metal_floor_pressure_plate" },
+        "powered=true": { "model": "embellishcraft:block/metal/floor/dark_metal_floor_pressure_plate_down" }
+    }
+}

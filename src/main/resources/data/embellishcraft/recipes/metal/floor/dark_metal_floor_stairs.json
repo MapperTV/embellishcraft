@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:dark_metal_floor"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:dark_metal_floor_stairs",
+        "count": 4
+    }
+}

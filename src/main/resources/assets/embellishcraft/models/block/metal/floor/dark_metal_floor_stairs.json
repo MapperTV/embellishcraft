@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "embellishcraft:block/metal/floor/dark_metal_floor",
+        "top": "embellishcraft:block/metal/floor/dark_metal_floor",
+        "side": "embellishcraft:block/metal/floor/dark_metal_floor"
+    }
+}

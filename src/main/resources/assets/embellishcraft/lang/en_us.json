@@ -317,7 +317,21 @@
     "block.embellishcraft.white_green_wallpaper_slab": "White Green Wallpaper Slab",
     "block.embellishcraft.white_green_wallpaper_plinth": "White Green Wallpaper Plinth",
     
-    "comment_A8": "Others",
+    "comment_A8": "Metal",
+    
+    "block.embellishcraft.dark_metal_floor": "Dark Metal Floor",
+    "block.embellishcraft.dark_metal_floor_stairs": "Dark Metal Floor Stairs",
+    "block.embellishcraft.dark_metal_floor_slab": "Dark Metal Floor Slab",
+    "block.embellishcraft.dark_metal_floor_wall": "Dark Metal Floor Wall",
+    "block.embellishcraft.dark_metal_floor_pressure_plate": "Dark Metal Floor Pressure Plate",
+    
+    "block.embellishcraft.light_metal_floor": "Light Metal Floor",
+    "block.embellishcraft.light_metal_floor_stairs": "Light Metal Floor Stairs",
+    "block.embellishcraft.light_metal_floor_slab": "Light Metal Floor Slab",
+    "block.embellishcraft.light_metal_floor_wall": "Light Metal Floor Wall",
+    "block.embellishcraft.light_metal_floor_pressure_plate": "Light Metal Floor Pressure Plate",
+    
+    "comment_A9": "Others",
     
     "block.embellishcraft.oak_chair": "Oak Chair",
     "block.embellishcraft.dark_oak_chair": "Dark Oak Chair",

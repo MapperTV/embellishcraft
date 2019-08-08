@@ -51,6 +51,9 @@
     "embellishcraft:red_tiles_wall",
     "embellishcraft:white_tiles_wall",
     "embellishcraft:yellow_tiles_wall",
-    "embellishcraft:yellow_grey_tiles_wall" 
+    "embellishcraft:yellow_grey_tiles_wall",
+    
+    "embellishcraft:dark_metal_floor_wall",
+    "embellishcraft:light_metal_floor_wall"
   ]
 }

@@ -343,6 +343,20 @@ public class ModBlocks
     public static final Block WHITE_GREEN_WALLPAPER_SLAB = null;
     public static final Block WHITE_GREEN_WALLPAPER_PLINTH = null;
 
+    // Metal
+
+    public static final Block DARK_METAL_FLOOR = null;
+    public static final Block DARK_METAL_FLOOR_STAIRS = null;
+    public static final Block DARK_METAL_FLOOR_SLAB = null;
+    public static final Block DARK_METAL_FLOOR_WALL = null;
+    public static final Block DARK_METAL_FLOOR_PRESSURE_PLATE = null;
+
+    public static final Block LIGHT_METAL_FLOOR = null;
+    public static final Block LIGHT_METAL_FLOOR_STAIRS = null;
+    public static final Block LIGHT_METAL_FLOOR_SLAB = null;
+    public static final Block LIGHT_METAL_FLOOR_WALL = null;
+    public static final Block LIGHT_METAL_FLOOR_PRESSURE_PLATE = null;
+    
     // Furniture
 
     public static final Block OAK_CHAIR = null;
@@ -447,6 +461,12 @@ public class ModBlocks
         event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("beige_flower_wallpaper_plinth"));
         createBlockWithVariants(event, "white_green_wallpaper", true, true, false, false);
         event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f)).setRegistryName("white_green_wallpaper_plinth"));
+
+        // Metal
+
+        createBlockWithVariants(event, "dark_metal_floor", true, true, true, true);
+        createBlockWithVariants(event, "light_metal_floor", true, true, true, true);
+
 
         // Furniture
 
@@ -553,6 +573,11 @@ public class ModBlocks
         event.getRegistry().register(new BlockItem(BEIGE_FLOWER_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_FLOWER_WALLPAPER_PLINTH.getRegistryName()));
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_GREEN_WALLPAPER, WHITE_GREEN_WALLPAPER_STAIRS, WHITE_GREEN_WALLPAPER_SLAB, null, null);
         event.getRegistry().register(new BlockItem(WHITE_GREEN_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH.getRegistryName()));
+
+        // Metal
+
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_METAL_FLOOR, DARK_METAL_FLOOR_STAIRS, DARK_METAL_FLOOR_SLAB, DARK_METAL_FLOOR_WALL, DARK_METAL_FLOOR_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_METAL_FLOOR, LIGHT_METAL_FLOOR_STAIRS, LIGHT_METAL_FLOOR_SLAB, LIGHT_METAL_FLOOR_WALL, LIGHT_METAL_FLOOR_PRESSURE_PLATE);
 
         // Furniture
 

@@ -1,0 +1,6 @@
+{
+    "parent": "block/wall_inventory",
+    "textures": {
+        "wall": "embellishcraft:block/metal/floor/dark_metal_floor"
+    }
+}
