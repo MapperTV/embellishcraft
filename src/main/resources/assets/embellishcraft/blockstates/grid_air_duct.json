@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=north": { "model": "embellishcraft:block/metal/duct/grid_air_duct", "uvlock": true },
+        "facing=south": { "model": "embellishcraft:block/metal/duct/grid_air_duct", "y": 180, "uvlock": true },
+        "facing=west":  { "model": "embellishcraft:block/metal/duct/grid_air_duct", "y": 270, "uvlock": true },
+        "facing=east":  { "model": "embellishcraft:block/metal/duct/grid_air_duct", "y": 90, "uvlock": true },
+        "facing=up":  { "model": "embellishcraft:block/metal/duct/grid_air_duct", "x": 270, "uvlock": true },
+        "facing=down":  { "model": "embellishcraft:block/metal/duct/grid_air_duct", "x": 90, "uvlock": true }
+    }
+}

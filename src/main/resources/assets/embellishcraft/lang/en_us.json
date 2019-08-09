@@ -345,6 +345,10 @@
     "block.embellishcraft.bolted_steel_beam": "Bolted Steel Beam",
     "block.embellishcraft.steel_beam_junction": "Steel Beam Junction",
     
+    "block.embellishcraft.air_duct": "Air Duct",
+    "block.embellishcraft.vent_air_duct": "Vent Air Duct",
+    "block.embellishcraft.grid_air_duct": "Grid Air Duct",
+    
     "comment_A9": "Others",
     
     "block.embellishcraft.oak_chair": "Oak Chair",
