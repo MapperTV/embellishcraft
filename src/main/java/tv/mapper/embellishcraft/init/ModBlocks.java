@@ -2,10 +2,12 @@ package tv.mapper.embellishcraft.init;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.PressurePlateBlock;
+import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.WallBlock;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -356,13 +358,21 @@ public class ModBlocks
     public static final Block LIGHT_METAL_FLOOR_SLAB = null;
     public static final Block LIGHT_METAL_FLOOR_WALL = null;
     public static final Block LIGHT_METAL_FLOOR_PRESSURE_PLATE = null;
-    
+
     public static final Block RUSTY_PLATE = null;
     public static final Block RUSTY_PLATE_STAIRS = null;
     public static final Block RUSTY_PLATE_SLAB = null;
     public static final Block RUSTY_PLATE_WALL = null;
     public static final Block RUSTY_PLATE_PRESSURE_PLATE = null;
-    
+
+    public static final Block IRON_BEAM = null;
+    public static final Block BOLTED_IRON_BEAM = null;
+    public static final Block IRON_BEAM_JUNCTION = null;
+
+    public static final Block STEEL_BEAM = null;
+    public static final Block BOLTED_STEEL_BEAM = null;
+    public static final Block STEEL_BEAM_JUNCTION = null;
+
     // Furniture
 
     public static final Block OAK_CHAIR = null;
@@ -474,6 +484,12 @@ public class ModBlocks
         createBlockWithVariants(event, "light_metal_floor", true, true, true, true);
         createBlockWithVariants(event, "rusty_plate", true, true, true, true);
 
+        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F)).setRegistryName("iron_beam"));
+        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F)).setRegistryName("bolted_iron_beam"));
+        createBlockWithVariants(event, "iron_beam_junction", false, false, false, false);
+        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F)).setRegistryName("steel_beam"));
+        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F)).setRegistryName("bolted_steel_beam"));
+        createBlockWithVariants(event, "steel_beam_junction", false, false, false, false);
 
         // Furniture
 
@@ -586,6 +602,13 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_METAL_FLOOR, DARK_METAL_FLOOR_STAIRS, DARK_METAL_FLOOR_SLAB, DARK_METAL_FLOOR_WALL, DARK_METAL_FLOOR_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_METAL_FLOOR, LIGHT_METAL_FLOOR_STAIRS, LIGHT_METAL_FLOOR_SLAB, LIGHT_METAL_FLOOR_WALL, LIGHT_METAL_FLOOR_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RUSTY_PLATE, RUSTY_PLATE_STAIRS, RUSTY_PLATE_SLAB, RUSTY_PLATE_WALL, RUSTY_PLATE_PRESSURE_PLATE);
+
+        event.getRegistry().register(new BlockItem(IRON_BEAM, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(IRON_BEAM.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BOLTED_IRON_BEAM, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BOLTED_IRON_BEAM.getRegistryName()));
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, IRON_BEAM_JUNCTION, null, null, null, null);
+        event.getRegistry().register(new BlockItem(STEEL_BEAM, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_BEAM.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BOLTED_STEEL_BEAM, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BOLTED_STEEL_BEAM.getRegistryName()));
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, STEEL_BEAM_JUNCTION, null, null, null, null);
 
         // Furniture
 

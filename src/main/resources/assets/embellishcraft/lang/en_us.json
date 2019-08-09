@@ -337,6 +337,14 @@
     "block.embellishcraft.rusty_plate_wall": "Rusty Plate Wall",
     "block.embellishcraft.rusty_plate_pressure_plate": "Rusty Plate Pressure Plate",
     
+    "block.embellishcraft.iron_beam": "Iron Beam",
+    "block.embellishcraft.bolted_iron_beam": "Bolted Iron Beam",
+    "block.embellishcraft.iron_beam_junction": "Iron Beam Junction",
+    
+    "block.embellishcraft.steel_beam": "Steel Beam",
+    "block.embellishcraft.bolted_steel_beam": "Bolted Steel Beam",
+    "block.embellishcraft.steel_beam_junction": "Steel Beam Junction",
+    
     "comment_A9": "Others",
     
     "block.embellishcraft.oak_chair": "Oak Chair",
