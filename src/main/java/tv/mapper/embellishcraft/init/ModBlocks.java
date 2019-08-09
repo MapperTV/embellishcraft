@@ -357,6 +357,12 @@ public class ModBlocks
     public static final Block LIGHT_METAL_FLOOR_WALL = null;
     public static final Block LIGHT_METAL_FLOOR_PRESSURE_PLATE = null;
     
+    public static final Block RUSTY_PLATE = null;
+    public static final Block RUSTY_PLATE_STAIRS = null;
+    public static final Block RUSTY_PLATE_SLAB = null;
+    public static final Block RUSTY_PLATE_WALL = null;
+    public static final Block RUSTY_PLATE_PRESSURE_PLATE = null;
+    
     // Furniture
 
     public static final Block OAK_CHAIR = null;
@@ -466,6 +472,7 @@ public class ModBlocks
 
         createBlockWithVariants(event, "dark_metal_floor", true, true, true, true);
         createBlockWithVariants(event, "light_metal_floor", true, true, true, true);
+        createBlockWithVariants(event, "rusty_plate", true, true, true, true);
 
 
         // Furniture
@@ -578,6 +585,7 @@ public class ModBlocks
 
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_METAL_FLOOR, DARK_METAL_FLOOR_STAIRS, DARK_METAL_FLOOR_SLAB, DARK_METAL_FLOOR_WALL, DARK_METAL_FLOOR_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_METAL_FLOOR, LIGHT_METAL_FLOOR_STAIRS, LIGHT_METAL_FLOOR_SLAB, LIGHT_METAL_FLOOR_WALL, LIGHT_METAL_FLOOR_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RUSTY_PLATE, RUSTY_PLATE_STAIRS, RUSTY_PLATE_SLAB, RUSTY_PLATE_WALL, RUSTY_PLATE_PRESSURE_PLATE);
 
         // Furniture
 

@@ -1,0 +1,12 @@
+{
+    "variants": 
+    {
+        "":
+        [
+            {"model": "embellishcraft:block/metal/plate/rusty_plate_1"},
+            {"model": "embellishcraft:block/metal/plate/rusty_plate_2"},
+            {"model": "embellishcraft:block/metal/plate/rusty_plate_3"},
+            {"model": "embellishcraft:block/metal/plate/rusty_plate_4"}
+        ]
+    }
+}

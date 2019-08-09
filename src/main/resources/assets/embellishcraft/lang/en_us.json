@@ -331,6 +331,12 @@
     "block.embellishcraft.light_metal_floor_wall": "Light Metal Floor Wall",
     "block.embellishcraft.light_metal_floor_pressure_plate": "Light Metal Floor Pressure Plate",
     
+    "block.embellishcraft.rusty_plate": "Rusty Plate",
+    "block.embellishcraft.rusty_plate_stairs": "Rusty Plate Stairs",
+    "block.embellishcraft.rusty_plate_slab": "Rusty Plate Slab",
+    "block.embellishcraft.rusty_plate_wall": "Rusty Plate Wall",
+    "block.embellishcraft.rusty_plate_pressure_plate": "Rusty Plate Pressure Plate",
+    
     "comment_A9": "Others",
     
     "block.embellishcraft.oak_chair": "Oak Chair",
