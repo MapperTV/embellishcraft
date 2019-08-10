@@ -55,6 +55,22 @@
     
     "embellishcraft:dark_metal_floor_wall",
     "embellishcraft:light_metal_floor_wall",
-    "embellishcraft:rusty_plate_wall"
+    "embellishcraft:rusty_plate_wall",
+    "embellishcraft:purple_corrugated_metal_plate_wall",
+    "embellishcraft:red_corrugated_metal_plate_wall",
+    "embellishcraft:white_corrugated_metal_plate_wall",
+    "embellishcraft:yellow_corrugated_metal_plate_wall",
+    "embellishcraft:black_corrugated_metal_plate_wall",
+    "embellishcraft:blue_corrugated_metal_plate_wall",
+    "embellishcraft:brown_corrugated_metal_plate_wall",
+    "embellishcraft:cyan_corrugated_metal_plate_wall",
+    "embellishcraft:gray_corrugated_metal_plate_wall",
+    "embellishcraft:green_corrugated_metal_plate_wall",
+    "embellishcraft:light_blue_corrugated_metal_plate_wall",
+    "embellishcraft:light_gray_corrugated_metal_plate_wall",
+    "embellishcraft:lime_corrugated_metal_plate_wall",
+    "embellishcraft:magenta_corrugated_metal_plate_wall",
+    "embellishcraft:orange_corrugated_metal_plate_wall",
+    "embellishcraft:pink_corrugated_metal_plate_wall"
   ]
 }

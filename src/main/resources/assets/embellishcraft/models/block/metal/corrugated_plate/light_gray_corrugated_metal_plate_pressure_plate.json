@@ -1,0 +1,6 @@
+{
+    "parent": "block/pressure_plate_up",
+    "textures": {
+        "texture": "embellishcraft:block/metal/corrugated_plate/light_gray_corrugated_metal_plate"
+    }
+}

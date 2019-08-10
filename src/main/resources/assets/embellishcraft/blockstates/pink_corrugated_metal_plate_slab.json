@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "embellishcraft:block/metal/corrugated_plate/pink_corrugated_metal_plate_slab" },
+        "type=top": { "model": "embellishcraft:block/metal/corrugated_plate/pink_corrugated_metal_plate_slab_top" },
+        "type=double": { "model": "embellishcraft:block/metal/corrugated_plate/pink_corrugated_metal_plate" }
+    }
+}

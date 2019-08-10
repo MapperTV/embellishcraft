@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "embellishcraft:green_corrugated_metal_plate"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:green_corrugated_metal_plate_wall",
+        "count": 6
+    }
+}

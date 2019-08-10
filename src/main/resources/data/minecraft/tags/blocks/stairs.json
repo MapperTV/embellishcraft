@@ -5,10 +5,12 @@
     "embellishcraft:slate_stairs",
     "embellishcraft:marble_stairs",
     "embellishcraft:gneiss_stairs",
+    
     "embellishcraft:basalt_cobblestone_stairs",
     "embellishcraft:slate_cobblestone_stairs",
     "embellishcraft:marble_cobblestone_stairs",
     "embellishcraft:gneiss_cobblestone_stairs",
+    
     "embellishcraft:basalt_bricks_stairs",
     "embellishcraft:dark_bricks_stairs",
     "embellishcraft:diorite_bricks_stairs",
@@ -19,6 +21,7 @@
     "embellishcraft:weared_bricks_stairs",
     "embellishcraft:marble_bricks_stairs",
     "embellishcraft:gneiss_bricks_stairs",
+    
     "embellishcraft:basalt_large_bricks_stairs",
     "embellishcraft:diorite_large_bricks_stairs",
     "embellishcraft:dark_large_bricks_stairs",
@@ -29,6 +32,7 @@
     "embellishcraft:terracotta_large_bricks_stairs",
     "embellishcraft:weared_large_bricks_stairs",
     "embellishcraft:gneiss_large_bricks_stairs",
+    
     "embellishcraft:concrete_paving_stairs",
     "embellishcraft:damaged_paving_stairs",
     "embellishcraft:dark_concrete_paving_stairs",
@@ -38,6 +42,7 @@
     "embellishcraft:slate_paving_stairs",
     "embellishcraft:white_concrete_paving_stairs",
     "embellishcraft:gneiss_paving_stairs",
+    
     "embellishcraft:concrete_tiles_stairs",
     "embellishcraft:skyblue_tiles_stairs",
     "embellishcraft:orange_tiles_stairs",
@@ -47,6 +52,7 @@
     "embellishcraft:white_tiles_stairs",
     "embellishcraft:yellow_tiles_stairs",
     "embellishcraft:yellow_grey_tiles_stairs",
+    
     "embellishcraft:white_blue_wallpaper_stairs",
     "embellishcraft:beige_wallpaper_stairs",
     "embellishcraft:pink_wallpaper_stairs",
@@ -56,5 +62,24 @@
     "embellishcraft:dark_metal_floor_stairs",
     "embellishcraft:light_metal_floor_stairs",
     "embellishcraft:rusty_plate_stairs"
+    "embellishcraft:dark_metal_floor_wall",
+    "embellishcraft:light_metal_floor_wall",
+    "embellishcraft:rusty_plate_wall",
+    "embellishcraft:purple_corrugated_metal_plate_stairs",
+    "embellishcraft:red_corrugated_metal_plate_stairs",
+    "embellishcraft:white_corrugated_metal_plate_stairs",
+    "embellishcraft:yellow_corrugated_metal_plate_stairs",
+    "embellishcraft:black_corrugated_metal_plate_stairs",
+    "embellishcraft:blue_corrugated_metal_plate_stairs",
+    "embellishcraft:brown_corrugated_metal_plate_stairs",
+    "embellishcraft:cyan_corrugated_metal_plate_stairs",
+    "embellishcraft:gray_corrugated_metal_plate_stairs",
+    "embellishcraft:green_corrugated_metal_plate_stairs",
+    "embellishcraft:light_blue_corrugated_metal_plate_stairs",
+    "embellishcraft:light_gray_corrugated_metal_plate_stairs",
+    "embellishcraft:lime_corrugated_metal_plate_stairs",
+    "embellishcraft:magenta_corrugated_metal_plate_stairs",
+    "embellishcraft:orange_corrugated_metal_plate_stairs",
+    "embellishcraft:pink_corrugated_metal_plate_stairs"
   ]
 }
