@@ -473,6 +473,17 @@ public class ModBlocks
     public static final Block PINK_CORRUGATED_METAL_PLATE_SLAB = null;
     public static final Block PINK_CORRUGATED_METAL_PLATE_WALL = null;
     public static final Block PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
+    
+    public static final Block BULKHEAD = null;
+    public static final Block BULKHEAD_TOP = null;
+    
+    // Concrete
+    
+    public static final Block CONCRETE = null;
+    public static final Block CONCRETE_STAIRS = null;
+    public static final Block CONCRETE_SLAB = null;
+    public static final Block CONCRETE_WALL = null;
+    public static final Block CONCRETE_PRESSURE_PLATE = null;
 
     // Furniture
 
@@ -612,6 +623,13 @@ public class ModBlocks
         createBlockWithVariants(event, "magenta_corrugated_metal_plate", true, true, true, true);
         createBlockWithVariants(event, "orange_corrugated_metal_plate", true, true, true, true);
         createBlockWithVariants(event, "pink_corrugated_metal_plate", true, true, true, true);
+        
+        createBlockWithVariants(event, "bulkhead", false, false, false, false);
+        createBlockWithVariants(event, "bulkhead_top", false, false, false, false);
+
+        // Concrete
+        
+        createBlockWithVariants(event, "concrete", true, true, true, true);
 
         // Furniture
 
@@ -753,6 +771,13 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, PINK_CORRUGATED_METAL_PLATE, PINK_CORRUGATED_METAL_PLATE_STAIRS, PINK_CORRUGATED_METAL_PLATE_SLAB, PINK_CORRUGATED_METAL_PLATE_WALL, PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MAGENTA_CORRUGATED_METAL_PLATE, MAGENTA_CORRUGATED_METAL_PLATE_STAIRS, MAGENTA_CORRUGATED_METAL_PLATE_SLAB, MAGENTA_CORRUGATED_METAL_PLATE_WALL, MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
 
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BULKHEAD, null, null, null, null);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BULKHEAD_TOP, null, null, null, null);
+        
+        // Concrete
+        
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE, CONCRETE_STAIRS, CONCRETE_SLAB, CONCRETE_WALL, CONCRETE_PRESSURE_PLATE);
+        
         // Furniture
 
         event.getRegistry().register(new FuelBlockItem(OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(OAK_CHAIR.getRegistryName()));

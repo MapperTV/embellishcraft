@@ -444,8 +444,19 @@
     "block.embellishcraft.orange_corrugated_metal_plate_slab": "Orange Corrugated Metal Plate Slab",
     "block.embellishcraft.orange_corrugated_metal_plate_wall": "Orange Corrugated Metal Plate Wall",
     "block.embellishcraft.orange_corrugated_metal_plate_pressure_plate": "Orange Corrugated Metal Plate Pressure Plate",
+    
+    "block.embellishcraft.bulkhead": "Bulkhead",
+    "block.embellishcraft.bulkhead_top": "Bulkhead Top",
+    
+    "comment_A9": "Concrete",
+    
+    "block.embellishcraft.concrete": "Concrete",
+    "block.embellishcraft.concrete_stairs": "Concrete Stairs",
+    "block.embellishcraft.concrete_slab": "Concrete Slab",
+    "block.embellishcraft.concrete_wall": "Concrete Wall",
+    "block.embellishcraft.concrete_pressure_plate": "Concrete Pressure Plate",
 
-    "comment_A9": "Others",
+    "comment_A10": "Others",
     
     "block.embellishcraft.oak_chair": "Oak Chair",
     "block.embellishcraft.dark_oak_chair": "Dark Oak Chair",
