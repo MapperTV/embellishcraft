@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": "embellishcraft:steel_ingot",
+  "experience": 1.0,
+  "cookingtime": 120
+}
