@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "embellishcraft:iron_beam"
+        },
+        {
+            "item": "embellishcraft:bolt"
+        }
+    ],
+    "result": {
+        "item": "embellishcraft:bolted_iron_beam",
+        "count": 1
+    }
+}

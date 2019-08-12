@@ -13,11 +13,23 @@ import tv.mapper.embellishcraft.item.ModItemGroups;
 @EventBusSubscriber(bus = Bus.MOD)
 public class ModItems
 {
+    public static final Item STEEL_NUGGET = null;
     public static final Item STEEL_INGOT = null;
+    public static final Item STEEL_PLATE = null;
+
+    public static final Item IRON_PLATE = null;
+
+    public static final Item BOLT = null;
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
+        event.getRegistry().register(new Item(new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName("steel_nugget"));
         event.getRegistry().register(new Item(new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName("steel_ingot"));
+        event.getRegistry().register(new Item(new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName("steel_plate"));
+
+        event.getRegistry().register(new Item(new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName("iron_plate"));
+
+        event.getRegistry().register(new Item(new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName("bolt"));
     }
 }

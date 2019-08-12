@@ -1,5 +1,6 @@
 {
   "type": "minecraft:blasting",
+  "group": "steel_ingot",
   "ingredient": {
     "item": "minecraft:iron_ingot"
   },

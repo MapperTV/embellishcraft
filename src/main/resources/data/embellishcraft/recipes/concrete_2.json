@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#G#",
+        "G G",
+        "#G#"
+    ],
+    "key": {
+        "G": {
+            "item": "minecraft:sand"
+        },
+        "#": {
+            "item": "minecraft:gravel"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:concrete",
+        "count": 8
+    }
+}

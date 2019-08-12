@@ -1,9 +1,9 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "iii",
-        " I ",
-        " I "
+        " i ",
+        "iIi",
+        " i "
     ],
     "key": {
         "i": {
@@ -14,7 +14,7 @@
         }
     },
     "result": {
-        "item": "embellishcraft:metallic_terrace_table",
-        "count": 1
+        "item": "embellishcraft:air_duct",
+        "count": 4
     }
 }

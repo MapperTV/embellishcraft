@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iii",
+        "iRi",
+        "iii"
+    ],
+    "key": {
+        "i": {
+            "item": "embellishcraft:steel_plate"
+        },
+        "R": {
+            "item": "minecraft:light_gray_dye"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:light_gray_corrugated_metal_plate",
+        "count": 8
+    }
+}

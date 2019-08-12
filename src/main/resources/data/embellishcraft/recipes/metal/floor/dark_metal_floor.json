@@ -1,20 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "iii",
-        " I ",
-        " I "
+        "iiB",
+        "ii "
     ],
     "key": {
         "i": {
             "item": "embellishcraft:steel_ingot"
         },
-        "I": {
-            "item": "minecraft:iron_bars"
+        "B": {
+            "item": "minecraft:black_dye"
         }
     },
     "result": {
-        "item": "embellishcraft:metallic_terrace_table",
-        "count": 1
+        "item": "embellishcraft:dark_metal_floor",
+        "count": 4
     }
 }

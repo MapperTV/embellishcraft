@@ -448,7 +448,13 @@
     "block.embellishcraft.bulkhead": "Bulkhead",
     "block.embellishcraft.bulkhead_top": "Bulkhead Top",
     
+    "item.embellishcraft.steel_nugget": "Steel Nugget",
     "item.embellishcraft.steel_ingot": "Steel Ingot",
+    "item.embellishcraft.steel_plate": "Steel Plate",
+    
+    "item.embellishcraft.iron_plate": "Iron Plate",
+    
+    "item.embellishcraft.bolt": "Bolt",
     
     "comment_A9": "Concrete",
     
