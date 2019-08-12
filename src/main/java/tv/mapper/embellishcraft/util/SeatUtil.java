@@ -22,15 +22,16 @@ public class SeatUtil
     @SubscribeEvent
     public static void onRightClickBlock(RightClickBlock event)
     {
-        if(event.getSide() == LogicalSide.SERVER && !event.getEntityPlayer().isSneaking())
+        if(event.getSide() == LogicalSide.SERVER && !event.getPlayer().isSneaking())
         {
             World world = event.getWorld();
             BlockPos pos = event.getPos();
             Block block = world.getBlockState(pos).getBlock();
-            PlayerEntity player = event.getEntityPlayer();
+            PlayerEntity player = event.getPlayer();
 
             if((block instanceof ChairBlock) && !EntityChair.OCCUPIED.containsKey(pos))
             {
+                event.setCanceled(true);
                 EntityChair chair = new EntityChair(world, pos);
                 world.addEntity(chair);
                 player.startRiding(chair);
