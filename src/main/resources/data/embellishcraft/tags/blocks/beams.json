@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:iron_beam_junction",
+    "embellishcraft:steel_beam_junction",
+    "embellishcraft:iron_beam",
+    "embellishcraft:bolted_iron_beam",
+    "embellishcraft:steel_beam",
+    "embellishcraft:bolted_steel_beam"
+  ]
+}

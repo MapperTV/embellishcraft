@@ -61,10 +61,7 @@
     
     "embellishcraft:dark_metal_floor_stairs",
     "embellishcraft:light_metal_floor_stairs",
-    "embellishcraft:rusty_plate_stairs"
-    "embellishcraft:dark_metal_floor_wall",
-    "embellishcraft:light_metal_floor_wall",
-    "embellishcraft:rusty_plate_wall",
+    "embellishcraft:rusty_plate_stairs",
     "embellishcraft:purple_corrugated_metal_plate_stairs",
     "embellishcraft:red_corrugated_metal_plate_stairs",
     "embellishcraft:white_corrugated_metal_plate_stairs",
@@ -80,6 +77,8 @@
     "embellishcraft:lime_corrugated_metal_plate_stairs",
     "embellishcraft:magenta_corrugated_metal_plate_stairs",
     "embellishcraft:orange_corrugated_metal_plate_stairs",
-    "embellishcraft:pink_corrugated_metal_plate_stairs"
+    "embellishcraft:pink_corrugated_metal_plate_stairs",
+    
+    "embellishcraft:concrete_stairs"
   ]
 }

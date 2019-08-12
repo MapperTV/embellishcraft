@@ -6,6 +6,15 @@
     "embellishcraft:birch_chair",
     "embellishcraft:jungle_chair",
     "embellishcraft:acacia_chair",
-    "embellishcraft:dark_oak_chair"
+    "embellishcraft:dark_oak_chair",
+    
+    "embellishcraft:oak_terrace_chair",
+    "embellishcraft:spruce_terrace_chair",
+    "embellishcraft:birch_terrace_chair",
+    "embellishcraft:jungle_terrace_chair",
+    "embellishcraft:acacia_terrace_chair",
+    "embellishcraft:dark_oak_terrace_chair",
+    
+    "embellishcraft:metallic_terrace_chair"
   ]
 }
