@@ -1,16 +1,15 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "ii",
-        "ii"
-    ],
-    "key": {
-        "i": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
             "item": "minecraft:iron_ingot"
+        },
+        {
+            "item": "embellishcraft:flatter_hammer"
         }
-    },
+    ],
     "result": {
         "item": "embellishcraft:iron_plate",
-        "count": 4
+        "count": 1
     }
 }

@@ -1,20 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "iii",
-        " I ",
-        " I "
+        "i",
+        "/"
     ],
     "key": {
         "i": {
             "tag": "forge:ingots/steel"
         },
-        "I": {
-            "item": "minecraft:iron_bars"
+        "/": {
+            "item": "minecraft:stick"
         }
     },
     "result": {
-        "item": "embellishcraft:metallic_terrace_table",
+        "item": "embellishcraft:flatter_hammer",
         "count": 1
     }
 }

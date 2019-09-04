@@ -7,7 +7,7 @@
     ],
     "key": {
         "i": {
-            "item": "embellishcraft:steel_plate"
+            "tag": "forge:plates/steel"
         },
         "R": {
             "item": "minecraft:gray_dye"
