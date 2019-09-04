@@ -7,7 +7,7 @@
     ],
     "key": {
         "i": {
-            ""tag": "forge:ingots/steel",
+            "tag": "forge:ingots/steel"
         },
         "I": {
             "item": "minecraft:iron_bars"
