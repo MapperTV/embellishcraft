@@ -26,6 +26,18 @@ public class FlatterHammerItem extends Item
     }
 
     @Override
+    public boolean isEnchantable(ItemStack stack)
+    {
+        return false;
+    }
+    
+    @Override
+    public boolean isBookEnchantable(ItemStack stack, ItemStack book)
+    {
+        return false;
+    }
+    
+    @Override
     public ItemStack getContainerItem(@Nonnull ItemStack stack)
     {
         ItemStack hammer = stack.copy();
