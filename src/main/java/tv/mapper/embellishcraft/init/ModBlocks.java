@@ -21,6 +21,7 @@ import tv.mapper.embellishcraft.block.AllRotationBlock;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
 import tv.mapper.embellishcraft.block.CustomStairsBlock;
+import tv.mapper.embellishcraft.block.PlateBlock;
 import tv.mapper.embellishcraft.block.TerraceChairBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
 import tv.mapper.embellishcraft.block.UpDownBlock;
@@ -510,6 +511,8 @@ public class ModBlocks
     public static final Block JUNGLE_TERRACE_CHAIR = null;
     public static final Block ACACIA_TERRACE_CHAIR = null;
 
+    public static final Block PLATE = null;
+
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
@@ -655,6 +658,8 @@ public class ModBlocks
         event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_terrace_chair"));
         event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_terrace_chair"));
         event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_terrace_chair"));
+
+        event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
     }
 
     @SubscribeEvent
@@ -802,6 +807,8 @@ public class ModBlocks
         event.getRegistry().register(new BlockItem(SPRUCE_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_TERRACE_CHAIR.getRegistryName()));
         event.getRegistry().register(new BlockItem(JUNGLE_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_TERRACE_CHAIR.getRegistryName()));
         event.getRegistry().register(new BlockItem(ACACIA_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_TERRACE_CHAIR.getRegistryName()));
+
+        event.getRegistry().register(new BlockItem(PLATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PLATE.getRegistryName()));
 
     }
 
