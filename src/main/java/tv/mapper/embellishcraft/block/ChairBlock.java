@@ -2,9 +2,7 @@ package tv.mapper.embellishcraft.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.IBucketPickupHandler;
-import net.minecraft.block.ILiquidContainer;
-import net.minecraft.fluid.Fluid;
+import net.minecraft.block.IWaterLoggable;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
@@ -21,7 +19,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 
-public class ChairBlock extends Block implements IBucketPickupHandler, ILiquidContainer
+public class ChairBlock extends Block implements IWaterLoggable
 {
     // Need to figure a way to rotate VoxelShapes because this is just stupid
     private static final VoxelShape SOUTH_LEFT_FRONT_LEG = Block.makeCuboidShape(11.0D, 0.0D, 11.0D, 13.0D, 7.0D, 13.0D);
@@ -136,45 +134,9 @@ public class ChairBlock extends Block implements IBucketPickupHandler, ILiquidCo
         builder.add(FACING, WATERLOGGED);
     }
 
-    public Fluid pickupFluid(IWorld worldIn, BlockPos pos, BlockState state)
-    {
-        if(state.get(WATERLOGGED))
-        {
-            worldIn.setBlockState(pos, state.with(WATERLOGGED, Boolean.valueOf(false)), 3);
-            return Fluids.WATER;
-        }
-        else
-        {
-            return Fluids.EMPTY;
-        }
-    }
-
     @SuppressWarnings("deprecation")
     public IFluidState getFluidState(BlockState state)
     {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
-    }
-
-    public boolean canContainFluid(IBlockReader worldIn, BlockPos pos, BlockState state, Fluid fluidIn)
-    {
-        return !state.get(WATERLOGGED) && fluidIn == Fluids.WATER;
-    }
-
-    public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, IFluidState fluidStateIn)
-    {
-        if(!state.get(WATERLOGGED) && fluidStateIn.getFluid() == Fluids.WATER)
-        {
-            if(!worldIn.isRemote())
-            {
-                worldIn.setBlockState(pos, state.with(WATERLOGGED, Boolean.valueOf(true)), 3);
-                worldIn.getPendingFluidTicks().scheduleTick(pos, fluidStateIn.getFluid(), fluidStateIn.getFluid().getTickRate(worldIn));
-            }
-
-            return true;
-        }
-        else
-        {
-            return false;
-        }
     }
 }

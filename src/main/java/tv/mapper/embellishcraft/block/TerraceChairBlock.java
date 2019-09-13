@@ -45,13 +45,9 @@ public class TerraceChairBlock extends ChairBlock
     private static final VoxelShape EAST_BACK = Block.makeCuboidShape(3.0D, 12.0D, 4.0D, 4.0D, 15.0D, 12.0D);
     private static final VoxelShape EAST_CHAIR_AABB = VoxelShapes.or(EAST_LEFT_FRONT_LEG, VoxelShapes.or(EAST_RIGHT_FRONT_LEG, VoxelShapes.or(EAST_LEFT_BACK_LEG, VoxelShapes.or(EAST_SIT, VoxelShapes.or(EAST_BACK, EAST_RIGHT_BACK_LEG)))));
 
-    // public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
-    // public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-
     public TerraceChairBlock(Properties properties)
     {
         super(properties);
-        // this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Override
@@ -90,96 +86,9 @@ public class TerraceChairBlock extends ChairBlock
         }
     }
 
-    // @Override
-    // public boolean isSolid(BlockState state)
-    // {
-    // return false;
-    // }
-
     @Override
     public BlockRenderLayer getRenderLayer()
     {
         return BlockRenderLayer.CUTOUT;
     }
-
-    // @Override
-    // public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
-    // {
-    // BlockPos blockpos = pos.down();
-    // Block block = worldIn.getBlockState(blockpos).getBlock();
-    // if(block instanceof TerraceChairBlock || block instanceof AirBlock)
-    // return false;
-    // return true;
-    // }
-
-    // @SuppressWarnings("deprecation")
-    // @Override
-    // public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
-    // {
-    // if(stateIn.get(WATERLOGGED))
-    // {
-    // worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
-    // }
-    //
-    // return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
-    // }
-
-    // @Override
-    // public boolean onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit)
-    // {
-    // return true;
-    // }
-
-    // @Override
-    // public BlockState getStateForPlacement(BlockItemUseContext context)
-    // {
-    // return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite()).with(WATERLOGGED, Boolean.valueOf(false));
-    // }
-
-    // protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
-    // {
-    // builder.add(FACING, WATERLOGGED);
-    // }
-    //
-    // public Fluid pickupFluid(IWorld worldIn, BlockPos pos, BlockState state)
-    // {
-    // if(state.get(WATERLOGGED))
-    // {
-    // worldIn.setBlockState(pos, state.with(WATERLOGGED, Boolean.valueOf(false)), 3);
-    // return Fluids.WATER;
-    // }
-    // else
-    // {
-    // return Fluids.EMPTY;
-    // }
-    // }
-
-    // @SuppressWarnings("deprecation")
-    // public IFluidState getFluidState(BlockState state)
-    // {
-    // return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
-    // }
-    //
-    // public boolean canContainFluid(IBlockReader worldIn, BlockPos pos, BlockState state, Fluid fluidIn)
-    // {
-    // return !state.get(WATERLOGGED) && fluidIn == Fluids.WATER;
-    // }
-    //
-    // public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, IFluidState fluidStateIn)
-    // {
-    // if(!state.get(WATERLOGGED) && fluidStateIn.getFluid() == Fluids.WATER)
-    // {
-    // if(!worldIn.isRemote())
-    // {
-    // worldIn.setBlockState(pos, state.with(WATERLOGGED, Boolean.valueOf(true)), 3);
-    // worldIn.getPendingFluidTicks().scheduleTick(pos, fluidStateIn.getFluid(), fluidStateIn.getFluid().getTickRate(worldIn));
-    // }
-    //
-    // return true;
-    // }
-    // else
-    // {
-    // return false;
-    // }
-    // }
 }
