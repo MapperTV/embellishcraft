@@ -3,27 +3,27 @@ package tv.mapper.embellishcraft.block;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraftforge.common.ToolType;
 
-public class CustomStairsBlock extends StairsBlock
+public class CustomSlabBlock extends SlabBlock
 {
     private ToolType toolType = null;
 
-    public CustomStairsBlock(BlockState state, Properties properties)
+    public CustomSlabBlock(Properties properties)
     {
-        super(state, properties);
+        super(properties);
     }
 
-    public CustomStairsBlock(BlockState state, Properties properties, ToolType toolType)
+    public CustomSlabBlock(Properties properties, ToolType toolType)
     {
-        super(state, properties);
+        super(properties);
         this.toolType = toolType;
     }
 
     @Nullable
     @Override
-    public net.minecraftforge.common.ToolType getHarvestTool(BlockState state)
+    public ToolType getHarvestTool(BlockState state)
     {
         if(toolType != null)
             return this.toolType;

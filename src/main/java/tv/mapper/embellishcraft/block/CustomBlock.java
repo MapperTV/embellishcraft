@@ -2,22 +2,22 @@ package tv.mapper.embellishcraft.block;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.PressurePlateBlock;
 import net.minecraftforge.common.ToolType;
 
-public class CustomPressurePlateBlock extends PressurePlateBlock
+public class CustomBlock extends Block
 {
-    private ToolType toolType = null;
+    protected ToolType toolType = null;
 
-    public CustomPressurePlateBlock(Sensitivity sensitivity, Properties properties)
+    public CustomBlock(Properties properties)
     {
-        super(sensitivity, properties);
+        super(properties);
     }
 
-    public CustomPressurePlateBlock(Sensitivity sensitivity, Properties properties, ToolType toolType)
+    public CustomBlock(Properties properties, ToolType toolType)
     {
-        super(sensitivity, properties);
+        super(properties);
         this.toolType = toolType;
     }
 
@@ -30,4 +30,5 @@ public class CustomPressurePlateBlock extends PressurePlateBlock
         else
             return super.getHarvestTool(state);
     }
+
 }

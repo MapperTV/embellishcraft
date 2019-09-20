@@ -19,8 +19,9 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
+import net.minecraftforge.common.ToolType;
 
-public class TerraceTableBlock extends Block implements IWaterLoggable
+public class TerraceTableBlock extends CustomBlock implements IWaterLoggable
 {
     private static final VoxelShape TABLE_TOP = Block.makeCuboidShape(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     private static final VoxelShape TABLE_POST = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 15.0D, 9.0D);
@@ -33,6 +34,13 @@ public class TerraceTableBlock extends Block implements IWaterLoggable
     {
         super(properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, Boolean.valueOf(false)));
+    }
+    
+    public TerraceTableBlock(Properties properties, ToolType toolType)
+    {
+        super(properties);
+        this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, Boolean.valueOf(false)));
+        this.toolType = toolType;
     }
 
     @Override

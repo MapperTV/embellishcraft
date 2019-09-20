@@ -3,14 +3,13 @@ package tv.mapper.embellishcraft.init;
 import net.minecraft.block.Block;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.RotatedPillarBlock;
-import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.WallBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -19,8 +18,11 @@ import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.block.AllRotationBlock;
 import tv.mapper.embellishcraft.block.ChairBlock;
+import tv.mapper.embellishcraft.block.CustomBlock;
 import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
+import tv.mapper.embellishcraft.block.CustomSlabBlock;
 import tv.mapper.embellishcraft.block.CustomStairsBlock;
+import tv.mapper.embellishcraft.block.CustomWallBlock;
 import tv.mapper.embellishcraft.block.PlateBlock;
 import tv.mapper.embellishcraft.block.TerraceChairBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
@@ -518,146 +520,146 @@ public class ModBlocks
     {
         // World
 
-        createBlockWithVariants(event, "basalt", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "slate", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "marble", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "gneiss", true, true, true, true, Material.ROCK, SoundType.STONE);
+        createBlockWithVariants(event, "basalt", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "slate", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "marble", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "gneiss", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Cobblestones
 
-        createBlockWithVariants(event, "basalt_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "slate_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "marble_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "gneiss_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE);
+        createBlockWithVariants(event, "basalt_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "slate_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "marble_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "gneiss_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Bricks
 
-        createBlockWithVariants(event, "basalt_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "dark_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "diorite_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "old_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "sandstone_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "slate_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "terracotta_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "weared_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "marble_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "gneiss_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
+        createBlockWithVariants(event, "basalt_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "dark_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "diorite_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "old_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "sandstone_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "slate_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "terracotta_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "weared_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "marble_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "gneiss_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Large bricks
 
-        createBlockWithVariants(event, "basalt_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "diorite_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "dark_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "marble_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "old_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "sandstone_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "slate_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "terracotta_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "weared_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "gneiss_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE);
+        createBlockWithVariants(event, "basalt_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "diorite_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "dark_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "marble_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "old_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "sandstone_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "slate_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "terracotta_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "weared_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "gneiss_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Paving
 
-        createBlockWithVariants(event, "concrete_paving", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "damaged_paving", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "dark_concrete_paving", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "diorite_paving", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "moist_paving", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "polished_paving", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "slate_paving", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "white_concrete_paving", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "gneiss_paving", true, true, true, true, Material.ROCK, SoundType.STONE);
+        createBlockWithVariants(event, "concrete_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "damaged_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "dark_concrete_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "diorite_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "moist_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "polished_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "slate_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "white_concrete_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "gneiss_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Tiles
 
-        createBlockWithVariants(event, "concrete_tiles", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "skyblue_tiles", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "orange_tiles", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "blue_tiles", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "light_blue_tiles", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "red_tiles", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "white_tiles", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "yellow_tiles", true, true, true, true, Material.ROCK, SoundType.STONE);
-        createBlockWithVariants(event, "yellow_grey_tiles", true, true, true, true, Material.ROCK, SoundType.STONE);
+        createBlockWithVariants(event, "concrete_tiles", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "skyblue_tiles", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "orange_tiles", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "blue_tiles", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "light_blue_tiles", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "red_tiles", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "white_tiles", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "yellow_tiles", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "yellow_grey_tiles", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Wallpaper
 
-        createBlockWithVariants(event, "white_blue_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE)).setRegistryName("white_blue_wallpaper_plinth"));
-        createBlockWithVariants(event, "beige_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE)).setRegistryName("beige_wallpaper_plinth"));
-        createBlockWithVariants(event, "pink_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE)).setRegistryName("pink_wallpaper_plinth"));
-        createBlockWithVariants(event, "beige_flower_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE)).setRegistryName("beige_flower_wallpaper_plinth"));
-        createBlockWithVariants(event, "white_green_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE)).setRegistryName("white_green_wallpaper_plinth"));
+        createBlockWithVariants(event, "white_blue_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("white_blue_wallpaper_plinth"));
+        createBlockWithVariants(event, "beige_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("beige_wallpaper_plinth"));
+        createBlockWithVariants(event, "pink_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("pink_wallpaper_plinth"));
+        createBlockWithVariants(event, "beige_flower_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("beige_flower_wallpaper_plinth"));
+        createBlockWithVariants(event, "white_green_wallpaper", true, true, false, false, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("white_green_wallpaper_plinth"));
 
         // Metal
 
-        createBlockWithVariants(event, "dark_metal_floor", true, true, true, true, Material.IRON, SoundType.LANTERN);
-        createBlockWithVariants(event, "light_metal_floor", true, true, true, true, Material.IRON, SoundType.LANTERN);
-        createBlockWithVariants(event, "rusty_plate", true, true, true, true, Material.IRON, SoundType.LANTERN);
+        createBlockWithVariants(event, "dark_metal_floor", true, true, true, true, Material.IRON, SoundType.LANTERN, ToolType.PICKAXE);
+        createBlockWithVariants(event, "light_metal_floor", true, true, true, true, Material.IRON, SoundType.LANTERN, ToolType.PICKAXE);
+        createBlockWithVariants(event, "rusty_plate", true, true, true, true, Material.IRON, SoundType.LANTERN, ToolType.PICKAXE);
 
         event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("iron_beam"));
         event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("bolted_iron_beam"));
-        createBlockWithVariants(event, "iron_beam_junction", false, false, false, false, Material.IRON, SoundType.LANTERN);
+        createBlockWithVariants(event, "iron_beam_junction", false, false, false, false, Material.IRON, SoundType.LANTERN, ToolType.PICKAXE);
         event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("steel_beam"));
         event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("bolted_steel_beam"));
-        createBlockWithVariants(event, "steel_beam_junction", false, false, false, false, Material.IRON, SoundType.LANTERN);
+        createBlockWithVariants(event, "steel_beam_junction", false, false, false, false, Material.IRON, SoundType.LANTERN, ToolType.PICKAXE);
 
-        createBlockWithVariants(event, "air_duct", false, false, false, false, Material.IRON, SoundType.LANTERN);
+        createBlockWithVariants(event, "air_duct", false, false, false, false, Material.IRON, SoundType.LANTERN, ToolType.PICKAXE);
         event.getRegistry().register(new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("vent_air_duct"));
         event.getRegistry().register(new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("grid_air_duct"));
 
-        createBlockWithVariants(event, "purple_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "red_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "white_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "yellow_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "black_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "blue_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "brown_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "cyan_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "gray_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "green_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "light_blue_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "light_gray_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "lime_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "magenta_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "orange_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "pink_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL);
+        createBlockWithVariants(event, "purple_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "red_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "white_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "yellow_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "black_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "blue_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "brown_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "cyan_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "gray_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "green_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "light_blue_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "light_gray_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "lime_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "magenta_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "orange_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "pink_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
 
-        createBlockWithVariants(event, "bulkhead", false, false, false, false, Material.IRON, SoundType.METAL);
-        createBlockWithVariants(event, "bulkhead_top", false, false, false, false, Material.IRON, SoundType.METAL);
+        createBlockWithVariants(event, "bulkhead", false, false, false, false, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+        createBlockWithVariants(event, "bulkhead_top", false, false, false, false, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
 
         // Concrete
 
-        createBlockWithVariants(event, "concrete", true, true, true, true, Material.ROCK, SoundType.STONE);
+        createBlockWithVariants(event, "concrete", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Furniture
 
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("oak_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("birch_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_chair"));
+        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_chair"));
 
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN)).setRegistryName("metallic_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("oak_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("birch_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_terrace_table"));
+        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("metallic_terrace_table"));
+        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_terrace_table"));
+        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_terrace_table"));
+        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_terrace_table"));
+        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_terrace_table"));
+        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_terrace_table"));
+        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_terrace_table"));
 
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN)).setRegistryName("metallic_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("oak_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("dark_oak_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("birch_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("spruce_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("jungle_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD)).setRegistryName("acacia_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("metallic_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_terrace_chair"));
+        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_terrace_chair"));
 
         event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
     }
@@ -827,18 +829,18 @@ public class ModBlocks
      * @param pressure
      *        If true, pressure plate variant will be registered
      */
-    private static void createBlockWithVariants(RegistryEvent.Register<Block> event, String name, boolean stairs, boolean slab, boolean wall, boolean pressure, Material material, SoundType sound)
+    private static void createBlockWithVariants(RegistryEvent.Register<Block> event, String name, boolean stairs, boolean slab, boolean wall, boolean pressure, Material material, SoundType sound, ToolType toolType)
     {
         Block block; // Needed to register the stairs
-        event.getRegistry().register(block = new Block(Block.Properties.create(material).hardnessAndResistance(1.5F, 6.0F).sound(sound)).setRegistryName(name));
+        event.getRegistry().register(block = new CustomBlock(Block.Properties.create(material).hardnessAndResistance(1.5F, 6.0F).sound(sound), toolType).setRegistryName(name));
         if(stairs)
-            event.getRegistry().register(new CustomStairsBlock(block.getDefaultState(), Block.Properties.create(material).hardnessAndResistance(1.5F, 6.0F).sound(sound)).setRegistryName(name + "_stairs"));
+            event.getRegistry().register(new CustomStairsBlock(block.getDefaultState(), Block.Properties.create(material).hardnessAndResistance(1.5F, 6.0F).sound(sound), toolType).setRegistryName(name + "_stairs"));
         if(slab)
-            event.getRegistry().register(new SlabBlock(Block.Properties.create(material).hardnessAndResistance(1.5F, 6.0F).sound(sound)).setRegistryName(name + "_slab"));
+            event.getRegistry().register(new CustomSlabBlock(Block.Properties.create(material).hardnessAndResistance(1.5F, 6.0F).sound(sound), toolType).setRegistryName(name + "_slab"));
         if(wall)
-            event.getRegistry().register(new WallBlock(Block.Properties.create(material).hardnessAndResistance(1.5F, 6.0F).sound(sound)).setRegistryName(name + "_wall"));
+            event.getRegistry().register(new CustomWallBlock(Block.Properties.create(material).hardnessAndResistance(1.5F, 6.0F).sound(sound), toolType).setRegistryName(name + "_wall"));
         if(pressure)
-            event.getRegistry().register(new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(material).doesNotBlockMovement().hardnessAndResistance(0.5F).sound(sound)).setRegistryName(name + "_pressure_plate"));
+            event.getRegistry().register(new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(material).doesNotBlockMovement().hardnessAndResistance(0.5F).sound(sound), toolType).setRegistryName(name + "_pressure_plate"));
 
     }
 

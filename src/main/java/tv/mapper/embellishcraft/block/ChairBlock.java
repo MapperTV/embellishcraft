@@ -1,5 +1,7 @@
 package tv.mapper.embellishcraft.block;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.IWaterLoggable;
@@ -18,6 +20,7 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
+import net.minecraftforge.common.ToolType;
 
 public class ChairBlock extends Block implements IWaterLoggable
 {
@@ -57,10 +60,19 @@ public class ChairBlock extends Block implements IWaterLoggable
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
+    protected ToolType toolType = null;
+
     public ChairBlock(Properties properties)
     {
         super(properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
+    }
+
+    public ChairBlock(Properties properties, ToolType toolType)
+    {
+        super(properties);
+        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.toolType = toolType;
     }
 
     @Override
@@ -110,6 +122,16 @@ public class ChairBlock extends Block implements IWaterLoggable
         if(!worldIn.getBlockState(pos.down()).isSolid())
             return false;
         return true;
+    }
+
+    @Nullable
+    @Override
+    public ToolType getHarvestTool(BlockState state)
+    {
+        if(toolType != null)
+            return this.toolType;
+        else
+            return super.getHarvestTool(state);
     }
 
     @SuppressWarnings("deprecation")

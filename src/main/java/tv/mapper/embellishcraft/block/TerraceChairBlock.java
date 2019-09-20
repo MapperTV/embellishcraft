@@ -9,6 +9,7 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
+import net.minecraftforge.common.ToolType;
 
 public class TerraceChairBlock extends ChairBlock
 {
@@ -48,6 +49,12 @@ public class TerraceChairBlock extends ChairBlock
     public TerraceChairBlock(Properties properties)
     {
         super(properties);
+    }
+
+    public TerraceChairBlock(Properties properties, ToolType toolType)
+    {
+        super(properties);
+        this.toolType = toolType;
     }
 
     @Override
