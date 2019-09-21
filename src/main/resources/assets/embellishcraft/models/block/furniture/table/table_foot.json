@@ -1,0 +1,18 @@
+{
+	"ambientocclusion": false,
+	"elements": [
+		{
+			"name": "table_foot",
+			"from": [0, 0, 0],
+			"to": [2, 14, 2],
+			"color": 6,
+			"faces": {
+				"north": {"uv": [0, 13, 14, 15], "rotation": 90, "texture": "#material"},
+				"east": {"uv": [2, 9, 16, 11], "rotation": 90, "texture": "#material"},
+				"south": {"uv": [0, 4, 14, 6], "rotation": 90, "texture": "#material"},
+				"west": {"uv": [3, 1, 16, 3], "rotation": 90, "texture": "#material"},
+				"down": {"uv": [11, 4, 13, 6], "texture": "#material"}
+			}
+		}
+	]
+}

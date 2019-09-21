@@ -1,0 +1,17 @@
+{
+    "multipart": [
+        {   "apply": { "model": "embellishcraft:block/furniture/table/birch_table_top" }},
+        {   "when": { "table_north": "true" },
+            "apply": { "model": "embellishcraft:block/furniture/table/birch_table_foot", "uvlock": true }
+        },
+        {   "when": { "table_east": "true" },
+            "apply": { "model": "embellishcraft:block/furniture/table/birch_table_foot", "y": 90, "uvlock": true }
+        },
+        {   "when": { "table_south": "true" },
+            "apply": { "model": "embellishcraft:block/furniture/table/birch_table_foot", "y": 180, "uvlock": true }
+        },
+        {   "when": { "table_west": "true" },
+            "apply": { "model": "embellishcraft:block/furniture/table/birch_table_foot", "y": 270, "uvlock": true }
+        }
+    ]
+}

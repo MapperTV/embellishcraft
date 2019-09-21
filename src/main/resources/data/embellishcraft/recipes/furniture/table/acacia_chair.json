@@ -1,0 +1,21 @@
+{
+    "type": "crafting_shaped",
+    "group": "tables",
+    "pattern": [
+        "SWS",
+        "S S",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:acacia_slab"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:acacia_table",
+        "count": 1
+    }
+}

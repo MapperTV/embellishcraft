@@ -491,6 +491,13 @@
     "block.embellishcraft.jungle_terrace_chair": "Jungle Terrace Chair",
     "block.embellishcraft.acacia_terrace_chair": "Acacia Terrace Chair",
     
+    "block.embellishcraft.oak_table": "Oak Table",
+    "block.embellishcraft.dark_oak_table": "Dark Oak Table",
+    "block.embellishcraft.spruce_table": "Spruce Table",
+    "block.embellishcraft.birch_table": "Birch Table",
+    "block.embellishcraft.jungle_table": "Jungle Table",
+    "block.embellishcraft.acacia_table": "Acacia Table",
+    
     "block.embellishcraft.plate": "Plate",
     
     "comment_B": "Creative Tabs (Item Groups)",
