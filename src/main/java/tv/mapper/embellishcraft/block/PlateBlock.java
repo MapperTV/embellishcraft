@@ -43,7 +43,7 @@ public class PlateBlock extends Block implements IWaterLoggable
     public PlateBlock(Properties properties)
     {
         super(properties);
-        this.setDefaultState(this.getDefaultState().with(PLATES, 1).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(this.stateContainer.getBaseState().with(PLATES, 1).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Override
