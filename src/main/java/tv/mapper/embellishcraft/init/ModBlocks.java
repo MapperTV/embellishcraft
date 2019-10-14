@@ -18,6 +18,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.block.AllRotationBlock;
 import tv.mapper.embellishcraft.block.ChairBlock;
+import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.block.CustomBlock;
 import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
 import tv.mapper.embellishcraft.block.CustomSlabBlock;
@@ -520,8 +521,10 @@ public class ModBlocks
     public static final Block JUNGLE_TABLE = null;
     public static final Block SPRUCE_TABLE = null;
     public static final Block ACACIA_TABLE = null;
-    
+
     public static final Block PLATE = null;
+
+    public static final Block BLUE_COUCH = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -675,8 +678,10 @@ public class ModBlocks
         event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_table"));
         event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_table"));
         event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_table"));
-        
+
         event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
+
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLUE).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("blue_couch"));
     }
 
     @SubscribeEvent
@@ -834,6 +839,7 @@ public class ModBlocks
 
         event.getRegistry().register(new BlockItem(PLATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PLATE.getRegistryName()));
 
+        event.getRegistry().register(new FuelBlockItem(BLUE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(BLUE_COUCH.getRegistryName()));
     }
 
     /**
