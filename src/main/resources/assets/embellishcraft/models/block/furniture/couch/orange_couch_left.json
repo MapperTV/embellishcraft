@@ -1,0 +1,7 @@
+{
+	"parent": "embellishcraft:block/furniture/couch/base/couch_left",
+	"textures": {
+		"fabric": "block/orange_wool",
+		"particle": "block/orange_wool"
+	}
+}

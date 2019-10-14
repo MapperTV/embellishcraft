@@ -524,7 +524,22 @@ public class ModBlocks
 
     public static final Block PLATE = null;
 
+    public static final Block BLACK_COUCH = null;
     public static final Block BLUE_COUCH = null;
+    public static final Block BROWN_COUCH = null;
+    public static final Block CYAN_COUCH = null;
+    public static final Block GRAY_COUCH = null;
+    public static final Block GREEN_COUCH = null;
+    public static final Block LIGHT_BLUE_COUCH = null;
+    public static final Block LIGHT_GRAY_COUCH = null;
+    public static final Block LIME_COUCH = null;
+    public static final Block MAGENTA_COUCH = null;
+    public static final Block ORANGE_COUCH = null;
+    public static final Block PINK_COUCH = null;
+    public static final Block PURPLE_COUCH = null;
+    public static final Block RED_COUCH = null;
+    public static final Block WHITE_COUCH = null;
+    public static final Block YELLOW_COUCH = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -681,7 +696,22 @@ public class ModBlocks
 
         event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
 
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("black_couch"));
         event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLUE).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("blue_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("brown_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.CYAN).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("cyan_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.GRAY).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("gray_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.GREEN).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("green_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.LIGHT_BLUE).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("light_blue_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.LIGHT_GRAY).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("light_gray_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.LIME).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("lime_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("magenta_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("orange_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.PINK).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("pink_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.PURPLE).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("purple_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.RED).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("red_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("white_couch"));
+        event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.YELLOW).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("yellow_couch"));
     }
 
     @SubscribeEvent
@@ -839,7 +869,22 @@ public class ModBlocks
 
         event.getRegistry().register(new BlockItem(PLATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PLATE.getRegistryName()));
 
+        event.getRegistry().register(new FuelBlockItem(BLACK_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(BLACK_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(BLUE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(BLUE_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BROWN_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(BROWN_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(CYAN_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(CYAN_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(GRAY_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(GRAY_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(GREEN_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(GREEN_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(LIGHT_BLUE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(LIGHT_BLUE_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(LIGHT_GRAY_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(LIGHT_GRAY_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(LIME_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(LIME_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(MAGENTA_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(MAGENTA_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ORANGE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(ORANGE_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(PINK_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(PINK_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(PURPLE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(PURPLE_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(RED_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(RED_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(WHITE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(WHITE_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(YELLOW_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(YELLOW_COUCH.getRegistryName()));
     }
 
     /**

@@ -500,6 +500,23 @@
     
     "block.embellishcraft.plate": "Plate",
     
+    "block.embellishcraft.black_couch": "Black Couch",
+    "block.embellishcraft.blue_couch": "Blue Couch",
+    "block.embellishcraft.brown_couch": "Brown Couch",
+    "block.embellishcraft.cyan_couch": "Cyan Couch",
+    "block.embellishcraft.gray_couch": "Gray Couch",
+    "block.embellishcraft.green_couch": "Green Couch",
+    "block.embellishcraft.light_blue_couch": "Light Blue Couch",
+    "block.embellishcraft.light_gray_couch": "Light Gray Couch",
+    "block.embellishcraft.lime_couch": "Lime Couch",
+    "block.embellishcraft.magenta_couch": "Magenta Couch",
+    "block.embellishcraft.orange_couch": "Orange Couch",
+    "block.embellishcraft.pink_couch": "Pink Couch",
+    "block.embellishcraft.purple_couch": "Purple Couch",
+    "block.embellishcraft.red_couch": "Red Couch",
+    "block.embellishcraft.white_couch": "White Couch",
+    "block.embellishcraft.yellow_couch": "Yellow Couch",
+    
     "comment_B": "Creative Tabs (Item Groups)",
     
     "itemGroup.embellishcraft_group": "EmbellishCraft"
