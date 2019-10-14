@@ -166,9 +166,9 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
                     rightstate = iblockreader.getBlockState(blockpos.east());
             }
 
-            if(leftstate.getBlock() == this)
+            if(leftstate.getBlock() instanceof CouchBlock)
                 leftend = false;
-            if(rightstate.getBlock() == this)
+            if(rightstate.getBlock() instanceof CouchBlock)
                 rightend = false;
         }
         else
@@ -257,12 +257,12 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
                     rightstate = worldIn.getBlockState(currentPos.east());
             }
 
-            if(leftstate.getBlock() == this)
+            if(leftstate.getBlock() instanceof CouchBlock)
                 leftend = false;
             else
                 leftend = true;
 
-            if(rightstate.getBlock() == this)
+            if(rightstate.getBlock() instanceof CouchBlock)
                 rightend = false;
             else
                 rightend = true;
