@@ -12,6 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 import tv.mapper.embellishcraft.block.ChairBlock;
+import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.entity.EntityChair;
 
 // Big thanks to bl4ckscor3 and its mod "Sit" for this code!
@@ -27,7 +28,7 @@ public class SeatUtil
         BlockPos pos = event.getPos();
         Block block = world.getBlockState(pos).getBlock();
 
-        if((block instanceof ChairBlock) && world.getBlockState(pos.up()).isAir(world, pos.up()) && !EntityChair.OCCUPIED.containsKey(pos) && !player.isSneaking())
+        if((block instanceof ChairBlock || block instanceof CouchBlock) && world.getBlockState(pos.up()).isAir(world, pos.up()) && !EntityChair.OCCUPIED.containsKey(pos) && !player.isSneaking())
         {
             event.setCanceled(true);
             if(event.getSide() == LogicalSide.SERVER)
