@@ -24,6 +24,7 @@ import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
 import tv.mapper.embellishcraft.block.CustomSlabBlock;
 import tv.mapper.embellishcraft.block.CustomStairsBlock;
 import tv.mapper.embellishcraft.block.CustomWallBlock;
+import tv.mapper.embellishcraft.block.LampBlock;
 import tv.mapper.embellishcraft.block.PlateBlock;
 import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.embellishcraft.block.TerraceChairBlock;
@@ -540,6 +541,8 @@ public class ModBlocks
     public static final Block RED_COUCH = null;
     public static final Block WHITE_COUCH = null;
     public static final Block YELLOW_COUCH = null;
+    
+    public static final Block TABLE_LAMP = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -712,6 +715,9 @@ public class ModBlocks
         event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.RED).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("red_couch"));
         event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("white_couch"));
         event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.YELLOW).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("yellow_couch"));
+        
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(15)).setRegistryName("table_lamp"));
+
     }
 
     @SubscribeEvent
@@ -885,6 +891,9 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(RED_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(RED_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(WHITE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(WHITE_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(YELLOW_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(YELLOW_COUCH.getRegistryName()));
+        
+        event.getRegistry().register(new BlockItem(TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(TABLE_LAMP.getRegistryName()));
+
     }
 
     /**
