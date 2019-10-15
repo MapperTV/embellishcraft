@@ -541,8 +541,23 @@ public class ModBlocks
     public static final Block RED_COUCH = null;
     public static final Block WHITE_COUCH = null;
     public static final Block YELLOW_COUCH = null;
-    
-    public static final Block TABLE_LAMP = null;
+
+    public static final Block BLUE_TABLE_LAMP = null;
+    public static final Block BLACK_TABLE_LAMP = null;
+    public static final Block BROWN_TABLE_LAMP = null;
+    public static final Block CYAN_TABLE_LAMP = null;
+    public static final Block GRAY_TABLE_LAMP = null;
+    public static final Block GREEN_TABLE_LAMP = null;
+    public static final Block LIGHT_BLUE_TABLE_LAMP = null;
+    public static final Block LIGHT_GRAY_TABLE_LAMP = null;
+    public static final Block LIME_TABLE_LAMP = null;
+    public static final Block MAGENTA_TABLE_LAMP = null;
+    public static final Block ORANGE_TABLE_LAMP = null;
+    public static final Block PINK_TABLE_LAMP = null;
+    public static final Block PURPLE_TABLE_LAMP = null;
+    public static final Block RED_TABLE_LAMP = null;
+    public static final Block WHITE_TABLE_LAMP = null;
+    public static final Block YELLOW_TABLE_LAMP = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -715,8 +730,23 @@ public class ModBlocks
         event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.RED).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("red_couch"));
         event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("white_couch"));
         event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.YELLOW).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("yellow_couch"));
-        
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(15)).setRegistryName("table_lamp"));
+
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("black_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("blue_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("brown_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("cyan_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("gray_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("green_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("light_blue_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("light_gray_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("lime_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("magenta_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("orange_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("pink_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("purple_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("red_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("white_table_lamp"));
+        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("yellow_table_lamp"));
 
     }
 
@@ -891,8 +921,23 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(RED_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(RED_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(WHITE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(WHITE_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(YELLOW_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(YELLOW_COUCH.getRegistryName()));
-        
-        event.getRegistry().register(new BlockItem(TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(TABLE_LAMP.getRegistryName()));
+
+        event.getRegistry().register(new BlockItem(BLACK_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BLACK_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BLUE_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BLUE_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BROWN_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BROWN_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(CYAN_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(CYAN_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(GRAY_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(GRAY_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(GREEN_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(GREEN_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(LIGHT_BLUE_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LIGHT_BLUE_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(LIGHT_GRAY_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LIGHT_GRAY_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(LIME_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LIME_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(MAGENTA_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(MAGENTA_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(ORANGE_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ORANGE_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(PINK_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PINK_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(PURPLE_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PURPLE_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(RED_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(RED_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(WHITE_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_TABLE_LAMP.getRegistryName()));
+        event.getRegistry().register(new BlockItem(YELLOW_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(YELLOW_TABLE_LAMP.getRegistryName()));
 
     }
 

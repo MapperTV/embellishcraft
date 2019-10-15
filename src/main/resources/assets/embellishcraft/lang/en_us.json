@@ -517,7 +517,22 @@
     "block.embellishcraft.white_couch": "White Couch",
     "block.embellishcraft.yellow_couch": "Yellow Couch",
     
-    "block.embellishcraft.table_lamp": "Table Lamp",
+    "block.embellishcraft.black_table_lamp": "Black Table Lamp",
+    "block.embellishcraft.blue_table_lamp": "Blue Table Lamp",
+    "block.embellishcraft.brown_table_lamp": "Brown Table Lamp",
+    "block.embellishcraft.cyan_table_lamp": "Cyan Table Lamp",
+    "block.embellishcraft.gray_table_lamp": "Gray Table Lamp",
+    "block.embellishcraft.green_table_lamp": "Green Table Lamp",
+    "block.embellishcraft.light_blue_table_lamp": "Light Blue Table Lamp",
+    "block.embellishcraft.light_gray_table_lamp": "Light Gray Table Lamp",
+    "block.embellishcraft.lime_table_lamp": "Lime Table Lamp",
+    "block.embellishcraft.magenta_table_lamp": "Magenta Table Lamp",
+    "block.embellishcraft.orange_table_lamp": "Orange Table Lamp",
+    "block.embellishcraft.pink_table_lamp": "Pink Table Lamp",
+    "block.embellishcraft.purple_table_lamp": "Purple Table Lamp",
+    "block.embellishcraft.red_table_lamp": "Red Table Lamp",
+    "block.embellishcraft.white_table_lamp": "White Table Lamp",
+    "block.embellishcraft.yellow_table_lamp": "Yellow Table Lamp",
     
     "comment_B": "Creative Tabs (Item Groups)",
     

@@ -1,0 +1,7 @@
+{
+    "parent": "embellishcraft:block/furniture/light/base/table_lamp",
+    "textures": {
+        "texture": "embellishcraft:block/furniture/light/light_gray_table_lamp",
+        "particle": "embellishcraft:block/furniture/light/light_gray_table_lamp"
+    }
+}

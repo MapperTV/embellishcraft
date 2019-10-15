@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "lit=false": { "model": "embellishcraft:block/furniture/light/brown_table_lamp" },
+        "lit=true": { "model": "embellishcraft:block/furniture/light/brown_table_lamp_on" }
+    }
+}
