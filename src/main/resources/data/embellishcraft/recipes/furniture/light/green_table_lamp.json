@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#G#",
+        " O "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:green_wool"
+        },
+        "G": {
+            "item": "minecraft:glowstone_dust"
+        },
+        "O": {
+            "item": "minecraft:oak_planks"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:green_table_lamp",
+        "count": 1
+    }
+}

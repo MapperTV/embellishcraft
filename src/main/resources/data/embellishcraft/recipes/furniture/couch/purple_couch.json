@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# ",
+        "##",
+        "OO"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:purple_wool"
+        },
+        "O": {
+            "item": "minecraft:oak_planks"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:purple_couch",
+        "count": 3
+    }
+}
