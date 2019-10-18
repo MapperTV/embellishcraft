@@ -1,0 +1,7 @@
+{
+    "parent": "embellishcraft:block/ladder/base/rungs",
+    "textures": {
+        "material": "embellishcraft:block/metal/rust",
+        "particle": "embellishcraft:block/metal/rust"
+    }
+}

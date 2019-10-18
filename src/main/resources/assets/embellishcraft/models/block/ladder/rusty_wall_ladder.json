@@ -1,0 +1,7 @@
+{
+    "parent": "embellishcraft:block/ladder/base/wall_ladder",
+    "textures": {
+        "material": "embellishcraft:block/metal/rust",
+        "particle": "embellishcraft:block/metal/rust"
+    }
+}

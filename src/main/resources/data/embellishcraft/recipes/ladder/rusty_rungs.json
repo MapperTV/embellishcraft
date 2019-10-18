@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#B#",
+    " # "
+  ],
+  "key": {
+    "#": {
+        "tag": "forge:rods/steel"
+    },
+    "B": {
+        "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:rusty_rungs",
+    "count": 3
+  }
+}

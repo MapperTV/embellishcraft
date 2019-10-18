@@ -487,6 +487,9 @@ public class ModBlocks
     public static final Block BULKHEAD_TOP = null;
 
     public static final Block STEEL_WALL_LADDER = null;
+    public static final Block RUSTY_WALL_LADDER = null;
+    public static final Block STEEL_RUNGS = null;
+    public static final Block RUSTY_RUNGS = null;
 
     // Concrete
 
@@ -684,6 +687,9 @@ public class ModBlocks
         createBlockWithVariants(event, "bulkhead_top", false, false, false, false, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
 
         event.getRegistry().register(new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_wall_ladder"));
+        event.getRegistry().register(new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("rusty_wall_ladder"));
+        event.getRegistry().register(new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_rungs"));
+        event.getRegistry().register(new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("rusty_rungs"));
 
         // Concrete
 
@@ -879,6 +885,9 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BULKHEAD_TOP, null, null, null, null);
 
         event.getRegistry().register(new BlockItem(STEEL_WALL_LADDER, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_WALL_LADDER.getRegistryName()));
+        event.getRegistry().register(new BlockItem(RUSTY_WALL_LADDER, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(RUSTY_WALL_LADDER.getRegistryName()));
+        event.getRegistry().register(new BlockItem(STEEL_RUNGS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_RUNGS.getRegistryName()));
+        event.getRegistry().register(new BlockItem(RUSTY_RUNGS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(RUSTY_RUNGS.getRegistryName()));
 
         // Concrete
 
