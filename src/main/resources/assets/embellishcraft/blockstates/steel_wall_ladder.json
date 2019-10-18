@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "embellishcraft:block/ladder/steel_wall_ladder", "y": 180 },
+        "facing=east":  { "model": "embellishcraft:block/ladder/steel_wall_ladder", "y": 270 },
+        "facing=south": { "model": "embellishcraft:block/ladder/steel_wall_ladder"},
+        "facing=west":  { "model": "embellishcraft:block/ladder/steel_wall_ladder", "y": 90 }
+    }
+}

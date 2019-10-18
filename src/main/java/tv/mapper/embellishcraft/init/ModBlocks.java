@@ -20,6 +20,7 @@ import tv.mapper.embellishcraft.block.AllRotationBlock;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.block.CustomBlock;
+import tv.mapper.embellishcraft.block.CustomLadderBlock;
 import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
 import tv.mapper.embellishcraft.block.CustomSlabBlock;
 import tv.mapper.embellishcraft.block.CustomStairsBlock;
@@ -353,7 +354,7 @@ public class ModBlocks
     public static final Block WHITE_GREEN_WALLPAPER_PLINTH = null;
 
     // Metal
-    
+
     public static final Block STEEL_BLOCK = null;
 
     public static final Block DARK_METAL_FLOOR = null;
@@ -484,6 +485,8 @@ public class ModBlocks
 
     public static final Block BULKHEAD = null;
     public static final Block BULKHEAD_TOP = null;
+
+    public static final Block STEEL_WALL_LADDER = null;
 
     // Concrete
 
@@ -642,7 +645,7 @@ public class ModBlocks
         event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("white_green_wallpaper_plinth"));
 
         // Metal
-        
+
         event.getRegistry().register(new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_block"));
 
         createBlockWithVariants(event, "dark_metal_floor", true, true, true, true, Material.IRON, SoundType.LANTERN, ToolType.PICKAXE);
@@ -679,6 +682,8 @@ public class ModBlocks
 
         createBlockWithVariants(event, "bulkhead", false, false, false, false, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
         createBlockWithVariants(event, "bulkhead_top", false, false, false, false, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+
+        event.getRegistry().register(new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_wall_ladder"));
 
         // Concrete
 
@@ -835,7 +840,7 @@ public class ModBlocks
         event.getRegistry().register(new BlockItem(WHITE_GREEN_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH.getRegistryName()));
 
         // Metal
-        
+
         event.getRegistry().register(new BlockItem(STEEL_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_BLOCK.getRegistryName()));
 
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_METAL_FLOOR, DARK_METAL_FLOOR_STAIRS, DARK_METAL_FLOOR_SLAB, DARK_METAL_FLOOR_WALL, DARK_METAL_FLOOR_PRESSURE_PLATE);
@@ -872,6 +877,8 @@ public class ModBlocks
 
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BULKHEAD, null, null, null, null);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BULKHEAD_TOP, null, null, null, null);
+
+        event.getRegistry().register(new BlockItem(STEEL_WALL_LADDER, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_WALL_LADDER.getRegistryName()));
 
         // Concrete
 
