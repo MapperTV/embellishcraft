@@ -10,7 +10,7 @@
             "tag": "forge:ingots/steel"
         },
         "I": {
-            "item": "minecraft:iron_bars"
+            "tag": "forge:rods/steel"
         }
     },
     "result": {
