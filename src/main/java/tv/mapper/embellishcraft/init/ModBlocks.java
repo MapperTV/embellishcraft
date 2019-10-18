@@ -353,6 +353,8 @@ public class ModBlocks
     public static final Block WHITE_GREEN_WALLPAPER_PLINTH = null;
 
     // Metal
+    
+    public static final Block STEEL_BLOCK = null;
 
     public static final Block DARK_METAL_FLOOR = null;
     public static final Block DARK_METAL_FLOOR_STAIRS = null;
@@ -640,6 +642,8 @@ public class ModBlocks
         event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("white_green_wallpaper_plinth"));
 
         // Metal
+        
+        event.getRegistry().register(new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_block"));
 
         createBlockWithVariants(event, "dark_metal_floor", true, true, true, true, Material.IRON, SoundType.LANTERN, ToolType.PICKAXE);
         createBlockWithVariants(event, "light_metal_floor", true, true, true, true, Material.IRON, SoundType.LANTERN, ToolType.PICKAXE);
@@ -831,6 +835,8 @@ public class ModBlocks
         event.getRegistry().register(new BlockItem(WHITE_GREEN_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH.getRegistryName()));
 
         // Metal
+        
+        event.getRegistry().register(new BlockItem(STEEL_BLOCK, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_BLOCK.getRegistryName()));
 
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_METAL_FLOOR, DARK_METAL_FLOOR_STAIRS, DARK_METAL_FLOOR_SLAB, DARK_METAL_FLOOR_WALL, DARK_METAL_FLOOR_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_METAL_FLOOR, LIGHT_METAL_FLOOR_STAIRS, LIGHT_METAL_FLOOR_SLAB, LIGHT_METAL_FLOOR_WALL, LIGHT_METAL_FLOOR_PRESSURE_PLATE);
