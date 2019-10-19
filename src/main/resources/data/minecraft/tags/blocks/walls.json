@@ -5,11 +5,13 @@
     "embellishcraft:slate_wall",
     "embellishcraft:marble_wall",
     "embellishcraft:gneiss_wall",
+    "embellishcraft:jade_wall",
     
     "embellishcraft:basalt_cobblestone_wall",
     "embellishcraft:slate_cobblestone_wall",
     "embellishcraft:marble_cobblestone_wall",
     "embellishcraft:gneiss_cobblestone_wall",
+    "embellishcraft:jade_cobblestone_wall",
     
     "embellishcraft:basalt_bricks_wall",
     "embellishcraft:dark_bricks_wall",
@@ -21,6 +23,7 @@
     "embellishcraft:weared_bricks_wall",
     "embellishcraft:marble_bricks_wall",
     "embellishcraft:gneiss_bricks_wall",
+    "embellishcraft:jade_bricks_wall",
     
     "embellishcraft:basalt_large_bricks_wall",
     "embellishcraft:dark_large_bricks_wall",
@@ -32,6 +35,7 @@
     "embellishcraft:weared_large_bricks_wall",
     "embellishcraft:marble_large_bricks_wall",
     "embellishcraft:gneiss_large_bricks_wall",
+    "embellishcraft:jade_large_bricks_wall",
 
     "embellishcraft:concrete_paving_wall",
     "embellishcraft:damaged_paving_wall",

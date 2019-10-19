@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "basalt_cobblestone",
+      "name": "marble",
       "rolls": 1,
       "entries": [
         {

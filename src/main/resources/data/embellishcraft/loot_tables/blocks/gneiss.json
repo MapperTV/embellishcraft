@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "gneiss_cobblestone",
+      "name": "gneiss",
       "rolls": 1,
       "entries": [
         {

@@ -1,0 +1,6 @@
+{
+    "parent": "block/pressure_plate_up",
+    "textures": {
+        "texture": "embellishcraft:block/large_bricks/jade_large_bricks"
+    }
+}

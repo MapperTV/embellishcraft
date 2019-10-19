@@ -5,11 +5,13 @@
     "embellishcraft:slate_stairs",
     "embellishcraft:marble_stairs",
     "embellishcraft:gneiss_stairs",
+    "embellishcraft:jade_stairs",
     
     "embellishcraft:basalt_cobblestone_stairs",
     "embellishcraft:slate_cobblestone_stairs",
     "embellishcraft:marble_cobblestone_stairs",
     "embellishcraft:gneiss_cobblestone_stairs",
+    "embellishcraft:jade_cobblestone_stairs",
     
     "embellishcraft:basalt_bricks_stairs",
     "embellishcraft:dark_bricks_stairs",
@@ -21,6 +23,7 @@
     "embellishcraft:weared_bricks_stairs",
     "embellishcraft:marble_bricks_stairs",
     "embellishcraft:gneiss_bricks_stairs",
+    "embellishcraft:jade_bricks_stairs",
     
     "embellishcraft:basalt_large_bricks_stairs",
     "embellishcraft:diorite_large_bricks_stairs",
@@ -32,6 +35,7 @@
     "embellishcraft:terracotta_large_bricks_stairs",
     "embellishcraft:weared_large_bricks_stairs",
     "embellishcraft:gneiss_large_bricks_stairs",
+    "embellishcraft:jade_large_bricks_stairs",
     
     "embellishcraft:concrete_paving_stairs",
     "embellishcraft:damaged_paving_stairs",

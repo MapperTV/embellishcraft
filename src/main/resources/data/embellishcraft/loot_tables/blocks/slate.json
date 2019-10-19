@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "basalt_cobblestone",
+      "name": "slate",
       "rolls": 1,
       "entries": [
         {

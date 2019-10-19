@@ -26,7 +26,12 @@
     "block.embellishcraft.gneiss_slab": "Gneiss Slab",
     "block.embellishcraft.gneiss_wall": "Gneiss Wall",
     "block.embellishcraft.gneiss_pressure_plate": "Gneiss Pressure Plate",
-
+    
+    "block.embellishcraft.jade": "Jade",
+    "block.embellishcraft.jade_stairs": "Jade Stairs",
+    "block.embellishcraft.jade_slab": "Jade Slab",
+    "block.embellishcraft.jade_wall": "Jade Wall",
+    "block.embellishcraft.jade_pressure_plate": "Jade Pressure Plate",
     
     "comment_A2": "Cobblestones",
     
@@ -53,6 +58,12 @@
     "block.embellishcraft.gneiss_cobblestone_slab": "Gneiss Cobblestone Slab",
     "block.embellishcraft.gneiss_cobblestone_wall": "Gneiss Cobblestone Wall",
     "block.embellishcraft.gneiss_cobblestone_pressure_plate": "Gneiss Cobblestone Pressure Plate",
+    
+    "block.embellishcraft.jade_cobblestone": "Jade Cobblestone",
+    "block.embellishcraft.jade_cobblestone_stairs": "Jade Cobblestone Stairs",
+    "block.embellishcraft.jade_cobblestone_slab": "Jade Cobblestone Slab",
+    "block.embellishcraft.jade_cobblestone_wall": "Jade Cobblestone Wall",
+    "block.embellishcraft.jade_cobblestone_pressure_plate": "Jade Cobblestone Pressure Plate",
     
     "comment_A3": "Bricks",
     
@@ -116,6 +127,12 @@
     "block.embellishcraft.gneiss_bricks_wall": "Gneiss Bricks Wall",
     "block.embellishcraft.gneiss_bricks_pressure_plate": "Gneiss Bricks Pressure Plate",
     
+    "block.embellishcraft.jade_bricks": "Jade Bricks",
+    "block.embellishcraft.jade_bricks_stairs": "Jade Bricks Stairs",
+    "block.embellishcraft.jade_bricks_slab": "Jade Bricks Slab",
+    "block.embellishcraft.jade_bricks_wall": "Jade Bricks Wall",
+    "block.embellishcraft.jade_bricks_pressure_plate": "Jade Bricks Pressure Plate",
+    
     "comment_A4": "Large Bricks",
     
     "block.embellishcraft.basalt_large_bricks": "Basalt Large Bricks",
@@ -177,6 +194,12 @@
     "block.embellishcraft.gneiss_large_bricks_slab": "Gneiss Large Bricks Slab",
     "block.embellishcraft.gneiss_large_bricks_wall": "Gneiss Large Bricks Wall",
     "block.embellishcraft.gneiss_large_bricks_pressure_plate": "Gneiss Large Bricks Pressure Plate",
+    
+    "block.embellishcraft.jade_large_bricks": "Jade Large Bricks",
+    "block.embellishcraft.jade_large_bricks_stairs": "Jade Large Bricks Stairs",
+    "block.embellishcraft.jade_large_bricks_slab": "Jade Large Bricks Slab",
+    "block.embellishcraft.jade_large_bricks_wall": "Jade Large Bricks Wall",
+    "block.embellishcraft.jade_large_bricks_pressure_plate": "Jade Large Bricks Pressure Plate",
     
     "comment_A5": "Paving",
     
