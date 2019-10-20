@@ -293,6 +293,13 @@ public class ModBlocks
     public static final Block GNEISS_PAVING_SLAB = null;
     public static final Block GNEISS_PAVING_WALL = null;
     public static final Block GNEISS_PAVING_PRESSURE_PLATE = null;
+    
+    public static final Block JADE_PAVING = null;
+    public static final Block JADE_PAVING_STAIRS = null;
+    public static final Block JADE_PAVING_SLAB = null;
+    public static final Block JADE_PAVING_WALL = null;
+    public static final Block JADE_PAVING_PRESSURE_PLATE = null;
+
 
     // Tiles
 
@@ -649,6 +656,7 @@ public class ModBlocks
         createBlockWithVariants(event, "slate_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "white_concrete_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "gneiss_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "jade_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Tiles
 
@@ -851,6 +859,7 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_PAVING, SLATE_PAVING_STAIRS, SLATE_PAVING_SLAB, SLATE_PAVING_WALL, SLATE_PAVING_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CONCRETE_PAVING, WHITE_CONCRETE_PAVING_STAIRS, WHITE_CONCRETE_PAVING_SLAB, WHITE_CONCRETE_PAVING_WALL, WHITE_CONCRETE_PAVING_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_PAVING, GNEISS_PAVING_STAIRS, GNEISS_PAVING_SLAB, GNEISS_PAVING_WALL, GNEISS_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_PAVING, JADE_PAVING_STAIRS, JADE_PAVING_SLAB, JADE_PAVING_WALL, JADE_PAVING_PRESSURE_PLATE);
 
         // Tiles
 
