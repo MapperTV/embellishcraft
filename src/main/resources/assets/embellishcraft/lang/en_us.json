@@ -535,7 +535,7 @@
     "block.embellishcraft.concrete_wall": "Concrete Wall",
     "block.embellishcraft.concrete_pressure_plate": "Concrete Pressure Plate",
 
-    "comment_A10": "Others",
+    "comment_A10": "Furniture",
     
     "block.embellishcraft.oak_chair": "Oak Chair",
     "block.embellishcraft.dark_oak_chair": "Dark Oak Chair",
@@ -602,6 +602,15 @@
     "block.embellishcraft.red_table_lamp": "Red Table Lamp",
     "block.embellishcraft.white_table_lamp": "White Table Lamp",
     "block.embellishcraft.yellow_table_lamp": "Yellow Table Lamp",
+    
+    "comment_A11": "Doors",
+    
+    "block.embellishcraft.oak_fancy_door": "Oak Fancy Door",
+    "block.embellishcraft.birch_fancy_door": "Birch Fancy Door",
+    "block.embellishcraft.spruce_fancy_door": "Spruce Fancy Door",
+    "block.embellishcraft.jungle_fancy_door": "Jungle Fancy Door",
+    "block.embellishcraft.dark_oak_fancy_door": "Dark Oak Fancy Door",
+    "block.embellishcraft.acacia_fancy_door": "Acacia Fancy Door",
     
     "comment_B": "Creative Tabs (Item Groups)",
     

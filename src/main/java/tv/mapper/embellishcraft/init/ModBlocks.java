@@ -20,6 +20,7 @@ import tv.mapper.embellishcraft.block.AllRotationBlock;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.block.CustomBlock;
+import tv.mapper.embellishcraft.block.CustomDoorBlock;
 import tv.mapper.embellishcraft.block.CustomLadderBlock;
 import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
 import tv.mapper.embellishcraft.block.CustomSlabBlock;
@@ -626,6 +627,10 @@ public class ModBlocks
     public static final Block RED_TABLE_LAMP = null;
     public static final Block WHITE_TABLE_LAMP = null;
     public static final Block YELLOW_TABLE_LAMP = null;
+    
+    // Doors
+    
+    public static final Block OAK_FANCY_DOOR = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -833,6 +838,9 @@ public class ModBlocks
         event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("white_table_lamp"));
         event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("yellow_table_lamp"));
 
+        // Doors
+        
+        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_fancy_door"));
     }
 
     @SubscribeEvent
@@ -1040,6 +1048,10 @@ public class ModBlocks
         event.getRegistry().register(new BlockItem(RED_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(RED_TABLE_LAMP.getRegistryName()));
         event.getRegistry().register(new BlockItem(WHITE_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_TABLE_LAMP.getRegistryName()));
         event.getRegistry().register(new BlockItem(YELLOW_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(YELLOW_TABLE_LAMP.getRegistryName()));
+
+        // Door
+        
+        event.getRegistry().register(new BlockItem(OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_FANCY_DOOR.getRegistryName()));
 
     }
 
