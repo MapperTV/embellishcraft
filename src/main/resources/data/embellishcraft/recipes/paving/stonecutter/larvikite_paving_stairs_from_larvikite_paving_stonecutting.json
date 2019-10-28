@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:larvikite_paving"
+  },
+  "result": "embellishcraft:larvikite_paving_stairs",
+  "count": 1
+}

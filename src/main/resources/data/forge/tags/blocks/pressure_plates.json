@@ -6,12 +6,14 @@
     "embellishcraft:marble_pressure_plate",
     "embellishcraft:gneiss_pressure_plate",
     "embellishcraft:jade_pressure_plate",
+    "embellishcraft:larvikite_pressure_plate",
     
     "embellishcraft:basalt_cobblestone_pressure_plate",
     "embellishcraft:slate_cobblestone_pressure_plate",
     "embellishcraft:marble_cobblestone_pressure_plate",
     "embellishcraft:gneiss_cobblestone_pressure_plate",
     "embellishcraft:jade_cobblestone_pressure_plate",
+    "embellishcraft:larvikite_cobblestone_pressure_plate",
     
     "embellishcraft:basalt_bricks_pressure_plate",
     "embellishcraft:dark_bricks_pressure_plate",
@@ -24,6 +26,7 @@
     "embellishcraft:marble_bricks_pressure_plate",
     "embellishcraft:gneiss_bricks_pressure_plate",
     "embellishcraft:jade_bricks_pressure_plate",
+    "embellishcraft:larvikite_bricks_pressure_plate",
     
     "embellishcraft:basalt_large_bricks_pressure_plate",
     "embellishcraft:diorite_large_bricks_pressure_plate",
@@ -36,6 +39,7 @@
     "embellishcraft:weared_large_bricks_pressure_plate",
     "embellishcraft:gneiss_large_bricks_pressure_plate",
     "embellishcraft:jade_large_bricks_pressure_plate",
+    "embellishcraft:larvikite_large_bricks_pressure_plate",
     
     "embellishcraft:concrete_paving_pressure_plate",
     "embellishcraft:damaged_paving_pressure_plate",
@@ -47,6 +51,7 @@
     "embellishcraft:white_concrete_paving_pressure_plate",
     "embellishcraft:gneiss_paving_pressure_plate",
     "embellishcraft:jade_paving_pressure_plate",
+    "embellishcraft:larvikite_paving_pressure_plate",
     
     "embellishcraft:concrete_tiles_pressure_plate",
     "embellishcraft:skyblue_tiles_pressure_plate",

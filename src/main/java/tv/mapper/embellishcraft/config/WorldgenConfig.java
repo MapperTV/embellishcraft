@@ -21,18 +21,24 @@ public class WorldgenConfig
     public static ForgeConfigSpec.IntValue MARBLE_SIZE;
     public static ForgeConfigSpec.IntValue MARBLE_MIN_HEIGHT;
     public static ForgeConfigSpec.IntValue MARBLE_MAX_HEIGHT;
-    
+
     public static ForgeConfigSpec.BooleanValue GNEISS_GENERATION;
     public static ForgeConfigSpec.IntValue GNEISS_CHANCE;
     public static ForgeConfigSpec.IntValue GNEISS_SIZE;
     public static ForgeConfigSpec.IntValue GNEISS_MIN_HEIGHT;
     public static ForgeConfigSpec.IntValue GNEISS_MAX_HEIGHT;
-    
+
     public static ForgeConfigSpec.BooleanValue JADE_GENERATION;
     public static ForgeConfigSpec.IntValue JADE_CHANCE;
     public static ForgeConfigSpec.IntValue JADE_SIZE;
     public static ForgeConfigSpec.IntValue JADE_MIN_HEIGHT;
     public static ForgeConfigSpec.IntValue JADE_MAX_HEIGHT;
+
+    public static ForgeConfigSpec.BooleanValue LARVIKITE_GENERATION;
+    public static ForgeConfigSpec.IntValue LARVIKITE_CHANCE;
+    public static ForgeConfigSpec.IntValue LARVIKITE_SIZE;
+    public static ForgeConfigSpec.IntValue LARVIKITE_MIN_HEIGHT;
+    public static ForgeConfigSpec.IntValue LARVIKITE_MAX_HEIGHT;
 
     public static void init(ForgeConfigSpec.Builder SERVER_BUILDER)
     {
@@ -79,6 +85,15 @@ public class WorldgenConfig
         JADE_CHANCE = SERVER_BUILDER.comment("Chances of jade pocket being generated [0-100, default: 5]").defineInRange("jadeChance", 5, 0, 100);
         JADE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimal height for jade pocket generation, [0-255, default: 50]").defineInRange("jadeMinHeight", 50, 0, 255);
         JADE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for jade pocket generation [0-255, default: 100]").defineInRange("jadeMaxHeight", 120, 0, 255);
+
+        SERVER_BUILDER.pop();
+        SERVER_BUILDER.comment("Larvikite Generation").push("larvikite");
+
+        LARVIKITE_GENERATION = SERVER_BUILDER.comment("Generate larvikite in the world [true / false]").define("larvikiteGeneration", true);
+        LARVIKITE_SIZE = SERVER_BUILDER.comment("Size of larvikite pockets [0-100, default: 15]").defineInRange("larvikiteSize", 20, 0, 100);
+        LARVIKITE_CHANCE = SERVER_BUILDER.comment("Chances of larvikite pocket being generated [0-100, default: 5]").defineInRange("larvikiteChance", 10, 0, 100);
+        LARVIKITE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimal height for larvikite pocket generation, [0-255, default: 50]").defineInRange("larvikiteMinHeight", 32, 0, 255);
+        LARVIKITE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for larvikite pocket generation [0-255, default: 100]").defineInRange("larvikiteMaxHeight", 72, 0, 255);
 
         SERVER_BUILDER.pop();
     }

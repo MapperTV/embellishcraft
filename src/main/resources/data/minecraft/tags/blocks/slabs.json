@@ -6,12 +6,14 @@
     "embellishcraft:marble_slab",
     "embellishcraft:gneiss_slab",
     "embellishcraft:jade_slab",
+    "embellishcraft:larvikite_slab",
     
     "embellishcraft:basalt_cobblestone_slab",
     "embellishcraft:slate_cobblestone_slab",
     "embellishcraft:marble_cobblestone_slab",
     "embellishcraft:gneiss_cobblestone_slab",
     "embellishcraft:jade_cobblestone_slab",
+    "embellishcraft:larvikite_cobblestone_slab",
     
     "embellishcraft:basalt_bricks_slab",
     "embellishcraft:dark_bricks_slab",
@@ -24,6 +26,7 @@
     "embellishcraft:marble_bricks_slab",
     "embellishcraft:gneiss_bricks_slab",
     "embellishcraft:jade_bricks_slab",
+    "embellishcraft:larvikite_bricks_slab",
     
     "embellishcraft:basalt_large_bricks_slab",
     "embellishcraft:diorite_large_bricks_slab",
@@ -36,6 +39,7 @@
     "embellishcraft:weared_large_bricks_slab",
     "embellishcraft:gneiss_large_bricks_slab",
     "embellishcraft:jade_large_bricks_slab",
+    "embellishcraft:larvikite_large_bricks_slab",
     
     "embellishcraft:concrete_paving_slab",
     "embellishcraft:damaged_paving_slab",
@@ -47,6 +51,7 @@
     "embellishcraft:white_concrete_paving_slab",
     "embellishcraft:gneiss_paving_slab",
     "embellishcraft:jade_paving_slab",
+    "embellishcraft:larvikite_paving_slab",
     
     "embellishcraft:concrete_tiles_slab",
     "embellishcraft:skyblue_tiles_slab",

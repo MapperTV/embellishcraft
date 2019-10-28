@@ -63,12 +63,18 @@ public class ModBlocks
     public static final Block GNEISS_SLAB = null;
     public static final Block GNEISS_WALL = null;
     public static final Block GNEISS_PRESSURE_PLATE = null;
-    
+
     public static final Block JADE = null;
     public static final Block JADE_STAIRS = null;
     public static final Block JADE_SLAB = null;
     public static final Block JADE_WALL = null;
     public static final Block JADE_PRESSURE_PLATE = null;
+
+    public static final Block LARVIKITE = null;
+    public static final Block LARVIKITE_STAIRS = null;
+    public static final Block LARVIKITE_SLAB = null;
+    public static final Block LARVIKITE_WALL = null;
+    public static final Block LARVIKITE_PRESSURE_PLATE = null;
 
     // Cobblestones
 
@@ -95,12 +101,18 @@ public class ModBlocks
     public static final Block GNEISS_COBBLESTONE_SLAB = null;
     public static final Block GNEISS_COBBLESTONE_WALL = null;
     public static final Block GNEISS_COBBLESTONE_PRESSURE_PLATE = null;
-    
+
     public static final Block JADE_COBBLESTONE = null;
     public static final Block JADE_COBBLESTONE_STAIRS = null;
     public static final Block JADE_COBBLESTONE_SLAB = null;
     public static final Block JADE_COBBLESTONE_WALL = null;
     public static final Block JADE_COBBLESTONE_PRESSURE_PLATE = null;
+
+    public static final Block LARVIKITE_COBBLESTONE = null;
+    public static final Block LARVIKITE_COBBLESTONE_STAIRS = null;
+    public static final Block LARVIKITE_COBBLESTONE_SLAB = null;
+    public static final Block LARVIKITE_COBBLESTONE_WALL = null;
+    public static final Block LARVIKITE_COBBLESTONE_PRESSURE_PLATE = null;
 
     // Bricks
 
@@ -163,12 +175,18 @@ public class ModBlocks
     public static final Block GNEISS_BRICKS_SLAB = null;
     public static final Block GNEISS_BRICKS_WALL = null;
     public static final Block GNEISS_BRICKS_PRESSURE_PLATE = null;
-    
+
     public static final Block JADE_BRICKS = null;
     public static final Block JADE_BRICKS_STAIRS = null;
     public static final Block JADE_BRICKS_SLAB = null;
     public static final Block JADE_BRICKS_WALL = null;
     public static final Block JADE_BRICKS_PRESSURE_PLATE = null;
+
+    public static final Block LARVIKITE_BRICKS = null;
+    public static final Block LARVIKITE_BRICKS_STAIRS = null;
+    public static final Block LARVIKITE_BRICKS_SLAB = null;
+    public static final Block LARVIKITE_BRICKS_WALL = null;
+    public static final Block LARVIKITE_BRICKS_PRESSURE_PLATE = null;
 
     // Large bricks
 
@@ -231,12 +249,18 @@ public class ModBlocks
     public static final Block GNEISS_LARGE_BRICKS_SLAB = null;
     public static final Block GNEISS_LARGE_BRICKS_WALL = null;
     public static final Block GNEISS_LARGE_BRICKS_PRESSURE_PLATE = null;
-    
+
     public static final Block JADE_LARGE_BRICKS = null;
     public static final Block JADE_LARGE_BRICKS_STAIRS = null;
     public static final Block JADE_LARGE_BRICKS_SLAB = null;
     public static final Block JADE_LARGE_BRICKS_WALL = null;
     public static final Block JADE_LARGE_BRICKS_PRESSURE_PLATE = null;
+
+    public static final Block LARVIKITE_LARGE_BRICKS = null;
+    public static final Block LARVIKITE_LARGE_BRICKS_STAIRS = null;
+    public static final Block LARVIKITE_LARGE_BRICKS_SLAB = null;
+    public static final Block LARVIKITE_LARGE_BRICKS_WALL = null;
+    public static final Block LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
     // Paving
 
@@ -293,13 +317,18 @@ public class ModBlocks
     public static final Block GNEISS_PAVING_SLAB = null;
     public static final Block GNEISS_PAVING_WALL = null;
     public static final Block GNEISS_PAVING_PRESSURE_PLATE = null;
-    
+
     public static final Block JADE_PAVING = null;
     public static final Block JADE_PAVING_STAIRS = null;
     public static final Block JADE_PAVING_SLAB = null;
     public static final Block JADE_PAVING_WALL = null;
     public static final Block JADE_PAVING_PRESSURE_PLATE = null;
 
+    public static final Block LARVIKITE_PAVING = null;
+    public static final Block LARVIKITE_PAVING_STAIRS = null;
+    public static final Block LARVIKITE_PAVING_SLAB = null;
+    public static final Block LARVIKITE_PAVING_WALL = null;
+    public static final Block LARVIKITE_PAVING_PRESSURE_PLATE = null;
 
     // Tiles
 
@@ -608,6 +637,7 @@ public class ModBlocks
         createBlockWithVariants(event, "marble", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "gneiss", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "jade", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "larvikite", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Cobblestones
 
@@ -616,6 +646,7 @@ public class ModBlocks
         createBlockWithVariants(event, "marble_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "gneiss_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "jade_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "larvikite_cobblestone", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Bricks
 
@@ -630,6 +661,7 @@ public class ModBlocks
         createBlockWithVariants(event, "marble_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "gneiss_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "jade_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "larvikite_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Large bricks
 
@@ -644,6 +676,7 @@ public class ModBlocks
         createBlockWithVariants(event, "weared_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "gneiss_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "jade_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "larvikite_large_bricks", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Paving
 
@@ -657,6 +690,7 @@ public class ModBlocks
         createBlockWithVariants(event, "white_concrete_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "gneiss_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
         createBlockWithVariants(event, "jade_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
+        createBlockWithVariants(event, "larvikite_paving", true, true, true, true, Material.ROCK, SoundType.STONE, ToolType.PICKAXE);
 
         // Tiles
 
@@ -811,6 +845,7 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE, MARBLE_STAIRS, MARBLE_SLAB, MARBLE_WALL, MARBLE_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS, GNEISS_STAIRS, GNEISS_SLAB, GNEISS_WALL, GNEISS_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE, JADE_STAIRS, JADE_SLAB, JADE_WALL, JADE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE, LARVIKITE_STAIRS, LARVIKITE_SLAB, LARVIKITE_WALL, LARVIKITE_PRESSURE_PLATE);
 
         // Cobblestones
 
@@ -819,6 +854,7 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_COBBLESTONE, MARBLE_COBBLESTONE_STAIRS, MARBLE_COBBLESTONE_SLAB, MARBLE_COBBLESTONE_WALL, MARBLE_COBBLESTONE_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_COBBLESTONE, GNEISS_COBBLESTONE_STAIRS, GNEISS_COBBLESTONE_SLAB, GNEISS_COBBLESTONE_WALL, GNEISS_COBBLESTONE_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_COBBLESTONE, JADE_COBBLESTONE_STAIRS, JADE_COBBLESTONE_SLAB, JADE_COBBLESTONE_WALL, JADE_COBBLESTONE_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_COBBLESTONE, LARVIKITE_COBBLESTONE_STAIRS, LARVIKITE_COBBLESTONE_SLAB, LARVIKITE_COBBLESTONE_WALL, LARVIKITE_COBBLESTONE_PRESSURE_PLATE);
 
         // Bricks
 
@@ -833,6 +869,7 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_BRICKS, MARBLE_BRICKS_STAIRS, MARBLE_BRICKS_SLAB, MARBLE_BRICKS_WALL, MARBLE_BRICKS_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_BRICKS, GNEISS_BRICKS_STAIRS, GNEISS_BRICKS_SLAB, GNEISS_BRICKS_WALL, GNEISS_BRICKS_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_BRICKS, JADE_BRICKS_STAIRS, JADE_BRICKS_SLAB, JADE_BRICKS_WALL, JADE_BRICKS_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_BRICKS, LARVIKITE_BRICKS_STAIRS, LARVIKITE_BRICKS_SLAB, LARVIKITE_BRICKS_WALL, LARVIKITE_BRICKS_PRESSURE_PLATE);
 
         // Large bricks
 
@@ -847,6 +884,7 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_LARGE_BRICKS, WEARED_LARGE_BRICKS_STAIRS, WEARED_LARGE_BRICKS_SLAB, WEARED_LARGE_BRICKS_WALL, WEARED_LARGE_BRICKS_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_LARGE_BRICKS, GNEISS_LARGE_BRICKS_STAIRS, GNEISS_LARGE_BRICKS_SLAB, GNEISS_LARGE_BRICKS_WALL, GNEISS_LARGE_BRICKS_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_LARGE_BRICKS, JADE_LARGE_BRICKS_STAIRS, JADE_LARGE_BRICKS_SLAB, JADE_LARGE_BRICKS_WALL, JADE_LARGE_BRICKS_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_LARGE_BRICKS, LARVIKITE_LARGE_BRICKS_STAIRS, LARVIKITE_LARGE_BRICKS_SLAB, LARVIKITE_LARGE_BRICKS_WALL, LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE);
 
         // Paving
 
@@ -860,6 +898,7 @@ public class ModBlocks
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CONCRETE_PAVING, WHITE_CONCRETE_PAVING_STAIRS, WHITE_CONCRETE_PAVING_SLAB, WHITE_CONCRETE_PAVING_WALL, WHITE_CONCRETE_PAVING_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_PAVING, GNEISS_PAVING_STAIRS, GNEISS_PAVING_SLAB, GNEISS_PAVING_WALL, GNEISS_PAVING_PRESSURE_PLATE);
         createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_PAVING, JADE_PAVING_STAIRS, JADE_PAVING_SLAB, JADE_PAVING_WALL, JADE_PAVING_PRESSURE_PLATE);
+        createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_PAVING, LARVIKITE_PAVING_STAIRS, LARVIKITE_PAVING_SLAB, LARVIKITE_PAVING_WALL, LARVIKITE_PAVING_PRESSURE_PLATE);
 
         // Tiles
 
