@@ -26,6 +26,8 @@ public class OreGenerator
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, ModBlocks.MARBLE.getDefaultState(), WorldgenConfig.MARBLE_SIZE.get().intValue()), COUNT_RANGE, new CountRangeConfig(WorldgenConfig.MARBLE_CHANCE.get(), WorldgenConfig.MARBLE_MIN_HEIGHT.get(), WorldgenConfig.MARBLE_MIN_HEIGHT.get(), WorldgenConfig.MARBLE_MAX_HEIGHT.get())));
             if(WorldgenConfig.GNEISS_GENERATION.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, ModBlocks.GNEISS.getDefaultState(), WorldgenConfig.GNEISS_SIZE.get().intValue()), COUNT_RANGE, new CountRangeConfig(WorldgenConfig.GNEISS_CHANCE.get(), WorldgenConfig.GNEISS_MIN_HEIGHT.get(), WorldgenConfig.GNEISS_MIN_HEIGHT.get(), WorldgenConfig.GNEISS_MAX_HEIGHT.get())));
+            if(WorldgenConfig.JADE_GENERATION.get())
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, ModBlocks.JADE.getDefaultState(), WorldgenConfig.JADE_SIZE.get().intValue()), COUNT_RANGE, new CountRangeConfig(WorldgenConfig.JADE_CHANCE.get(), WorldgenConfig.JADE_MIN_HEIGHT.get(), WorldgenConfig.JADE_MIN_HEIGHT.get(), WorldgenConfig.JADE_MAX_HEIGHT.get())));
         }
     }
 }
