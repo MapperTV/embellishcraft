@@ -643,6 +643,9 @@ public class ModBlocks
     public static final Block WHITE_STEEL_DOOR = null;
     public static final Block STURDY_WHITE_STEEL_DOOR = null;
     public static final Block WARNING_WHITE_STEEL_DOOR = null;
+    public static final Block RUSTY_DOOR = null;
+    public static final Block STURDY_RUSTY_DOOR = null;
+    public static final Block WARNING_RUSTY_DOOR = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -865,6 +868,9 @@ public class ModBlocks
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("white_steel_door"));
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("sturdy_white_steel_door"));
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("warning_white_steel_door"));
+        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("rusty_door"));
+        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("sturdy_rusty_door"));
+        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("warning_rusty_door"));
     }
 
     @SubscribeEvent
@@ -1088,6 +1094,9 @@ public class ModBlocks
         event.getRegistry().register(new BlockItem(WHITE_STEEL_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_STEEL_DOOR.getRegistryName()));
         event.getRegistry().register(new BlockItem(STURDY_WHITE_STEEL_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STURDY_WHITE_STEEL_DOOR.getRegistryName()));
         event.getRegistry().register(new BlockItem(WARNING_WHITE_STEEL_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WARNING_WHITE_STEEL_DOOR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(RUSTY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(RUSTY_DOOR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(STURDY_RUSTY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STURDY_RUSTY_DOOR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(WARNING_RUSTY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WARNING_RUSTY_DOOR.getRegistryName()));
 
     }
 

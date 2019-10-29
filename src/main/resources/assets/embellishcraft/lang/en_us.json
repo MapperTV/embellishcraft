@@ -618,6 +618,9 @@
     "block.embellishcraft.white_steel_door": "White Steel Door",
     "block.embellishcraft.sturdy_white_steel_door": "Sturdy White Steel Door",
     "block.embellishcraft.warning_white_steel_door": "White Steel Door (Warning)",
+    "block.embellishcraft.rusty_door": "Rusty Door",
+    "block.embellishcraft.sturdy_rusty_door": "Sturdy Rusty Door",
+    "block.embellishcraft.warning_rusty_door": "Rusty Door (Warning)",
     
     "comment_B": "Creative Tabs (Item Groups)",
     
