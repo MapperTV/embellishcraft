@@ -612,6 +612,13 @@
     "block.embellishcraft.dark_oak_fancy_door": "Dark Oak Fancy Door",
     "block.embellishcraft.acacia_fancy_door": "Acacia Fancy Door",
     
+    "block.embellishcraft.steel_door": "Steel Door",
+    "block.embellishcraft.sturdy_steel_door": "Sturdy Steel Door",
+    "block.embellishcraft.warning_steel_door": "Steel Door (Warning)",
+    "block.embellishcraft.white_steel_door": "White Steel Door",
+    "block.embellishcraft.sturdy_white_steel_door": "Sturdy White Steel Door",
+    "block.embellishcraft.warning_white_steel_door": "White Steel Door (Warning)",
+    
     "comment_B": "Creative Tabs (Item Groups)",
     
     "itemGroup.embellishcraft_group": "EmbellishCraft"

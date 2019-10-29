@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "steel_door",
+  "pattern": [
+    "#",
+    "B"
+  ],
+  "key": {
+    "#": {
+        "tag": "forge:dyes/white"
+    },
+    "B": {
+        "item": "embellishcraft:steel_door"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:white_steel_door"
+  }
+}
