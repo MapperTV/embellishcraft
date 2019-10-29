@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fancy_door",
+  "pattern": [
+    "##",
+    "#B",
+    "##"
+  ],
+  "key": {
+    "B": {
+        "item": "minecraft:acacia_button"
+    },
+    "#": {
+        "item": "minecraft:acacia_planks"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:acacia_fancy_door",
+    "count": 3
+  }
+}

@@ -627,10 +627,15 @@ public class ModBlocks
     public static final Block RED_TABLE_LAMP = null;
     public static final Block WHITE_TABLE_LAMP = null;
     public static final Block YELLOW_TABLE_LAMP = null;
-    
+
     // Doors
-    
+
     public static final Block OAK_FANCY_DOOR = null;
+    public static final Block BIRCH_FANCY_DOOR = null;
+    public static final Block SPRUCE_FANCY_DOOR = null;
+    public static final Block JUNGLE_FANCY_DOOR = null;
+    public static final Block DARK_OAK_FANCY_DOOR = null;
+    public static final Block ACACIA_FANCY_DOOR = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -839,8 +844,13 @@ public class ModBlocks
         event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("yellow_table_lamp"));
 
         // Doors
-        
+
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_fancy_door"));
+        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_fancy_door"));
+        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_fancy_door"));
+        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_fancy_door"));
+        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_fancy_door"));
+        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_fancy_door"));
     }
 
     @SubscribeEvent
@@ -1050,8 +1060,13 @@ public class ModBlocks
         event.getRegistry().register(new BlockItem(YELLOW_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(YELLOW_TABLE_LAMP.getRegistryName()));
 
         // Door
-        
+
         event.getRegistry().register(new BlockItem(OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BIRCH_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(SPRUCE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(JUNGLE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(DARK_OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new BlockItem(ACACIA_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_FANCY_DOOR.getRegistryName()));
 
     }
 
