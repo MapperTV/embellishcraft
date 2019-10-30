@@ -28,6 +28,7 @@ import tv.mapper.embellishcraft.block.CustomStairsBlock;
 import tv.mapper.embellishcraft.block.CustomWallBlock;
 import tv.mapper.embellishcraft.block.LampBlock;
 import tv.mapper.embellishcraft.block.PlateBlock;
+import tv.mapper.embellishcraft.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.embellishcraft.block.TerraceChairBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
@@ -646,6 +647,10 @@ public class ModBlocks
     public static final Block RUSTY_DOOR = null;
     public static final Block STURDY_RUSTY_DOOR = null;
     public static final Block WARNING_RUSTY_DOOR = null;
+    
+    // Stairs
+    
+    public static final Block STEEL_STAIRS = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -871,7 +876,11 @@ public class ModBlocks
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("rusty_door"));
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("sturdy_rusty_door"));
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("warning_rusty_door"));
-    }
+
+        // Stairs
+        
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_stairs"));
+}
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
@@ -1098,6 +1107,10 @@ public class ModBlocks
         event.getRegistry().register(new BlockItem(STURDY_RUSTY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STURDY_RUSTY_DOOR.getRegistryName()));
         event.getRegistry().register(new BlockItem(WARNING_RUSTY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WARNING_RUSTY_DOOR.getRegistryName()));
 
+        // Stairs
+        
+        event.getRegistry().register(new BlockItem(STEEL_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_STAIRS.getRegistryName()));
+        
     }
 
     /**
