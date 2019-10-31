@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  i",
+        " i/",
+        "i/ "
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:birch_planks"
+        },
+        "/": {
+            "tag": "forge:rods/wooden"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:birch_suspended_stairs",
+        "count": 6
+    }
+}

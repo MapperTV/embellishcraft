@@ -647,11 +647,16 @@ public class ModBlocks
     public static final Block RUSTY_DOOR = null;
     public static final Block STURDY_RUSTY_DOOR = null;
     public static final Block WARNING_RUSTY_DOOR = null;
-    
+
     // Stairs
-    
+
     public static final Block STEEL_SUSPENDED_STAIRS = null;
     public static final Block OAK_SUSPENDED_STAIRS = null;
+    public static final Block BIRCH_SUSPENDED_STAIRS = null;
+    public static final Block SPRUCE_SUSPENDED_STAIRS = null;
+    public static final Block JUNGLE_SUSPENDED_STAIRS = null;
+    public static final Block DARK_OAK_SUSPENDED_STAIRS = null;
+    public static final Block ACACIA_SUSPENDED_STAIRS = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -879,10 +884,15 @@ public class ModBlocks
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("warning_rusty_door"));
 
         // Stairs
-        
+
         event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_suspended_stairs"));
-        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("oak_suspended_stairs"));
-}
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_suspended_stairs"));
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_suspended_stairs"));
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_suspended_stairs"));
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_suspended_stairs"));
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_suspended_stairs"));
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_suspended_stairs"));
+    }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
@@ -1110,9 +1120,15 @@ public class ModBlocks
         event.getRegistry().register(new BlockItem(WARNING_RUSTY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WARNING_RUSTY_DOOR.getRegistryName()));
 
         // Stairs
-        
+
         event.getRegistry().register(new BlockItem(STEEL_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_SUSPENDED_STAIRS.getRegistryName()));
-        
+        event.getRegistry().register(new FuelBlockItem(OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.suspendedStairBurnTime).setRegistryName(OAK_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BIRCH_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.suspendedStairBurnTime).setRegistryName(BIRCH_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(SPRUCE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.suspendedStairBurnTime).setRegistryName(SPRUCE_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(JUNGLE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.suspendedStairBurnTime).setRegistryName(JUNGLE_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(DARK_OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.suspendedStairBurnTime).setRegistryName(DARK_OAK_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ACACIA_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.suspendedStairBurnTime).setRegistryName(ACACIA_SUSPENDED_STAIRS.getRegistryName()));
+
     }
 
     /**
