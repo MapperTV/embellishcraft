@@ -622,6 +622,10 @@
     "block.embellishcraft.sturdy_rusty_door": "Sturdy Rusty Door",
     "block.embellishcraft.warning_rusty_door": "Rusty Door (Warning)",
     
+    "comment_A12": "Stairs",
+    
+    "block.embellishcraft.steel_stairs": "Steel Stairs",
+    
     "comment_B": "Creative Tabs (Item Groups)",
     
     "itemGroup.embellishcraft_group": "EmbellishCraft"
