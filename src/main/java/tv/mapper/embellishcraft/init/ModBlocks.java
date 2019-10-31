@@ -650,7 +650,8 @@ public class ModBlocks
     
     // Stairs
     
-    public static final Block STEEL_STAIRS = null;
+    public static final Block STEEL_SUSPENDED_STAIRS = null;
+    public static final Block OAK_SUSPENDED_STAIRS = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -879,7 +880,8 @@ public class ModBlocks
 
         // Stairs
         
-        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_stairs"));
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_suspended_stairs"));
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("oak_suspended_stairs"));
 }
 
     @SubscribeEvent
@@ -1109,7 +1111,7 @@ public class ModBlocks
 
         // Stairs
         
-        event.getRegistry().register(new BlockItem(STEEL_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_STAIRS.getRegistryName()));
+        event.getRegistry().register(new BlockItem(STEEL_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_SUSPENDED_STAIRS.getRegistryName()));
         
     }
 

@@ -2,12 +2,12 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "steel_stairs",
+      "name": "steel_suspended_stairs",
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "embellishcraft:steel_stairs"
+          "name": "embellishcraft:steel_suspended_stairs"
         }
       ],
       "conditions": [
