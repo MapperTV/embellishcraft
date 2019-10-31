@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:oak_fancy_door",
+    "embellishcraft:birch_fancy_door",
+    "embellishcraft:spruce_fancy_door",
+    "embellishcraft:jungle_fancy_door",
+    "embellishcraft:dark_oak_fancy_door",
+    "embellishcraft:acacia_fancy_door"
+  ]
+}

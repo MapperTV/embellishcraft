@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:steel_door",
+    "embellishcraft:sturdy_steel_door",
+    "embellishcraft:warning_steel_door",
+    "embellishcraft:sturdy_white_steel_door",
+    "embellishcraft:warning_white_steel_door",
+    "embellishcraft:rusty_door",
+    "embellishcraft:sturdy_rusty_door",
+    "embellishcraft:warning_rusty_door"
+  ]
+}
