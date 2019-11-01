@@ -1102,12 +1102,12 @@ public class ModBlocks
 
         // Door
 
-        event.getRegistry().register(new BlockItem(OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(new BlockItem(BIRCH_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(new BlockItem(SPRUCE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(new BlockItem(JUNGLE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(new BlockItem(DARK_OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(new BlockItem(ACACIA_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(OAK_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BIRCH_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(BIRCH_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(SPRUCE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(SPRUCE_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(JUNGLE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(JUNGLE_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(DARK_OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(DARK_OAK_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ACACIA_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(ACACIA_FANCY_DOOR.getRegistryName()));
 
         event.getRegistry().register(new BlockItem(STEEL_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_DOOR.getRegistryName()));
         event.getRegistry().register(new BlockItem(STURDY_STEEL_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STURDY_STEEL_DOOR.getRegistryName()));
