@@ -90,7 +90,7 @@ task deobfJar(type: Jar) { // Generate deobfuscated
 }
 
 task sourceJar(type: Jar) { // Generate sources
-    from sourceSets.main.allSource
+    from sourceSets.main.allJava
     classifier = 'sources'
 }
 

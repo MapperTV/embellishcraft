@@ -8,6 +8,13 @@
     "embellishcraft:acacia_terrace_table",
     "embellishcraft:dark_oak_terrace_table",
     
-    "embellishcraft:metallic_terrace_table"
+    "embellishcraft:metallic_terrace_table",
+    
+    "embellishcraft:oak_table",
+    "embellishcraft:spruce_table",
+    "embellishcraft:birch_table",
+    "embellishcraft:jungle_table",
+    "embellishcraft:acacia_table",
+    "embellishcraft:dark_oak_table"
   ]
 }
