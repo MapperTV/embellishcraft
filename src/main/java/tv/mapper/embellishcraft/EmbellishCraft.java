@@ -3,6 +3,7 @@ package tv.mapper.embellishcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -12,12 +13,16 @@ import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
+import tv.mapper.embellishcraft.proxy.ClientProxy;
+import tv.mapper.embellishcraft.proxy.IProxy;
+import tv.mapper.embellishcraft.proxy.ServerProxy;
 import tv.mapper.embellishcraft.world.OreGenerator;
 
 @Mod(Constants.MODID)
 public class EmbellishCraft
 {
     public static final Logger LOGGER = LogManager.getLogger();
+    public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
 
     public EmbellishCraft()
     {
@@ -39,11 +44,11 @@ public class EmbellishCraft
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-        LOGGER.info("EmbellishCraft client setup");
+        // LOGGER.info("EmbellishCraft client setup");
     }
 
     private void serverSetup(final FMLDedicatedServerSetupEvent event)
     {
-        LOGGER.info("EmbellishCraft server setup");
+        // LOGGER.info("EmbellishCraft server setup");
     }
 }

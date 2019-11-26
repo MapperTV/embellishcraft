@@ -20,6 +20,7 @@ import tv.mapper.embellishcraft.block.AllRotationBlock;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.block.CustomBlock;
+import tv.mapper.embellishcraft.block.CustomChestBlock;
 import tv.mapper.embellishcraft.block.CustomDoorBlock;
 import tv.mapper.embellishcraft.block.CustomLadderBlock;
 import tv.mapper.embellishcraft.block.CustomPressurePlateBlock;
@@ -658,6 +659,10 @@ public class ModBlocks
     public static final Block DARK_OAK_SUSPENDED_STAIRS = null;
     public static final Block ACACIA_SUSPENDED_STAIRS = null;
 
+    // Chests
+
+    public static final Block OAK_FANCY_CHEST = null;
+
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
@@ -892,6 +897,11 @@ public class ModBlocks
         event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_suspended_stairs"));
         event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_suspended_stairs"));
         event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_suspended_stairs"));
+
+        // Chests
+
+        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName("oak_fancy_chest"));
+
     }
 
     @SubscribeEvent
@@ -1128,6 +1138,10 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(JUNGLE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.suspendedStairBurnTime).setRegistryName(JUNGLE_SUSPENDED_STAIRS.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(DARK_OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.suspendedStairBurnTime).setRegistryName(DARK_OAK_SUSPENDED_STAIRS.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(ACACIA_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.suspendedStairBurnTime).setRegistryName(ACACIA_SUSPENDED_STAIRS.getRegistryName()));
+
+        // Chests
+
+        event.getRegistry().register(new FuelBlockItem(OAK_FANCY_CHEST, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(OAK_FANCY_CHEST.getRegistryName()));
 
     }
 
