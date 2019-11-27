@@ -2,8 +2,8 @@ package tv.mapper.embellishcraft.proxy;
 
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import tv.mapper.embellishcraft.CustomChestTileEntity;
 import tv.mapper.embellishcraft.client.renderer.CustomChestTileEntityRenderer;
+import tv.mapper.embellishcraft.tileentity.CustomChestTileEntity;
 
 public class ClientProxy implements IProxy
 {

@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.Constants;
-import tv.mapper.embellishcraft.CustomChestTileEntity;
+import tv.mapper.embellishcraft.tileentity.CustomChestTileEntity;
 
 @ObjectHolder(Constants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)

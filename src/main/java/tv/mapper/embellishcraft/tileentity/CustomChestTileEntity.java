@@ -1,4 +1,4 @@
-package tv.mapper.embellishcraft;
+package tv.mapper.embellishcraft.tileentity;
 
 import net.minecraft.tileentity.ChestTileEntity;
 import net.minecraft.tileentity.TileEntityType;

@@ -39,6 +39,8 @@ public class EmbellishCraft
     {
         LOGGER.info("EmbellishCraft setup");
 
+        proxy.setup(event);
+
         OreGenerator.setupOregen();
     }
 
