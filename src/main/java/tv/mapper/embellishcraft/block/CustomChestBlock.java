@@ -33,6 +33,5 @@ public class CustomChestBlock extends ChestBlock
                 ((CustomChestTileEntity)tileentity).setCustomName(stack.getDisplayName());
             }
         }
-
     }
 }
