@@ -12,7 +12,6 @@ import tv.mapper.embellishcraft.tileentity.CustomChestTileEntity;
 
 public class CustomChestBlock extends ChestBlock
 {
-
     public CustomChestBlock(Properties properties)
     {
         super(properties);

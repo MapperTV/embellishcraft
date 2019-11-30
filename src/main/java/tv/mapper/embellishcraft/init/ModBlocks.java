@@ -34,6 +34,7 @@ import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.embellishcraft.block.TerraceChairBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
 import tv.mapper.embellishcraft.block.UpDownBlock;
+import tv.mapper.embellishcraft.client.renderer.CustomChestItemStackTileEntityRenderer;
 import tv.mapper.embellishcraft.item.FuelBlockItem;
 import tv.mapper.embellishcraft.item.ModItemGroups;
 
@@ -1141,7 +1142,7 @@ public class ModBlocks
 
         // Chests
 
-        event.getRegistry().register(new FuelBlockItem(OAK_FANCY_CHEST, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(OAK_FANCY_CHEST.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(OAK_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(OAK_FANCY_CHEST.getRegistryName()));
 
     }
 

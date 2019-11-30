@@ -18,14 +18,9 @@ import tv.mapper.embellishcraft.init.ModBlocks;
 public class CustomChestTileEntityRenderer<T extends TileEntity & IChestLid> extends TileEntityRenderer<T>
 {
     private static final ResourceLocation TEXTURE_NORMAL_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/oak_fancy_chest_double.png");
-    private static final ResourceLocation TEXTURE_NORMAL = new ResourceLocation("textures/entity/chest/normal.png");
+    private static final ResourceLocation TEXTURE_NORMAL = new ResourceLocation(Constants.MODID, "textures/entity/chest/oak_fancy_chest.png");
     private final ChestModel simpleChest = new ChestModel();
     private final ChestModel largeChest = new LargeChestModel();
-
-    public CustomChestTileEntityRenderer()
-    {
-
-    }
 
     public void render(T tileEntityIn, double x, double y, double z, float partialTicks, int destroyStage)
     {
