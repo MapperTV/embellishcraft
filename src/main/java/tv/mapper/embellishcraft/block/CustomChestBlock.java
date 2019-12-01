@@ -9,12 +9,16 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import tv.mapper.embellishcraft.tileentity.CustomChestTileEntity;
+import tv.mapper.embellishcraft.util.CustomChestType;
 
 public class CustomChestBlock extends ChestBlock
 {
-    public CustomChestBlock(Properties properties)
+    private CustomChestType type;
+
+    public CustomChestBlock(Properties properties, CustomChestType type)
     {
         super(properties);
+        this.type = type;
     }
 
     public TileEntity createNewTileEntity(IBlockReader worldIn)
@@ -32,5 +36,10 @@ public class CustomChestBlock extends ChestBlock
                 ((CustomChestTileEntity)tileentity).setCustomName(stack.getDisplayName());
             }
         }
+    }
+
+    public CustomChestType getChestType()
+    {
+        return type;
     }
 }

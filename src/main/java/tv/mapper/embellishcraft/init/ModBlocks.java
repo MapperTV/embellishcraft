@@ -37,6 +37,7 @@ import tv.mapper.embellishcraft.block.UpDownBlock;
 import tv.mapper.embellishcraft.client.renderer.CustomChestItemStackTileEntityRenderer;
 import tv.mapper.embellishcraft.item.FuelBlockItem;
 import tv.mapper.embellishcraft.item.ModItemGroups;
+import tv.mapper.embellishcraft.util.CustomChestType;
 
 @ObjectHolder(Constants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
@@ -663,6 +664,7 @@ public class ModBlocks
     // Chests
 
     public static final Block OAK_FANCY_CHEST = null;
+    public static final Block SPRUCE_FANCY_CHEST = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -901,7 +903,8 @@ public class ModBlocks
 
         // Chests
 
-        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName("oak_fancy_chest"));
+        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.FANCY_OAK).setRegistryName("oak_fancy_chest"));
+        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.FANCY_SPRUCE).setRegistryName("spruce_fancy_chest"));
 
     }
 
@@ -1143,6 +1146,7 @@ public class ModBlocks
         // Chests
 
         event.getRegistry().register(new FuelBlockItem(OAK_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(OAK_FANCY_CHEST.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(SPRUCE_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(SPRUCE_FANCY_CHEST.getRegistryName()));
 
     }
 

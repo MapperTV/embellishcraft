@@ -16,12 +16,13 @@ public class CustomChestItemStackTileEntityRenderer extends ItemStackTileEntityR
         Block block = Block.getBlockFromItem(itemStack.getItem());
         if(block instanceof CustomChestBlock)
         {
+            // EmbellishCraft.LOGGER.debug(block.getRegistryName());
             CustomChestTileEntity tileEntity = new CustomChestTileEntity();
             TileEntityRenderer<CustomChestTileEntity> tileEntityRenderer = TileEntityRendererDispatcher.instance.getRenderer(tileEntity);
             if(tileEntityRenderer instanceof CustomChestTileEntityRenderer)
             {
                 CustomChestTileEntityRenderer<CustomChestTileEntity> customChestTileEntityRenderer = (CustomChestTileEntityRenderer<CustomChestTileEntity>)tileEntityRenderer;
-                customChestTileEntityRenderer.render(tileEntity, 0.0D, 0.0D, 0.0D, 0.0F, -1);
+                customChestTileEntityRenderer.render(tileEntity, 0.0D, 0.0D, 0.0D, 0.0F, -1, block.getRegistryName().toString());
             }
         }
         else

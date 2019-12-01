@@ -14,25 +14,54 @@ import net.minecraft.util.ResourceLocation;
 import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.block.CustomChestBlock;
 import tv.mapper.embellishcraft.init.ModBlocks;
+import tv.mapper.embellishcraft.util.CustomChestType;
 
 public class CustomChestTileEntityRenderer<T extends TileEntity & IChestLid> extends TileEntityRenderer<T>
 {
-    private static final ResourceLocation TEXTURE_NORMAL_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/oak_fancy_chest_double.png");
-    private static final ResourceLocation TEXTURE_NORMAL = new ResourceLocation(Constants.MODID, "textures/entity/chest/oak_fancy_chest.png");
+    private static final ResourceLocation FANCY_OAK_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/oak_fancy_chest_double.png");
+    private static final ResourceLocation FANCY_OAK_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/chest/oak_fancy_chest.png");
+    private static final ResourceLocation FANCY_SPRUCE_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/spruce_fancy_chest_double.png");
+    private static final ResourceLocation FANCY_SPRUCE_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/chest/spruce_fancy_chest.png");
     private final ChestModel simpleChest = new ChestModel();
     private final ChestModel largeChest = new LargeChestModel();
 
     public void render(T tileEntityIn, double x, double y, double z, float partialTicks, int destroyStage)
+    {
+        render(tileEntityIn, x, y, z, partialTicks, destroyStage, null);
+
+    }
+
+    public void render(T tileEntityIn, double x, double y, double z, float partialTicks, int destroyStage, String registryName)
     {
         GlStateManager.enableDepthTest();
         GlStateManager.depthFunc(515);
         GlStateManager.depthMask(true);
         BlockState blockstate = tileEntityIn.hasWorld() ? tileEntityIn.getBlockState() : ModBlocks.OAK_FANCY_CHEST.getDefaultState().with(CustomChestBlock.FACING, Direction.SOUTH);
         ChestType chesttype = blockstate.has(CustomChestBlock.TYPE) ? blockstate.get(CustomChestBlock.TYPE) : ChestType.SINGLE;
+
+        CustomChestType type;
+        String blockName;
+
+        if(registryName == null)
+            blockName = blockstate.getBlock().getRegistryName().toString();
+        else
+            blockName = registryName;
+
+        switch(blockName)
+        {
+            default:
+            case "embellishcraft:oak_fancy_chest":
+                type = CustomChestType.FANCY_OAK;
+                break;
+            case "embellishcraft:spruce_fancy_chest":
+                type = CustomChestType.FANCY_SPRUCE;
+                break;
+        }
+
         if(chesttype != ChestType.LEFT)
         {
             boolean flag = chesttype != ChestType.SINGLE;
-            ChestModel chestmodel = this.getChestModel(tileEntityIn, destroyStage, flag);
+            ChestModel chestmodel = this.getChestModel(tileEntityIn, destroyStage, flag, type);
             if(destroyStage >= 0)
             {
                 GlStateManager.matrixMode(5890);
@@ -73,7 +102,7 @@ public class CustomChestTileEntityRenderer<T extends TileEntity & IChestLid> ext
         }
     }
 
-    private ChestModel getChestModel(T tileEntityIn, int destroyStage, boolean doubleChest)
+    private ChestModel getChestModel(T tileEntityIn, int destroyStage, boolean doubleChest, CustomChestType type)
     {
         ResourceLocation resourcelocation;
         if(destroyStage >= 0)
@@ -82,7 +111,16 @@ public class CustomChestTileEntityRenderer<T extends TileEntity & IChestLid> ext
         }
         else
         {
-            resourcelocation = doubleChest ? TEXTURE_NORMAL_DOUBLE : TEXTURE_NORMAL;
+            switch(type)
+            {
+                default:
+                case FANCY_OAK:
+                    resourcelocation = doubleChest ? FANCY_OAK_CHEST_DOUBLE : FANCY_OAK_CHEST;
+                    break;
+                case FANCY_SPRUCE:
+                    resourcelocation = doubleChest ? FANCY_SPRUCE_CHEST_DOUBLE : FANCY_SPRUCE_CHEST;
+                    break;
+            }
         }
 
         this.bindTexture(resourcelocation);

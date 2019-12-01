@@ -18,6 +18,6 @@ public class ModTileEntityTypes
     @SubscribeEvent
     public static void registerTileEntities(final RegistryEvent.Register<TileEntityType<?>> event)
     {
-        event.getRegistry().register(TileEntityType.Builder.create(CustomChestTileEntity::new, ModBlocks.OAK_FANCY_CHEST).build(null).setRegistryName("custom_chest"));
+        event.getRegistry().register(TileEntityType.Builder.create(CustomChestTileEntity::new, ModBlocks.OAK_FANCY_CHEST, ModBlocks.SPRUCE_FANCY_CHEST).build(null).setRegistryName("custom_chest"));
     }
 }
