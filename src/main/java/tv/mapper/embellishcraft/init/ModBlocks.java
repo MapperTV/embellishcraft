@@ -664,7 +664,11 @@ public class ModBlocks
     // Chests
 
     public static final Block OAK_FANCY_CHEST = null;
+    public static final Block BIRCH_FANCY_CHEST = null;
     public static final Block SPRUCE_FANCY_CHEST = null;
+    public static final Block JUNGLE_FANCY_CHEST = null;
+    public static final Block DARK_OAK_FANCY_CHEST = null;
+    public static final Block ACACIA_FANCY_CHEST = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -903,8 +907,12 @@ public class ModBlocks
 
         // Chests
 
-        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.FANCY_OAK).setRegistryName("oak_fancy_chest"));
-        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.FANCY_SPRUCE).setRegistryName("spruce_fancy_chest"));
+        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY).setRegistryName("oak_fancy_chest"));
+        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.BIRCH_FANCY).setRegistryName("birch_fancy_chest"));
+        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.SPRUCE_FANCY).setRegistryName("spruce_fancy_chest"));
+        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.JUNGLE_FANCY).setRegistryName("jungle_fancy_chest"));
+        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.DARK_OAK_FANCY).setRegistryName("dark_oak_fancy_chest"));
+        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.ACACIA_FANCY).setRegistryName("acacia_fancy_chest"));
 
     }
 
@@ -1146,7 +1154,11 @@ public class ModBlocks
         // Chests
 
         event.getRegistry().register(new FuelBlockItem(OAK_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(OAK_FANCY_CHEST.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BIRCH_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(BIRCH_FANCY_CHEST.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(SPRUCE_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(SPRUCE_FANCY_CHEST.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(JUNGLE_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(JUNGLE_FANCY_CHEST.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(DARK_OAK_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(DARK_OAK_FANCY_CHEST.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ACACIA_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(ACACIA_FANCY_CHEST.getRegistryName()));
 
     }
 

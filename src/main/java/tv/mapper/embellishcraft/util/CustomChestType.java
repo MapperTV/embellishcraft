@@ -4,12 +4,12 @@ import net.minecraft.util.IStringSerializable;
 
 public enum CustomChestType implements IStringSerializable
 {
-    FANCY_OAK("fancy_oak"),
-    FANCY_BIRCH("fancy_birch"),
-    FANCY_SPRUCE("fancy_spruce"),
-    FANCY_JUNGLE("fancy_jungle"),
-    FANCY_DARK_OAK("fancy_dark_oak"),
-    FANCY_ACACIA("fancy_acacia");
+    OAK_FANCY("oak_fancy"),
+    BIRCH_FANCY("birch_fancy"),
+    SPRUCE_FANCY("spruce_fancy"),
+    JUNGLE_FANCY("jungle_fancy"),
+    DARK_OAK_FANCY("dark_oak_fancy"),
+    ACACIA_FANCY("acacia_fancy");
 
     private final String name;
 
