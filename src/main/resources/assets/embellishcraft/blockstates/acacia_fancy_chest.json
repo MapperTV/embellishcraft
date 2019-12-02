@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "embellishcraft:block/furniture/chest/acacia_fancy_chest" }
+        "": { "model": "embellishcraft:block/furniture/storage/acacia_fancy_chest" }
     }
 }
