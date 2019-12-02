@@ -603,6 +603,13 @@
     "block.embellishcraft.white_table_lamp": "White Table Lamp",
     "block.embellishcraft.yellow_table_lamp": "Yellow Table Lamp",
     
+    "block.embellishcraft.oak_fancy_chest": "Oak Fancy Chest",
+    "block.embellishcraft.birch_fancy_chest": "Birch Fancy Chest",
+    "block.embellishcraft.spruce_fancy_chest": "Spruce Fancy Chest",
+    "block.embellishcraft.jungle_fancy_chest": "Jungle Fancy Chest",
+    "block.embellishcraft.dark_oak_fancy_chest": "Dark Oak Fancy Chest",
+    "block.embellishcraft.acacia_fancy_chest": "Acacia Fancy Chest",
+    
     "comment_A11": "Doors",
     
     "block.embellishcraft.oak_fancy_door": "Oak Fancy Door",

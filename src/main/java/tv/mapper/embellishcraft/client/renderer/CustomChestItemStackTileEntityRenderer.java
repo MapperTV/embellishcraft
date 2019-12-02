@@ -16,7 +16,6 @@ public class CustomChestItemStackTileEntityRenderer extends ItemStackTileEntityR
         Block block = Block.getBlockFromItem(itemStack.getItem());
         if(block instanceof CustomChestBlock)
         {
-            // EmbellishCraft.LOGGER.debug(block.getRegistryName());
             CustomChestTileEntity tileEntity = new CustomChestTileEntity();
             TileEntityRenderer<CustomChestTileEntity> tileEntityRenderer = TileEntityRendererDispatcher.instance.getRenderer(tileEntity);
             if(tileEntityRenderer instanceof CustomChestTileEntityRenderer)
