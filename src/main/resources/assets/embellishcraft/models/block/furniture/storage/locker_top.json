@@ -1,0 +1,12 @@
+{
+    "parent": "block/orientable_with_bottom",
+    "textures": {
+        "particle": "embellishcraft:block/furniture/storage/locker_top",
+        "down": "embellishcraft:block/furniture/storage/locker_bottom",
+        "up": "embellishcraft:block/furniture/storage/locker_top",
+        "north": "embellishcraft:block/furniture/storage/locker_front_top",
+        "east": "embellishcraft:block/furniture/storage/locker_side_top",
+        "south": "embellishcraft:block/furniture/storage/locker_side_top",
+        "west": "embellishcraft:block/furniture/storage/locker_side_top"
+    }
+}

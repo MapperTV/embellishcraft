@@ -28,6 +28,7 @@ import tv.mapper.embellishcraft.block.CustomSlabBlock;
 import tv.mapper.embellishcraft.block.CustomStairsBlock;
 import tv.mapper.embellishcraft.block.CustomWallBlock;
 import tv.mapper.embellishcraft.block.LampBlock;
+import tv.mapper.embellishcraft.block.LockerBlock;
 import tv.mapper.embellishcraft.block.PlateBlock;
 import tv.mapper.embellishcraft.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.block.TableBlock;
@@ -661,7 +662,7 @@ public class ModBlocks
     public static final Block DARK_OAK_SUSPENDED_STAIRS = null;
     public static final Block ACACIA_SUSPENDED_STAIRS = null;
 
-    // Chests
+    // Storage
 
     public static final Block OAK_FANCY_CHEST = null;
     public static final Block BIRCH_FANCY_CHEST = null;
@@ -669,6 +670,8 @@ public class ModBlocks
     public static final Block JUNGLE_FANCY_CHEST = null;
     public static final Block DARK_OAK_FANCY_CHEST = null;
     public static final Block ACACIA_FANCY_CHEST = null;
+
+    public static final Block LOCKER = null;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -913,6 +916,8 @@ public class ModBlocks
         event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.JUNGLE_FANCY).setRegistryName("jungle_fancy_chest"));
         event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.DARK_OAK_FANCY).setRegistryName("dark_oak_fancy_chest"));
         event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.ACACIA_FANCY).setRegistryName("acacia_fancy_chest"));
+
+        event.getRegistry().register(new LockerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.5F).sound(SoundType.METAL), ToolType.PICKAXE).setRegistryName("locker"));
 
     }
 
@@ -1159,6 +1164,8 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(JUNGLE_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(JUNGLE_FANCY_CHEST.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(DARK_OAK_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(DARK_OAK_FANCY_CHEST.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(ACACIA_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(ACACIA_FANCY_CHEST.getRegistryName()));
+
+        event.getRegistry().register(new BlockItem(LOCKER, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LOCKER.getRegistryName()));
 
     }
 
