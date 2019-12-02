@@ -8,6 +8,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.DirectionProperty;
@@ -17,10 +19,15 @@ import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.DoubleBlockHalf;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.fml.network.NetworkHooks;
+import tv.mapper.embellishcraft.tileentity.LockerTileEntity;
 
 public class LockerBlock extends CustomBlock
 {
@@ -72,6 +79,26 @@ public class LockerBlock extends CustomBlock
         super.onBlockHarvested(worldIn, pos, state, player);
     }
 
+    @SuppressWarnings("deprecation")
+    @Override
+    public boolean onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult result)
+    {
+        if(!world.isRemote && state.get(HALF) == DoubleBlockHalf.UPPER)
+        {
+            TileEntity tileEntity = world.getTileEntity(pos);
+            if(tileEntity instanceof INamedContainerProvider)
+            {
+                NetworkHooks.openGui((ServerPlayerEntity)player, (INamedContainerProvider)tileEntity, tileEntity.getPos());
+            }
+            else
+            {
+                throw new IllegalStateException("Our named container provider is missing!");
+            }
+            return true;
+        }
+        return super.onBlockActivated(state, world, pos, player, hand, result);
+    }
+
     @Nullable
     public BlockState getStateForPlacement(BlockItemUseContext context)
     {
@@ -89,6 +116,22 @@ public class LockerBlock extends CustomBlock
     public void onBlockPlacedBy(World worldIn, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack)
     {
         worldIn.setBlockState(pos.up(), state.with(HALF, DoubleBlockHalf.UPPER), 3);
+    }
+
+    @Override
+    public boolean hasTileEntity(BlockState state)
+    {
+        return true;
+    }
+
+    @Nullable
+    @Override
+    public TileEntity createTileEntity(BlockState state, IBlockReader world)
+    {
+        if(state.get(HALF) == DoubleBlockHalf.UPPER)
+            return new LockerTileEntity();
+        else
+            return null;
     }
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
