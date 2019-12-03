@@ -67,7 +67,7 @@ public class LockerTileEntity extends TileEntity implements INamedContainerProvi
 
     private IItemHandler createHandler()
     {
-        return new ItemStackHandler(16)
+        return new ItemStackHandler(24)
         {
             @Override
             protected void onContentsChanged(int slot)

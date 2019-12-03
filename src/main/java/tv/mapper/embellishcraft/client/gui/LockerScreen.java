@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.inventory.container.LockerContainer;
 
@@ -18,12 +19,18 @@ public class LockerScreen extends ContainerScreen<LockerContainer> implements IC
     private ResourceLocation GUI = new ResourceLocation(Constants.MODID, "textures/gui/locker.png");
 
     // GUI actual size
-    private static final int WIDTH = 180;
-    private static final int HEIGHT = 220;
+    private static final int WIDTH = 176;
+    private static final int HEIGHT = 222;
 
     public LockerScreen(LockerContainer screenContainer, PlayerInventory inv, ITextComponent titleIn)
     {
         super(screenContainer, inv, titleIn);
+    }
+
+    protected void init()
+    {
+        guiLeft = this.width / 2 - WIDTH / 2;
+        guiTop = this.height / 2 - HEIGHT / 2;
     }
 
     @Override
@@ -32,6 +39,14 @@ public class LockerScreen extends ContainerScreen<LockerContainer> implements IC
         this.renderBackground();
         super.render(mouseX, mouseY, partialTicks);
         this.renderHoveredToolTip(mouseX, mouseY);
+    }
+
+    @Override
+    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
+    {
+        String screenTitle = new TranslationTextComponent("embellishcraft.container.locker").getString();
+        this.font.drawString(screenTitle, (float)(this.xSize / 2 - font.getStringWidth(screenTitle) / 2), 6.0F, 4210752);
+        this.font.drawString(this.playerInventory.getDisplayName().getFormattedText(), 8.0F, (float)(this.ySize - 37), 4210752);
     }
 
     @Override

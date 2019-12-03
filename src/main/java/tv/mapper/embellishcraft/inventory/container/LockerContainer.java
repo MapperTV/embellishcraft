@@ -32,10 +32,29 @@ public class LockerContainer extends Container
 
         tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h ->
         {
-            addSlot(new SlotItemHandler(h, 0, 10, 17));
-            addSlot(new SlotItemHandler(h, 1, 10, 111));
+            // addSlotBox(playerInventory, 9, 10, 10, 9, 18, 3, 18);
+            // addSlot(new SlotItemHandler(h, 0, 10, 17));
+            // addSlot(new SlotItemHandler(h, 1, 10, 111));
+
+            int index = 0;
+            int x = 53;
+            int y = 18;
+            int dx = 18;
+            int dy = 18;
+
+            for(int j = 0; j < 6; j++)
+            {
+                for(int i = 0; i < 4; i++)
+                {
+                    addSlot(new SlotItemHandler(h, index, x, y));
+                    x += dx;
+                    index++;
+                }
+                x = 53;
+                y += dy;
+            }
         });
-        layoutPlayerInventorySlots(10, 138);
+        layoutPlayerInventorySlots(8, 140);
     }
 
     @Override

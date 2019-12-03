@@ -610,6 +610,8 @@
     "block.embellishcraft.dark_oak_fancy_chest": "Dark Oak Fancy Chest",
     "block.embellishcraft.acacia_fancy_chest": "Acacia Fancy Chest",
     
+    "block.embellishcraft.locker": "Locker",
+    
     "comment_A11": "Doors",
     
     "block.embellishcraft.oak_fancy_door": "Oak Fancy Door",
@@ -641,5 +643,10 @@
     
     "comment_B": "Creative Tabs (Item Groups)",
     
-    "itemGroup.embellishcraft_group": "EmbellishCraft"
+    "itemGroup.embellishcraft_group": "EmbellishCraft",
+    
+    "comment_C": "Containers",
+    
+    "embellishcraft.container.locker": "Locker"
+
 }
