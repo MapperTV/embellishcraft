@@ -12,6 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.block.VerticalChestBlock;
 import tv.mapper.embellishcraft.client.renderer.tileentity.model.LockerModel;
 import tv.mapper.embellishcraft.client.renderer.tileentity.model.TallLockerModel;
@@ -97,11 +98,11 @@ public class VerticalChestTileEntityRenderer<T extends TileEntity & IChestLid> e
         return doubleChest ? this.largeChest : this.simpleChest;
     }
 
-    private void applyLidRotation(T p_199346_1_, float p_199346_2_, LockerModel p_199346_3_)
+    private void applyLidRotation(T chest, float angle, LockerModel model)
     {
-        float f = ((IChestLid)p_199346_1_).getLidAngle(p_199346_2_);
+        float f = ((IChestLid)chest).getLidAngle(angle);
         f = 1.0F - f;
         f = 1.0F - f * f * f;
-        p_199346_3_.getLid().rotateAngleX = -(f * ((float)Math.PI / 2F));
+        model.getLid().rotateAngleY = 0.85f * f * ((float)Math.PI / 2F);
     }
 }

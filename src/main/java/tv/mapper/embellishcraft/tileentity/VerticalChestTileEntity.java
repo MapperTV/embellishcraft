@@ -361,4 +361,12 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         if(chestHandler != null)
             chestHandler.invalidate();
     }
+    
+    @OnlyIn(Dist.CLIENT)
+    public AxisAlignedBB getRenderBoundingBox()
+    {
+        BlockPos pos = getTileEntity().getPos();
+        AxisAlignedBB bb = new AxisAlignedBB(pos.add(-1, 0, -1), pos.add(2, 2, 2));
+        return bb;
+    }
 }

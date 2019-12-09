@@ -51,11 +51,11 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     public static final EnumProperty<VerticalChestType> TYPE = EnumProperty.create("type", VerticalChestType.class);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    protected static final VoxelShape SHAPE_NORTH = Block.makeCuboidShape(1.0D, 0.0D, 0.0D, 15.0D, 14.0D, 15.0D);
-    protected static final VoxelShape SHAPE_SOUTH = Block.makeCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 14.0D, 16.0D);
-    protected static final VoxelShape SHAPE_WEST = Block.makeCuboidShape(0.0D, 0.0D, 1.0D, 15.0D, 14.0D, 15.0D);
-    protected static final VoxelShape SHAPE_EAST = Block.makeCuboidShape(1.0D, 0.0D, 1.0D, 16.0D, 14.0D, 15.0D);
-    protected static final VoxelShape field_196315_B = Block.makeCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 14.0D, 15.0D);
+    protected static final VoxelShape SHAPE_NORTH = Block.makeCuboidShape(0.0D, 0.0D, 1.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape SHAPE_SOUTH = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 15.0D);
+    protected static final VoxelShape SHAPE_WEST = Block.makeCuboidShape(1.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape SHAPE_EAST = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 15.0D, 16.0D, 16.0D);
+    
     private static final VerticalChestBlock.InventoryFactory<IInventory> field_220109_i = new VerticalChestBlock.InventoryFactory<IInventory>()
     {
         public IInventory forDouble(VerticalChestTileEntity p_212855_1_, VerticalChestTileEntity p_212855_2_)
@@ -168,24 +168,17 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
     {
-        if(state.get(TYPE) == VerticalChestType.SINGLE)
+        switch(state.get(FACING))
         {
-            return field_196315_B;
-        }
-        else
-        {
-            switch(getDirectionToAttached(state))
-            {
-                case NORTH:
-                default:
-                    return SHAPE_NORTH;
-                case SOUTH:
-                    return SHAPE_SOUTH;
-                case WEST:
-                    return SHAPE_WEST;
-                case EAST:
-                    return SHAPE_EAST;
-            }
+            case NORTH:
+            default:
+                return SHAPE_NORTH;
+            case SOUTH:
+                return SHAPE_SOUTH;
+            case WEST:
+                return SHAPE_WEST;
+            case EAST:
+                return SHAPE_EAST;
         }
     }
 
@@ -204,7 +197,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
         IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
         boolean flag = context.isPlacerSneaking();
         Direction direction1 = context.getFace();
-        
+
         if(direction1.getAxis().isVertical() && flag)
         {
             BlockState state = context.getWorld().getBlockState(context.getPos().offset(direction1.getOpposite()));
