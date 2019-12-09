@@ -1,12 +1,5 @@
 {
     "variants": {
-        "facing=south,half=lower":  { "model": "embellishcraft:block/furniture/storage/locker_bottom" },
-        "facing=west,half=lower": { "model": "embellishcraft:block/furniture/storage/locker_bottom", "y": 90 },
-        "facing=north,half=lower":  { "model": "embellishcraft:block/furniture/storage/locker_bottom", "y": 180 },
-        "facing=east,half=lower": { "model": "embellishcraft:block/furniture/storage/locker_bottom", "y": 270 },
-        "facing=south,half=upper":  { "model": "embellishcraft:block/furniture/storage/locker_top" },
-        "facing=west,half=upper": { "model": "embellishcraft:block/furniture/storage/locker_top", "y": 90 },
-        "facing=north,half=upper":  { "model": "embellishcraft:block/furniture/storage/locker_top", "y": 180 },
-        "facing=east,half=upper": { "model": "embellishcraft:block/furniture/storage/locker_top", "y": 270 }
+        "": { "model": "embellishcraft:block/furniture/storage/locker" }
     }
 }

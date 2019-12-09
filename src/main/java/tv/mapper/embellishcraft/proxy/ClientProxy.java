@@ -6,10 +6,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import tv.mapper.embellishcraft.client.gui.LockerScreen;
+import tv.mapper.embellishcraft.client.gui.screen.inventory.VerticalChestScreen;
 import tv.mapper.embellishcraft.client.renderer.CustomChestTileEntityRenderer;
+import tv.mapper.embellishcraft.client.renderer.VerticalChestTileEntityRenderer;
 import tv.mapper.embellishcraft.init.ModContainers;
 import tv.mapper.embellishcraft.tileentity.CustomChestTileEntity;
+import tv.mapper.embellishcraft.tileentity.VerticalChestTileEntity;
 
 public class ClientProxy implements IProxy
 {
@@ -17,7 +19,14 @@ public class ClientProxy implements IProxy
     public void setup(FMLCommonSetupEvent event)
     {
         ClientRegistry.bindTileEntitySpecialRenderer(CustomChestTileEntity.class, new CustomChestTileEntityRenderer<>());
-        ScreenManager.registerFactory(ModContainers.LOCKER, LockerScreen::new);
+        ClientRegistry.bindTileEntitySpecialRenderer(VerticalChestTileEntity.class, new VerticalChestTileEntityRenderer<>());
+        
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X1, VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X2, VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X3, VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X4, VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X5, VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X6, VerticalChestScreen::new);
     }
 
     @Override

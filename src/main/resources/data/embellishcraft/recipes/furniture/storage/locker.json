@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SSS",
+        "S S",
+        "SIS"
+    ],
+    "key": {
+        "S": {
+            "tag": "forge:plates/steel"
+        },
+        "I": {
+            "tag": "forge:ingots/steel"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:locker"
+    }
+}

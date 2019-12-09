@@ -28,14 +28,15 @@ import tv.mapper.embellishcraft.block.CustomSlabBlock;
 import tv.mapper.embellishcraft.block.CustomStairsBlock;
 import tv.mapper.embellishcraft.block.CustomWallBlock;
 import tv.mapper.embellishcraft.block.LampBlock;
-import tv.mapper.embellishcraft.block.LockerBlock;
 import tv.mapper.embellishcraft.block.PlateBlock;
 import tv.mapper.embellishcraft.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.embellishcraft.block.TerraceChairBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
 import tv.mapper.embellishcraft.block.UpDownBlock;
+import tv.mapper.embellishcraft.block.VerticalChestBlock;
 import tv.mapper.embellishcraft.client.renderer.CustomChestItemStackTileEntityRenderer;
+import tv.mapper.embellishcraft.client.renderer.VerticalChestItemStackTileEntityRenderer;
 import tv.mapper.embellishcraft.item.FuelBlockItem;
 import tv.mapper.embellishcraft.item.ModItemGroups;
 import tv.mapper.embellishcraft.util.CustomChestType;
@@ -917,7 +918,7 @@ public class ModBlocks
         event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.DARK_OAK_FANCY).setRegistryName("dark_oak_fancy_chest"));
         event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.ACACIA_FANCY).setRegistryName("acacia_fancy_chest"));
 
-        event.getRegistry().register(new LockerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.5F).sound(SoundType.METAL), ToolType.PICKAXE).setRegistryName("locker"));
+        event.getRegistry().register(new VerticalChestBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.5F).sound(SoundType.METAL)).setRegistryName("locker"));
 
     }
 
@@ -1165,7 +1166,7 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(DARK_OAK_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(DARK_OAK_FANCY_CHEST.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(ACACIA_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(ACACIA_FANCY_CHEST.getRegistryName()));
 
-        event.getRegistry().register(new BlockItem(LOCKER, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LOCKER.getRegistryName()));
+        event.getRegistry().register(new BlockItem(LOCKER, new Item.Properties().setTEISR(() -> VerticalChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LOCKER.getRegistryName()));
 
     }
 

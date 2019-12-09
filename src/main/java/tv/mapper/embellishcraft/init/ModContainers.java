@@ -1,31 +1,31 @@
 package tv.mapper.embellishcraft.init;
 
+import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.common.extensions.IForgeContainerType;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.Constants;
-import tv.mapper.embellishcraft.EmbellishCraft;
-import tv.mapper.embellishcraft.inventory.container.LockerContainer;
+import tv.mapper.embellishcraft.inventory.container.VerticalChestContainer;
 
-@ObjectHolder(Constants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
-public class ModContainers
+public class ModContainers<T extends Container> extends ContainerType<T>
 {
-    public static final ContainerType<LockerContainer> LOCKER = null;
-
-    @SubscribeEvent
-    public static void registerContainers(final RegistryEvent.Register<ContainerType<?>> event)
+    public ModContainers(IFactory<T> factory)
     {
-        event.getRegistry().register(IForgeContainerType.create((windowId, inv, data) ->
-        {
-            BlockPos pos = data.readBlockPos();
+        super(factory);
+    }
 
-            return new LockerContainer(windowId, EmbellishCraft.proxy.getClientWorld(), pos, inv, EmbellishCraft.proxy.getClientPlayer());
-        }).setRegistryName("locker"));
+    public static final ModContainers<VerticalChestContainer> VERTICAL_9X1 = register("vertical_9x1", VerticalChestContainer::createGeneric9X1);
+    public static final ModContainers<VerticalChestContainer> VERTICAL_9X2 = register("vertical_9x2", VerticalChestContainer::createGeneric9X2);
+    public static final ModContainers<VerticalChestContainer> VERTICAL_9X3 = register("vertical_9x3", VerticalChestContainer::createGeneric9X3);
+    public static final ModContainers<VerticalChestContainer> VERTICAL_9X4 = register("vertical_9x4", VerticalChestContainer::createGeneric9X4);
+    public static final ModContainers<VerticalChestContainer> VERTICAL_9X5 = register("vertical_9x5", VerticalChestContainer::createGeneric9X5);
+    public static final ModContainers<VerticalChestContainer> VERTICAL_9X6 = register("vertical_9x6", VerticalChestContainer::createGeneric9X6);
+
+    @SuppressWarnings("deprecation")
+    private static <T extends Container> ModContainers<T> register(String key, ContainerType.IFactory<T> factory)
+    {
+        return Registry.register(Registry.MENU, Constants.MODID + ":" + key, new ModContainers<>(factory));
     }
 }

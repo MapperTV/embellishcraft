@@ -647,6 +647,7 @@
     
     "comment_C": "Containers",
     
-    "embellishcraft.container.locker": "Locker"
+    "embellishcraft.container.locker": "Small Locker",
+    "embellishcraft.container.locker_tall": "Locker"
 
 }
