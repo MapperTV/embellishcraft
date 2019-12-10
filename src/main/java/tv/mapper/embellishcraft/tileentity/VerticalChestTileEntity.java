@@ -366,7 +366,7 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
     public AxisAlignedBB getRenderBoundingBox()
     {
         BlockPos pos = getTileEntity().getPos();
-        AxisAlignedBB bb = new AxisAlignedBB(pos.add(-1, 0, -1), pos.add(2, 2, 2));
+        AxisAlignedBB bb = new AxisAlignedBB(pos.add(0, -1, 0), pos.add(1, 1, 1));
         return bb;
     }
 }

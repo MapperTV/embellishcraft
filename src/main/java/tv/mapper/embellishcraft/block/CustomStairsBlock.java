@@ -10,11 +10,13 @@ public class CustomStairsBlock extends StairsBlock
 {
     private ToolType toolType = null;
 
+    @SuppressWarnings("deprecation")
     public CustomStairsBlock(BlockState state, Properties properties)
     {
         super(state, properties);
     }
 
+    @SuppressWarnings("deprecation")
     public CustomStairsBlock(BlockState state, Properties properties, ToolType toolType)
     {
         super(state, properties);

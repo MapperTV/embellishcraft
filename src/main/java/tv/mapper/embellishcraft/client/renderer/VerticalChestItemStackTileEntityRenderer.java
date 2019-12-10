@@ -5,7 +5,6 @@ import net.minecraft.client.renderer.tileentity.ItemStackTileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.item.ItemStack;
-import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.block.VerticalChestBlock;
 import tv.mapper.embellishcraft.tileentity.VerticalChestTileEntity;
 
@@ -23,7 +22,7 @@ public class VerticalChestItemStackTileEntityRenderer extends ItemStackTileEntit
             {
                 VerticalChestTileEntityRenderer<VerticalChestTileEntity> verticalChestTileEntityRenderer = (VerticalChestTileEntityRenderer<VerticalChestTileEntity>)tileEntityRenderer;
 
-                verticalChestTileEntityRenderer.render(tileEntity, 0.0D, 0.0D, 0.0D, 0.0F, -1/* , block.getRegistryName().toString() */);
+                verticalChestTileEntityRenderer.render(tileEntity, 0.0D, 0.0D, 0.0D, 0.0F, -1);
             }
         }
         else

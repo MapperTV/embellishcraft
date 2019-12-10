@@ -20,10 +20,10 @@ import tv.mapper.embellishcraft.state.properties.VerticalChestType;
 @OnlyIn(Dist.CLIENT)
 public class VerticalChestTileEntityRenderer<T extends TileEntity & IChestLid> extends TileEntityRenderer<T>
 {
-    private static final ResourceLocation TEXTURE_LOCKER = new ResourceLocation(Constants.MODID, "textures/entity/storage/locker.png");
+    private static final ResourceLocation TEXTURE_LOCKER = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/locker.png");
 
-    private final LockerModel simpleChest = new LockerModel();
-    private final LockerModel largeChest = new TallLockerModel();
+    private final LockerModel simpleModel = new LockerModel();
+    private final LockerModel largeModel = new TallLockerModel();
 
     public VerticalChestTileEntityRenderer()
     {
@@ -90,11 +90,11 @@ public class VerticalChestTileEntityRenderer<T extends TileEntity & IChestLid> e
         }
         else
         {
-            resourcelocation = doubleChest ? TEXTURE_LOCKER : TEXTURE_LOCKER;
+            resourcelocation = TEXTURE_LOCKER;
         }
 
         this.bindTexture(resourcelocation);
-        return doubleChest ? this.largeChest : this.simpleChest;
+        return doubleChest ? this.largeModel : this.simpleModel;
     }
 
     private void applyLidRotation(T chest, float angle, LockerModel model)

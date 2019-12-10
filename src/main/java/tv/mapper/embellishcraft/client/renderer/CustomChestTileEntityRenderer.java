@@ -17,18 +17,19 @@ import tv.mapper.embellishcraft.init.ModBlocks;
 
 public class CustomChestTileEntityRenderer<T extends TileEntity & IChestLid> extends TileEntityRenderer<T>
 {
-    private static final ResourceLocation FANCY_OAK_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/oak_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_OAK_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/chest/oak_fancy_chest.png");
-    private static final ResourceLocation FANCY_BIRCH_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/birch_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_BIRCH_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/chest/birch_fancy_chest.png");
-    private static final ResourceLocation FANCY_SPRUCE_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/spruce_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_SPRUCE_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/chest/spruce_fancy_chest.png");
-    private static final ResourceLocation FANCY_JUNGLE_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/jungle_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_JUNGLE_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/chest/jungle_fancy_chest.png");
-    private static final ResourceLocation FANCY_DARK_OAK_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/dark_oak_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_DARK_OAK_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/chest/dark_oak_fancy_chest.png");
-    private static final ResourceLocation FANCY_ACACIA_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/chest/acacia_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_ACACIA_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/chest/acacia_fancy_chest.png");
+    private static final ResourceLocation FANCY_OAK_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/oak_fancy_chest_double.png");
+    private static final ResourceLocation FANCY_OAK_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/oak_fancy_chest.png");
+    private static final ResourceLocation FANCY_BIRCH_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/birch_fancy_chest_double.png");
+    private static final ResourceLocation FANCY_BIRCH_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/birch_fancy_chest.png");
+    private static final ResourceLocation FANCY_SPRUCE_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/spruce_fancy_chest_double.png");
+    private static final ResourceLocation FANCY_SPRUCE_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/spruce_fancy_chest.png");
+    private static final ResourceLocation FANCY_JUNGLE_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/jungle_fancy_chest_double.png");
+    private static final ResourceLocation FANCY_JUNGLE_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/jungle_fancy_chest.png");
+    private static final ResourceLocation FANCY_DARK_OAK_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/dark_oak_fancy_chest_double.png");
+    private static final ResourceLocation FANCY_DARK_OAK_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/dark_oak_fancy_chest.png");
+    private static final ResourceLocation FANCY_ACACIA_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/acacia_fancy_chest_double.png");
+    private static final ResourceLocation FANCY_ACACIA_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/acacia_fancy_chest.png");
+    
     private final ChestModel simpleChest = new ChestModel();
     private final ChestModel largeChest = new LargeChestModel();
 

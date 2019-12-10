@@ -1,7 +1,7 @@
 {
     "parent": "builtin/entity",
     "textures": {
-        "particle": "embellishcraft:block/furniture/storage/locker_top"
+        "particle": "embellishcraft:block/metal/steel_block"
     },
     "display": {
         "gui": {
