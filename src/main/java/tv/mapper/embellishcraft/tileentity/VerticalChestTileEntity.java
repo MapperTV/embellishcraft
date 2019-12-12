@@ -1,5 +1,7 @@
 package tv.mapper.embellishcraft.tileentity;
 
+import java.util.UUID;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -49,6 +51,8 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
     protected float prevLidAngle;
     protected int numPlayersUsing;
     private int ticksSinceSync;
+    private boolean isLocked = false;
+    private UUID id = null;
     private LazyOptional<IItemHandlerModifiable> chestHandler;
 
     protected VerticalChestTileEntity(TileEntityType<?> typeIn)
@@ -78,13 +82,42 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
                 return false;
             }
         }
-
         return true;
     }
 
     protected ITextComponent getDefaultName()
     {
         return new TranslationTextComponent("embellishcraft.container.locker");
+    }
+
+    public void lockIt()
+    {
+        if(this.isLocked)
+            this.isLocked = false;
+        else
+            this.isLocked = true;
+    }
+
+    public boolean isLocked()
+    {
+        return this.isLocked;
+    }
+
+    public void setUUID(UUID id)
+    {
+        this.id = id;
+    }
+
+    public UUID getUUID()
+    {
+        return this.id;
+    }
+
+    public boolean hasUUID()
+    {
+        if(this.id != null)
+            return true;
+        return false;
     }
 
     public void read(CompoundNBT compound)
@@ -96,6 +129,8 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
             ItemStackHelper.loadAllItems(compound, this.chestContents);
         }
 
+        this.id = compound.getUniqueId("id");
+        this.isLocked = compound.getBoolean("is_locked");
     }
 
     public CompoundNBT write(CompoundNBT compound)
@@ -105,6 +140,9 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         {
             ItemStackHelper.saveAllItems(compound, this.chestContents);
         }
+        if(id != null)
+            compound.putUniqueId("id", this.id);
+        compound.putBoolean("is_locked", this.isLocked);
 
         return compound;
     }
@@ -361,7 +399,7 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         if(chestHandler != null)
             chestHandler.invalidate();
     }
-    
+
     @OnlyIn(Dist.CLIENT)
     public AxisAlignedBB getRenderBoundingBox()
     {

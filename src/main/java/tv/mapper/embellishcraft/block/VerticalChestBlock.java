@@ -1,5 +1,7 @@
 package tv.mapper.embellishcraft.block;
 
+import java.util.UUID;
+
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
@@ -20,6 +22,7 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.DirectionProperty;
@@ -42,7 +45,11 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.inventory.container.VerticalChestContainer;
+import tv.mapper.embellishcraft.network.ECNetwork;
+import tv.mapper.embellishcraft.network.LockerLockPacket;
+import tv.mapper.embellishcraft.network.LockerUUIDPacket;
 import tv.mapper.embellishcraft.state.properties.VerticalChestType;
 import tv.mapper.embellishcraft.tileentity.VerticalChestTileEntity;
 
@@ -55,7 +62,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
     protected static final VoxelShape SHAPE_SOUTH = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 15.0D);
     protected static final VoxelShape SHAPE_WEST = Block.makeCuboidShape(1.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     protected static final VoxelShape SHAPE_EAST = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 15.0D, 16.0D, 16.0D);
-    
+
     private static final VerticalChestBlock.InventoryFactory<IInventory> field_220109_i = new VerticalChestBlock.InventoryFactory<IInventory>()
     {
         public IInventory forDouble(VerticalChestTileEntity p_212855_1_, VerticalChestTileEntity p_212855_2_)
@@ -143,30 +150,31 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
      * Note that this method should ideally consider only the specific face passed in.
      */
     @SuppressWarnings("deprecation")
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld world, BlockPos currentPos, BlockPos facingPos)
     {
         if(stateIn.get(WATERLOGGED))
-        {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
-        }
+            world.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(world));
 
         if(facingState.getBlock() == this && facing.getAxis().isVertical())
         {
             VerticalChestType chesttype = facingState.get(TYPE);
             if(stateIn.get(TYPE) == VerticalChestType.SINGLE && chesttype != VerticalChestType.SINGLE && stateIn.get(FACING) == facingState.get(FACING) && getDirectionToAttached(facingState) == facing.getOpposite())
             {
+                TileEntity Te = world.getTileEntity(facingPos);
+                TileEntity attachedTe = world.getTileEntity(currentPos);
+                if(attachedTe instanceof VerticalChestTileEntity)
+                    if(((VerticalChestTileEntity)attachedTe).isLocked() && !world.isRemote())
+                        ((VerticalChestTileEntity)Te).lockIt();
                 return stateIn.with(TYPE, chesttype.opposite());
             }
         }
         else if(getDirectionToAttached(stateIn) == facing)
-        {
             return stateIn.with(TYPE, VerticalChestType.SINGLE);
-        }
 
-        return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return super.updatePostPlacement(stateIn, facing, facingState, world, currentPos, facingPos);
     }
 
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context)
     {
         switch(state.get(FACING))
         {
@@ -200,21 +208,36 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
 
         if(direction1.getAxis().isVertical() && flag)
         {
-            BlockState state = context.getWorld().getBlockState(context.getPos().offset(direction1.getOpposite()));
+            BlockPos attachedPos = context.getPos().offset(direction1.getOpposite());
+            BlockState attachedState = context.getWorld().getBlockState(attachedPos);
 
-            if(state.getBlock() == this && state.get(FACING) == direction && state.get(TYPE) == VerticalChestType.SINGLE)
+            if(attachedState.getBlock() == this && attachedState.get(FACING) == direction && attachedState.get(TYPE) == VerticalChestType.SINGLE)
             {
-                switch(context.getFace())
+                TileEntity attachedTe = context.getWorld().getTileEntity(attachedPos);
+
+                if(attachedTe instanceof VerticalChestTileEntity)
                 {
-                    case DOWN:
-                        chesttype = VerticalChestType.BOTTOM;
-                        break;
-                    case UP:
-                        chesttype = VerticalChestType.TOP;
-                        break;
-                    default:
-                        chesttype = VerticalChestType.SINGLE;
-                        break;
+                    if(((VerticalChestTileEntity)attachedTe).hasUUID())
+                    {
+                        UUID id = ((VerticalChestTileEntity)attachedTe).getUUID();
+                        if(!id.equals(context.getPlayer().getUniqueID()))
+                            chesttype = VerticalChestType.SINGLE;
+                        else
+                        {
+                            switch(context.getFace())
+                            {
+                                case DOWN:
+                                    chesttype = VerticalChestType.BOTTOM;
+                                    break;
+                                case UP:
+                                    chesttype = VerticalChestType.TOP;
+                                    break;
+                                default:
+                                    chesttype = VerticalChestType.SINGLE;
+                                    break;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -222,11 +245,47 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
         if(chesttype == VerticalChestType.SINGLE && !flag)
         {
             BlockPos pos = context.getPos();
+            BlockState stateUp = context.getWorld().getBlockState(pos.up());
+            BlockState stateDown = context.getWorld().getBlockState(pos.down());
 
-            if(context.getWorld().getBlockState(pos.up()).getBlock() == this && context.getWorld().getBlockState(pos.up()).get(TYPE) == VerticalChestType.SINGLE)
-                chesttype = VerticalChestType.BOTTOM;
-            else if(context.getWorld().getBlockState(pos.down()).getBlock() == this && context.getWorld().getBlockState(pos.down()).get(TYPE) == VerticalChestType.SINGLE)
-                chesttype = VerticalChestType.TOP;
+            if(stateUp.getBlock() == this && stateUp.get(FACING) == direction)
+            {
+                if(stateUp.get(TYPE) == VerticalChestType.SINGLE)
+                {
+                    TileEntity te = context.getWorld().getTileEntity(pos.up());
+                    if(te instanceof VerticalChestTileEntity)
+                    {
+                        if(((VerticalChestTileEntity)te).hasUUID())
+                        {
+                            UUID id = ((VerticalChestTileEntity)te).getUUID();
+                            if(!id.equals(context.getPlayer().getUniqueID()))
+                                chesttype = VerticalChestType.SINGLE;
+                            else
+                                chesttype = VerticalChestType.BOTTOM;
+                        }
+                    }
+                }
+            }
+            else if(stateDown.getBlock() == this && stateDown.get(FACING) == direction)
+            {
+                if(stateDown.get(TYPE) == VerticalChestType.SINGLE)
+                {
+                    TileEntity te = context.getWorld().getTileEntity(pos.down());
+                    if(te instanceof VerticalChestTileEntity)
+                    {
+                        if(((VerticalChestTileEntity)te).hasUUID())
+                        {
+                            UUID id = ((VerticalChestTileEntity)te).getUUID();
+                            if(!id.equals(context.getPlayer().getUniqueID()))
+                                chesttype = VerticalChestType.SINGLE;
+                            else
+                                chesttype = VerticalChestType.TOP;
+                        }
+                    }
+                }
+            }
+            else
+                chesttype = VerticalChestType.SINGLE;
         }
 
         return this.getDefaultState().with(FACING, direction).with(TYPE, chesttype).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
@@ -241,51 +300,124 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
     /**
      * Called by ItemBlocks after a block is set in the world, to allow post-place logic
      */
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack)
+    public void onBlockPlacedBy(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack)
     {
-        if(stack.hasDisplayName())
+        TileEntity tileentity = world.getTileEntity(pos);
+        if(tileentity instanceof VerticalChestTileEntity)
         {
-            TileEntity tileentity = worldIn.getTileEntity(pos);
-            if(tileentity instanceof VerticalChestTileEntity)
-            {
+            if(world.isRemote)
+                ECNetwork.EMBELLISHCRAFT_CHANNEL.sendToServer(new LockerUUIDPacket(pos));
+            if(stack.hasDisplayName())
                 ((VerticalChestTileEntity)tileentity).setCustomName(stack.getDisplayName());
-            }
         }
-
     }
 
     @SuppressWarnings("deprecation")
-    public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving)
+    public void onReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean isMoving)
     {
         if(state.getBlock() != newState.getBlock())
         {
-            TileEntity tileentity = worldIn.getTileEntity(pos);
+            TileEntity tileentity = world.getTileEntity(pos);
             if(tileentity instanceof IInventory)
             {
-                InventoryHelper.dropInventoryItems(worldIn, pos, (IInventory)tileentity);
-                worldIn.updateComparatorOutputLevel(pos, this);
+                InventoryHelper.dropInventoryItems(world, pos, (IInventory)tileentity);
+                world.updateComparatorOutputLevel(pos, this);
             }
 
-            super.onReplaced(state, worldIn, pos, newState, isMoving);
+            super.onReplaced(state, world, pos, newState, isMoving);
         }
     }
 
-    public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+    public boolean onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
     {
-        if(worldIn.isRemote)
-        {
-            return true;
-        }
-        else
-        {
-            INamedContainerProvider inamedcontainerprovider = this.getContainer(state, worldIn, pos);
-            if(inamedcontainerprovider != null)
-            {
-                player.openContainer(inamedcontainerprovider);
-            }
+        TileEntity te = world.getTileEntity(pos);
 
-            return true;
+        if(te instanceof VerticalChestTileEntity)
+        {
+            // Debug
+            if(player.getHeldItem(handIn).getItem() == Items.DEBUG_STICK && !world.isRemote)
+            {
+                EmbellishCraft.LOGGER.debug("This locker belongs to: " + ((VerticalChestTileEntity)te).getUUID() + " and locked is " + ((VerticalChestTileEntity)te).isLocked());
+                return true;
+            }
+            else
+            {
+                // Lock it if it's yours!
+                if(player.isSneaking())
+                {
+                    if(world.isRemote)
+                        ECNetwork.EMBELLISHCRAFT_CHANNEL.sendToServer(new LockerLockPacket(pos));
+
+                    if(!world.isRemote)
+                    {
+                        if(player.getUniqueID().equals(((VerticalChestTileEntity)te).getUUID()))
+                        {
+                            if(((VerticalChestTileEntity)te).isLocked())
+                                player.sendStatusMessage(new TranslationTextComponent("embellishcraft.message.locker.lock"), true);
+                            else
+                                player.sendStatusMessage(new TranslationTextComponent("embellishcraft.message.locker.unlock"), true);
+                        }
+                        else
+                            player.sendStatusMessage(new TranslationTextComponent("embellishcraft.message.locker.wrong"), true);
+                    }
+
+                    // Also lock other TE if tall locker
+                    BlockPos otherPos = null;
+                    switch(state.get(TYPE))
+                    {
+                        case BOTTOM:
+                            otherPos = pos.up();
+                            break;
+                        case TOP:
+                            otherPos = pos.down();
+                            break;
+                        case SINGLE:
+                        default:
+                            break;
+                    }
+
+                    if(otherPos != null)
+                    {
+                        TileEntity otherTe = world.getTileEntity(otherPos);
+
+                        if(otherTe instanceof VerticalChestTileEntity)
+                        {
+                            if(((VerticalChestTileEntity)otherTe).hasUUID())
+                            {
+                                if(!world.isRemote && ((VerticalChestTileEntity)otherTe).getUUID().equals(player.getUniqueID()))
+                                    ((VerticalChestTileEntity)otherTe).lockIt();
+                            }
+                        }
+                    }
+                    return true;
+                }
+                // Open it if you can!
+                else
+                {
+                    INamedContainerProvider inamedcontainerprovider = this.getContainer(state, world, pos);
+
+                    if(inamedcontainerprovider != null)
+                    {
+                        UUID id = ((VerticalChestTileEntity)te).getUUID();
+
+                        if(id != null)
+                        {
+                            if(id.equals(player.getUniqueID()))
+                            {
+                                player.openContainer(inamedcontainerprovider);
+                            }
+                            else if(!((VerticalChestTileEntity)te).isLocked())
+                            {
+                                player.openContainer(inamedcontainerprovider);
+                            }
+                            else if(!world.isRemote)
+                                player.sendStatusMessage(new TranslationTextComponent("embellishcraft.message.locker.locked"), true);
+                        }
+                    }
+                }
+            }
         }
+        return true;
     }
 
     @Nullable
@@ -344,12 +476,12 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
     }
 
     @Nullable
-    public INamedContainerProvider getContainer(BlockState state, World worldIn, BlockPos pos)
+    public INamedContainerProvider getContainer(BlockState state, World world, BlockPos pos)
     {
-        return getChestInventory(state, worldIn, pos, false, field_220110_j);
+        return getChestInventory(state, world, pos, false, field_220110_j);
     }
 
-    public TileEntity createNewTileEntity(IBlockReader worldIn)
+    public TileEntity createNewTileEntity(IBlockReader world)
     {
         return new VerticalChestTileEntity();
     }
@@ -400,9 +532,9 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
      * @deprecated call via {@link IBlockState#getComparatorInputOverride(World,BlockPos)} whenever possible.
      *             Implementing/overriding is fine.
      */
-    public int getComparatorInputOverride(BlockState blockState, World worldIn, BlockPos pos)
+    public int getComparatorInputOverride(BlockState blockState, World world, BlockPos pos)
     {
-        return Container.calcRedstoneFromInventory(getInventory(blockState, worldIn, pos, false));
+        return Container.calcRedstoneFromInventory(getInventory(blockState, world, pos, false));
     }
 
     /**
@@ -431,7 +563,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
         builder.add(FACING, TYPE, WATERLOGGED);
     }
 
-    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type)
+    public boolean allowsMovement(BlockState state, IBlockReader world, BlockPos pos, PathType type)
     {
         return false;
     }

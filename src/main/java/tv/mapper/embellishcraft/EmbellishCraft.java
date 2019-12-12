@@ -12,6 +12,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
+import tv.mapper.embellishcraft.network.ECNetwork;
 import tv.mapper.embellishcraft.proxy.ClientProxy;
 import tv.mapper.embellishcraft.proxy.IProxy;
 import tv.mapper.embellishcraft.proxy.ServerProxy;
@@ -30,7 +31,6 @@ public class EmbellishCraft
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::serverSetup);
-
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -38,6 +38,7 @@ public class EmbellishCraft
         LOGGER.info("EmbellishCraft setup");
 
         proxy.setup(event);
+        ECNetwork.registerNetworkPackets();
 
         OreGenerator.setupOregen();
     }

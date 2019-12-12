@@ -648,6 +648,13 @@
     "comment_C": "Containers",
     
     "embellishcraft.container.locker": "Small Locker",
-    "embellishcraft.container.locker_tall": "Locker"
+    "embellishcraft.container.locker_tall": "Locker",
+    
+    "comment_D": "Messages",
+    
+    "embellishcraft.message.locker.locked": "This locker is locked!",
+    "embellishcraft.message.locker.lock": "This locker is now locked!",
+    "embellishcraft.message.locker.unlock": "This locker is now unlocked!",
+    "embellishcraft.message.locker.wrong": "This locker is not yours!"
 
 }
