@@ -37,10 +37,10 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.wrapper.CombinedInvWrapper;
-import net.minecraftforge.items.wrapper.InvWrapper;
 import tv.mapper.embellishcraft.block.VerticalChestBlock;
 import tv.mapper.embellishcraft.init.ModTileEntityTypes;
 import tv.mapper.embellishcraft.inventory.container.VerticalChestContainer;
+import tv.mapper.embellishcraft.item.wrapper.CustomInvWrapper;
 import tv.mapper.embellishcraft.state.properties.VerticalChestType;
 
 @OnlyIn(value = Dist.CLIENT, _interface = IChestLid.class)
@@ -260,10 +260,7 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         if(!player.isSpectator())
         {
             if(this.numPlayersUsing < 0)
-            {
                 this.numPlayersUsing = 0;
-            }
-
             ++this.numPlayersUsing;
             this.onOpenOrClose();
         }
@@ -288,7 +285,6 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
             this.world.addBlockEvent(this.pos, block, 1, this.numPlayersUsing);
             this.world.notifyNeighborsOfStateChange(this.pos, block);
         }
-
     }
 
     protected NonNullList<ItemStack> getItems()
@@ -351,9 +347,7 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         if(!this.removed && cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
         {
             if(this.chestHandler == null)
-            {
                 this.chestHandler = LazyOptional.of(this::createHandler);
-            }
             return this.chestHandler.cast();
         }
         return super.getCapability(cap, side);
@@ -364,7 +358,7 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         BlockState state = this.getBlockState();
         if(!(state.getBlock() instanceof VerticalChestBlock))
         {
-            return new InvWrapper(this);
+            return new CustomInvWrapper(this, this);
         }
         VerticalChestType type = state.get(VerticalChestBlock.TYPE);
         if(type != VerticalChestType.SINGLE)
@@ -381,12 +375,12 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
                     {
                         IInventory top = type == VerticalChestType.TOP ? this : (IInventory)ote;
                         IInventory bottom = type == VerticalChestType.TOP ? (IInventory)ote : this;
-                        return new CombinedInvWrapper(new InvWrapper(top), new InvWrapper(bottom));
+                        return new CombinedInvWrapper(new CustomInvWrapper(top, this), new CustomInvWrapper(bottom, this));
                     }
                 }
             }
         }
-        return new InvWrapper(this);
+        return new CustomInvWrapper(this, this);
     }
 
     /**
