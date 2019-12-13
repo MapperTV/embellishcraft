@@ -187,7 +187,6 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
                 this.lidAngle = 0.0F;
             }
         }
-
     }
 
     public static int calculatePlayersUsingSync(World p_213977_0_, LockableTileEntity p_213977_1_, int p_213977_2_, int p_213977_3_, int p_213977_4_, int p_213977_5_, int p_213977_6_)
