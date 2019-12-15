@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P P",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:birch_planks"
+        },
+        "W": {
+            "item": "minecraft:red_wool"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:red_birch_fancy_bed"
+    }
+}

@@ -13,7 +13,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.block.VerticalChestBlock;
-import tv.mapper.embellishcraft.client.renderer.tileentity.model.LockModel;
 import tv.mapper.embellishcraft.client.renderer.tileentity.model.LockerModel;
 import tv.mapper.embellishcraft.client.renderer.tileentity.model.TallLockerModel;
 import tv.mapper.embellishcraft.state.properties.VerticalChestType;
@@ -25,7 +24,6 @@ public class VerticalChestTileEntityRenderer<T extends TileEntity & IChestLid> e
 
     private final LockerModel simpleModel = new LockerModel();
     private final LockerModel largeModel = new TallLockerModel();
-    private final LockModel lockModel = new LockModel();
 
     public VerticalChestTileEntityRenderer()
     {
@@ -68,9 +66,8 @@ public class VerticalChestTileEntityRenderer<T extends TileEntity & IChestLid> e
                 GlStateManager.translatef(-0.5F, -0.5F, -0.5F);
             }
 
-            this.applyLidRotation(tileEntityIn, partialTicks, lockermodel, lockModel);
+            this.applyLidRotation(tileEntityIn, partialTicks, lockermodel);
             lockermodel.renderAll();
-            lockModel.renderAll();
             GlStateManager.disableRescaleNormal();
             GlStateManager.popMatrix();
             GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -100,12 +97,11 @@ public class VerticalChestTileEntityRenderer<T extends TileEntity & IChestLid> e
         return doubleChest ? this.largeModel : this.simpleModel;
     }
 
-    private void applyLidRotation(T chest, float angle, LockerModel locker, LockModel lock)
+    private void applyLidRotation(T chest, float angle, LockerModel locker)
     {
         float f = ((IChestLid)chest).getLidAngle(angle);
         f = 1.0F - f;
         f = 1.0F - f * f * f;
         locker.getLid().rotateAngleY = 0.85f * f * ((float)Math.PI / 2F);
-        lock.getLid().rotateAngleY = 0.85f * f * ((float)Math.PI / 2F);
     }
 }

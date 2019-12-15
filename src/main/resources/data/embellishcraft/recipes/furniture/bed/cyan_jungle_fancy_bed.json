@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P P",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:jungle_planks"
+        },
+        "W": {
+            "item": "minecraft:cyan_wool"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:cyan_jungle_fancy_bed"
+    }
+}
