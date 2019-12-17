@@ -20,6 +20,7 @@ import tv.mapper.embellishcraft.tileentity.CustomBedTileEntity;
 @OnlyIn(Dist.CLIENT)
 public class CustomBedTileEntityRenderer<T extends CustomBedTileEntity> extends TileEntityRenderer<T>
 {
+    //TODO: add wood types
     private static final ResourceLocation[] TEXTURES = Arrays.stream(DyeColor.values()).sorted(Comparator.comparingInt(DyeColor::getId)).map((color) ->
     {
         return new ResourceLocation(Constants.MODID, "textures/entity/furniture/bed/" + color.getTranslationKey() + "_oak_fancy_bed.png");
@@ -27,6 +28,9 @@ public class CustomBedTileEntityRenderer<T extends CustomBedTileEntity> extends 
     {
         return new ResourceLocation[resource];
     });
+    
+    
+    
     private final FancyBedModel model = new FancyBedModel();
 
     public void render(T tileEntityIn, double x, double y, double z, float partialTicks, int destroyStage)
