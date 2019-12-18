@@ -1,7 +1,8 @@
 package tv.mapper.embellishcraft.client.renderer.tileentity.model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.List;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 
@@ -16,21 +17,27 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.tileentity.CustomBedTileEntity;
+import tv.mapper.embellishcraft.util.WoodType;
 
 @OnlyIn(Dist.CLIENT)
 public class CustomBedTileEntityRenderer<T extends CustomBedTileEntity> extends TileEntityRenderer<T>
 {
-    //TODO: add wood types
-    private static final ResourceLocation[] TEXTURES = Arrays.stream(DyeColor.values()).sorted(Comparator.comparingInt(DyeColor::getId)).map((color) ->
+    public static List<ResourceLocation> TEXTURES = new ArrayList<>();
+
+    public CustomBedTileEntityRenderer()
     {
-        return new ResourceLocation(Constants.MODID, "textures/entity/furniture/bed/" + color.getTranslationKey() + "_oak_fancy_bed.png");
-    }).toArray((resource) ->
-    {
-        return new ResourceLocation[resource];
-    });
-    
-    
-    
+        String name;
+
+        for(int i = 0; i < Arrays.stream(WoodType.values()).count(); i++)
+        {
+            for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+            {
+                name = DyeColor.byId(j).getTranslationKey() + "_" + WoodType.getWoodByID(i);
+                TEXTURES.add(new ResourceLocation(Constants.MODID, "textures/entity/furniture/bed/" + name + "_fancy_bed.png"));
+            }
+        }
+    }
+
     private final FancyBedModel model = new FancyBedModel();
 
     public void render(T tileEntityIn, double x, double y, double z, float partialTicks, int destroyStage)
@@ -46,10 +53,12 @@ public class CustomBedTileEntityRenderer<T extends CustomBedTileEntity> extends 
         }
         else
         {
-            ResourceLocation resourcelocation = TEXTURES[tileEntityIn.getColor().getId()];
-            if(resourcelocation != null)
+            int woodId = tileEntityIn.getWood().getId();
+            int colorId = tileEntityIn.getColor().getId();
+            ResourceLocation res = TEXTURES.get(woodId * 16 + colorId);
+            if(res != null)
             {
-                this.bindTexture(resourcelocation);
+                this.bindTexture(res);
             }
         }
 

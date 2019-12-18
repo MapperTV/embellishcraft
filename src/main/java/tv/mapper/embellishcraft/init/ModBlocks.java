@@ -1,5 +1,9 @@
 package tv.mapper.embellishcraft.init;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.RotatedPillarBlock;
@@ -42,6 +46,7 @@ import tv.mapper.embellishcraft.client.renderer.VerticalChestItemStackTileEntity
 import tv.mapper.embellishcraft.item.FuelBlockItem;
 import tv.mapper.embellishcraft.item.ModItemGroups;
 import tv.mapper.embellishcraft.util.CustomChestType;
+import tv.mapper.embellishcraft.util.WoodType;
 
 @ObjectHolder(Constants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
@@ -738,6 +743,8 @@ public class ModBlocks
     public static final Block WHITE_ACACIA_FANCY_BED = null;
     public static final Block YELLOW_ACACIA_FANCY_BED = null;
 
+    public static List<Block> FANCY_BEDS = new ArrayList<>();
+
     // Doors
 
     public static final Block OAK_FANCY_DOOR = null;
@@ -984,107 +991,15 @@ public class ModBlocks
         event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("white_table_lamp"));
         event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("yellow_table_lamp"));
 
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BROWN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("brown_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLACK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("black_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("blue_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.CYAN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("cyan_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("gray_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GREEN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("green_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_blue_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_gray_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIME, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("lime_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.MAGENTA, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("magenta_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.ORANGE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("orange_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PINK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("pink_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PURPLE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("purple_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.RED, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("red_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.WHITE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("white_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.YELLOW, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("yellow_oak_fancy_bed"));
-
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BROWN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("brown_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLACK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("black_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("blue_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.CYAN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("cyan_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("gray_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GREEN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("green_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_blue_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_gray_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIME, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("lime_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.MAGENTA, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("magenta_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.ORANGE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("orange_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PINK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("pink_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PURPLE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("purple_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.RED, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("red_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.WHITE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("white_birch_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.YELLOW, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("yellow_birch_fancy_bed"));
-
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BROWN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("brown_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLACK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("black_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("blue_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.CYAN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("cyan_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("gray_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GREEN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("green_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_blue_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_gray_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIME, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("lime_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.MAGENTA, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("magenta_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.ORANGE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("orange_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PINK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("pink_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PURPLE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("purple_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.RED, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("red_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.WHITE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("white_spruce_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.YELLOW, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("yellow_spruce_fancy_bed"));
-
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BROWN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("brown_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLACK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("black_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("blue_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.CYAN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("cyan_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("gray_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GREEN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("green_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_blue_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_gray_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIME, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("lime_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.MAGENTA, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("magenta_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.ORANGE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("orange_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PINK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("pink_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PURPLE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("purple_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.RED, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("red_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.WHITE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("white_jungle_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.YELLOW, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("yellow_jungle_fancy_bed"));
-
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BROWN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("brown_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLACK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("black_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("blue_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.CYAN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("cyan_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("gray_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GREEN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("green_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_blue_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_gray_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIME, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("lime_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.MAGENTA, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("magenta_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.ORANGE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("orange_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PINK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("pink_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PURPLE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("purple_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.RED, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("red_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.WHITE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("white_dark_oak_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.YELLOW, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("yellow_dark_oak_fancy_bed"));
-
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BROWN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("brown_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLACK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("black_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("blue_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.CYAN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("cyan_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("gray_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.GREEN, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("green_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_BLUE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_blue_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIGHT_GRAY, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("light_gray_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.LIME, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("lime_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.MAGENTA, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("magenta_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.ORANGE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("orange_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PINK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("pink_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.PURPLE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("purple_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.RED, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("red_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.WHITE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("white_acacia_fancy_bed"));
-        event.getRegistry().register(new CustomBedBlock(DyeColor.YELLOW, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName("yellow_acacia_fancy_bed"));
+        for(int i = 0; i < Arrays.stream(WoodType.values()).count(); i++)
+        {
+            for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+            {
+                Block block = new CustomBedBlock(DyeColor.byId(j), WoodType.byId(i), Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName(DyeColor.byId(j).getName() + "_" + WoodType.byId(i).getName() + "_fancy_bed");
+                event.getRegistry().register(block);
+                FANCY_BEDS.add(block);
+            }
+        }
 
         // Doors
 

@@ -1,5 +1,6 @@
 package tv.mapper.embellishcraft.init;
 
+import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,7 +25,7 @@ public class ModTileEntityTypes
     {
         event.getRegistry().register(TileEntityType.Builder.create(CustomChestTileEntity::new, ModBlocks.OAK_FANCY_CHEST, ModBlocks.BIRCH_FANCY_CHEST, ModBlocks.SPRUCE_FANCY_CHEST, ModBlocks.JUNGLE_FANCY_CHEST, ModBlocks.DARK_OAK_FANCY_CHEST, ModBlocks.ACACIA_FANCY_CHEST).build(null).setRegistryName("custom_chest"));
         event.getRegistry().register(TileEntityType.Builder.create(VerticalChestTileEntity::new, ModBlocks.LOCKER).build(null).setRegistryName("vertical_chest"));
-        event.getRegistry().register(TileEntityType.Builder.create(CustomBedTileEntity::new, ModBlocks.BROWN_OAK_FANCY_BED).build(null).setRegistryName("custom_bed"));
+        event.getRegistry().register(TileEntityType.Builder.create(CustomBedTileEntity::new, ModBlocks.FANCY_BEDS.toArray(new Block[ModBlocks.FANCY_BEDS.size()])).build(null).setRegistryName("custom_bed"));
 
     }
 }
