@@ -19,10 +19,10 @@ public class FancyBedModel extends Model
         this.headPiece.addBox(0.0F, 0.0F, 0.0F, 16, 16, 6, 0.0F);
         this.footPiece = new RendererModel(this, 0, 22);
         this.footPiece.addBox(0.0F, 0.0F, 0.0F, 16, 16, 6, 0.0F);
-        this.headWall = new RendererModel(this, 0, 0);
-        this.headWall.addBox(0.0F, 0.0F, 0.0F, 16, 16, 6, 0.0F);
-        this.footWall = new RendererModel(this, 0, 22);
-        this.footWall.addBox(0.0F, 0.0F, 0.0F, 16, 16, 6, 0.0F);
+        this.headWall = new RendererModel(this, 0, 44);
+        this.headWall.addBox(0.0F, 0.0F, -7.0F, 16, 2, 7, 0.0F);
+        this.footWall = new RendererModel(this, 0, 53);
+        this.footWall.addBox(0.0F, 14.0F, -4.0F, 16, 2, 4, 0.0F);
         this.legs[0] = new RendererModel(this, 50, 0);
         this.legs[1] = new RendererModel(this, 50, 6);
         this.legs[2] = new RendererModel(this, 50, 12);
