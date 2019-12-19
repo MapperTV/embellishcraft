@@ -894,23 +894,6 @@ public class ModBlocks
         event.getRegistry().register(new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("vent_air_duct"));
         event.getRegistry().register(new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("grid_air_duct"));
 
-        createBlockWithVariants(event, "purple_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "red_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "white_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "yellow_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "black_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "blue_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "brown_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "cyan_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "gray_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "green_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "light_blue_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "light_gray_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "lime_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "magenta_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "orange_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-        createBlockWithVariants(event, "pink_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
-
         createBlockWithVariants(event, "bulkhead", false, false, false, false, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
         createBlockWithVariants(event, "bulkhead_top", false, false, false, false, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
 
@@ -925,35 +908,20 @@ public class ModBlocks
 
         // Furniture
 
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_chair"));
-        event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_chair"));
+        for(int i = 0; i < Arrays.stream(WoodType.values()).count(); i++)
+        {
+            event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_chair"));
+            event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_terrace_table"));
+            event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_terrace_chair"));
+            event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_table"));
+            event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_fancy_door"));
+            event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_suspended_stairs"));
+            event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY).setRegistryName(WoodType.byId(i).getName() + "_fancy_chest"));
+
+        }
 
         event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("metallic_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_terrace_table"));
-        event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_terrace_table"));
-
         event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("metallic_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_terrace_chair"));
-        event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_terrace_chair"));
-
-        event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_table"));
-        event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_table"));
-        event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_table"));
-        event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_table"));
-        event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_table"));
-        event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_table"));
 
         event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
 
@@ -974,22 +942,12 @@ public class ModBlocks
         event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("white_couch"));
         event.getRegistry().register(new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.YELLOW).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("yellow_couch"));
 
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("black_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("blue_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("brown_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("cyan_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("gray_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("green_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("light_blue_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("light_gray_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("lime_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("magenta_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("orange_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("pink_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("purple_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("red_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("white_table_lamp"));
-        event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName("yellow_table_lamp"));
+        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        {
+            event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName(DyeColor.byId(j).getName() + "_table_lamp"));
+            createBlockWithVariants(event, DyeColor.byId(j).getName() + "_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+
+        }
 
         for(int i = 0; i < Arrays.stream(WoodType.values()).count(); i++)
         {
@@ -1002,13 +960,6 @@ public class ModBlocks
         }
 
         // Doors
-
-        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_fancy_door"));
-        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_fancy_door"));
-        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_fancy_door"));
-        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_fancy_door"));
-        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_fancy_door"));
-        event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_fancy_door"));
 
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_door"));
         event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("sturdy_steel_door"));
@@ -1023,21 +974,8 @@ public class ModBlocks
         // Stairs
 
         event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_suspended_stairs"));
-        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("oak_suspended_stairs"));
-        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("birch_suspended_stairs"));
-        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("spruce_suspended_stairs"));
-        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("jungle_suspended_stairs"));
-        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("dark_oak_suspended_stairs"));
-        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName("acacia_suspended_stairs"));
 
         // Chests
-
-        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY).setRegistryName("oak_fancy_chest"));
-        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.BIRCH_FANCY).setRegistryName("birch_fancy_chest"));
-        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.SPRUCE_FANCY).setRegistryName("spruce_fancy_chest"));
-        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.JUNGLE_FANCY).setRegistryName("jungle_fancy_chest"));
-        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.DARK_OAK_FANCY).setRegistryName("dark_oak_fancy_chest"));
-        event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.ACACIA_FANCY).setRegistryName("acacia_fancy_chest"));
 
         event.getRegistry().register(new VerticalChestBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.5F).sound(SoundType.METAL)).setRegistryName("locker"));
 
