@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "dyed_bed",
+  "ingredients": [
+    {
+      "item": "embellishcraft:white_dark_oak_fancy_bed"
+    },
+    {
+      "tag": "forge:dyes/blue"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:blue_dark_oak_fancy_bed"
+  }
+}

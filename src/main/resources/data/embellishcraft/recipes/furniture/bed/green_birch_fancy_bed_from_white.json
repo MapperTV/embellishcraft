@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "dyed_bed",
+  "ingredients": [
+    {
+      "item": "embellishcraft:white_birch_fancy_bed"
+    },
+    {
+      "tag": "forge:dyes/green"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:green_birch_fancy_bed"
+  }
+}
