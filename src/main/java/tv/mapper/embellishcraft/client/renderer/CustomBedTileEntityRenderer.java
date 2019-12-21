@@ -1,4 +1,4 @@
-package tv.mapper.embellishcraft.client.renderer.tileentity.model;
+package tv.mapper.embellishcraft.client.renderer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,6 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.client.renderer.tileentity.model.FancyBedModel;
 import tv.mapper.embellishcraft.tileentity.CustomBedTileEntity;
 import tv.mapper.embellishcraft.util.WoodType;
 
@@ -23,6 +24,9 @@ import tv.mapper.embellishcraft.util.WoodType;
 public class CustomBedTileEntityRenderer<T extends CustomBedTileEntity> extends TileEntityRenderer<T>
 {
     public static List<ResourceLocation> TEXTURES = new ArrayList<>();
+
+    private int woodId = -1;
+    private int colorId = -1;
 
     public CustomBedTileEntityRenderer()
     {
@@ -53,8 +57,8 @@ public class CustomBedTileEntityRenderer<T extends CustomBedTileEntity> extends 
         }
         else
         {
-            int woodId = tileEntityIn.getWood().getId();
-            int colorId = tileEntityIn.getColor().getId();
+            woodId = tileEntityIn.getWood().getId();
+            colorId = tileEntityIn.getColor().getId();
             ResourceLocation res = TEXTURES.get(woodId * 16 + colorId);
             if(res != null)
             {
