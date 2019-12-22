@@ -1,6 +1,7 @@
 package tv.mapper.embellishcraft.tileentity;
 
 import java.util.UUID;
+import java.util.stream.IntStream;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -8,6 +9,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.DoubleSidedInventory;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.item.ItemStack;
@@ -44,15 +46,19 @@ import tv.mapper.embellishcraft.item.wrapper.CustomInvWrapper;
 import tv.mapper.embellishcraft.state.properties.VerticalChestType;
 
 @OnlyIn(value = Dist.CLIENT, _interface = IChestLid.class)
-public class VerticalChestTileEntity extends LockableLootTileEntity implements IChestLid, ITickableTileEntity
+public class VerticalChestTileEntity extends LockableLootTileEntity implements IChestLid, ITickableTileEntity, ISidedInventory
 {
+    private static final int[] SLOTS = IntStream.range(0, 4 * 4).toArray();
     private NonNullList<ItemStack> chestContents = NonNullList.withSize(27, ItemStack.EMPTY);
+    
     protected float lidAngle;
     protected float prevLidAngle;
     protected int numPlayersUsing;
     private int ticksSinceSync;
+    
     private boolean isLocked = false;
     private UUID id = null;
+
     private LazyOptional<IItemHandlerModifiable> chestHandler;
 
     protected VerticalChestTileEntity(TileEntityType<?> typeIn)
@@ -399,5 +405,23 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         BlockPos pos = getTileEntity().getPos();
         AxisAlignedBB bb = new AxisAlignedBB(pos.add(0, -1, 0), pos.add(1, 1, 1));
         return bb;
+    }
+
+    @Override
+    public int[] getSlotsForFace(Direction side)
+    {
+        return SLOTS;
+    }
+
+    @Override
+    public boolean canInsertItem(int index, ItemStack itemStackIn, Direction direction)
+    {
+        return !isLocked;
+    }
+
+    @Override
+    public boolean canExtractItem(int index, ItemStack stack, Direction direction)
+    {
+        return !isLocked;
     }
 }
