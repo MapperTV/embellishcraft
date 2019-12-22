@@ -24,6 +24,7 @@ import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.block.AllRotationBlock;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CouchBlock;
+import tv.mapper.embellishcraft.block.CrateBlock;
 import tv.mapper.embellishcraft.block.CustomBedBlock;
 import tv.mapper.embellishcraft.block.CustomBlock;
 import tv.mapper.embellishcraft.block.CustomChestBlock;
@@ -786,6 +787,13 @@ public class ModBlocks
 
     public static final Block LOCKER = null;
 
+    public static final Block OAK_WOODEN_CRATE = null;
+    public static final Block BIRCH_WOODEN_CRATE = null;
+    public static final Block SPRUCE_WOODEN_CRATE = null;
+    public static final Block JUNGLE_WOODEN_CRATE = null;
+    public static final Block DARK_OAK_WOODEN_CRATE = null;
+    public static final Block ACACIA_WOODEN_CRATE = null;
+
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
@@ -918,6 +926,7 @@ public class ModBlocks
             event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_fancy_door"));
             event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_suspended_stairs"));
             event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY).setRegistryName(WoodType.byId(i).getName() + "_fancy_chest"));
+            event.getRegistry().register(new CrateBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName(WoodType.byId(i).getName() + "_wooden_crate"));
 
         }
 
@@ -1329,6 +1338,13 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(ACACIA_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.chestBurnTime).setRegistryName(ACACIA_FANCY_CHEST.getRegistryName()));
 
         event.getRegistry().register(new BlockItem(LOCKER, new Item.Properties().setTEISR(() -> VerticalChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LOCKER.getRegistryName()));
+
+        event.getRegistry().register(new BlockItem(OAK_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(OAK_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BIRCH_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BIRCH_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(SPRUCE_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(SPRUCE_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(JUNGLE_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(JUNGLE_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(DARK_OAK_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(DARK_OAK_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(ACACIA_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(ACACIA_WOODEN_CRATE.getRegistryName()));
 
     }
 

@@ -6,6 +6,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import tv.mapper.embellishcraft.client.gui.screen.inventory.CrateScreen;
 import tv.mapper.embellishcraft.client.gui.screen.inventory.VerticalChestScreen;
 import tv.mapper.embellishcraft.client.renderer.CustomBedTileEntityRenderer;
 import tv.mapper.embellishcraft.client.renderer.CustomChestTileEntityRenderer;
@@ -30,6 +31,8 @@ public class ClientProxy implements IProxy
         ScreenManager.registerFactory(ModContainers.VERTICAL_9X4, VerticalChestScreen::new);
         ScreenManager.registerFactory(ModContainers.VERTICAL_9X5, VerticalChestScreen::new);
         ScreenManager.registerFactory(ModContainers.VERTICAL_9X6, VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.CRATE_4X4, CrateScreen::new);
+        ScreenManager.registerFactory(ModContainers.CRATE_4X8, CrateScreen::new);
     }
 
     @Override

@@ -612,6 +612,13 @@
     
     "block.embellishcraft.locker": "Locker",
     
+    "block.embellishcraft.oak_wooden_crate": "Oak Wooden Crate",
+    "block.embellishcraft.birch_wooden_crate": "Birch Wooden Crate",
+    "block.embellishcraft.spruce_wooden_crate": "Spruce Wooden Crate",
+    "block.embellishcraft.jungle_wooden_crate": "Jungle Wooden Crate",
+    "block.embellishcraft.dark_oak_wooden_crate": "Dark Oak Wooden Crate",
+    "block.embellishcraft.acacia_wooden_crate": "Acacia Wooden Crate",
+    
     "comment_A11": "Doors",
     
     "block.embellishcraft.oak_fancy_door": "Oak Fancy Door",
@@ -753,6 +760,7 @@
     
     "embellishcraft.container.locker": "Small Locker",
     "embellishcraft.container.locker_tall": "Locker",
+    "embellishcraft.container.wooden_crate": "Wooden Crate",
     
     "comment_D": "Messages",
     
