@@ -2,6 +2,8 @@ package tv.mapper.embellishcraft.tileentity;
 
 import java.util.stream.IntStream;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.ShulkerBoxBlock;
 import net.minecraft.entity.player.PlayerInventory;
@@ -124,7 +126,18 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
 
     private IItemHandlerModifiable createHandler()
     {
-        return new InvWrapper(this);
+        return new InvWrapper(this)
+        {
+            @Override
+            @Nonnull
+            public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate)
+            {
+                if(Block.getBlockFromItem(stack.getItem()) instanceof CrateBlock || Block.getBlockFromItem(stack.getItem()) instanceof ShulkerBoxBlock)
+                    return stack;
+
+                return super.insertItem(slot, stack, simulate);
+            }
+        };
     }
 
     /**
@@ -150,7 +163,7 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
         if(Block.getBlockFromItem(itemStackIn.getItem()) instanceof CrateBlock || Block.getBlockFromItem(itemStackIn.getItem()) instanceof ShulkerBoxBlock)
             return false;
         else
-            return true;
+            return false;
     }
 
     @Override
