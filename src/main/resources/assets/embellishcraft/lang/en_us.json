@@ -752,6 +752,23 @@
     "block.embellishcraft.white_acacia_fancy_bed": "White Acacia Fancy Bed",
     "block.embellishcraft.yellow_acacia_fancy_bed": "Yellow Acacia Fancy Bed",
     
+    "block.embellishcraft.black_pillow": "Black Pillow",
+    "block.embellishcraft.blue_pillow": "Blue Pillow",
+    "block.embellishcraft.brown_pillow": "Brown Pillow",
+    "block.embellishcraft.cyan_pillow": "Cyan Pillow",
+    "block.embellishcraft.gray_pillow": "Gray Pillow",
+    "block.embellishcraft.green_pillow": "Green Pillow",
+    "block.embellishcraft.light_blue_pillow": "Light Blue Pillow",
+    "block.embellishcraft.light_gray_pillow": "Light Gray Pillow",
+    "block.embellishcraft.lime_pillow": "Lime Pillow",
+    "block.embellishcraft.magenta_pillow": "Magenta Pillow",
+    "block.embellishcraft.orange_pillow": "Orange Pillow",
+    "block.embellishcraft.pink_pillow": "Pink Pillow",
+    "block.embellishcraft.purple_pillow": "Purple Pillow",
+    "block.embellishcraft.red_pillow": "Red Pillow",
+    "block.embellishcraft.white_pillow": "White Pillow",
+    "block.embellishcraft.yellow_pillow": "Yellow Pillow",
+    
     "comment_B": "Creative Tabs (Item Groups)",
     
     "itemGroup.embellishcraft_group": "EmbellishCraft",
@@ -767,6 +784,7 @@
     "embellishcraft.message.locker.locked": "This locker is locked!",
     "embellishcraft.message.locker.lock": "This locker is now locked!",
     "embellishcraft.message.locker.unlock": "This locker is now unlocked!",
-    "embellishcraft.message.locker.wrong": "This locker is not yours!"
+    "embellishcraft.message.locker.wrong": "This locker is not yours!",
+    "embellishcraft.message.bed.underwater": "You can't sleep underwater!"
 
 }

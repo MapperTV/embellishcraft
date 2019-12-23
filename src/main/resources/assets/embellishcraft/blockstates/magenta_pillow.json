@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "embellishcraft:block/furniture/magenta_pillow",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "embellishcraft:block/furniture/magenta_pillow",
+            "y": 270
+        },
+        "facing=south": {
+            "model": "embellishcraft:block/furniture/magenta_pillow"
+        },
+        "facing=west": {
+            "model": "embellishcraft:block/furniture/magenta_pillow",
+            "y": 90
+        }
+    }
+}

@@ -35,6 +35,7 @@ import tv.mapper.embellishcraft.block.CustomSlabBlock;
 import tv.mapper.embellishcraft.block.CustomStairsBlock;
 import tv.mapper.embellishcraft.block.CustomWallBlock;
 import tv.mapper.embellishcraft.block.LampBlock;
+import tv.mapper.embellishcraft.block.PillowBlock;
 import tv.mapper.embellishcraft.block.PlateBlock;
 import tv.mapper.embellishcraft.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.block.TableBlock;
@@ -747,6 +748,23 @@ public class ModBlocks
 
     public static List<Block> FANCY_BEDS = new ArrayList<>();
 
+    public static final Block BROWN_PILLOW = null;
+    public static final Block BLACK_PILLOW = null;
+    public static final Block BLUE_PILLOW = null;
+    public static final Block CYAN_PILLOW = null;
+    public static final Block GRAY_PILLOW = null;
+    public static final Block GREEN_PILLOW = null;
+    public static final Block LIGHT_BLUE_PILLOW = null;
+    public static final Block LIGHT_GRAY_PILLOW = null;
+    public static final Block LIME_PILLOW = null;
+    public static final Block MAGENTA_PILLOW = null;
+    public static final Block ORANGE_PILLOW = null;
+    public static final Block PINK_PILLOW = null;
+    public static final Block PURPLE_PILLOW = null;
+    public static final Block RED_PILLOW = null;
+    public static final Block WHITE_PILLOW = null;
+    public static final Block YELLOW_PILLOW = null;
+
     // Doors
 
     public static final Block OAK_FANCY_DOOR = null;
@@ -956,6 +974,7 @@ public class ModBlocks
         {
             event.getRegistry().register(new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName(DyeColor.byId(j).getName() + "_table_lamp"));
             createBlockWithVariants(event, DyeColor.byId(j).getName() + "_corrugated_metal_plate", true, true, true, true, Material.IRON, SoundType.METAL, ToolType.PICKAXE);
+            event.getRegistry().register(new PillowBlock(DyeColor.byId(j), Block.Properties.create(Material.WOOL).hardnessAndResistance(0.25F).sound(SoundType.CLOTH)).setRegistryName(DyeColor.byId(j).getName() + "_pillow"));
 
         }
 
@@ -1298,6 +1317,23 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(RED_ACACIA_FANCY_BED, new Item.Properties().setTEISR(() -> CustomBedItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.bedBurnTime).setRegistryName(RED_ACACIA_FANCY_BED.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(WHITE_ACACIA_FANCY_BED, new Item.Properties().setTEISR(() -> CustomBedItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.bedBurnTime).setRegistryName(WHITE_ACACIA_FANCY_BED.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(YELLOW_ACACIA_FANCY_BED, new Item.Properties().setTEISR(() -> CustomBedItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), Constants.bedBurnTime).setRegistryName(YELLOW_ACACIA_FANCY_BED.getRegistryName()));
+
+        event.getRegistry().register(new FuelBlockItem(BROWN_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(BROWN_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BLACK_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(BLACK_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BLUE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(BLUE_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(CYAN_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(CYAN_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(GRAY_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(GRAY_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(GREEN_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(GREEN_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(LIGHT_BLUE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(LIGHT_BLUE_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(LIGHT_GRAY_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(LIGHT_GRAY_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(LIME_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(LIME_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(MAGENTA_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(MAGENTA_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ORANGE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(ORANGE_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(PINK_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(PINK_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(PURPLE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(PURPLE_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(RED_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(RED_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(WHITE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(WHITE_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(YELLOW_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.doorBurnTime).setRegistryName(YELLOW_PILLOW.getRegistryName()));
 
         // Door
 
