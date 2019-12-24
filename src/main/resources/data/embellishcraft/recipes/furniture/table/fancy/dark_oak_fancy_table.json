@@ -1,0 +1,21 @@
+{
+    "type": "crafting_shaped",
+    "group": "tables",
+    "pattern": [
+        "PPP",
+        "W W",
+        "W W"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:dark_oak_planks"
+        },
+        "W": {
+            "item": "minecraft:dark_oak_log"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:dark_oak_fancy_table",
+        "count": 2
+    }
+}

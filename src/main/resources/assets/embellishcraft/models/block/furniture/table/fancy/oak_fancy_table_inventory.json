@@ -1,0 +1,7 @@
+{
+    "parent": "embellishcraft:block/furniture/table/fancy/fancy_table_inventory",
+    "textures": {
+        "side": "embellishcraft:block/furniture/table/fancy/oak_fancy_table_side",
+        "top": "embellishcraft:block/furniture/table/fancy/oak_fancy_table_top"
+    }
+}

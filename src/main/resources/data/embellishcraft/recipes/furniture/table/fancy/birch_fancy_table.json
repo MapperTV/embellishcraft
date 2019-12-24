@@ -1,0 +1,21 @@
+{
+    "type": "crafting_shaped",
+    "group": "tables",
+    "pattern": [
+        "PPP",
+        "W W",
+        "W W"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:birch_planks"
+        },
+        "W": {
+            "item": "minecraft:birch_log"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:birch_fancy_table",
+        "count": 2
+    }
+}

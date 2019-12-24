@@ -607,6 +607,13 @@ public class ModBlocks
     public static final Block JUNGLE_TABLE = null;
     public static final Block SPRUCE_TABLE = null;
     public static final Block ACACIA_TABLE = null;
+    
+    public static final Block OAK_FANCY_TABLE = null;
+    public static final Block DARK_OAK_FANCY_TABLE = null;
+    public static final Block BIRCH_FANCY_TABLE = null;
+    public static final Block JUNGLE_FANCY_TABLE = null;
+    public static final Block SPRUCE_FANCY_TABLE = null;
+    public static final Block ACACIA_FANCY_TABLE = null;
 
     public static final Block PLATE = null;
 
@@ -941,6 +948,7 @@ public class ModBlocks
             event.getRegistry().register(new TerraceTableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_terrace_table"));
             event.getRegistry().register(new TerraceChairBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_terrace_chair"));
             event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_table"));
+            event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_fancy_table"));
             event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_fancy_door"));
             event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(WoodType.byId(i).getName() + "_suspended_stairs"));
             event.getRegistry().register(new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY).setRegistryName(WoodType.byId(i).getName() + "_fancy_chest"));
@@ -1179,6 +1187,13 @@ public class ModBlocks
         event.getRegistry().register(new FuelBlockItem(JUNGLE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(JUNGLE_TABLE.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(SPRUCE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(SPRUCE_TABLE.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(ACACIA_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.chairBurnTime).setRegistryName(ACACIA_TABLE.getRegistryName()));
+
+        event.getRegistry().register(new FuelBlockItem(OAK_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(OAK_FANCY_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(DARK_OAK_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(DARK_OAK_FANCY_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BIRCH_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(BIRCH_FANCY_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(JUNGLE_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(JUNGLE_FANCY_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(SPRUCE_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(SPRUCE_FANCY_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ACACIA_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), Constants.couchBurnTime).setRegistryName(ACACIA_FANCY_TABLE.getRegistryName()));
 
         event.getRegistry().register(new BlockItem(PLATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PLATE.getRegistryName()));
 

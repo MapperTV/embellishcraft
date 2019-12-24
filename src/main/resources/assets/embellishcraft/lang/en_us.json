@@ -567,6 +567,13 @@
     "block.embellishcraft.jungle_table": "Jungle Table",
     "block.embellishcraft.acacia_table": "Acacia Table",
     
+    "block.embellishcraft.oak_fancy_table": "Oak Fancy Table",
+    "block.embellishcraft.dark_oak_fancy_table": "Dark Oak Fancy Table",
+    "block.embellishcraft.spruce_fancy_table": "Spruce Fancy Table",
+    "block.embellishcraft.birch_fancy_table": "Birch Fancy Table",
+    "block.embellishcraft.jungle_fancy_table": "Jungle Fancy Table",
+    "block.embellishcraft.acacia_fancy_table": "Acacia Fancy Table",
+    
     "block.embellishcraft.plate": "Plate",
     
     "block.embellishcraft.black_couch": "Black Couch",

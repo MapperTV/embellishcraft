@@ -1,0 +1,21 @@
+{
+    "type": "crafting_shaped",
+    "group": "tables",
+    "pattern": [
+        "PPP",
+        "W W",
+        "W W"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:jungle_planks"
+        },
+        "W": {
+            "item": "minecraft:jungle_log"
+        }
+    },
+    "result": {
+        "item": "embellishcraft:jungle_fancy_table",
+        "count": 2
+    }
+}
