@@ -30,6 +30,8 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
+    private boolean isFancy = false;
+
     VoxelShape plate = Block.makeCuboidShape(0.0D, 14.0D, 0.0D, 16.0D, 16.0D, 16.0D);
 
     VoxelShape leg_north = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 2.0D, 14.0D, 2.0D);
@@ -37,15 +39,23 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
     VoxelShape leg_west = Block.makeCuboidShape(0.0D, 0.0D, 14.0D, 2.0D, 14.0D, 16.0D);
     VoxelShape leg_south = Block.makeCuboidShape(14.0D, 0.0D, 14.0D, 16.0D, 14.0D, 16.0D);
 
-    public TableBlock(Properties properties)
+    VoxelShape fancy_plate = Block.makeCuboidShape(0.0D, 12.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+
+    VoxelShape fancy_leg_north = Block.makeCuboidShape(1.0D, 0.0D, 1.0D, 4.0D, 14.0D, 4.0D);
+    VoxelShape fancy_leg_east = Block.makeCuboidShape(12.0D, 0.0D, 1.0D, 15.0D, 14.0D, 4.0D);
+    VoxelShape fancy_leg_west = Block.makeCuboidShape(1.0D, 0.0D, 12.0D, 4.0D, 14.0D, 15.0D);
+    VoxelShape fancy_leg_south = Block.makeCuboidShape(12.0D, 0.0D, 12.0D, 15.0D, 14.0D, 15.0D);
+
+    public TableBlock(Properties properties, boolean isFancy)
     {
         super(properties);
-
+        this.isFancy = isFancy;
     }
 
-    public TableBlock(Properties properties, ToolType toolType)
+    public TableBlock(Properties properties, boolean isFancy, ToolType toolType)
     {
         super(properties, toolType);
+        this.isFancy = isFancy;
     }
 
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
@@ -62,20 +72,40 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
     {
-        VoxelShape shape = plate;
+        VoxelShape shape;
 
-        if(state.get(TABLE_NORTH))
-            shape = VoxelShapes.or(shape, leg_north);
+        if(isFancy)
+        {
+            shape = fancy_plate;
 
-        if(state.get(TABLE_SOUTH))
-            shape = VoxelShapes.or(shape, leg_south);
+            if(state.get(TABLE_NORTH))
+                shape = VoxelShapes.or(shape, fancy_leg_north);
 
-        if(state.get(TABLE_EAST))
-            shape = VoxelShapes.or(shape, leg_east);
+            if(state.get(TABLE_SOUTH))
+                shape = VoxelShapes.or(shape, fancy_leg_south);
 
-        if(state.get(TABLE_WEST))
-            shape = VoxelShapes.or(shape, leg_west);
+            if(state.get(TABLE_EAST))
+                shape = VoxelShapes.or(shape, fancy_leg_east);
 
+            if(state.get(TABLE_WEST))
+                shape = VoxelShapes.or(shape, fancy_leg_west);
+        }
+        else
+        {
+            shape = plate;
+
+            if(state.get(TABLE_NORTH))
+                shape = VoxelShapes.or(shape, leg_north);
+
+            if(state.get(TABLE_SOUTH))
+                shape = VoxelShapes.or(shape, leg_south);
+
+            if(state.get(TABLE_EAST))
+                shape = VoxelShapes.or(shape, leg_east);
+
+            if(state.get(TABLE_WEST))
+                shape = VoxelShapes.or(shape, leg_west);
+        }
         return shape;
     }
 
@@ -129,7 +159,7 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
     {
         if(facing == Direction.DOWN && !this.isValidPosition(stateIn, worldIn, currentPos))
             return Blocks.AIR.getDefaultState();
-        
+
         IBlockReader iblockreader = worldIn;
 
         BlockPos blockpos1 = currentPos.north();
