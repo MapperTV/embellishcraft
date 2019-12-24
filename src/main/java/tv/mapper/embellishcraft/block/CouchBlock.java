@@ -96,6 +96,8 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
     {
         super(properties);
         this.toolType = toolType;
+        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, StairsShape.STRAIGHT).with(LEFT_END, true).with(RIGHT_END, true).with(WATERLOGGED, Boolean.valueOf(false)));
+
     }
 
     @Override
