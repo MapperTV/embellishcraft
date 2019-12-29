@@ -35,20 +35,24 @@ public class LockerLockPacket
 
     public static void handle(LockerLockPacket packet, Supplier<NetworkEvent.Context> context)
     {
-        ServerPlayerEntity player = context.get().getSender();
-
-        UUID id = player.getUniqueID();
-        World world = player.getServerWorld();
-        TileEntity te = world.getTileEntity(packet.pos);
-
-        if(te instanceof VerticalChestTileEntity)
+        context.get().enqueueWork(() ->
         {
-            UUID teId = ((VerticalChestTileEntity)te).getUUID();
-            if(teId != null)
+            ServerPlayerEntity player = context.get().getSender();
+
+            UUID id = player.getUniqueID();
+            World world = player.getServerWorld();
+            TileEntity te = world.getTileEntity(packet.pos);
+
+            if(te instanceof VerticalChestTileEntity)
             {
-                if(teId.equals(id))
-                    ((VerticalChestTileEntity)te).lockIt();
+                UUID teId = ((VerticalChestTileEntity)te).getUUID();
+                if(teId != null)
+                {
+                    if(teId.equals(id))
+                        ((VerticalChestTileEntity)te).lockIt();
+                }
             }
-        }
+        });
+        context.get().setPacketHandled(true);
     }
 }

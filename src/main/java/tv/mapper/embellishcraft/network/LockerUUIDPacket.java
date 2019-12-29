@@ -36,18 +36,21 @@ public class LockerUUIDPacket
 
     public static void handle(LockerUUIDPacket packet, Supplier<NetworkEvent.Context> context)
     {
-        ServerPlayerEntity player = context.get().getSender();
-        UUID id = player.getUniqueID();
-        World world = player.getServerWorld();
-        TileEntity te = world.getTileEntity(packet.pos);
-
-        if(te instanceof VerticalChestTileEntity)
+        context.get().enqueueWork(() ->
         {
-            if(!((VerticalChestTileEntity)te).hasUUID())
-                ((VerticalChestTileEntity)te).setUUID(id);
-            else
-                EmbellishCraft.LOGGER.warn("WARNING: Attempted to change UUID on existing container, that's illegal!");
+            ServerPlayerEntity player = context.get().getSender();
+            UUID id = player.getUniqueID();
+            World world = player.getServerWorld();
+            TileEntity te = world.getTileEntity(packet.pos);
 
-        }
+            if(te instanceof VerticalChestTileEntity)
+            {
+                if(!((VerticalChestTileEntity)te).hasUUID())
+                    ((VerticalChestTileEntity)te).setUUID(id);
+                else
+                    EmbellishCraft.LOGGER.warn("WARNING: Attempted to change UUID on existing container, that's illegal!");
+            }
+        });
+        context.get().setPacketHandled(true);
     }
 }
