@@ -26,7 +26,7 @@ public class EmbellishCraft
 
     public EmbellishCraft()
     {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, EmbellishCraftConfig.SERVER_CONFIG);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EmbellishCraftConfig.COMMON_CONFIG);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
