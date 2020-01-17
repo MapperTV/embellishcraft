@@ -48,6 +48,16 @@ minecraft {
                 }
             }
         }
+        
+        data {
+            workingDirectory project.file('run').canonicalPath
+
+            property 'forge.logging.markers', ''
+            property 'forge.logging.console.level', 'debug'
+
+            args '--mod', 'embellishcraft', '--all', '--output', file('src/generated/resources/'), '--existing', sourceSets.main.resources.srcDirs[0]
+            source sourceSets.main
+        }
     }
 }
 
