@@ -7,12 +7,24 @@ import net.minecraft.util.IStringSerializable;
 
 public enum WoodType implements IStringSerializable
 {
-    OAK(0, "oak"),
-    BIRCH(1, "birch"),
-    SPRUCE(2, "spruce"),
-    JUNGLE(3, "jungle"),
-    DARK_OAK(4, "dark_oak"),
-    ACACIA(5, "acacia");
+    OAK(0, "oak", "chene"),
+    BIRCH(1, "birch", "bouleau"),
+    SPRUCE(2, "spruce", "sapin"),
+    JUNGLE(3, "jungle", "acajou"),
+    DARK_OAK(4, "dark_oak", "chene noir"),
+    ACACIA(5, "acacia", "acacia"),
+    CHERRY(6, "cherry", "cerisier"),
+    DEAD(7, "dead", "bois mort"),
+    ETHEREAL(8, "ethereal", "bois ethere"),
+    FIR(9, "fir", "sapin"),
+    HELLBARK(10, "hellbark", "ecorce infernale"),
+    JACARANDA(11, "jacaranda", "jacaranda"),
+    MAGIC(12, "magic", "bois magique"),
+    MAHOGANY(13, "mahogany", "acajou"),
+    PALM(14, "palm", "palmier"),
+    REDWOOD(15, "redwood", "sequoia"),
+    UMBRAN(16, "umbran", "bois sinistre"),
+    WILLOW(17, "willow", "saule");
 
     private static final WoodType[] VALUES = Arrays.stream(values()).sorted(Comparator.comparingInt(WoodType::getId)).toArray((map) ->
     {
@@ -20,17 +32,25 @@ public enum WoodType implements IStringSerializable
     });
 
     private final int id;
-    private final String name;
+    private final String en_us;
+    private final String fr_fr;
 
-    private WoodType(int idIn, String name)
+    private WoodType(int idIn, String en_us, String fr_fr)
     {
         this.id = idIn;
-        this.name = name;
+        this.en_us = en_us;
+        this.fr_fr = fr_fr;
     }
 
+    @Override
     public String getName()
     {
-        return this.name;
+        return getName("en_us");
+    }
+
+    public String getName(String lang)
+    {
+        return lang.equals("fr_fr") ? this.fr_fr : this.en_us;
     }
 
     public int getId()

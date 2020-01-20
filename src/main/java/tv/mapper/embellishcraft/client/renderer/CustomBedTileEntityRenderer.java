@@ -15,6 +15,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fml.ModList;
 import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.client.renderer.tileentity.model.FancyBedModel;
 import tv.mapper.embellishcraft.tileentity.CustomBedTileEntity;
@@ -37,7 +38,10 @@ public class CustomBedTileEntityRenderer<T extends CustomBedTileEntity> extends 
             for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
             {
                 name = DyeColor.byId(j).getTranslationKey() + "_" + WoodType.getWoodByID(i);
-                TEXTURES.add(new ResourceLocation(Constants.MODID, "textures/entity/furniture/bed/" + name + "_fancy_bed.png"));
+                if(i < 6)
+                    TEXTURES.add(new ResourceLocation(Constants.MODID, "textures/entity/furniture/bed/" + name + "_fancy_bed.png"));
+                else if(i > 5 && i < 18 && ModList.get().isLoaded("embellishcraft-bop"))
+                    TEXTURES.add(new ResourceLocation("embellishcraft-bop", "textures/entity/bed/" + name + "_fancy_bed.png"));
             }
         }
     }
