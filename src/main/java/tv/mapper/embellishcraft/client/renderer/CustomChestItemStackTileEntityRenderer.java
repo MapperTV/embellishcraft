@@ -16,7 +16,7 @@ public class CustomChestItemStackTileEntityRenderer extends ItemStackTileEntityR
         Block block = Block.getBlockFromItem(itemStack.getItem());
         if(block instanceof CustomChestBlock)
         {
-            CustomChestTileEntity tileEntity = new CustomChestTileEntity();
+            CustomChestTileEntity tileEntity = new CustomChestTileEntity(((CustomChestBlock)block).getWood());
             TileEntityRenderer<CustomChestTileEntity> tileEntityRenderer = TileEntityRendererDispatcher.instance.getRenderer(tileEntity);
             if(tileEntityRenderer instanceof CustomChestTileEntityRenderer)
             {

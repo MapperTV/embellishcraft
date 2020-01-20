@@ -1,5 +1,9 @@
 package tv.mapper.embellishcraft.client.renderer;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import com.mojang.blaze3d.platform.GlStateManager;
 
 import net.minecraft.block.BlockState;
@@ -8,28 +12,42 @@ import net.minecraft.client.renderer.tileentity.model.ChestModel;
 import net.minecraft.client.renderer.tileentity.model.LargeChestModel;
 import net.minecraft.state.properties.ChestType;
 import net.minecraft.tileentity.IChestLid;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.ModList;
 import tv.mapper.embellishcraft.Constants;
 import tv.mapper.embellishcraft.block.CustomChestBlock;
 import tv.mapper.embellishcraft.init.ModBlocks;
+import tv.mapper.embellishcraft.tileentity.CustomChestTileEntity;
+import tv.mapper.embellishcraft.util.WoodType;
 
-public class CustomChestTileEntityRenderer<T extends TileEntity & IChestLid> extends TileEntityRenderer<T>
+public class CustomChestTileEntityRenderer<T extends CustomChestTileEntity & IChestLid> extends TileEntityRenderer<T>
 {
-    private static final ResourceLocation FANCY_OAK_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/oak_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_OAK_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/oak_fancy_chest.png");
-    private static final ResourceLocation FANCY_BIRCH_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/birch_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_BIRCH_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/birch_fancy_chest.png");
-    private static final ResourceLocation FANCY_SPRUCE_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/spruce_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_SPRUCE_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/spruce_fancy_chest.png");
-    private static final ResourceLocation FANCY_JUNGLE_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/jungle_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_JUNGLE_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/jungle_fancy_chest.png");
-    private static final ResourceLocation FANCY_DARK_OAK_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/dark_oak_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_DARK_OAK_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/dark_oak_fancy_chest.png");
-    private static final ResourceLocation FANCY_ACACIA_CHEST_DOUBLE = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/acacia_fancy_chest_double.png");
-    private static final ResourceLocation FANCY_ACACIA_CHEST = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/acacia_fancy_chest.png");
-    
+    public static List<ResourceLocation> TEXTURES = new ArrayList<>();
+    public static List<ResourceLocation> TEXTURES_DOUBLE = new ArrayList<>();
+
+    private int woodId = -1;
+
+    public CustomChestTileEntityRenderer()
+    {
+        String name;
+
+        for(int i = 0; i < Arrays.stream(WoodType.values()).count(); i++)
+        {
+            name = WoodType.getWoodByID(i);
+            if(i < 6)
+            {
+                TEXTURES.add(new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/" + name + "_fancy_chest.png"));
+                TEXTURES_DOUBLE.add(new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/" + name + "_fancy_chest_double.png"));
+            }
+            else if(i > 5 && i < 18 && ModList.get().isLoaded("embellishcraft-bop"))
+            {
+                TEXTURES.add(new ResourceLocation("embellishcraft-bop", "textures/entity/chest/" + name + "_fancy_chest.png"));
+                TEXTURES_DOUBLE.add(new ResourceLocation("embellishcraft-bop", "textures/entity/chest/" + name + "_fancy_chest_double.png"));
+            }
+        }
+    }
+
     private final ChestModel simpleChest = new ChestModel();
     private final ChestModel largeChest = new LargeChestModel();
 
@@ -103,30 +121,17 @@ public class CustomChestTileEntityRenderer<T extends TileEntity & IChestLid> ext
         }
         else
         {
-            switch(blockName)
+            woodId = tileEntityIn.getWood().getId();
+            if(!doubleChest)
+                resourcelocation = TEXTURES.get(woodId);
+            else
+                resourcelocation = TEXTURES_DOUBLE.get(woodId);
+            if(resourcelocation != null)
             {
-                default:
-                case "embellishcraft:oak_fancy_chest":
-                    resourcelocation = doubleChest ? FANCY_OAK_CHEST_DOUBLE : FANCY_OAK_CHEST;
-                    break;
-                case "embellishcraft:birch_fancy_chest":
-                    resourcelocation = doubleChest ? FANCY_BIRCH_CHEST_DOUBLE : FANCY_BIRCH_CHEST;
-                    break;
-                case "embellishcraft:spruce_fancy_chest":
-                    resourcelocation = doubleChest ? FANCY_SPRUCE_CHEST_DOUBLE : FANCY_SPRUCE_CHEST;
-                    break;
-                case "embellishcraft:jungle_fancy_chest":
-                    resourcelocation = doubleChest ? FANCY_JUNGLE_CHEST_DOUBLE : FANCY_JUNGLE_CHEST;
-                    break;
-                case "embellishcraft:dark_oak_fancy_chest":
-                    resourcelocation = doubleChest ? FANCY_DARK_OAK_CHEST_DOUBLE : FANCY_DARK_OAK_CHEST;
-                    break;
-                case "embellishcraft:acacia_fancy_chest":
-                    resourcelocation = doubleChest ? FANCY_ACACIA_CHEST_DOUBLE : FANCY_ACACIA_CHEST;
+                this.bindTexture(resourcelocation);
             }
         }
 
-        this.bindTexture(resourcelocation);
         return doubleChest ? this.largeChest : this.simpleChest;
     }
 
