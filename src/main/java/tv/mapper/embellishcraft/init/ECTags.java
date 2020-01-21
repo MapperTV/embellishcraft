@@ -17,6 +17,7 @@ public class ECTags
         public static final Tag<Block> BEAMS = tag("beams");
         public static final Tag<Block> DUCTS = tag("ducts");
         public static final Tag<Block> STEEL_DOORS = tag("steel_doors");
+        public static final Tag<Block> FANCY_BEDS = tag("fancy_beds");
 
         private static Tag<Block> tag(String name)
         {
@@ -31,6 +32,7 @@ public class ECTags
         public static final Tag<Item> BEAMS = tag("beams");
         public static final Tag<Item> DUCTS = tag("ducts");
         public static final Tag<Item> STEEL_DOORS = tag("steel_doors");
+        public static final Tag<Item> FANCY_BEDS = tag("fancy_beds");
 
         private static Tag<Item> tag(String name)
         {
@@ -42,6 +44,7 @@ public class ECTags
     {
         public static final Tag<Block> CHAIRS = tag("chairs");
         public static final Tag<Block> TABLES = tag("tables");
+        public static final Tag<Block> CRATES = tag("crates");
         public static final Tag<Block> PRESSURE_PLATES = tag("pressure_plates");
 
         public static final Tag<Block> STORAGE_BLOCKS_STEEL = tag("storage_blocks/steel");
@@ -56,6 +59,7 @@ public class ECTags
     {
         public static final Tag<Item> CHAIRS = tag("chairs");
         public static final Tag<Item> TABLES = tag("tables");
+        public static final Tag<Item> CRATES = tag("crates");
         public static final Tag<Item> PRESSURE_PLATES = tag("pressure_plates");
 
         public static final Tag<Item> PLATES = tag("plates");
