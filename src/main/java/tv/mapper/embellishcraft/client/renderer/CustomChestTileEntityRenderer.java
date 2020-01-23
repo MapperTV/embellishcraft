@@ -16,6 +16,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.ModList;
 import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.block.CustomChestBlock;
 import tv.mapper.embellishcraft.init.ModBlocks;
 import tv.mapper.embellishcraft.tileentity.CustomChestTileEntity;
@@ -126,11 +127,12 @@ public class CustomChestTileEntityRenderer<T extends CustomChestTileEntity & ICh
                 resourcelocation = TEXTURES.get(woodId);
             else
                 resourcelocation = TEXTURES_DOUBLE.get(woodId);
-            if(resourcelocation != null)
-            {
-                this.bindTexture(resourcelocation);
-            }
         }
+
+        if(resourcelocation != null)
+            this.bindTexture(resourcelocation);
+        else
+            EmbellishCraft.LOGGER.warn("Warning: couldn't bind texture on custom chest renderer!");
 
         return doubleChest ? this.largeChest : this.simpleChest;
     }
