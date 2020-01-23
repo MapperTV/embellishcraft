@@ -812,6 +812,8 @@ public class ModBlocks
     public static final Block DARK_OAK_FANCY_CHEST = null;
     public static final Block ACACIA_FANCY_CHEST = null;
 
+    public static List<Block> FANCY_CHESTS = new ArrayList<>();
+
     public static final Block LOCKER = null;
 
     public static final Block OAK_WOODEN_CRATE = null;
@@ -962,6 +964,8 @@ public class ModBlocks
 
         // Furniture
 
+        Block block;
+
         for(int i = 0; i < 6; i++)
         {
             event.getRegistry().register(
@@ -981,8 +985,10 @@ public class ModBlocks
                 new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
                     WoodType.byId(i).getName() + "_suspended_stairs"));
             event.getRegistry().register(
-                new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY, WoodType.byId(i)).setRegistryName(
+                block = new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY, WoodType.byId(i)).setRegistryName(
                     WoodType.byId(i).getName() + "_fancy_chest"));
+            FANCY_CHESTS.add(block);
+
             event.getRegistry().register(
                 new CrateBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName(WoodType.byId(i).getName() + "_wooden_crate"));
 
@@ -1045,7 +1051,7 @@ public class ModBlocks
         {
             for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
             {
-                Block block = new CustomBedBlock(DyeColor.byId(j), WoodType.byId(i), Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName(
+                block = new CustomBedBlock(DyeColor.byId(j), WoodType.byId(i), Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)).setRegistryName(
                     DyeColor.byId(j).getName() + "_" + WoodType.byId(i).getName() + "_fancy_bed");
                 event.getRegistry().register(block);
                 FANCY_BEDS.add(block);

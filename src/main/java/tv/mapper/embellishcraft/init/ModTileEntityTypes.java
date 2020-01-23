@@ -25,10 +25,13 @@ public class ModTileEntityTypes
     @SubscribeEvent
     public static void registerTileEntities(final RegistryEvent.Register<TileEntityType<?>> event)
     {
-        event.getRegistry().register(TileEntityType.Builder.create(CustomChestTileEntity::new, ModBlocks.OAK_FANCY_CHEST, ModBlocks.BIRCH_FANCY_CHEST, ModBlocks.SPRUCE_FANCY_CHEST, ModBlocks.JUNGLE_FANCY_CHEST, ModBlocks.DARK_OAK_FANCY_CHEST, ModBlocks.ACACIA_FANCY_CHEST).build(null).setRegistryName("custom_chest"));
+        event.getRegistry().register(
+            TileEntityType.Builder.create(CustomChestTileEntity::new, ModBlocks.FANCY_CHESTS.toArray(new Block[ModBlocks.FANCY_CHESTS.size()])).build(null).setRegistryName("custom_chest"));
         event.getRegistry().register(TileEntityType.Builder.create(VerticalChestTileEntity::new, ModBlocks.LOCKER).build(null).setRegistryName("vertical_chest"));
-        event.getRegistry().register(TileEntityType.Builder.create(CustomBedTileEntity::new, ModBlocks.FANCY_BEDS.toArray(new Block[ModBlocks.FANCY_BEDS.size()])).build(null).setRegistryName("custom_bed"));
-        event.getRegistry().register(TileEntityType.Builder.create(CrateTileEntity::new, ModBlocks.OAK_WOODEN_CRATE, ModBlocks.BIRCH_WOODEN_CRATE, ModBlocks.SPRUCE_WOODEN_CRATE, ModBlocks.JUNGLE_WOODEN_CRATE, ModBlocks.DARK_OAK_WOODEN_CRATE, ModBlocks.ACACIA_WOODEN_CRATE).build(null).setRegistryName("crate"));
+        event.getRegistry().register(
+            TileEntityType.Builder.create(CustomBedTileEntity::new, ModBlocks.FANCY_BEDS.toArray(new Block[ModBlocks.FANCY_BEDS.size()])).build(null).setRegistryName("custom_bed"));
+        event.getRegistry().register(TileEntityType.Builder.create(CrateTileEntity::new, ModBlocks.OAK_WOODEN_CRATE, ModBlocks.BIRCH_WOODEN_CRATE, ModBlocks.SPRUCE_WOODEN_CRATE,
+            ModBlocks.JUNGLE_WOODEN_CRATE, ModBlocks.DARK_OAK_WOODEN_CRATE, ModBlocks.ACACIA_WOODEN_CRATE).build(null).setRegistryName("crate"));
 
     }
 }
