@@ -35,7 +35,7 @@ public class EntityChair extends Entity
 
         if(!this.world.isRemote)
         {
-            if(!this.isBeingRidden() || this.world.isAirBlock(new BlockPos(this.posX, this.posY, this.posZ)))
+            if(!this.isBeingRidden() || this.world.isAirBlock(new BlockPos(this.getPosX(), this.getPosY(), this.getPosZ())))
             {
                 this.remove();
             }

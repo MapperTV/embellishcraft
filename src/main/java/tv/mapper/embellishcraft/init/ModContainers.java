@@ -5,7 +5,7 @@ import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.util.registry.Registry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.inventory.container.CrateContainer;
 import tv.mapper.embellishcraft.inventory.container.VerticalChestContainer;
 
@@ -30,6 +30,6 @@ public class ModContainers<T extends Container> extends ContainerType<T>
     @SuppressWarnings("deprecation")
     private static <T extends Container> ModContainers<T> register(String key, ContainerType.IFactory<T> factory)
     {
-        return Registry.register(Registry.MENU, Constants.MODID + ":" + key, new ModContainers<>(factory));
+        return Registry.register(Registry.MENU, ECConstants.MODID + ":" + key, new ModContainers<>(factory));
     }
 }

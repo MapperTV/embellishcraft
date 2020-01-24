@@ -12,6 +12,7 @@ import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundCategory;
@@ -46,11 +47,11 @@ public class PlateBlock extends Block implements IWaterLoggable
         this.setDefaultState(this.stateContainer.getBaseState().with(PLATES, 1).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    @Override
-    public boolean isSolid(BlockState state)
-    {
-        return false;
-    }
+    // @Override
+    // public boolean isSolid(BlockState state)
+    // {
+    // return false;
+    // }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
     {
@@ -78,9 +79,9 @@ public class PlateBlock extends Block implements IWaterLoggable
     }
 
     @Override
-    public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
     {
-        if(!player.isSneaking() && state.get(PLATES) < 8)
+        if(!player.isCrouching() && state.get(PLATES) < 8)
         {
             ItemStack stack = ItemStack.EMPTY;
             if(player.getHeldItemMainhand().getItem() == ModBlocks.PLATE.asItem())
@@ -96,11 +97,11 @@ public class PlateBlock extends Block implements IWaterLoggable
 
                 if(!player.isCreative())
                     stack.setCount(stack.getCount() - 1);
-                return true;
+                return ActionResultType.SUCCESS;
             }
 
         }
-        return false;
+        return ActionResultType.FAIL;
     }
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)

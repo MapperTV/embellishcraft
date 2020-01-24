@@ -28,7 +28,7 @@ public class SeatUtil
         BlockPos pos = event.getPos();
         Block block = world.getBlockState(pos).getBlock();
 
-        if((block instanceof ChairBlock || block instanceof CouchBlock) && world.getBlockState(pos.up()).isAir(world, pos.up()) && !EntityChair.OCCUPIED.containsKey(pos) && !player.isSneaking())
+        if((block instanceof ChairBlock || block instanceof CouchBlock) && world.getBlockState(pos.up()).isAir(world, pos.up()) && !EntityChair.OCCUPIED.containsKey(pos) && !player.isCrouching())
         {
             event.setCanceled(true);
             if(event.getSide() == LogicalSide.SERVER)

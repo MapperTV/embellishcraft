@@ -15,7 +15,7 @@ import net.minecraft.tileentity.IChestLid;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.ModList;
-import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.block.CustomChestBlock;
 import tv.mapper.embellishcraft.init.ModBlocks;
@@ -38,8 +38,8 @@ public class CustomChestTileEntityRenderer<T extends CustomChestTileEntity & ICh
             name = WoodType.getWoodByID(i);
             if(i < 6)
             {
-                TEXTURES.add(new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/" + name + "_fancy_chest.png"));
-                TEXTURES_DOUBLE.add(new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/chest/" + name + "_fancy_chest_double.png"));
+                TEXTURES.add(new ResourceLocation(ECConstants.MODID, "textures/entity/furniture/storage/chest/" + name + "_fancy_chest.png"));
+                TEXTURES_DOUBLE.add(new ResourceLocation(ECConstants.MODID, "textures/entity/furniture/storage/chest/" + name + "_fancy_chest_double.png"));
             }
             else if(i > 5 && i < 18 && ModList.get().isLoaded("embellishcraft-bop"))
             {

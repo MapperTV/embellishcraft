@@ -1,6 +1,6 @@
 package tv.mapper.embellishcraft;
 
-public class Constants
+public class ECConstants
 {
     public static final String MODID = "embellishcraft";
 

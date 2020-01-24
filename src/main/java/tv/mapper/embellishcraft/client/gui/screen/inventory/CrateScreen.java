@@ -7,12 +7,12 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
-import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.inventory.container.CrateContainer;
 
 public class CrateScreen extends ContainerScreen<CrateContainer> implements IHasContainer<CrateContainer>
 {
-    private static final ResourceLocation CRATE_SCREEN = new ResourceLocation(Constants.MODID, "textures/gui/crate.png");
+    private static final ResourceLocation CRATE_SCREEN = new ResourceLocation(ECConstants.MODID, "textures/gui/crate.png");
     private final int inventoryRows;
     
     private static final int WIDTH = 176;

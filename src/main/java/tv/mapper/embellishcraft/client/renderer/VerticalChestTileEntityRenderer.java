@@ -11,7 +11,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.VerticalChestBlock;
 import tv.mapper.embellishcraft.client.renderer.tileentity.model.LockerModel;
 import tv.mapper.embellishcraft.client.renderer.tileentity.model.TallLockerModel;
@@ -20,7 +20,7 @@ import tv.mapper.embellishcraft.state.properties.VerticalChestType;
 @OnlyIn(Dist.CLIENT)
 public class VerticalChestTileEntityRenderer<T extends TileEntity & IChestLid> extends TileEntityRenderer<T>
 {
-    private static final ResourceLocation TEXTURE_LOCKER = new ResourceLocation(Constants.MODID, "textures/entity/furniture/storage/locker.png");
+    private static final ResourceLocation TEXTURE_LOCKER = new ResourceLocation(ECConstants.MODID, "textures/entity/furniture/storage/locker.png");
 
     private final LockerModel simpleModel = new LockerModel();
     private final LockerModel largeModel = new TallLockerModel();

@@ -21,7 +21,7 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BedPart;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
@@ -36,8 +36,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.extensions.IForgeDimension;
 
 public class PillowBlock extends BedBlock
@@ -74,11 +72,11 @@ public class PillowBlock extends BedBlock
         return VoxelShapes.empty();
     }
 
-    @Override
-    public boolean isSolid(BlockState state)
-    {
-        return false;
-    }
+    // @Override
+    // public boolean isSolid(BlockState state)
+    // {
+    // return false;
+    // }
 
     @Override
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
@@ -93,17 +91,17 @@ public class PillowBlock extends BedBlock
     {}
 
     @Override
-    public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
     {
         if(worldIn.isRemote)
         {
-            return true;
+            return ActionResultType.SUCCESS;
         }
 
         if(state.get(WATERLOGGED))
         {
             player.sendStatusMessage(new TranslationTextComponent("embellishcraft.message.bed.underwater"), true);
-            return true;
+            return ActionResultType.SUCCESS;
         }
         else
         {
@@ -113,11 +111,11 @@ public class PillowBlock extends BedBlock
             if(sleepResult != IForgeDimension.SleepResult.BED_EXPLODES)
             {
                 if(sleepResult == IForgeDimension.SleepResult.DENY)
-                    return true;
+                    return ActionResultType.SUCCESS;
                 if(state.get(OCCUPIED))
                 {
                     player.sendStatusMessage(new TranslationTextComponent("block.minecraft.bed.occupied"), true);
-                    return true;
+                    return ActionResultType.SUCCESS;
                 }
                 else
                 {
@@ -129,23 +127,24 @@ public class PillowBlock extends BedBlock
                         }
 
                     });
-                    return true;
+                    return ActionResultType.SUCCESS;
                 }
             }
             else
             {
                 worldIn.removeBlock(pos, false);
-                worldIn.createExplosion((Entity)null, DamageSource.netherBedExplosion(), (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true, Explosion.Mode.DESTROY);
-                return true;
+                worldIn.createExplosion((Entity)null, DamageSource.netherBedExplosion(), (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
+                    Explosion.Mode.DESTROY);
+                return ActionResultType.SUCCESS;
             }
         }
     }
 
-    @Override
-    public BlockRenderLayer getRenderLayer()
-    {
-        return BlockRenderLayer.SOLID;
-    }
+    // @Override
+    // public BlockRenderLayer getRenderLayer()
+    // {
+    // return BlockRenderLayer.SOLID;
+    // }
 
     @Override
     public BlockRenderType getRenderType(BlockState state)
@@ -179,7 +178,8 @@ public class PillowBlock extends BedBlock
         BlockPos blockpos = context.getPos();
         IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
 
-        return this.getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing()).with(PART, BedPart.HEAD).with(WATERLOGGED, Boolean.valueOf(Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER)));
+        return this.getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing()).with(PART, BedPart.HEAD).with(WATERLOGGED,
+            Boolean.valueOf(Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER)));
     }
 
     @Override
@@ -206,11 +206,11 @@ public class PillowBlock extends BedBlock
         return true;
     }
 
-    @Override
-    @OnlyIn(Dist.CLIENT)
-    public boolean hasCustomBreakingProgress(BlockState state)
-    {
-        return false;
-    }
+    // @Override
+    // @OnlyIn(Dist.CLIENT)
+    // public boolean hasCustomBreakingProgress(BlockState state)
+    // {
+    // return false;
+    // }
 
 }

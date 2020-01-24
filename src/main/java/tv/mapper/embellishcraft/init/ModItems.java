@@ -6,11 +6,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
-import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.item.FlatterHammerItem;
 import tv.mapper.embellishcraft.item.ModItemGroups;
 
-@ObjectHolder(Constants.MODID)
+@ObjectHolder(ECConstants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
 public class ModItems
 {

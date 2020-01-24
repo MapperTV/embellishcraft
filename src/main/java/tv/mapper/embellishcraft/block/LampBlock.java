@@ -24,6 +24,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 public class LampBlock extends CustomBlock implements IWaterLoggable
@@ -54,11 +55,11 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
         this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    @Override
-    public boolean isSolid(BlockState state)
-    {
-        return false;
-    }
+    // @Override
+    // public boolean isSolid(BlockState state)
+    // {
+    // return false;
+    // }
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
@@ -133,7 +134,7 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
     }
 
     @Override
-    public void tick(BlockState state, World worldIn, BlockPos pos, Random random)
+    public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random)
     {
         if(!worldIn.isRemote)
         {

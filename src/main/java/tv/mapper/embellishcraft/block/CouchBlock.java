@@ -89,19 +89,21 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
     public CouchBlock(Properties properties)
     {
         super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, StairsShape.STRAIGHT).with(LEFT_END, true).with(RIGHT_END, true).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(
+            this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, StairsShape.STRAIGHT).with(LEFT_END, true).with(RIGHT_END, true).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     public CouchBlock(Properties properties, ToolType toolType)
     {
         super(properties);
         this.toolType = toolType;
-        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, StairsShape.STRAIGHT).with(LEFT_END, true).with(RIGHT_END, true).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(
+            this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, StairsShape.STRAIGHT).with(LEFT_END, true).with(RIGHT_END, true).with(WATERLOGGED, Boolean.valueOf(false)));
 
     }
 
     @Override
-    public boolean func_220074_n(BlockState state)
+    public boolean isTransparent(BlockState state)
     {
         return true;
     }
@@ -116,11 +118,11 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
         return state.get(SHAPE).ordinal() * 4 + state.get(FACING).getHorizontalIndex();
     }
 
-    @Override
-    public boolean isSolid(BlockState state)
-    {
-        return false;
-    }
+    // @Override
+    // public boolean isSolid(BlockState state)
+    // {
+    // return false;
+    // }
 
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
     {
@@ -179,7 +181,8 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
             rightend = false;
         }
 
-        return this.getDefaultState().with(SHAPE, shape).with(FACING, facing).with(LEFT_END, leftend).with(RIGHT_END, rightend).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        return this.getDefaultState().with(SHAPE, shape).with(FACING, facing).with(LEFT_END, leftend).with(RIGHT_END, rightend).with(WATERLOGGED,
+            Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
     }
 
     /**
@@ -283,7 +286,8 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
         if(facing == Direction.DOWN && !this.isValidPosition(stateIn, worldIn, currentPos))
             return Blocks.AIR.getDefaultState();
 
-        return facing.getAxis().isHorizontal() ? stateIn.with(SHAPE, shape).with(LEFT_END, leftend).with(RIGHT_END, rightend) : super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return facing.getAxis().isHorizontal() ? stateIn.with(SHAPE, shape).with(LEFT_END, leftend).with(RIGHT_END, rightend) : super.updatePostPlacement(stateIn, facing, facingState, worldIn,
+            currentPos, facingPos);
     }
 
     private static boolean isDifferentCouch(BlockState state, IBlockReader worldIn, BlockPos pos, Direction face)

@@ -128,11 +128,11 @@ public class ChairBlock extends Block implements IWaterLoggable
         }
     }
 
-    @Override
-    public boolean isSolid(BlockState state)
-    {
-        return false;
-    }
+//    @Override
+//    public boolean isSolid(BlockState state)
+//    {
+//        return false;
+//    }
 
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
     {

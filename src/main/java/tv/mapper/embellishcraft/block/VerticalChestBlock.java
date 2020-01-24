@@ -30,6 +30,7 @@ import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Mirror;
@@ -158,7 +159,8 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
         if(facingState.getBlock() == this && facing.getAxis().isVertical())
         {
             VerticalChestType chesttype = facingState.get(TYPE);
-            if(stateIn.get(TYPE) == VerticalChestType.SINGLE && chesttype != VerticalChestType.SINGLE && stateIn.get(FACING) == facingState.get(FACING) && getDirectionToAttached(facingState) == facing.getOpposite())
+            if(stateIn.get(TYPE) == VerticalChestType.SINGLE && chesttype != VerticalChestType.SINGLE && stateIn.get(FACING) == facingState.get(FACING) && getDirectionToAttached(
+                facingState) == facing.getOpposite())
             {
                 TileEntity Te = world.getTileEntity(facingPos);
                 TileEntity attachedTe = world.getTileEntity(currentPos);
@@ -203,7 +205,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
         VerticalChestType chesttype = VerticalChestType.SINGLE;
         Direction direction = context.getPlacementHorizontalFacing().getOpposite();
         IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-        boolean flag = context.isPlacerSneaking();
+        boolean flag = context.getPlayer().isCrouching();
         Direction direction1 = context.getFace();
 
         if(direction1.getAxis().isVertical() && flag)
@@ -328,7 +330,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
         }
     }
 
-    public boolean onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+    public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
     {
         TileEntity te = world.getTileEntity(pos);
 
@@ -338,12 +340,12 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
             if(player.getHeldItem(handIn).getItem() == Items.DEBUG_STICK && !world.isRemote)
             {
                 EmbellishCraft.LOGGER.debug("This locker belongs to: " + ((VerticalChestTileEntity)te).getUUID() + " and locked is " + ((VerticalChestTileEntity)te).isLocked());
-                return true;
+                return ActionResultType.SUCCESS;
             }
             else
             {
                 // Lock it if it's yours!
-                if(player.isSneaking())
+                if(player.isCrouching())
                 {
                     if(world.isRemote)
                         ECNetwork.EMBELLISHCRAFT_CHANNEL.sendToServer(new LockerLockPacket(pos));
@@ -389,7 +391,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
                             }
                         }
                     }
-                    return true;
+                    return ActionResultType.SUCCESS;
                 }
                 // Open it if you can!
                 else
@@ -417,7 +419,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
                 }
             }
         }
-        return true;
+        return ActionResultType.SUCCESS;
     }
 
     @Nullable

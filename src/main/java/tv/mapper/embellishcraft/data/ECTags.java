@@ -6,7 +6,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
-import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.ECConstants;
 
 public class ECTags
 {
@@ -21,7 +21,7 @@ public class ECTags
 
         private static Tag<Block> tag(String name)
         {
-            return new BlockTags.Wrapper(new ResourceLocation(Constants.MODID, name));
+            return new BlockTags.Wrapper(new ResourceLocation(ECConstants.MODID, name));
         }
     }
 
@@ -36,7 +36,7 @@ public class ECTags
 
         private static Tag<Item> tag(String name)
         {
-            return new ItemTags.Wrapper(new ResourceLocation(Constants.MODID, name));
+            return new ItemTags.Wrapper(new ResourceLocation(ECConstants.MODID, name));
         }
     }
 

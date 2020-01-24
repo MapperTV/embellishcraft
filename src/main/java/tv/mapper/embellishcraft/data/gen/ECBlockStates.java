@@ -12,14 +12,14 @@ import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
-import tv.mapper.embellishcraft.Constants;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.TableBlock;
 
 public class ECBlockStates extends BlockStateProvider
 {
     public ECBlockStates(DataGenerator gen, ExistingFileHelper exFileHelper)
     {
-        super(gen, Constants.MODID, exFileHelper);
+        super(gen, ECConstants.MODID, exFileHelper);
     }
 
     @Override
@@ -49,10 +49,10 @@ public class ECBlockStates extends BlockStateProvider
     protected void tableBlock(Block block)
     {
         String name = block.getRegistryName().toString().replace("embellishcraft-bop:", "");
-        MultiPartBlockStateBuilder builder = getMultipartBuilder(block).part().modelFile(new UncheckedModelFile(modid + ":block/" + name + "_top")).addModel().end();
-        builder.part().modelFile(new UncheckedModelFile(modid + ":block/" + name + "_foot")).uvLock(true).addModel().condition(TableBlock.TABLE_NORTH, true).end();
-        builder.part().modelFile(new UncheckedModelFile(modid + ":block/" + name + "_foot")).rotationY(90).uvLock(true).addModel().condition(TableBlock.TABLE_EAST, true).end();
-        builder.part().modelFile(new UncheckedModelFile(modid + ":block/" + name + "_foot")).rotationY(180).uvLock(true).addModel().condition(TableBlock.TABLE_SOUTH, true).end();
-        builder.part().modelFile(new UncheckedModelFile(modid + ":block/" + name + "_foot")).rotationY(270).uvLock(true).addModel().condition(TableBlock.TABLE_WEST, true).end();
+        MultiPartBlockStateBuilder builder = getMultipartBuilder(block).part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_top")).addModel().end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).uvLock(true).addModel().condition(TableBlock.TABLE_NORTH, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(90).uvLock(true).addModel().condition(TableBlock.TABLE_EAST, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(180).uvLock(true).addModel().condition(TableBlock.TABLE_SOUTH, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(270).uvLock(true).addModel().condition(TableBlock.TABLE_WEST, true).end();
     }
 }

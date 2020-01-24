@@ -18,7 +18,7 @@ import tv.mapper.embellishcraft.proxy.IProxy;
 import tv.mapper.embellishcraft.proxy.ServerProxy;
 import tv.mapper.embellishcraft.world.OreGenerator;
 
-@Mod(Constants.MODID)
+@Mod(ECConstants.MODID)
 public class EmbellishCraft
 {
     public static final Logger LOGGER = LogManager.getLogger();
