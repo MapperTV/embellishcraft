@@ -13,7 +13,7 @@ public class ECNetwork
 
     public static void registerNetworkPackets()
     {
-        EMBELLISHCRAFT_CHANNEL.messageBuilder(LockerUUIDPacket.class, 0).encoder(LockerUUIDPacket::encode).decoder(LockerUUIDPacket::decode).consumer(LockerUUIDPacket::handle).add();
-        EMBELLISHCRAFT_CHANNEL.messageBuilder(LockerLockPacket.class, 1).encoder(LockerLockPacket::encode).decoder(LockerLockPacket::decode).consumer(LockerLockPacket::handle).add();
+//        EMBELLISHCRAFT_CHANNEL.messageBuilder(LockerUUIDPacket.class, 0).encoder(LockerUUIDPacket::encode).decoder(LockerUUIDPacket::decode).consumer(LockerUUIDPacket::handle).add();
+//        EMBELLISHCRAFT_CHANNEL.messageBuilder(LockerLockPacket.class, 1).encoder(LockerLockPacket::encode).decoder(LockerLockPacket::decode).consumer(LockerLockPacket::handle).add();
     }
 }
