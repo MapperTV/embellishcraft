@@ -59,11 +59,6 @@ public class TerraceTableBlock extends CustomBlock implements IWaterLoggable
     // {
     // return true;
     // }
-    //
-    // public BlockRenderLayer getRenderLayer()
-    // {
-    // return BlockRenderLayer.CUTOUT;
-    // }
 
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
     {

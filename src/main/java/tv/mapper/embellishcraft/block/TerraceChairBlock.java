@@ -95,10 +95,4 @@ public class TerraceChairBlock extends ChairBlock
                 return SOUTH_CHAIR_AABB;
         }
     }
-
-    // @Override
-    // public BlockRenderLayer getRenderLayer()
-    // {
-    // return BlockRenderLayer.CUTOUT;
-    // }
 }
