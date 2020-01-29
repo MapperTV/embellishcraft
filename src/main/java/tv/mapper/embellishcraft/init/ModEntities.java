@@ -1,31 +1,40 @@
 package tv.mapper.embellishcraft.init;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.entity.EntityChair;
 
+@Mod.EventBusSubscriber(modid = ECConstants.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEntities
 {
-    @ObjectHolder(ECConstants.MODID + ":entity_chair")
-    public static final EntityType<EntityChair> TYPE_CHAIR = null;
+    @SuppressWarnings("rawtypes")
+    private static final List<EntityType> ENTITY_TYPES = new ArrayList<>();
 
-    @Mod.EventBusSubscriber(modid = ECConstants.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class Registration
+    public static final EntityType<EntityChair> TYPE_CHAIR = buildType(ECConstants.MODID + ":entity_chair",
+        EntityType.Builder.<EntityChair>create((type, world) -> new EntityChair(world), EntityClassification.MISC).size(0.0F, 0.0F).setCustomClientFactory(
+            (spawnEntity, world) -> new EntityChair(world)));
+
+    private static <T extends Entity> EntityType<T> buildType(String id, EntityType.Builder<T> builder)
     {
+        EntityType<T> type = builder.build(id);
+        type.setRegistryName(id);
+        ENTITY_TYPES.add(type);
+        return type;
+    }
 
-        @SubscribeEvent
-        public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event)
-        {
-            event.getRegistry().register(EntityType.Builder.<EntityChair>create(EntityChair::new, EntityClassification.MISC).setCustomClientFactory((spawnEntity, world) ->
-            {
-                return TYPE_CHAIR.create(world);
-            }).setTrackingRange(256).setUpdateInterval(20).size(0.0001F, 0.0001F).build(ECConstants.MODID + ":entity_chair").setRegistryName(new ResourceLocation(ECConstants.MODID, "entity_chair")));
-        }
+    @SubscribeEvent
+    @SuppressWarnings("unused")
+    public static void registerTypes(final RegistryEvent.Register<EntityType<?>> event)
+    {
+        ENTITY_TYPES.forEach(type -> event.getRegistry().register(type));
+        ENTITY_TYPES.clear();
     }
 }

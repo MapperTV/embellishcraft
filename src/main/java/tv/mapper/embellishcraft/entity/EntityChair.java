@@ -3,7 +3,6 @@ package tv.mapper.embellishcraft.entity;
 import java.util.HashMap;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.IPacket;
 import net.minecraft.util.math.BlockPos;
@@ -15,17 +14,16 @@ public class EntityChair extends Entity
 {
     public static final HashMap<BlockPos, EntityChair> OCCUPIED = new HashMap<BlockPos, EntityChair>();
 
-    public EntityChair(EntityType<EntityChair> type, World world)
+    public EntityChair(World world)
     {
-        super(type, world);
-        // noClip = true;
+        super(ModEntities.TYPE_CHAIR, world);
+        this.noClip = true;
     }
 
     public EntityChair(World world, BlockPos pos)
     {
-        super(ModEntities.TYPE_CHAIR, world);
+        this(world);
         setPosition(pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5);
-        noClip = true;
         OCCUPIED.put(pos, this);
     }
 
@@ -58,6 +56,12 @@ public class EntityChair extends Entity
     protected void writeAdditional(CompoundNBT compound)
     {
 
+    }
+
+    @Override
+    protected boolean canBeRidden(Entity entity)
+    {
+        return true;
     }
 
     @Override
