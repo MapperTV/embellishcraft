@@ -1,21 +1,21 @@
-modLoader="javafml" #mandatory
+modLoader="javafml"
 loaderVersion="[31,)"
-issueTrackerURL="https://github.com/KillerMapper/embellishcraft/issues" #optional
-logoFile="embellishcraft_logo.png" #optional
-[[mods]] #mandatory
-modId="embellishcraft" #mandatory
-version="${file.jarVersion}" #mandatory
-displayName="EmbellishCraft" #mandatory
-#updateJSONURL="http://myurl.me/" #optional
-displayURL="http://mapper.tv/embellishcraft/" #optional
-credits="Thanks for Forge devs and modders that let their mods open-source." #optional
-authors="Mapper" #optional
+issueTrackerURL="https://github.com/KillerMapper/embellishcraft/issues"
+logoFile="embellishcraft_logo.png"
+[[mods]]
+modId="embellishcraft"
+version="${file.jarVersion}"
+displayName="EmbellishCraft"
+#updateJSONURL="http://myurl.me/"
+displayURL="http://mapper.tv/embellishcraft/"
+credits="The Forge team and community for the help and resources."
+authors="Mapper"
 description='''EmbellishCraft is a mod that adds various decorative elements to Minecraft.'''
 
-[[dependencies.embellishcraft]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="[31,)" #mandatory
+[[dependencies.embellishcraft]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
     ordering="NONE"
     side="BOTH"
 
@@ -23,5 +23,12 @@ description='''EmbellishCraft is a mod that adds various decorative elements to 
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.embellishcraft]]
+    modId="mapperbase"
+    mandatory=true
+    versionRange="[1.15.2-1.0,]"
     ordering="NONE"
     side="BOTH"

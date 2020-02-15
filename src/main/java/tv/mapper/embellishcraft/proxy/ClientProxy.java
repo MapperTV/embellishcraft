@@ -38,7 +38,7 @@ public class ClientProxy implements IProxy
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
 
-        Predicate<RenderType> cutoutPredicate = renderType -> renderType == RenderType.cutout();
+        Predicate<RenderType> cutoutPredicate = renderType -> renderType == RenderType.getCutout();
         for(Block block : ModBlocks.RENDER_CUTOUT)
             RenderTypeLookup.setRenderLayer(block, cutoutPredicate);
     }
