@@ -26,6 +26,7 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
+import tv.mapper.mapperbase.block.CustomBlock;
 
 public class LampBlock extends CustomBlock implements IWaterLoggable
 {

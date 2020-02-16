@@ -19,6 +19,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraftforge.common.ToolType;
+import tv.mapper.mapperbase.block.CustomBlock;
 
 public class TableBlock extends CustomBlock implements IWaterLoggable
 {
@@ -40,13 +41,15 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
     public TableBlock(Properties properties)
     {
         super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED,
+            Boolean.valueOf(false)));
     }
 
     public TableBlock(Properties properties, ToolType toolType)
     {
         super(properties, toolType);
-        this.setDefaultState(this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED,
+            Boolean.valueOf(false)));
     }
 
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
@@ -123,7 +126,8 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
         if(north || south || east || west)
             has_foot = true;
 
-        return super.getStateForPlacement(context).with(TABLE_NORTH, north).with(TABLE_SOUTH, south).with(TABLE_EAST, east).with(TABLE_WEST, west).with(HAS_FOOT, has_foot).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        return super.getStateForPlacement(context).with(TABLE_NORTH, north).with(TABLE_SOUTH, south).with(TABLE_EAST, east).with(TABLE_WEST, west).with(HAS_FOOT, has_foot).with(WATERLOGGED,
+            Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
     }
 
     public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
@@ -177,7 +181,8 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
             worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
         }
 
-        return this.getDefaultState().with(TABLE_NORTH, north).with(TABLE_SOUTH, south).with(TABLE_EAST, east).with(TABLE_WEST, west).with(HAS_FOOT, has_foot).with(WATERLOGGED, stateIn.get(WATERLOGGED));
+        return this.getDefaultState().with(TABLE_NORTH, north).with(TABLE_SOUTH, south).with(TABLE_EAST, east).with(TABLE_WEST, west).with(HAS_FOOT, has_foot).with(WATERLOGGED,
+            stateIn.get(WATERLOGGED));
     }
 
     @SuppressWarnings("deprecation")

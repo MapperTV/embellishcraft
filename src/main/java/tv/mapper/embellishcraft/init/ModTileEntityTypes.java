@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.block.ECBlocks;
 import tv.mapper.embellishcraft.tileentity.CrateTileEntity;
 
 @ObjectHolder(ECConstants.MODID)
@@ -26,8 +27,8 @@ public class ModTileEntityTypes
 //        event.getRegistry().register(TileEntityType.Builder.create(VerticalChestTileEntity::new, ModBlocks.LOCKER).build(null).setRegistryName("vertical_chest"));
 //        event.getRegistry().register(
 //            TileEntityType.Builder.create(CustomBedTileEntity::new, ModBlocks.FANCY_BEDS.toArray(new Block[ModBlocks.FANCY_BEDS.size()])).build(null).setRegistryName("custom_bed"));
-        event.getRegistry().register(TileEntityType.Builder.create(CrateTileEntity::new, ModBlocks.OAK_WOODEN_CRATE, ModBlocks.BIRCH_WOODEN_CRATE, ModBlocks.SPRUCE_WOODEN_CRATE,
-            ModBlocks.JUNGLE_WOODEN_CRATE, ModBlocks.DARK_OAK_WOODEN_CRATE, ModBlocks.ACACIA_WOODEN_CRATE).build(null).setRegistryName("crate"));
+        event.getRegistry().register(TileEntityType.Builder.create(CrateTileEntity::new, ECBlocks.OAK_WOODEN_CRATE, ECBlocks.BIRCH_WOODEN_CRATE, ECBlocks.SPRUCE_WOODEN_CRATE,
+            ECBlocks.JUNGLE_WOODEN_CRATE, ECBlocks.DARK_OAK_WOODEN_CRATE, ECBlocks.ACACIA_WOODEN_CRATE).build(null).setRegistryName("crate"));
 
     }
 }

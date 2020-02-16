@@ -19,6 +19,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraftforge.common.ToolType;
+import tv.mapper.mapperbase.block.CustomBlock;
 
 public class TerraceTableBlock extends CustomBlock implements IWaterLoggable
 {
@@ -34,7 +35,7 @@ public class TerraceTableBlock extends CustomBlock implements IWaterLoggable
         super(properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, Boolean.valueOf(false)));
     }
-    
+
     public TerraceTableBlock(Properties properties, ToolType toolType)
     {
         super(properties);

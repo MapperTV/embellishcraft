@@ -26,6 +26,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraftforge.common.ToolType;
+import tv.mapper.mapperbase.block.CustomBlock;
 
 public class CouchBlock extends CustomBlock implements IWaterLoggable
 {

@@ -11,10 +11,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import tv.mapper.embellishcraft.block.ECBlocks;
 import tv.mapper.embellishcraft.client.gui.screen.inventory.CrateScreen;
 import tv.mapper.embellishcraft.client.gui.screen.inventory.VerticalChestScreen;
 import tv.mapper.embellishcraft.client.renderer.ChairEntityRenderer;
-import tv.mapper.embellishcraft.init.ModBlocks;
 import tv.mapper.embellishcraft.init.ModContainers;
 import tv.mapper.embellishcraft.init.ModEntities;
 
@@ -39,7 +39,7 @@ public class ClientProxy implements IProxy
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
 
         Predicate<RenderType> cutoutPredicate = renderType -> renderType == RenderType.getCutout();
-        for(Block block : ModBlocks.RENDER_CUTOUT)
+        for(Block block : ECBlocks.RENDER_CUTOUT)
             RenderTypeLookup.setRenderLayer(block, cutoutPredicate);
     }
 
