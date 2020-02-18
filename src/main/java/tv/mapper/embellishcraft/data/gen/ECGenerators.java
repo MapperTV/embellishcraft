@@ -42,7 +42,7 @@ public class ECGenerators
         generator.addProvider(new ECBlockTags(generator));
         generator.addProvider(new ECItemTags(generator));
 
-        // generator.addProvider(new ECLang(generator, "en_us"));
-        // generator.addProvider(new ECLang(generator, "fr_fr"));
+        generator.addProvider(new ECLang(generator, ECConstants.MODID, "en_us"));
+        generator.addProvider(new ECLang(generator, ECConstants.MODID, "fr_fr"));
     }
 }
