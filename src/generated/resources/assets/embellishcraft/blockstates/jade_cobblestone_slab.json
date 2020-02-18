@@ -7,7 +7,7 @@
       "model": "embellishcraft:block/jade_cobblestone_slab"
     },
     "type=double": {
-      "model": "embellishcraft:block/jade"
+      "model": "embellishcraft:block/jade_cobblestone"
     }
   }
 }

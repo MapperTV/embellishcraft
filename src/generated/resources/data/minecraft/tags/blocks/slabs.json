@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:basalt_slab",
+    "embellishcraft:slate_slab",
+    "embellishcraft:marble_slab",
+    "embellishcraft:gneiss_slab",
+    "embellishcraft:jade_slab",
+    "embellishcraft:larvikite_slab",
+    "embellishcraft:basalt_cobblestone_slab",
+    "embellishcraft:slate_cobblestone_slab",
+    "embellishcraft:marble_cobblestone_slab",
+    "embellishcraft:gneiss_cobblestone_slab",
+    "embellishcraft:jade_cobblestone_slab",
+    "embellishcraft:larvikite_cobblestone_slab"
+  ]
+}

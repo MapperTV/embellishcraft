@@ -7,7 +7,7 @@
       "model": "embellishcraft:block/basalt_cobblestone_slab"
     },
     "type=double": {
-      "model": "embellishcraft:block/basalt"
+      "model": "embellishcraft:block/basalt_cobblestone"
     }
   }
 }

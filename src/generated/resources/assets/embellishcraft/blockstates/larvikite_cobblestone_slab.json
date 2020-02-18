@@ -7,7 +7,7 @@
       "model": "embellishcraft:block/larvikite_cobblestone_slab"
     },
     "type=double": {
-      "model": "embellishcraft:block/larvikite"
+      "model": "embellishcraft:block/larvikite_cobblestone"
     }
   }
 }

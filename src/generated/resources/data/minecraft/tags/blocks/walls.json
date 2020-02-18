@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:basalt_wall",
+    "embellishcraft:slate_wall",
+    "embellishcraft:marble_wall",
+    "embellishcraft:gneiss_wall",
+    "embellishcraft:jade_wall",
+    "embellishcraft:larvikite_wall",
+    "embellishcraft:basalt_cobblestone_wall",
+    "embellishcraft:slate_cobblestone_wall",
+    "embellishcraft:marble_cobblestone_wall",
+    "embellishcraft:gneiss_cobblestone_wall",
+    "embellishcraft:jade_cobblestone_wall",
+    "embellishcraft:larvikite_cobblestone_wall"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:basalt_stairs",
+    "embellishcraft:slate_stairs",
+    "embellishcraft:marble_stairs",
+    "embellishcraft:gneiss_stairs",
+    "embellishcraft:jade_stairs",
+    "embellishcraft:larvikite_stairs",
+    "embellishcraft:basalt_cobblestone_stairs",
+    "embellishcraft:slate_cobblestone_stairs",
+    "embellishcraft:marble_cobblestone_stairs",
+    "embellishcraft:gneiss_cobblestone_stairs",
+    "embellishcraft:jade_cobblestone_stairs",
+    "embellishcraft:larvikite_cobblestone_stairs"
+  ]
+}

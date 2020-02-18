@@ -7,7 +7,7 @@
       "model": "embellishcraft:block/gneiss_cobblestone_slab"
     },
     "type=double": {
-      "model": "embellishcraft:block/gneiss"
+      "model": "embellishcraft:block/gneiss_cobblestone"
     }
   }
 }

@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:basalt_pressure_plate",
+    "embellishcraft:slate_pressure_plate",
+    "embellishcraft:marble_pressure_plate",
+    "embellishcraft:gneiss_pressure_plate",
+    "embellishcraft:jade_pressure_plate",
+    "embellishcraft:larvikite_pressure_plate",
+    "embellishcraft:basalt_cobblestone_pressure_plate",
+    "embellishcraft:slate_cobblestone_pressure_plate",
+    "embellishcraft:marble_cobblestone_pressure_plate",
+    "embellishcraft:gneiss_cobblestone_pressure_plate",
+    "embellishcraft:jade_cobblestone_pressure_plate",
+    "embellishcraft:larvikite_cobblestone_pressure_plate"
+  ]
+}
