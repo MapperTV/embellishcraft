@@ -27,5 +27,12 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("gneiss", true, true, true, true, true, false);
         registerBlockBasics("jade", true, true, true, true, true, false);
         registerBlockBasics("larvikite", true, true, true, true, true, false);
+        
+        registerBlockBasics("basalt_cobblestone", true, true, true, true, true, false);
+        registerBlockBasics("slate_cobblestone", true, true, true, true, true, false);
+        registerBlockBasics("marble_cobblestone", true, true, true, true, true, false);
+        registerBlockBasics("gneiss_cobblestone", true, true, true, true, true, false);
+        registerBlockBasics("jade_cobblestone", true, true, true, true, true, false);
+        registerBlockBasics("larvikite_cobblestone", true, true, true, true, true, false);
     }
 }
