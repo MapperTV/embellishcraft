@@ -1,8 +1,0 @@
-{
-    "parent": "block/slab_top",
-    "textures": {
-        "bottom": "embellishcraft:block/paving/jade_paving",
-        "top": "embellishcraft:block/paving/jade_paving",
-        "side": "embellishcraft:block/paving/jade_paving"
-    }
-}

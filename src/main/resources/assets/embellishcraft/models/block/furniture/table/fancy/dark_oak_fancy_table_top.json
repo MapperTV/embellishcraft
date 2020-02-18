@@ -1,8 +1,0 @@
-{
-    "parent": "embellishcraft:block/furniture/table/fancy/fancy_table_top",
-    "textures": {
-        "side": "embellishcraft:block/furniture/table/fancy/dark_oak_fancy_table_side",
-        "top": "embellishcraft:block/furniture/table/fancy/dark_oak_fancy_table_top",
-        "particle": "block/dark_oak_planks"
-    }
-}

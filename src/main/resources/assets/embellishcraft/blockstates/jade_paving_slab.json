@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "embellishcraft:block/jade_paving_slab" },
-        "type=top": { "model": "embellishcraft:block/jade_paving_slab_top" },
-        "type=double": { "model": "embellishcraft:block/jade_paving" }
-    }
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "embellishcraft:gneiss_cobblestone"
-  },
-  "result": "embellishcraft:gneiss_cobblestone_stairs",
-  "count": 1
-}

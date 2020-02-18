@@ -1,7 +1,0 @@
-{
-    "parent": "block/door_top_rh",
-    "textures": {
-        "bottom": "embellishcraft:block/door/jungle_fancy_door_bottom",
-        "top": "embellishcraft:block/door/jungle_fancy_door_top"
-    }
-}

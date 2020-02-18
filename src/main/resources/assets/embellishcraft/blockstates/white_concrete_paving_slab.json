@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "embellishcraft:block/white_concrete_paving_slab" },
-        "type=top": { "model": "embellishcraft:block/white_concrete_paving_slab_top" },
-        "type=double": [{ "model": "embellishcraft:block/white_concrete_paving_a" },
-                        { "model": "embellishcraft:block/white_concrete_paving_b" }]
-    }
-}

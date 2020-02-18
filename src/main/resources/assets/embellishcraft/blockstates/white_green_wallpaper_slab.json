@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "embellishcraft:block/white_green_wallpaper_slab" },
-        "type=top": { "model": "embellishcraft:block/white_green_wallpaper_slab_top" },
-        "type=double": { "model": "embellishcraft:block/white_green_wallpaper" }
-    }
-}

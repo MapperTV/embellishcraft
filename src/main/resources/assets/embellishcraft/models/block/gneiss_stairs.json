@@ -1,8 +1,0 @@
-{
-    "parent": "block/stairs",
-    "textures": {
-        "bottom": "embellishcraft:block/world/gneiss",
-        "top": "embellishcraft:block/world/gneiss",
-        "side": "embellishcraft:block/world/gneiss"
-    }
-}

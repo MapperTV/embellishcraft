@@ -1,8 +1,0 @@
-{
-    "parent": "block/stairs",
-    "textures": {
-        "bottom": "embellishcraft:block/paving/dark_concrete_paving",
-        "top": "embellishcraft:block/paving/dark_concrete_paving",
-        "side": "embellishcraft:block/paving/dark_concrete_paving"
-    }
-}

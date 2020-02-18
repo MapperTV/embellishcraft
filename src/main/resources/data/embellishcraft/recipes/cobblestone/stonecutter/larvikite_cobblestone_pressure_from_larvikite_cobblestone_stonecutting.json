@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "embellishcraft:larvikite_cobblestone"
-  },
-  "result": "embellishcraft:larvikite_cobblestone_pressure_plate",
-  "count": 1
-}

@@ -1,8 +1,0 @@
-{
-    "parent": "block/slab_top",
-    "textures": {
-        "bottom": "embellishcraft:block/cobblestone/larvikite_cobblestone",
-        "top": "embellishcraft:block/cobblestone/larvikite_cobblestone",
-        "side": "embellishcraft:block/cobblestone/larvikite_cobblestone"
-    }
-}

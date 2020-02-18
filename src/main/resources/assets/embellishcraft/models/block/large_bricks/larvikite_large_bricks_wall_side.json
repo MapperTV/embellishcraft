@@ -1,6 +1,0 @@
-{
-    "parent": "block/template_wall_side",
-    "textures": {
-        "wall": "embellishcraft:block/large_bricks/larvikite_large_bricks"
-    }
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "embellishcraft:slate_cobblestone"
-  },
-  "result": "embellishcraft:slate_cobblestone_slab",
-  "count": 2
-}

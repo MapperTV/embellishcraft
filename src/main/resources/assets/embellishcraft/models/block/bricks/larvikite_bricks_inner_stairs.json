@@ -1,8 +1,0 @@
-{
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "embellishcraft:block/bricks/larvikite_bricks",
-        "top": "embellishcraft:block/bricks/larvikite_bricks",
-        "side": "embellishcraft:block/bricks/larvikite_bricks"
-    }
-}

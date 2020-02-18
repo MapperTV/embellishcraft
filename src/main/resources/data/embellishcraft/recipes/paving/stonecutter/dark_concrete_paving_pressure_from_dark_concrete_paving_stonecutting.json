@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "embellishcraft:dark_concrete_paving"
-  },
-  "result": "embellishcraft:dark_concrete_paving_pressure_plate",
-  "count": 1
-}

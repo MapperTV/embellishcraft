@@ -1,8 +1,0 @@
-{
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "embellishcraft:block/world/slate",
-        "top": "embellishcraft:block/world/slate",
-        "side": "embellishcraft:block/world/slate"
-    }
-}

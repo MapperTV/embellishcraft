@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "embellishcraft:jade_cobblestone"
-  },
-  "result": "embellishcraft:jade_cobblestone_pressure_plate",
-  "count": 1
-}

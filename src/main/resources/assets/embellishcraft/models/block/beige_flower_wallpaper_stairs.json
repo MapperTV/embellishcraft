@@ -1,8 +1,0 @@
-{
-    "parent": "embellishcraft:block/rotated_stairs",
-    "textures": {
-        "bottom": "embellishcraft:block/wallpaper/side_wallpaper",
-        "top": "embellishcraft:block/wallpaper/beige_flower_wallpaper",
-        "side": "embellishcraft:block/wallpaper/beige_flower_wallpaper"
-    }
-}

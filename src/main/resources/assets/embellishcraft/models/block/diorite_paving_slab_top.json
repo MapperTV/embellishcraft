@@ -1,8 +1,0 @@
-{
-    "parent": "block/slab_top",
-    "textures": {
-        "bottom": "embellishcraft:block/paving/diorite_paving_b",
-        "top": "embellishcraft:block/paving/diorite_paving_b",
-        "side": "embellishcraft:block/paving/diorite_paving_b"
-    }
-}

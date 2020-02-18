@@ -1,7 +1,0 @@
-{
-    "parent": "embellishcraft:block/furniture/table/table_foot",
-    "textures": {
-        "material": "block/jungle_planks",
-        "particle": "block/jungle_planks"
-    }
-}

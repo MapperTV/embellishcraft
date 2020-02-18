@@ -1,6 +1,0 @@
-{
-    "parent": "block/wall_inventory",
-    "textures": {
-        "wall": "embellishcraft:block/large_bricks/basalt_large_bricks"
-    }
-}

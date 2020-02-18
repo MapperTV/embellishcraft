@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "powered=false": { "model": "embellishcraft:block/polished_paving_pressure_plate" },
-        "powered=true": { "model": "embellishcraft:block/polished_paving_pressure_plate_down" }
-    }
-}

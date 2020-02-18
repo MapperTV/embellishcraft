@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "embellishcraft:jade_large_bricks"
-  },
-  "result": "embellishcraft:jade_large_bricks_wall",
-  "count": 1
-}

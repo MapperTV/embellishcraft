@@ -1,7 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "embellishcraft:block/metal/beam/iron_beam_junction",
-        "side": "embellishcraft:block/metal/beam/bolted_iron_beam"
-    }
-}

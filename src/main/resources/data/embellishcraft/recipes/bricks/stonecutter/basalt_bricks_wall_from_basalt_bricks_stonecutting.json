@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "embellishcraft:basalt_bricks"
-  },
-  "result": "embellishcraft:basalt_bricks_wall",
-  "count": 1
-}

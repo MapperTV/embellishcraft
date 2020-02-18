@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "embellishcraft:item/door/sturdy_rusty_door"
-    }
-}

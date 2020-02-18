@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "axis=y":  { "model": "embellishcraft:block/metal/beam/bolted_iron_beam" },
-        "axis=z":   { "model": "embellishcraft:block/metal/beam/bolted_iron_beam", "x": 90 },
-        "axis=x":   { "model": "embellishcraft:block/metal/beam/bolted_iron_beam", "x": 90, "y": 90 }
-    }
-}

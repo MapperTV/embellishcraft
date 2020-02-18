@@ -9,6 +9,7 @@ import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import tv.mapper.embellishcraft.ECConstants;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ECGenerators
@@ -35,8 +36,8 @@ public class ECGenerators
         // generator.addProvider(new ECRecipes(generator));
         // generator.addProvider(new ECLootTables(generator));
         generator.addProvider(new ECBlockStates(generator, helper));
-        // generator.addProvider(new ECBlockModels(generator, helper));
-        // generator.addProvider(new ECItemModels(generator, helper));
+        generator.addProvider(new ECBlockModels(generator, ECConstants.MODID, helper));
+        generator.addProvider(new ECItemModels(generator, ECConstants.MODID, helper));
 
         // generator.addProvider(new ECBlockTags(generator));
         // generator.addProvider(new ECItemTags(generator));

@@ -1,8 +1,0 @@
-{
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "embellishcraft:block/metal/corrugated_plate/white_corrugated_metal_plate",
-        "top": "embellishcraft:block/metal/corrugated_plate/white_corrugated_metal_plate",
-        "side": "embellishcraft:block/metal/corrugated_plate/white_corrugated_metal_plate"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "parent": "embellishcraft:block/furniture/pillow",
-    "textures": {
-        "all": "block/cyan_wool",
-        "particle": "block/cyan_wool"
-    }
-}

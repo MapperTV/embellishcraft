@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "embellishcraft:basalt_cobblestone"
-  },
-  "result": "embellishcraft:basalt_cobblestone_stairs",
-  "count": 1
-}

@@ -1,6 +1,0 @@
-{
-    "parent": "embellishcraft:block/furniture/table/table_inventory",
-    "textures": {
-        "material": "block/spruce_planks"
-    }
-}

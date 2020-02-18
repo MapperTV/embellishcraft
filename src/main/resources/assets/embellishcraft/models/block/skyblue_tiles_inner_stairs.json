@@ -1,8 +1,0 @@
-{
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "embellishcraft:block/tiles/skyblue_tiles",
-        "top": "embellishcraft:block/tiles/skyblue_tiles",
-        "side": "embellishcraft:block/tiles/skyblue_tiles"
-    }
-}

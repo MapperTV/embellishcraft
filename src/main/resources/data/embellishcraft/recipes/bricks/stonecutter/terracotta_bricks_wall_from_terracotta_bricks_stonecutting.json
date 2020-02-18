@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "embellishcraft:terracotta_bricks"
-  },
-  "result": "embellishcraft:terracotta_bricks_wall",
-  "count": 1
-}

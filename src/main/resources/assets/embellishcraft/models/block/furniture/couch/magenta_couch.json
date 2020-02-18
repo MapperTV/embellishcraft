@@ -1,9 +1,0 @@
-{
-	"parent": "embellishcraft:block/furniture/couch/base/couch",
-	"textures": {
-		"fabric": "block/magenta_wool",
-		"base": "block/oak_planks",
-		"back": "block/stripped_oak_log",
-		"particle": "block/magenta_wool"
-	}
-}

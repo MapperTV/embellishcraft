@@ -1,8 +1,0 @@
-{
-    "parent": "block/slab",
-    "textures": {
-        "bottom": "embellishcraft:block/bricks/gneiss_bricks",
-        "top": "embellishcraft:block/bricks/gneiss_bricks",
-        "side": "embellishcraft:block/bricks/gneiss_bricks"
-    }
-}

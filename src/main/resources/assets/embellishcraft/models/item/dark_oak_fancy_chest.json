@@ -1,6 +1,0 @@
-{
-    "parent": "embellishcraft:item/template_chest",
-    "textures": {
-        "particle": "block/dark_oak_planks"
-    }
-}

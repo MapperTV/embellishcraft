@@ -1,7 +1,0 @@
-{
-    "parent": "embellishcraft:block/all_rotation_block",
-    "textures": {
-        "front": "embellishcraft:block/metal/duct/grid_air_duct",
-        "side": "embellishcraft:block/metal/duct/air_duct"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "parent": "embellishcraft:block/furniture/chair",
-    "textures": {
-        "1": "block/dark_oak_planks",
-        "particle": "block/dark_oak_planks"
-    }
-}

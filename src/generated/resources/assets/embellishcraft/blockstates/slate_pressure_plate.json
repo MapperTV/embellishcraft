@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "embellishcraft:block/slate_pressure_plate"
+    },
+    "powered=true": {
+      "model": "embellishcraft:block/slate_pressure_plate_down"
+    }
+  }
+}
