@@ -15,6 +15,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.ECBlocks;
 import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.mapperbase.data.gen.BaseBlockStates;
@@ -29,18 +30,18 @@ public class ECBlockStates extends BaseBlockStates
     @Override
     protected void registerStatesAndModels()
     {
-        simpleBlock(ECBlocks.BASALT);
-        slabBlock((SlabBlock)ECBlocks.BASALT_SLAB, modLoc("block/basalt"), modLoc("block/basalt"));
-        stairsBlock((StairsBlock)ECBlocks.BASALT_STAIRS, modLoc("block/basalt"), modLoc("block/basalt"), modLoc("block/basalt"));
-        wallBlock((WallBlock)ECBlocks.BASALT_WALL, modLoc("block/basalt"));
-        pressurePlateBlock(ECBlocks.BASALT_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate"),
+        simpleBlock(ECBlockRegistry.BASALT.get());
+        slabBlock(ECBlockRegistry.BASALT_SLAB.get(), modLoc("block/basalt"), modLoc("block/basalt"));
+        stairsBlock(ECBlockRegistry.BASALT_STAIRS.get(), modLoc("block/basalt"), modLoc("block/basalt"), modLoc("block/basalt"));
+        wallBlock(ECBlockRegistry.BASALT_WALL.get(), modLoc("block/basalt"));
+        pressurePlateBlock(ECBlockRegistry.BASALT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate_down"));
 
-        simpleBlock(ECBlocks.SLATE);
-        slabBlock((SlabBlock)ECBlocks.SLATE_SLAB, modLoc("block/slate"), modLoc("block/slate"));
-        stairsBlock((StairsBlock)ECBlocks.SLATE_STAIRS, modLoc("block/slate"), modLoc("block/slate"), modLoc("block/slate"));
-        wallBlock((WallBlock)ECBlocks.SLATE_WALL, modLoc("block/slate"));
-        pressurePlateBlock(ECBlocks.SLATE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/slate_pressure_plate"),
+        simpleBlock(ECBlockRegistry.SLATE.get());
+        slabBlock(ECBlockRegistry.SLATE_SLAB.get(), modLoc("block/slate"), modLoc("block/slate"));
+        stairsBlock(ECBlockRegistry.SLATE_STAIRS.get(), modLoc("block/slate"), modLoc("block/slate"), modLoc("block/slate"));
+        wallBlock(ECBlockRegistry.SLATE_WALL.get(), modLoc("block/slate"));
+        pressurePlateBlock(ECBlockRegistry.SLATE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/slate_pressure_plate_down"));
 
         simpleBlock(ECBlocks.MARBLE);

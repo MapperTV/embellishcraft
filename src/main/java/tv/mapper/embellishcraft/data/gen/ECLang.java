@@ -2,6 +2,7 @@ package tv.mapper.embellishcraft.data.gen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
+import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.ECBlocks;
 
 public class ECLang extends LanguageProvider
@@ -21,11 +22,11 @@ public class ECLang extends LanguageProvider
         {
             default:
             case "en_us":
-                add(ECBlocks.BASALT, "Basalt Block");
-                add(ECBlocks.BASALT_SLAB, "Basalt Slab");
-                add(ECBlocks.BASALT_STAIRS, "Basalt Stairs");
-                add(ECBlocks.BASALT_WALL, "Basalt Wall");
-                add(ECBlocks.BASALT_PRESSURE_PLATE, "Basalt Pressure Plate");
+                addBlock(ECBlockRegistry.BASALT, "Basalt Block");
+                addBlock(ECBlockRegistry.BASALT_SLAB, "Basalt Slab");
+                addBlock(ECBlockRegistry.BASALT_STAIRS, "Basalt Stairs");
+                addBlock(ECBlockRegistry.BASALT_WALL, "Basalt Wall");
+                addBlock(ECBlockRegistry.BASALT_PRESSURE_PLATE, "Basalt Pressure Plate");
 
                 add(ECBlocks.BASALT_COBBLESTONE, "Basalt Cobblestone Block");
                 add(ECBlocks.BASALT_COBBLESTONE_SLAB, "Basalt Cobblestone Slab");
@@ -33,11 +34,11 @@ public class ECLang extends LanguageProvider
                 add(ECBlocks.BASALT_COBBLESTONE_WALL, "Basalt Cobblestone Wall");
                 add(ECBlocks.BASALT_COBBLESTONE_PRESSURE_PLATE, "Basalt Cobblestone Pressure Plate");
 
-                add(ECBlocks.SLATE, "Slate Block");
-                add(ECBlocks.SLATE_SLAB, "Slate Slab");
-                add(ECBlocks.SLATE_STAIRS, "Slate Stairs");
-                add(ECBlocks.SLATE_WALL, "Slate Wall");
-                add(ECBlocks.SLATE_PRESSURE_PLATE, "Slate Pressure Plate");
+                addBlock(ECBlockRegistry.SLATE, "Slate Block");
+                addBlock(ECBlockRegistry.SLATE_SLAB, "Slate Slab");
+                addBlock(ECBlockRegistry.SLATE_STAIRS, "Slate Stairs");
+                addBlock(ECBlockRegistry.SLATE_WALL, "Slate Wall");
+                addBlock(ECBlockRegistry.SLATE_PRESSURE_PLATE, "Slate Pressure Plate");
 
                 add(ECBlocks.SLATE_COBBLESTONE, "Slate Cobblestone Block");
                 add(ECBlocks.SLATE_COBBLESTONE_SLAB, "Slate Cobblestone Slab");
@@ -93,14 +94,14 @@ public class ECLang extends LanguageProvider
                 add(ECBlocks.LARVIKITE_COBBLESTONE_WALL, "Larvikite Cobblestone Wall");
                 add(ECBlocks.LARVIKITE_COBBLESTONE_PRESSURE_PLATE, "Larvikite Cobblestone Pressure Plate");
 
-                add("itemGroup.mapperbase_group", "EmbellishCraft");
+                add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
             case "fr_fr":
-                add(ECBlocks.BASALT, "Bloc de basalt");
-                add(ECBlocks.BASALT_SLAB, "Dalle en basalt");
-                add(ECBlocks.BASALT_STAIRS, "Escalier en basalt");
-                add(ECBlocks.BASALT_WALL, "Muret en basalt");
-                add(ECBlocks.BASALT_PRESSURE_PLATE, "Plaque de pression en basalt");
+                addBlock(ECBlockRegistry.BASALT, "Bloc de basalt");
+                addBlock(ECBlockRegistry.BASALT_SLAB, "Dalle en basalt");
+                addBlock(ECBlockRegistry.BASALT_STAIRS, "Escalier en basalt");
+                addBlock(ECBlockRegistry.BASALT_WALL, "Muret en basalt");
+                addBlock(ECBlockRegistry.BASALT_PRESSURE_PLATE, "Plaque de pression en basalt");
 
                 add(ECBlocks.BASALT_COBBLESTONE, "Pierres de basalt");
                 add(ECBlocks.BASALT_COBBLESTONE_SLAB, "Dalle en pierres de basalt");
@@ -108,11 +109,11 @@ public class ECLang extends LanguageProvider
                 add(ECBlocks.BASALT_COBBLESTONE_WALL, "Muret en pierres de basalt");
                 add(ECBlocks.BASALT_COBBLESTONE_PRESSURE_PLATE, "Plaque de pression en pierres de basalt");
 
-                add(ECBlocks.SLATE, "Bloc d'ardoise");
-                add(ECBlocks.SLATE_SLAB, "Dalle en ardoise");
-                add(ECBlocks.SLATE_STAIRS, "Escalier en ardoise");
-                add(ECBlocks.SLATE_WALL, "Muret en ardoise");
-                add(ECBlocks.SLATE_PRESSURE_PLATE, "Plaque de pression en ardoise");
+                addBlock(ECBlockRegistry.SLATE, "Bloc d'ardoise");
+                addBlock(ECBlockRegistry.SLATE_SLAB, "Dalle en ardoise");
+                addBlock(ECBlockRegistry.SLATE_STAIRS, "Escalier en ardoise");
+                addBlock(ECBlockRegistry.SLATE_WALL, "Muret en ardoise");
+                addBlock(ECBlockRegistry.SLATE_PRESSURE_PLATE, "Plaque de pression en ardoise");
 
                 add(ECBlocks.SLATE_COBBLESTONE, "Pierres d'ardoise");
                 add(ECBlocks.SLATE_COBBLESTONE_SLAB, "Dalle en pierres d'ardoise");
@@ -168,7 +169,7 @@ public class ECLang extends LanguageProvider
                 add(ECBlocks.LARVIKITE_COBBLESTONE_WALL, "Muret en pierres de larvikite");
                 add(ECBlocks.LARVIKITE_COBBLESTONE_PRESSURE_PLATE, "Plaque de pression en pierres de larvikite");
 
-                add("itemGroup.mapperbase_group", "EmbellishCraft");
+                add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
         }
     }

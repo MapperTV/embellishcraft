@@ -7,6 +7,7 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.registries.ForgeRegistries;
+import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.ECBlocks;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;
 
@@ -18,14 +19,14 @@ public class OreGenerator
         {
             if(CommonConfig.BASALT_GENERATION.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
-                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlocks.BASALT.getDefaultState(), CommonConfig.BASALT_SIZE.get().intValue())).withPlacement(
+                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlockRegistry.BASALT.get().getDefaultState(), CommonConfig.BASALT_SIZE.get().intValue())).withPlacement(
                         Placement.COUNT_RANGE.configure(
                             new CountRangeConfig(CommonConfig.BASALT_CHANCE.get(), CommonConfig.BASALT_MIN_HEIGHT.get(), CommonConfig.BASALT_MIN_HEIGHT.get(), CommonConfig.BASALT_MAX_HEIGHT.get()))));
 
             if(CommonConfig.SLATE_GENERATION.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                     Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlocks.SLATE.getDefaultState(), CommonConfig.SLATE_SIZE.get().intValue())).withPlacement(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlockRegistry.SLATE.get().getDefaultState(), CommonConfig.SLATE_SIZE.get().intValue())).withPlacement(
                             Placement.COUNT_RANGE.configure(
                                 new CountRangeConfig(CommonConfig.SLATE_CHANCE.get(), CommonConfig.SLATE_MIN_HEIGHT.get(), CommonConfig.SLATE_MIN_HEIGHT.get(), CommonConfig.SLATE_MAX_HEIGHT.get()))));
 

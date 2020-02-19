@@ -34,17 +34,17 @@ public class ECBlocks
 {
     // World (blocks that generate in the world)
 
-    public static final Block BASALT = null;
-    public static final Block BASALT_STAIRS = null;
-    public static final Block BASALT_SLAB = null;
-    public static final Block BASALT_WALL = null;
-    public static final Block BASALT_PRESSURE_PLATE = null;
+    // public static final Block BASALT = null;
+    // public static final Block BASALT_STAIRS = null;
+    // public static final Block BASALT_SLAB = null;
+    // public static final Block BASALT_WALL = null;
+    // public static final Block BASALT_PRESSURE_PLATE = null;
 
-    public static final Block SLATE = null;
-    public static final Block SLATE_STAIRS = null;
-    public static final Block SLATE_SLAB = null;
-    public static final Block SLATE_WALL = null;
-    public static final Block SLATE_PRESSURE_PLATE = null;
+    // public static final Block SLATE = null;
+    // public static final Block SLATE_STAIRS = null;
+    // public static final Block SLATE_SLAB = null;
+    // public static final Block SLATE_WALL = null;
+    // public static final Block SLATE_PRESSURE_PLATE = null;
 
     public static final Block MARBLE = null;
     public static final Block MARBLE_STAIRS = null;
@@ -797,8 +797,8 @@ public class ECBlocks
     {
         // World
 
-        RegistryUtils.createBlockWithVariants(event, "basalt", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "slate", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        //RegistryUtils.createBlockWithVariants(event, "basalt", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        //RegistryUtils.createBlockWithVariants(event, "slate", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "marble", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "gneiss", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "jade", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
@@ -1080,8 +1080,8 @@ public class ECBlocks
     {
         // World
 
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT, BASALT_STAIRS, BASALT_SLAB, BASALT_WALL, BASALT_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE, SLATE_STAIRS, SLATE_SLAB, SLATE_WALL, SLATE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT, BASALT_STAIRS, BASALT_SLAB, BASALT_WALL, BASALT_PRESSURE_PLATE);
+        //RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE, SLATE_STAIRS, SLATE_SLAB, SLATE_WALL, SLATE_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE, MARBLE_STAIRS, MARBLE_SLAB, MARBLE_WALL, MARBLE_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS, GNEISS_STAIRS, GNEISS_SLAB, GNEISS_WALL, GNEISS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE, JADE_STAIRS, JADE_SLAB, JADE_WALL, JADE_PRESSURE_PLATE);
