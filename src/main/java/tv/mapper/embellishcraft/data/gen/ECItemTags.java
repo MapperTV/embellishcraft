@@ -4,6 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraftforge.common.Tags;
 import tv.mapper.mapperbase.data.BaseTags;
 
 public class ECItemTags extends ItemTagsProvider
@@ -16,6 +17,7 @@ public class ECItemTags extends ItemTagsProvider
 
     public void registerTags()
     {
+        copy(Tags.Blocks.STONE, Tags.Items.STONE);
         copy(BlockTags.STAIRS, ItemTags.STAIRS);
         copy(BlockTags.SLABS, ItemTags.SLABS);
         copy(BlockTags.WALLS, ItemTags.WALLS);

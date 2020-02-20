@@ -46,75 +46,75 @@ public class ECBlocks
     // public static final Block SLATE_WALL = null;
     // public static final Block SLATE_PRESSURE_PLATE = null;
 
-    public static final Block MARBLE = null;
-    public static final Block MARBLE_STAIRS = null;
-    public static final Block MARBLE_SLAB = null;
-    public static final Block MARBLE_WALL = null;
-    public static final Block MARBLE_PRESSURE_PLATE = null;
-
-    public static final Block GNEISS = null;
-    public static final Block GNEISS_STAIRS = null;
-    public static final Block GNEISS_SLAB = null;
-    public static final Block GNEISS_WALL = null;
-    public static final Block GNEISS_PRESSURE_PLATE = null;
-
-    public static final Block JADE = null;
-    public static final Block JADE_STAIRS = null;
-    public static final Block JADE_SLAB = null;
-    public static final Block JADE_WALL = null;
-    public static final Block JADE_PRESSURE_PLATE = null;
-
-    public static final Block LARVIKITE = null;
-    public static final Block LARVIKITE_STAIRS = null;
-    public static final Block LARVIKITE_SLAB = null;
-    public static final Block LARVIKITE_WALL = null;
-    public static final Block LARVIKITE_PRESSURE_PLATE = null;
+    // public static final Block MARBLE = null;
+    // public static final Block MARBLE_STAIRS = null;
+    // public static final Block MARBLE_SLAB = null;
+    // public static final Block MARBLE_WALL = null;
+    // public static final Block MARBLE_PRESSURE_PLATE = null;
+    //
+    // public static final Block GNEISS = null;
+    // public static final Block GNEISS_STAIRS = null;
+    // public static final Block GNEISS_SLAB = null;
+    // public static final Block GNEISS_WALL = null;
+    // public static final Block GNEISS_PRESSURE_PLATE = null;
+    //
+    // public static final Block JADE = null;
+    // public static final Block JADE_STAIRS = null;
+    // public static final Block JADE_SLAB = null;
+    // public static final Block JADE_WALL = null;
+    // public static final Block JADE_PRESSURE_PLATE = null;
+    //
+    // public static final Block LARVIKITE = null;
+    // public static final Block LARVIKITE_STAIRS = null;
+    // public static final Block LARVIKITE_SLAB = null;
+    // public static final Block LARVIKITE_WALL = null;
+    // public static final Block LARVIKITE_PRESSURE_PLATE = null;
 
     // Cobblestones
 
-    public static final Block BASALT_COBBLESTONE = null;
-    public static final Block BASALT_COBBLESTONE_STAIRS = null;
-    public static final Block BASALT_COBBLESTONE_SLAB = null;
-    public static final Block BASALT_COBBLESTONE_WALL = null;
-    public static final Block BASALT_COBBLESTONE_PRESSURE_PLATE = null;
+    // public static final Block BASALT_COBBLESTONE = null;
+    // public static final Block BASALT_COBBLESTONE_STAIRS = null;
+    // public static final Block BASALT_COBBLESTONE_SLAB = null;
+    // public static final Block BASALT_COBBLESTONE_WALL = null;
+    // public static final Block BASALT_COBBLESTONE_PRESSURE_PLATE = null;
 
-    public static final Block SLATE_COBBLESTONE = null;
-    public static final Block SLATE_COBBLESTONE_STAIRS = null;
-    public static final Block SLATE_COBBLESTONE_SLAB = null;
-    public static final Block SLATE_COBBLESTONE_WALL = null;
-    public static final Block SLATE_COBBLESTONE_PRESSURE_PLATE = null;
-
-    public static final Block MARBLE_COBBLESTONE = null;
-    public static final Block MARBLE_COBBLESTONE_STAIRS = null;
-    public static final Block MARBLE_COBBLESTONE_SLAB = null;
-    public static final Block MARBLE_COBBLESTONE_WALL = null;
-    public static final Block MARBLE_COBBLESTONE_PRESSURE_PLATE = null;
-
-    public static final Block GNEISS_COBBLESTONE = null;
-    public static final Block GNEISS_COBBLESTONE_STAIRS = null;
-    public static final Block GNEISS_COBBLESTONE_SLAB = null;
-    public static final Block GNEISS_COBBLESTONE_WALL = null;
-    public static final Block GNEISS_COBBLESTONE_PRESSURE_PLATE = null;
-
-    public static final Block JADE_COBBLESTONE = null;
-    public static final Block JADE_COBBLESTONE_STAIRS = null;
-    public static final Block JADE_COBBLESTONE_SLAB = null;
-    public static final Block JADE_COBBLESTONE_WALL = null;
-    public static final Block JADE_COBBLESTONE_PRESSURE_PLATE = null;
-
-    public static final Block LARVIKITE_COBBLESTONE = null;
-    public static final Block LARVIKITE_COBBLESTONE_STAIRS = null;
-    public static final Block LARVIKITE_COBBLESTONE_SLAB = null;
-    public static final Block LARVIKITE_COBBLESTONE_WALL = null;
-    public static final Block LARVIKITE_COBBLESTONE_PRESSURE_PLATE = null;
+    // public static final Block SLATE_COBBLESTONE = null;
+    // public static final Block SLATE_COBBLESTONE_STAIRS = null;
+    // public static final Block SLATE_COBBLESTONE_SLAB = null;
+    // public static final Block SLATE_COBBLESTONE_WALL = null;
+    // public static final Block SLATE_COBBLESTONE_PRESSURE_PLATE = null;
+    //
+    // public static final Block MARBLE_COBBLESTONE = null;
+    // public static final Block MARBLE_COBBLESTONE_STAIRS = null;
+    // public static final Block MARBLE_COBBLESTONE_SLAB = null;
+    // public static final Block MARBLE_COBBLESTONE_WALL = null;
+    // public static final Block MARBLE_COBBLESTONE_PRESSURE_PLATE = null;
+    //
+    // public static final Block GNEISS_COBBLESTONE = null;
+    // public static final Block GNEISS_COBBLESTONE_STAIRS = null;
+    // public static final Block GNEISS_COBBLESTONE_SLAB = null;
+    // public static final Block GNEISS_COBBLESTONE_WALL = null;
+    // public static final Block GNEISS_COBBLESTONE_PRESSURE_PLATE = null;
+    //
+    // public static final Block JADE_COBBLESTONE = null;
+    // public static final Block JADE_COBBLESTONE_STAIRS = null;
+    // public static final Block JADE_COBBLESTONE_SLAB = null;
+    // public static final Block JADE_COBBLESTONE_WALL = null;
+    // public static final Block JADE_COBBLESTONE_PRESSURE_PLATE = null;
+    //
+    // public static final Block LARVIKITE_COBBLESTONE = null;
+    // public static final Block LARVIKITE_COBBLESTONE_STAIRS = null;
+    // public static final Block LARVIKITE_COBBLESTONE_SLAB = null;
+    // public static final Block LARVIKITE_COBBLESTONE_WALL = null;
+    // public static final Block LARVIKITE_COBBLESTONE_PRESSURE_PLATE = null;
 
     // Bricks
 
-    public static final Block BASALT_BRICKS = null;
-    public static final Block BASALT_BRICKS_STAIRS = null;
-    public static final Block BASALT_BRICKS_SLAB = null;
-    public static final Block BASALT_BRICKS_WALL = null;
-    public static final Block BASALT_BRICKS_PRESSURE_PLATE = null;
+    // public static final Block BASALT_BRICKS = null;
+    // public static final Block BASALT_BRICKS_STAIRS = null;
+    // public static final Block BASALT_BRICKS_SLAB = null;
+    // public static final Block BASALT_BRICKS_WALL = null;
+    // public static final Block BASALT_BRICKS_PRESSURE_PLATE = null;
 
     public static final Block DARK_BRICKS = null;
     public static final Block DARK_BRICKS_STAIRS = null;
@@ -140,11 +140,11 @@ public class ECBlocks
     public static final Block SANDSTONE_BRICKS_WALL = null;
     public static final Block SANDSTONE_BRICKS_PRESSURE_PLATE = null;
 
-    public static final Block SLATE_BRICKS = null;
-    public static final Block SLATE_BRICKS_STAIRS = null;
-    public static final Block SLATE_BRICKS_SLAB = null;
-    public static final Block SLATE_BRICKS_WALL = null;
-    public static final Block SLATE_BRICKS_PRESSURE_PLATE = null;
+    // public static final Block SLATE_BRICKS = null;
+    // public static final Block SLATE_BRICKS_STAIRS = null;
+    // public static final Block SLATE_BRICKS_SLAB = null;
+    // public static final Block SLATE_BRICKS_WALL = null;
+    // public static final Block SLATE_BRICKS_PRESSURE_PLATE = null;
 
     public static final Block TERRACOTTA_BRICKS = null;
     public static final Block TERRACOTTA_BRICKS_STAIRS = null;
@@ -158,37 +158,37 @@ public class ECBlocks
     public static final Block WEARED_BRICKS_WALL = null;
     public static final Block WEARED_BRICKS_PRESSURE_PLATE = null;
 
-    public static final Block MARBLE_BRICKS = null;
-    public static final Block MARBLE_BRICKS_STAIRS = null;
-    public static final Block MARBLE_BRICKS_SLAB = null;
-    public static final Block MARBLE_BRICKS_WALL = null;
-    public static final Block MARBLE_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block GNEISS_BRICKS = null;
-    public static final Block GNEISS_BRICKS_STAIRS = null;
-    public static final Block GNEISS_BRICKS_SLAB = null;
-    public static final Block GNEISS_BRICKS_WALL = null;
-    public static final Block GNEISS_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block JADE_BRICKS = null;
-    public static final Block JADE_BRICKS_STAIRS = null;
-    public static final Block JADE_BRICKS_SLAB = null;
-    public static final Block JADE_BRICKS_WALL = null;
-    public static final Block JADE_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block LARVIKITE_BRICKS = null;
-    public static final Block LARVIKITE_BRICKS_STAIRS = null;
-    public static final Block LARVIKITE_BRICKS_SLAB = null;
-    public static final Block LARVIKITE_BRICKS_WALL = null;
-    public static final Block LARVIKITE_BRICKS_PRESSURE_PLATE = null;
+    // public static final Block MARBLE_BRICKS = null;
+    // public static final Block MARBLE_BRICKS_STAIRS = null;
+    // public static final Block MARBLE_BRICKS_SLAB = null;
+    // public static final Block MARBLE_BRICKS_WALL = null;
+    // public static final Block MARBLE_BRICKS_PRESSURE_PLATE = null;
+    //
+    // public static final Block GNEISS_BRICKS = null;
+    // public static final Block GNEISS_BRICKS_STAIRS = null;
+    // public static final Block GNEISS_BRICKS_SLAB = null;
+    // public static final Block GNEISS_BRICKS_WALL = null;
+    // public static final Block GNEISS_BRICKS_PRESSURE_PLATE = null;
+    //
+    // public static final Block JADE_BRICKS = null;
+    // public static final Block JADE_BRICKS_STAIRS = null;
+    // public static final Block JADE_BRICKS_SLAB = null;
+    // public static final Block JADE_BRICKS_WALL = null;
+    // public static final Block JADE_BRICKS_PRESSURE_PLATE = null;
+    //
+    // public static final Block LARVIKITE_BRICKS = null;
+    // public static final Block LARVIKITE_BRICKS_STAIRS = null;
+    // public static final Block LARVIKITE_BRICKS_SLAB = null;
+    // public static final Block LARVIKITE_BRICKS_WALL = null;
+    // public static final Block LARVIKITE_BRICKS_PRESSURE_PLATE = null;
 
     // Large bricks
 
-    public static final Block BASALT_LARGE_BRICKS = null;
-    public static final Block BASALT_LARGE_BRICKS_STAIRS = null;
-    public static final Block BASALT_LARGE_BRICKS_SLAB = null;
-    public static final Block BASALT_LARGE_BRICKS_WALL = null;
-    public static final Block BASALT_LARGE_BRICKS_PRESSURE_PLATE = null;
+    // public static final Block BASALT_LARGE_BRICKS = null;
+    // public static final Block BASALT_LARGE_BRICKS_STAIRS = null;
+    // public static final Block BASALT_LARGE_BRICKS_SLAB = null;
+    // public static final Block BASALT_LARGE_BRICKS_WALL = null;
+    // public static final Block BASALT_LARGE_BRICKS_PRESSURE_PLATE = null;
 
     public static final Block DIORITE_LARGE_BRICKS = null;
     public static final Block DIORITE_LARGE_BRICKS_STAIRS = null;
@@ -202,11 +202,11 @@ public class ECBlocks
     public static final Block DARK_LARGE_BRICKS_WALL = null;
     public static final Block DARK_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    public static final Block MARBLE_LARGE_BRICKS = null;
-    public static final Block MARBLE_LARGE_BRICKS_STAIRS = null;
-    public static final Block MARBLE_LARGE_BRICKS_SLAB = null;
-    public static final Block MARBLE_LARGE_BRICKS_WALL = null;
-    public static final Block MARBLE_LARGE_BRICKS_PRESSURE_PLATE = null;
+    // public static final Block MARBLE_LARGE_BRICKS = null;
+    // public static final Block MARBLE_LARGE_BRICKS_STAIRS = null;
+    // public static final Block MARBLE_LARGE_BRICKS_SLAB = null;
+    // public static final Block MARBLE_LARGE_BRICKS_WALL = null;
+    // public static final Block MARBLE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
     public static final Block OLD_LARGE_BRICKS = null;
     public static final Block OLD_LARGE_BRICKS_STAIRS = null;
@@ -220,11 +220,11 @@ public class ECBlocks
     public static final Block SANDSTONE_LARGE_BRICKS_WALL = null;
     public static final Block SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    public static final Block SLATE_LARGE_BRICKS = null;
-    public static final Block SLATE_LARGE_BRICKS_STAIRS = null;
-    public static final Block SLATE_LARGE_BRICKS_SLAB = null;
-    public static final Block SLATE_LARGE_BRICKS_WALL = null;
-    public static final Block SLATE_LARGE_BRICKS_PRESSURE_PLATE = null;
+    // public static final Block SLATE_LARGE_BRICKS = null;
+    // public static final Block SLATE_LARGE_BRICKS_STAIRS = null;
+    // public static final Block SLATE_LARGE_BRICKS_SLAB = null;
+    // public static final Block SLATE_LARGE_BRICKS_WALL = null;
+    // public static final Block SLATE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
     public static final Block TERRACOTTA_LARGE_BRICKS = null;
     public static final Block TERRACOTTA_LARGE_BRICKS_STAIRS = null;
@@ -238,23 +238,23 @@ public class ECBlocks
     public static final Block WEARED_LARGE_BRICKS_WALL = null;
     public static final Block WEARED_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    public static final Block GNEISS_LARGE_BRICKS = null;
-    public static final Block GNEISS_LARGE_BRICKS_STAIRS = null;
-    public static final Block GNEISS_LARGE_BRICKS_SLAB = null;
-    public static final Block GNEISS_LARGE_BRICKS_WALL = null;
-    public static final Block GNEISS_LARGE_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block JADE_LARGE_BRICKS = null;
-    public static final Block JADE_LARGE_BRICKS_STAIRS = null;
-    public static final Block JADE_LARGE_BRICKS_SLAB = null;
-    public static final Block JADE_LARGE_BRICKS_WALL = null;
-    public static final Block JADE_LARGE_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block LARVIKITE_LARGE_BRICKS = null;
-    public static final Block LARVIKITE_LARGE_BRICKS_STAIRS = null;
-    public static final Block LARVIKITE_LARGE_BRICKS_SLAB = null;
-    public static final Block LARVIKITE_LARGE_BRICKS_WALL = null;
-    public static final Block LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE = null;
+    // public static final Block GNEISS_LARGE_BRICKS = null;
+    // public static final Block GNEISS_LARGE_BRICKS_STAIRS = null;
+    // public static final Block GNEISS_LARGE_BRICKS_SLAB = null;
+    // public static final Block GNEISS_LARGE_BRICKS_WALL = null;
+    // public static final Block GNEISS_LARGE_BRICKS_PRESSURE_PLATE = null;
+    //
+    // public static final Block JADE_LARGE_BRICKS = null;
+    // public static final Block JADE_LARGE_BRICKS_STAIRS = null;
+    // public static final Block JADE_LARGE_BRICKS_SLAB = null;
+    // public static final Block JADE_LARGE_BRICKS_WALL = null;
+    // public static final Block JADE_LARGE_BRICKS_PRESSURE_PLATE = null;
+    //
+    // public static final Block LARVIKITE_LARGE_BRICKS = null;
+    // public static final Block LARVIKITE_LARGE_BRICKS_STAIRS = null;
+    // public static final Block LARVIKITE_LARGE_BRICKS_SLAB = null;
+    // public static final Block LARVIKITE_LARGE_BRICKS_WALL = null;
+    // public static final Block LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
     // Paving
 
@@ -797,51 +797,51 @@ public class ECBlocks
     {
         // World
 
-        //RegistryUtils.createBlockWithVariants(event, "basalt", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        //RegistryUtils.createBlockWithVariants(event, "slate", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "marble", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "gneiss", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "jade", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "larvikite", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "basalt", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "slate", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "marble", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "gneiss", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "jade", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "larvikite", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
 
         // Cobblestones
 
-        RegistryUtils.createBlockWithVariants(event, "basalt_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "slate_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "marble_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "gneiss_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "jade_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "larvikite_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "basalt_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "slate_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "marble_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "gneiss_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "jade_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "larvikite_cobblestone", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
 
         // Bricks
 
-        RegistryUtils.createBlockWithVariants(event, "basalt_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "basalt_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "dark_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "diorite_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "old_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "sandstone_bricks", true, true, true, true, Material.ROCK, MaterialColor.SAND, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "slate_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "slate_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "terracotta_bricks", true, true, true, true, Material.ROCK, MaterialColor.ADOBE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "weared_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "marble_bricks", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "gneiss_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "jade_bricks", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "larvikite_bricks", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "marble_bricks", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "gneiss_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "jade_bricks", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "larvikite_bricks", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
 
         // Large bricks
 
-        RegistryUtils.createBlockWithVariants(event, "basalt_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "basalt_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "diorite_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "dark_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "marble_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "marble_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "old_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "sandstone_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.SAND, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "slate_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "slate_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "terracotta_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.ADOBE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "weared_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "gneiss_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "jade_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "larvikite_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "gneiss_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "jade_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "larvikite_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
 
         // Paving
 
@@ -1081,71 +1081,72 @@ public class ECBlocks
         // World
 
         // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT, BASALT_STAIRS, BASALT_SLAB, BASALT_WALL, BASALT_PRESSURE_PLATE);
-        //RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE, SLATE_STAIRS, SLATE_SLAB, SLATE_WALL, SLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE, MARBLE_STAIRS, MARBLE_SLAB, MARBLE_WALL, MARBLE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS, GNEISS_STAIRS, GNEISS_SLAB, GNEISS_WALL, GNEISS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE, JADE_STAIRS, JADE_SLAB, JADE_WALL, JADE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE, LARVIKITE_STAIRS, LARVIKITE_SLAB, LARVIKITE_WALL, LARVIKITE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE, SLATE_STAIRS, SLATE_SLAB, SLATE_WALL, SLATE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE, MARBLE_STAIRS, MARBLE_SLAB, MARBLE_WALL, MARBLE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS, GNEISS_STAIRS, GNEISS_SLAB, GNEISS_WALL, GNEISS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE, JADE_STAIRS, JADE_SLAB, JADE_WALL, JADE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE, LARVIKITE_STAIRS, LARVIKITE_SLAB, LARVIKITE_WALL, LARVIKITE_PRESSURE_PLATE);
 
         // Cobblestones
 
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_COBBLESTONE, BASALT_COBBLESTONE_STAIRS, BASALT_COBBLESTONE_SLAB, BASALT_COBBLESTONE_WALL,
-            BASALT_COBBLESTONE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_COBBLESTONE, SLATE_COBBLESTONE_STAIRS, SLATE_COBBLESTONE_SLAB, SLATE_COBBLESTONE_WALL,
-            SLATE_COBBLESTONE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_COBBLESTONE, MARBLE_COBBLESTONE_STAIRS, MARBLE_COBBLESTONE_SLAB, MARBLE_COBBLESTONE_WALL,
-            MARBLE_COBBLESTONE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_COBBLESTONE, GNEISS_COBBLESTONE_STAIRS, GNEISS_COBBLESTONE_SLAB, GNEISS_COBBLESTONE_WALL,
-            GNEISS_COBBLESTONE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_COBBLESTONE, JADE_COBBLESTONE_STAIRS, JADE_COBBLESTONE_SLAB, JADE_COBBLESTONE_WALL,
-            JADE_COBBLESTONE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_COBBLESTONE, LARVIKITE_COBBLESTONE_STAIRS, LARVIKITE_COBBLESTONE_SLAB, LARVIKITE_COBBLESTONE_WALL,
-            LARVIKITE_COBBLESTONE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_COBBLESTONE, BASALT_COBBLESTONE_STAIRS, BASALT_COBBLESTONE_SLAB, BASALT_COBBLESTONE_WALL,
+        // BASALT_COBBLESTONE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_COBBLESTONE, SLATE_COBBLESTONE_STAIRS, SLATE_COBBLESTONE_SLAB, SLATE_COBBLESTONE_WALL,
+        // SLATE_COBBLESTONE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_COBBLESTONE, MARBLE_COBBLESTONE_STAIRS, MARBLE_COBBLESTONE_SLAB, MARBLE_COBBLESTONE_WALL,
+        // MARBLE_COBBLESTONE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_COBBLESTONE, GNEISS_COBBLESTONE_STAIRS, GNEISS_COBBLESTONE_SLAB, GNEISS_COBBLESTONE_WALL,
+        // GNEISS_COBBLESTONE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_COBBLESTONE, JADE_COBBLESTONE_STAIRS, JADE_COBBLESTONE_SLAB, JADE_COBBLESTONE_WALL,
+        // JADE_COBBLESTONE_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_COBBLESTONE, LARVIKITE_COBBLESTONE_STAIRS, LARVIKITE_COBBLESTONE_SLAB, LARVIKITE_COBBLESTONE_WALL,
+        // LARVIKITE_COBBLESTONE_PRESSURE_PLATE);
 
         // Bricks
 
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_BRICKS, BASALT_BRICKS_STAIRS, BASALT_BRICKS_SLAB, BASALT_BRICKS_WALL, BASALT_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_BRICKS, BASALT_BRICKS_STAIRS, BASALT_BRICKS_SLAB, BASALT_BRICKS_WALL, BASALT_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_BRICKS, DARK_BRICKS_STAIRS, DARK_BRICKS_SLAB, DARK_BRICKS_WALL, DARK_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_BRICKS, DIORITE_BRICKS_STAIRS, DIORITE_BRICKS_SLAB, DIORITE_BRICKS_WALL, DIORITE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_BRICKS, OLD_BRICKS_STAIRS, OLD_BRICKS_SLAB, OLD_BRICKS_WALL, OLD_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_BRICKS, SANDSTONE_BRICKS_STAIRS, SANDSTONE_BRICKS_SLAB, SANDSTONE_BRICKS_WALL,
             SANDSTONE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_BRICKS, SLATE_BRICKS_STAIRS, SLATE_BRICKS_SLAB, SLATE_BRICKS_WALL, SLATE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_BRICKS, SLATE_BRICKS_STAIRS, SLATE_BRICKS_SLAB, SLATE_BRICKS_WALL, SLATE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_BRICKS, TERRACOTTA_BRICKS_STAIRS, TERRACOTTA_BRICKS_SLAB, TERRACOTTA_BRICKS_WALL,
             TERRACOTTA_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_BRICKS, WEARED_BRICKS_STAIRS, WEARED_BRICKS_SLAB, WEARED_BRICKS_WALL, WEARED_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_BRICKS, MARBLE_BRICKS_STAIRS, MARBLE_BRICKS_SLAB, MARBLE_BRICKS_WALL, MARBLE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_BRICKS, GNEISS_BRICKS_STAIRS, GNEISS_BRICKS_SLAB, GNEISS_BRICKS_WALL, GNEISS_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_BRICKS, JADE_BRICKS_STAIRS, JADE_BRICKS_SLAB, JADE_BRICKS_WALL, JADE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_BRICKS, LARVIKITE_BRICKS_STAIRS, LARVIKITE_BRICKS_SLAB, LARVIKITE_BRICKS_WALL,
-            LARVIKITE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_BRICKS, MARBLE_BRICKS_STAIRS, MARBLE_BRICKS_SLAB, MARBLE_BRICKS_WALL, MARBLE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_BRICKS, GNEISS_BRICKS_STAIRS, GNEISS_BRICKS_SLAB, GNEISS_BRICKS_WALL, GNEISS_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_BRICKS, JADE_BRICKS_STAIRS, JADE_BRICKS_SLAB, JADE_BRICKS_WALL, JADE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_BRICKS, LARVIKITE_BRICKS_STAIRS, LARVIKITE_BRICKS_SLAB, LARVIKITE_BRICKS_WALL,
+        // LARVIKITE_BRICKS_PRESSURE_PLATE);
 
         // Large bricks
 
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_LARGE_BRICKS, BASALT_LARGE_BRICKS_STAIRS, BASALT_LARGE_BRICKS_SLAB, BASALT_LARGE_BRICKS_WALL,
-            BASALT_LARGE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_LARGE_BRICKS, BASALT_LARGE_BRICKS_STAIRS, BASALT_LARGE_BRICKS_SLAB, BASALT_LARGE_BRICKS_WALL,
+        // BASALT_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_LARGE_BRICKS, DIORITE_LARGE_BRICKS_STAIRS, DIORITE_LARGE_BRICKS_SLAB, DIORITE_LARGE_BRICKS_WALL,
             DIORITE_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_LARGE_BRICKS, DARK_LARGE_BRICKS_STAIRS, DARK_LARGE_BRICKS_SLAB, DARK_LARGE_BRICKS_WALL,
             DARK_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_LARGE_BRICKS, MARBLE_LARGE_BRICKS_STAIRS, MARBLE_LARGE_BRICKS_SLAB, MARBLE_LARGE_BRICKS_WALL,
-            MARBLE_LARGE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_LARGE_BRICKS, MARBLE_LARGE_BRICKS_STAIRS, MARBLE_LARGE_BRICKS_SLAB, MARBLE_LARGE_BRICKS_WALL,
+        // MARBLE_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_LARGE_BRICKS, OLD_LARGE_BRICKS_STAIRS, OLD_LARGE_BRICKS_SLAB, OLD_LARGE_BRICKS_WALL,
             OLD_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_LARGE_BRICKS, SANDSTONE_LARGE_BRICKS_STAIRS, SANDSTONE_LARGE_BRICKS_SLAB, SANDSTONE_LARGE_BRICKS_WALL,
             SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_LARGE_BRICKS, SLATE_LARGE_BRICKS_STAIRS, SLATE_LARGE_BRICKS_SLAB, SLATE_LARGE_BRICKS_WALL,
-            SLATE_LARGE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_LARGE_BRICKS, SLATE_LARGE_BRICKS_STAIRS, SLATE_LARGE_BRICKS_SLAB, SLATE_LARGE_BRICKS_WALL,
+        // SLATE_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_LARGE_BRICKS, TERRACOTTA_LARGE_BRICKS_STAIRS, TERRACOTTA_LARGE_BRICKS_SLAB,
             TERRACOTTA_LARGE_BRICKS_WALL, TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_LARGE_BRICKS, WEARED_LARGE_BRICKS_STAIRS, WEARED_LARGE_BRICKS_SLAB, WEARED_LARGE_BRICKS_WALL,
             WEARED_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_LARGE_BRICKS, GNEISS_LARGE_BRICKS_STAIRS, GNEISS_LARGE_BRICKS_SLAB, GNEISS_LARGE_BRICKS_WALL,
-            GNEISS_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_LARGE_BRICKS, JADE_LARGE_BRICKS_STAIRS, JADE_LARGE_BRICKS_SLAB, JADE_LARGE_BRICKS_WALL,
-            JADE_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_LARGE_BRICKS, LARVIKITE_LARGE_BRICKS_STAIRS, LARVIKITE_LARGE_BRICKS_SLAB, LARVIKITE_LARGE_BRICKS_WALL,
-            LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_LARGE_BRICKS, GNEISS_LARGE_BRICKS_STAIRS, GNEISS_LARGE_BRICKS_SLAB, GNEISS_LARGE_BRICKS_WALL,
+        // GNEISS_LARGE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_LARGE_BRICKS, JADE_LARGE_BRICKS_STAIRS, JADE_LARGE_BRICKS_SLAB, JADE_LARGE_BRICKS_WALL,
+        // JADE_LARGE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_LARGE_BRICKS, LARVIKITE_LARGE_BRICKS_STAIRS, LARVIKITE_LARGE_BRICKS_SLAB,
+        // LARVIKITE_LARGE_BRICKS_WALL,
+        // LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE);
 
         // Paving
 

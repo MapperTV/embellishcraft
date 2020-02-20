@@ -4,9 +4,6 @@ import java.util.function.Function;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
-import net.minecraft.block.WallBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -16,7 +13,6 @@ import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
-import tv.mapper.embellishcraft.block.ECBlocks;
 import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.mapperbase.data.gen.BaseBlockStates;
 
@@ -30,89 +26,179 @@ public class ECBlockStates extends BaseBlockStates
     @Override
     protected void registerStatesAndModels()
     {
+        // Basalt
         simpleBlock(ECBlockRegistry.BASALT.get());
         slabBlock(ECBlockRegistry.BASALT_SLAB.get(), modLoc("block/basalt"), modLoc("block/basalt"));
-        stairsBlock(ECBlockRegistry.BASALT_STAIRS.get(), modLoc("block/basalt"), modLoc("block/basalt"), modLoc("block/basalt"));
+        stairsBlock(ECBlockRegistry.BASALT_STAIRS.get(), modLoc("block/basalt"));
         wallBlock(ECBlockRegistry.BASALT_WALL.get(), modLoc("block/basalt"));
         pressurePlateBlock(ECBlockRegistry.BASALT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate_down"));
 
+        simpleBlock(ECBlockRegistry.BASALT_COBBLESTONE.get());
+        slabBlock(ECBlockRegistry.BASALT_COBBLESTONE_SLAB.get(), modLoc("block/basalt_cobblestone"), modLoc("block/basalt_cobblestone"));
+        stairsBlock(ECBlockRegistry.BASALT_COBBLESTONE_STAIRS.get(), modLoc("block/basalt_cobblestone"));
+        wallBlock(ECBlockRegistry.BASALT_COBBLESTONE_WALL.get(), modLoc("block/basalt_cobblestone"));
+        pressurePlateBlock(ECBlockRegistry.BASALT_COBBLESTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_cobblestone_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/basalt_cobblestone_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.BASALT_BRICKS.get());
+        slabBlock(ECBlockRegistry.BASALT_BRICKS_SLAB.get(), modLoc("block/basalt_bricks"), modLoc("block/basalt_bricks"));
+        stairsBlock(ECBlockRegistry.BASALT_BRICKS_STAIRS.get(), modLoc("block/basalt_bricks"));
+        wallBlock(ECBlockRegistry.BASALT_BRICKS_WALL.get(), modLoc("block/basalt_bricks"));
+        pressurePlateBlock(ECBlockRegistry.BASALT_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/basalt_bricks_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.BASALT_LARGE_BRICKS.get());
+        slabBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_SLAB.get(), modLoc("block/basalt_large_bricks"), modLoc("block/basalt_large_bricks"));
+        stairsBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_STAIRS.get(), modLoc("block/basalt_large_bricks"));
+        wallBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_WALL.get(), modLoc("block/basalt_large_bricks"));
+        pressurePlateBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_large_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/basalt_large_bricks_pressure_plate_down"));
+
+        // Slate
         simpleBlock(ECBlockRegistry.SLATE.get());
         slabBlock(ECBlockRegistry.SLATE_SLAB.get(), modLoc("block/slate"), modLoc("block/slate"));
-        stairsBlock(ECBlockRegistry.SLATE_STAIRS.get(), modLoc("block/slate"), modLoc("block/slate"), modLoc("block/slate"));
+        stairsBlock(ECBlockRegistry.SLATE_STAIRS.get(), modLoc("block/slate"));
         wallBlock(ECBlockRegistry.SLATE_WALL.get(), modLoc("block/slate"));
         pressurePlateBlock(ECBlockRegistry.SLATE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/slate_pressure_plate_down"));
 
-        simpleBlock(ECBlocks.MARBLE);
-        slabBlock((SlabBlock)ECBlocks.MARBLE_SLAB, modLoc("block/marble"), modLoc("block/marble"));
-        stairsBlock((StairsBlock)ECBlocks.MARBLE_STAIRS, modLoc("block/marble"), modLoc("block/marble"), modLoc("block/marble"));
-        wallBlock((WallBlock)ECBlocks.MARBLE_WALL, modLoc("block/marble"));
-        pressurePlateBlock(ECBlocks.MARBLE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/marble_pressure_plate"),
+        simpleBlock(ECBlockRegistry.SLATE_COBBLESTONE.get());
+        slabBlock(ECBlockRegistry.SLATE_COBBLESTONE_SLAB.get(), modLoc("block/slate_cobblestone"), modLoc("block/slate_cobblestone"));
+        stairsBlock(ECBlockRegistry.SLATE_COBBLESTONE_STAIRS.get(), modLoc("block/slate_cobblestone"));
+        wallBlock(ECBlockRegistry.SLATE_COBBLESTONE_WALL.get(), modLoc("block/slate_cobblestone"));
+        pressurePlateBlock(ECBlockRegistry.SLATE_COBBLESTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_cobblestone_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/slate_cobblestone_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.SLATE_BRICKS.get());
+        slabBlock(ECBlockRegistry.SLATE_BRICKS_SLAB.get(), modLoc("block/slate_bricks"), modLoc("block/slate_bricks"));
+        stairsBlock(ECBlockRegistry.SLATE_BRICKS_STAIRS.get(), modLoc("block/slate_bricks"));
+        wallBlock(ECBlockRegistry.SLATE_BRICKS_WALL.get(), modLoc("block/slate_bricks"));
+        pressurePlateBlock(ECBlockRegistry.SLATE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/slate_bricks_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.SLATE_LARGE_BRICKS.get());
+        slabBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_SLAB.get(), modLoc("block/slate_large_bricks"), modLoc("block/slate_large_bricks"));
+        stairsBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_STAIRS.get(), modLoc("block/slate_large_bricks"));
+        wallBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_WALL.get(), modLoc("block/slate_large_bricks"));
+        pressurePlateBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_large_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/slate_large_bricks_pressure_plate_down"));
+
+        // Marble
+        simpleBlock(ECBlockRegistry.MARBLE.get());
+        slabBlock(ECBlockRegistry.MARBLE_SLAB.get(), modLoc("block/marble"), modLoc("block/marble"));
+        stairsBlock(ECBlockRegistry.MARBLE_STAIRS.get(), modLoc("block/marble"));
+        wallBlock(ECBlockRegistry.MARBLE_WALL.get(), modLoc("block/marble"));
+        pressurePlateBlock(ECBlockRegistry.MARBLE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/marble_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/marble_pressure_plate_down"));
 
-        simpleBlock(ECBlocks.GNEISS);
-        slabBlock((SlabBlock)ECBlocks.GNEISS_SLAB, modLoc("block/gneiss"), modLoc("block/gneiss"));
-        stairsBlock((StairsBlock)ECBlocks.GNEISS_STAIRS, modLoc("block/gneiss"), modLoc("block/gneiss"), modLoc("block/gneiss"));
-        wallBlock((WallBlock)ECBlocks.GNEISS_WALL, modLoc("block/gneiss"));
-        pressurePlateBlock(ECBlocks.GNEISS_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_pressure_plate"),
+        simpleBlock(ECBlockRegistry.MARBLE_COBBLESTONE.get());
+        slabBlock(ECBlockRegistry.MARBLE_COBBLESTONE_SLAB.get(), modLoc("block/marble_cobblestone"), modLoc("block/marble_cobblestone"));
+        stairsBlock(ECBlockRegistry.MARBLE_COBBLESTONE_STAIRS.get(), modLoc("block/marble_cobblestone"));
+        wallBlock(ECBlockRegistry.MARBLE_COBBLESTONE_WALL.get(), modLoc("block/marble_cobblestone"));
+        pressurePlateBlock(ECBlockRegistry.MARBLE_COBBLESTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/marble_cobblestone_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/marble_cobblestone_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.MARBLE_BRICKS.get());
+        slabBlock(ECBlockRegistry.MARBLE_BRICKS_SLAB.get(), modLoc("block/marble_bricks"), modLoc("block/marble_bricks"));
+        stairsBlock(ECBlockRegistry.MARBLE_BRICKS_STAIRS.get(), modLoc("block/marble_bricks"));
+        wallBlock(ECBlockRegistry.MARBLE_BRICKS_WALL.get(), modLoc("block/marble_bricks"));
+        pressurePlateBlock(ECBlockRegistry.MARBLE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/marble_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/marble_bricks_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS.get());
+        slabBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_SLAB.get(), modLoc("block/marble_large_bricks"), modLoc("block/marble_large_bricks"));
+        stairsBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_STAIRS.get(), modLoc("block/marble_large_bricks"));
+        wallBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_WALL.get(), modLoc("block/marble_large_bricks"));
+        pressurePlateBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/marble_large_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/marble_large_bricks_pressure_plate_down"));
+
+        // Gneiss
+        simpleBlock(ECBlockRegistry.GNEISS.get());
+        slabBlock(ECBlockRegistry.GNEISS_SLAB.get(), modLoc("block/gneiss"), modLoc("block/gneiss"));
+        stairsBlock(ECBlockRegistry.GNEISS_STAIRS.get(), modLoc("block/gneiss"));
+        wallBlock(ECBlockRegistry.GNEISS_WALL.get(), modLoc("block/gneiss"));
+        pressurePlateBlock(ECBlockRegistry.GNEISS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_pressure_plate_down"));
 
-        simpleBlock(ECBlocks.JADE);
-        slabBlock((SlabBlock)ECBlocks.JADE_SLAB, modLoc("block/jade"), modLoc("block/jade"));
-        stairsBlock((StairsBlock)ECBlocks.JADE_STAIRS, modLoc("block/jade"), modLoc("block/jade"), modLoc("block/jade"));
-        wallBlock((WallBlock)ECBlocks.JADE_WALL, modLoc("block/jade"));
-        pressurePlateBlock(ECBlocks.JADE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/jade_pressure_plate"),
+        simpleBlock(ECBlockRegistry.GNEISS_COBBLESTONE.get());
+        slabBlock(ECBlockRegistry.GNEISS_COBBLESTONE_SLAB.get(), modLoc("block/gneiss_cobblestone"), modLoc("block/gneiss_cobblestone"));
+        stairsBlock(ECBlockRegistry.GNEISS_COBBLESTONE_STAIRS.get(), modLoc("block/gneiss_cobblestone"));
+        wallBlock(ECBlockRegistry.GNEISS_COBBLESTONE_WALL.get(), modLoc("block/gneiss_cobblestone"));
+        pressurePlateBlock(ECBlockRegistry.GNEISS_COBBLESTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_cobblestone_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_cobblestone_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.GNEISS_BRICKS.get());
+        slabBlock(ECBlockRegistry.GNEISS_BRICKS_SLAB.get(), modLoc("block/gneiss_bricks"), modLoc("block/gneiss_bricks"));
+        stairsBlock(ECBlockRegistry.GNEISS_BRICKS_STAIRS.get(), modLoc("block/gneiss_bricks"));
+        wallBlock(ECBlockRegistry.GNEISS_BRICKS_WALL.get(), modLoc("block/gneiss_bricks"));
+        pressurePlateBlock(ECBlockRegistry.GNEISS_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_bricks_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS.get());
+        slabBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_SLAB.get(), modLoc("block/gneiss_large_bricks"), modLoc("block/gneiss_large_bricks"));
+        stairsBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_STAIRS.get(), modLoc("block/gneiss_large_bricks"));
+        wallBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_WALL.get(), modLoc("block/gneiss_large_bricks"));
+        pressurePlateBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_large_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_large_bricks_pressure_plate_down"));
+
+        // Jade
+        simpleBlock(ECBlockRegistry.JADE.get());
+        slabBlock(ECBlockRegistry.JADE_SLAB.get(), modLoc("block/jade"), modLoc("block/jade"));
+        stairsBlock(ECBlockRegistry.JADE_STAIRS.get(), modLoc("block/jade"));
+        wallBlock(ECBlockRegistry.JADE_WALL.get(), modLoc("block/jade"));
+        pressurePlateBlock(ECBlockRegistry.JADE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/jade_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/jade_pressure_plate_down"));
 
-        simpleBlock(ECBlocks.LARVIKITE);
-        slabBlock((SlabBlock)ECBlocks.LARVIKITE_SLAB, modLoc("block/larvikite"), modLoc("block/larvikite"));
-        stairsBlock((StairsBlock)ECBlocks.LARVIKITE_STAIRS, modLoc("block/larvikite"), modLoc("block/larvikite"), modLoc("block/larvikite"));
-        wallBlock((WallBlock)ECBlocks.LARVIKITE_WALL, modLoc("block/larvikite"));
-        pressurePlateBlock(ECBlocks.LARVIKITE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_pressure_plate"),
+        simpleBlock(ECBlockRegistry.JADE_COBBLESTONE.get());
+        slabBlock(ECBlockRegistry.JADE_COBBLESTONE_SLAB.get(), modLoc("block/jade_cobblestone"), modLoc("block/jade_cobblestone"));
+        stairsBlock(ECBlockRegistry.JADE_COBBLESTONE_STAIRS.get(), modLoc("block/jade_cobblestone"));
+        wallBlock(ECBlockRegistry.JADE_COBBLESTONE_WALL.get(), modLoc("block/jade_cobblestone"));
+        pressurePlateBlock(ECBlockRegistry.JADE_COBBLESTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/jade_cobblestone_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/jade_cobblestone_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.JADE_BRICKS.get());
+        slabBlock(ECBlockRegistry.JADE_BRICKS_SLAB.get(), modLoc("block/jade_bricks"), modLoc("block/jade_bricks"));
+        stairsBlock(ECBlockRegistry.JADE_BRICKS_STAIRS.get(), modLoc("block/jade_bricks"));
+        wallBlock(ECBlockRegistry.JADE_BRICKS_WALL.get(), modLoc("block/jade_bricks"));
+        pressurePlateBlock(ECBlockRegistry.JADE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/jade_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/jade_bricks_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.JADE_LARGE_BRICKS.get());
+        slabBlock(ECBlockRegistry.JADE_LARGE_BRICKS_SLAB.get(), modLoc("block/jade_large_bricks"), modLoc("block/jade_large_bricks"));
+        stairsBlock(ECBlockRegistry.JADE_LARGE_BRICKS_STAIRS.get(), modLoc("block/jade_large_bricks"));
+        wallBlock(ECBlockRegistry.JADE_LARGE_BRICKS_WALL.get(), modLoc("block/jade_large_bricks"));
+        pressurePlateBlock(ECBlockRegistry.JADE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/jade_large_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/jade_large_bricks_pressure_plate_down"));
+
+        // Larvikite
+        simpleBlock(ECBlockRegistry.LARVIKITE.get());
+        slabBlock(ECBlockRegistry.LARVIKITE_SLAB.get(), modLoc("block/larvikite"), modLoc("block/larvikite"));
+        stairsBlock(ECBlockRegistry.LARVIKITE_STAIRS.get(), modLoc("block/larvikite"));
+        wallBlock(ECBlockRegistry.LARVIKITE_WALL.get(), modLoc("block/larvikite"));
+        pressurePlateBlock(ECBlockRegistry.LARVIKITE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_pressure_plate_down"));
 
-        simpleBlock(ECBlocks.BASALT_COBBLESTONE);
-        slabBlock((SlabBlock)ECBlocks.BASALT_COBBLESTONE_SLAB, modLoc("block/basalt_cobblestone"), modLoc("block/basalt_cobblestone"));
-        stairsBlock((StairsBlock)ECBlocks.BASALT_COBBLESTONE_STAIRS, modLoc("block/basalt_cobblestone"), modLoc("block/basalt_cobblestone"), modLoc("block/basalt_cobblestone"));
-        wallBlock((WallBlock)ECBlocks.BASALT_COBBLESTONE_WALL, modLoc("block/basalt_cobblestone"));
-        pressurePlateBlock(ECBlocks.BASALT_COBBLESTONE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE.get());
+        slabBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE_SLAB.get(), modLoc("block/larvikite_cobblestone"), modLoc("block/larvikite_cobblestone"));
+        stairsBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE_STAIRS.get(), modLoc("block/larvikite_cobblestone"));
+        wallBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE_WALL.get(), modLoc("block/larvikite_cobblestone"));
+        pressurePlateBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_cobblestone_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_cobblestone_pressure_plate_down"));
 
-        simpleBlock(ECBlocks.SLATE_COBBLESTONE);
-        slabBlock((SlabBlock)ECBlocks.SLATE_COBBLESTONE_SLAB, modLoc("block/slate_cobblestone"), modLoc("block/slate_cobblestone"));
-        stairsBlock((StairsBlock)ECBlocks.SLATE_COBBLESTONE_STAIRS, modLoc("block/slate_cobblestone"), modLoc("block/slate_cobblestone"), modLoc("block/slate_cobblestone"));
-        wallBlock((WallBlock)ECBlocks.SLATE_COBBLESTONE_WALL, modLoc("block/slate_cobblestone"));
-        pressurePlateBlock(ECBlocks.SLATE_COBBLESTONE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/slate_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/slate_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.LARVIKITE_BRICKS.get());
+        slabBlock(ECBlockRegistry.LARVIKITE_BRICKS_SLAB.get(), modLoc("block/larvikite_bricks"), modLoc("block/larvikite_bricks"));
+        stairsBlock(ECBlockRegistry.LARVIKITE_BRICKS_STAIRS.get(), modLoc("block/larvikite_bricks"));
+        wallBlock(ECBlockRegistry.LARVIKITE_BRICKS_WALL.get(), modLoc("block/larvikite_bricks"));
+        pressurePlateBlock(ECBlockRegistry.LARVIKITE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlocks.MARBLE_COBBLESTONE);
-        slabBlock((SlabBlock)ECBlocks.MARBLE_COBBLESTONE_SLAB, modLoc("block/marble_cobblestone"), modLoc("block/marble_cobblestone"));
-        stairsBlock((StairsBlock)ECBlocks.MARBLE_COBBLESTONE_STAIRS, modLoc("block/marble_cobblestone"), modLoc("block/marble_cobblestone"), modLoc("block/marble_cobblestone"));
-        wallBlock((WallBlock)ECBlocks.MARBLE_COBBLESTONE_WALL, modLoc("block/marble_cobblestone"));
-        pressurePlateBlock(ECBlocks.MARBLE_COBBLESTONE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/marble_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/marble_pressure_plate_down"));
-
-        simpleBlock(ECBlocks.GNEISS_COBBLESTONE);
-        slabBlock((SlabBlock)ECBlocks.GNEISS_COBBLESTONE_SLAB, modLoc("block/gneiss_cobblestone"), modLoc("block/gneiss_cobblestone"));
-        stairsBlock((StairsBlock)ECBlocks.GNEISS_COBBLESTONE_STAIRS, modLoc("block/gneiss_cobblestone"), modLoc("block/gneiss_cobblestone"), modLoc("block/gneiss_cobblestone"));
-        wallBlock((WallBlock)ECBlocks.GNEISS_COBBLESTONE_WALL, modLoc("block/gneiss_cobblestone"));
-        pressurePlateBlock(ECBlocks.GNEISS_COBBLESTONE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_pressure_plate_down"));
-
-        simpleBlock(ECBlocks.JADE_COBBLESTONE);
-        slabBlock((SlabBlock)ECBlocks.JADE_COBBLESTONE_SLAB, modLoc("block/jade_cobblestone"), modLoc("block/jade_cobblestone"));
-        stairsBlock((StairsBlock)ECBlocks.JADE_COBBLESTONE_STAIRS, modLoc("block/jade_cobblestone"), modLoc("block/jade_cobblestone"), modLoc("block/jade_cobblestone"));
-        wallBlock((WallBlock)ECBlocks.JADE_COBBLESTONE_WALL, modLoc("block/jade_cobblestone"));
-        pressurePlateBlock(ECBlocks.JADE_COBBLESTONE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/jade_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/jade_pressure_plate_down"));
-
-        simpleBlock(ECBlocks.LARVIKITE_COBBLESTONE);
-        slabBlock((SlabBlock)ECBlocks.LARVIKITE_COBBLESTONE_SLAB, modLoc("block/larvikite_cobblestone"), modLoc("block/larvikite_cobblestone"));
-        stairsBlock((StairsBlock)ECBlocks.LARVIKITE_COBBLESTONE_STAIRS, modLoc("block/larvikite_cobblestone"), modLoc("block/larvikite_cobblestone"), modLoc("block/larvikite_cobblestone"));
-        wallBlock((WallBlock)ECBlocks.LARVIKITE_COBBLESTONE_WALL, modLoc("block/larvikite_cobblestone"));
-        pressurePlateBlock(ECBlocks.LARVIKITE_COBBLESTONE_PRESSURE_PLATE, new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS.get());
+        slabBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_SLAB.get(), modLoc("block/larvikite_large_bricks"), modLoc("block/larvikite_large_bricks"));
+        stairsBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_STAIRS.get(), modLoc("block/larvikite_large_bricks"));
+        wallBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_WALL.get(), modLoc("block/larvikite_large_bricks"));
+        pressurePlateBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_large_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_large_bricks_pressure_plate_down"));
     }
 
     /**

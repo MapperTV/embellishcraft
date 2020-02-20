@@ -1,10 +1,10 @@
 {
   "variants": {
     "powered=false": {
-      "model": "embellishcraft:block/gneiss_pressure_plate"
+      "model": "embellishcraft:block/gneiss_cobblestone_pressure_plate"
     },
     "powered=true": {
-      "model": "embellishcraft:block/gneiss_pressure_plate_down"
+      "model": "embellishcraft:block/gneiss_cobblestone_pressure_plate_down"
     }
   }
 }

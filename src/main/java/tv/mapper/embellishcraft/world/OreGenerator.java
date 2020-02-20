@@ -8,7 +8,6 @@ import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
-import tv.mapper.embellishcraft.block.ECBlocks;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;
 
 public class OreGenerator
@@ -32,26 +31,26 @@ public class OreGenerator
 
             if(CommonConfig.MARBLE_GENERATION.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
-                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlocks.MARBLE.getDefaultState(), CommonConfig.MARBLE_SIZE.get().intValue())).withPlacement(
+                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlockRegistry.MARBLE.get().getDefaultState(), CommonConfig.MARBLE_SIZE.get().intValue())).withPlacement(
                         Placement.COUNT_RANGE.configure(
                             new CountRangeConfig(CommonConfig.MARBLE_CHANCE.get(), CommonConfig.MARBLE_MIN_HEIGHT.get(), CommonConfig.MARBLE_MIN_HEIGHT.get(), CommonConfig.MARBLE_MAX_HEIGHT.get()))));
 
             if(CommonConfig.GNEISS_GENERATION.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
-                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlocks.GNEISS.getDefaultState(), CommonConfig.GNEISS_SIZE.get().intValue())).withPlacement(
+                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlockRegistry.GNEISS.get().getDefaultState(), CommonConfig.GNEISS_SIZE.get().intValue())).withPlacement(
                         Placement.COUNT_RANGE.configure(
                             new CountRangeConfig(CommonConfig.GNEISS_CHANCE.get(), CommonConfig.GNEISS_MIN_HEIGHT.get(), CommonConfig.GNEISS_MIN_HEIGHT.get(), CommonConfig.GNEISS_MAX_HEIGHT.get()))));
 
             if(CommonConfig.JADE_GENERATION.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                     Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlocks.JADE.getDefaultState(), CommonConfig.JADE_SIZE.get().intValue())).withPlacement(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlockRegistry.JADE.get().getDefaultState(), CommonConfig.JADE_SIZE.get().intValue())).withPlacement(
                             Placement.COUNT_RANGE.configure(
                                 new CountRangeConfig(CommonConfig.JADE_CHANCE.get(), CommonConfig.JADE_MIN_HEIGHT.get(), CommonConfig.JADE_MIN_HEIGHT.get(), CommonConfig.JADE_MAX_HEIGHT.get()))));
 
             if(CommonConfig.LARVIKITE_GENERATION.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
-                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlocks.LARVIKITE.getDefaultState(), CommonConfig.LARVIKITE_SIZE.get().intValue())).withPlacement(
+                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ECBlockRegistry.LARVIKITE.get().getDefaultState(), CommonConfig.LARVIKITE_SIZE.get().intValue())).withPlacement(
                         Placement.COUNT_RANGE.configure(
                             new CountRangeConfig(CommonConfig.LARVIKITE_CHANCE.get(), CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MAX_HEIGHT.get()))));
         }
