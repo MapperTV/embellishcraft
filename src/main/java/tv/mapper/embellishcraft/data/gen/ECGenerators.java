@@ -33,8 +33,8 @@ public class ECGenerators
             }
         }; // Temporary to counter the crash when generator can't find files from dependencies
 
-        // generator.addProvider(new ECRecipes(generator));
-        // generator.addProvider(new ECLootTables(generator));
+        generator.addProvider(new ECRecipes(generator));
+        generator.addProvider(new ECLootTables(generator));
         generator.addProvider(new ECBlockStates(generator, helper));
         generator.addProvider(new ECBlockModels(generator, ECConstants.MODID, helper));
         generator.addProvider(new ECItemModels(generator, ECConstants.MODID, helper));

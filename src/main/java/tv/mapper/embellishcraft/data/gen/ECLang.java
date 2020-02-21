@@ -70,8 +70,8 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_WALL, "Basalt Large Bricks Wall");
                 addBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE, "Basalt Large Bricks Pressure Plate");
 
-                addBlock(ECBlockRegistry.BASALT_ORNEMENT, "Basalt Ornement");
-                addBlock(ECBlockRegistry.BASALT_ORNEMENT_PRESSURE_PLATE, "Basalt Ornement Pressure Plate");
+                addBlock(ECBlockRegistry.BASALT_ORNEMENT, "Basalt Ornament");
+                addBlock(ECBlockRegistry.BASALT_ORNEMENT_PRESSURE_PLATE, "Basalt Ornament Pressure Plate");
 
                 // Slate
                 addBlock(ECBlockRegistry.SLATE, "Slate");
@@ -122,8 +122,8 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_WALL, "Slate Large Bricks Wall");
                 addBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_PRESSURE_PLATE, "Slate Large Bricks Pressure Plate");
 
-                addBlock(ECBlockRegistry.SLATE_ORNEMENT, "Slate Ornement");
-                addBlock(ECBlockRegistry.SLATE_ORNEMENT_PRESSURE_PLATE, "Slate Ornement Pressure Plate");
+                addBlock(ECBlockRegistry.SLATE_ORNEMENT, "Slate Ornament");
+                addBlock(ECBlockRegistry.SLATE_ORNEMENT_PRESSURE_PLATE, "Slate Ornament Pressure Plate");
 
                 // Marble
                 addBlock(ECBlockRegistry.MARBLE, "Marble");
@@ -174,8 +174,8 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_WALL, "Marble Large Bricks Wall");
                 addBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_PRESSURE_PLATE, "Marble Large Bricks Pressure Plate");
 
-                addBlock(ECBlockRegistry.MARBLE_ORNEMENT, "Marble Ornement");
-                addBlock(ECBlockRegistry.MARBLE_ORNEMENT_PRESSURE_PLATE, "Marble Ornement Pressure Plate");
+                addBlock(ECBlockRegistry.MARBLE_ORNEMENT, "Marble Ornament");
+                addBlock(ECBlockRegistry.MARBLE_ORNEMENT_PRESSURE_PLATE, "Marble Ornament Pressure Plate");
 
                 // Gneiss
                 addBlock(ECBlockRegistry.GNEISS, "Gneiss");
@@ -226,8 +226,8 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_WALL, "Gneiss Large Bricks Wall");
                 addBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_PRESSURE_PLATE, "Gneiss Large Bricks Pressure Plate");
 
-                addBlock(ECBlockRegistry.GNEISS_ORNEMENT, "Gneiss Ornement");
-                addBlock(ECBlockRegistry.GNEISS_ORNEMENT_PRESSURE_PLATE, "Gneiss Ornement Pressure Plate");
+                addBlock(ECBlockRegistry.GNEISS_ORNEMENT, "Gneiss Ornament");
+                addBlock(ECBlockRegistry.GNEISS_ORNEMENT_PRESSURE_PLATE, "Gneiss Ornament Pressure Plate");
 
                 // Jade
                 addBlock(ECBlockRegistry.JADE, "Jade");
@@ -278,8 +278,8 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.JADE_LARGE_BRICKS_WALL, "Jade Large Bricks Wall");
                 addBlock(ECBlockRegistry.JADE_LARGE_BRICKS_PRESSURE_PLATE, "Jade Large Bricks Pressure Plate");
 
-                addBlock(ECBlockRegistry.JADE_ORNEMENT, "Jade Ornement");
-                addBlock(ECBlockRegistry.JADE_ORNEMENT_PRESSURE_PLATE, "Jade Ornement Pressure Plate");
+                addBlock(ECBlockRegistry.JADE_ORNEMENT, "Jade Ornament");
+                addBlock(ECBlockRegistry.JADE_ORNEMENT_PRESSURE_PLATE, "Jade Ornament Pressure Plate");
 
                 // Larvikite
                 addBlock(ECBlockRegistry.LARVIKITE, "Larvikite");
@@ -330,8 +330,8 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_WALL, "Larvikite Large Bricks Wall");
                 addBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE, "Larvikite Large Bricks Pressure Plate");
 
-                addBlock(ECBlockRegistry.LARVIKITE_ORNEMENT, "Larvikite Ornement");
-                addBlock(ECBlockRegistry.LARVIKITE_ORNEMENT_PRESSURE_PLATE, "Larvikite Ornement Pressure Plate");
+                addBlock(ECBlockRegistry.LARVIKITE_ORNEMENT, "Larvikite Ornament");
+                addBlock(ECBlockRegistry.LARVIKITE_ORNEMENT_PRESSURE_PLATE, "Larvikite Ornament Pressure Plate");
 
                 // Andesite
                 addBlock(ECBlockRegistry.SMOOTH_ANDESITE, "Smooth Andesite");
@@ -364,8 +364,8 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_WALL, "Andesite Large Bricks Wall");
                 addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE, "Andesite Large Bricks Pressure Plate");
 
-                addBlock(ECBlockRegistry.ANDESITE_ORNEMENT, "Andesite Ornement");
-                addBlock(ECBlockRegistry.ANDESITE_ORNEMENT_PRESSURE_PLATE, "Andesite Ornement Pressure Plate");
+                addBlock(ECBlockRegistry.ANDESITE_ORNEMENT, "Andesite Ornament");
+                addBlock(ECBlockRegistry.ANDESITE_ORNEMENT_PRESSURE_PLATE, "Andesite Ornament Pressure Plate");
 
                 // Diorite
                 addBlock(ECBlockRegistry.SMOOTH_DIORITE, "Smooth Diorite");
@@ -398,8 +398,8 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_WALL, "Diorite Large Bricks Wall");
                 addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE, "Diorite Large Bricks Pressure Plate");
 
-                addBlock(ECBlockRegistry.DIORITE_ORNEMENT, "Diorite Ornement");
-                addBlock(ECBlockRegistry.DIORITE_ORNEMENT_PRESSURE_PLATE, "Diorite Ornement Pressure Plate");
+                addBlock(ECBlockRegistry.DIORITE_ORNEMENT, "Diorite Ornament");
+                addBlock(ECBlockRegistry.DIORITE_ORNEMENT_PRESSURE_PLATE, "Diorite Ornament Pressure Plate");
 
                 // Granite
                 addBlock(ECBlockRegistry.SMOOTH_GRANITE, "Smooth Granite");
@@ -432,8 +432,8 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_WALL, "Granite Large Bricks Wall");
                 addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE, "Granite Large Bricks Pressure Plate");
 
-                addBlock(ECBlockRegistry.GRANITE_ORNEMENT, "Granite Ornement");
-                addBlock(ECBlockRegistry.GRANITE_ORNEMENT_PRESSURE_PLATE, "Granite Ornement Pressure Plate");
+                addBlock(ECBlockRegistry.GRANITE_ORNEMENT, "Granite Ornament");
+                addBlock(ECBlockRegistry.GRANITE_ORNEMENT_PRESSURE_PLATE, "Granite Ornament Pressure Plate");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;

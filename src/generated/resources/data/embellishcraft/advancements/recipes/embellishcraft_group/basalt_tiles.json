@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:basalt_tiles"
+    ]
+  },
+  "criteria": {
+    "has_basalt_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:basalt_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:basalt_tiles"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_basalt_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:smooth_basalt"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:smooth_basalt_pressure_plate"
+  }
+}

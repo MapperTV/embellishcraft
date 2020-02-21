@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "smooth_slate_slab",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "embellishcraft:smooth_slate_slab",
+                  "properties": {
+                    "type": "double"
+                  }
+                }
+              ],
+              "count": 2
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "embellishcraft:smooth_slate_slab"
+        }
+      ]
+    }
+  ]
+}

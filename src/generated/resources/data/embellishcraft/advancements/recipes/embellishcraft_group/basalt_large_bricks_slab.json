@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:basalt_large_bricks_slab"
+    ]
+  },
+  "criteria": {
+    "has_basalt_large_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:basalt_large_bricks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:basalt_large_bricks_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_basalt_large_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

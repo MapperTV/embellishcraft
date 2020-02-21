@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:smooth_basalt"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:smooth_basalt_wall",
+    "count": 6
+  }
+}

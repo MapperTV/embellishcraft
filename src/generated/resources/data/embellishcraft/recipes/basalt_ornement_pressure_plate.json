@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:basalt_ornement"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:basalt_ornement_pressure_plate"
+  }
+}

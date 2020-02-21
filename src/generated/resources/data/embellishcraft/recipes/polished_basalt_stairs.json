@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:polished_basalt"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:polished_basalt_stairs",
+    "count": 4
+  }
+}
