@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "side": "embellishcraft:block/polished_jade",
+    "bottom": "embellishcraft:block/polished_jade",
+    "top": "embellishcraft:block/polished_jade"
+  }
+}

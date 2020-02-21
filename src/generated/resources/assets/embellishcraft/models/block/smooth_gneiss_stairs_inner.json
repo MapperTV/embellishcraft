@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "side": "embellishcraft:block/smooth_gneiss",
+    "bottom": "embellishcraft:block/smooth_gneiss",
+    "top": "embellishcraft:block/smooth_gneiss"
+  }
+}

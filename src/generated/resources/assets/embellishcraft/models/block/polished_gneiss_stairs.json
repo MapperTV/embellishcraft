@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "side": "embellishcraft:block/polished_gneiss",
+    "bottom": "embellishcraft:block/polished_gneiss",
+    "top": "embellishcraft:block/polished_gneiss"
+  }
+}

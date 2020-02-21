@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "side": "embellishcraft:block/polished_basalt",
+    "bottom": "embellishcraft:block/polished_basalt",
+    "top": "embellishcraft:block/polished_basalt"
+  }
+}

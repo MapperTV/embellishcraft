@@ -122,11 +122,11 @@ public class ECBlocks
     public static final Block DARK_BRICKS_WALL = null;
     public static final Block DARK_BRICKS_PRESSURE_PLATE = null;
 
-    public static final Block DIORITE_BRICKS = null;
-    public static final Block DIORITE_BRICKS_STAIRS = null;
-    public static final Block DIORITE_BRICKS_SLAB = null;
-    public static final Block DIORITE_BRICKS_WALL = null;
-    public static final Block DIORITE_BRICKS_PRESSURE_PLATE = null;
+    // public static final Block DIORITE_BRICKS = null;
+    // public static final Block DIORITE_BRICKS_STAIRS = null;
+    // public static final Block DIORITE_BRICKS_SLAB = null;
+    // public static final Block DIORITE_BRICKS_WALL = null;
+    // public static final Block DIORITE_BRICKS_PRESSURE_PLATE = null;
 
     public static final Block OLD_BRICKS = null;
     public static final Block OLD_BRICKS_STAIRS = null;
@@ -190,11 +190,11 @@ public class ECBlocks
     // public static final Block BASALT_LARGE_BRICKS_WALL = null;
     // public static final Block BASALT_LARGE_BRICKS_PRESSURE_PLATE = null;
 
-    public static final Block DIORITE_LARGE_BRICKS = null;
-    public static final Block DIORITE_LARGE_BRICKS_STAIRS = null;
-    public static final Block DIORITE_LARGE_BRICKS_SLAB = null;
-    public static final Block DIORITE_LARGE_BRICKS_WALL = null;
-    public static final Block DIORITE_LARGE_BRICKS_PRESSURE_PLATE = null;
+    // public static final Block DIORITE_LARGE_BRICKS = null;
+    // public static final Block DIORITE_LARGE_BRICKS_STAIRS = null;
+    // public static final Block DIORITE_LARGE_BRICKS_SLAB = null;
+    // public static final Block DIORITE_LARGE_BRICKS_WALL = null;
+    // public static final Block DIORITE_LARGE_BRICKS_PRESSURE_PLATE = null;
 
     public static final Block DARK_LARGE_BRICKS = null;
     public static final Block DARK_LARGE_BRICKS_STAIRS = null;
@@ -275,12 +275,12 @@ public class ECBlocks
     public static final Block DARK_CONCRETE_PAVING_SLAB = null;
     public static final Block DARK_CONCRETE_PAVING_PRESSURE_PLATE = null;
     public static final Block DARK_CONCRETE_PAVING_WALL = null;
-
-    public static final Block DIORITE_PAVING = null;
-    public static final Block DIORITE_PAVING_STAIRS = null;
-    public static final Block DIORITE_PAVING_SLAB = null;
-    public static final Block DIORITE_PAVING_PRESSURE_PLATE = null;
-    public static final Block DIORITE_PAVING_WALL = null;
+    //
+    // public static final Block DIORITE_PAVING = null;
+    // public static final Block DIORITE_PAVING_STAIRS = null;
+    // public static final Block DIORITE_PAVING_SLAB = null;
+    // public static final Block DIORITE_PAVING_PRESSURE_PLATE = null;
+    // public static final Block DIORITE_PAVING_WALL = null;
 
     public static final Block MOIST_PAVING = null;
     public static final Block MOIST_PAVING_STAIRS = null;
@@ -294,11 +294,11 @@ public class ECBlocks
     public static final Block POLISHED_PAVING_PRESSURE_PLATE = null;
     public static final Block POLISHED_PAVING_WALL = null;
 
-    public static final Block SLATE_PAVING = null;
-    public static final Block SLATE_PAVING_STAIRS = null;
-    public static final Block SLATE_PAVING_SLAB = null;
-    public static final Block SLATE_PAVING_PRESSURE_PLATE = null;
-    public static final Block SLATE_PAVING_WALL = null;
+    // public static final Block SLATE_PAVING = null;
+    // public static final Block SLATE_PAVING_STAIRS = null;
+    // public static final Block SLATE_PAVING_SLAB = null;
+    // public static final Block SLATE_PAVING_PRESSURE_PLATE = null;
+    // public static final Block SLATE_PAVING_WALL = null;
 
     public static final Block WHITE_CONCRETE_PAVING = null;
     public static final Block WHITE_CONCRETE_PAVING_STAIRS = null;
@@ -306,23 +306,23 @@ public class ECBlocks
     public static final Block WHITE_CONCRETE_PAVING_PRESSURE_PLATE = null;
     public static final Block WHITE_CONCRETE_PAVING_WALL = null;
 
-    public static final Block GNEISS_PAVING = null;
-    public static final Block GNEISS_PAVING_STAIRS = null;
-    public static final Block GNEISS_PAVING_SLAB = null;
-    public static final Block GNEISS_PAVING_WALL = null;
-    public static final Block GNEISS_PAVING_PRESSURE_PLATE = null;
-
-    public static final Block JADE_PAVING = null;
-    public static final Block JADE_PAVING_STAIRS = null;
-    public static final Block JADE_PAVING_SLAB = null;
-    public static final Block JADE_PAVING_WALL = null;
-    public static final Block JADE_PAVING_PRESSURE_PLATE = null;
-
-    public static final Block LARVIKITE_PAVING = null;
-    public static final Block LARVIKITE_PAVING_STAIRS = null;
-    public static final Block LARVIKITE_PAVING_SLAB = null;
-    public static final Block LARVIKITE_PAVING_WALL = null;
-    public static final Block LARVIKITE_PAVING_PRESSURE_PLATE = null;
+    // public static final Block GNEISS_PAVING = null;
+    // public static final Block GNEISS_PAVING_STAIRS = null;
+    // public static final Block GNEISS_PAVING_SLAB = null;
+    // public static final Block GNEISS_PAVING_WALL = null;
+    // public static final Block GNEISS_PAVING_PRESSURE_PLATE = null;
+    //
+    // public static final Block JADE_PAVING = null;
+    // public static final Block JADE_PAVING_STAIRS = null;
+    // public static final Block JADE_PAVING_SLAB = null;
+    // public static final Block JADE_PAVING_WALL = null;
+    // public static final Block JADE_PAVING_PRESSURE_PLATE = null;
+    //
+    // public static final Block LARVIKITE_PAVING = null;
+    // public static final Block LARVIKITE_PAVING_STAIRS = null;
+    // public static final Block LARVIKITE_PAVING_SLAB = null;
+    // public static final Block LARVIKITE_PAVING_WALL = null;
+    // public static final Block LARVIKITE_PAVING_PRESSURE_PLATE = null;
 
     // Tiles
 
@@ -817,7 +817,7 @@ public class ECBlocks
 
         // RegistryUtils.createBlockWithVariants(event, "basalt_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "dark_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "diorite_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "diorite_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "old_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "sandstone_bricks", true, true, true, true, Material.ROCK, MaterialColor.SAND, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         // RegistryUtils.createBlockWithVariants(event, "slate_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
@@ -831,7 +831,7 @@ public class ECBlocks
         // Large bricks
 
         // RegistryUtils.createBlockWithVariants(event, "basalt_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.BLACK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "diorite_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "diorite_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "dark_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         // RegistryUtils.createBlockWithVariants(event, "marble_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.QUARTZ, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "old_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
@@ -848,14 +848,14 @@ public class ECBlocks
         RegistryUtils.createBlockWithVariants(event, "concrete_paving", true, true, true, true, Material.ROCK, MaterialColor.STONE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "damaged_paving", true, true, true, true, Material.ROCK, MaterialColor.STONE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "dark_concrete_paving", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "diorite_paving", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "diorite_paving", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "moist_paving", true, true, true, true, Material.ROCK, MaterialColor.GREEN_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "polished_paving", true, true, true, true, Material.ROCK, MaterialColor.STONE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "slate_paving", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "slate_paving", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "white_concrete_paving", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "gneiss_paving", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "jade_paving", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "larvikite_paving", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "gneiss_paving", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "jade_paving", true, true, true, true, Material.ROCK, MaterialColor.LIME_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
+        // RegistryUtils.createBlockWithVariants(event, "larvikite_paving", true, true, true, true, Material.ROCK, MaterialColor.CLAY, SoundType.STONE, ToolType.PICKAXE, 0, 0);
 
         // Tiles
 
@@ -876,19 +876,17 @@ public class ECBlocks
             new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName(
                 "white_blue_wallpaper_plinth"));
         RegistryUtils.createBlockWithVariants(event, "beige_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(
-            new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName(
-                "beige_wallpaper_plinth"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName(
+            "beige_wallpaper_plinth"));
         RegistryUtils.createBlockWithVariants(event, "pink_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.PINK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         event.getRegistry().register(
             new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.PINK).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("pink_wallpaper_plinth"));
         RegistryUtils.createBlockWithVariants(event, "beige_flower_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(
-            new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName(
-                "beige_flower_wallpaper_plinth"));
+        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName(
+            "beige_flower_wallpaper_plinth"));
         RegistryUtils.createBlockWithVariants(event, "white_green_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.LIME, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.LIME).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName(
-            "white_green_wallpaper_plinth"));
+        event.getRegistry().register(
+            new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.LIME).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("white_green_wallpaper_plinth"));
 
         // Metal
 
@@ -896,22 +894,17 @@ public class ECBlocks
         RegistryUtils.createBlockWithVariants(event, "light_metal_floor", true, true, true, true, Material.IRON, MaterialColor.IRON, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "rusty_plate", true, true, true, true, Material.IRON, MaterialColor.ADOBE, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
 
-        event.getRegistry().register(
-            new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("iron_beam"));
-        event.getRegistry().register(
-            new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("bolted_iron_beam"));
+        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("iron_beam"));
+        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("bolted_iron_beam"));
         RegistryUtils.createBlockWithVariants(event, "iron_beam_junction", false, false, false, false, Material.IRON, MaterialColor.IRON, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(
-            new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("steel_beam"));
+        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("steel_beam"));
         event.getRegistry().register(
             new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("bolted_steel_beam"));
         RegistryUtils.createBlockWithVariants(event, "steel_beam_junction", false, false, false, false, Material.IRON, MaterialColor.IRON, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
 
         RegistryUtils.createBlockWithVariants(event, "air_duct", false, false, false, false, Material.IRON, MaterialColor.IRON, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(
-            new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("vent_air_duct"));
-        event.getRegistry().register(
-            new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("grid_air_duct"));
+        event.getRegistry().register(new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("vent_air_duct"));
+        event.getRegistry().register(new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("grid_air_duct"));
 
         RegistryUtils.createBlockWithVariants(event, "bulkhead", false, false, false, false, Material.IRON, MaterialColor.STONE, SoundType.METAL, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "bulkhead_top", false, false, false, false, Material.IRON, MaterialColor.STONE, SoundType.METAL, ToolType.PICKAXE, 0, 0);
@@ -923,11 +916,9 @@ public class ECBlocks
             new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN).notSolid(), ToolType.PICKAXE).setRegistryName(
                 "rusty_wall_ladder"));
         event.getRegistry().register(
-            new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN).notSolid(), ToolType.PICKAXE).setRegistryName(
-                "steel_rungs"));
+            new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN).notSolid(), ToolType.PICKAXE).setRegistryName("steel_rungs"));
         event.getRegistry().register(
-            new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN).notSolid(), ToolType.PICKAXE).setRegistryName(
-                "rusty_rungs"));
+            new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN).notSolid(), ToolType.PICKAXE).setRegistryName("rusty_rungs"));
 
         // Furniture
 
@@ -935,9 +926,8 @@ public class ECBlocks
 
         for(int i = 0; i < 6; i++)
         {
-            event.getRegistry().register(
-                new ChairBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                    WoodType.byId(i).getName() + "_chair"));
+            event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
+                WoodType.byId(i).getName() + "_chair"));
             event.getRegistry().register(
                 block = new TerraceTableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
                     WoodType.byId(i).getName() + "_terrace_table"));
@@ -946,25 +936,21 @@ public class ECBlocks
                 block = new TerraceChairBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
                     WoodType.byId(i).getName() + "_terrace_chair"));
             RENDER_CUTOUT.add(block);
-            event.getRegistry().register(
-                new TableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                    WoodType.byId(i).getName() + "_table"));
-            event.getRegistry().register(
-                new FancyTableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                    WoodType.byId(i).getName() + "_fancy_table"));
-            event.getRegistry().register(
-                new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                    WoodType.byId(i).getName() + "_fancy_door"));
-            event.getRegistry().register(
-                new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                    WoodType.byId(i).getName() + "_suspended_stairs"));
+            event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
+                WoodType.byId(i).getName() + "_table"));
+            event.getRegistry().register(new FancyTableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
+                WoodType.byId(i).getName() + "_fancy_table"));
+            event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
+                WoodType.byId(i).getName() + "_fancy_door"));
+            event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
+                WoodType.byId(i).getName() + "_suspended_stairs"));
             // event.getRegistry().register(
             // block = new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY, WoodType.byId(i)).setRegistryName(
             // WoodType.byId(i).getName() + "_fancy_chest"));
             // FANCY_CHESTS.add(block);
 
-            event.getRegistry().register(new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName(
-                WoodType.byId(i).getName() + "_wooden_crate"));
+            event.getRegistry().register(
+                new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName(WoodType.byId(i).getName() + "_wooden_crate"));
 
         }
 
@@ -990,18 +976,15 @@ public class ECBlocks
         event.getRegistry().register(
             new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.GREEN).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("green_couch"));
         event.getRegistry().register(
-            new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.LIGHT_BLUE).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName(
-                "light_blue_couch"));
+            new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.LIGHT_BLUE).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("light_blue_couch"));
         event.getRegistry().register(
-            new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.LIGHT_GRAY).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName(
-                "light_gray_couch"));
+            new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.LIGHT_GRAY).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("light_gray_couch"));
         event.getRegistry().register(
             new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.LIME).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("lime_couch"));
         event.getRegistry().register(
             new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("magenta_couch"));
         event.getRegistry().register(
-            new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName(
-                "orange_couch"));
+            new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("orange_couch"));
         event.getRegistry().register(
             new CouchBlock(Block.Properties.create(Material.WOOD, MaterialColor.PINK).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.CLOTH), ToolType.AXE).setRegistryName("pink_couch"));
         event.getRegistry().register(
@@ -1041,33 +1024,26 @@ public class ECBlocks
         event.getRegistry().register(
             new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("steel_door"));
         event.getRegistry().register(
-            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
-                "sturdy_steel_door"));
+            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("sturdy_steel_door"));
         event.getRegistry().register(
-            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
-                "warning_steel_door"));
+            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("warning_steel_door"));
         event.getRegistry().register(
             new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("white_steel_door"));
         event.getRegistry().register(
-            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
-                "sturdy_white_steel_door"));
+            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("sturdy_white_steel_door"));
         event.getRegistry().register(
-            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
-                "warning_white_steel_door"));
+            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("warning_white_steel_door"));
         event.getRegistry().register(
             new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("rusty_door"));
         event.getRegistry().register(
-            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
-                "sturdy_rusty_door"));
+            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("sturdy_rusty_door"));
         event.getRegistry().register(
-            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
-                "warning_rusty_door"));
+            new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName("warning_rusty_door"));
 
         // Stairs
 
-        event.getRegistry().register(
-            new SuspendedStairsBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
-                "steel_suspended_stairs"));
+        event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
+            "steel_suspended_stairs"));
 
         // Chests
 
@@ -1106,10 +1082,10 @@ public class ECBlocks
 
         // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_BRICKS, BASALT_BRICKS_STAIRS, BASALT_BRICKS_SLAB, BASALT_BRICKS_WALL, BASALT_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_BRICKS, DARK_BRICKS_STAIRS, DARK_BRICKS_SLAB, DARK_BRICKS_WALL, DARK_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_BRICKS, DIORITE_BRICKS_STAIRS, DIORITE_BRICKS_SLAB, DIORITE_BRICKS_WALL, DIORITE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_BRICKS, DIORITE_BRICKS_STAIRS, DIORITE_BRICKS_SLAB, DIORITE_BRICKS_WALL,
+        // DIORITE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_BRICKS, OLD_BRICKS_STAIRS, OLD_BRICKS_SLAB, OLD_BRICKS_WALL, OLD_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_BRICKS, SANDSTONE_BRICKS_STAIRS, SANDSTONE_BRICKS_SLAB, SANDSTONE_BRICKS_WALL,
-            SANDSTONE_BRICKS_PRESSURE_PLATE);
+        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_BRICKS, SANDSTONE_BRICKS_STAIRS, SANDSTONE_BRICKS_SLAB, SANDSTONE_BRICKS_WALL, SANDSTONE_BRICKS_PRESSURE_PLATE);
         // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_BRICKS, SLATE_BRICKS_STAIRS, SLATE_BRICKS_SLAB, SLATE_BRICKS_WALL, SLATE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_BRICKS, TERRACOTTA_BRICKS_STAIRS, TERRACOTTA_BRICKS_SLAB, TERRACOTTA_BRICKS_WALL,
             TERRACOTTA_BRICKS_PRESSURE_PLATE);
@@ -1124,20 +1100,19 @@ public class ECBlocks
 
         // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BASALT_LARGE_BRICKS, BASALT_LARGE_BRICKS_STAIRS, BASALT_LARGE_BRICKS_SLAB, BASALT_LARGE_BRICKS_WALL,
         // BASALT_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_LARGE_BRICKS, DIORITE_LARGE_BRICKS_STAIRS, DIORITE_LARGE_BRICKS_SLAB, DIORITE_LARGE_BRICKS_WALL,
-            DIORITE_LARGE_BRICKS_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_LARGE_BRICKS, DIORITE_LARGE_BRICKS_STAIRS, DIORITE_LARGE_BRICKS_SLAB, DIORITE_LARGE_BRICKS_WALL,
+        // DIORITE_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_LARGE_BRICKS, DARK_LARGE_BRICKS_STAIRS, DARK_LARGE_BRICKS_SLAB, DARK_LARGE_BRICKS_WALL,
             DARK_LARGE_BRICKS_PRESSURE_PLATE);
         // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MARBLE_LARGE_BRICKS, MARBLE_LARGE_BRICKS_STAIRS, MARBLE_LARGE_BRICKS_SLAB, MARBLE_LARGE_BRICKS_WALL,
         // MARBLE_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_LARGE_BRICKS, OLD_LARGE_BRICKS_STAIRS, OLD_LARGE_BRICKS_SLAB, OLD_LARGE_BRICKS_WALL,
-            OLD_LARGE_BRICKS_PRESSURE_PLATE);
+        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_LARGE_BRICKS, OLD_LARGE_BRICKS_STAIRS, OLD_LARGE_BRICKS_SLAB, OLD_LARGE_BRICKS_WALL, OLD_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_LARGE_BRICKS, SANDSTONE_LARGE_BRICKS_STAIRS, SANDSTONE_LARGE_BRICKS_SLAB, SANDSTONE_LARGE_BRICKS_WALL,
             SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE);
         // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_LARGE_BRICKS, SLATE_LARGE_BRICKS_STAIRS, SLATE_LARGE_BRICKS_SLAB, SLATE_LARGE_BRICKS_WALL,
         // SLATE_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_LARGE_BRICKS, TERRACOTTA_LARGE_BRICKS_STAIRS, TERRACOTTA_LARGE_BRICKS_SLAB,
-            TERRACOTTA_LARGE_BRICKS_WALL, TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE);
+        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_LARGE_BRICKS, TERRACOTTA_LARGE_BRICKS_STAIRS, TERRACOTTA_LARGE_BRICKS_SLAB, TERRACOTTA_LARGE_BRICKS_WALL,
+            TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_LARGE_BRICKS, WEARED_LARGE_BRICKS_STAIRS, WEARED_LARGE_BRICKS_SLAB, WEARED_LARGE_BRICKS_WALL,
             WEARED_LARGE_BRICKS_PRESSURE_PLATE);
         // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_LARGE_BRICKS, GNEISS_LARGE_BRICKS_STAIRS, GNEISS_LARGE_BRICKS_SLAB, GNEISS_LARGE_BRICKS_WALL,
@@ -1150,22 +1125,21 @@ public class ECBlocks
 
         // Paving
 
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_PAVING, CONCRETE_PAVING_STAIRS, CONCRETE_PAVING_SLAB, CONCRETE_PAVING_WALL,
-            CONCRETE_PAVING_PRESSURE_PLATE);
+        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_PAVING, CONCRETE_PAVING_STAIRS, CONCRETE_PAVING_SLAB, CONCRETE_PAVING_WALL, CONCRETE_PAVING_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DAMAGED_PAVING, DAMAGED_PAVING_STAIRS, DAMAGED_PAVING_SLAB, DAMAGED_PAVING_WALL, DAMAGED_PAVING_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_CONCRETE_PAVING, DARK_CONCRETE_PAVING_STAIRS, DARK_CONCRETE_PAVING_SLAB, DARK_CONCRETE_PAVING_WALL,
             DARK_CONCRETE_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_PAVING, DIORITE_PAVING_STAIRS, DIORITE_PAVING_SLAB, DIORITE_PAVING_WALL, DIORITE_PAVING_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DIORITE_PAVING, DIORITE_PAVING_STAIRS, DIORITE_PAVING_SLAB, DIORITE_PAVING_WALL,
+        // DIORITE_PAVING_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MOIST_PAVING, MOIST_PAVING_STAIRS, MOIST_PAVING_SLAB, MOIST_PAVING_WALL, MOIST_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, POLISHED_PAVING, POLISHED_PAVING_STAIRS, POLISHED_PAVING_SLAB, POLISHED_PAVING_WALL,
-            POLISHED_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_PAVING, SLATE_PAVING_STAIRS, SLATE_PAVING_SLAB, SLATE_PAVING_WALL, SLATE_PAVING_PRESSURE_PLATE);
+        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, POLISHED_PAVING, POLISHED_PAVING_STAIRS, POLISHED_PAVING_SLAB, POLISHED_PAVING_WALL, POLISHED_PAVING_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SLATE_PAVING, SLATE_PAVING_STAIRS, SLATE_PAVING_SLAB, SLATE_PAVING_WALL, SLATE_PAVING_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CONCRETE_PAVING, WHITE_CONCRETE_PAVING_STAIRS, WHITE_CONCRETE_PAVING_SLAB, WHITE_CONCRETE_PAVING_WALL,
             WHITE_CONCRETE_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_PAVING, GNEISS_PAVING_STAIRS, GNEISS_PAVING_SLAB, GNEISS_PAVING_WALL, GNEISS_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_PAVING, JADE_PAVING_STAIRS, JADE_PAVING_SLAB, JADE_PAVING_WALL, JADE_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_PAVING, LARVIKITE_PAVING_STAIRS, LARVIKITE_PAVING_SLAB, LARVIKITE_PAVING_WALL,
-            LARVIKITE_PAVING_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GNEISS_PAVING, GNEISS_PAVING_STAIRS, GNEISS_PAVING_SLAB, GNEISS_PAVING_WALL, GNEISS_PAVING_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, JADE_PAVING, JADE_PAVING_STAIRS, JADE_PAVING_SLAB, JADE_PAVING_WALL, JADE_PAVING_PRESSURE_PLATE);
+        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LARVIKITE_PAVING, LARVIKITE_PAVING_STAIRS, LARVIKITE_PAVING_SLAB, LARVIKITE_PAVING_WALL,
+        // LARVIKITE_PAVING_PRESSURE_PLATE);
 
         // Tiles
 
@@ -1173,8 +1147,7 @@ public class ECBlocks
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SKYBLUE_TILES, SKYBLUE_TILES_STAIRS, SKYBLUE_TILES_SLAB, SKYBLUE_TILES_WALL, SKYBLUE_TILES_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, ORANGE_TILES, ORANGE_TILES_STAIRS, ORANGE_TILES_SLAB, ORANGE_TILES_WALL, ORANGE_TILES_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BLUE_TILES, BLUE_TILES_STAIRS, BLUE_TILES_SLAB, BLUE_TILES_WALL, BLUE_TILES_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_TILES, LIGHT_BLUE_TILES_STAIRS, LIGHT_BLUE_TILES_SLAB, LIGHT_BLUE_TILES_WALL,
-            LIGHT_BLUE_TILES_PRESSURE_PLATE);
+        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_TILES, LIGHT_BLUE_TILES_STAIRS, LIGHT_BLUE_TILES_SLAB, LIGHT_BLUE_TILES_WALL, LIGHT_BLUE_TILES_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RED_TILES, RED_TILES_STAIRS, RED_TILES_SLAB, RED_TILES_WALL, RED_TILES_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_TILES, WHITE_TILES_STAIRS, WHITE_TILES_SLAB, WHITE_TILES_WALL, WHITE_TILES_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_TILES, YELLOW_TILES_STAIRS, YELLOW_TILES_SLAB, YELLOW_TILES_WALL, YELLOW_TILES_PRESSURE_PLATE);
@@ -1184,23 +1157,19 @@ public class ECBlocks
         // Wallpapers
 
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_BLUE_WALLPAPER, WHITE_BLUE_WALLPAPER_STAIRS, WHITE_BLUE_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(
-            new BlockItem(WHITE_BLUE_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_BLUE_WALLPAPER_PLINTH.getRegistryName()));
+        event.getRegistry().register(new BlockItem(WHITE_BLUE_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_BLUE_WALLPAPER_PLINTH.getRegistryName()));
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_WALLPAPER, BEIGE_WALLPAPER_STAIRS, BEIGE_WALLPAPER_SLAB, null, null);
         event.getRegistry().register(new BlockItem(BEIGE_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_WALLPAPER_PLINTH.getRegistryName()));
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, PINK_WALLPAPER, PINK_WALLPAPER_STAIRS, PINK_WALLPAPER_SLAB, null, null);
         event.getRegistry().register(new BlockItem(PINK_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PINK_WALLPAPER_PLINTH.getRegistryName()));
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_FLOWER_WALLPAPER, BEIGE_FLOWER_WALLPAPER_STAIRS, BEIGE_FLOWER_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(
-            new BlockItem(BEIGE_FLOWER_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_FLOWER_WALLPAPER_PLINTH.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BEIGE_FLOWER_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_FLOWER_WALLPAPER_PLINTH.getRegistryName()));
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_GREEN_WALLPAPER, WHITE_GREEN_WALLPAPER_STAIRS, WHITE_GREEN_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(
-            new BlockItem(WHITE_GREEN_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH.getRegistryName()));
+        event.getRegistry().register(new BlockItem(WHITE_GREEN_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH.getRegistryName()));
 
         // Metal
 
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_METAL_FLOOR, DARK_METAL_FLOOR_STAIRS, DARK_METAL_FLOOR_SLAB, DARK_METAL_FLOOR_WALL,
-            DARK_METAL_FLOOR_PRESSURE_PLATE);
+        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_METAL_FLOOR, DARK_METAL_FLOOR_STAIRS, DARK_METAL_FLOOR_SLAB, DARK_METAL_FLOOR_WALL, DARK_METAL_FLOOR_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_METAL_FLOOR, LIGHT_METAL_FLOOR_STAIRS, LIGHT_METAL_FLOOR_SLAB, LIGHT_METAL_FLOOR_WALL,
             LIGHT_METAL_FLOOR_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RUSTY_PLATE, RUSTY_PLATE_STAIRS, RUSTY_PLATE_SLAB, RUSTY_PLATE_WALL, RUSTY_PLATE_PRESSURE_PLATE);
@@ -1236,10 +1205,10 @@ public class ECBlocks
             GRAY_CORRUGATED_METAL_PLATE_WALL, GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GREEN_CORRUGATED_METAL_PLATE, GREEN_CORRUGATED_METAL_PLATE_STAIRS, GREEN_CORRUGATED_METAL_PLATE_SLAB,
             GREEN_CORRUGATED_METAL_PLATE_WALL, GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_CORRUGATED_METAL_PLATE, LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS,
-            LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB, LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL, LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_GRAY_CORRUGATED_METAL_PLATE, LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS,
-            LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB, LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL, LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
+        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_CORRUGATED_METAL_PLATE, LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS, LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB,
+            LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL, LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
+        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_GRAY_CORRUGATED_METAL_PLATE, LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS, LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB,
+            LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL, LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIME_CORRUGATED_METAL_PLATE, LIME_CORRUGATED_METAL_PLATE_STAIRS, LIME_CORRUGATED_METAL_PLATE_SLAB,
             LIME_CORRUGATED_METAL_PLATE_WALL, LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, ORANGE_CORRUGATED_METAL_PLATE, ORANGE_CORRUGATED_METAL_PLATE_STAIRS, ORANGE_CORRUGATED_METAL_PLATE_SLAB,
@@ -1260,16 +1229,11 @@ public class ECBlocks
         // Furniture
 
         event.getRegistry().register(new FuelBlockItem(OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(OAK_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(DARK_OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BIRCH_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(JUNGLE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(SPRUCE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(ACACIA_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(DARK_OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BIRCH_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(JUNGLE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(SPRUCE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_CHAIR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ACACIA_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_CHAIR.getRegistryName()));
 
         event.getRegistry().register(new BlockItem(METALLIC_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_TABLE.getRegistryName()));
         event.getRegistry().register(
@@ -1300,19 +1264,13 @@ public class ECBlocks
             new FuelBlockItem(ACACIA_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_TERRACE_CHAIR.getRegistryName()));
 
         event.getRegistry().register(new FuelBlockItem(OAK_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(OAK_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(DARK_OAK_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BIRCH_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(JUNGLE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(SPRUCE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(ACACIA_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(DARK_OAK_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BIRCH_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(JUNGLE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(SPRUCE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ACACIA_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_TABLE.getRegistryName()));
 
-        event.getRegistry().register(
-            new FuelBlockItem(OAK_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(OAK_FANCY_TABLE.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(OAK_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(OAK_FANCY_TABLE.getRegistryName()));
         event.getRegistry().register(
             new FuelBlockItem(DARK_OAK_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(DARK_OAK_FANCY_TABLE.getRegistryName()));
         event.getRegistry().register(
@@ -1326,32 +1284,24 @@ public class ECBlocks
 
         event.getRegistry().register(new BlockItem(PLATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PLATE.getRegistryName()));
 
-        event.getRegistry().register(
-            new FuelBlockItem(BLACK_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(BLACK_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BLACK_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(BLACK_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(BLUE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(BLUE_COUCH.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BROWN_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(BROWN_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BROWN_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(BROWN_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(CYAN_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(CYAN_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(GRAY_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(GRAY_COUCH.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(GREEN_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(GREEN_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(GREEN_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(GREEN_COUCH.getRegistryName()));
         event.getRegistry().register(
             new FuelBlockItem(LIGHT_BLUE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(LIGHT_BLUE_COUCH.getRegistryName()));
         event.getRegistry().register(
             new FuelBlockItem(LIGHT_GRAY_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(LIGHT_GRAY_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(LIME_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(LIME_COUCH.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(MAGENTA_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(MAGENTA_COUCH.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(ORANGE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(ORANGE_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(MAGENTA_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(MAGENTA_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ORANGE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(ORANGE_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(PINK_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(PINK_COUCH.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(PURPLE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(PURPLE_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(PURPLE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(PURPLE_COUCH.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(RED_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(RED_COUCH.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(WHITE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(WHITE_COUCH.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(YELLOW_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(YELLOW_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(WHITE_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(WHITE_COUCH.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(YELLOW_COUCH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(YELLOW_COUCH.getRegistryName()));
 
         event.getRegistry().register(new BlockItem(BLACK_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BLACK_TABLE_LAMP.getRegistryName()));
         event.getRegistry().register(new BlockItem(BLUE_TABLE_LAMP, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BLUE_TABLE_LAMP.getRegistryName()));
@@ -1375,42 +1325,28 @@ public class ECBlocks
         // new FuelBlockItem(block, new Item.Properties().setTEISR(() -> CustomBedItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime).setRegistryName(
         // block.getRegistryName()));
 
-        event.getRegistry().register(
-            new FuelBlockItem(BROWN_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(BROWN_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BLACK_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(BLACK_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BLUE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(BLUE_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(CYAN_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(CYAN_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(GRAY_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(GRAY_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(GREEN_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(GREEN_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BROWN_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(BROWN_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BLACK_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(BLACK_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(BLUE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(BLUE_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(CYAN_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(CYAN_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(GRAY_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(GRAY_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(GREEN_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(GREEN_PILLOW.getRegistryName()));
         event.getRegistry().register(
             new FuelBlockItem(LIGHT_BLUE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(LIGHT_BLUE_PILLOW.getRegistryName()));
         event.getRegistry().register(
             new FuelBlockItem(LIGHT_GRAY_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(LIGHT_GRAY_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(LIME_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(LIME_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(MAGENTA_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(MAGENTA_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(ORANGE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(ORANGE_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(PINK_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(PINK_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(PURPLE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(PURPLE_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(LIME_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(LIME_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(MAGENTA_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(MAGENTA_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(ORANGE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(ORANGE_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(PINK_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(PINK_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(PURPLE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(PURPLE_PILLOW.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(RED_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(RED_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(WHITE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(WHITE_PILLOW.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(YELLOW_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(YELLOW_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(WHITE_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(WHITE_PILLOW.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(YELLOW_PILLOW, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(YELLOW_PILLOW.getRegistryName()));
 
         // Door
 
-        event.getRegistry().register(
-            new FuelBlockItem(OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(OAK_FANCY_DOOR.getRegistryName()));
+        event.getRegistry().register(new FuelBlockItem(OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(OAK_FANCY_DOOR.getRegistryName()));
         event.getRegistry().register(
             new FuelBlockItem(BIRCH_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(BIRCH_FANCY_DOOR.getRegistryName()));
         event.getRegistry().register(
@@ -1435,18 +1371,18 @@ public class ECBlocks
         // Stairs
 
         event.getRegistry().register(new BlockItem(STEEL_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(
-            OAK_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(BIRCH_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(
-            BIRCH_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(SPRUCE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(
-            SPRUCE_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(JUNGLE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(
-            JUNGLE_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(
+            new FuelBlockItem(OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(OAK_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(
+            new FuelBlockItem(BIRCH_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(BIRCH_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(
+            new FuelBlockItem(SPRUCE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(SPRUCE_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(
+            new FuelBlockItem(JUNGLE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(JUNGLE_SUSPENDED_STAIRS.getRegistryName()));
         event.getRegistry().register(new FuelBlockItem(DARK_OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(
             DARK_OAK_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(ACACIA_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(
-            ACACIA_SUSPENDED_STAIRS.getRegistryName()));
+        event.getRegistry().register(
+            new FuelBlockItem(ACACIA_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(ACACIA_SUSPENDED_STAIRS.getRegistryName()));
 
         // Chests
 
@@ -1467,16 +1403,11 @@ public class ECBlocks
         // new BlockItem(LOCKER, new Item.Properties().setTEISR(() -> VerticalChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LOCKER.getRegistryName()));
 
         event.getRegistry().register(new BlockItem(OAK_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(OAK_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(
-            new BlockItem(BIRCH_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(BIRCH_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(
-            new BlockItem(SPRUCE_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(SPRUCE_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(
-            new BlockItem(JUNGLE_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(JUNGLE_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(
-            new BlockItem(DARK_OAK_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(DARK_OAK_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(
-            new BlockItem(ACACIA_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(ACACIA_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BIRCH_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(BIRCH_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(SPRUCE_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(SPRUCE_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(JUNGLE_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(JUNGLE_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(DARK_OAK_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(DARK_OAK_WOODEN_CRATE.getRegistryName()));
+        event.getRegistry().register(new BlockItem(ACACIA_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(ACACIA_WOODEN_CRATE.getRegistryName()));
 
     }
 }

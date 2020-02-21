@@ -34,6 +34,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.BASALT_COBBLESTONE_WALL, "Basalt Cobblestone Wall");
                 addBlock(ECBlockRegistry.BASALT_COBBLESTONE_PRESSURE_PLATE, "Basalt Cobblestone Pressure Plate");
 
+                addBlock(ECBlockRegistry.SMOOTH_BASALT, "Smooth Basalt");
+                addBlock(ECBlockRegistry.SMOOTH_BASALT_SLAB, "Smooth Basalt Slab");
+                addBlock(ECBlockRegistry.SMOOTH_BASALT_STAIRS, "Smooth Basalt Stairs");
+                addBlock(ECBlockRegistry.SMOOTH_BASALT_WALL, "Smooth Basalt Wall");
+                addBlock(ECBlockRegistry.SMOOTH_BASALT_PRESSURE_PLATE, "Smooth Basalt Pressure Plate");
+
+                addBlock(ECBlockRegistry.POLISHED_BASALT, "Polished Basalt");
+                addBlock(ECBlockRegistry.POLISHED_BASALT_SLAB, "Polished Basalt Slab");
+                addBlock(ECBlockRegistry.POLISHED_BASALT_STAIRS, "Polished Basalt Stairs");
+                addBlock(ECBlockRegistry.POLISHED_BASALT_WALL, "Polished Basalt Wall");
+                addBlock(ECBlockRegistry.POLISHED_BASALT_PRESSURE_PLATE, "Polished Basalt Pressure Plate");
+
+                addBlock(ECBlockRegistry.BASALT_PAVING, "Basalt Paving");
+                addBlock(ECBlockRegistry.BASALT_PAVING_SLAB, "Basalt Paving Slab");
+                addBlock(ECBlockRegistry.BASALT_PAVING_STAIRS, "Basalt Paving Stairs");
+                addBlock(ECBlockRegistry.BASALT_PAVING_WALL, "Basalt Paving Wall");
+                addBlock(ECBlockRegistry.BASALT_PAVING_PRESSURE_PLATE, "Basalt Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.BASALT_TILES, "Basalt Tiles");
+                addBlock(ECBlockRegistry.BASALT_TILES_SLAB, "Basalt Tiles Slab");
+                addBlock(ECBlockRegistry.BASALT_TILES_STAIRS, "Basalt Tiles Stairs");
+                addBlock(ECBlockRegistry.BASALT_TILES_WALL, "Basalt Tiles Wall");
+                addBlock(ECBlockRegistry.BASALT_TILES_PRESSURE_PLATE, "Basalt Tiles Pressure Plate");
+
                 addBlock(ECBlockRegistry.BASALT_BRICKS, "Basalt Bricks");
                 addBlock(ECBlockRegistry.BASALT_BRICKS_SLAB, "Basalt Bricks Slab");
                 addBlock(ECBlockRegistry.BASALT_BRICKS_STAIRS, "Basalt Bricks Stairs");
@@ -45,6 +69,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_STAIRS, "Basalt Large Bricks Stairs");
                 addBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_WALL, "Basalt Large Bricks Wall");
                 addBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE, "Basalt Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.BASALT_ORNEMENT, "Basalt Ornement");
+                addBlock(ECBlockRegistry.BASALT_ORNEMENT_PRESSURE_PLATE, "Basalt Ornement Pressure Plate");
 
                 // Slate
                 addBlock(ECBlockRegistry.SLATE, "Slate");
@@ -59,6 +86,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.SLATE_COBBLESTONE_WALL, "Slate Cobblestone Wall");
                 addBlock(ECBlockRegistry.SLATE_COBBLESTONE_PRESSURE_PLATE, "Slate Cobblestone Pressure Plate");
 
+                addBlock(ECBlockRegistry.SMOOTH_SLATE, "Smooth Slate");
+                addBlock(ECBlockRegistry.SMOOTH_SLATE_SLAB, "Smooth Slate Slab");
+                addBlock(ECBlockRegistry.SMOOTH_SLATE_STAIRS, "Smooth Slate Stairs");
+                addBlock(ECBlockRegistry.SMOOTH_SLATE_WALL, "Smooth Slate Wall");
+                addBlock(ECBlockRegistry.SMOOTH_SLATE_PRESSURE_PLATE, "Smooth Slate Pressure Plate");
+
+                addBlock(ECBlockRegistry.POLISHED_SLATE, "Polished Slate");
+                addBlock(ECBlockRegistry.POLISHED_SLATE_SLAB, "Polished Slate Slab");
+                addBlock(ECBlockRegistry.POLISHED_SLATE_STAIRS, "Polished Slate Stairs");
+                addBlock(ECBlockRegistry.POLISHED_SLATE_WALL, "Polished Slate Wall");
+                addBlock(ECBlockRegistry.POLISHED_SLATE_PRESSURE_PLATE, "Polished Slate Pressure Plate");
+
+                addBlock(ECBlockRegistry.SLATE_PAVING, "Slate Paving");
+                addBlock(ECBlockRegistry.SLATE_PAVING_SLAB, "Slate Paving Slab");
+                addBlock(ECBlockRegistry.SLATE_PAVING_STAIRS, "Slate Paving Stairs");
+                addBlock(ECBlockRegistry.SLATE_PAVING_WALL, "Slate Paving Wall");
+                addBlock(ECBlockRegistry.SLATE_PAVING_PRESSURE_PLATE, "Slate Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.SLATE_TILES, "Slate Tiles");
+                addBlock(ECBlockRegistry.SLATE_TILES_SLAB, "Slate Tiles Slab");
+                addBlock(ECBlockRegistry.SLATE_TILES_STAIRS, "Slate Tiles Stairs");
+                addBlock(ECBlockRegistry.SLATE_TILES_WALL, "Slate Tiles Wall");
+                addBlock(ECBlockRegistry.SLATE_TILES_PRESSURE_PLATE, "Slate Tiles Pressure Plate");
+
                 addBlock(ECBlockRegistry.SLATE_BRICKS, "Slate Bricks");
                 addBlock(ECBlockRegistry.SLATE_BRICKS_SLAB, "Slate Bricks Slab");
                 addBlock(ECBlockRegistry.SLATE_BRICKS_STAIRS, "Slate Bricks Stairs");
@@ -70,6 +121,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_STAIRS, "Slate Large Bricks Stairs");
                 addBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_WALL, "Slate Large Bricks Wall");
                 addBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_PRESSURE_PLATE, "Slate Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.SLATE_ORNEMENT, "Slate Ornement");
+                addBlock(ECBlockRegistry.SLATE_ORNEMENT_PRESSURE_PLATE, "Slate Ornement Pressure Plate");
 
                 // Marble
                 addBlock(ECBlockRegistry.MARBLE, "Marble");
@@ -84,6 +138,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.MARBLE_COBBLESTONE_WALL, "Marble Cobblestone Wall");
                 addBlock(ECBlockRegistry.MARBLE_COBBLESTONE_PRESSURE_PLATE, "Marble Cobblestone Pressure Plate");
 
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE, "Smooth Marble");
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE_SLAB, "Smooth Marble Slab");
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE_STAIRS, "Smooth Marble Stairs");
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE_WALL, "Smooth Marble Wall");
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE_PRESSURE_PLATE, "Smooth Marble Pressure Plate");
+
+                addBlock(ECBlockRegistry.POLISHED_MARBLE, "Polished Marble");
+                addBlock(ECBlockRegistry.POLISHED_MARBLE_SLAB, "Polished Marble Slab");
+                addBlock(ECBlockRegistry.POLISHED_MARBLE_STAIRS, "Polished Marble Stairs");
+                addBlock(ECBlockRegistry.POLISHED_MARBLE_WALL, "Polished Marble Wall");
+                addBlock(ECBlockRegistry.POLISHED_MARBLE_PRESSURE_PLATE, "Polished Marble Pressure Plate");
+
+                addBlock(ECBlockRegistry.MARBLE_PAVING, "Marble Paving");
+                addBlock(ECBlockRegistry.MARBLE_PAVING_SLAB, "Marble Paving Slab");
+                addBlock(ECBlockRegistry.MARBLE_PAVING_STAIRS, "Marble Paving Stairs");
+                addBlock(ECBlockRegistry.MARBLE_PAVING_WALL, "Marble Paving Wall");
+                addBlock(ECBlockRegistry.MARBLE_PAVING_PRESSURE_PLATE, "Marble Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.MARBLE_TILES, "Marble Tiles");
+                addBlock(ECBlockRegistry.MARBLE_TILES_SLAB, "Marble Tiles Slab");
+                addBlock(ECBlockRegistry.MARBLE_TILES_STAIRS, "Marble Tiles Stairs");
+                addBlock(ECBlockRegistry.MARBLE_TILES_WALL, "Marble Tiles Wall");
+                addBlock(ECBlockRegistry.MARBLE_TILES_PRESSURE_PLATE, "Marble Tiles Pressure Plate");
+
                 addBlock(ECBlockRegistry.MARBLE_BRICKS, "Marble Bricks");
                 addBlock(ECBlockRegistry.MARBLE_BRICKS_SLAB, "Marble Bricks Slab");
                 addBlock(ECBlockRegistry.MARBLE_BRICKS_STAIRS, "Marble Bricks Stairs");
@@ -95,6 +173,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_STAIRS, "Marble Large Bricks Stairs");
                 addBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_WALL, "Marble Large Bricks Wall");
                 addBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_PRESSURE_PLATE, "Marble Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.MARBLE_ORNEMENT, "Marble Ornement");
+                addBlock(ECBlockRegistry.MARBLE_ORNEMENT_PRESSURE_PLATE, "Marble Ornement Pressure Plate");
 
                 // Gneiss
                 addBlock(ECBlockRegistry.GNEISS, "Gneiss");
@@ -109,6 +190,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GNEISS_COBBLESTONE_WALL, "Gneiss Cobblestone Wall");
                 addBlock(ECBlockRegistry.GNEISS_COBBLESTONE_PRESSURE_PLATE, "Gneiss Cobblestone Pressure Plate");
 
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS, "Smooth Gneiss");
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS_SLAB, "Smooth Gneiss Slab");
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS_STAIRS, "Smooth Gneiss Stairs");
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS_WALL, "Smooth Gneiss Wall");
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS_PRESSURE_PLATE, "Smooth Gneiss Pressure Plate");
+
+                addBlock(ECBlockRegistry.POLISHED_GNEISS, "Polished Gneiss");
+                addBlock(ECBlockRegistry.POLISHED_GNEISS_SLAB, "Polished Gneiss Slab");
+                addBlock(ECBlockRegistry.POLISHED_GNEISS_STAIRS, "Polished Gneiss Stairs");
+                addBlock(ECBlockRegistry.POLISHED_GNEISS_WALL, "Polished Gneiss Wall");
+                addBlock(ECBlockRegistry.POLISHED_GNEISS_PRESSURE_PLATE, "Polished Gneiss Pressure Plate");
+
+                addBlock(ECBlockRegistry.GNEISS_PAVING, "Gneiss Paving");
+                addBlock(ECBlockRegistry.GNEISS_PAVING_SLAB, "Gneiss Paving Slab");
+                addBlock(ECBlockRegistry.GNEISS_PAVING_STAIRS, "Gneiss Paving Stairs");
+                addBlock(ECBlockRegistry.GNEISS_PAVING_WALL, "Gneiss Paving Wall");
+                addBlock(ECBlockRegistry.GNEISS_PAVING_PRESSURE_PLATE, "Gneiss Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.GNEISS_TILES, "Gneiss Tiles");
+                addBlock(ECBlockRegistry.GNEISS_TILES_SLAB, "Gneiss Tiles Slab");
+                addBlock(ECBlockRegistry.GNEISS_TILES_STAIRS, "Gneiss Tiles Stairs");
+                addBlock(ECBlockRegistry.GNEISS_TILES_WALL, "Gneiss Tiles Wall");
+                addBlock(ECBlockRegistry.GNEISS_TILES_PRESSURE_PLATE, "Gneiss Tiles Pressure Plate");
+
                 addBlock(ECBlockRegistry.GNEISS_BRICKS, "Gneiss Bricks");
                 addBlock(ECBlockRegistry.GNEISS_BRICKS_SLAB, "Gneiss Bricks Slab");
                 addBlock(ECBlockRegistry.GNEISS_BRICKS_STAIRS, "Gneiss Bricks Stairs");
@@ -120,6 +225,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_STAIRS, "Gneiss Large Bricks Stairs");
                 addBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_WALL, "Gneiss Large Bricks Wall");
                 addBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_PRESSURE_PLATE, "Gneiss Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.GNEISS_ORNEMENT, "Gneiss Ornement");
+                addBlock(ECBlockRegistry.GNEISS_ORNEMENT_PRESSURE_PLATE, "Gneiss Ornement Pressure Plate");
 
                 // Jade
                 addBlock(ECBlockRegistry.JADE, "Jade");
@@ -134,6 +242,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.JADE_COBBLESTONE_WALL, "Jade Cobblestone Wall");
                 addBlock(ECBlockRegistry.JADE_COBBLESTONE_PRESSURE_PLATE, "Jade Cobblestone Pressure Plate");
 
+                addBlock(ECBlockRegistry.SMOOTH_JADE, "Smooth Jade");
+                addBlock(ECBlockRegistry.SMOOTH_JADE_SLAB, "Smooth Jade Slab");
+                addBlock(ECBlockRegistry.SMOOTH_JADE_STAIRS, "Smooth Jade Stairs");
+                addBlock(ECBlockRegistry.SMOOTH_JADE_WALL, "Smooth Jade Wall");
+                addBlock(ECBlockRegistry.SMOOTH_JADE_PRESSURE_PLATE, "Smooth Jade Pressure Plate");
+
+                addBlock(ECBlockRegistry.POLISHED_JADE, "Polished Jade");
+                addBlock(ECBlockRegistry.POLISHED_JADE_SLAB, "Polished Jade Slab");
+                addBlock(ECBlockRegistry.POLISHED_JADE_STAIRS, "Polished Jade Stairs");
+                addBlock(ECBlockRegistry.POLISHED_JADE_WALL, "Polished Jade Wall");
+                addBlock(ECBlockRegistry.POLISHED_JADE_PRESSURE_PLATE, "Polished Jade Pressure Plate");
+
+                addBlock(ECBlockRegistry.JADE_PAVING, "Jade Paving");
+                addBlock(ECBlockRegistry.JADE_PAVING_SLAB, "Jade Paving Slab");
+                addBlock(ECBlockRegistry.JADE_PAVING_STAIRS, "Jade Paving Stairs");
+                addBlock(ECBlockRegistry.JADE_PAVING_WALL, "Jade Paving Wall");
+                addBlock(ECBlockRegistry.JADE_PAVING_PRESSURE_PLATE, "Jade Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.JADE_TILES, "Jade Tiles");
+                addBlock(ECBlockRegistry.JADE_TILES_SLAB, "Jade Tiles Slab");
+                addBlock(ECBlockRegistry.JADE_TILES_STAIRS, "Jade Tiles Stairs");
+                addBlock(ECBlockRegistry.JADE_TILES_WALL, "Jade Tiles Wall");
+                addBlock(ECBlockRegistry.JADE_TILES_PRESSURE_PLATE, "Jade Tiles Pressure Plate");
+
                 addBlock(ECBlockRegistry.JADE_BRICKS, "Jade Bricks");
                 addBlock(ECBlockRegistry.JADE_BRICKS_SLAB, "Jade Bricks Slab");
                 addBlock(ECBlockRegistry.JADE_BRICKS_STAIRS, "Jade Bricks Stairs");
@@ -145,6 +277,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.JADE_LARGE_BRICKS_STAIRS, "Jade Large Bricks Stairs");
                 addBlock(ECBlockRegistry.JADE_LARGE_BRICKS_WALL, "Jade Large Bricks Wall");
                 addBlock(ECBlockRegistry.JADE_LARGE_BRICKS_PRESSURE_PLATE, "Jade Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.JADE_ORNEMENT, "Jade Ornement");
+                addBlock(ECBlockRegistry.JADE_ORNEMENT_PRESSURE_PLATE, "Jade Ornement Pressure Plate");
 
                 // Larvikite
                 addBlock(ECBlockRegistry.LARVIKITE, "Larvikite");
@@ -159,6 +294,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE_WALL, "Larvikite Cobblestone Wall");
                 addBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE_PRESSURE_PLATE, "Larvikite Cobblestone Pressure Plate");
 
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE, "Smooth Larvikite");
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE_SLAB, "Smooth Larvikite Slab");
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE_STAIRS, "Smooth Larvikite Stairs");
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE_WALL, "Smooth Larvikite Wall");
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE_PRESSURE_PLATE, "Smooth Larvikite Pressure Plate");
+
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE, "Polished Larvikite");
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE_SLAB, "Polished Larvikite Slab");
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE_STAIRS, "Polished Larvikite Stairs");
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE_WALL, "Polished Larvikite Wall");
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE_PRESSURE_PLATE, "Polished Larvikite Pressure Plate");
+
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING, "Larvikite Paving");
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING_SLAB, "Larvikite Paving Slab");
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING_STAIRS, "Larvikite Paving Stairs");
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING_WALL, "Larvikite Paving Wall");
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING_PRESSURE_PLATE, "Larvikite Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.LARVIKITE_TILES, "Larvikite Tiles");
+                addBlock(ECBlockRegistry.LARVIKITE_TILES_SLAB, "Larvikite Tiles Slab");
+                addBlock(ECBlockRegistry.LARVIKITE_TILES_STAIRS, "Larvikite Tiles Stairs");
+                addBlock(ECBlockRegistry.LARVIKITE_TILES_WALL, "Larvikite Tiles Wall");
+                addBlock(ECBlockRegistry.LARVIKITE_TILES_PRESSURE_PLATE, "Larvikite Tiles Pressure Plate");
+
                 addBlock(ECBlockRegistry.LARVIKITE_BRICKS, "Larvikite Bricks");
                 addBlock(ECBlockRegistry.LARVIKITE_BRICKS_SLAB, "Larvikite Bricks Slab");
                 addBlock(ECBlockRegistry.LARVIKITE_BRICKS_STAIRS, "Larvikite Bricks Stairs");
@@ -170,6 +329,111 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_STAIRS, "Larvikite Large Bricks Stairs");
                 addBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_WALL, "Larvikite Large Bricks Wall");
                 addBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE, "Larvikite Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.LARVIKITE_ORNEMENT, "Larvikite Ornement");
+                addBlock(ECBlockRegistry.LARVIKITE_ORNEMENT_PRESSURE_PLATE, "Larvikite Ornement Pressure Plate");
+
+                // Andesite
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE, "Smooth Andesite");
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE_SLAB, "Smooth Andesite Slab");
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE_STAIRS, "Smooth Andesite Stairs");
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE_WALL, "Smooth Andesite Wall");
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE_PRESSURE_PLATE, "Smooth Andesite Pressure Plate");
+
+                addBlock(ECBlockRegistry.ANDESITE_PAVING, "Andesite Paving");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_SLAB, "Andesite Paving Slab");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STAIRS, "Andesite Paving Stairs");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_WALL, "Andesite Paving Wall");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_PRESSURE_PLATE, "Andesite Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.ANDESITE_TILES, "Andesite Tiles");
+                addBlock(ECBlockRegistry.ANDESITE_TILES_SLAB, "Andesite Tiles Slab");
+                addBlock(ECBlockRegistry.ANDESITE_TILES_STAIRS, "Andesite Tiles Stairs");
+                addBlock(ECBlockRegistry.ANDESITE_TILES_WALL, "Andesite Tiles Wall");
+                addBlock(ECBlockRegistry.ANDESITE_TILES_PRESSURE_PLATE, "Andesite Tiles Pressure Plate");
+
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS, "Andesite Bricks");
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS_SLAB, "Andesite Bricks Slab");
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS_STAIRS, "Andesite Bricks Stairs");
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS_WALL, "Andesite Bricks Wall");
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS_PRESSURE_PLATE, "Andesite Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS, "Andesite Large Bricks");
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_SLAB, "Andesite Large Bricks Slab");
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_STAIRS, "Andesite Large Bricks Stairs");
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_WALL, "Andesite Large Bricks Wall");
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE, "Andesite Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.ANDESITE_ORNEMENT, "Andesite Ornement");
+                addBlock(ECBlockRegistry.ANDESITE_ORNEMENT_PRESSURE_PLATE, "Andesite Ornement Pressure Plate");
+
+                // Diorite
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE, "Smooth Diorite");
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE_SLAB, "Smooth Diorite Slab");
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE_STAIRS, "Smooth Diorite Stairs");
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE_WALL, "Smooth Diorite Wall");
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE_PRESSURE_PLATE, "Smooth Diorite Pressure Plate");
+
+                addBlock(ECBlockRegistry.DIORITE_PAVING, "Diorite Paving");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_SLAB, "Diorite Paving Slab");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STAIRS, "Diorite Paving Stairs");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_WALL, "Diorite Paving Wall");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_PRESSURE_PLATE, "Diorite Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.DIORITE_TILES, "Diorite Tiles");
+                addBlock(ECBlockRegistry.DIORITE_TILES_SLAB, "Diorite Tiles Slab");
+                addBlock(ECBlockRegistry.DIORITE_TILES_STAIRS, "Diorite Tiles Stairs");
+                addBlock(ECBlockRegistry.DIORITE_TILES_WALL, "Diorite Tiles Wall");
+                addBlock(ECBlockRegistry.DIORITE_TILES_PRESSURE_PLATE, "Diorite Tiles Pressure Plate");
+
+                addBlock(ECBlockRegistry.DIORITE_BRICKS, "Diorite Bricks");
+                addBlock(ECBlockRegistry.DIORITE_BRICKS_SLAB, "Diorite Bricks Slab");
+                addBlock(ECBlockRegistry.DIORITE_BRICKS_STAIRS, "Diorite Bricks Stairs");
+                addBlock(ECBlockRegistry.DIORITE_BRICKS_WALL, "Diorite Bricks Wall");
+                addBlock(ECBlockRegistry.DIORITE_BRICKS_PRESSURE_PLATE, "Diorite Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS, "Diorite Large Bricks");
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_SLAB, "Diorite Large Bricks Slab");
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_STAIRS, "Diorite Large Bricks Stairs");
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_WALL, "Diorite Large Bricks Wall");
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE, "Diorite Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.DIORITE_ORNEMENT, "Diorite Ornement");
+                addBlock(ECBlockRegistry.DIORITE_ORNEMENT_PRESSURE_PLATE, "Diorite Ornement Pressure Plate");
+
+                // Granite
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE, "Smooth Granite");
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE_SLAB, "Smooth Granite Slab");
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE_STAIRS, "Smooth Granite Stairs");
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE_WALL, "Smooth Granite Wall");
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE_PRESSURE_PLATE, "Smooth Granite Pressure Plate");
+
+                addBlock(ECBlockRegistry.GRANITE_PAVING, "Granite Paving");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_SLAB, "Granite Paving Slab");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STAIRS, "Granite Paving Stairs");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_WALL, "Granite Paving Wall");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_PRESSURE_PLATE, "Granite Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.GRANITE_TILES, "Granite Tiles");
+                addBlock(ECBlockRegistry.GRANITE_TILES_SLAB, "Granite Tiles Slab");
+                addBlock(ECBlockRegistry.GRANITE_TILES_STAIRS, "Granite Tiles Stairs");
+                addBlock(ECBlockRegistry.GRANITE_TILES_WALL, "Granite Tiles Wall");
+                addBlock(ECBlockRegistry.GRANITE_TILES_PRESSURE_PLATE, "Granite Tiles Pressure Plate");
+
+                addBlock(ECBlockRegistry.GRANITE_BRICKS, "Granite Bricks");
+                addBlock(ECBlockRegistry.GRANITE_BRICKS_SLAB, "Granite Bricks Slab");
+                addBlock(ECBlockRegistry.GRANITE_BRICKS_STAIRS, "Granite Bricks Stairs");
+                addBlock(ECBlockRegistry.GRANITE_BRICKS_WALL, "Granite Bricks Wall");
+                addBlock(ECBlockRegistry.GRANITE_BRICKS_PRESSURE_PLATE, "Granite Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS, "Granite Large Bricks");
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_SLAB, "Granite Large Bricks Slab");
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_STAIRS, "Granite Large Bricks Stairs");
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_WALL, "Granite Large Bricks Wall");
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE, "Granite Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.GRANITE_ORNEMENT, "Granite Ornement");
+                addBlock(ECBlockRegistry.GRANITE_ORNEMENT_PRESSURE_PLATE, "Granite Ornement Pressure Plate");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
@@ -187,6 +451,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.BASALT_COBBLESTONE_WALL, "Muret en pierres de basalt");
                 addBlock(ECBlockRegistry.BASALT_COBBLESTONE_PRESSURE_PLATE, "Plaque de pression en pierres de basalt");
 
+                addBlock(ECBlockRegistry.SMOOTH_BASALT, "Basalt lisse");
+                addBlock(ECBlockRegistry.SMOOTH_BASALT_SLAB, "Dalle en basalt lisse");
+                addBlock(ECBlockRegistry.SMOOTH_BASALT_STAIRS, "Escalier en basalt lisse");
+                addBlock(ECBlockRegistry.SMOOTH_BASALT_WALL, "Muret en basalt lisse");
+                addBlock(ECBlockRegistry.SMOOTH_BASALT_PRESSURE_PLATE, "Plaque de pression en basalt lisse");
+
+                addBlock(ECBlockRegistry.POLISHED_BASALT, "Basalt poli");
+                addBlock(ECBlockRegistry.POLISHED_BASALT_SLAB, "Dalle en basalt poli");
+                addBlock(ECBlockRegistry.POLISHED_BASALT_STAIRS, "Escalier en basalt poli");
+                addBlock(ECBlockRegistry.POLISHED_BASALT_WALL, "Muret en basalt poli");
+                addBlock(ECBlockRegistry.POLISHED_BASALT_PRESSURE_PLATE, "Plaque de pression en basalt poli");
+
+                addBlock(ECBlockRegistry.BASALT_PAVING, "Pavés de basalt");
+                addBlock(ECBlockRegistry.BASALT_PAVING_SLAB, "Dalle en pavé de basalt");
+                addBlock(ECBlockRegistry.BASALT_PAVING_STAIRS, "Escalier en pavé de basalt");
+                addBlock(ECBlockRegistry.BASALT_PAVING_WALL, "Muret en pavé de basalt");
+                addBlock(ECBlockRegistry.BASALT_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé de basalt");
+
+                addBlock(ECBlockRegistry.BASALT_TILES, "Carrelage de basalt");
+                addBlock(ECBlockRegistry.BASALT_TILES_SLAB, "Dalle en carrelage de basalt");
+                addBlock(ECBlockRegistry.BASALT_TILES_STAIRS, "Escalier en carrelage de basalt");
+                addBlock(ECBlockRegistry.BASALT_TILES_WALL, "Muret en carrelage de basalt");
+                addBlock(ECBlockRegistry.BASALT_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de basalt");
+
                 addBlock(ECBlockRegistry.BASALT_BRICKS, "Briques de basalt");
                 addBlock(ECBlockRegistry.BASALT_BRICKS_SLAB, "Dalle en briques de basalt");
                 addBlock(ECBlockRegistry.BASALT_BRICKS_STAIRS, "Escalier en briques de basalt");
@@ -198,6 +486,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de basalt");
                 addBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_WALL, "Muret en briques épaisses de basalt");
                 addBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de basalt");
+
+                addBlock(ECBlockRegistry.BASALT_ORNEMENT, "Ornement en basalt");
+                addBlock(ECBlockRegistry.BASALT_ORNEMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en basalt");
 
                 // Slate
                 addBlock(ECBlockRegistry.SLATE, "Ardoise");
@@ -212,6 +503,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.SLATE_COBBLESTONE_WALL, "Muret en pierres d'ardoise");
                 addBlock(ECBlockRegistry.SLATE_COBBLESTONE_PRESSURE_PLATE, "Plaque de pression en pierres d'ardoise");
 
+                addBlock(ECBlockRegistry.SMOOTH_SLATE, "Ardoise lisse");
+                addBlock(ECBlockRegistry.SMOOTH_SLATE_SLAB, "Dalle en ardoise lisse");
+                addBlock(ECBlockRegistry.SMOOTH_SLATE_STAIRS, "Escalier en ardoise lisse");
+                addBlock(ECBlockRegistry.SMOOTH_SLATE_WALL, "Muret en ardoise lisse");
+                addBlock(ECBlockRegistry.SMOOTH_SLATE_PRESSURE_PLATE, "Plaque de pression en ardoise lisse");
+
+                addBlock(ECBlockRegistry.POLISHED_SLATE, "Ardoise poli");
+                addBlock(ECBlockRegistry.POLISHED_SLATE_SLAB, "Dalle en ardoise poli");
+                addBlock(ECBlockRegistry.POLISHED_SLATE_STAIRS, "Escalier en ardoise poli");
+                addBlock(ECBlockRegistry.POLISHED_SLATE_WALL, "Muret en ardoise poli");
+                addBlock(ECBlockRegistry.POLISHED_SLATE_PRESSURE_PLATE, "Plaque de pression en ardoise poli");
+
+                addBlock(ECBlockRegistry.SLATE_PAVING, "Pavés d'ardoise");
+                addBlock(ECBlockRegistry.SLATE_PAVING_SLAB, "Dalle en pavé d'ardoise");
+                addBlock(ECBlockRegistry.SLATE_PAVING_STAIRS, "Escalier en pavé d'ardoise");
+                addBlock(ECBlockRegistry.SLATE_PAVING_WALL, "Muret en pavé d'ardoise");
+                addBlock(ECBlockRegistry.SLATE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé d'ardoise");
+
+                addBlock(ECBlockRegistry.SLATE_TILES, "Carrelage d'ardoise");
+                addBlock(ECBlockRegistry.SLATE_TILES_SLAB, "Dalle en carrelage d'ardoise");
+                addBlock(ECBlockRegistry.SLATE_TILES_STAIRS, "Escalier en carrelage d'ardoise");
+                addBlock(ECBlockRegistry.SLATE_TILES_WALL, "Muret en carrelage d'ardoise");
+                addBlock(ECBlockRegistry.SLATE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage d'ardoise");
+
                 addBlock(ECBlockRegistry.SLATE_BRICKS, "Briques d'ardoise");
                 addBlock(ECBlockRegistry.SLATE_BRICKS_SLAB, "Dalle en briques d'ardoise");
                 addBlock(ECBlockRegistry.SLATE_BRICKS_STAIRS, "Escalier en briques d'ardoise");
@@ -223,6 +538,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses d'ardoise");
                 addBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_WALL, "Muret en briques épaisses d'ardoise");
                 addBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses d'ardoise");
+
+                addBlock(ECBlockRegistry.SLATE_ORNEMENT, "Ornement en ardoise");
+                addBlock(ECBlockRegistry.SLATE_ORNEMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en ardoise");
 
                 // Marble
                 addBlock(ECBlockRegistry.MARBLE, "Marbre");
@@ -237,6 +555,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.MARBLE_COBBLESTONE_WALL, "Muret en pierres de marbre");
                 addBlock(ECBlockRegistry.MARBLE_COBBLESTONE_PRESSURE_PLATE, "Plaque de pression en pierres de marbre");
 
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE, "Marbre lisse");
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE_SLAB, "Dalle en marbre lisse");
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE_STAIRS, "Escalier en marbre lisse");
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE_WALL, "Muret en marbre lisse");
+                addBlock(ECBlockRegistry.SMOOTH_MARBLE_PRESSURE_PLATE, "Plaque de pression en marbre lisse");
+
+                addBlock(ECBlockRegistry.POLISHED_MARBLE, "Marbre poli");
+                addBlock(ECBlockRegistry.POLISHED_MARBLE_SLAB, "Dalle en marbre poli");
+                addBlock(ECBlockRegistry.POLISHED_MARBLE_STAIRS, "Escalier en marbre poli");
+                addBlock(ECBlockRegistry.POLISHED_MARBLE_WALL, "Muret en marbre poli");
+                addBlock(ECBlockRegistry.POLISHED_MARBLE_PRESSURE_PLATE, "Plaque de pression en marbre poli");
+
+                addBlock(ECBlockRegistry.MARBLE_PAVING, "Pavés de marbre");
+                addBlock(ECBlockRegistry.MARBLE_PAVING_SLAB, "Dalle en pavé de marbre");
+                addBlock(ECBlockRegistry.MARBLE_PAVING_STAIRS, "Escalier en pavé de marbre");
+                addBlock(ECBlockRegistry.MARBLE_PAVING_WALL, "Muret en pavé de marbre");
+                addBlock(ECBlockRegistry.MARBLE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé de marbre");
+
+                addBlock(ECBlockRegistry.MARBLE_TILES, "Carrelage de marbre");
+                addBlock(ECBlockRegistry.MARBLE_TILES_SLAB, "Dalle en carrelage de marbre");
+                addBlock(ECBlockRegistry.MARBLE_TILES_STAIRS, "Escalier en carrelage de marbre");
+                addBlock(ECBlockRegistry.MARBLE_TILES_WALL, "Muret en carrelage de marbre");
+                addBlock(ECBlockRegistry.MARBLE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de marbre");
+
                 addBlock(ECBlockRegistry.MARBLE_BRICKS, "Briques de marbre");
                 addBlock(ECBlockRegistry.MARBLE_BRICKS_SLAB, "Dalle en briques de marbre");
                 addBlock(ECBlockRegistry.MARBLE_BRICKS_STAIRS, "Escalier en briques de marbre");
@@ -248,6 +590,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de marbre");
                 addBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_WALL, "Muret en briques épaisses de marbre");
                 addBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de marbre");
+
+                addBlock(ECBlockRegistry.MARBLE_ORNEMENT, "Ornement en marbre");
+                addBlock(ECBlockRegistry.MARBLE_ORNEMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en marbre");
 
                 // Gneiss
                 addBlock(ECBlockRegistry.GNEISS, "Gneiss");
@@ -262,6 +607,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GNEISS_COBBLESTONE_WALL, "Muret en pierres de gneiss");
                 addBlock(ECBlockRegistry.GNEISS_COBBLESTONE_PRESSURE_PLATE, "Plaque de pression en pierres de gneiss");
 
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS, "Gneiss lisse");
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS_SLAB, "Dalle en gneiss lisse");
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS_STAIRS, "Escalier en gneiss lisse");
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS_WALL, "Muret en gneiss lisse");
+                addBlock(ECBlockRegistry.SMOOTH_GNEISS_PRESSURE_PLATE, "Plaque de pression en gneiss lisse");
+
+                addBlock(ECBlockRegistry.POLISHED_GNEISS, "Gneiss poli");
+                addBlock(ECBlockRegistry.POLISHED_GNEISS_SLAB, "Dalle en gneiss poli");
+                addBlock(ECBlockRegistry.POLISHED_GNEISS_STAIRS, "Escalier en gneiss poli");
+                addBlock(ECBlockRegistry.POLISHED_GNEISS_WALL, "Muret en gneiss poli");
+                addBlock(ECBlockRegistry.POLISHED_GNEISS_PRESSURE_PLATE, "Plaque de pression en gneiss poli");
+
+                addBlock(ECBlockRegistry.GNEISS_PAVING, "Pavés de gneiss");
+                addBlock(ECBlockRegistry.GNEISS_PAVING_SLAB, "Dalle en pavé de gneiss");
+                addBlock(ECBlockRegistry.GNEISS_PAVING_STAIRS, "Escalier en pavé de gneiss");
+                addBlock(ECBlockRegistry.GNEISS_PAVING_WALL, "Muret en pavé de gneiss");
+                addBlock(ECBlockRegistry.GNEISS_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé de gneiss");
+
+                addBlock(ECBlockRegistry.GNEISS_TILES, "Carrelage de gneiss");
+                addBlock(ECBlockRegistry.GNEISS_TILES_SLAB, "Dalle en carrelage de gneiss");
+                addBlock(ECBlockRegistry.GNEISS_TILES_STAIRS, "Escalier en carrelage de gneiss");
+                addBlock(ECBlockRegistry.GNEISS_TILES_WALL, "Muret en carrelage de gneiss");
+                addBlock(ECBlockRegistry.GNEISS_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de gneiss");
+
                 addBlock(ECBlockRegistry.GNEISS_BRICKS, "Briques de gneiss");
                 addBlock(ECBlockRegistry.GNEISS_BRICKS_SLAB, "Dalle en briques de gneiss");
                 addBlock(ECBlockRegistry.GNEISS_BRICKS_STAIRS, "Escalier en briques de gneiss");
@@ -273,6 +642,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de gneiss");
                 addBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_WALL, "Muret en briques épaisses de gneiss");
                 addBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de gneiss");
+
+                addBlock(ECBlockRegistry.GNEISS_ORNEMENT, "Ornement en gneiss");
+                addBlock(ECBlockRegistry.GNEISS_ORNEMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en gneiss");
 
                 // Jade
                 addBlock(ECBlockRegistry.JADE, "Jade");
@@ -287,6 +659,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.JADE_COBBLESTONE_WALL, "Muret en pierres de jade");
                 addBlock(ECBlockRegistry.JADE_COBBLESTONE_PRESSURE_PLATE, "Plaque de pression en pierres de jade");
 
+                addBlock(ECBlockRegistry.SMOOTH_JADE, "Jade lisse");
+                addBlock(ECBlockRegistry.SMOOTH_JADE_SLAB, "Dalle en jade lisse");
+                addBlock(ECBlockRegistry.SMOOTH_JADE_STAIRS, "Escalier en jade lisse");
+                addBlock(ECBlockRegistry.SMOOTH_JADE_WALL, "Muret en jade lisse");
+                addBlock(ECBlockRegistry.SMOOTH_JADE_PRESSURE_PLATE, "Plaque de pression en jade lisse");
+
+                addBlock(ECBlockRegistry.POLISHED_JADE, "Jade poli");
+                addBlock(ECBlockRegistry.POLISHED_JADE_SLAB, "Dalle en jade poli");
+                addBlock(ECBlockRegistry.POLISHED_JADE_STAIRS, "Escalier en jade poli");
+                addBlock(ECBlockRegistry.POLISHED_JADE_WALL, "Muret en jade poli");
+                addBlock(ECBlockRegistry.POLISHED_JADE_PRESSURE_PLATE, "Plaque de pression en jade poli");
+
+                addBlock(ECBlockRegistry.JADE_PAVING, "Pavés de jade");
+                addBlock(ECBlockRegistry.JADE_PAVING_SLAB, "Dalle en pavé de jade");
+                addBlock(ECBlockRegistry.JADE_PAVING_STAIRS, "Escalier en pavé de jade");
+                addBlock(ECBlockRegistry.JADE_PAVING_WALL, "Muret en pavé de jade");
+                addBlock(ECBlockRegistry.JADE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé de jade");
+
+                addBlock(ECBlockRegistry.JADE_TILES, "Carrelage de jade");
+                addBlock(ECBlockRegistry.JADE_TILES_SLAB, "Dalle en carrelage de jade");
+                addBlock(ECBlockRegistry.JADE_TILES_STAIRS, "Escalier en carrelage de jade");
+                addBlock(ECBlockRegistry.JADE_TILES_WALL, "Muret en carrelage de jade");
+                addBlock(ECBlockRegistry.JADE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de jade");
+
                 addBlock(ECBlockRegistry.JADE_BRICKS, "Briques de jade");
                 addBlock(ECBlockRegistry.JADE_BRICKS_SLAB, "Dalle en briques de jade");
                 addBlock(ECBlockRegistry.JADE_BRICKS_STAIRS, "Escalier en briques de jade");
@@ -298,6 +694,9 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.JADE_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de jade");
                 addBlock(ECBlockRegistry.JADE_LARGE_BRICKS_WALL, "Muret en briques épaisses de jade");
                 addBlock(ECBlockRegistry.JADE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de jade");
+
+                addBlock(ECBlockRegistry.JADE_ORNEMENT, "Ornement en jade");
+                addBlock(ECBlockRegistry.JADE_ORNEMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en jade");
 
                 // Larvikite
                 addBlock(ECBlockRegistry.LARVIKITE, "Larvikite");
@@ -312,6 +711,30 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE_WALL, "Muret en pierres de larvikite");
                 addBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE_PRESSURE_PLATE, "Plaque de pression en pierres de larvikite");
 
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE, "Larvikite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE_SLAB, "Dalle en larvikite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE_STAIRS, "Escalier en larvikite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE_WALL, "Muret en larvikite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_LARVIKITE_PRESSURE_PLATE, "Plaque de pression en larvikite lisse");
+
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE, "Larvikite poli");
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE_SLAB, "Dalle en larvikite poli");
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE_STAIRS, "Escalier en larvikite poli");
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE_WALL, "Muret en larvikite poli");
+                addBlock(ECBlockRegistry.POLISHED_LARVIKITE_PRESSURE_PLATE, "Plaque de pression en larvikite poli");
+
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING, "Pavés de larvikite");
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING_SLAB, "Dalle en pavé de larvikite");
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING_STAIRS, "Escalier en pavé de larvikite");
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING_WALL, "Muret en pavé de larvikite");
+                addBlock(ECBlockRegistry.LARVIKITE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé de larvikite");
+
+                addBlock(ECBlockRegistry.LARVIKITE_TILES, "Carrelage de larvikite");
+                addBlock(ECBlockRegistry.LARVIKITE_TILES_SLAB, "Dalle en carrelage de larvikite");
+                addBlock(ECBlockRegistry.LARVIKITE_TILES_STAIRS, "Escalier en carrelage de larvikite");
+                addBlock(ECBlockRegistry.LARVIKITE_TILES_WALL, "Muret en carrelage de larvikite");
+                addBlock(ECBlockRegistry.LARVIKITE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de larvikite");
+
                 addBlock(ECBlockRegistry.LARVIKITE_BRICKS, "Briques de larvikite");
                 addBlock(ECBlockRegistry.LARVIKITE_BRICKS_SLAB, "Dalle en briques de larvikite");
                 addBlock(ECBlockRegistry.LARVIKITE_BRICKS_STAIRS, "Escalier en briques de larvikite");
@@ -323,6 +746,112 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de larvikite");
                 addBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_WALL, "Muret en briques épaisses de larvikite");
                 addBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de larvikite");
+
+                addBlock(ECBlockRegistry.LARVIKITE_ORNEMENT, "Ornement en larvikite");
+                addBlock(ECBlockRegistry.LARVIKITE_ORNEMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en larvikite");
+
+                // Andesite
+
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE, "Andésite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE_SLAB, "Dalle en andésite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE_STAIRS, "Escalier en andésite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE_WALL, "Muret en andésite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_ANDESITE_PRESSURE_PLATE, "Plaque de pression en andésite lisse");
+
+                addBlock(ECBlockRegistry.ANDESITE_PAVING, "Pavés d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_SLAB, "Dalle en pavé d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STAIRS, "Escalier en pavé d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_WALL, "Muret en pavé d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé d'andésite");
+
+                addBlock(ECBlockRegistry.ANDESITE_TILES, "Carrelage d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_TILES_SLAB, "Dalle en carrelage d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_TILES_STAIRS, "Escalier en carrelage d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_TILES_WALL, "Muret en carrelage d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage d'andésite");
+
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS, "Briques d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS_SLAB, "Dalle en briques d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS_STAIRS, "Escalier en briques d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS_WALL, "Muret en briques d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques d'andésite");
+
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS, "Briques épaisses d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_SLAB, "Dalle en briques épaisses d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_WALL, "Muret en briques épaisses d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses d'andésite");
+
+                addBlock(ECBlockRegistry.ANDESITE_ORNEMENT, "Ornement en andésite");
+                addBlock(ECBlockRegistry.ANDESITE_ORNEMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en andésite");
+
+                // Diorite
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE, "Diorite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE_SLAB, "Dalle en diorite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE_STAIRS, "Escalier en diorite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE_WALL, "Muret en diorite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_DIORITE_PRESSURE_PLATE, "Plaque de pression en diorite lisse");
+
+                addBlock(ECBlockRegistry.DIORITE_PAVING, "Pavés de diorite");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_SLAB, "Dalle en pavé de diorite");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STAIRS, "Escalier en pavé de diorite");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_WALL, "Muret en pavé de diorite");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé de diorite");
+
+                addBlock(ECBlockRegistry.DIORITE_TILES, "Carrelage de diorite");
+                addBlock(ECBlockRegistry.DIORITE_TILES_SLAB, "Dalle en carrelage de diorite");
+                addBlock(ECBlockRegistry.DIORITE_TILES_STAIRS, "Escalier en carrelage de diorite");
+                addBlock(ECBlockRegistry.DIORITE_TILES_WALL, "Muret en carrelage de diorite");
+                addBlock(ECBlockRegistry.DIORITE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de diorite");
+
+                addBlock(ECBlockRegistry.DIORITE_BRICKS, "Briques de diorite");
+                addBlock(ECBlockRegistry.DIORITE_BRICKS_SLAB, "Dalle en briques de diorite");
+                addBlock(ECBlockRegistry.DIORITE_BRICKS_STAIRS, "Escalier en briques de diorite");
+                addBlock(ECBlockRegistry.DIORITE_BRICKS_WALL, "Muret en briques de diorite");
+                addBlock(ECBlockRegistry.DIORITE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques de diorite");
+
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS, "Briques épaisses de diorite");
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_SLAB, "Dalle en briques épaisses de diorite");
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de diorite");
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_WALL, "Muret en briques épaisses de diorite");
+                addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de diorite");
+
+                addBlock(ECBlockRegistry.DIORITE_ORNEMENT, "Ornement en diorite");
+                addBlock(ECBlockRegistry.DIORITE_ORNEMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en diorite");
+
+                // Granite
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE, "Granite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE_SLAB, "Dalle en granite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE_STAIRS, "Escalier en granite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE_WALL, "Muret en granite lisse");
+                addBlock(ECBlockRegistry.SMOOTH_GRANITE_PRESSURE_PLATE, "Plaque de pression en granite lisse");
+
+                addBlock(ECBlockRegistry.GRANITE_PAVING, "Pavés de granite");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_SLAB, "Dalle en pavé de granite");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STAIRS, "Escalier en pavé de granite");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_WALL, "Muret en pavé de granite");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé de granite");
+
+                addBlock(ECBlockRegistry.GRANITE_TILES, "Carrelage de granite");
+                addBlock(ECBlockRegistry.GRANITE_TILES_SLAB, "Dalle en carrelage de granite");
+                addBlock(ECBlockRegistry.GRANITE_TILES_STAIRS, "Escalier en carrelage de granite");
+                addBlock(ECBlockRegistry.GRANITE_TILES_WALL, "Muret en carrelage de granite");
+                addBlock(ECBlockRegistry.GRANITE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de granite");
+
+                addBlock(ECBlockRegistry.GRANITE_BRICKS, "Briques de granite");
+                addBlock(ECBlockRegistry.GRANITE_BRICKS_SLAB, "Dalle en briques de granite");
+                addBlock(ECBlockRegistry.GRANITE_BRICKS_STAIRS, "Escalier en briques de granite");
+                addBlock(ECBlockRegistry.GRANITE_BRICKS_WALL, "Muret en briques de granite");
+                addBlock(ECBlockRegistry.GRANITE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques de granite");
+
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS, "Briques épaisses de granite");
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_SLAB, "Dalle en briques épaisses de granite");
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de granite");
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_WALL, "Muret en briques épaisses de granite");
+                addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de granite");
+
+                addBlock(ECBlockRegistry.GRANITE_ORNEMENT, "Ornement en granite");
+                addBlock(ECBlockRegistry.GRANITE_ORNEMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en granite");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
