@@ -30,7 +30,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("basalt_tiles", true, true, true, true, true, false);
         registerBlockBasics("basalt_bricks", true, true, true, true, true, false);
         registerBlockBasics("basalt_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("basalt_ornement", true, false, false, false, true, false);
+        registerBlockBasics("basalt_ornament", true, false, false, false, true, false);
 
         // Slate
         registerBlockBasics("slate", true, true, true, true, true, false);
@@ -41,7 +41,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("slate_tiles", true, true, true, true, true, false);
         registerBlockBasics("slate_bricks", true, true, true, true, true, false);
         registerBlockBasics("slate_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("slate_ornement", true, false, false, false, true, false);
+        registerBlockBasics("slate_ornament", true, false, false, false, true, false);
 
         // Marble
         registerBlockBasics("marble", true, true, true, true, true, false);
@@ -52,7 +52,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("marble_tiles", true, true, true, true, true, false);
         registerBlockBasics("marble_bricks", true, true, true, true, true, false);
         registerBlockBasics("marble_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("marble_ornement", true, false, false, false, true, false);
+        registerBlockBasics("marble_ornament", true, false, false, false, true, false);
 
         // Gneiss
         registerBlockBasics("gneiss", true, true, true, true, true, false);
@@ -63,7 +63,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("gneiss_tiles", true, true, true, true, true, false);
         registerBlockBasics("gneiss_bricks", true, true, true, true, true, false);
         registerBlockBasics("gneiss_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("gneiss_ornement", true, false, false, false, true, false);
+        registerBlockBasics("gneiss_ornament", true, false, false, false, true, false);
 
         // Jade
         registerBlockBasics("jade", true, true, true, true, true, false);
@@ -74,7 +74,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("jade_tiles", true, true, true, true, true, false);
         registerBlockBasics("jade_bricks", true, true, true, true, true, false);
         registerBlockBasics("jade_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("jade_ornement", true, false, false, false, true, false);
+        registerBlockBasics("jade_ornament", true, false, false, false, true, false);
 
         // Larvikite
         registerBlockBasics("larvikite", true, true, true, true, true, false);
@@ -85,7 +85,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("larvikite_tiles", true, true, true, true, true, false);
         registerBlockBasics("larvikite_bricks", true, true, true, true, true, false);
         registerBlockBasics("larvikite_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("larvikite_ornement", true, false, false, false, true, false);
+        registerBlockBasics("larvikite_ornament", true, false, false, false, true, false);
 
         // Andesite
         registerBlockBasics("smooth_andesite", true, true, true, true, true, false);
@@ -93,7 +93,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("andesite_tiles", true, true, true, true, true, false);
         registerBlockBasics("andesite_bricks", true, true, true, true, true, false);
         registerBlockBasics("andesite_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("andesite_ornement", true, false, false, false, true, false);
+        registerBlockBasics("andesite_ornament", true, false, false, false, true, false);
 
         // Diorite
         registerBlockBasics("smooth_diorite", true, true, true, true, true, false);
@@ -101,7 +101,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("diorite_tiles", true, true, true, true, true, false);
         registerBlockBasics("diorite_bricks", true, true, true, true, true, false);
         registerBlockBasics("diorite_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("diorite_ornement", true, false, false, false, true, false);
+        registerBlockBasics("diorite_ornament", true, false, false, false, true, false);
 
         // Granite
         registerBlockBasics("smooth_granite", true, true, true, true, true, false);
@@ -109,6 +109,6 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("granite_tiles", true, true, true, true, true, false);
         registerBlockBasics("granite_bricks", true, true, true, true, true, false);
         registerBlockBasics("granite_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("granite_ornement", true, false, false, false, true, false);
+        registerBlockBasics("granite_ornament", true, false, false, false, true, false);
     }
 }

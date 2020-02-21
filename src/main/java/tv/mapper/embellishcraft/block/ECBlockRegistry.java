@@ -127,9 +127,9 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
-    public static final RegistryObject<CustomBlock> BASALT_ORNEMENT = BLOCKS.register("basalt_ornement",
+    public static final RegistryObject<CustomBlock> BASALT_ORNAMENT = BLOCKS.register("basalt_ornament",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> BASALT_ORNEMENT_PRESSURE_PLATE = BLOCKS.register("basalt_ornement_pressure_plate",
+    public static final RegistryObject<CustomPressurePlateBlock> BASALT_ORNAMENT_PRESSURE_PLATE = BLOCKS.register("basalt_ornament_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
@@ -232,9 +232,9 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
-    public static final RegistryObject<CustomBlock> SLATE_ORNEMENT = BLOCKS.register("slate_ornement",
+    public static final RegistryObject<CustomBlock> SLATE_ORNAMENT = BLOCKS.register("slate_ornament",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> SLATE_ORNEMENT_PRESSURE_PLATE = BLOCKS.register("slate_ornement_pressure_plate",
+    public static final RegistryObject<CustomPressurePlateBlock> SLATE_ORNAMENT_PRESSURE_PLATE = BLOCKS.register("slate_ornament_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
@@ -343,9 +343,9 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
-    public static final RegistryObject<CustomBlock> MARBLE_ORNEMENT = BLOCKS.register("marble_ornement",
+    public static final RegistryObject<CustomBlock> MARBLE_ORNAMENT = BLOCKS.register("marble_ornament",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> MARBLE_ORNEMENT_PRESSURE_PLATE = BLOCKS.register("marble_ornement_pressure_plate",
+    public static final RegistryObject<CustomPressurePlateBlock> MARBLE_ORNAMENT_PRESSURE_PLATE = BLOCKS.register("marble_ornament_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
@@ -454,9 +454,9 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
-    public static final RegistryObject<CustomBlock> GNEISS_ORNEMENT = BLOCKS.register("gneiss_ornement",
+    public static final RegistryObject<CustomBlock> GNEISS_ORNAMENT = BLOCKS.register("gneiss_ornament",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> GNEISS_ORNEMENT_PRESSURE_PLATE = BLOCKS.register("gneiss_ornement_pressure_plate",
+    public static final RegistryObject<CustomPressurePlateBlock> GNEISS_ORNAMENT_PRESSURE_PLATE = BLOCKS.register("gneiss_ornament_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
@@ -559,9 +559,9 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
-    public static final RegistryObject<CustomBlock> JADE_ORNEMENT = BLOCKS.register("jade_ornement",
+    public static final RegistryObject<CustomBlock> JADE_ORNAMENT = BLOCKS.register("jade_ornament",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> JADE_ORNEMENT_PRESSURE_PLATE = BLOCKS.register("jade_ornement_pressure_plate",
+    public static final RegistryObject<CustomPressurePlateBlock> JADE_ORNAMENT_PRESSURE_PLATE = BLOCKS.register("jade_ornament_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
@@ -670,9 +670,9 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
-    public static final RegistryObject<CustomBlock> LARVIKITE_ORNEMENT = BLOCKS.register("larvikite_ornement",
+    public static final RegistryObject<CustomBlock> LARVIKITE_ORNAMENT = BLOCKS.register("larvikite_ornament",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> LARVIKITE_ORNEMENT_PRESSURE_PLATE = BLOCKS.register("larvikite_ornement_pressure_plate",
+    public static final RegistryObject<CustomPressurePlateBlock> LARVIKITE_ORNAMENT_PRESSURE_PLATE = BLOCKS.register("larvikite_ornament_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
@@ -742,9 +742,9 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
-    public static final RegistryObject<CustomBlock> ANDESITE_ORNEMENT = BLOCKS.register("andesite_ornement",
+    public static final RegistryObject<CustomBlock> ANDESITE_ORNAMENT = BLOCKS.register("andesite_ornament",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> ANDESITE_ORNEMENT_PRESSURE_PLATE = BLOCKS.register("andesite_ornement_pressure_plate",
+    public static final RegistryObject<CustomPressurePlateBlock> ANDESITE_ORNAMENT_PRESSURE_PLATE = BLOCKS.register("andesite_ornament_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
@@ -814,9 +814,9 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
-    public static final RegistryObject<CustomBlock> DIORITE_ORNEMENT = BLOCKS.register("diorite_ornement",
+    public static final RegistryObject<CustomBlock> DIORITE_ORNAMENT = BLOCKS.register("diorite_ornament",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> DIORITE_ORNEMENT_PRESSURE_PLATE = BLOCKS.register("diorite_ornement_pressure_plate",
+    public static final RegistryObject<CustomPressurePlateBlock> DIORITE_ORNAMENT_PRESSURE_PLATE = BLOCKS.register("diorite_ornament_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
@@ -886,9 +886,9 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
-    public static final RegistryObject<CustomBlock> GRANITE_ORNEMENT = BLOCKS.register("granite_ornement",
+    public static final RegistryObject<CustomBlock> GRANITE_ORNAMENT = BLOCKS.register("granite_ornament",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> GRANITE_ORNEMENT_PRESSURE_PLATE = BLOCKS.register("granite_ornement_pressure_plate",
+    public static final RegistryObject<CustomPressurePlateBlock> GRANITE_ORNAMENT_PRESSURE_PLATE = BLOCKS.register("granite_ornament_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 

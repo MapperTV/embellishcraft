@@ -83,9 +83,9 @@ public class ECBlockStates extends BaseBlockStates
         pressurePlateBlock(ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_large_bricks_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/basalt_large_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlockRegistry.BASALT_ORNEMENT.get());
-        pressurePlateBlock(ECBlockRegistry.BASALT_ORNEMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_ornement_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/basalt_ornement_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.BASALT_ORNAMENT.get());
+        pressurePlateBlock(ECBlockRegistry.BASALT_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_ornament_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/basalt_ornament_pressure_plate_down"));
 
         // Slate
         simpleBlock(ECBlockRegistry.SLATE.get());
@@ -144,9 +144,9 @@ public class ECBlockStates extends BaseBlockStates
         pressurePlateBlock(ECBlockRegistry.SLATE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_large_bricks_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/slate_large_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlockRegistry.SLATE_ORNEMENT.get());
-        pressurePlateBlock(ECBlockRegistry.SLATE_ORNEMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_ornement_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/slate_ornement_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.SLATE_ORNAMENT.get());
+        pressurePlateBlock(ECBlockRegistry.SLATE_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_ornament_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/slate_ornament_pressure_plate_down"));
 
         // Marble
         simpleBlock(ECBlockRegistry.MARBLE.get());
@@ -205,9 +205,9 @@ public class ECBlockStates extends BaseBlockStates
         pressurePlateBlock(ECBlockRegistry.MARBLE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/marble_large_bricks_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/marble_large_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlockRegistry.MARBLE_ORNEMENT.get());
-        pressurePlateBlock(ECBlockRegistry.MARBLE_ORNEMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/marble_ornement_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/marble_ornement_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.MARBLE_ORNAMENT.get());
+        pressurePlateBlock(ECBlockRegistry.MARBLE_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/marble_ornament_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/marble_ornament_pressure_plate_down"));
 
         // Gneiss
         simpleBlock(ECBlockRegistry.GNEISS.get());
@@ -266,9 +266,9 @@ public class ECBlockStates extends BaseBlockStates
         pressurePlateBlock(ECBlockRegistry.GNEISS_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_large_bricks_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_large_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlockRegistry.GNEISS_ORNEMENT.get());
-        pressurePlateBlock(ECBlockRegistry.GNEISS_ORNEMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_ornement_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_ornement_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.GNEISS_ORNAMENT.get());
+        pressurePlateBlock(ECBlockRegistry.GNEISS_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_ornament_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_ornament_pressure_plate_down"));
 
         // Jade
         simpleBlock(ECBlockRegistry.JADE.get());
@@ -327,9 +327,9 @@ public class ECBlockStates extends BaseBlockStates
         pressurePlateBlock(ECBlockRegistry.JADE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/jade_large_bricks_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/jade_large_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlockRegistry.JADE_ORNEMENT.get());
-        pressurePlateBlock(ECBlockRegistry.JADE_ORNEMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/jade_ornement_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/jade_ornement_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.JADE_ORNAMENT.get());
+        pressurePlateBlock(ECBlockRegistry.JADE_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/jade_ornament_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/jade_ornament_pressure_plate_down"));
 
         // Larvikite
         simpleBlock(ECBlockRegistry.LARVIKITE.get());
@@ -388,9 +388,9 @@ public class ECBlockStates extends BaseBlockStates
         pressurePlateBlock(ECBlockRegistry.LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_large_bricks_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_large_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlockRegistry.LARVIKITE_ORNEMENT.get());
-        pressurePlateBlock(ECBlockRegistry.LARVIKITE_ORNEMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_ornement_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_ornement_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.LARVIKITE_ORNAMENT.get());
+        pressurePlateBlock(ECBlockRegistry.LARVIKITE_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_ornament_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_ornament_pressure_plate_down"));
 
         // Andesite
         simpleBlock(ECBlockRegistry.SMOOTH_ANDESITE.get());
@@ -428,9 +428,9 @@ public class ECBlockStates extends BaseBlockStates
         pressurePlateBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/andesite_large_bricks_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/andesite_large_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlockRegistry.ANDESITE_ORNEMENT.get());
-        pressurePlateBlock(ECBlockRegistry.ANDESITE_ORNEMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/andesite_ornement_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/andesite_ornement_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.ANDESITE_ORNAMENT.get());
+        pressurePlateBlock(ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/andesite_ornament_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/andesite_ornament_pressure_plate_down"));
 
         // Diorite
         simpleBlock(ECBlockRegistry.SMOOTH_DIORITE.get());
@@ -468,9 +468,9 @@ public class ECBlockStates extends BaseBlockStates
         pressurePlateBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/diorite_large_bricks_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/diorite_large_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlockRegistry.DIORITE_ORNEMENT.get());
-        pressurePlateBlock(ECBlockRegistry.DIORITE_ORNEMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/diorite_ornement_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/diorite_ornement_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.DIORITE_ORNAMENT.get());
+        pressurePlateBlock(ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/diorite_ornament_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/diorite_ornament_pressure_plate_down"));
 
         // Granite
         simpleBlock(ECBlockRegistry.SMOOTH_GRANITE.get());
@@ -508,9 +508,9 @@ public class ECBlockStates extends BaseBlockStates
         pressurePlateBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/granite_large_bricks_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/granite_large_bricks_pressure_plate_down"));
 
-        simpleBlock(ECBlockRegistry.GRANITE_ORNEMENT.get());
-        pressurePlateBlock(ECBlockRegistry.GRANITE_ORNEMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/granite_ornement_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/granite_ornement_pressure_plate_down"));
+        simpleBlock(ECBlockRegistry.GRANITE_ORNAMENT.get());
+        pressurePlateBlock(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/granite_ornament_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/granite_ornament_pressure_plate_down"));
     }
 
     /**

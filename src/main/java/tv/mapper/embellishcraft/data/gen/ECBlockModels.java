@@ -53,8 +53,8 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("basalt_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/basalt_large_bricks"));
         getBuilder("basalt_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/basalt_large_bricks"));
 
-        getBuilder("basalt_ornement_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/basalt_ornement"));
-        getBuilder("basalt_ornement_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/basalt_ornement"));
+        getBuilder("basalt_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/basalt_ornament"));
+        getBuilder("basalt_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/basalt_ornament"));
 
         // Slate
         getBuilder("slate_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/slate"));
@@ -89,8 +89,8 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("slate_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/slate_large_bricks"));
         getBuilder("slate_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/slate_large_bricks"));
 
-        getBuilder("slate_ornement_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/slate_ornement"));
-        getBuilder("slate_ornement_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/slate_ornement"));
+        getBuilder("slate_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/slate_ornament"));
+        getBuilder("slate_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/slate_ornament"));
 
         // Marble
         getBuilder("marble_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/marble"));
@@ -125,8 +125,8 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("marble_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/marble_large_bricks"));
         getBuilder("marble_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/marble_large_bricks"));
 
-        getBuilder("marble_ornement_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/marble_ornement"));
-        getBuilder("marble_ornement_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/marble_ornement"));
+        getBuilder("marble_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/marble_ornament"));
+        getBuilder("marble_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/marble_ornament"));
 
         // Gneiss
         getBuilder("gneiss_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/gneiss"));
@@ -161,8 +161,8 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("gneiss_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/gneiss_large_bricks"));
         getBuilder("gneiss_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/gneiss_large_bricks"));
 
-        getBuilder("gneiss_ornement_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/gneiss_ornement"));
-        getBuilder("gneiss_ornement_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/gneiss_ornement"));
+        getBuilder("gneiss_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/gneiss_ornament"));
+        getBuilder("gneiss_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/gneiss_ornament"));
 
         // Jade
         getBuilder("jade_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/jade"));
@@ -197,8 +197,8 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("jade_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/jade_large_bricks"));
         getBuilder("jade_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/jade_large_bricks"));
 
-        getBuilder("jade_ornement_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/jade_ornement"));
-        getBuilder("jade_ornement_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/jade_ornement"));
+        getBuilder("jade_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/jade_ornament"));
+        getBuilder("jade_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/jade_ornament"));
 
         // Larvikite
         getBuilder("larvikite_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/larvikite"));
@@ -233,8 +233,8 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("larvikite_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/larvikite_large_bricks"));
         getBuilder("larvikite_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/larvikite_large_bricks"));
 
-        getBuilder("larvikite_ornement_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/larvikite_ornement"));
-        getBuilder("larvikite_ornement_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/larvikite_ornement"));
+        getBuilder("larvikite_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/larvikite_ornament"));
+        getBuilder("larvikite_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/larvikite_ornament"));
 
         // Andesite
         getBuilder("smooth_andesite_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/smooth_andesite"));
@@ -257,8 +257,8 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("andesite_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/andesite_large_bricks"));
         getBuilder("andesite_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/andesite_large_bricks"));
 
-        getBuilder("andesite_ornement_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/andesite_ornement"));
-        getBuilder("andesite_ornement_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/andesite_ornement"));
+        getBuilder("andesite_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/andesite_ornament"));
+        getBuilder("andesite_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/andesite_ornament"));
 
         // Diorite
         getBuilder("smooth_diorite_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/smooth_diorite"));
@@ -281,8 +281,8 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("diorite_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/diorite_large_bricks"));
         getBuilder("diorite_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/diorite_large_bricks"));
 
-        getBuilder("diorite_ornement_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/diorite_ornement"));
-        getBuilder("diorite_ornement_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/diorite_ornement"));
+        getBuilder("diorite_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/diorite_ornament"));
+        getBuilder("diorite_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/diorite_ornament"));
 
         // Granite
         getBuilder("smooth_granite_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/smooth_granite"));
@@ -305,8 +305,8 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("granite_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/granite_large_bricks"));
         getBuilder("granite_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/granite_large_bricks"));
 
-        getBuilder("granite_ornement_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/granite_ornement"));
-        getBuilder("granite_ornement_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/granite_ornement"));
+        getBuilder("granite_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/granite_ornament"));
+        getBuilder("granite_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/granite_ornament"));
 
     }
 }

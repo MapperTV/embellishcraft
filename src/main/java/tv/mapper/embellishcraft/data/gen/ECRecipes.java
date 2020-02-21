@@ -132,11 +132,11 @@ public class ECRecipes extends RecipeProvider
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.BASALT_LARGE_BRICKS.get()).patternLine("##").addCriterion("has_basalt_large_bricks",
             this.hasItem(ECBlockRegistry.BASALT_LARGE_BRICKS.get())).build(consumer);
 
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BASALT_ORNEMENT.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SMOOTH_BASALT_SLAB.get()).addCriterion("has_smooth_basalt_slab",
-            this.hasItem(ECBlockRegistry.SMOOTH_BASALT_SLAB.get())).build(consumer, ECConstants.MODID + ":basalt_ornement_from_smooth_slabs");
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BASALT_ORNEMENT.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.POLISHED_BASALT_SLAB.get()).addCriterion("has_polished_basalt_slab",
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BASALT_ORNAMENT.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SMOOTH_BASALT_SLAB.get()).addCriterion("has_smooth_basalt_slab",
+            this.hasItem(ECBlockRegistry.SMOOTH_BASALT_SLAB.get())).build(consumer, ECConstants.MODID + ":basalt_ornament_from_smooth_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BASALT_ORNAMENT.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.POLISHED_BASALT_SLAB.get()).addCriterion("has_polished_basalt_slab",
             this.hasItem(ECBlockRegistry.POLISHED_BASALT_SLAB.get())).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BASALT_ORNEMENT_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.BASALT_ORNEMENT.get()).patternLine("##").addCriterion("has_basalt_ornement",
-            this.hasItem(ECBlockRegistry.BASALT_ORNEMENT.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BASALT_ORNAMENT_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.BASALT_ORNAMENT.get()).patternLine("##").addCriterion("has_basalt_ornament",
+            this.hasItem(ECBlockRegistry.BASALT_ORNAMENT.get())).build(consumer);
     }
 }
