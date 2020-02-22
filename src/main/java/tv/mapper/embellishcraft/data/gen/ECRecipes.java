@@ -39,6 +39,8 @@ public class ECRecipes extends RecipeProvider
             this.hasItem(ECBlockRegistry.BASALT.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BASALT_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.BASALT.get()).patternLine("##").addCriterion("has_basalt",
             this.hasItem(ECBlockRegistry.BASALT.get())).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.BASALT_BUTTON.get()).addIngredient(ECBlockRegistry.BASALT.get()).addCriterion("has_basalt", this.hasItem(ECBlockRegistry.BASALT.get())).build(
+            consumer);
 
         ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.POLISHED_BASALT.get()).addIngredient(ECBlockRegistry.SMOOTH_BASALT.get()).addCriterion("has_smooth_basalt",
             this.hasItem(ECBlockRegistry.SMOOTH_BASALT.get())).build(consumer);

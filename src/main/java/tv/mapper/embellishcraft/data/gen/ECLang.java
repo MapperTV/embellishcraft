@@ -27,6 +27,7 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.BASALT_STAIRS, "Basalt Stairs");
                 addBlock(ECBlockRegistry.BASALT_WALL, "Basalt Wall");
                 addBlock(ECBlockRegistry.BASALT_PRESSURE_PLATE, "Basalt Pressure Plate");
+                addBlock(ECBlockRegistry.BASALT_BUTTON, "Basalt Button");
 
                 addBlock(ECBlockRegistry.BASALT_COBBLESTONE, "Basalt Cobblestone");
                 addBlock(ECBlockRegistry.BASALT_COBBLESTONE_SLAB, "Basalt Cobblestone Slab");
@@ -444,6 +445,7 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.BASALT_STAIRS, "Escalier en basalt");
                 addBlock(ECBlockRegistry.BASALT_WALL, "Muret en basalt");
                 addBlock(ECBlockRegistry.BASALT_PRESSURE_PLATE, "Plaque de pression en basalt");
+                addBlock(ECBlockRegistry.BASALT_BUTTON, "Bouton en basalt");
 
                 addBlock(ECBlockRegistry.BASALT_COBBLESTONE, "Pierres de basalt");
                 addBlock(ECBlockRegistry.BASALT_COBBLESTONE_SLAB, "Dalle en pierres de basalt");

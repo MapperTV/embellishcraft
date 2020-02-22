@@ -33,6 +33,8 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.BASALT_WALL.get(), modLoc("block/basalt"));
         pressurePlateBlock(ECBlockRegistry.BASALT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.BASALT_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_button"), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_button_pressed"),
+            180);
 
         simpleBlock(ECBlockRegistry.BASALT_COBBLESTONE.get());
         slabBlock(ECBlockRegistry.BASALT_COBBLESTONE_SLAB.get(), modLoc("block/basalt_cobblestone"), modLoc("block/basalt_cobblestone"));

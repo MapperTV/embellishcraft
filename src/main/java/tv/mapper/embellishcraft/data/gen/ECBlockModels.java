@@ -24,6 +24,9 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("basalt_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/basalt"));
         getBuilder("basalt_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/basalt"));
         getBuilder("basalt_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/basalt"));
+        getBuilder("basalt_button_inventory").parent(getExistingFile(mcLoc("block/button_inventory"))).texture("texture", modLoc("block/basalt"));
+        getBuilder("basalt_button_pressed").parent(getExistingFile(mcLoc("block/button_pressed"))).texture("texture", modLoc("block/basalt"));
+        getBuilder("basalt_button").parent(getExistingFile(mcLoc("block/button"))).texture("texture", modLoc("block/basalt"));
 
         getBuilder("basalt_cobblestone_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/basalt_cobblestone"));
         getBuilder("basalt_cobblestone_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/basalt_cobblestone"));

@@ -22,6 +22,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.BASALT_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BASALT_STAIRS.get()));
         lootTables.put(ECBlockRegistry.BASALT_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BASALT_WALL.get()));
         lootTables.put(ECBlockRegistry.BASALT_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BASALT_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.BASALT_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BASALT_BUTTON.get()));
 
         lootTables.put(ECBlockRegistry.BASALT_COBBLESTONE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BASALT_COBBLESTONE.get()));
         lootTables.put(ECBlockRegistry.BASALT_COBBLESTONE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.BASALT_COBBLESTONE_SLAB.get()));

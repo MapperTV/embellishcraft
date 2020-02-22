@@ -2,6 +2,7 @@ package tv.mapper.embellishcraft.data.gen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
+import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import tv.mapper.mapperbase.data.gen.BaseItemModels;
 
 public class ECItemModels extends BaseItemModels
@@ -23,6 +24,7 @@ public class ECItemModels extends BaseItemModels
     {
         // Basalt
         registerBlockBasics("basalt", true, true, true, true, true, false);
+        getBuilder("basalt_button").parent(new UncheckedModelFile(modid + ":block/basalt_button_inventory"));
         registerBlockBasics("basalt_cobblestone", true, true, true, true, true, false);
         registerBlockBasics("smooth_basalt", true, true, true, true, true, false);
         registerBlockBasics("polished_basalt", true, true, true, true, true, false);

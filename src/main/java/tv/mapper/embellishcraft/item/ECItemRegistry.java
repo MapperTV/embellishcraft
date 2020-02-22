@@ -21,6 +21,8 @@ public class ECItemRegistry
     public static final RegistryObject<Item> BASALT_WALL_ITEM = ITEMS.register("basalt_wall", () -> new BlockItem(ECBlockRegistry.BASALT_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> BASALT_PRESSURE_PLATE_ITEM = ITEMS.register("basalt_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.BASALT_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BASALT_BUTTON_ITEM = ITEMS.register("basalt_button",
+        () -> new BlockItem(ECBlockRegistry.BASALT_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> BASALT_COBBLESTONE_ITEM = ITEMS.register("basalt_cobblestone",
         () -> new BlockItem(ECBlockRegistry.BASALT_COBBLESTONE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));

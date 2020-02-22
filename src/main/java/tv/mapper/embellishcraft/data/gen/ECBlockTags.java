@@ -34,6 +34,7 @@ public class ECBlockTags extends BlockTagsProvider
             ECBlockRegistry.SMOOTH_BASALT_PRESSURE_PLATE.get(), ECBlockRegistry.POLISHED_BASALT_PRESSURE_PLATE.get(), ECBlockRegistry.BASALT_PAVING_PRESSURE_PLATE.get(),
             ECBlockRegistry.BASALT_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.BASALT_BRICKS_PRESSURE_PLATE.get(), ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE.get(),
             ECBlockRegistry.BASALT_ORNAMENT_PRESSURE_PLATE.get());
+        this.getBuilder(BlockTags.BUTTONS).add(ECBlockRegistry.BASALT_BUTTON.get());
 
         // Slate
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.SLATE_STAIRS.get(), ECBlockRegistry.SLATE_COBBLESTONE_STAIRS.get(), ECBlockRegistry.SMOOTH_SLATE_STAIRS.get(),

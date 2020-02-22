@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.mapperbase.block.CustomBlock;
+import tv.mapper.mapperbase.block.CustomButtonBlock;
 import tv.mapper.mapperbase.block.CustomPressurePlateBlock;
 import tv.mapper.mapperbase.block.CustomSlabBlock;
 import tv.mapper.mapperbase.block.CustomStairsBlock;
@@ -35,6 +36,8 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> BASALT_PRESSURE_PLATE = BLOCKS.register("basalt_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomButtonBlock> BASALT_BUTTON = BLOCKS.register("basalt_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
 
     public static final RegistryObject<CustomBlock> BASALT_COBBLESTONE = BLOCKS.register("basalt_cobblestone",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
