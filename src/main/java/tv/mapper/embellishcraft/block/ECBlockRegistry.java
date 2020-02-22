@@ -148,6 +148,8 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> SLATE_PRESSURE_PLATE = BLOCKS.register("slate_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomButtonBlock> SLATE_BUTTON = BLOCKS.register("slate_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
 
     public static final RegistryObject<CustomBlock> SLATE_COBBLESTONE = BLOCKS.register("slate_cobblestone",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
@@ -254,7 +256,9 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> MARBLE_PRESSURE_PLATE = BLOCKS.register("marble_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
-
+    public static final RegistryObject<CustomButtonBlock> MARBLE_BUTTON = BLOCKS.register("marble_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
+    
     public static final RegistryObject<CustomBlock> MARBLE_COBBLESTONE = BLOCKS.register("marble_cobblestone",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> MARBLE_COBBLESTONE_STAIRS = BLOCKS.register("marble_cobblestone_stairs",
@@ -365,7 +369,9 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> GNEISS_PRESSURE_PLATE = BLOCKS.register("gneiss_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
-
+    public static final RegistryObject<CustomButtonBlock> GNEISS_BUTTON = BLOCKS.register("gneiss_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
+    
     public static final RegistryObject<CustomBlock> GNEISS_COBBLESTONE = BLOCKS.register("gneiss_cobblestone",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> GNEISS_COBBLESTONE_STAIRS = BLOCKS.register("gneiss_cobblestone_stairs",
@@ -475,6 +481,8 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> JADE_PRESSURE_PLATE = BLOCKS.register("jade_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomButtonBlock> JADE_BUTTON = BLOCKS.register("jade_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
 
     public static final RegistryObject<CustomBlock> JADE_COBBLESTONE = BLOCKS.register("jade_cobblestone",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
@@ -581,7 +589,9 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> LARVIKITE_PRESSURE_PLATE = BLOCKS.register("larvikite_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
-
+    public static final RegistryObject<CustomButtonBlock> LARVIKITE_BUTTON = BLOCKS.register("larvikite_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
+    
     public static final RegistryObject<CustomBlock> LARVIKITE_COBBLESTONE = BLOCKS.register("larvikite_cobblestone",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> LARVIKITE_COBBLESTONE_STAIRS = BLOCKS.register("larvikite_cobblestone_stairs",
@@ -692,7 +702,9 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> SMOOTH_ANDESITE_PRESSURE_PLATE = BLOCKS.register("smooth_andesite_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
-
+    public static final RegistryObject<CustomButtonBlock> ANDESITE_BUTTON = BLOCKS.register("andesite_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
+    
     public static final RegistryObject<CustomBlock> ANDESITE_PAVING = BLOCKS.register("andesite_paving",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> ANDESITE_PAVING_STAIRS = BLOCKS.register("andesite_paving_stairs",
@@ -764,7 +776,9 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> SMOOTH_DIORITE_PRESSURE_PLATE = BLOCKS.register("smooth_diorite_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
-
+    public static final RegistryObject<CustomButtonBlock> DIORITE_BUTTON = BLOCKS.register("diorite_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
+    
     public static final RegistryObject<CustomBlock> DIORITE_PAVING = BLOCKS.register("diorite_paving",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> DIORITE_PAVING_STAIRS = BLOCKS.register("diorite_paving_stairs",
@@ -836,7 +850,9 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> SMOOTH_GRANITE_PRESSURE_PLATE = BLOCKS.register("smooth_granite_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
-
+    public static final RegistryObject<CustomButtonBlock> GRANITE_BUTTON = BLOCKS.register("granite_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
+    
     public static final RegistryObject<CustomBlock> GRANITE_PAVING = BLOCKS.register("granite_paving",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> GRANITE_PAVING_STAIRS = BLOCKS.register("granite_paving_stairs",
