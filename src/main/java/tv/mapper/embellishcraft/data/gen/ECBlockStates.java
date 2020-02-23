@@ -522,6 +522,49 @@ public class ECBlockStates extends BaseBlockStates
         simpleBlock(ECBlockRegistry.GRANITE_ORNAMENT.get());
         pressurePlateBlock(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/granite_ornament_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/granite_ornament_pressure_plate_down"));
+
+        // Sandstone
+        buttonBlock(ECBlockRegistry.SANDSTONE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_button"), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_button_pressed"),
+            180);
+
+        wallBlock(ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get(), modLoc("block/smooth_sandstone"));
+        pressurePlateBlock(ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_sandstone_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/smooth_sandstone_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.POLISHED_SANDSTONE.get());
+        slabBlock(ECBlockRegistry.POLISHED_SANDSTONE_SLAB.get(), modLoc("block/polished_sandstone"), modLoc("block/polished_sandstone"));
+        stairsBlock(ECBlockRegistry.POLISHED_SANDSTONE_STAIRS.get(), modLoc("block/polished_sandstone"));
+        wallBlock(ECBlockRegistry.POLISHED_SANDSTONE_WALL.get(), modLoc("block/polished_sandstone"));
+        pressurePlateBlock(ECBlockRegistry.POLISHED_SANDSTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/polished_sandstone_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/polished_sandstone_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.SANDSTONE_PAVING.get());
+        slabBlock(ECBlockRegistry.SANDSTONE_PAVING_SLAB.get(), modLoc("block/sandstone_paving"), modLoc("block/sandstone_paving"));
+        stairsBlock(ECBlockRegistry.SANDSTONE_PAVING_STAIRS.get(), modLoc("block/sandstone_paving"));
+        wallBlock(ECBlockRegistry.SANDSTONE_PAVING_WALL.get(), modLoc("block/sandstone_paving"));
+        pressurePlateBlock(ECBlockRegistry.SANDSTONE_PAVING_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_paving_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_paving_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.SANDSTONE_TILES.get());
+        slabBlock(ECBlockRegistry.SANDSTONE_TILES_SLAB.get(), modLoc("block/sandstone_tiles"), modLoc("block/sandstone_tiles"));
+        stairsBlock(ECBlockRegistry.SANDSTONE_TILES_STAIRS.get(), modLoc("block/sandstone_tiles"));
+        wallBlock(ECBlockRegistry.SANDSTONE_TILES_WALL.get(), modLoc("block/sandstone_tiles"));
+        pressurePlateBlock(ECBlockRegistry.SANDSTONE_TILES_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_tiles_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_tiles_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.SANDSTONE_BRICKS.get());
+        slabBlock(ECBlockRegistry.SANDSTONE_BRICKS_SLAB.get(), modLoc("block/sandstone_bricks"), modLoc("block/sandstone_bricks"));
+        stairsBlock(ECBlockRegistry.SANDSTONE_BRICKS_STAIRS.get(), modLoc("block/sandstone_bricks"));
+        wallBlock(ECBlockRegistry.SANDSTONE_BRICKS_WALL.get(), modLoc("block/sandstone_bricks"));
+        pressurePlateBlock(ECBlockRegistry.SANDSTONE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_bricks_pressure_plate_down"));
+
+        simpleBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get());
+        slabBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get(), modLoc("block/sandstone_large_bricks"), modLoc("block/sandstone_large_bricks"));
+        stairsBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get(), modLoc("block/sandstone_large_bricks"));
+        wallBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get(), modLoc("block/sandstone_large_bricks"));
+        pressurePlateBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_large_bricks_pressure_plate"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_large_bricks_pressure_plate_down"));
     }
 
     /**

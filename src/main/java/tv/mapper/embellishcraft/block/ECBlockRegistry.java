@@ -923,6 +923,81 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.DIRT).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
+    // Sandstone
+    public static final RegistryObject<CustomButtonBlock> SANDSTONE_BUTTON = BLOCKS.register("sandstone_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
+
+    public static final RegistryObject<CustomWallBlock> SMOOTH_SANDSTONE_WALL = BLOCKS.register("smooth_sandstone_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> SMOOTH_SANDSTONE_PRESSURE_PLATE = BLOCKS.register("smooth_sandstone_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.SAND).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> POLISHED_SANDSTONE = BLOCKS.register("polished_sandstone",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> POLISHED_SANDSTONE_STAIRS = BLOCKS.register("polished_sandstone_stairs",
+        () -> new CustomStairsBlock(() -> Blocks.SANDSTONE.getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> POLISHED_SANDSTONE_SLAB = BLOCKS.register("polished_sandstone_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> POLISHED_SANDSTONE_WALL = BLOCKS.register("polished_sandstone_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> POLISHED_SANDSTONE_PRESSURE_PLATE = BLOCKS.register("polished_sandstone_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.SAND).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> SANDSTONE_PAVING = BLOCKS.register("sandstone_paving",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> SANDSTONE_PAVING_STAIRS = BLOCKS.register("sandstone_paving_stairs",
+        () -> new CustomStairsBlock(() -> Blocks.SANDSTONE.getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> SANDSTONE_PAVING_SLAB = BLOCKS.register("sandstone_paving_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> SANDSTONE_PAVING_WALL = BLOCKS.register("sandstone_paving_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> SANDSTONE_PAVING_PRESSURE_PLATE = BLOCKS.register("sandstone_paving_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.SAND).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> SANDSTONE_TILES = BLOCKS.register("sandstone_tiles",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> SANDSTONE_TILES_STAIRS = BLOCKS.register("sandstone_tiles_stairs",
+        () -> new CustomStairsBlock(() -> Blocks.SANDSTONE.getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> SANDSTONE_TILES_SLAB = BLOCKS.register("sandstone_tiles_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> SANDSTONE_TILES_WALL = BLOCKS.register("sandstone_tiles_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> SANDSTONE_TILES_PRESSURE_PLATE = BLOCKS.register("sandstone_tiles_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.SAND).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> SANDSTONE_BRICKS = BLOCKS.register("sandstone_bricks",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> SANDSTONE_BRICKS_STAIRS = BLOCKS.register("sandstone_bricks_stairs",
+        () -> new CustomStairsBlock(() -> Blocks.SANDSTONE.getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> SANDSTONE_BRICKS_SLAB = BLOCKS.register("sandstone_bricks_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> SANDSTONE_BRICKS_WALL = BLOCKS.register("sandstone_bricks_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> SANDSTONE_BRICKS_PRESSURE_PLATE = BLOCKS.register("sandstone_bricks_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.SAND).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> SANDSTONE_LARGE_BRICKS = BLOCKS.register("sandstone_large_bricks",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> SANDSTONE_LARGE_BRICKS_STAIRS = BLOCKS.register("sandstone_large_bricks_stairs",
+        () -> new CustomStairsBlock(() -> Blocks.SANDSTONE.getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> SANDSTONE_LARGE_BRICKS_SLAB = BLOCKS.register("sandstone_large_bricks_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> SANDSTONE_LARGE_BRICKS_WALL = BLOCKS.register("sandstone_large_bricks_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE = BLOCKS.register("sandstone_large_bricks_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.SAND).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
     public static void init()
     {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
