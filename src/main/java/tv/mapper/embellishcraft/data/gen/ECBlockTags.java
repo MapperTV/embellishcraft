@@ -19,6 +19,8 @@ public class ECBlockTags extends BlockTagsProvider
     {
         this.getBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.BASALT.get(), ECBlockRegistry.SLATE.get(), ECBlockRegistry.MARBLE.get(), ECBlockRegistry.GNEISS.get(), ECBlockRegistry.JADE.get(),
             ECBlockRegistry.LARVIKITE.get());
+        this.getBuilder(BlockTags.BUTTONS).add(ECBlockRegistry.BASALT_BUTTON.get(), ECBlockRegistry.SLATE_BUTTON.get(), ECBlockRegistry.MARBLE_BUTTON.get(), ECBlockRegistry.GNEISS_BUTTON.get(),
+            ECBlockRegistry.JADE_BUTTON.get(), ECBlockRegistry.LARVIKITE_BUTTON.get(), ECBlockRegistry.ANDESITE_BUTTON.get(), ECBlockRegistry.GRANITE_BUTTON.get(), ECBlockRegistry.DIORITE_BUTTON.get());
 
         // Basalt
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.BASALT_STAIRS.get(), ECBlockRegistry.BASALT_COBBLESTONE_STAIRS.get(), ECBlockRegistry.SMOOTH_BASALT_STAIRS.get(),
@@ -34,7 +36,6 @@ public class ECBlockTags extends BlockTagsProvider
             ECBlockRegistry.SMOOTH_BASALT_PRESSURE_PLATE.get(), ECBlockRegistry.POLISHED_BASALT_PRESSURE_PLATE.get(), ECBlockRegistry.BASALT_PAVING_PRESSURE_PLATE.get(),
             ECBlockRegistry.BASALT_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.BASALT_BRICKS_PRESSURE_PLATE.get(), ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE.get(),
             ECBlockRegistry.BASALT_ORNAMENT_PRESSURE_PLATE.get());
-        this.getBuilder(BlockTags.BUTTONS).add(ECBlockRegistry.BASALT_BUTTON.get());
 
         // Slate
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.SLATE_STAIRS.get(), ECBlockRegistry.SLATE_COBBLESTONE_STAIRS.get(), ECBlockRegistry.SMOOTH_SLATE_STAIRS.get(),

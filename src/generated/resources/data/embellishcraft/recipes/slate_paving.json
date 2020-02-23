@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ii",
+    "ii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:polished_slate"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:slate_paving",
+    "count": 4
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ii",
+    "ii"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:polished_andesite"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:andesite_paving",
+    "count": 4
+  }
+}

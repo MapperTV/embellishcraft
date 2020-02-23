@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:marble_tiles"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:marble_tiles_pressure_plate"
+  }
+}

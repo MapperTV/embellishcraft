@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:polished_jade"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:polished_jade_pressure_plate"
+  }
+}

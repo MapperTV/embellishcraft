@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:slate"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:slate_pressure_plate"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:smooth_granite"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:smooth_granite_wall",
+    "count": 6
+  }
+}

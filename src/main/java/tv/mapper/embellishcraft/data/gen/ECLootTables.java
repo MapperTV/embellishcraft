@@ -75,6 +75,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.SLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SLATE_STAIRS.get()));
         lootTables.put(ECBlockRegistry.SLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SLATE_WALL.get()));
         lootTables.put(ECBlockRegistry.SLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SLATE_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.SLATE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SLATE_BUTTON.get()));
 
         lootTables.put(ECBlockRegistry.SLATE_COBBLESTONE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SLATE_COBBLESTONE.get()));
         lootTables.put(ECBlockRegistry.SLATE_COBBLESTONE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.SLATE_COBBLESTONE_SLAB.get()));
@@ -127,6 +128,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.MARBLE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MARBLE_STAIRS.get()));
         lootTables.put(ECBlockRegistry.MARBLE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MARBLE_WALL.get()));
         lootTables.put(ECBlockRegistry.MARBLE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MARBLE_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.MARBLE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MARBLE_BUTTON.get()));
 
         lootTables.put(ECBlockRegistry.MARBLE_COBBLESTONE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MARBLE_COBBLESTONE.get()));
         lootTables.put(ECBlockRegistry.MARBLE_COBBLESTONE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.MARBLE_COBBLESTONE_SLAB.get()));
@@ -179,6 +181,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.GNEISS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GNEISS_STAIRS.get()));
         lootTables.put(ECBlockRegistry.GNEISS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GNEISS_WALL.get()));
         lootTables.put(ECBlockRegistry.GNEISS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GNEISS_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.GNEISS_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GNEISS_BUTTON.get()));
 
         lootTables.put(ECBlockRegistry.GNEISS_COBBLESTONE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GNEISS_COBBLESTONE.get()));
         lootTables.put(ECBlockRegistry.GNEISS_COBBLESTONE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.GNEISS_COBBLESTONE_SLAB.get()));
@@ -231,6 +234,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.JADE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.JADE_STAIRS.get()));
         lootTables.put(ECBlockRegistry.JADE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.JADE_WALL.get()));
         lootTables.put(ECBlockRegistry.JADE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.JADE_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.JADE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.JADE_BUTTON.get()));
 
         lootTables.put(ECBlockRegistry.JADE_COBBLESTONE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.JADE_COBBLESTONE.get()));
         lootTables.put(ECBlockRegistry.JADE_COBBLESTONE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.JADE_COBBLESTONE_SLAB.get()));
@@ -283,6 +287,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.LARVIKITE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LARVIKITE_STAIRS.get()));
         lootTables.put(ECBlockRegistry.LARVIKITE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LARVIKITE_WALL.get()));
         lootTables.put(ECBlockRegistry.LARVIKITE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LARVIKITE_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.LARVIKITE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LARVIKITE_BUTTON.get()));
 
         lootTables.put(ECBlockRegistry.LARVIKITE_COBBLESTONE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LARVIKITE_COBBLESTONE.get()));
         lootTables.put(ECBlockRegistry.LARVIKITE_COBBLESTONE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.LARVIKITE_COBBLESTONE_SLAB.get()));
@@ -335,6 +340,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.SMOOTH_ANDESITE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_ANDESITE_STAIRS.get()));
         lootTables.put(ECBlockRegistry.SMOOTH_ANDESITE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_ANDESITE_WALL.get()));
         lootTables.put(ECBlockRegistry.SMOOTH_ANDESITE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_ANDESITE_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.ANDESITE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.ANDESITE_BUTTON.get()));
 
         lootTables.put(ECBlockRegistry.ANDESITE_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.ANDESITE_PAVING.get()));
         lootTables.put(ECBlockRegistry.ANDESITE_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.ANDESITE_PAVING_SLAB.get()));
@@ -369,6 +375,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.SMOOTH_DIORITE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_DIORITE_STAIRS.get()));
         lootTables.put(ECBlockRegistry.SMOOTH_DIORITE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_DIORITE_WALL.get()));
         lootTables.put(ECBlockRegistry.SMOOTH_DIORITE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_DIORITE_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.DIORITE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DIORITE_BUTTON.get()));
 
         lootTables.put(ECBlockRegistry.DIORITE_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DIORITE_PAVING.get()));
         lootTables.put(ECBlockRegistry.DIORITE_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.DIORITE_PAVING_SLAB.get()));
@@ -403,6 +410,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.SMOOTH_GRANITE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_GRANITE_STAIRS.get()));
         lootTables.put(ECBlockRegistry.SMOOTH_GRANITE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_GRANITE_WALL.get()));
         lootTables.put(ECBlockRegistry.SMOOTH_GRANITE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_GRANITE_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.GRANITE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GRANITE_BUTTON.get()));
 
         lootTables.put(ECBlockRegistry.GRANITE_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GRANITE_PAVING.get()));
         lootTables.put(ECBlockRegistry.GRANITE_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.GRANITE_PAVING_SLAB.get()));

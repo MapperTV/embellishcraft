@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:smooth_larvikite"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:polished_larvikite"
+  }
+}

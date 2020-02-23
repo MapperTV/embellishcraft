@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:gneiss_bricks_stairs"
+    ]
+  },
+  "criteria": {
+    "has_gneiss_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:gneiss_bricks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:gneiss_bricks_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gneiss_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

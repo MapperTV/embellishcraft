@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:larvikite_from_cobblestone_smelting"
+    ]
+  },
+  "criteria": {
+    "has_larvikite_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:larvikite_cobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:larvikite_from_cobblestone_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_larvikite_cobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}

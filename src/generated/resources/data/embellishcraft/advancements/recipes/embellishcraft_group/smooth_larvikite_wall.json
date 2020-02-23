@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:smooth_larvikite_wall"
+    ]
+  },
+  "criteria": {
+    "has_smooth_larvikite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_larvikite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:smooth_larvikite_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_larvikite",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:granite_bricks_wall"
+    ]
+  },
+  "criteria": {
+    "has_granite_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:granite_bricks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:granite_bricks_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_granite_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

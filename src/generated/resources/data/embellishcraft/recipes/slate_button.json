@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:slate"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:slate_button"
+  }
+}

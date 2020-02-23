@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:granite_large_bricks"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:granite_large_bricks_slab",
+    "count": 6
+  }
+}

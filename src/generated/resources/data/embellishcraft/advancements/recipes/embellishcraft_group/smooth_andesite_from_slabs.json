@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:smooth_andesite_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_smooth_andesite_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_andesite_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:smooth_andesite_from_slabs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_andesite_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

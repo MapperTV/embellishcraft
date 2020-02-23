@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:marble_tiles_slab"
+    ]
+  },
+  "criteria": {
+    "has_marble_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:marble_tiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:marble_tiles_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_marble_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}

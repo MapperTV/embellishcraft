@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:slate_tiles"
+    ]
+  },
+  "criteria": {
+    "has_slate_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:slate_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:slate_tiles"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_slate_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

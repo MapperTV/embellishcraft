@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ii",
+    "ii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:smooth_granite"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:granite_bricks",
+    "count": 4
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:gneiss"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:gneiss_button"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:marble"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:marble_button"
+  }
+}

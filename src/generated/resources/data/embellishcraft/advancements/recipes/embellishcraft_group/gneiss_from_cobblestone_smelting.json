@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:gneiss_from_cobblestone_smelting"
+    ]
+  },
+  "criteria": {
+    "has_gneiss_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:gneiss_cobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:gneiss_from_cobblestone_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gneiss_cobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}

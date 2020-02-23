@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:andesite_bricks"
+    ]
+  },
+  "criteria": {
+    "has_smooth_andesite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_andesite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:andesite_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_andesite",
+      "has_the_recipe"
+    ]
+  ]
+}

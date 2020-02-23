@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:jade_cobblestone_pressure_plate"
+    ]
+  },
+  "criteria": {
+    "has_jade_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:jade_cobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:jade_cobblestone_pressure_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jade_cobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}

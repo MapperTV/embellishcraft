@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:marble_cobblestone_pressure_plate"
+    ]
+  },
+  "criteria": {
+    "has_marble_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:marble_cobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:marble_cobblestone_pressure_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_marble_cobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}

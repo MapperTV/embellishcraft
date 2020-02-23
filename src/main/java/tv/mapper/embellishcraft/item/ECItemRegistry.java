@@ -114,6 +114,8 @@ public class ECItemRegistry
     public static final RegistryObject<Item> SLATE_WALL_ITEM = ITEMS.register("slate_wall", () -> new BlockItem(ECBlockRegistry.SLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> SLATE_PRESSURE_PLATE_ITEM = ITEMS.register("slate_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.SLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SLATE_BUTTON_ITEM = ITEMS.register("slate_button",
+        () -> new BlockItem(ECBlockRegistry.SLATE_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> SLATE_COBBLESTONE_ITEM = ITEMS.register("slate_cobblestone",
         () -> new BlockItem(ECBlockRegistry.SLATE_COBBLESTONE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -204,6 +206,8 @@ public class ECItemRegistry
     public static final RegistryObject<Item> MARBLE_WALL_ITEM = ITEMS.register("marble_wall", () -> new BlockItem(ECBlockRegistry.MARBLE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> MARBLE_PRESSURE_PLATE_ITEM = ITEMS.register("marble_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.MARBLE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> MARBLE_BUTTON_ITEM = ITEMS.register("marble_button",
+        () -> new BlockItem(ECBlockRegistry.MARBLE_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> MARBLE_COBBLESTONE_ITEM = ITEMS.register("marble_cobblestone",
         () -> new BlockItem(ECBlockRegistry.MARBLE_COBBLESTONE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -295,6 +299,8 @@ public class ECItemRegistry
     public static final RegistryObject<Item> GNEISS_WALL_ITEM = ITEMS.register("gneiss_wall", () -> new BlockItem(ECBlockRegistry.GNEISS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> GNEISS_PRESSURE_PLATE_ITEM = ITEMS.register("gneiss_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.GNEISS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GNEISS_BUTTON_ITEM = ITEMS.register("gneiss_button",
+        () -> new BlockItem(ECBlockRegistry.GNEISS_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> GNEISS_COBBLESTONE_ITEM = ITEMS.register("gneiss_cobblestone",
         () -> new BlockItem(ECBlockRegistry.GNEISS_COBBLESTONE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -385,6 +391,7 @@ public class ECItemRegistry
     public static final RegistryObject<Item> JADE_WALL_ITEM = ITEMS.register("jade_wall", () -> new BlockItem(ECBlockRegistry.JADE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> JADE_PRESSURE_PLATE_ITEM = ITEMS.register("jade_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.JADE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> JADE_BUTTON_ITEM = ITEMS.register("jade_button", () -> new BlockItem(ECBlockRegistry.JADE_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> JADE_COBBLESTONE_ITEM = ITEMS.register("jade_cobblestone",
         () -> new BlockItem(ECBlockRegistry.JADE_COBBLESTONE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -474,6 +481,8 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.LARVIKITE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> LARVIKITE_PRESSURE_PLATE_ITEM = ITEMS.register("larvikite_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.LARVIKITE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LARVIKITE_BUTTON_ITEM = ITEMS.register("larvikite_button",
+        () -> new BlockItem(ECBlockRegistry.LARVIKITE_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> LARVIKITE_COBBLESTONE_ITEM = ITEMS.register("larvikite_cobblestone",
         () -> new BlockItem(ECBlockRegistry.LARVIKITE_COBBLESTONE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -558,7 +567,6 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.LARVIKITE_ORNAMENT_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     // Andesite
-
     public static final RegistryObject<Item> SMOOTH_ANDESITE_ITEM = ITEMS.register("smooth_andesite",
         () -> new BlockItem(ECBlockRegistry.SMOOTH_ANDESITE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> SMOOTH_ANDESITE_STAIRS_ITEM = ITEMS.register("smooth_andesite_stairs",
@@ -569,6 +577,8 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.SMOOTH_ANDESITE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> SMOOTH_ANDESITE_PRESSURE_PLATE_ITEM = ITEMS.register("smooth_andesite_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.SMOOTH_ANDESITE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ANDESITE_BUTTON_ITEM = ITEMS.register("andesite_button",
+        () -> new BlockItem(ECBlockRegistry.ANDESITE_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> ANDESITE_PAVING_ITEM = ITEMS.register("andesite_paving",
         () -> new BlockItem(ECBlockRegistry.ANDESITE_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -630,6 +640,8 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.SMOOTH_DIORITE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> SMOOTH_DIORITE_PRESSURE_PLATE_ITEM = ITEMS.register("smooth_diorite_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.SMOOTH_DIORITE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DIORITE_BUTTON_ITEM = ITEMS.register("diorite_button",
+        () -> new BlockItem(ECBlockRegistry.DIORITE_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> DIORITE_PAVING_ITEM = ITEMS.register("diorite_paving",
         () -> new BlockItem(ECBlockRegistry.DIORITE_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -691,6 +703,8 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.SMOOTH_GRANITE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> SMOOTH_GRANITE_PRESSURE_PLATE_ITEM = ITEMS.register("smooth_granite_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.SMOOTH_GRANITE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRANITE_BUTTON_ITEM = ITEMS.register("granite_button",
+        () -> new BlockItem(ECBlockRegistry.GRANITE_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> GRANITE_PAVING_ITEM = ITEMS.register("granite_paving",
         () -> new BlockItem(ECBlockRegistry.GRANITE_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));

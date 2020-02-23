@@ -33,8 +33,7 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.BASALT_WALL.get(), modLoc("block/basalt"));
         pressurePlateBlock(ECBlockRegistry.BASALT_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/basalt_pressure_plate_down"));
-        buttonBlock(ECBlockRegistry.BASALT_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_button"), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_button_pressed"),
-            180);
+        buttonBlock(ECBlockRegistry.BASALT_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_button"), new UncheckedModelFile(ECConstants.MODID + ":block/basalt_button_pressed"), 180);
 
         simpleBlock(ECBlockRegistry.BASALT_COBBLESTONE.get());
         slabBlock(ECBlockRegistry.BASALT_COBBLESTONE_SLAB.get(), modLoc("block/basalt_cobblestone"), modLoc("block/basalt_cobblestone"));
@@ -96,6 +95,7 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.SLATE_WALL.get(), modLoc("block/slate"));
         pressurePlateBlock(ECBlockRegistry.SLATE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/slate_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.SLATE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/slate_button"), new UncheckedModelFile(ECConstants.MODID + ":block/slate_button_pressed"), 180);
 
         simpleBlock(ECBlockRegistry.SLATE_COBBLESTONE.get());
         slabBlock(ECBlockRegistry.SLATE_COBBLESTONE_SLAB.get(), modLoc("block/slate_cobblestone"), modLoc("block/slate_cobblestone"));
@@ -157,6 +157,7 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.MARBLE_WALL.get(), modLoc("block/marble"));
         pressurePlateBlock(ECBlockRegistry.MARBLE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/marble_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/marble_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.MARBLE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/marble_button"), new UncheckedModelFile(ECConstants.MODID + ":block/marble_button_pressed"), 180);
 
         simpleBlock(ECBlockRegistry.MARBLE_COBBLESTONE.get());
         slabBlock(ECBlockRegistry.MARBLE_COBBLESTONE_SLAB.get(), modLoc("block/marble_cobblestone"), modLoc("block/marble_cobblestone"));
@@ -218,6 +219,7 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.GNEISS_WALL.get(), modLoc("block/gneiss"));
         pressurePlateBlock(ECBlockRegistry.GNEISS_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.GNEISS_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_button"), new UncheckedModelFile(ECConstants.MODID + ":block/gneiss_button_pressed"), 180);
 
         simpleBlock(ECBlockRegistry.GNEISS_COBBLESTONE.get());
         slabBlock(ECBlockRegistry.GNEISS_COBBLESTONE_SLAB.get(), modLoc("block/gneiss_cobblestone"), modLoc("block/gneiss_cobblestone"));
@@ -279,6 +281,7 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.JADE_WALL.get(), modLoc("block/jade"));
         pressurePlateBlock(ECBlockRegistry.JADE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/jade_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/jade_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.JADE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/jade_button"), new UncheckedModelFile(ECConstants.MODID + ":block/jade_button_pressed"), 180);
 
         simpleBlock(ECBlockRegistry.JADE_COBBLESTONE.get());
         slabBlock(ECBlockRegistry.JADE_COBBLESTONE_SLAB.get(), modLoc("block/jade_cobblestone"), modLoc("block/jade_cobblestone"));
@@ -340,6 +343,8 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.LARVIKITE_WALL.get(), modLoc("block/larvikite"));
         pressurePlateBlock(ECBlockRegistry.LARVIKITE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.LARVIKITE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_button"), new UncheckedModelFile(ECConstants.MODID + ":block/larvikite_button_pressed"),
+            180);
 
         simpleBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE.get());
         slabBlock(ECBlockRegistry.LARVIKITE_COBBLESTONE_SLAB.get(), modLoc("block/larvikite_cobblestone"), modLoc("block/larvikite_cobblestone"));
@@ -401,6 +406,8 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.SMOOTH_ANDESITE_WALL.get(), modLoc("block/smooth_andesite"));
         pressurePlateBlock(ECBlockRegistry.SMOOTH_ANDESITE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_andesite_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/smooth_andesite_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.ANDESITE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/andesite_button"), new UncheckedModelFile(ECConstants.MODID + ":block/andesite_button_pressed"),
+            180);
 
         simpleBlock(ECBlockRegistry.ANDESITE_PAVING.get());
         slabBlock(ECBlockRegistry.ANDESITE_PAVING_SLAB.get(), modLoc("block/andesite_paving"), modLoc("block/andesite_paving"));
@@ -441,6 +448,7 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.SMOOTH_DIORITE_WALL.get(), modLoc("block/smooth_diorite"));
         pressurePlateBlock(ECBlockRegistry.SMOOTH_DIORITE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_diorite_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/smooth_diorite_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.DIORITE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/diorite_button"), new UncheckedModelFile(ECConstants.MODID + ":block/diorite_button_pressed"), 180);
 
         simpleBlock(ECBlockRegistry.DIORITE_PAVING.get());
         slabBlock(ECBlockRegistry.DIORITE_PAVING_SLAB.get(), modLoc("block/diorite_paving"), modLoc("block/diorite_paving"));
@@ -481,6 +489,7 @@ public class ECBlockStates extends BaseBlockStates
         wallBlock(ECBlockRegistry.SMOOTH_GRANITE_WALL.get(), modLoc("block/smooth_granite"));
         pressurePlateBlock(ECBlockRegistry.SMOOTH_GRANITE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_granite_pressure_plate"),
             new UncheckedModelFile(ECConstants.MODID + ":block/smooth_granite_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.GRANITE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/granite_button"), new UncheckedModelFile(ECConstants.MODID + ":block/granite_button_pressed"), 180);
 
         simpleBlock(ECBlockRegistry.GRANITE_PAVING.get());
         slabBlock(ECBlockRegistry.GRANITE_PAVING_SLAB.get(), modLoc("block/granite_paving"), modLoc("block/granite_paving"));
@@ -531,7 +540,7 @@ public class ECBlockStates extends BaseBlockStates
     }
 
     /**
-     * Creates a blockstate file for the modular table blocks (noraml and fancy)
+     * Creates a blockstate file for the modular table blocks (normal and fancy)
      */
     protected void tableBlock(Block block)
     {

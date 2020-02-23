@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:marble_cobblestone"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:marble_cobblestone_slab",
+    "count": 6
+  }
+}

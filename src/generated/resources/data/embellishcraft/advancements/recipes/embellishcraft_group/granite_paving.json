@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:granite_paving"
+    ]
+  },
+  "criteria": {
+    "has_polished_granite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:polished_granite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:granite_paving"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_granite",
+      "has_the_recipe"
+    ]
+  ]
+}

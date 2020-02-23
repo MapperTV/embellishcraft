@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:gneiss_ornament"
+    ]
+  },
+  "criteria": {
+    "has_polished_gneiss_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:polished_gneiss_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:gneiss_ornament"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_gneiss_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

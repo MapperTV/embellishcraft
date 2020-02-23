@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:polished_jade"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:smooth_jade"
+  }
+}

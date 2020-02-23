@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ii",
+    "ii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:larvikite_paving"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:larvikite_tiles",
+    "count": 4
+  }
+}

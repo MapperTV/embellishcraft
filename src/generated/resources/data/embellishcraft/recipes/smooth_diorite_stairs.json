@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:smooth_diorite"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:smooth_diorite_stairs",
+    "count": 4
+  }
+}

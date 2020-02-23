@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:jade_from_cobblestone_smelting"
+    ]
+  },
+  "criteria": {
+    "has_jade_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:jade_cobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:jade_from_cobblestone_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jade_cobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}

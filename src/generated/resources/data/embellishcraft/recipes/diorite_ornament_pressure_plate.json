@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:diorite_ornament"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:diorite_ornament_pressure_plate"
+  }
+}

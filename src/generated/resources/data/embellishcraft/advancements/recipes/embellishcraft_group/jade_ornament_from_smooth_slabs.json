@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:jade_ornament_from_smooth_slabs"
+    ]
+  },
+  "criteria": {
+    "has_smooth_jade_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_jade_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:jade_ornament_from_smooth_slabs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_jade_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

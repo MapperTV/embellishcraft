@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:smooth_diorite_stairs"
+    ]
+  },
+  "criteria": {
+    "has_smooth_diorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_diorite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:smooth_diorite_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_diorite",
+      "has_the_recipe"
+    ]
+  ]
+}

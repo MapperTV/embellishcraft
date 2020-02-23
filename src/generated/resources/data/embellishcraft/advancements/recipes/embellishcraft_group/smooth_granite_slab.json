@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:smooth_granite_slab"
+    ]
+  },
+  "criteria": {
+    "has_smooth_granite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_granite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:smooth_granite_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_granite",
+      "has_the_recipe"
+    ]
+  ]
+}

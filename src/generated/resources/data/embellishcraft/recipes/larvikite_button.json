@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:larvikite"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:larvikite_button"
+  }
+}

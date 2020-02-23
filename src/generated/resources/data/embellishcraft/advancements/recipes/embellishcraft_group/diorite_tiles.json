@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:diorite_tiles"
+    ]
+  },
+  "criteria": {
+    "has_diorite_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:diorite_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:diorite_tiles"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_diorite_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

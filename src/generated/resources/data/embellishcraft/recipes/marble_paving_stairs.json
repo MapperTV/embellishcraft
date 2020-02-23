@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:marble_paving"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:marble_paving_stairs",
+    "count": 4
+  }
+}

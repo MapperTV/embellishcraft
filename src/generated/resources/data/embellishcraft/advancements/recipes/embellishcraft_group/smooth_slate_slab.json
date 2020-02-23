@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:smooth_slate_slab"
+    ]
+  },
+  "criteria": {
+    "has_smooth_slate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_slate"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:smooth_slate_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_slate",
+      "has_the_recipe"
+    ]
+  ]
+}

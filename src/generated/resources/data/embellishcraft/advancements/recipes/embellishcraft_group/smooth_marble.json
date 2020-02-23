@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:smooth_marble"
+    ]
+  },
+  "criteria": {
+    "has_polished_marble": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:polished_marble"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:smooth_marble"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_marble",
+      "has_the_recipe"
+    ]
+  ]
+}

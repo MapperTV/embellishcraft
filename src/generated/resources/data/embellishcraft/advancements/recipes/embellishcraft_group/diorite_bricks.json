@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:diorite_bricks"
+    ]
+  },
+  "criteria": {
+    "has_smooth_diorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_diorite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:diorite_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_diorite",
+      "has_the_recipe"
+    ]
+  ]
+}

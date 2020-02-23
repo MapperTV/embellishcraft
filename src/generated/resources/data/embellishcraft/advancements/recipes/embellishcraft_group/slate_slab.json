@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:slate_slab"
+    ]
+  },
+  "criteria": {
+    "has_slate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:slate"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:slate_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_slate",
+      "has_the_recipe"
+    ]
+  ]
+}
