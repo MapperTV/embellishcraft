@@ -46,18 +46,6 @@ public class ECBlocks
     public static final Block OLD_BRICKS_WALL = null;
     public static final Block OLD_BRICKS_PRESSURE_PLATE = null;
 
-    // public static final Block SANDSTONE_BRICKS = null;
-    // public static final Block SANDSTONE_BRICKS_STAIRS = null;
-    // public static final Block SANDSTONE_BRICKS_SLAB = null;
-    // public static final Block SANDSTONE_BRICKS_WALL = null;
-    // public static final Block SANDSTONE_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block TERRACOTTA_BRICKS = null;
-    public static final Block TERRACOTTA_BRICKS_STAIRS = null;
-    public static final Block TERRACOTTA_BRICKS_SLAB = null;
-    public static final Block TERRACOTTA_BRICKS_WALL = null;
-    public static final Block TERRACOTTA_BRICKS_PRESSURE_PLATE = null;
-
     public static final Block WEARED_BRICKS = null;
     public static final Block WEARED_BRICKS_STAIRS = null;
     public static final Block WEARED_BRICKS_SLAB = null;
@@ -77,18 +65,6 @@ public class ECBlocks
     public static final Block OLD_LARGE_BRICKS_SLAB = null;
     public static final Block OLD_LARGE_BRICKS_WALL = null;
     public static final Block OLD_LARGE_BRICKS_PRESSURE_PLATE = null;
-
-    // public static final Block SANDSTONE_LARGE_BRICKS = null;
-    // public static final Block SANDSTONE_LARGE_BRICKS_STAIRS = null;
-    // public static final Block SANDSTONE_LARGE_BRICKS_SLAB = null;
-    // public static final Block SANDSTONE_LARGE_BRICKS_WALL = null;
-    // public static final Block SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block TERRACOTTA_LARGE_BRICKS = null;
-    public static final Block TERRACOTTA_LARGE_BRICKS_STAIRS = null;
-    public static final Block TERRACOTTA_LARGE_BRICKS_SLAB = null;
-    public static final Block TERRACOTTA_LARGE_BRICKS_WALL = null;
-    public static final Block TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE = null;
 
     public static final Block WEARED_LARGE_BRICKS = null;
     public static final Block WEARED_LARGE_BRICKS_STAIRS = null;
@@ -609,16 +585,12 @@ public class ECBlocks
 
         RegistryUtils.createBlockWithVariants(event, "dark_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "old_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        // RegistryUtils.createBlockWithVariants(event, "sandstone_bricks", true, true, true, true, Material.ROCK, MaterialColor.SAND, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "terracotta_bricks", true, true, true, true, Material.ROCK, MaterialColor.ADOBE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "weared_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
 
         // Large bricks
 
         RegistryUtils.createBlockWithVariants(event, "dark_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "old_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        // RegistryUtils.createBlockWithVariants(event, "sandstone_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.SAND, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "terracotta_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.ADOBE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
         RegistryUtils.createBlockWithVariants(event, "weared_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
 
         // Paving
@@ -831,10 +803,6 @@ public class ECBlocks
 
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_BRICKS, DARK_BRICKS_STAIRS, DARK_BRICKS_SLAB, DARK_BRICKS_WALL, DARK_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_BRICKS, OLD_BRICKS_STAIRS, OLD_BRICKS_SLAB, OLD_BRICKS_WALL, OLD_BRICKS_PRESSURE_PLATE);
-        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_BRICKS, SANDSTONE_BRICKS_STAIRS, SANDSTONE_BRICKS_SLAB, SANDSTONE_BRICKS_WALL,
-        // SANDSTONE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_BRICKS, TERRACOTTA_BRICKS_STAIRS, TERRACOTTA_BRICKS_SLAB, TERRACOTTA_BRICKS_WALL,
-            TERRACOTTA_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_BRICKS, WEARED_BRICKS_STAIRS, WEARED_BRICKS_SLAB, WEARED_BRICKS_WALL, WEARED_BRICKS_PRESSURE_PLATE);
 
         // Large bricks
@@ -842,11 +810,6 @@ public class ECBlocks
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_LARGE_BRICKS, DARK_LARGE_BRICKS_STAIRS, DARK_LARGE_BRICKS_SLAB, DARK_LARGE_BRICKS_WALL,
             DARK_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_LARGE_BRICKS, OLD_LARGE_BRICKS_STAIRS, OLD_LARGE_BRICKS_SLAB, OLD_LARGE_BRICKS_WALL, OLD_LARGE_BRICKS_PRESSURE_PLATE);
-        // RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SANDSTONE_LARGE_BRICKS, SANDSTONE_LARGE_BRICKS_STAIRS, SANDSTONE_LARGE_BRICKS_SLAB,
-        // SANDSTONE_LARGE_BRICKS_WALL,
-        // SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, TERRACOTTA_LARGE_BRICKS, TERRACOTTA_LARGE_BRICKS_STAIRS, TERRACOTTA_LARGE_BRICKS_SLAB, TERRACOTTA_LARGE_BRICKS_WALL,
-            TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_LARGE_BRICKS, WEARED_LARGE_BRICKS_STAIRS, WEARED_LARGE_BRICKS_SLAB, WEARED_LARGE_BRICKS_WALL,
             WEARED_LARGE_BRICKS_PRESSURE_PLATE);
 

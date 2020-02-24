@@ -34,6 +34,23 @@ public class ECBlockModels extends BlockModelProvider
 
         buildMcSandstone("sandstone");
         buildMcSandstone("red_sandstone");
+
+        // Terracotta
+        buildWall("terracotta", mcLoc("block/terracotta"));
+        buildWall("polished_terracotta", modLoc("block/polished_terracotta"));
+        buildWall("terracotta_paving", modLoc("block/terracotta_paving"));
+        buildWall("terracotta_tiles", modLoc("block/terracotta_tiles"));
+        buildWall("terracotta_bricks", modLoc("block/terracotta_bricks"));
+        buildWall("terracotta_large_bricks", modLoc("block/terracotta_large_bricks"));
+        buildButton("terracotta", mcLoc("block/terracotta"));
+
+        buildPressure("terracotta", mcLoc("block/terracotta"));
+        buildPressure("polished_terracotta", modLoc("block/polished_terracotta"));
+        buildPressure("terracotta_paving", modLoc("block/terracotta_paving"));
+        buildPressure("terracotta_tiles", modLoc("block/terracotta_tiles"));
+        buildPressure("terracotta_bricks", modLoc("block/terracotta_bricks"));
+        buildPressure("terracotta_large_bricks", modLoc("block/terracotta_large_bricks"));
+
     }
 
     private void buildWall(String name, ResourceLocation texture)

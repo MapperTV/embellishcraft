@@ -1109,5 +1109,83 @@ public class ECRecipes extends RecipeProvider
             "has_red_sandstone_large_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get()).patternLine("##").addCriterion(
             "has_red_sandstone_large_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get())).build(consumer);
+
+        // Terracotta
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_SLAB.get(), 6).patternLine("iii").key('i', Blocks.TERRACOTTA).addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(Blocks.TERRACOTTA).patternLine("i").patternLine("i").key('i', ECBlockRegistry.TERRACOTTA_SLAB.get()).addCriterion("has_terracotta_slab",
+            this.hasItem(ECBlockRegistry.TERRACOTTA_SLAB.get())).build(consumer, ECConstants.MODID + ":terracotta_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_STAIRS.get(), 4).key('#', Blocks.TERRACOTTA).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion("has_terracotta",
+            this.hasItem(Blocks.TERRACOTTA)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_WALL.get(), 6).key('#', Blocks.TERRACOTTA).patternLine("###").patternLine("###").addCriterion("has_terracotta",
+            this.hasItem(Blocks.TERRACOTTA)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get()).key('#', Blocks.TERRACOTTA).patternLine("##").addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(
+            consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.TERRACOTTA_BUTTON.get()).addIngredient(Blocks.TERRACOTTA).addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_TERRACOTTA.get()).patternLine("i").patternLine("i").key('i', Blocks.TERRACOTTA).addCriterion("has_terracotta",
+            this.hasItem(Blocks.TERRACOTTA)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.POLISHED_TERRACOTTA.get()).addCriterion("has_polished_terracotta",
+            this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_TERRACOTTA.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get()).addCriterion(
+            "has_polished_terracotta_slab", this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get())).build(consumer, ECConstants.MODID + ":polished_terracotta_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS.get(), 4).key('#', ECBlockRegistry.POLISHED_TERRACOTTA.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_polished_terracotta", this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_TERRACOTTA_WALL.get(), 6).key('#', ECBlockRegistry.POLISHED_TERRACOTTA.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_polished_terracotta", this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.POLISHED_TERRACOTTA.get()).patternLine("##").addCriterion("has_polished_terracotta",
+            this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_PAVING.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.POLISHED_TERRACOTTA.get()).addCriterion(
+            "has_polished_terracotta", this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_PAVING_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.TERRACOTTA_PAVING.get()).addCriterion("has_terracotta_paving",
+            this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_PAVING.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.TERRACOTTA_PAVING_SLAB.get()).addCriterion(
+            "has_terracotta_paving_slab", this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING_SLAB.get())).build(consumer, ECConstants.MODID + ":terracotta_paving_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_PAVING_STAIRS.get(), 4).key('#', ECBlockRegistry.TERRACOTTA_PAVING.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_terracotta_paving", this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_PAVING_WALL.get(), 6).key('#', ECBlockRegistry.TERRACOTTA_PAVING.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_terracotta_paving", this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.TERRACOTTA_PAVING.get()).patternLine("##").addCriterion("has_terracotta_paving",
+            this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_TILES.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.TERRACOTTA_PAVING.get()).addCriterion("has_terracotta_paving",
+            this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.TERRACOTTA_TILES.get()).addCriterion("has_terracotta_tiles",
+            this.hasItem(ECBlockRegistry.TERRACOTTA_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.TERRACOTTA_TILES_SLAB.get()).addCriterion("has_terracotta_tiles_slab",
+            this.hasItem(ECBlockRegistry.TERRACOTTA_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":terracotta_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.TERRACOTTA_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_terracotta_tiles", this.hasItem(ECBlockRegistry.TERRACOTTA_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_TILES_WALL.get(), 6).key('#', ECBlockRegistry.TERRACOTTA_TILES.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_terracotta_tiles", this.hasItem(ECBlockRegistry.TERRACOTTA_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.TERRACOTTA_TILES.get()).patternLine("##").addCriterion("has_terracotta_tiles",
+            this.hasItem(ECBlockRegistry.TERRACOTTA_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_BRICKS.get(), 4).patternLine("ii").patternLine("ii").key('i', Blocks.TERRACOTTA).addCriterion("has_terracotta",
+            this.hasItem(Blocks.TERRACOTTA)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.TERRACOTTA_BRICKS.get()).addCriterion("has_terracotta_bricks",
+            this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_BRICKS.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get()).addCriterion(
+            "has_terracotta_bricks_slab", this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get())).build(consumer, ECConstants.MODID + ":terracotta_bricks_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS.get(), 4).key('#', ECBlockRegistry.TERRACOTTA_BRICKS.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_terracotta_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get(), 6).key('#', ECBlockRegistry.TERRACOTTA_BRICKS.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_terracotta_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.TERRACOTTA_BRICKS.get()).patternLine("##").addCriterion("has_terracotta_bricks",
+            this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.TERRACOTTA_BRICKS.get()).addCriterion(
+            "has_terracotta_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()).addCriterion(
+            "has_terracotta_large_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get()).addCriterion(
+            "has_terracotta_large_bricks_slab", this.hasItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get())).build(consumer, ECConstants.MODID + ":terracotta_large_bricks_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get(), 4).key('#', ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_terracotta_large_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), 6).key('#', ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_terracotta_large_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()).patternLine("##").addCriterion(
+            "has_terracotta_large_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get())).build(consumer);
     }
 }

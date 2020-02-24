@@ -516,6 +516,43 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL, "Red Sandstone Large Bricks Wall");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Red Sandstone Large Bricks Pressure Plate");
 
+                // Terracotta
+                addBlock(ECBlockRegistry.TERRACOTTA_SLAB, "Terracotta Slab");
+                addBlock(ECBlockRegistry.TERRACOTTA_STAIRS, "Terracotta Stairs");
+                addBlock(ECBlockRegistry.TERRACOTTA_WALL, "Terracotta Wall");
+                addBlock(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE, "Terracotta Pressure Plate");
+                addBlock(ECBlockRegistry.TERRACOTTA_BUTTON, "Terracotta Button");
+
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA, "Polished Terracotta");
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA_SLAB, "Polished Terracotta Slab");
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS, "Polished Terracotta Stairs");
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA_WALL, "Polished Terracotta Wall");
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE, "Polished Terracotta Pressure Plate");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING, "Terracotta Paving");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_SLAB, "Terracotta Paving Slab");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STAIRS, "Terracotta Paving Stairs");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_WALL, "Terracotta Paving Wall");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_PRESSURE_PLATE, "Terracotta Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES, "Terracotta Tiles");
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES_SLAB, "Terracotta Tiles Slab");
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES_STAIRS, "Terracotta Tiles Stairs");
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES_WALL, "Terracotta Tiles Wall");
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES_PRESSURE_PLATE, "Terracotta Tiles Pressure Plate");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS, "Terracotta Bricks");
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS_SLAB, "Terracotta Bricks Slab");
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS, "Terracotta Bricks Stairs");
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS_WALL, "Terracotta Bricks Wall");
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE, "Terracotta Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS, "Terracotta Large Bricks");
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB, "Terracotta Large Bricks Slab");
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS, "Terracotta Large Bricks Stairs");
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL, "Terracotta Large Bricks Wall");
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE, "Terracotta Large Bricks Pressure Plate");
+
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
             case "fr_fr":
@@ -1016,6 +1053,43 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS, "Escaliers en briques épaisses de grès rouge");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL, "Muret en briques épaisses de grès rouge");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Dalle de pression en briques épaisses de grès rouge");
+
+                // Basalt
+                addBlock(ECBlockRegistry.TERRACOTTA_SLAB, "Dalle en terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_STAIRS, "Escalier en terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_WALL, "Muret en terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE, "Plaque de pression en terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_BUTTON, "Bouton en terre cuite");
+
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA, "Terre cuite polie");
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA_SLAB, "Dalle en terre cuite polie");
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS, "Escalier en terre cuite polie");
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA_WALL, "Muret en terre cuite polie");
+                addBlock(ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE, "Plaque de pression en terre cuite polie");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING, "Pavés en terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_SLAB, "Dalle en pavé de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STAIRS, "Escalier en pavé de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_WALL, "Muret en pavé de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_PRESSURE_PLATE, "Plaque de pression en pavé de terre cuite");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES, "Carrelage en terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES_SLAB, "Dalle en carrelage de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES_STAIRS, "Escalier en carrelage de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES_WALL, "Muret en carrelage de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de terre cuite");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS, "Briques en terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS_SLAB, "Dalle en briques de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS, "Escalier en briques de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS_WALL, "Muret en briques de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques de terre cuite");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS, "Briques épaisses en terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB, "Dalle en briques épaisses de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL, "Muret en briques épaisses de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de terre cuite");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;

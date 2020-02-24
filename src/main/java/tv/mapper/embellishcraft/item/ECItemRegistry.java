@@ -883,6 +883,73 @@ public class ECItemRegistry
     public static final RegistryObject<Item> RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("red_sandstone_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    // Terracotta
+    public static final RegistryObject<Item> TERRACOTTA_STAIRS_ITEM = ITEMS.register("terracotta_stairs",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_SLAB_ITEM = ITEMS.register("terracotta_slab",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_WALL_ITEM = ITEMS.register("terracotta_wall",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_PRESSURE_PLATE_ITEM = ITEMS.register("terracotta_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_BUTTON_ITEM = ITEMS.register("terracotta_button",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> POLISHED_TERRACOTTA_ITEM = ITEMS.register("polished_terracotta",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_TERRACOTTA.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> POLISHED_TERRACOTTA_STAIRS_ITEM = ITEMS.register("polished_terracotta_stairs",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> POLISHED_TERRACOTTA_SLAB_ITEM = ITEMS.register("polished_terracotta_slab",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> POLISHED_TERRACOTTA_WALL_ITEM = ITEMS.register("polished_terracotta_wall",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_TERRACOTTA_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> POLISHED_TERRACOTTA_PRESSURE_PLATE_ITEM = ITEMS.register("polished_terracotta_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_ITEM = ITEMS.register("terracotta_paving",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_STAIRS_ITEM = ITEMS.register("terracotta_paving_stairs",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_SLAB_ITEM = ITEMS.register("terracotta_paving_slab",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_WALL_ITEM = ITEMS.register("terracotta_paving_wall",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_PRESSURE_PLATE_ITEM = ITEMS.register("terracotta_paving_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> TERRACOTTA_TILES_ITEM = ITEMS.register("terracotta_tiles",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_TILES_STAIRS_ITEM = ITEMS.register("terracotta_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_TILES_SLAB_ITEM = ITEMS.register("terracotta_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_TILES_WALL_ITEM = ITEMS.register("terracotta_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("terracotta_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> TERRACOTTA_BRICKS_ITEM = ITEMS.register("terracotta_bricks",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_BRICKS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_BRICKS_STAIRS_ITEM = ITEMS.register("terracotta_bricks_stairs",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_BRICKS_SLAB_ITEM = ITEMS.register("terracotta_bricks_slab",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_BRICKS_WALL_ITEM = ITEMS.register("terracotta_bricks_wall",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("terracotta_bricks_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> TERRACOTTA_LARGE_BRICKS_ITEM = ITEMS.register("terracotta_large_bricks",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_LARGE_BRICKS_STAIRS_ITEM = ITEMS.register("terracotta_large_bricks_stairs",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_LARGE_BRICKS_SLAB_ITEM = ITEMS.register("terracotta_large_bricks_slab",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_LARGE_BRICKS_WALL_ITEM = ITEMS.register("terracotta_large_bricks_wall",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("terracotta_large_bricks_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

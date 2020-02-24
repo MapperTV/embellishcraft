@@ -73,6 +73,12 @@
     "embellishcraft:red_sandstone_paving_slab",
     "embellishcraft:red_sandstone_tiles_slab",
     "embellishcraft:red_sandstone_bricks_slab",
-    "embellishcraft:red_sandstone_large_bricks_slab"
+    "embellishcraft:red_sandstone_large_bricks_slab",
+    "embellishcraft:terracotta_slab",
+    "embellishcraft:polished_terracotta_slab",
+    "embellishcraft:terracotta_paving_slab",
+    "embellishcraft:terracotta_tiles_slab",
+    "embellishcraft:terracotta_bricks_slab",
+    "embellishcraft:terracotta_large_bricks_slab"
   ]
 }

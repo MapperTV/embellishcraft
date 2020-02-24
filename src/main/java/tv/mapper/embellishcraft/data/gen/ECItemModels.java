@@ -35,6 +35,15 @@ public class ECItemModels extends BaseItemModels
 
         registerSandstone("sandstone");
         registerSandstone("red_sandstone");
+
+        // Terracotta
+        registerBlockBasics("terracotta", false, true, true, true, true, false);
+        getBuilder("terracotta_button").parent(new UncheckedModelFile(modid + ":block/terracotta_button_inventory"));
+        registerBlockBasics("polished_terracotta", true, true, true, true, true, false);
+        registerBlockBasics("terracotta_paving", true, true, true, true, true, false);
+        registerBlockBasics("terracotta_tiles", true, true, true, true, true, false);
+        registerBlockBasics("terracotta_bricks", true, true, true, true, true, false);
+        registerBlockBasics("terracotta_large_bricks", true, true, true, true, true, false);
     }
 
     private void registerStone(String name)

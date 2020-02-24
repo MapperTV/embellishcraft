@@ -474,7 +474,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get()));
         lootTables.put(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get()));
         lootTables.put(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get()));
-        
+
         // Red Sandstone
         lootTables.put(ECBlockRegistry.RED_SANDSTONE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_BUTTON.get()));
 
@@ -510,5 +510,43 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get()));
         lootTables.put(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get()));
         lootTables.put(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get()));
+
+        // Terracotta
+        lootTables.put(ECBlockRegistry.TERRACOTTA_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_SLAB.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_WALL.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_BUTTON.get()));
+
+        lootTables.put(ECBlockRegistry.POLISHED_TERRACOTTA.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_TERRACOTTA.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_TERRACOTTA_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_TERRACOTTA_WALL.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.TERRACOTTA_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_PAVING.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_PAVING_SLAB.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_PAVING_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_PAVING_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_PAVING_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_PAVING_WALL.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_PAVING_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_PAVING_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.TERRACOTTA_TILES.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_TILES.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_TILES_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_TILES_SLAB.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_TILES_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_TILES_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_TILES_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_TILES_WALL.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_TILES_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_TILES_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.TERRACOTTA_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_BRICKS.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get()));
+        lootTables.put(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get()));
+
     }
 }

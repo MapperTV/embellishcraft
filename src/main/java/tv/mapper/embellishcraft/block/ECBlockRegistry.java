@@ -923,7 +923,7 @@ public class ECBlockRegistry
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.DIRT).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
- // Sandstone
+    // Sandstone
     public static final RegistryObject<CustomButtonBlock> SANDSTONE_BUTTON = BLOCKS.register("sandstone_button",
         () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
 
@@ -997,8 +997,8 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE = BLOCKS.register("sandstone_large_bricks_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.SAND).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
-    
- // Red Sandstone
+
+    // Red Sandstone
     public static final RegistryObject<CustomButtonBlock> RED_SANDSTONE_BUTTON = BLOCKS.register("red_sandstone_button",
         () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
 
@@ -1071,6 +1071,85 @@ public class ECBlockRegistry
         () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE = BLOCKS.register("red_sandstone_large_bricks_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.SAND).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    // Terracotta
+    public static final RegistryObject<CustomStairsBlock> TERRACOTTA_STAIRS = BLOCKS.register("terracotta_stairs",
+        () -> new CustomStairsBlock(() -> Blocks.TERRACOTTA.getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> TERRACOTTA_SLAB = BLOCKS.register("terracotta_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> TERRACOTTA_WALL = BLOCKS.register("terracotta_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> TERRACOTTA_PRESSURE_PLATE = BLOCKS.register("terracotta_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomButtonBlock> TERRACOTTA_BUTTON = BLOCKS.register("terracotta_button",
+        () -> new CustomButtonBlock(false, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE)));
+
+    public static final RegistryObject<CustomBlock> POLISHED_TERRACOTTA = BLOCKS.register("polished_terracotta",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> POLISHED_TERRACOTTA_STAIRS = BLOCKS.register("polished_terracotta_stairs",
+        () -> new CustomStairsBlock(() -> POLISHED_TERRACOTTA.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> POLISHED_TERRACOTTA_SLAB = BLOCKS.register("polished_terracotta_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> POLISHED_TERRACOTTA_WALL = BLOCKS.register("polished_terracotta_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> POLISHED_TERRACOTTA_PRESSURE_PLATE = BLOCKS.register("polished_terracotta_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> TERRACOTTA_PAVING = BLOCKS.register("terracotta_paving",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> TERRACOTTA_PAVING_STAIRS = BLOCKS.register("terracotta_paving_stairs",
+        () -> new CustomStairsBlock(() -> TERRACOTTA_PAVING.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> TERRACOTTA_PAVING_SLAB = BLOCKS.register("terracotta_paving_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> TERRACOTTA_PAVING_WALL = BLOCKS.register("terracotta_paving_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> TERRACOTTA_PAVING_PRESSURE_PLATE = BLOCKS.register("terracotta_paving_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> TERRACOTTA_TILES = BLOCKS.register("terracotta_tiles",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> TERRACOTTA_TILES_STAIRS = BLOCKS.register("terracotta_tiles_stairs",
+        () -> new CustomStairsBlock(() -> TERRACOTTA_TILES.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> TERRACOTTA_TILES_SLAB = BLOCKS.register("terracotta_tiles_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> TERRACOTTA_TILES_WALL = BLOCKS.register("terracotta_tiles_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> TERRACOTTA_TILES_PRESSURE_PLATE = BLOCKS.register("terracotta_tiles_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> TERRACOTTA_BRICKS = BLOCKS.register("terracotta_bricks",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> TERRACOTTA_BRICKS_STAIRS = BLOCKS.register("terracotta_bricks_stairs",
+        () -> new CustomStairsBlock(() -> TERRACOTTA_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> TERRACOTTA_BRICKS_SLAB = BLOCKS.register("terracotta_bricks_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> TERRACOTTA_BRICKS_WALL = BLOCKS.register("terracotta_bricks_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> TERRACOTTA_BRICKS_PRESSURE_PLATE = BLOCKS.register("terracotta_bricks_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> TERRACOTTA_LARGE_BRICKS = BLOCKS.register("terracotta_large_bricks",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> TERRACOTTA_LARGE_BRICKS_STAIRS = BLOCKS.register("terracotta_large_bricks_stairs",
+        () -> new CustomStairsBlock(() -> TERRACOTTA_LARGE_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> TERRACOTTA_LARGE_BRICKS_SLAB = BLOCKS.register("terracotta_large_bricks_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> TERRACOTTA_LARGE_BRICKS_WALL = BLOCKS.register("terracotta_large_bricks_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE = BLOCKS.register("terracotta_large_bricks_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 
     public static void init()

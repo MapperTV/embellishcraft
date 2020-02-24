@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ii",
+    "ii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:polished_terracotta"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:terracotta_paving",
+    "count": 4
+  }
+}

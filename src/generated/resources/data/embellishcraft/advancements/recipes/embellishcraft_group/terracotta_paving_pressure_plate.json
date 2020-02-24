@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:terracotta_paving_pressure_plate"
+    ]
+  },
+  "criteria": {
+    "has_terracotta_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:terracotta_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:terracotta_paving_pressure_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_terracotta_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

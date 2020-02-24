@@ -84,6 +84,12 @@
     "embellishcraft:red_sandstone_paving_pressure_plate",
     "embellishcraft:red_sandstone_tiles_pressure_plate",
     "embellishcraft:red_sandstone_bricks_pressure_plate",
-    "embellishcraft:red_sandstone_large_bricks_pressure_plate"
+    "embellishcraft:red_sandstone_large_bricks_pressure_plate",
+    "embellishcraft:terracotta_pressure_plate",
+    "embellishcraft:polished_terracotta_pressure_plate",
+    "embellishcraft:terracotta_paving_pressure_plate",
+    "embellishcraft:terracotta_tiles_pressure_plate",
+    "embellishcraft:terracotta_bricks_pressure_plate",
+    "embellishcraft:terracotta_large_bricks_pressure_plate"
   ]
 }
