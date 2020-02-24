@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:polished_red_sandstone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:smooth_red_sandstone"
+  }
+}

@@ -129,5 +129,14 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("sandstone_tiles", true, true, true, true, true, false);
         registerBlockBasics("sandstone_bricks", true, true, true, true, true, false);
         registerBlockBasics("sandstone_large_bricks", true, true, true, true, true, false);
+        
+        // Red Sandstone
+        getBuilder("red_sandstone_button").parent(new UncheckedModelFile(modid + ":block/red_sandstone_button_inventory"));
+        registerBlockBasics("smooth_red_sandstone", false, false, false, true, true, false);
+        registerBlockBasics("polished_red_sandstone", true, true, true, true, true, false);
+        registerBlockBasics("red_sandstone_paving", true, true, true, true, true, false);
+        registerBlockBasics("red_sandstone_tiles", true, true, true, true, true, false);
+        registerBlockBasics("red_sandstone_bricks", true, true, true, true, true, false);
+        registerBlockBasics("red_sandstone_large_bricks", true, true, true, true, true, false);
     }
 }

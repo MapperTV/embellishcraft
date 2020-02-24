@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_up",
+  "textures": {
+    "texture": "embellishcraft:block/red_sandstone_large_bricks"
+  }
+}

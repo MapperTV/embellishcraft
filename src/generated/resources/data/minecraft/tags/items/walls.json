@@ -63,6 +63,18 @@
     "embellishcraft:granite_paving_wall",
     "embellishcraft:granite_tiles_wall",
     "embellishcraft:granite_bricks_wall",
-    "embellishcraft:granite_large_bricks_wall"
+    "embellishcraft:granite_large_bricks_wall",
+    "embellishcraft:smooth_sandstone_wall",
+    "embellishcraft:polished_sandstone_wall",
+    "embellishcraft:sandstone_paving_wall",
+    "embellishcraft:sandstone_tiles_wall",
+    "embellishcraft:sandstone_bricks_wall",
+    "embellishcraft:sandstone_large_bricks_wall",
+    "embellishcraft:smooth_red_sandstone_wall",
+    "embellishcraft:polished_red_sandstone_wall",
+    "embellishcraft:red_sandstone_paving_wall",
+    "embellishcraft:red_sandstone_tiles_wall",
+    "embellishcraft:red_sandstone_bricks_wall",
+    "embellishcraft:red_sandstone_large_bricks_wall"
   ]
 }

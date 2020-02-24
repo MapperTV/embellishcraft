@@ -63,6 +63,16 @@
     "embellishcraft:granite_paving_slab",
     "embellishcraft:granite_tiles_slab",
     "embellishcraft:granite_bricks_slab",
-    "embellishcraft:granite_large_bricks_slab"
+    "embellishcraft:granite_large_bricks_slab",
+    "embellishcraft:polished_sandstone_slab",
+    "embellishcraft:sandstone_paving_slab",
+    "embellishcraft:sandstone_tiles_slab",
+    "embellishcraft:sandstone_bricks_slab",
+    "embellishcraft:sandstone_large_bricks_slab",
+    "embellishcraft:polished_red_sandstone_slab",
+    "embellishcraft:red_sandstone_paving_slab",
+    "embellishcraft:red_sandstone_tiles_slab",
+    "embellishcraft:red_sandstone_bricks_slab",
+    "embellishcraft:red_sandstone_large_bricks_slab"
   ]
 }

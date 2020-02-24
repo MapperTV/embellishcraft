@@ -438,5 +438,77 @@ public class ECLootTables extends BaseLootTableProvider
 
         lootTables.put(ECBlockRegistry.GRANITE_ORNAMENT.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GRANITE_ORNAMENT.get()));
         lootTables.put(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get()));
+
+        // Sandstone
+        lootTables.put(ECBlockRegistry.SANDSTONE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_BUTTON.get()));
+
+        lootTables.put(ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get()));
+        lootTables.put(ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.POLISHED_SANDSTONE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_SANDSTONE.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_SANDSTONE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.POLISHED_SANDSTONE_SLAB.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_SANDSTONE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_SANDSTONE_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_SANDSTONE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_SANDSTONE_WALL.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_SANDSTONE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_SANDSTONE_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.SANDSTONE_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_PAVING.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_PAVING_SLAB.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_PAVING_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_PAVING_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_PAVING_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_PAVING_WALL.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_PAVING_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_PAVING_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.SANDSTONE_TILES.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_TILES.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_TILES_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_TILES_SLAB.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_TILES_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_TILES_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_TILES_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_TILES_WALL.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_TILES_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_TILES_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.SANDSTONE_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_BRICKS.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_BRICKS_SLAB.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_BRICKS_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_BRICKS_WALL.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_BRICKS_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get()));
+        lootTables.put(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get()));
+        
+        // Red Sandstone
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_BUTTON.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_BUTTON.get()));
+
+        lootTables.put(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL.get()));
+        lootTables.put(ECBlockRegistry.SMOOTH_RED_SANDSTONE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SMOOTH_RED_SANDSTONE_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.POLISHED_RED_SANDSTONE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_RED_SANDSTONE.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_RED_SANDSTONE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.POLISHED_RED_SANDSTONE_SLAB.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_RED_SANDSTONE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_RED_SANDSTONE_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_RED_SANDSTONE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_RED_SANDSTONE_WALL.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_RED_SANDSTONE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_RED_SANDSTONE_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_PAVING.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_PAVING_SLAB.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_PAVING_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_PAVING_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_PAVING_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_PAVING_WALL.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_PAVING_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_PAVING_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_TILES.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_TILES.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_TILES_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_TILES_SLAB.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_TILES_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_TILES_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_TILES_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_TILES_WALL.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_TILES_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_TILES_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_BRICKS.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_BRICKS_SLAB.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_BRICKS_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_BRICKS_WALL.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_BRICKS_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get()));
+        lootTables.put(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get()));
     }
 }

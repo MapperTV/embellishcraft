@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:polished_sandstone"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:polished_sandstone_pressure_plate"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "side": "embellishcraft:block/sandstone_bricks",
+    "bottom": "embellishcraft:block/sandstone_bricks",
+    "top": "embellishcraft:block/sandstone_bricks"
+  }
+}

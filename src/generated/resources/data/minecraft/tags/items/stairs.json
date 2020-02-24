@@ -63,6 +63,16 @@
     "embellishcraft:granite_paving_stairs",
     "embellishcraft:granite_tiles_stairs",
     "embellishcraft:granite_bricks_stairs",
-    "embellishcraft:granite_large_bricks_stairs"
+    "embellishcraft:granite_large_bricks_stairs",
+    "embellishcraft:polished_sandstone_stairs",
+    "embellishcraft:sandstone_paving_stairs",
+    "embellishcraft:sandstone_tiles_stairs",
+    "embellishcraft:sandstone_bricks_stairs",
+    "embellishcraft:sandstone_large_bricks_stairs",
+    "embellishcraft:polished_red_sandstone_stairs",
+    "embellishcraft:red_sandstone_paving_stairs",
+    "embellishcraft:red_sandstone_tiles_stairs",
+    "embellishcraft:red_sandstone_bricks_stairs",
+    "embellishcraft:red_sandstone_large_bricks_stairs"
   ]
 }

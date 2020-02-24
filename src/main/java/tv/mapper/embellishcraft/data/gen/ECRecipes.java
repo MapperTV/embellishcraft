@@ -954,5 +954,160 @@ public class ECRecipes extends RecipeProvider
             this.hasItem(Blocks.POLISHED_GRANITE_SLAB)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.GRANITE_ORNAMENT.get()).patternLine("##").addCriterion("has_granite_ornament",
             this.hasItem(ECBlockRegistry.GRANITE_ORNAMENT.get())).build(consumer);
+
+        // Sandstone
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.SANDSTONE_BUTTON.get()).addIngredient(Blocks.SANDSTONE).addCriterion("has_sandstone", this.hasItem(Blocks.SANDSTONE)).build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.POLISHED_SANDSTONE.get()).addIngredient(Blocks.SMOOTH_SANDSTONE).addCriterion("has_smooth_sandstone", this.hasItem(Blocks.SMOOTH_SANDSTONE)).build(
+            consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_SANDSTONE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.POLISHED_SANDSTONE.get()).addCriterion("has_polished_sandstone",
+            this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_SANDSTONE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.POLISHED_SANDSTONE_SLAB.get()).addCriterion(
+            "has_polished_sandstone_slab", this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE_SLAB.get())).build(consumer, ECConstants.MODID + ":polished_sandstone_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_SANDSTONE_STAIRS.get(), 4).key('#', ECBlockRegistry.POLISHED_SANDSTONE.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_polished_sandstone", this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_SANDSTONE_WALL.get(), 6).key('#', ECBlockRegistry.POLISHED_SANDSTONE.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_polished_sandstone", this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_SANDSTONE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.POLISHED_SANDSTONE.get()).patternLine("##").addCriterion("has_polished_sandstone",
+            this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE.get())).build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(Blocks.SMOOTH_SANDSTONE).addIngredient(ECBlockRegistry.POLISHED_SANDSTONE.get()).addCriterion("has_polished_sandstone",
+            this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(Blocks.SMOOTH_SANDSTONE).patternLine("i").patternLine("i").key('i', Blocks.SMOOTH_SANDSTONE_SLAB).addCriterion("has_smooth_sandstone_slab",
+            this.hasItem(Blocks.SMOOTH_SANDSTONE_SLAB)).build(consumer, ECConstants.MODID + ":smooth_sandstone_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get(), 6).key('#', Blocks.SMOOTH_SANDSTONE).patternLine("###").patternLine("###").addCriterion("has_smooth_sandstone",
+            this.hasItem(Blocks.SMOOTH_SANDSTONE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE.get()).key('#', Blocks.SMOOTH_SANDSTONE).patternLine("##").addCriterion("has_smooth_sandstone",
+            this.hasItem(Blocks.SMOOTH_SANDSTONE)).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_PAVING.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.POLISHED_SANDSTONE.get()).addCriterion("has_polished_sandstone",
+            this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_PAVING_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.SANDSTONE_PAVING.get()).addCriterion("has_sandstone_paving",
+            this.hasItem(ECBlockRegistry.SANDSTONE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_PAVING.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SANDSTONE_PAVING_SLAB.get()).addCriterion("has_sandstone_paving_slab",
+            this.hasItem(ECBlockRegistry.SANDSTONE_PAVING_SLAB.get())).build(consumer, ECConstants.MODID + ":sandstone_paving_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_PAVING_STAIRS.get(), 4).key('#', ECBlockRegistry.SANDSTONE_PAVING.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_sandstone_paving", this.hasItem(ECBlockRegistry.SANDSTONE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_PAVING_WALL.get(), 6).key('#', ECBlockRegistry.SANDSTONE_PAVING.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_sandstone_paving", this.hasItem(ECBlockRegistry.SANDSTONE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.SANDSTONE_PAVING.get()).patternLine("##").addCriterion("has_sandstone_paving",
+            this.hasItem(ECBlockRegistry.SANDSTONE_PAVING.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_TILES.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.SANDSTONE_PAVING.get()).addCriterion("has_sandstone_paving",
+            this.hasItem(ECBlockRegistry.SANDSTONE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.SANDSTONE_TILES.get()).addCriterion("has_sandstone_tiles",
+            this.hasItem(ECBlockRegistry.SANDSTONE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SANDSTONE_TILES_SLAB.get()).addCriterion("has_sandstone_tiles_slab",
+            this.hasItem(ECBlockRegistry.SANDSTONE_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":sandstone_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.SANDSTONE_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_sandstone_tiles", this.hasItem(ECBlockRegistry.SANDSTONE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_TILES_WALL.get(), 6).key('#', ECBlockRegistry.SANDSTONE_TILES.get()).patternLine("###").patternLine("###").addCriterion("has_sandstone_tiles",
+            this.hasItem(ECBlockRegistry.SANDSTONE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.SANDSTONE_TILES.get()).patternLine("##").addCriterion("has_sandstone_tiles",
+            this.hasItem(ECBlockRegistry.SANDSTONE_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_BRICKS.get(), 4).patternLine("ii").patternLine("ii").key('i', Blocks.CUT_SANDSTONE).addCriterion("has_cut_sandstone",
+            this.hasItem(Blocks.CUT_SANDSTONE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_BRICKS_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.SANDSTONE_BRICKS.get()).addCriterion("has_sandstone_bricks",
+            this.hasItem(ECBlockRegistry.SANDSTONE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_BRICKS.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SANDSTONE_BRICKS_SLAB.get()).addCriterion("has_sandstone_bricks_slab",
+            this.hasItem(ECBlockRegistry.SANDSTONE_BRICKS_SLAB.get())).build(consumer, ECConstants.MODID + ":sandstone_bricks_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_BRICKS_STAIRS.get(), 4).key('#', ECBlockRegistry.SANDSTONE_BRICKS.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_sandstone_bricks", this.hasItem(ECBlockRegistry.SANDSTONE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_BRICKS_WALL.get(), 6).key('#', ECBlockRegistry.SANDSTONE_BRICKS.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_sandstone_bricks", this.hasItem(ECBlockRegistry.SANDSTONE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.SANDSTONE_BRICKS.get()).patternLine("##").addCriterion("has_sandstone_bricks",
+            this.hasItem(ECBlockRegistry.SANDSTONE_BRICKS.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.SANDSTONE_BRICKS.get()).addCriterion(
+            "has_sandstone_bricks", this.hasItem(ECBlockRegistry.SANDSTONE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get()).addCriterion(
+            "has_sandstone_large_bricks", this.hasItem(ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get()).addCriterion(
+            "has_sandstone_large_bricks_slab", this.hasItem(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get())).build(consumer, ECConstants.MODID + ":sandstone_large_bricks_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get(), 4).key('#', ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_sandstone_large_bricks", this.hasItem(ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get(), 6).key('#', ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_sandstone_large_bricks", this.hasItem(ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get()).patternLine("##").addCriterion(
+            "has_sandstone_large_bricks", this.hasItem(ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get())).build(consumer);
+
+        // Red Sandstone
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.RED_SANDSTONE_BUTTON.get()).addIngredient(Blocks.RED_SANDSTONE).addCriterion("has_red_sandstone", this.hasItem(Blocks.RED_SANDSTONE)).build(
+            consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.POLISHED_RED_SANDSTONE.get()).addIngredient(Blocks.SMOOTH_RED_SANDSTONE).addCriterion("has_smooth_red_sandstone",
+            this.hasItem(Blocks.SMOOTH_RED_SANDSTONE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_RED_SANDSTONE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.POLISHED_RED_SANDSTONE.get()).addCriterion(
+            "has_polished_red_sandstone", this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_RED_SANDSTONE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.POLISHED_RED_SANDSTONE_SLAB.get()).addCriterion(
+            "has_polished_red_sandstone_slab", this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE_SLAB.get())).build(consumer, ECConstants.MODID + ":polished_red_sandstone_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_RED_SANDSTONE_STAIRS.get(), 4).key('#', ECBlockRegistry.POLISHED_RED_SANDSTONE.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_polished_red_sandstone", this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_RED_SANDSTONE_WALL.get(), 6).key('#', ECBlockRegistry.POLISHED_RED_SANDSTONE.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_polished_red_sandstone", this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_RED_SANDSTONE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.POLISHED_RED_SANDSTONE.get()).patternLine("##").addCriterion(
+            "has_polished_red_sandstone", this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE.get())).build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(Blocks.SMOOTH_RED_SANDSTONE).addIngredient(ECBlockRegistry.POLISHED_RED_SANDSTONE.get()).addCriterion("has_polished_red_sandstone",
+            this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(Blocks.SMOOTH_RED_SANDSTONE).patternLine("i").patternLine("i").key('i', Blocks.SMOOTH_RED_SANDSTONE_SLAB).addCriterion("has_smooth_red_sandstone_slab",
+            this.hasItem(Blocks.SMOOTH_RED_SANDSTONE_SLAB)).build(consumer, ECConstants.MODID + ":smooth_red_sandstone_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL.get(), 6).key('#', Blocks.SMOOTH_RED_SANDSTONE).patternLine("###").patternLine("###").addCriterion("has_smooth_red_sandstone",
+            this.hasItem(Blocks.SMOOTH_RED_SANDSTONE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SMOOTH_RED_SANDSTONE_PRESSURE_PLATE.get()).key('#', Blocks.SMOOTH_RED_SANDSTONE).patternLine("##").addCriterion("has_smooth_red_sandstone",
+            this.hasItem(Blocks.SMOOTH_RED_SANDSTONE)).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_PAVING.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.POLISHED_RED_SANDSTONE.get()).addCriterion(
+            "has_polished_red_sandstone", this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_PAVING_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.RED_SANDSTONE_PAVING.get()).addCriterion("has_red_sandstone_paving",
+            this.hasItem(ECBlockRegistry.RED_SANDSTONE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_PAVING.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.RED_SANDSTONE_PAVING_SLAB.get()).addCriterion(
+            "has_red_sandstone_paving_slab", this.hasItem(ECBlockRegistry.RED_SANDSTONE_PAVING_SLAB.get())).build(consumer, ECConstants.MODID + ":red_sandstone_paving_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_PAVING_STAIRS.get(), 4).key('#', ECBlockRegistry.RED_SANDSTONE_PAVING.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_red_sandstone_paving", this.hasItem(ECBlockRegistry.RED_SANDSTONE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_PAVING_WALL.get(), 6).key('#', ECBlockRegistry.RED_SANDSTONE_PAVING.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_red_sandstone_paving", this.hasItem(ECBlockRegistry.RED_SANDSTONE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.RED_SANDSTONE_PAVING.get()).patternLine("##").addCriterion(
+            "has_red_sandstone_paving", this.hasItem(ECBlockRegistry.RED_SANDSTONE_PAVING.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_TILES.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.RED_SANDSTONE_PAVING.get()).addCriterion(
+            "has_red_sandstone_paving", this.hasItem(ECBlockRegistry.RED_SANDSTONE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.RED_SANDSTONE_TILES.get()).addCriterion("has_red_sandstone_tiles",
+            this.hasItem(ECBlockRegistry.RED_SANDSTONE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.RED_SANDSTONE_TILES_SLAB.get()).addCriterion(
+            "has_red_sandstone_tiles_slab", this.hasItem(ECBlockRegistry.RED_SANDSTONE_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":red_sandstone_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.RED_SANDSTONE_TILES.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_red_sandstone_tiles", this.hasItem(ECBlockRegistry.RED_SANDSTONE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_TILES_WALL.get(), 6).key('#', ECBlockRegistry.RED_SANDSTONE_TILES.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_red_sandstone_tiles", this.hasItem(ECBlockRegistry.RED_SANDSTONE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.RED_SANDSTONE_TILES.get()).patternLine("##").addCriterion("has_red_sandstone_tiles",
+            this.hasItem(ECBlockRegistry.RED_SANDSTONE_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_BRICKS.get(), 4).patternLine("ii").patternLine("ii").key('i', Blocks.CUT_RED_SANDSTONE).addCriterion("has_cut_red_sandstone",
+            this.hasItem(Blocks.CUT_RED_SANDSTONE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_BRICKS_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.RED_SANDSTONE_BRICKS.get()).addCriterion("has_red_sandstone_bricks",
+            this.hasItem(ECBlockRegistry.RED_SANDSTONE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_BRICKS.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.RED_SANDSTONE_BRICKS_SLAB.get()).addCriterion(
+            "has_red_sandstone_bricks_slab", this.hasItem(ECBlockRegistry.RED_SANDSTONE_BRICKS_SLAB.get())).build(consumer, ECConstants.MODID + ":red_sandstone_bricks_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_BRICKS_STAIRS.get(), 4).key('#', ECBlockRegistry.RED_SANDSTONE_BRICKS.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_red_sandstone_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_BRICKS_WALL.get(), 6).key('#', ECBlockRegistry.RED_SANDSTONE_BRICKS.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_red_sandstone_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.RED_SANDSTONE_BRICKS.get()).patternLine("##").addCriterion(
+            "has_red_sandstone_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_BRICKS.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.RED_SANDSTONE_BRICKS.get()).addCriterion(
+            "has_red_sandstone_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get()).addCriterion(
+            "has_red_sandstone_large_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get()).addCriterion(
+            "has_red_sandstone_large_bricks_slab", this.hasItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get())).build(consumer, ECConstants.MODID + ":red_sandstone_large_bricks_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get(), 4).key('#', ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_red_sandstone_large_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get(), 6).key('#', ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_red_sandstone_large_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get()).patternLine("##").addCriterion(
+            "has_red_sandstone_large_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get())).build(consumer);
     }
 }

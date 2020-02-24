@@ -444,6 +444,78 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT, "Granite Ornament");
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE, "Granite Ornament Pressure Plate");
 
+                // Sandstone
+                addBlock(ECBlockRegistry.SANDSTONE_BUTTON, "Sandstone Button");
+
+                addBlock(ECBlockRegistry.SMOOTH_SANDSTONE_WALL, "Smooth Sandstone Wall");
+                addBlock(ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE, "Smooth Sandstone Pressure Plate");
+
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE, "Polished Sandstone");
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE_SLAB, "Polished Sandstone Slab");
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE_STAIRS, "Polished Sandstone Stairs");
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE_WALL, "Polished Sandstone Wall");
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE_PRESSURE_PLATE, "Polished Sandstone Pressure Plate");
+
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING, "Sandstone Paving");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_SLAB, "Sandstone Paving Slab");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STAIRS, "Sandstone Paving Stairs");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_WALL, "Sandstone Paving Wall");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_PRESSURE_PLATE, "Sandstone Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.SANDSTONE_TILES, "Sandstone Tiles");
+                addBlock(ECBlockRegistry.SANDSTONE_TILES_SLAB, "Sandstone Tiles Slab");
+                addBlock(ECBlockRegistry.SANDSTONE_TILES_STAIRS, "Sandstone Tiles Stairs");
+                addBlock(ECBlockRegistry.SANDSTONE_TILES_WALL, "Sandstone Tiles Wall");
+                addBlock(ECBlockRegistry.SANDSTONE_TILES_PRESSURE_PLATE, "Sandstone Tiles Pressure Plate");
+
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS, "Sandstone Bricks");
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS_SLAB, "Sandstone Bricks Slab");
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS_STAIRS, "Sandstone Bricks Stairs");
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS_WALL, "Sandstone Bricks Wall");
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS_PRESSURE_PLATE, "Sandstone Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS, "Sandstone Large Bricks");
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB, "Sandstone Large Bricks Slab");
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS, "Sandstone Large Bricks Stairs");
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL, "Sandstone Large Bricks Wall");
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Sandstone Large Bricks Pressure Plate");
+
+                // Red Sandstone
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BUTTON, "Red Sandstone Button");
+
+                addBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL, "Smooth Red Sandstone Wall");
+                addBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_PRESSURE_PLATE, "Smooth Red Sandstone Pressure Plate");
+
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE, "Polished Red Sandstone");
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE_SLAB, "Polished Red Sandstone Slab");
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE_STAIRS, "Polished Red Sandstone Stairs");
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE_WALL, "Polished Red Sandstone Wall");
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE_PRESSURE_PLATE, "Polished Red Sandstone Pressure Plate");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING, "Red Sandstone Paving");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_SLAB, "Red Sandstone Paving Slab");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STAIRS, "Red Sandstone Paving Stairs");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_WALL, "Red Sandstone Paving Wall");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_PRESSURE_PLATE, "Red Sandstone Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES, "Red Sandstone Tiles");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES_SLAB, "Red Sandstone Tiles Slab");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES_STAIRS, "Red Sandstone Tiles Stairs");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES_WALL, "Red Sandstone Tiles Wall");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES_PRESSURE_PLATE, "Red Sandstone Tiles Pressure Plate");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS, "Red Sandstone Bricks");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS_SLAB, "Red Sandstone Bricks Slab");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS_STAIRS, "Red Sandstone Bricks Stairs");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS_WALL, "Red Sandstone Bricks Wall");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS_PRESSURE_PLATE, "Red Sandstone Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS, "Red Sandstone Large Bricks");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB, "Red Sandstone Large Bricks Slab");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS, "Red Sandstone Large Bricks Stairs");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL, "Red Sandstone Large Bricks Wall");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Red Sandstone Large Bricks Pressure Plate");
+
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
             case "fr_fr":
@@ -872,6 +944,78 @@ public class ECLang extends LanguageProvider
 
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT, "Ornement en granite");
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en granite");
+
+                // Sandstone
+                addBlock(ECBlockRegistry.SANDSTONE_BUTTON, "Bouton en grès");
+
+                addBlock(ECBlockRegistry.SMOOTH_SANDSTONE_WALL, "Muret de grès lisse");
+                addBlock(ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE, "Plaque de pression en grès lisse");
+
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE, "Grès poli");
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE_SLAB, "Dalle de grès poli");
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE_STAIRS, "Escalier en grès poli");
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE_WALL, "Muret en grès poli");
+                addBlock(ECBlockRegistry.POLISHED_SANDSTONE_PRESSURE_PLATE, "Plaque de pression en grès poli");
+
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING, "Pavés de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_SLAB, "Dalle en pavés de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STAIRS, "Escalier en pavés de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_WALL, "Muret en pavés de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés de grès");
+
+                addBlock(ECBlockRegistry.SANDSTONE_TILES, "Carrelage en grès");
+                addBlock(ECBlockRegistry.SANDSTONE_TILES_SLAB, "Dalle en carrelage de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_TILES_STAIRS, "Escalier en carrelage de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_TILES_WALL, "Muret en carrelage de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de grès");
+
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS, "Briques de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS_SLAB, "Dalle en briques de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS_STAIRS, "Escaliers en briques de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS_WALL, "Muret en briques de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_BRICKS_PRESSURE_PLATE, "Dalle de pression en briques de grès");
+
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS, "Briques épaisses de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB, "Dalle en briques épaisses de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS, "Escaliers en briques épaisses de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL, "Muret en briques épaisses de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Dalle de pression en briques épaisses de grès");
+
+                // Red Sandstone
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BUTTON, "Bouton en grès rouge");
+
+                addBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL, "Muret de grès rouge lisse");
+                addBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_PRESSURE_PLATE, "Plaque de pression en grès rouge lisse");
+
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE, "Grès poli");
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE_SLAB, "Dalle de grès rouge poli");
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE_STAIRS, "Escalier en grès rouge poli");
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE_WALL, "Muret en grès rouge poli");
+                addBlock(ECBlockRegistry.POLISHED_RED_SANDSTONE_PRESSURE_PLATE, "Plaque de pression en grès rouge poli");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING, "Pavés de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_SLAB, "Dalle en pavés de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STAIRS, "Escalier en pavés de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_WALL, "Muret en pavés de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés de grès rouge");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES, "Carrelage en grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES_SLAB, "Dalle en carrelage de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES_STAIRS, "Escalier en carrelage de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES_WALL, "Muret en carrelage de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de grès rouge");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS, "Briques de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS_SLAB, "Dalle en briques de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS_STAIRS, "Escaliers en briques de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS_WALL, "Muret en briques de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_BRICKS_PRESSURE_PLATE, "Dalle de pression en briques de grès rouge");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS, "Briques épaisses de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB, "Dalle en briques épaisses de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS, "Escaliers en briques épaisses de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL, "Muret en briques épaisses de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Dalle de pression en briques épaisses de grès rouge");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
