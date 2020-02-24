@@ -18,6 +18,24 @@ public class ECBlockModels extends BlockModelProvider
         return "EmbellishCraft Block Models";
     }
 
+    @Override
+    protected void registerModels()
+    {
+        buildAllStone("basalt");
+        buildAllStone("slate");
+        buildAllStone("marble");
+        buildAllStone("gneiss");
+        buildAllStone("jade");
+        buildAllStone("larvikite");
+
+        buildMcStone("andesite");
+        buildMcStone("diorite");
+        buildMcStone("granite");
+
+        buildMcSandstone("sandstone");
+        buildMcSandstone("red_sandstone");
+    }
+
     private void buildWall(String name, ResourceLocation texture)
     {
         getBuilder(name + "_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", texture);
@@ -68,153 +86,47 @@ public class ECBlockModels extends BlockModelProvider
         buildButton(name, modLoc("block/" + name));
     }
 
-    @Override
-    protected void registerModels()
+    private void buildMcStone(String name)
     {
-        buildAllStone("basalt");
-        buildAllStone("slate");
-        buildAllStone("marble");
-        buildAllStone("gneiss");
-        buildAllStone("jade");
-        buildAllStone("larvikite");
+        buildWall("smooth_" + name, modLoc("block/smooth_" + name));
+        buildPressure("smooth_" + name, modLoc("block/smooth_" + name));
+        buildButton(name, mcLoc("block/" + name));
 
-        // Andesite
-        getBuilder("smooth_andesite_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/smooth_andesite"));
-        getBuilder("smooth_andesite_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/smooth_andesite"));
-        getBuilder("smooth_andesite_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/smooth_andesite"));
-        getBuilder("andesite_button_inventory").parent(getExistingFile(mcLoc("block/button_inventory"))).texture("texture", mcLoc("block/andesite"));
-        getBuilder("andesite_button_pressed").parent(getExistingFile(mcLoc("block/button_pressed"))).texture("texture", mcLoc("block/andesite"));
-        getBuilder("andesite_button").parent(getExistingFile(mcLoc("block/button"))).texture("texture", mcLoc("block/andesite"));
+        buildWall(name + "_paving", modLoc("block/" + name + "_paving"));
+        buildPressure(name + "_paving", modLoc("block/" + name + "_paving"));
 
-        getBuilder("andesite_paving_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/andesite_paving"));
-        getBuilder("andesite_paving_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/andesite_paving"));
-        getBuilder("andesite_paving_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/andesite_paving"));
+        buildWall(name + "_tiles", modLoc("block/" + name + "_tiles"));
+        buildPressure(name + "_tiles", modLoc("block/" + name + "_tiles"));
 
-        getBuilder("andesite_tiles_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/andesite_tiles"));
-        getBuilder("andesite_tiles_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/andesite_tiles"));
-        getBuilder("andesite_tiles_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/andesite_tiles"));
+        buildWall(name + "_bricks", modLoc("block/" + name + "_bricks"));
+        buildPressure(name + "_bricks", modLoc("block/" + name + "_bricks"));
 
-        getBuilder("andesite_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/andesite_bricks"));
-        getBuilder("andesite_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/andesite_bricks"));
-        getBuilder("andesite_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/andesite_bricks"));
+        buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+        buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
 
-        getBuilder("andesite_large_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/andesite_large_bricks"));
-        getBuilder("andesite_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/andesite_large_bricks"));
-        getBuilder("andesite_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/andesite_large_bricks"));
+        buildPressure(name + "_ornament", modLoc("block/" + name + "_ornament"));
+    }
 
-        getBuilder("andesite_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/andesite_ornament"));
-        getBuilder("andesite_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/andesite_ornament"));
+    private void buildMcSandstone(String name)
+    {
+        buildButton(name, mcLoc("block/" + name));
 
-        // Diorite
-        getBuilder("smooth_diorite_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/smooth_diorite"));
-        getBuilder("smooth_diorite_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/smooth_diorite"));
-        getBuilder("smooth_diorite_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/smooth_diorite"));
-        getBuilder("diorite_button_inventory").parent(getExistingFile(mcLoc("block/button_inventory"))).texture("texture", mcLoc("block/diorite"));
-        getBuilder("diorite_button_pressed").parent(getExistingFile(mcLoc("block/button_pressed"))).texture("texture", mcLoc("block/diorite"));
-        getBuilder("diorite_button").parent(getExistingFile(mcLoc("block/button"))).texture("texture", mcLoc("block/diorite"));
+        buildWall("smooth_" + name, mcLoc("block/" + name + "_top"));
+        buildPressure("smooth_" + name, mcLoc("block/" + name + "_top"));
 
-        getBuilder("diorite_paving_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/diorite_paving"));
-        getBuilder("diorite_paving_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/diorite_paving"));
-        getBuilder("diorite_paving_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/diorite_paving"));
+        buildWall("polished_" + name, modLoc("block/polished_" + name));
+        buildPressure("polished_" + name, modLoc("block/polished_" + name));
 
-        getBuilder("diorite_tiles_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/diorite_tiles"));
-        getBuilder("diorite_tiles_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/diorite_tiles"));
-        getBuilder("diorite_tiles_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/diorite_tiles"));
+        buildWall(name + "_paving", modLoc("block/" + name + "_paving"));
+        buildPressure(name + "_paving", modLoc("block/" + name + "_paving"));
 
-        getBuilder("diorite_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/diorite_bricks"));
-        getBuilder("diorite_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/diorite_bricks"));
-        getBuilder("diorite_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/diorite_bricks"));
+        buildWall(name + "_tiles", modLoc("block/" + name + "_tiles"));
+        buildPressure(name + "_tiles", modLoc("block/" + name + "_tiles"));
 
-        getBuilder("diorite_large_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/diorite_large_bricks"));
-        getBuilder("diorite_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/diorite_large_bricks"));
-        getBuilder("diorite_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/diorite_large_bricks"));
+        buildWall(name + "_bricks", modLoc("block/" + name + "_bricks"));
+        buildPressure(name + "_bricks", modLoc("block/" + name + "_bricks"));
 
-        getBuilder("diorite_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/diorite_ornament"));
-        getBuilder("diorite_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/diorite_ornament"));
-
-        // Granite
-        getBuilder("smooth_granite_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/smooth_granite"));
-        getBuilder("smooth_granite_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/smooth_granite"));
-        getBuilder("smooth_granite_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/smooth_granite"));
-        getBuilder("granite_button_inventory").parent(getExistingFile(mcLoc("block/button_inventory"))).texture("texture", mcLoc("block/granite"));
-        getBuilder("granite_button_pressed").parent(getExistingFile(mcLoc("block/button_pressed"))).texture("texture", mcLoc("block/granite"));
-        getBuilder("granite_button").parent(getExistingFile(mcLoc("block/button"))).texture("texture", mcLoc("block/granite"));
-
-        getBuilder("granite_paving_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/granite_paving"));
-        getBuilder("granite_paving_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/granite_paving"));
-        getBuilder("granite_paving_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/granite_paving"));
-
-        getBuilder("granite_tiles_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/granite_tiles"));
-        getBuilder("granite_tiles_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/granite_tiles"));
-        getBuilder("granite_tiles_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/granite_tiles"));
-
-        getBuilder("granite_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/granite_bricks"));
-        getBuilder("granite_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/granite_bricks"));
-        getBuilder("granite_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/granite_bricks"));
-
-        getBuilder("granite_large_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/granite_large_bricks"));
-        getBuilder("granite_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/granite_large_bricks"));
-        getBuilder("granite_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/granite_large_bricks"));
-
-        getBuilder("granite_ornament_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/granite_ornament"));
-        getBuilder("granite_ornament_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/granite_ornament"));
-
-        // Sandstone
-        getBuilder("sandstone_button_inventory").parent(getExistingFile(mcLoc("block/button_inventory"))).texture("texture", mcLoc("block/sandstone"));
-        getBuilder("sandstone_button_pressed").parent(getExistingFile(mcLoc("block/button_pressed"))).texture("texture", mcLoc("block/sandstone"));
-        getBuilder("sandstone_button").parent(getExistingFile(mcLoc("block/button"))).texture("texture", mcLoc("block/sandstone"));
-
-        getBuilder("smooth_sandstone_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", mcLoc("block/sandstone_top"));
-        getBuilder("smooth_sandstone_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", mcLoc("block/sandstone_top"));
-        getBuilder("smooth_sandstone_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", mcLoc("block/sandstone_top"));
-
-        getBuilder("polished_sandstone_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/polished_sandstone"));
-        getBuilder("polished_sandstone_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/polished_sandstone"));
-        getBuilder("polished_sandstone_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/polished_sandstone"));
-
-        getBuilder("sandstone_paving_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/sandstone_paving"));
-        getBuilder("sandstone_paving_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/sandstone_paving"));
-        getBuilder("sandstone_paving_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/sandstone_paving"));
-
-        getBuilder("sandstone_tiles_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/sandstone_tiles"));
-        getBuilder("sandstone_tiles_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/sandstone_tiles"));
-        getBuilder("sandstone_tiles_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/sandstone_tiles"));
-
-        getBuilder("sandstone_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/sandstone_bricks"));
-        getBuilder("sandstone_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/sandstone_bricks"));
-        getBuilder("sandstone_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/sandstone_bricks"));
-
-        getBuilder("sandstone_large_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/sandstone_large_bricks"));
-        getBuilder("sandstone_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/sandstone_large_bricks"));
-        getBuilder("sandstone_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/sandstone_large_bricks"));
-
-        // Red Sandstone
-        getBuilder("red_sandstone_button_inventory").parent(getExistingFile(mcLoc("block/button_inventory"))).texture("texture", mcLoc("block/red_sandstone"));
-        getBuilder("red_sandstone_button_pressed").parent(getExistingFile(mcLoc("block/button_pressed"))).texture("texture", mcLoc("block/red_sandstone"));
-        getBuilder("red_sandstone_button").parent(getExistingFile(mcLoc("block/button"))).texture("texture", mcLoc("block/red_sandstone"));
-
-        getBuilder("smooth_red_sandstone_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", mcLoc("block/red_sandstone_top"));
-        getBuilder("smooth_red_sandstone_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", mcLoc("block/red_sandstone_top"));
-        getBuilder("smooth_red_sandstone_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", mcLoc("block/red_sandstone_top"));
-
-        getBuilder("polished_red_sandstone_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/polished_red_sandstone"));
-        getBuilder("polished_red_sandstone_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/polished_red_sandstone"));
-        getBuilder("polished_red_sandstone_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/polished_red_sandstone"));
-
-        getBuilder("red_sandstone_paving_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/red_sandstone_paving"));
-        getBuilder("red_sandstone_paving_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/red_sandstone_paving"));
-        getBuilder("red_sandstone_paving_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/red_sandstone_paving"));
-
-        getBuilder("red_sandstone_tiles_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/red_sandstone_tiles"));
-        getBuilder("red_sandstone_tiles_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/red_sandstone_tiles"));
-        getBuilder("red_sandstone_tiles_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/red_sandstone_tiles"));
-
-        getBuilder("red_sandstone_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/red_sandstone_bricks"));
-        getBuilder("red_sandstone_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/red_sandstone_bricks"));
-        getBuilder("red_sandstone_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/red_sandstone_bricks"));
-
-        getBuilder("red_sandstone_large_bricks_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", modLoc("block/red_sandstone_large_bricks"));
-        getBuilder("red_sandstone_large_bricks_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/red_sandstone_large_bricks"));
-        getBuilder("red_sandstone_large_bricks_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/red_sandstone_large_bricks"));
+        buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+        buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
     }
 }
