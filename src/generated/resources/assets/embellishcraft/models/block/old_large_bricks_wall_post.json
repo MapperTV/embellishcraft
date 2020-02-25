@@ -1,6 +1,0 @@
-{
-  "parent": "block/template_wall_post",
-  "textures": {
-    "wall": "embellishcraft:block/old_large_bricks"
-  }
-}

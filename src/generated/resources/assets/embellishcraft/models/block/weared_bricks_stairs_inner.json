@@ -1,8 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "side": "embellishcraft:block/weared_bricks",
-    "bottom": "embellishcraft:block/weared_bricks",
-    "top": "embellishcraft:block/weared_bricks"
-  }
-}

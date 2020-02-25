@@ -79,12 +79,6 @@
     "embellishcraft:terracotta_paving_stairs",
     "embellishcraft:terracotta_tiles_stairs",
     "embellishcraft:terracotta_bricks_stairs",
-    "embellishcraft:terracotta_large_bricks_stairs",
-    "embellishcraft:dark_bricks_stairs",
-    "embellishcraft:old_bricks_stairs",
-    "embellishcraft:weared_bricks_stairs",
-    "embellishcraft:dark_large_bricks_stairs",
-    "embellishcraft:old_large_bricks_stairs",
-    "embellishcraft:weared_large_bricks_stairs"
+    "embellishcraft:terracotta_large_bricks_stairs"
   ]
 }

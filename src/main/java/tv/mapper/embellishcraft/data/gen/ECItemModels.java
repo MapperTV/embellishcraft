@@ -44,14 +44,6 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("terracotta_tiles", true, true, true, true, true, false);
         registerBlockBasics("terracotta_bricks", true, true, true, true, true, false);
         registerBlockBasics("terracotta_large_bricks", true, true, true, true, true, false);
-
-        // Other bricks
-        registerBlockBasics("dark_bricks", true, true, true, true, true, false);
-        registerBlockBasics("dark_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("old_bricks", true, true, true, true, true, false);
-        registerBlockBasics("old_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("weared_bricks", true, true, true, true, true, false);
-        registerBlockBasics("weared_large_bricks", true, true, true, true, true, false);
     }
 
     private void registerStone(String name)

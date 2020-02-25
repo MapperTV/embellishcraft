@@ -548,42 +548,5 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get()));
         lootTables.put(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get()));
 
-        // Other bricks
-        lootTables.put(ECBlockRegistry.DARK_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_BRICKS.get()));
-        lootTables.put(ECBlockRegistry.DARK_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.DARK_BRICKS_SLAB.get()));
-        lootTables.put(ECBlockRegistry.DARK_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_BRICKS_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.DARK_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_BRICKS_WALL.get()));
-        lootTables.put(ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.DARK_LARGE_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_LARGE_BRICKS.get()));
-        lootTables.put(ECBlockRegistry.DARK_LARGE_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.DARK_LARGE_BRICKS_SLAB.get()));
-        lootTables.put(ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.DARK_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_LARGE_BRICKS_WALL.get()));
-        lootTables.put(ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.OLD_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.OLD_BRICKS.get()));
-        lootTables.put(ECBlockRegistry.OLD_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.OLD_BRICKS_SLAB.get()));
-        lootTables.put(ECBlockRegistry.OLD_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.OLD_BRICKS_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.OLD_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.OLD_BRICKS_WALL.get()));
-        lootTables.put(ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.OLD_LARGE_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.OLD_LARGE_BRICKS.get()));
-        lootTables.put(ECBlockRegistry.OLD_LARGE_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.OLD_LARGE_BRICKS_SLAB.get()));
-        lootTables.put(ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.OLD_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.OLD_LARGE_BRICKS_WALL.get()));
-        lootTables.put(ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.WEARED_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_BRICKS.get()));
-        lootTables.put(ECBlockRegistry.WEARED_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.WEARED_BRICKS_SLAB.get()));
-        lootTables.put(ECBlockRegistry.WEARED_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_BRICKS_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.WEARED_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_BRICKS_WALL.get()));
-        lootTables.put(ECBlockRegistry.WEARED_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_BRICKS_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.WEARED_LARGE_BRICKS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_LARGE_BRICKS.get()));
-        lootTables.put(ECBlockRegistry.WEARED_LARGE_BRICKS_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.WEARED_LARGE_BRICKS_SLAB.get()));
-        lootTables.put(ECBlockRegistry.WEARED_LARGE_BRICKS_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_LARGE_BRICKS_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.WEARED_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_LARGE_BRICKS_WALL.get()));
-        lootTables.put(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE.get()));
-
     }
 }

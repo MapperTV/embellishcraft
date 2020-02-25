@@ -79,12 +79,6 @@
     "embellishcraft:terracotta_paving_slab",
     "embellishcraft:terracotta_tiles_slab",
     "embellishcraft:terracotta_bricks_slab",
-    "embellishcraft:terracotta_large_bricks_slab",
-    "embellishcraft:dark_bricks_slab",
-    "embellishcraft:old_bricks_slab",
-    "embellishcraft:weared_bricks_slab",
-    "embellishcraft:dark_large_bricks_slab",
-    "embellishcraft:old_large_bricks_slab",
-    "embellishcraft:weared_large_bricks_slab"
+    "embellishcraft:terracotta_large_bricks_slab"
   ]
 }

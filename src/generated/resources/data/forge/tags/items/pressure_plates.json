@@ -90,12 +90,6 @@
     "embellishcraft:terracotta_paving_pressure_plate",
     "embellishcraft:terracotta_tiles_pressure_plate",
     "embellishcraft:terracotta_bricks_pressure_plate",
-    "embellishcraft:terracotta_large_bricks_pressure_plate",
-    "embellishcraft:dark_bricks_pressure_plate",
-    "embellishcraft:old_bricks_pressure_plate",
-    "embellishcraft:weared_bricks_pressure_plate",
-    "embellishcraft:dark_large_bricks_pressure_plate",
-    "embellishcraft:old_large_bricks_pressure_plate",
-    "embellishcraft:weared_large_bricks_pressure_plate"
+    "embellishcraft:terracotta_large_bricks_pressure_plate"
   ]
 }

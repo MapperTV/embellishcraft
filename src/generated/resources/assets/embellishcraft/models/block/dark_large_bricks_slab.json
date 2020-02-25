@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "side": "embellishcraft:block/dark_large_bricks",
-    "bottom": "embellishcraft:block/dark_large_bricks",
-    "top": "embellishcraft:block/dark_large_bricks"
-  }
-}
