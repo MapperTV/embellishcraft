@@ -51,6 +51,21 @@ public class ECBlockModels extends BlockModelProvider
         buildPressure("terracotta_bricks", modLoc("block/terracotta_bricks"));
         buildPressure("terracotta_large_bricks", modLoc("block/terracotta_large_bricks"));
 
+        // Other bricks
+        buildWall("dark_bricks", modLoc("block/dark_bricks"));
+        buildWall("old_bricks", modLoc("block/old_bricks"));
+        buildWall("weared_bricks", modLoc("block/weared_bricks"));
+        buildPressure("dark_bricks", modLoc("block/dark_bricks"));
+        buildPressure("old_bricks", modLoc("block/old_bricks"));
+        buildPressure("weared_bricks", modLoc("block/weared_bricks"));
+        
+        buildWall("dark_large_bricks", modLoc("block/dark_large_bricks"));
+        buildWall("old_large_bricks", modLoc("block/old_large_bricks"));
+        buildWall("weared_large_bricks", modLoc("block/weared_large_bricks"));
+        buildPressure("dark_large_bricks", modLoc("block/dark_large_bricks"));
+        buildPressure("old_large_bricks", modLoc("block/old_large_bricks"));
+        buildPressure("weared_large_bricks", modLoc("block/weared_large_bricks"));
+
     }
 
     private void buildWall(String name, ResourceLocation texture)

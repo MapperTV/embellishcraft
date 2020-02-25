@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:old_bricks_wall"
+    ]
+  },
+  "criteria": {
+    "has_old_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:old_bricks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:old_bricks_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_old_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

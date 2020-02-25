@@ -81,6 +81,12 @@
     "embellishcraft:terracotta_paving_wall",
     "embellishcraft:terracotta_tiles_wall",
     "embellishcraft:terracotta_bricks_wall",
-    "embellishcraft:terracotta_large_bricks_wall"
+    "embellishcraft:terracotta_large_bricks_wall",
+    "embellishcraft:dark_bricks_wall",
+    "embellishcraft:old_bricks_wall",
+    "embellishcraft:weared_bricks_wall",
+    "embellishcraft:dark_large_bricks_wall",
+    "embellishcraft:old_large_bricks_wall",
+    "embellishcraft:weared_large_bricks_wall"
   ]
 }

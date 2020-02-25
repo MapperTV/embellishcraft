@@ -553,6 +553,43 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL, "Terracotta Large Bricks Wall");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE, "Terracotta Large Bricks Pressure Plate");
 
+                // Other bricks
+                addBlock(ECBlockRegistry.DARK_BRICKS, "Dark Bricks");
+                addBlock(ECBlockRegistry.DARK_BRICKS_SLAB, "Dark Bricks Slab");
+                addBlock(ECBlockRegistry.DARK_BRICKS_STAIRS, "Dark Bricks Stairs");
+                addBlock(ECBlockRegistry.DARK_BRICKS_WALL, "Dark Bricks Wall");
+                addBlock(ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE, "Dark Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS, "Dark Large Bricks");
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_SLAB, "Dark Large Bricks Slab");
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS, "Dark Large Bricks Stairs");
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_WALL, "Dark Large Bricks Wall");
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE, "Dark Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.OLD_BRICKS, "Old Bricks");
+                addBlock(ECBlockRegistry.OLD_BRICKS_SLAB, "Old Bricks Slab");
+                addBlock(ECBlockRegistry.OLD_BRICKS_STAIRS, "Old Bricks Stairs");
+                addBlock(ECBlockRegistry.OLD_BRICKS_WALL, "Old Bricks Wall");
+                addBlock(ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE, "Old Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS, "Old Large Bricks");
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_SLAB, "Old Large Bricks Slab");
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS, "Old Large Bricks Stairs");
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_WALL, "Old Large Bricks Wall");
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE, "Old Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.WEARED_BRICKS, "Weared Bricks");
+                addBlock(ECBlockRegistry.WEARED_BRICKS_SLAB, "Weared Bricks Slab");
+                addBlock(ECBlockRegistry.WEARED_BRICKS_STAIRS, "Weared Bricks Stairs");
+                addBlock(ECBlockRegistry.WEARED_BRICKS_WALL, "Weared Bricks Wall");
+                addBlock(ECBlockRegistry.WEARED_BRICKS_PRESSURE_PLATE, "Weared Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS, "Weared Large Bricks");
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_SLAB, "Weared Large Bricks Slab");
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_STAIRS, "Weared Large Bricks Stairs");
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_WALL, "Weared Large Bricks Wall");
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE, "Weared Large Bricks Pressure Plate");
+
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
             case "fr_fr":
@@ -1090,7 +1127,44 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL, "Muret en briques épaisses de terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de terre cuite");
+                
+                // Other bricks
+                addBlock(ECBlockRegistry.DARK_BRICKS, "Briques sombres");
+                addBlock(ECBlockRegistry.DARK_BRICKS_SLAB, "Dalle en briques sombres");
+                addBlock(ECBlockRegistry.DARK_BRICKS_STAIRS, "Escalier en briques sombres");
+                addBlock(ECBlockRegistry.DARK_BRICKS_WALL, "Muret en briques sombres");
+                addBlock(ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques sombres");
 
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS, "Briques épaisses sombres");
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_SLAB, "Dalle en briques épaisses sombres");
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses sombres");
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_WALL, "Muret en briques épaisses sombres");
+                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses sombres");
+                
+                addBlock(ECBlockRegistry.OLD_BRICKS, "Vieilles briques");
+                addBlock(ECBlockRegistry.OLD_BRICKS_SLAB, "Dalle en vieilles briques");
+                addBlock(ECBlockRegistry.OLD_BRICKS_STAIRS, "Escalier en vieilles briques");
+                addBlock(ECBlockRegistry.OLD_BRICKS_WALL, "Muret en vieilles briques");
+                addBlock(ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE, "Plaque de pression en vieilles briques");
+
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS, "Vieilles briques épaisses");
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_SLAB, "Dalle en vieilles briques épaisses");
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS, "Escalier en vieilles briques épaisses");
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_WALL, "Muret en vieilles briques épaisses");
+                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en vieilles briques épaisses");
+                
+                addBlock(ECBlockRegistry.WEARED_BRICKS, "Briques usées");
+                addBlock(ECBlockRegistry.WEARED_BRICKS_SLAB, "Dalle en briques usées");
+                addBlock(ECBlockRegistry.WEARED_BRICKS_STAIRS, "Escalier en briques usées");
+                addBlock(ECBlockRegistry.WEARED_BRICKS_WALL, "Muret en briques usées");
+                addBlock(ECBlockRegistry.WEARED_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques usées");
+
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS, "Briques épaisses usées");
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_SLAB, "Dalle en briques épaisses usées");
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses usées");
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_WALL, "Muret en briques épaisses usées");
+                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses usées");
+                
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
         }

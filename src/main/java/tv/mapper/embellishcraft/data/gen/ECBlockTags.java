@@ -174,5 +174,16 @@ public class ECBlockTags extends BlockTagsProvider
         this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get(), ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE.get(),
             ECBlockRegistry.TERRACOTTA_PAVING_PRESSURE_PLATE.get(), ECBlockRegistry.TERRACOTTA_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get(),
             ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get());
+
+        // Other bricks
+        this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.DARK_BRICKS_STAIRS.get(), ECBlockRegistry.OLD_BRICKS_STAIRS.get(), ECBlockRegistry.WEARED_BRICKS_STAIRS.get(),
+            ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.WEARED_LARGE_BRICKS_STAIRS.get());
+        this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.DARK_BRICKS_SLAB.get(), ECBlockRegistry.OLD_BRICKS_SLAB.get(), ECBlockRegistry.WEARED_BRICKS_SLAB.get(),
+            ECBlockRegistry.DARK_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.OLD_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.WEARED_LARGE_BRICKS_SLAB.get());
+        this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.DARK_BRICKS_WALL.get(), ECBlockRegistry.OLD_BRICKS_WALL.get(), ECBlockRegistry.WEARED_BRICKS_WALL.get(),
+            ECBlockRegistry.DARK_LARGE_BRICKS_WALL.get(), ECBlockRegistry.OLD_LARGE_BRICKS_WALL.get(), ECBlockRegistry.WEARED_LARGE_BRICKS_WALL.get());
+        this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE.get(), ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE.get(),
+            ECBlockRegistry.WEARED_BRICKS_PRESSURE_PLATE.get(), ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE.get(), ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE.get(),
+            ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE.get());
     }
 }
