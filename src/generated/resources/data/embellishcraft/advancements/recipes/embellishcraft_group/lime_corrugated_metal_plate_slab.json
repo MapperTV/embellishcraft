@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:lime_corrugated_metal_plate_slab"
+    ]
+  },
+  "criteria": {
+    "has_lime_corrugated_metal_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:lime_corrugated_metal_plate"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:lime_corrugated_metal_plate_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_lime_corrugated_metal_plate",
+      "has_the_recipe"
+    ]
+  ]
+}

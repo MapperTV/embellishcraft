@@ -291,8 +291,8 @@ public class ECBlockStates extends BaseBlockStates
         // Tiles
         registerStoneVariant("concrete_tiles", ECBlockRegistry.CONCRETE_TILES.get(), ECBlockRegistry.CONCRETE_TILES_SLAB.get(), ECBlockRegistry.CONCRETE_TILES_STAIRS.get(),
             ECBlockRegistry.CONCRETE_TILES_WALL.get(), ECBlockRegistry.CONCRETE_TILES_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("skyblue_tiles", ECBlockRegistry.SKYBLUE_TILES.get(), ECBlockRegistry.SKYBLUE_TILES_SLAB.get(), ECBlockRegistry.SKYBLUE_TILES_STAIRS.get(),
-            ECBlockRegistry.SKYBLUE_TILES_WALL.get(), ECBlockRegistry.SKYBLUE_TILES_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("skyblue_tiles", ECBlockRegistry.SKYBLUE_TILES.get(), ECBlockRegistry.SKYBLUE_TILES_SLAB.get(), ECBlockRegistry.SKYBLUE_TILES_STAIRS.get(), ECBlockRegistry.SKYBLUE_TILES_WALL.get(),
+            ECBlockRegistry.SKYBLUE_TILES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("orange_tiles", ECBlockRegistry.ORANGE_TILES.get(), ECBlockRegistry.ORANGE_TILES_SLAB.get(), ECBlockRegistry.ORANGE_TILES_STAIRS.get(), ECBlockRegistry.ORANGE_TILES_WALL.get(),
             ECBlockRegistry.ORANGE_TILES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("blue_tiles", ECBlockRegistry.BLUE_TILES.get(), ECBlockRegistry.BLUE_TILES_SLAB.get(), ECBlockRegistry.BLUE_TILES_STAIRS.get(), ECBlockRegistry.BLUE_TILES_WALL.get(),
@@ -307,6 +307,42 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.YELLOW_TILES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("yellow_grey_tiles", ECBlockRegistry.YELLOW_GREY_TILES.get(), ECBlockRegistry.YELLOW_GREY_TILES_SLAB.get(), ECBlockRegistry.YELLOW_GREY_TILES_STAIRS.get(),
             ECBlockRegistry.YELLOW_GREY_TILES_WALL.get(), ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get(), null);
+
+        // Corrugated metal plates
+        registerStoneVariant("black_corrugated_metal_plate", ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("blue_corrugated_metal_plate", ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("brown_corrugated_metal_plate", ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("cyan_corrugated_metal_plate", ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("gray_corrugated_metal_plate", ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("green_corrugated_metal_plate", ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("light_blue_corrugated_metal_plate", ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(),
+            null);
+        registerStoneVariant("light_gray_corrugated_metal_plate", ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(),
+            null);
+        registerStoneVariant("lime_corrugated_metal_plate", ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("magenta_corrugated_metal_plate", ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("orange_corrugated_metal_plate", ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("pink_corrugated_metal_plate", ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("purple_corrugated_metal_plate", ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("red_corrugated_metal_plate", ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("white_corrugated_metal_plate", ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("yellow_corrugated_metal_plate", ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB.get(),
+            ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
     }
 
     /**

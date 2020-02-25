@@ -15,6 +15,7 @@ import net.minecraftforge.common.Tags;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
+import tv.mapper.mapperbase.data.BaseTags;
 
 public class ECRecipes extends RecipeProvider
 {
@@ -1465,5 +1466,215 @@ public class ECRecipes extends RecipeProvider
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.YELLOW_GREY_TILES.get()).patternLine("##").addCriterion("has_concrete_tiles",
             this.hasItem(ECBlockRegistry.YELLOW_GREY_TILES.get())).build(consumer);
 
+        // Corrugated metal plates
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_BLACK).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_black_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_black_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":black_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_black_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_black_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_black_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_BLUE).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_blue_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_blue_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":blue_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_blue_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_blue_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_blue_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_BROWN).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_brown_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_brown_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":brown_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_brown_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_brown_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_brown_corrugated_metal_plate", this.hasItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_CYAN).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_cyan_corrugated_metal_plate", this.hasItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_cyan_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":cyan_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_cyan_corrugated_metal_plate", this.hasItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_cyan_corrugated_metal_plate", this.hasItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_cyan_corrugated_metal_plate", this.hasItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_GRAY).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_gray_corrugated_metal_plate", this.hasItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_gray_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":gray_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_gray_corrugated_metal_plate", this.hasItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_gray_corrugated_metal_plate", this.hasItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_gray_corrugated_metal_plate", this.hasItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_GREEN).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_green_corrugated_metal_plate", this.hasItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_green_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":green_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_green_corrugated_metal_plate", this.hasItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_green_corrugated_metal_plate", this.hasItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_green_corrugated_metal_plate", this.hasItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_LIGHT_BLUE).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_light_blue_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i',
+            ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion("has_light_blue_corrugated_metal_plate_slab",
+                this.hasItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":light_blue_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_light_blue_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_light_blue_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_light_blue_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_LIGHT_GRAY).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_light_gray_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i',
+            ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion("has_light_gray_corrugated_metal_plate_slab",
+                this.hasItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":light_gray_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_light_gray_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_light_gray_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_light_gray_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_LIME).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_lime_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_lime_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":lime_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_lime_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_lime_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_lime_corrugated_metal_plate", this.hasItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_MAGENTA).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_magenta_corrugated_metal_plate", this.hasItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_magenta_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":magenta_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_magenta_corrugated_metal_plate", this.hasItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_magenta_corrugated_metal_plate", this.hasItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_magenta_corrugated_metal_plate", this.hasItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_ORANGE).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_orange_corrugated_metal_plate", this.hasItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_orange_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":orange_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_orange_corrugated_metal_plate", this.hasItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_orange_corrugated_metal_plate", this.hasItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_orange_corrugated_metal_plate", this.hasItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_PINK).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_pink_corrugated_metal_plate", this.hasItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_pink_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":pink_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_pink_corrugated_metal_plate", this.hasItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_pink_corrugated_metal_plate", this.hasItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_pink_corrugated_metal_plate", this.hasItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_PURPLE).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_purple_corrugated_metal_plate", this.hasItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_purple_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":purple_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_purple_corrugated_metal_plate", this.hasItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_purple_corrugated_metal_plate", this.hasItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_purple_corrugated_metal_plate", this.hasItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_RED).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_red_corrugated_metal_plate", this.hasItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_red_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":red_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_red_corrugated_metal_plate", this.hasItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_red_corrugated_metal_plate", this.hasItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_red_corrugated_metal_plate", this.hasItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_WHITE).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_white_corrugated_metal_plate", this.hasItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_white_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":white_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_white_corrugated_metal_plate", this.hasItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_white_corrugated_metal_plate", this.hasItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_white_corrugated_metal_plate", this.hasItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_YELLOW).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get()).addCriterion(
+            "has_yellow_corrugated_metal_plate", this.hasItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB.get()).addCriterion(
+            "has_yellow_corrugated_metal_plate_slab", this.hasItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":yellow_corrugated_metal_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get()).patternLine("#  ").patternLine(
+            "## ").patternLine("###").addCriterion("has_yellow_corrugated_metal_plate", this.hasItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get()).patternLine("###").patternLine(
+            "###").addCriterion("has_yellow_corrugated_metal_plate", this.hasItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
+            "has_yellow_corrugated_metal_plate", this.hasItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get())).build(consumer);
     }
 }

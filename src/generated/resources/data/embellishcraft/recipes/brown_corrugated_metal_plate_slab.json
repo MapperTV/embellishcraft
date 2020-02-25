@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:brown_corrugated_metal_plate"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:brown_corrugated_metal_plate_slab",
+    "count": 6
+  }
+}

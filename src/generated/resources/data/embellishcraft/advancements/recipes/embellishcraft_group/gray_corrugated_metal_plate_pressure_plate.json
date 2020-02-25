@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:gray_corrugated_metal_plate_pressure_plate"
+    ]
+  },
+  "criteria": {
+    "has_gray_corrugated_metal_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:gray_corrugated_metal_plate"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:gray_corrugated_metal_plate_pressure_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gray_corrugated_metal_plate",
+      "has_the_recipe"
+    ]
+  ]
+}

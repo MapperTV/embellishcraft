@@ -100,6 +100,40 @@ public class ECBlockModels extends BlockModelProvider
         buildPressure("yellow_tiles", modLoc("block/yellow_tiles"));
         buildPressure("yellow_grey_tiles", modLoc("block/yellow_grey_tiles"));
 
+        // Corrugated metal plates
+        buildWall("black_corrugated_metal_plate", modLoc("block/black_corrugated_metal_plate"));
+        buildWall("blue_corrugated_metal_plate", modLoc("block/blue_corrugated_metal_plate"));
+        buildWall("brown_corrugated_metal_plate", modLoc("block/brown_corrugated_metal_plate"));
+        buildWall("cyan_corrugated_metal_plate", modLoc("block/cyan_corrugated_metal_plate"));
+        buildWall("gray_corrugated_metal_plate", modLoc("block/gray_corrugated_metal_plate"));
+        buildWall("green_corrugated_metal_plate", modLoc("block/green_corrugated_metal_plate"));
+        buildWall("light_blue_corrugated_metal_plate", modLoc("block/light_blue_corrugated_metal_plate"));
+        buildWall("light_gray_corrugated_metal_plate", modLoc("block/light_gray_corrugated_metal_plate"));
+        buildWall("lime_corrugated_metal_plate", modLoc("block/lime_corrugated_metal_plate"));
+        buildWall("magenta_corrugated_metal_plate", modLoc("block/magenta_corrugated_metal_plate"));
+        buildWall("orange_corrugated_metal_plate", modLoc("block/orange_corrugated_metal_plate"));
+        buildWall("pink_corrugated_metal_plate", modLoc("block/pink_corrugated_metal_plate"));
+        buildWall("purple_corrugated_metal_plate", modLoc("block/purple_corrugated_metal_plate"));
+        buildWall("red_corrugated_metal_plate", modLoc("block/red_corrugated_metal_plate"));
+        buildWall("white_corrugated_metal_plate", modLoc("block/white_corrugated_metal_plate"));
+        buildWall("yellow_corrugated_metal_plate", modLoc("block/yellow_corrugated_metal_plate"));
+
+        buildPressure("black_corrugated_metal_plate", modLoc("block/black_corrugated_metal_plate"));
+        buildPressure("blue_corrugated_metal_plate", modLoc("block/blue_corrugated_metal_plate"));
+        buildPressure("brown_corrugated_metal_plate", modLoc("block/brown_corrugated_metal_plate"));
+        buildPressure("cyan_corrugated_metal_plate", modLoc("block/cyan_corrugated_metal_plate"));
+        buildPressure("gray_corrugated_metal_plate", modLoc("block/gray_corrugated_metal_plate"));
+        buildPressure("green_corrugated_metal_plate", modLoc("block/green_corrugated_metal_plate"));
+        buildPressure("light_blue_corrugated_metal_plate", modLoc("block/light_blue_corrugated_metal_plate"));
+        buildPressure("light_gray_corrugated_metal_plate", modLoc("block/light_gray_corrugated_metal_plate"));
+        buildPressure("lime_corrugated_metal_plate", modLoc("block/lime_corrugated_metal_plate"));
+        buildPressure("magenta_corrugated_metal_plate", modLoc("block/magenta_corrugated_metal_plate"));
+        buildPressure("orange_corrugated_metal_plate", modLoc("block/orange_corrugated_metal_plate"));
+        buildPressure("pink_corrugated_metal_plate", modLoc("block/pink_corrugated_metal_plate"));
+        buildPressure("purple_corrugated_metal_plate", modLoc("block/purple_corrugated_metal_plate"));
+        buildPressure("red_corrugated_metal_plate", modLoc("block/red_corrugated_metal_plate"));
+        buildPressure("white_corrugated_metal_plate", modLoc("block/white_corrugated_metal_plate"));
+        buildPressure("yellow_corrugated_metal_plate", modLoc("block/yellow_corrugated_metal_plate"));
     }
 
     private void buildWall(String name, ResourceLocation texture)

@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "side": "embellishcraft:block/lime_corrugated_metal_plate",
+    "bottom": "embellishcraft:block/lime_corrugated_metal_plate",
+    "top": "embellishcraft:block/lime_corrugated_metal_plate"
+  }
+}

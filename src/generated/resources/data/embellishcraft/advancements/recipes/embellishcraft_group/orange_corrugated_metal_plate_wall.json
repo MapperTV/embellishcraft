@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:orange_corrugated_metal_plate_wall"
+    ]
+  },
+  "criteria": {
+    "has_orange_corrugated_metal_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:orange_corrugated_metal_plate"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:orange_corrugated_metal_plate_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_orange_corrugated_metal_plate",
+      "has_the_recipe"
+    ]
+  ]
+}

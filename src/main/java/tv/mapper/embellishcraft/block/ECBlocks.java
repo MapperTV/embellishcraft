@@ -91,102 +91,6 @@ public class ECBlocks
     public static final Block VENT_AIR_DUCT = null;
     public static final Block GRID_AIR_DUCT = null;
 
-    public static final Block PURPLE_CORRUGATED_METAL_PLATE = null;
-    public static final Block PURPLE_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block PURPLE_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block PURPLE_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block RED_CORRUGATED_METAL_PLATE = null;
-    public static final Block RED_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block RED_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block RED_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block WHITE_CORRUGATED_METAL_PLATE = null;
-    public static final Block WHITE_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block WHITE_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block WHITE_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block YELLOW_CORRUGATED_METAL_PLATE = null;
-    public static final Block YELLOW_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block YELLOW_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block YELLOW_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block BLACK_CORRUGATED_METAL_PLATE = null;
-    public static final Block BLACK_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block BLACK_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block BLACK_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block BLUE_CORRUGATED_METAL_PLATE = null;
-    public static final Block BLUE_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block BLUE_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block BLUE_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block BROWN_CORRUGATED_METAL_PLATE = null;
-    public static final Block BROWN_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block BROWN_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block BROWN_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block CYAN_CORRUGATED_METAL_PLATE = null;
-    public static final Block CYAN_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block CYAN_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block CYAN_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block GRAY_CORRUGATED_METAL_PLATE = null;
-    public static final Block GRAY_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block GRAY_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block GRAY_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block GREEN_CORRUGATED_METAL_PLATE = null;
-    public static final Block GREEN_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block GREEN_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block GREEN_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block LIGHT_BLUE_CORRUGATED_METAL_PLATE = null;
-    public static final Block LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block LIGHT_GRAY_CORRUGATED_METAL_PLATE = null;
-    public static final Block LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block LIME_CORRUGATED_METAL_PLATE = null;
-    public static final Block LIME_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block LIME_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block LIME_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block MAGENTA_CORRUGATED_METAL_PLATE = null;
-    public static final Block MAGENTA_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block MAGENTA_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block MAGENTA_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block ORANGE_CORRUGATED_METAL_PLATE = null;
-    public static final Block ORANGE_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block ORANGE_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block ORANGE_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
-    public static final Block PINK_CORRUGATED_METAL_PLATE = null;
-    public static final Block PINK_CORRUGATED_METAL_PLATE_STAIRS = null;
-    public static final Block PINK_CORRUGATED_METAL_PLATE_SLAB = null;
-    public static final Block PINK_CORRUGATED_METAL_PLATE_WALL = null;
-    public static final Block PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = null;
-
     public static final Block BULKHEAD = null;
     public static final Block BULKHEAD_TOP = null;
 
@@ -578,7 +482,6 @@ public class ECBlocks
         {
             event.getRegistry().register(
                 new LampBlock(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.25F).sound(SoundType.GLASS).lightValue(11)).setRegistryName(DyeColor.byId(j).getName() + "_table_lamp"));
-            RegistryUtils.createBlockWithVariants(event, DyeColor.byId(j).getName() + "_corrugated_metal_plate", true, true, true, true, Material.IRON, null, SoundType.METAL, ToolType.PICKAXE, j, j);
             event.getRegistry().register(
                 new PillowBlock(DyeColor.byId(j), Block.Properties.create(Material.WOOL).hardnessAndResistance(0.25F).sound(SoundType.CLOTH)).setRegistryName(DyeColor.byId(j).getName() + "_pillow"));
 
@@ -662,39 +565,6 @@ public class ECBlocks
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, AIR_DUCT, null, null, null, null);
         event.getRegistry().register(new BlockItem(VENT_AIR_DUCT, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(VENT_AIR_DUCT.getRegistryName()));
         event.getRegistry().register(new BlockItem(GRID_AIR_DUCT, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(GRID_AIR_DUCT.getRegistryName()));
-
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, PURPLE_CORRUGATED_METAL_PLATE, PURPLE_CORRUGATED_METAL_PLATE_STAIRS, PURPLE_CORRUGATED_METAL_PLATE_SLAB,
-            PURPLE_CORRUGATED_METAL_PLATE_WALL, PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RED_CORRUGATED_METAL_PLATE, RED_CORRUGATED_METAL_PLATE_STAIRS, RED_CORRUGATED_METAL_PLATE_SLAB,
-            RED_CORRUGATED_METAL_PLATE_WALL, RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CORRUGATED_METAL_PLATE, WHITE_CORRUGATED_METAL_PLATE_STAIRS, WHITE_CORRUGATED_METAL_PLATE_SLAB,
-            WHITE_CORRUGATED_METAL_PLATE_WALL, WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_CORRUGATED_METAL_PLATE, YELLOW_CORRUGATED_METAL_PLATE_STAIRS, YELLOW_CORRUGATED_METAL_PLATE_SLAB,
-            YELLOW_CORRUGATED_METAL_PLATE_WALL, YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BLACK_CORRUGATED_METAL_PLATE, BLACK_CORRUGATED_METAL_PLATE_STAIRS, BLACK_CORRUGATED_METAL_PLATE_SLAB,
-            BLACK_CORRUGATED_METAL_PLATE_WALL, BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BLUE_CORRUGATED_METAL_PLATE, BLUE_CORRUGATED_METAL_PLATE_STAIRS, BLUE_CORRUGATED_METAL_PLATE_SLAB,
-            BLUE_CORRUGATED_METAL_PLATE_WALL, BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BROWN_CORRUGATED_METAL_PLATE, BROWN_CORRUGATED_METAL_PLATE_STAIRS, BROWN_CORRUGATED_METAL_PLATE_SLAB,
-            BROWN_CORRUGATED_METAL_PLATE_WALL, BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CYAN_CORRUGATED_METAL_PLATE, CYAN_CORRUGATED_METAL_PLATE_STAIRS, CYAN_CORRUGATED_METAL_PLATE_SLAB,
-            CYAN_CORRUGATED_METAL_PLATE_WALL, CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GRAY_CORRUGATED_METAL_PLATE, GRAY_CORRUGATED_METAL_PLATE_STAIRS, GRAY_CORRUGATED_METAL_PLATE_SLAB,
-            GRAY_CORRUGATED_METAL_PLATE_WALL, GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, GREEN_CORRUGATED_METAL_PLATE, GREEN_CORRUGATED_METAL_PLATE_STAIRS, GREEN_CORRUGATED_METAL_PLATE_SLAB,
-            GREEN_CORRUGATED_METAL_PLATE_WALL, GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_CORRUGATED_METAL_PLATE, LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS, LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB,
-            LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL, LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_GRAY_CORRUGATED_METAL_PLATE, LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS, LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB,
-            LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL, LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIME_CORRUGATED_METAL_PLATE, LIME_CORRUGATED_METAL_PLATE_STAIRS, LIME_CORRUGATED_METAL_PLATE_SLAB,
-            LIME_CORRUGATED_METAL_PLATE_WALL, LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, ORANGE_CORRUGATED_METAL_PLATE, ORANGE_CORRUGATED_METAL_PLATE_STAIRS, ORANGE_CORRUGATED_METAL_PLATE_SLAB,
-            ORANGE_CORRUGATED_METAL_PLATE_WALL, ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, PINK_CORRUGATED_METAL_PLATE, PINK_CORRUGATED_METAL_PLATE_STAIRS, PINK_CORRUGATED_METAL_PLATE_SLAB,
-            PINK_CORRUGATED_METAL_PLATE_WALL, PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MAGENTA_CORRUGATED_METAL_PLATE, MAGENTA_CORRUGATED_METAL_PLATE_STAIRS, MAGENTA_CORRUGATED_METAL_PLATE_SLAB,
-            MAGENTA_CORRUGATED_METAL_PLATE_WALL, MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE);
 
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BULKHEAD, null, null, null, null);
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BULKHEAD_TOP, null, null, null, null);

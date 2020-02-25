@@ -1179,6 +1179,183 @@ public class ECItemRegistry
     public static final RegistryObject<Item> YELLOW_GREY_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("yellow_grey_tiles_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    // Corrugated metal plates
+    public static final RegistryObject<Item> BLACK_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("black_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLACK_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("black_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLACK_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("black_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLACK_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("black_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("black_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> BLUE_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("blue_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLUE_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("blue_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLUE_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("blue_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLUE_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("blue_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("blue_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> BROWN_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("brown_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BROWN_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("brown_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BROWN_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("brown_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BROWN_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("brown_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("brown_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> CYAN_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("cyan_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CYAN_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("cyan_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CYAN_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("cyan_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CYAN_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("cyan_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("cyan_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> GRAY_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("gray_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRAY_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("gray_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRAY_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("gray_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRAY_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("gray_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("gray_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> GREEN_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("green_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GREEN_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("green_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GREEN_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("green_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GREEN_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("green_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("green_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> LIGHT_BLUE_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("light_blue_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("light_blue_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("light_blue_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("light_blue_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("light_blue_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> LIGHT_GRAY_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("light_gray_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("light_gray_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("light_gray_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("light_gray_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("light_gray_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> LIME_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("lime_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIME_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("lime_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIME_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("lime_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIME_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("lime_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("lime_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> MAGENTA_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("magenta_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> MAGENTA_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("magenta_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> MAGENTA_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("magenta_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> MAGENTA_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("magenta_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("magenta_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> ORANGE_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("orange_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ORANGE_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("orange_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ORANGE_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("orange_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ORANGE_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("orange_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("orange_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> PINK_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("pink_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PINK_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("pink_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PINK_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("pink_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PINK_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("pink_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("pink_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> PURPLE_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("purple_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PURPLE_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("purple_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PURPLE_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("purple_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PURPLE_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("purple_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("purple_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> RED_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("red_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("red_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("red_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("red_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("red_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> WHITE_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("white_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("white_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("white_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("white_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("white_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> YELLOW_CORRUGATED_METAL_PLATE_ITEM = ITEMS.register("yellow_corrugated_metal_plate",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_CORRUGATED_METAL_PLATE_STAIRS_ITEM = ITEMS.register("yellow_corrugated_metal_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_CORRUGATED_METAL_PLATE_SLAB_ITEM = ITEMS.register("yellow_corrugated_metal_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_CORRUGATED_METAL_PLATE_WALL_ITEM = ITEMS.register("yellow_corrugated_metal_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("yellow_corrugated_metal_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

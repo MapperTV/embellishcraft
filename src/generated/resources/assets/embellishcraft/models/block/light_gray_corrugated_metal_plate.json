@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "embellishcraft:block/light_gray_corrugated_metal_plate"
+  }
+}
