@@ -1082,6 +1082,103 @@ public class ECItemRegistry
     public static final RegistryObject<Item> WHITE_CONCRETE_PAVING_PRESSURE_PLATE_ITEM = ITEMS.register("white_concrete_paving_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    // Tiles
+    public static final RegistryObject<Item> CONCRETE_TILES_ITEM = ITEMS.register("concrete_tiles",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CONCRETE_TILES_STAIRS_ITEM = ITEMS.register("concrete_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CONCRETE_TILES_SLAB_ITEM = ITEMS.register("concrete_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CONCRETE_TILES_WALL_ITEM = ITEMS.register("concrete_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CONCRETE_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("concrete_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> SKYBLUE_TILES_ITEM = ITEMS.register("skyblue_tiles",
+        () -> new BlockItem(ECBlockRegistry.SKYBLUE_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SKYBLUE_TILES_STAIRS_ITEM = ITEMS.register("skyblue_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.SKYBLUE_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SKYBLUE_TILES_SLAB_ITEM = ITEMS.register("skyblue_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.SKYBLUE_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SKYBLUE_TILES_WALL_ITEM = ITEMS.register("skyblue_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.SKYBLUE_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SKYBLUE_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("skyblue_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.SKYBLUE_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> ORANGE_TILES_ITEM = ITEMS.register("orange_tiles",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ORANGE_TILES_STAIRS_ITEM = ITEMS.register("orange_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ORANGE_TILES_SLAB_ITEM = ITEMS.register("orange_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ORANGE_TILES_WALL_ITEM = ITEMS.register("orange_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ORANGE_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("orange_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.ORANGE_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> BLUE_TILES_ITEM = ITEMS.register("blue_tiles", () -> new BlockItem(ECBlockRegistry.BLUE_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLUE_TILES_STAIRS_ITEM = ITEMS.register("blue_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.BLUE_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLUE_TILES_SLAB_ITEM = ITEMS.register("blue_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.BLUE_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLUE_TILES_WALL_ITEM = ITEMS.register("blue_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.BLUE_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BLUE_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("blue_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.BLUE_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> LIGHT_BLUE_TILES_ITEM = ITEMS.register("light_blue_tiles",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_BLUE_TILES_STAIRS_ITEM = ITEMS.register("light_blue_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_BLUE_TILES_SLAB_ITEM = ITEMS.register("light_blue_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_BLUE_TILES_WALL_ITEM = ITEMS.register("light_blue_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_BLUE_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("light_blue_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_BLUE_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> RED_TILES_ITEM = ITEMS.register("red_tiles", () -> new BlockItem(ECBlockRegistry.RED_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_TILES_STAIRS_ITEM = ITEMS.register("red_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.RED_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_TILES_SLAB_ITEM = ITEMS.register("red_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.RED_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_TILES_WALL_ITEM = ITEMS.register("red_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.RED_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("red_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.RED_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> WHITE_TILES_ITEM = ITEMS.register("white_tiles", () -> new BlockItem(ECBlockRegistry.WHITE_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_TILES_STAIRS_ITEM = ITEMS.register("white_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.WHITE_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_TILES_SLAB_ITEM = ITEMS.register("white_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.WHITE_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_TILES_WALL_ITEM = ITEMS.register("white_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.WHITE_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("white_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.WHITE_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> YELLOW_TILES_ITEM = ITEMS.register("yellow_tiles",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_TILES_STAIRS_ITEM = ITEMS.register("yellow_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_TILES_SLAB_ITEM = ITEMS.register("yellow_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_TILES_WALL_ITEM = ITEMS.register("yellow_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("yellow_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> YELLOW_GREY_TILES_ITEM = ITEMS.register("yellow_grey_tiles",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_GREY_TILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_GREY_TILES_STAIRS_ITEM = ITEMS.register("yellow_grey_tiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_GREY_TILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_GREY_TILES_SLAB_ITEM = ITEMS.register("yellow_grey_tiles_slab",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_GREY_TILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_GREY_TILES_WALL_ITEM = ITEMS.register("yellow_grey_tiles_wall",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_GREY_TILES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> YELLOW_GREY_TILES_PRESSURE_PLATE_ITEM = ITEMS.register("yellow_grey_tiles_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

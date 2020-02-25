@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "side": "embellishcraft:block/white_tiles",
+    "bottom": "embellishcraft:block/white_tiles",
+    "top": "embellishcraft:block/white_tiles"
+  }
+}

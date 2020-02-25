@@ -11,6 +11,7 @@ import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.data.ShapelessRecipeBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraftforge.common.Tags;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
@@ -1345,5 +1346,124 @@ public class ECRecipes extends RecipeProvider
             "has_white_concrete_paving", this.hasItem(ECBlockRegistry.WHITE_CONCRETE_PAVING.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.WHITE_CONCRETE_PAVING.get()).patternLine("##").addCriterion(
             "has_white_concrete_paving", this.hasItem(ECBlockRegistry.WHITE_CONCRETE_PAVING.get())).build(consumer);
+
+        // Tiles
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_TILES.get(), 4).patternLine("ii").patternLine("ii").key('i', ECBlockRegistry.CONCRETE_PAVING.get()).addCriterion("has_concrete_tiles",
+            this.hasItem(ECBlockRegistry.CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.CONCRETE_TILES.get()).addCriterion("has_concrete_tiles",
+            this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.CONCRETE_TILES_SLAB.get()).addCriterion("has_concrete_tiles_slab",
+            this.hasItem(ECBlockRegistry.CONCRETE_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":concrete_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.CONCRETE_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_concrete_tiles", this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_TILES_WALL.get(), 6).key('#', ECBlockRegistry.CONCRETE_TILES.get()).patternLine("###").patternLine("###").addCriterion("has_concrete_tiles",
+            this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.CONCRETE_TILES.get()).patternLine("##").addCriterion("has_concrete_tiles",
+            this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SKYBLUE_TILES.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', ECBlockRegistry.BLUE_TILES.get()).key('d',
+            Tags.Items.DYES_WHITE).addCriterion("has_blue_tiles", this.hasItem(ECBlockRegistry.BLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SKYBLUE_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.SKYBLUE_TILES.get()).addCriterion("has_skyblue_tiles",
+            this.hasItem(ECBlockRegistry.SKYBLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SKYBLUE_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SKYBLUE_TILES_SLAB.get()).addCriterion("has_skyblue_tiles_slab",
+            this.hasItem(ECBlockRegistry.SKYBLUE_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":skyblue_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SKYBLUE_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.SKYBLUE_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_skyblue_tiles", this.hasItem(ECBlockRegistry.SKYBLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SKYBLUE_TILES_WALL.get(), 6).key('#', ECBlockRegistry.SKYBLUE_TILES.get()).patternLine("###").patternLine("###").addCriterion("has_skyblue_tiles",
+            this.hasItem(ECBlockRegistry.SKYBLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SKYBLUE_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.SKYBLUE_TILES.get()).patternLine("##").addCriterion("has_skyblue_tiles",
+            this.hasItem(ECBlockRegistry.SKYBLUE_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_TILES.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', ECBlockRegistry.CONCRETE_TILES.get()).key('d',
+            Tags.Items.DYES_ORANGE).addCriterion("has_concrete_tiles", this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.ORANGE_TILES.get()).addCriterion("has_orange_tiles",
+            this.hasItem(ECBlockRegistry.ORANGE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.ORANGE_TILES_SLAB.get()).addCriterion("has_orange_tiles_slab",
+            this.hasItem(ECBlockRegistry.ORANGE_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":orange_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.ORANGE_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_orange_tiles", this.hasItem(ECBlockRegistry.ORANGE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_TILES_WALL.get(), 6).key('#', ECBlockRegistry.ORANGE_TILES.get()).patternLine("###").patternLine("###").addCriterion("has_orange_tiles",
+            this.hasItem(ECBlockRegistry.ORANGE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ORANGE_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.ORANGE_TILES.get()).patternLine("##").addCriterion("has_orange_tiles",
+            this.hasItem(ECBlockRegistry.ORANGE_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_TILES.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', ECBlockRegistry.CONCRETE_TILES.get()).key('d',
+            Tags.Items.DYES_BLUE).addCriterion("has_concrete_tiles", this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.BLUE_TILES.get()).addCriterion("has_blue_tiles",
+            this.hasItem(ECBlockRegistry.BLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.BLUE_TILES_SLAB.get()).addCriterion("has_blue_tiles_slab",
+            this.hasItem(ECBlockRegistry.BLUE_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":blue_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.BLUE_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_blue_tiles", this.hasItem(ECBlockRegistry.BLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_TILES_WALL.get(), 6).key('#', ECBlockRegistry.BLUE_TILES.get()).patternLine("###").patternLine("###").addCriterion("has_blue_tiles",
+            this.hasItem(ECBlockRegistry.BLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BLUE_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.BLUE_TILES.get()).patternLine("##").addCriterion("has_blue_tiles",
+            this.hasItem(ECBlockRegistry.BLUE_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_TILES.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', ECBlockRegistry.CONCRETE_TILES.get()).key('d',
+            Tags.Items.DYES_LIGHT_BLUE).addCriterion("has_concrete_tiles", this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.LIGHT_BLUE_TILES.get()).addCriterion("has_light_blue_tiles",
+            this.hasItem(ECBlockRegistry.LIGHT_BLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.LIGHT_BLUE_TILES_SLAB.get()).addCriterion("has_light_blue_tiles_slab",
+            this.hasItem(ECBlockRegistry.LIGHT_BLUE_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":light_blue_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.LIGHT_BLUE_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_light_blue_tiles", this.hasItem(ECBlockRegistry.LIGHT_BLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_TILES_WALL.get(), 6).key('#', ECBlockRegistry.LIGHT_BLUE_TILES.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_light_blue_tiles", this.hasItem(ECBlockRegistry.LIGHT_BLUE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_BLUE_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.LIGHT_BLUE_TILES.get()).patternLine("##").addCriterion("has_light_blue_tiles",
+            this.hasItem(ECBlockRegistry.LIGHT_BLUE_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_TILES.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', ECBlockRegistry.CONCRETE_TILES.get()).key('d',
+            Tags.Items.DYES_RED).addCriterion("has_concrete_tiles", this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.RED_TILES.get()).addCriterion("has_red_tiles",
+            this.hasItem(ECBlockRegistry.RED_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.RED_TILES_SLAB.get()).addCriterion("has_red_tiles_slab",
+            this.hasItem(ECBlockRegistry.RED_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":red_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.RED_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_red_tiles", this.hasItem(ECBlockRegistry.RED_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_TILES_WALL.get(), 6).key('#', ECBlockRegistry.RED_TILES.get()).patternLine("###").patternLine("###").addCriterion("has_red_tiles",
+            this.hasItem(ECBlockRegistry.RED_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.RED_TILES.get()).patternLine("##").addCriterion("has_red_tiles",
+            this.hasItem(ECBlockRegistry.RED_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_TILES.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', ECBlockRegistry.CONCRETE_TILES.get()).key('d',
+            Tags.Items.DYES_WHITE).addCriterion("has_concrete_tiles", this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.WHITE_TILES.get()).addCriterion("has_white_tiles",
+            this.hasItem(ECBlockRegistry.WHITE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.WHITE_TILES_SLAB.get()).addCriterion("has_white_tiles_slab",
+            this.hasItem(ECBlockRegistry.WHITE_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":white_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.WHITE_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_white_tiles", this.hasItem(ECBlockRegistry.WHITE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_TILES_WALL.get(), 6).key('#', ECBlockRegistry.WHITE_TILES.get()).patternLine("###").patternLine("###").addCriterion("has_white_tiles",
+            this.hasItem(ECBlockRegistry.WHITE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.WHITE_TILES.get()).patternLine("##").addCriterion("has_white_tiles",
+            this.hasItem(ECBlockRegistry.WHITE_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_TILES.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', ECBlockRegistry.CONCRETE_TILES.get()).key('d',
+            Tags.Items.DYES_YELLOW).addCriterion("has_concrete_tiles", this.hasItem(ECBlockRegistry.CONCRETE_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.YELLOW_TILES.get()).addCriterion("has_yellow_tiles",
+            this.hasItem(ECBlockRegistry.YELLOW_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.YELLOW_TILES_SLAB.get()).addCriterion("has_yellow_tiles_slab",
+            this.hasItem(ECBlockRegistry.YELLOW_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":yellow_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.YELLOW_TILES.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_yellow_tiles", this.hasItem(ECBlockRegistry.YELLOW_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_TILES_WALL.get(), 6).key('#', ECBlockRegistry.YELLOW_TILES.get()).patternLine("###").patternLine("###").addCriterion("has_yellow_tiles",
+            this.hasItem(ECBlockRegistry.YELLOW_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.YELLOW_TILES.get()).patternLine("##").addCriterion("has_yellow_tiles",
+            this.hasItem(ECBlockRegistry.YELLOW_TILES.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_GREY_TILES.get(), 8).patternLine("iii").patternLine("idi").patternLine("iii").key('i', ECBlockRegistry.YELLOW_TILES.get()).key('d',
+            Tags.Items.DYES_GRAY).addCriterion("has_yellow_tiles", this.hasItem(ECBlockRegistry.YELLOW_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_GREY_TILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.YELLOW_GREY_TILES.get()).addCriterion("has_concrete_tiles",
+            this.hasItem(ECBlockRegistry.YELLOW_GREY_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_GREY_TILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.YELLOW_GREY_TILES_SLAB.get()).addCriterion("has_concrete_tiles_slab",
+            this.hasItem(ECBlockRegistry.YELLOW_GREY_TILES_SLAB.get())).build(consumer, ECConstants.MODID + ":yellow_grey_tiles_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_GREY_TILES_STAIRS.get(), 4).key('#', ECBlockRegistry.YELLOW_GREY_TILES.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_concrete_tiles", this.hasItem(ECBlockRegistry.YELLOW_GREY_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_GREY_TILES_WALL.get(), 6).key('#', ECBlockRegistry.YELLOW_GREY_TILES.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_concrete_tiles", this.hasItem(ECBlockRegistry.YELLOW_GREY_TILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.YELLOW_GREY_TILES.get()).patternLine("##").addCriterion("has_concrete_tiles",
+            this.hasItem(ECBlockRegistry.YELLOW_GREY_TILES.get())).build(consumer);
+
     }
 }

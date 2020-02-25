@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:blue_tiles_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_blue_tiles_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:blue_tiles_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:blue_tiles_from_slabs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_blue_tiles_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -94,6 +94,15 @@
     "embellishcraft:moist_paving_wall",
     "embellishcraft:old_large_bricks_wall",
     "embellishcraft:polished_paving_wall",
-    "embellishcraft:white_concrete_paving_wall"
+    "embellishcraft:white_concrete_paving_wall",
+    "embellishcraft:concrete_tiles_wall",
+    "embellishcraft:skyblue_tiles_wall",
+    "embellishcraft:orange_tiles_wall",
+    "embellishcraft:blue_tiles_wall",
+    "embellishcraft:light_blue_tiles_wall",
+    "embellishcraft:red_tiles_wall",
+    "embellishcraft:white_tiles_wall",
+    "embellishcraft:yellow_tiles_wall",
+    "embellishcraft:yellow_grey_tiles_wall"
   ]
 }

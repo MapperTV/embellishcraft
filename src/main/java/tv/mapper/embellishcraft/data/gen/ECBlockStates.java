@@ -287,6 +287,26 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.POLISHED_PAVING_WALL.get(), ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE.get(), null);
         registerStoneVariant("white_concrete_paving", ECBlockRegistry.WHITE_CONCRETE_PAVING.get(), ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB.get(), ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS.get(),
             ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL.get(), ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE.get(), null);
+
+        // Tiles
+        registerStoneVariant("concrete_tiles", ECBlockRegistry.CONCRETE_TILES.get(), ECBlockRegistry.CONCRETE_TILES_SLAB.get(), ECBlockRegistry.CONCRETE_TILES_STAIRS.get(),
+            ECBlockRegistry.CONCRETE_TILES_WALL.get(), ECBlockRegistry.CONCRETE_TILES_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("skyblue_tiles", ECBlockRegistry.SKYBLUE_TILES.get(), ECBlockRegistry.SKYBLUE_TILES_SLAB.get(), ECBlockRegistry.SKYBLUE_TILES_STAIRS.get(),
+            ECBlockRegistry.SKYBLUE_TILES_WALL.get(), ECBlockRegistry.SKYBLUE_TILES_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("orange_tiles", ECBlockRegistry.ORANGE_TILES.get(), ECBlockRegistry.ORANGE_TILES_SLAB.get(), ECBlockRegistry.ORANGE_TILES_STAIRS.get(), ECBlockRegistry.ORANGE_TILES_WALL.get(),
+            ECBlockRegistry.ORANGE_TILES_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("blue_tiles", ECBlockRegistry.BLUE_TILES.get(), ECBlockRegistry.BLUE_TILES_SLAB.get(), ECBlockRegistry.BLUE_TILES_STAIRS.get(), ECBlockRegistry.BLUE_TILES_WALL.get(),
+            ECBlockRegistry.BLUE_TILES_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("light_blue_tiles", ECBlockRegistry.LIGHT_BLUE_TILES.get(), ECBlockRegistry.LIGHT_BLUE_TILES_SLAB.get(), ECBlockRegistry.LIGHT_BLUE_TILES_STAIRS.get(),
+            ECBlockRegistry.LIGHT_BLUE_TILES_WALL.get(), ECBlockRegistry.LIGHT_BLUE_TILES_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("red_tiles", ECBlockRegistry.RED_TILES.get(), ECBlockRegistry.RED_TILES_SLAB.get(), ECBlockRegistry.RED_TILES_STAIRS.get(), ECBlockRegistry.RED_TILES_WALL.get(),
+            ECBlockRegistry.RED_TILES_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("white_tiles", ECBlockRegistry.WHITE_TILES.get(), ECBlockRegistry.WHITE_TILES_SLAB.get(), ECBlockRegistry.WHITE_TILES_STAIRS.get(), ECBlockRegistry.WHITE_TILES_WALL.get(),
+            ECBlockRegistry.WHITE_TILES_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("yellow_tiles", ECBlockRegistry.YELLOW_TILES.get(), ECBlockRegistry.YELLOW_TILES_SLAB.get(), ECBlockRegistry.YELLOW_TILES_STAIRS.get(), ECBlockRegistry.YELLOW_TILES_WALL.get(),
+            ECBlockRegistry.YELLOW_TILES_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("yellow_grey_tiles", ECBlockRegistry.YELLOW_GREY_TILES.get(), ECBlockRegistry.YELLOW_GREY_TILES_SLAB.get(), ECBlockRegistry.YELLOW_GREY_TILES_STAIRS.get(),
+            ECBlockRegistry.YELLOW_GREY_TILES_WALL.get(), ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get(), null);
     }
 
     /**

@@ -196,5 +196,21 @@ public class ECBlockTags extends BlockTagsProvider
         this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE.get(), ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE.get(),
             ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE.get(), ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE.get(), ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE.get(),
             ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE.get(), ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE.get());
+
+        // Tiles
+        this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.CONCRETE_TILES_STAIRS.get(), ECBlockRegistry.SKYBLUE_TILES_STAIRS.get(), ECBlockRegistry.ORANGE_TILES_STAIRS.get(),
+            ECBlockRegistry.BLUE_TILES_STAIRS.get(), ECBlockRegistry.LIGHT_BLUE_TILES_STAIRS.get(), ECBlockRegistry.RED_TILES_STAIRS.get(), ECBlockRegistry.WHITE_TILES_STAIRS.get(),
+            ECBlockRegistry.YELLOW_TILES_STAIRS.get(), ECBlockRegistry.YELLOW_GREY_TILES_STAIRS.get());
+        this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.CONCRETE_TILES_SLAB.get(), ECBlockRegistry.SKYBLUE_TILES_SLAB.get(), ECBlockRegistry.ORANGE_TILES_SLAB.get(), ECBlockRegistry.BLUE_TILES_SLAB.get(),
+            ECBlockRegistry.LIGHT_BLUE_TILES_SLAB.get(), ECBlockRegistry.RED_TILES_SLAB.get(), ECBlockRegistry.WHITE_TILES_SLAB.get(), ECBlockRegistry.YELLOW_TILES_SLAB.get(),
+            ECBlockRegistry.YELLOW_GREY_TILES_SLAB.get());
+        this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.CONCRETE_TILES_WALL.get(), ECBlockRegistry.SKYBLUE_TILES_WALL.get(), ECBlockRegistry.ORANGE_TILES_WALL.get(), ECBlockRegistry.BLUE_TILES_WALL.get(),
+            ECBlockRegistry.LIGHT_BLUE_TILES_WALL.get(), ECBlockRegistry.RED_TILES_WALL.get(), ECBlockRegistry.WHITE_TILES_WALL.get(), ECBlockRegistry.YELLOW_TILES_WALL.get(),
+            ECBlockRegistry.YELLOW_GREY_TILES_WALL.get());
+        this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.CONCRETE_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.SKYBLUE_TILES_PRESSURE_PLATE.get(),
+            ECBlockRegistry.ORANGE_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.BLUE_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.LIGHT_BLUE_TILES_PRESSURE_PLATE.get(),
+            ECBlockRegistry.RED_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.WHITE_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.YELLOW_TILES_PRESSURE_PLATE.get(),
+            ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get());
+
     }
 }

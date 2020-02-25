@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:yellow_grey_tiles"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:yellow_grey_tiles_stairs",
+    "count": 4
+  }
+}

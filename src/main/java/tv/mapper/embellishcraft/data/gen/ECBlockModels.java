@@ -80,6 +80,26 @@ public class ECBlockModels extends BlockModelProvider
         buildPressure("polished_paving", modLoc("block/polished_paving"));
         buildPressure("white_concrete_paving", modLoc("block/white_concrete_paving"));
 
+        // Tiles
+        buildWall("concrete_tiles", modLoc("block/concrete_tiles"));
+        buildWall("skyblue_tiles", modLoc("block/skyblue_tiles"));
+        buildWall("orange_tiles", modLoc("block/orange_tiles"));
+        buildWall("blue_tiles", modLoc("block/blue_tiles"));
+        buildWall("light_blue_tiles", modLoc("block/light_blue_tiles"));
+        buildWall("red_tiles", modLoc("block/red_tiles"));
+        buildWall("white_tiles", modLoc("block/white_tiles"));
+        buildWall("yellow_tiles", modLoc("block/yellow_tiles"));
+        buildWall("yellow_grey_tiles", modLoc("block/yellow_grey_tiles"));
+        buildPressure("concrete_tiles", modLoc("block/concrete_tiles"));
+        buildPressure("skyblue_tiles", modLoc("block/skyblue_tiles"));
+        buildPressure("orange_tiles", modLoc("block/orange_tiles"));
+        buildPressure("blue_tiles", modLoc("block/blue_tiles"));
+        buildPressure("light_blue_tiles", modLoc("block/light_blue_tiles"));
+        buildPressure("red_tiles", modLoc("block/red_tiles"));
+        buildPressure("white_tiles", modLoc("block/white_tiles"));
+        buildPressure("yellow_tiles", modLoc("block/yellow_tiles"));
+        buildPressure("yellow_grey_tiles", modLoc("block/yellow_grey_tiles"));
+
     }
 
     private void buildWall(String name, ResourceLocation texture)

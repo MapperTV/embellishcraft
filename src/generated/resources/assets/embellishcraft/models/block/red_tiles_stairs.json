@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "side": "embellishcraft:block/red_tiles",
+    "bottom": "embellishcraft:block/red_tiles",
+    "top": "embellishcraft:block/red_tiles"
+  }
+}

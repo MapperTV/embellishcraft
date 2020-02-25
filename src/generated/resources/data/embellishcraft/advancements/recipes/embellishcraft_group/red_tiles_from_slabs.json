@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:red_tiles_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_red_tiles_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:red_tiles_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:red_tiles_from_slabs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_red_tiles_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -32,62 +32,6 @@ import tv.mapper.mapperbase.util.RegistryUtils;
 @EventBusSubscriber(bus = Bus.MOD)
 public class ECBlocks
 {
-    // Tiles
-
-    public static final Block CONCRETE_TILES = null;
-    public static final Block CONCRETE_TILES_STAIRS = null;
-    public static final Block CONCRETE_TILES_SLAB = null;
-    public static final Block CONCRETE_TILES_PRESSURE_PLATE = null;
-    public static final Block CONCRETE_TILES_WALL = null;
-
-    public static final Block SKYBLUE_TILES = null;
-    public static final Block SKYBLUE_TILES_STAIRS = null;
-    public static final Block SKYBLUE_TILES_SLAB = null;
-    public static final Block SKYBLUE_TILES_PRESSURE_PLATE = null;
-    public static final Block SKYBLUE_TILES_WALL = null;
-
-    public static final Block ORANGE_TILES = null;
-    public static final Block ORANGE_TILES_STAIRS = null;
-    public static final Block ORANGE_TILES_SLAB = null;
-    public static final Block ORANGE_TILES_PRESSURE_PLATE = null;
-    public static final Block ORANGE_TILES_WALL = null;
-
-    public static final Block BLUE_TILES = null;
-    public static final Block BLUE_TILES_STAIRS = null;
-    public static final Block BLUE_TILES_SLAB = null;
-    public static final Block BLUE_TILES_PRESSURE_PLATE = null;
-    public static final Block BLUE_TILES_WALL = null;
-
-    public static final Block LIGHT_BLUE_TILES = null;
-    public static final Block LIGHT_BLUE_TILES_STAIRS = null;
-    public static final Block LIGHT_BLUE_TILES_SLAB = null;
-    public static final Block LIGHT_BLUE_TILES_PRESSURE_PLATE = null;
-    public static final Block LIGHT_BLUE_TILES_WALL = null;
-
-    public static final Block RED_TILES = null;
-    public static final Block RED_TILES_STAIRS = null;
-    public static final Block RED_TILES_SLAB = null;
-    public static final Block RED_TILES_PRESSURE_PLATE = null;
-    public static final Block RED_TILES_WALL = null;
-
-    public static final Block WHITE_TILES = null;
-    public static final Block WHITE_TILES_STAIRS = null;
-    public static final Block WHITE_TILES_SLAB = null;
-    public static final Block WHITE_TILES_PRESSURE_PLATE = null;
-    public static final Block WHITE_TILES_WALL = null;
-
-    public static final Block YELLOW_TILES = null;
-    public static final Block YELLOW_TILES_STAIRS = null;
-    public static final Block YELLOW_TILES_SLAB = null;
-    public static final Block YELLOW_TILES_PRESSURE_PLATE = null;
-    public static final Block YELLOW_TILES_WALL = null;
-
-    public static final Block YELLOW_GREY_TILES = null;
-    public static final Block YELLOW_GREY_TILES_STAIRS = null;
-    public static final Block YELLOW_GREY_TILES_SLAB = null;
-    public static final Block YELLOW_GREY_TILES_PRESSURE_PLATE = null;
-    public static final Block YELLOW_GREY_TILES_WALL = null;
-
     // Wallpaper
 
     public static final Block WHITE_BLUE_WALLPAPER = null;
@@ -503,18 +447,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        // Tiles
-
-        RegistryUtils.createBlockWithVariants(event, "concrete_tiles", true, true, true, true, Material.ROCK, MaterialColor.STONE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "skyblue_tiles", true, true, true, true, Material.ROCK, MaterialColor.LIGHT_BLUE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "orange_tiles", true, true, true, true, Material.ROCK, MaterialColor.ORANGE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "blue_tiles", true, true, true, true, Material.ROCK, MaterialColor.BLUE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "light_blue_tiles", true, true, true, true, Material.ROCK, MaterialColor.LIGHT_BLUE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "red_tiles", true, true, true, true, Material.ROCK, MaterialColor.RED, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "white_tiles", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "yellow_tiles", true, true, true, true, Material.ROCK, MaterialColor.YELLOW, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "yellow_grey_tiles", true, true, true, true, Material.ROCK, MaterialColor.YELLOW_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-
         // Wallpaper
 
         RegistryUtils.createBlockWithVariants(event, "white_blue_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
@@ -700,19 +632,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
-        // Tiles
-
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_TILES, CONCRETE_TILES_STAIRS, CONCRETE_TILES_SLAB, CONCRETE_TILES_WALL, CONCRETE_TILES_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, SKYBLUE_TILES, SKYBLUE_TILES_STAIRS, SKYBLUE_TILES_SLAB, SKYBLUE_TILES_WALL, SKYBLUE_TILES_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, ORANGE_TILES, ORANGE_TILES_STAIRS, ORANGE_TILES_SLAB, ORANGE_TILES_WALL, ORANGE_TILES_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BLUE_TILES, BLUE_TILES_STAIRS, BLUE_TILES_SLAB, BLUE_TILES_WALL, BLUE_TILES_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_BLUE_TILES, LIGHT_BLUE_TILES_STAIRS, LIGHT_BLUE_TILES_SLAB, LIGHT_BLUE_TILES_WALL, LIGHT_BLUE_TILES_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RED_TILES, RED_TILES_STAIRS, RED_TILES_SLAB, RED_TILES_WALL, RED_TILES_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_TILES, WHITE_TILES_STAIRS, WHITE_TILES_SLAB, WHITE_TILES_WALL, WHITE_TILES_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_TILES, YELLOW_TILES_STAIRS, YELLOW_TILES_SLAB, YELLOW_TILES_WALL, YELLOW_TILES_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, YELLOW_GREY_TILES, YELLOW_GREY_TILES_STAIRS, YELLOW_GREY_TILES_SLAB, YELLOW_GREY_TILES_WALL,
-            YELLOW_GREY_TILES_PRESSURE_PLATE);
-
         // Wallpapers
 
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_BLUE_WALLPAPER, WHITE_BLUE_WALLPAPER_STAIRS, WHITE_BLUE_WALLPAPER_SLAB, null, null);

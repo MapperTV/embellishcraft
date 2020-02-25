@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "side": "embellishcraft:block/skyblue_tiles",
+    "bottom": "embellishcraft:block/skyblue_tiles",
+    "top": "embellishcraft:block/skyblue_tiles"
+  }
+}

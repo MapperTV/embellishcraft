@@ -92,6 +92,15 @@
     "embellishcraft:moist_paving_stairs",
     "embellishcraft:old_large_bricks_stairs",
     "embellishcraft:polished_paving_stairs",
-    "embellishcraft:white_concrete_paving_stairs"
+    "embellishcraft:white_concrete_paving_stairs",
+    "embellishcraft:concrete_tiles_stairs",
+    "embellishcraft:skyblue_tiles_stairs",
+    "embellishcraft:orange_tiles_stairs",
+    "embellishcraft:blue_tiles_stairs",
+    "embellishcraft:light_blue_tiles_stairs",
+    "embellishcraft:red_tiles_stairs",
+    "embellishcraft:white_tiles_stairs",
+    "embellishcraft:yellow_tiles_stairs",
+    "embellishcraft:yellow_grey_tiles_stairs"
   ]
 }

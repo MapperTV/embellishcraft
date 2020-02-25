@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:concrete_tiles_wall"
+    ]
+  },
+  "criteria": {
+    "has_concrete_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:concrete_tiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:concrete_tiles_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_concrete_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}
