@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "side": "embellishcraft:block/concrete_paving",
+    "bottom": "embellishcraft:block/concrete_paving",
+    "top": "embellishcraft:block/concrete_paving"
+  }
+}

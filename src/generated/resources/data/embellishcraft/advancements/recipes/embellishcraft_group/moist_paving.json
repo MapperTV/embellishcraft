@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:moist_paving"
+    ]
+  },
+  "criteria": {
+    "has_polished_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:polished_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:moist_paving"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

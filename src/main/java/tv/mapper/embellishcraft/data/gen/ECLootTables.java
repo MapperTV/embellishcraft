@@ -585,5 +585,41 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.WEARED_LARGE_BRICKS_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_LARGE_BRICKS_WALL.get()));
         lootTables.put(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE.get()));
 
+        // Pavings
+        lootTables.put(ECBlockRegistry.CONCRETE_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.CONCRETE_PAVING.get()));
+        lootTables.put(ECBlockRegistry.CONCRETE_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.CONCRETE_PAVING_SLAB.get()));
+        lootTables.put(ECBlockRegistry.CONCRETE_PAVING_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.CONCRETE_PAVING_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.CONCRETE_PAVING_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.CONCRETE_PAVING_WALL.get()));
+        lootTables.put(ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE.get()));
+        
+        lootTables.put(ECBlockRegistry.DAMAGED_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DAMAGED_PAVING.get()));
+        lootTables.put(ECBlockRegistry.DAMAGED_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.DAMAGED_PAVING_SLAB.get()));
+        lootTables.put(ECBlockRegistry.DAMAGED_PAVING_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DAMAGED_PAVING_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.DAMAGED_PAVING_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DAMAGED_PAVING_WALL.get()));
+        lootTables.put(ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE.get()));
+        
+        lootTables.put(ECBlockRegistry.DARK_CONCRETE_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_CONCRETE_PAVING.get()));
+        lootTables.put(ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB.get()));
+        lootTables.put(ECBlockRegistry.DARK_CONCRETE_PAVING_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_CONCRETE_PAVING_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.DARK_CONCRETE_PAVING_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_CONCRETE_PAVING_WALL.get()));
+        lootTables.put(ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE.get()));
+        
+        lootTables.put(ECBlockRegistry.MOIST_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MOIST_PAVING.get()));
+        lootTables.put(ECBlockRegistry.MOIST_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.MOIST_PAVING_SLAB.get()));
+        lootTables.put(ECBlockRegistry.MOIST_PAVING_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MOIST_PAVING_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.MOIST_PAVING_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MOIST_PAVING_WALL.get()));
+        lootTables.put(ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE.get()));
+        
+        lootTables.put(ECBlockRegistry.POLISHED_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_PAVING.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.POLISHED_PAVING_SLAB.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_PAVING_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_PAVING_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_PAVING_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_PAVING_WALL.get()));
+        lootTables.put(ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE.get()));
+        
+        lootTables.put(ECBlockRegistry.WHITE_CONCRETE_PAVING.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_CONCRETE_PAVING.get()));
+        lootTables.put(ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB.get()));
+        lootTables.put(ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL.get()));
+        lootTables.put(ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE.get()));
     }
 }

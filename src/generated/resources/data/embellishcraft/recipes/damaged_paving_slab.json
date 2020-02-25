@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:damaged_paving"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:damaged_paving_slab",
+    "count": 6
+  }
+}

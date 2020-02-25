@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "i",
+    "i"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:moist_paving_slab"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:moist_paving"
+  }
+}

@@ -87,6 +87,13 @@
     "embellishcraft:weared_bricks_wall",
     "embellishcraft:dark_large_bricks_wall",
     "embellishcraft:old_large_bricks_wall",
-    "embellishcraft:weared_large_bricks_wall"
+    "embellishcraft:weared_large_bricks_wall",
+    "embellishcraft:concrete_paving_wall",
+    "embellishcraft:damaged_paving_wall",
+    "embellishcraft:dark_concrete_paving_wall",
+    "embellishcraft:moist_paving_wall",
+    "embellishcraft:old_large_bricks_wall",
+    "embellishcraft:polished_paving_wall",
+    "embellishcraft:white_concrete_paving_wall"
   ]
 }

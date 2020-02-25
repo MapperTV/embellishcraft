@@ -32,44 +32,6 @@ import tv.mapper.mapperbase.util.RegistryUtils;
 @EventBusSubscriber(bus = Bus.MOD)
 public class ECBlocks
 {
-    // Paving
-
-    public static final Block CONCRETE_PAVING = null;
-    public static final Block CONCRETE_PAVING_STAIRS = null;
-    public static final Block CONCRETE_PAVING_SLAB = null;
-    public static final Block CONCRETE_PAVING_PRESSURE_PLATE = null;
-    public static final Block CONCRETE_PAVING_WALL = null;
-
-    public static final Block DAMAGED_PAVING = null;
-    public static final Block DAMAGED_PAVING_STAIRS = null;
-    public static final Block DAMAGED_PAVING_SLAB = null;
-    public static final Block DAMAGED_PAVING_PRESSURE_PLATE = null;
-    public static final Block DAMAGED_PAVING_WALL = null;
-
-    public static final Block DARK_CONCRETE_PAVING = null;
-    public static final Block DARK_CONCRETE_PAVING_STAIRS = null;
-    public static final Block DARK_CONCRETE_PAVING_SLAB = null;
-    public static final Block DARK_CONCRETE_PAVING_PRESSURE_PLATE = null;
-    public static final Block DARK_CONCRETE_PAVING_WALL = null;
-
-    public static final Block MOIST_PAVING = null;
-    public static final Block MOIST_PAVING_STAIRS = null;
-    public static final Block MOIST_PAVING_SLAB = null;
-    public static final Block MOIST_PAVING_PRESSURE_PLATE = null;
-    public static final Block MOIST_PAVING_WALL = null;
-
-    public static final Block POLISHED_PAVING = null;
-    public static final Block POLISHED_PAVING_STAIRS = null;
-    public static final Block POLISHED_PAVING_SLAB = null;
-    public static final Block POLISHED_PAVING_PRESSURE_PLATE = null;
-    public static final Block POLISHED_PAVING_WALL = null;
-
-    public static final Block WHITE_CONCRETE_PAVING = null;
-    public static final Block WHITE_CONCRETE_PAVING_STAIRS = null;
-    public static final Block WHITE_CONCRETE_PAVING_SLAB = null;
-    public static final Block WHITE_CONCRETE_PAVING_PRESSURE_PLATE = null;
-    public static final Block WHITE_CONCRETE_PAVING_WALL = null;
-
     // Tiles
 
     public static final Block CONCRETE_TILES = null;
@@ -541,15 +503,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        // Paving
-
-        RegistryUtils.createBlockWithVariants(event, "concrete_paving", true, true, true, true, Material.ROCK, MaterialColor.STONE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "damaged_paving", true, true, true, true, Material.ROCK, MaterialColor.STONE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "dark_concrete_paving", true, true, true, true, Material.ROCK, MaterialColor.BLACK_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "moist_paving", true, true, true, true, Material.ROCK, MaterialColor.GREEN_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "polished_paving", true, true, true, true, Material.ROCK, MaterialColor.STONE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "white_concrete_paving", true, true, true, true, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-
         // Tiles
 
         RegistryUtils.createBlockWithVariants(event, "concrete_tiles", true, true, true, true, Material.ROCK, MaterialColor.STONE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
@@ -747,17 +700,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
-        // Paving
-
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_PAVING, CONCRETE_PAVING_STAIRS, CONCRETE_PAVING_SLAB, CONCRETE_PAVING_WALL, CONCRETE_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DAMAGED_PAVING, DAMAGED_PAVING_STAIRS, DAMAGED_PAVING_SLAB, DAMAGED_PAVING_WALL, DAMAGED_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_CONCRETE_PAVING, DARK_CONCRETE_PAVING_STAIRS, DARK_CONCRETE_PAVING_SLAB, DARK_CONCRETE_PAVING_WALL,
-            DARK_CONCRETE_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, MOIST_PAVING, MOIST_PAVING_STAIRS, MOIST_PAVING_SLAB, MOIST_PAVING_WALL, MOIST_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, POLISHED_PAVING, POLISHED_PAVING_STAIRS, POLISHED_PAVING_SLAB, POLISHED_PAVING_WALL, POLISHED_PAVING_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_CONCRETE_PAVING, WHITE_CONCRETE_PAVING_STAIRS, WHITE_CONCRETE_PAVING_SLAB, WHITE_CONCRETE_PAVING_WALL,
-            WHITE_CONCRETE_PAVING_PRESSURE_PLATE);
-
         // Tiles
 
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_TILES, CONCRETE_TILES_STAIRS, CONCRETE_TILES_SLAB, CONCRETE_TILES_WALL, CONCRETE_TILES_PRESSURE_PLATE);

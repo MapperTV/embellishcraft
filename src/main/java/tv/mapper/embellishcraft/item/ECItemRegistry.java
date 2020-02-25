@@ -1015,6 +1015,73 @@ public class ECItemRegistry
     public static final RegistryObject<Item> WEARED_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("weared_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    // Pavings
+    public static final RegistryObject<Item> CONCRETE_PAVING_ITEM = ITEMS.register("concrete_paving",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CONCRETE_PAVING_STAIRS_ITEM = ITEMS.register("concrete_paving_stairs",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_PAVING_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CONCRETE_PAVING_SLAB_ITEM = ITEMS.register("concrete_paving_slab",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_PAVING_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CONCRETE_PAVING_WALL_ITEM = ITEMS.register("concrete_paving_wall",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_PAVING_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> CONCRETE_PAVING_PRESSURE_PLATE_ITEM = ITEMS.register("concrete_paving_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> DAMAGED_PAVING_ITEM = ITEMS.register("damaged_paving",
+        () -> new BlockItem(ECBlockRegistry.DAMAGED_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DAMAGED_PAVING_STAIRS_ITEM = ITEMS.register("damaged_paving_stairs",
+        () -> new BlockItem(ECBlockRegistry.DAMAGED_PAVING_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DAMAGED_PAVING_SLAB_ITEM = ITEMS.register("damaged_paving_slab",
+        () -> new BlockItem(ECBlockRegistry.DAMAGED_PAVING_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DAMAGED_PAVING_WALL_ITEM = ITEMS.register("damaged_paving_wall",
+        () -> new BlockItem(ECBlockRegistry.DAMAGED_PAVING_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DAMAGED_PAVING_PRESSURE_PLATE_ITEM = ITEMS.register("damaged_paving_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> DARK_CONCRETE_PAVING_ITEM = ITEMS.register("dark_concrete_paving",
+        () -> new BlockItem(ECBlockRegistry.DARK_CONCRETE_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_CONCRETE_PAVING_STAIRS_ITEM = ITEMS.register("dark_concrete_paving_stairs",
+        () -> new BlockItem(ECBlockRegistry.DARK_CONCRETE_PAVING_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_CONCRETE_PAVING_SLAB_ITEM = ITEMS.register("dark_concrete_paving_slab",
+        () -> new BlockItem(ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_CONCRETE_PAVING_WALL_ITEM = ITEMS.register("dark_concrete_paving_wall",
+        () -> new BlockItem(ECBlockRegistry.DARK_CONCRETE_PAVING_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_CONCRETE_PAVING_PRESSURE_PLATE_ITEM = ITEMS.register("dark_concrete_paving_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> MOIST_PAVING_ITEM = ITEMS.register("moist_paving",
+        () -> new BlockItem(ECBlockRegistry.MOIST_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> MOIST_PAVING_STAIRS_ITEM = ITEMS.register("moist_paving_stairs",
+        () -> new BlockItem(ECBlockRegistry.MOIST_PAVING_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> MOIST_PAVING_SLAB_ITEM = ITEMS.register("moist_paving_slab",
+        () -> new BlockItem(ECBlockRegistry.MOIST_PAVING_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> MOIST_PAVING_WALL_ITEM = ITEMS.register("moist_paving_wall",
+        () -> new BlockItem(ECBlockRegistry.MOIST_PAVING_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> MOIST_PAVING_PRESSURE_PLATE_ITEM = ITEMS.register("moist_paving_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> POLISHED_PAVING_ITEM = ITEMS.register("polished_paving",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> POLISHED_PAVING_STAIRS_ITEM = ITEMS.register("polished_paving_stairs",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_PAVING_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> POLISHED_PAVING_SLAB_ITEM = ITEMS.register("polished_paving_slab",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_PAVING_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> POLISHED_PAVING_WALL_ITEM = ITEMS.register("polished_paving_wall",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_PAVING_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> POLISHED_PAVING_PRESSURE_PLATE_ITEM = ITEMS.register("polished_paving_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> WHITE_CONCRETE_PAVING_ITEM = ITEMS.register("white_concrete_paving",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CONCRETE_PAVING.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_CONCRETE_PAVING_STAIRS_ITEM = ITEMS.register("white_concrete_paving_stairs",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_CONCRETE_PAVING_SLAB_ITEM = ITEMS.register("white_concrete_paving_slab",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_CONCRETE_PAVING_WALL_ITEM = ITEMS.register("white_concrete_paving_wall",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_CONCRETE_PAVING_PRESSURE_PLATE_ITEM = ITEMS.register("white_concrete_paving_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

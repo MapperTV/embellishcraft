@@ -185,5 +185,16 @@ public class ECBlockTags extends BlockTagsProvider
         this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE.get(), ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE.get(),
             ECBlockRegistry.WEARED_BRICKS_PRESSURE_PLATE.get(), ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE.get(), ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE.get(),
             ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE.get());
+
+        // Pavings
+        this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.CONCRETE_PAVING_STAIRS.get(), ECBlockRegistry.DAMAGED_PAVING_STAIRS.get(), ECBlockRegistry.DARK_CONCRETE_PAVING_STAIRS.get(),
+            ECBlockRegistry.MOIST_PAVING_STAIRS.get(), ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.POLISHED_PAVING_STAIRS.get(), ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS.get());
+        this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.CONCRETE_PAVING_SLAB.get(), ECBlockRegistry.DAMAGED_PAVING_SLAB.get(), ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB.get(),
+            ECBlockRegistry.MOIST_PAVING_SLAB.get(), ECBlockRegistry.OLD_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.POLISHED_PAVING_SLAB.get(), ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB.get());
+        this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.CONCRETE_PAVING_WALL.get(), ECBlockRegistry.DAMAGED_PAVING_WALL.get(), ECBlockRegistry.DARK_CONCRETE_PAVING_WALL.get(),
+            ECBlockRegistry.MOIST_PAVING_WALL.get(), ECBlockRegistry.OLD_LARGE_BRICKS_WALL.get(), ECBlockRegistry.POLISHED_PAVING_WALL.get(), ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL.get());
+        this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE.get(), ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE.get(),
+            ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE.get(), ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE.get(), ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE.get(),
+            ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE.get(), ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE.get());
     }
 }

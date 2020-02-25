@@ -1266,5 +1266,84 @@ public class ECRecipes extends RecipeProvider
             "has_weared_large_bricks", this.hasItem(ECBlockRegistry.WEARED_LARGE_BRICKS.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.WEARED_LARGE_BRICKS.get()).patternLine("##").addCriterion("has_weared_large_bricks",
             this.hasItem(ECBlockRegistry.WEARED_LARGE_BRICKS.get())).build(consumer);
+
+        // Pavings
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_PAVING.get(), 4).patternLine("ii").patternLine("ii").key('i', Blocks.LIGHT_GRAY_CONCRETE_POWDER).addCriterion("has_light_gray_concrete_powder",
+            this.hasItem(Blocks.LIGHT_GRAY_CONCRETE_POWDER)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_PAVING_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.CONCRETE_PAVING.get()).addCriterion("has_concrete_paving",
+            this.hasItem(ECBlockRegistry.CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_PAVING.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.CONCRETE_PAVING_SLAB.get()).addCriterion("has_concrete_paving_slab",
+            this.hasItem(ECBlockRegistry.CONCRETE_PAVING_SLAB.get())).build(consumer, ECConstants.MODID + ":concrete_paving_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_PAVING_STAIRS.get(), 4).key('#', ECBlockRegistry.CONCRETE_PAVING.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_concrete_paving", this.hasItem(ECBlockRegistry.CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_PAVING_WALL.get(), 6).key('#', ECBlockRegistry.CONCRETE_PAVING.get()).patternLine("###").patternLine("###").addCriterion("has_concrete_paving",
+            this.hasItem(ECBlockRegistry.CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.CONCRETE_PAVING.get()).patternLine("##").addCriterion("has_concrete_paving",
+            this.hasItem(ECBlockRegistry.CONCRETE_PAVING.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DAMAGED_PAVING.get(), 4).patternLine("ic").patternLine("ci").key('i', Blocks.LIGHT_GRAY_CONCRETE_POWDER).key('c', Blocks.COBBLESTONE).addCriterion(
+            "has_light_gray_concrete_powder", this.hasItem(Blocks.LIGHT_GRAY_CONCRETE_POWDER)).addCriterion("has_cobblestone", this.hasItem(Blocks.COBBLESTONE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DAMAGED_PAVING_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.DAMAGED_PAVING.get()).addCriterion("has_damaged_paving",
+            this.hasItem(ECBlockRegistry.DAMAGED_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DAMAGED_PAVING.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.DAMAGED_PAVING_SLAB.get()).addCriterion("has_damaged_paving_slab",
+            this.hasItem(ECBlockRegistry.DAMAGED_PAVING_SLAB.get())).build(consumer, ECConstants.MODID + ":damaged_paving_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DAMAGED_PAVING_STAIRS.get(), 4).key('#', ECBlockRegistry.DAMAGED_PAVING.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_damaged_paving", this.hasItem(ECBlockRegistry.DAMAGED_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DAMAGED_PAVING_WALL.get(), 6).key('#', ECBlockRegistry.DAMAGED_PAVING.get()).patternLine("###").patternLine("###").addCriterion("has_damaged_paving",
+            this.hasItem(ECBlockRegistry.DAMAGED_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.DAMAGED_PAVING.get()).patternLine("##").addCriterion("has_damaged_paving",
+            this.hasItem(ECBlockRegistry.DAMAGED_PAVING.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_CONCRETE_PAVING.get(), 4).patternLine("ii").patternLine("ii").key('i', Blocks.GRAY_CONCRETE_POWDER).addCriterion("has_gray_concrete_powder",
+            this.hasItem(Blocks.GRAY_CONCRETE_POWDER)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.DARK_CONCRETE_PAVING.get()).addCriterion("has_dark_concrete_paving",
+            this.hasItem(ECBlockRegistry.DARK_CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_CONCRETE_PAVING.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB.get()).addCriterion(
+            "has_dark_concrete_paving_slab", this.hasItem(ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB.get())).build(consumer, ECConstants.MODID + ":dark_concrete_paving_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_CONCRETE_PAVING_STAIRS.get(), 4).key('#', ECBlockRegistry.DARK_CONCRETE_PAVING.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_dark_concrete_paving", this.hasItem(ECBlockRegistry.DARK_CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_CONCRETE_PAVING_WALL.get(), 6).key('#', ECBlockRegistry.DARK_CONCRETE_PAVING.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_dark_concrete_paving", this.hasItem(ECBlockRegistry.DARK_CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.DARK_CONCRETE_PAVING.get()).patternLine("##").addCriterion(
+            "has_dark_concrete_paving", this.hasItem(ECBlockRegistry.DARK_CONCRETE_PAVING.get())).build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.MOIST_PAVING.get()).addIngredient(ECBlockRegistry.POLISHED_PAVING.get()).addIngredient(Blocks.VINE).addCriterion("has_polished_paving",
+            this.hasItem(ECBlockRegistry.POLISHED_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MOIST_PAVING_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.MOIST_PAVING.get()).addCriterion("has_moist_paving",
+            this.hasItem(ECBlockRegistry.MOIST_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MOIST_PAVING.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.MOIST_PAVING_SLAB.get()).addCriterion("has_moist_paving_slab",
+            this.hasItem(ECBlockRegistry.MOIST_PAVING_SLAB.get())).build(consumer, ECConstants.MODID + ":moist_paving_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MOIST_PAVING_STAIRS.get(), 4).key('#', ECBlockRegistry.MOIST_PAVING.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_moist_paving", this.hasItem(ECBlockRegistry.MOIST_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MOIST_PAVING_WALL.get(), 6).key('#', ECBlockRegistry.MOIST_PAVING.get()).patternLine("###").patternLine("###").addCriterion("has_moist_paving",
+            this.hasItem(ECBlockRegistry.MOIST_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.MOIST_PAVING.get()).patternLine("##").addCriterion("has_moist_paving",
+            this.hasItem(ECBlockRegistry.MOIST_PAVING.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_PAVING.get(), 4).patternLine("ii").patternLine("ii").key('i', Blocks.WHITE_CONCRETE).addCriterion("has_white_concrete",
+            this.hasItem(Blocks.WHITE_CONCRETE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_PAVING_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.POLISHED_PAVING.get()).addCriterion("has_polished_paving",
+            this.hasItem(ECBlockRegistry.POLISHED_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_PAVING.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.POLISHED_PAVING_SLAB.get()).addCriterion("has_polished_paving_slab",
+            this.hasItem(ECBlockRegistry.POLISHED_PAVING_SLAB.get())).build(consumer, ECConstants.MODID + ":polished_paving_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_PAVING_STAIRS.get(), 4).key('#', ECBlockRegistry.POLISHED_PAVING.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_polished_paving", this.hasItem(ECBlockRegistry.POLISHED_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_PAVING_WALL.get(), 6).key('#', ECBlockRegistry.POLISHED_PAVING.get()).patternLine("###").patternLine("###").addCriterion("has_polished_paving",
+            this.hasItem(ECBlockRegistry.POLISHED_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.POLISHED_PAVING.get()).patternLine("##").addCriterion("has_polished_paving",
+            this.hasItem(ECBlockRegistry.POLISHED_PAVING.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CONCRETE_PAVING.get(), 4).patternLine("ii").patternLine("ii").key('i', Blocks.WHITE_CONCRETE_POWDER).addCriterion("has_white_concrete_powder",
+            this.hasItem(Blocks.WHITE_CONCRETE_POWDER)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.WHITE_CONCRETE_PAVING.get()).addCriterion("has_white_concrete_paving",
+            this.hasItem(ECBlockRegistry.WHITE_CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CONCRETE_PAVING.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB.get()).addCriterion(
+            "has_white_concrete_paving_slab", this.hasItem(ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB.get())).build(consumer, ECConstants.MODID + ":white_concrete_paving_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS.get(), 4).key('#', ECBlockRegistry.WHITE_CONCRETE_PAVING.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_white_concrete_paving", this.hasItem(ECBlockRegistry.WHITE_CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL.get(), 6).key('#', ECBlockRegistry.WHITE_CONCRETE_PAVING.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_white_concrete_paving", this.hasItem(ECBlockRegistry.WHITE_CONCRETE_PAVING.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.WHITE_CONCRETE_PAVING.get()).patternLine("##").addCriterion(
+            "has_white_concrete_paving", this.hasItem(ECBlockRegistry.WHITE_CONCRETE_PAVING.get())).build(consumer);
     }
 }

@@ -1156,7 +1156,8 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomBlock> DARK_BRICKS = BLOCKS.register("dark_bricks",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> DARK_BRICKS_STAIRS = BLOCKS.register("dark_bricks_stairs",
-        () -> new CustomStairsBlock(() -> DARK_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+        () -> new CustomStairsBlock(() -> DARK_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> DARK_BRICKS_SLAB = BLOCKS.register("dark_bricks_slab",
         () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> DARK_BRICKS_WALL = BLOCKS.register("dark_bricks_wall",
@@ -1168,7 +1169,8 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomBlock> DARK_LARGE_BRICKS = BLOCKS.register("dark_large_bricks",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> DARK_LARGE_BRICKS_STAIRS = BLOCKS.register("dark_large_bricks_stairs",
-        () -> new CustomStairsBlock(() -> DARK_LARGE_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+        () -> new CustomStairsBlock(() -> DARK_LARGE_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> DARK_LARGE_BRICKS_SLAB = BLOCKS.register("dark_large_bricks_slab",
         () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> DARK_LARGE_BRICKS_WALL = BLOCKS.register("dark_large_bricks_wall",
@@ -1180,7 +1182,8 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomBlock> OLD_BRICKS = BLOCKS.register("old_bricks",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> OLD_BRICKS_STAIRS = BLOCKS.register("old_bricks_stairs",
-        () -> new CustomStairsBlock(() -> OLD_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+        () -> new CustomStairsBlock(() -> OLD_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> OLD_BRICKS_SLAB = BLOCKS.register("old_bricks_slab",
         () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> OLD_BRICKS_WALL = BLOCKS.register("old_bricks_wall",
@@ -1192,7 +1195,8 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomBlock> OLD_LARGE_BRICKS = BLOCKS.register("old_large_bricks",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> OLD_LARGE_BRICKS_STAIRS = BLOCKS.register("old_large_bricks_stairs",
-        () -> new CustomStairsBlock(() -> OLD_LARGE_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+        () -> new CustomStairsBlock(() -> OLD_LARGE_BRICKS.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> OLD_LARGE_BRICKS_SLAB = BLOCKS.register("old_large_bricks_slab",
         () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> OLD_LARGE_BRICKS_WALL = BLOCKS.register("old_large_bricks_wall",
@@ -1224,6 +1228,85 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomWallBlock> WEARED_LARGE_BRICKS_WALL = BLOCKS.register("weared_large_bricks_wall",
         () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> WEARED_LARGE_BRICKS_PRESSURE_PLATE = BLOCKS.register("weared_large_bricks_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    // Pavings
+    public static final RegistryObject<CustomBlock> CONCRETE_PAVING = BLOCKS.register("concrete_paving",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> CONCRETE_PAVING_STAIRS = BLOCKS.register("concrete_paving_stairs",
+        () -> new CustomStairsBlock(() -> CONCRETE_PAVING.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> CONCRETE_PAVING_SLAB = BLOCKS.register("concrete_paving_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> CONCRETE_PAVING_WALL = BLOCKS.register("concrete_paving_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> CONCRETE_PAVING_PRESSURE_PLATE = BLOCKS.register("concrete_paving_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> DAMAGED_PAVING = BLOCKS.register("damaged_paving",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> DAMAGED_PAVING_STAIRS = BLOCKS.register("damaged_paving_stairs",
+        () -> new CustomStairsBlock(() -> DAMAGED_PAVING.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> DAMAGED_PAVING_SLAB = BLOCKS.register("damaged_paving_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> DAMAGED_PAVING_WALL = BLOCKS.register("damaged_paving_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> DAMAGED_PAVING_PRESSURE_PLATE = BLOCKS.register("damaged_paving_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> DARK_CONCRETE_PAVING = BLOCKS.register("dark_concrete_paving",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> DARK_CONCRETE_PAVING_STAIRS = BLOCKS.register("dark_concrete_paving_stairs",
+        () -> new CustomStairsBlock(() -> DARK_CONCRETE_PAVING.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> DARK_CONCRETE_PAVING_SLAB = BLOCKS.register("dark_concrete_paving_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> DARK_CONCRETE_PAVING_WALL = BLOCKS.register("dark_concrete_paving_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> DARK_CONCRETE_PAVING_PRESSURE_PLATE = BLOCKS.register("dark_concrete_paving_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> MOIST_PAVING = BLOCKS.register("moist_paving",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> MOIST_PAVING_STAIRS = BLOCKS.register("moist_paving_stairs",
+        () -> new CustomStairsBlock(() -> MOIST_PAVING.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> MOIST_PAVING_SLAB = BLOCKS.register("moist_paving_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> MOIST_PAVING_WALL = BLOCKS.register("moist_paving_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> MOIST_PAVING_PRESSURE_PLATE = BLOCKS.register("moist_paving_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> POLISHED_PAVING = BLOCKS.register("polished_paving",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> POLISHED_PAVING_STAIRS = BLOCKS.register("polished_paving_stairs",
+        () -> new CustomStairsBlock(() -> POLISHED_PAVING.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> POLISHED_PAVING_SLAB = BLOCKS.register("polished_paving_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> POLISHED_PAVING_WALL = BLOCKS.register("polished_paving_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> POLISHED_PAVING_PRESSURE_PLATE = BLOCKS.register("polished_paving_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> WHITE_CONCRETE_PAVING = BLOCKS.register("white_concrete_paving",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> WHITE_CONCRETE_PAVING_STAIRS = BLOCKS.register("white_concrete_paving_stairs",
+        () -> new CustomStairsBlock(() -> WHITE_CONCRETE_PAVING.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> WHITE_CONCRETE_PAVING_SLAB = BLOCKS.register("white_concrete_paving_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> WHITE_CONCRETE_PAVING_WALL = BLOCKS.register("white_concrete_paving_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> WHITE_CONCRETE_PAVING_PRESSURE_PLATE = BLOCKS.register("white_concrete_paving_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.STONE), ToolType.PICKAXE));
 

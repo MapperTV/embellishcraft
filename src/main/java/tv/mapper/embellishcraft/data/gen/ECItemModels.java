@@ -52,6 +52,15 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("old_large_bricks", true, true, true, true, true, false);
         registerBlockBasics("weared_bricks", true, true, true, true, true, false);
         registerBlockBasics("weared_large_bricks", true, true, true, true, true, false);
+
+        // Pavings
+        registerBlockBasics("concrete_paving", true, true, true, true, true, false);
+        registerBlockBasics("damaged_paving", true, true, true, true, true, false);
+        registerBlockBasics("dark_concrete_paving", true, true, true, true, true, false);
+        registerBlockBasics("moist_paving", true, true, true, true, true, false);
+        registerBlockBasics("polished_paving", true, true, true, true, true, false);
+        registerBlockBasics("white_concrete_paving", true, true, true, true, true, false);
+
     }
 
     private void registerStone(String name)

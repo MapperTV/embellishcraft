@@ -590,6 +590,43 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_WALL, "Weared Large Bricks Wall");
                 addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE, "Weared Large Bricks Pressure Plate");
 
+                // Pavings
+                addBlock(ECBlockRegistry.CONCRETE_PAVING, "Concrete Paving");
+                addBlock(ECBlockRegistry.CONCRETE_PAVING_SLAB, "Concrete Paving Slab");
+                addBlock(ECBlockRegistry.CONCRETE_PAVING_STAIRS, "Concrete Paving Stairs");
+                addBlock(ECBlockRegistry.CONCRETE_PAVING_WALL, "Concrete Paving Wall");
+                addBlock(ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE, "Concrete Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.DAMAGED_PAVING, "Damaged Paving");
+                addBlock(ECBlockRegistry.DAMAGED_PAVING_SLAB, "Damaged Paving Slab");
+                addBlock(ECBlockRegistry.DAMAGED_PAVING_STAIRS, "Damaged Paving Stairs");
+                addBlock(ECBlockRegistry.DAMAGED_PAVING_WALL, "Damaged Paving Wall");
+                addBlock(ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE, "Damaged Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING, "Dark Concrete Paving");
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB, "Dark Concrete Paving Slab");
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_STAIRS, "Dark Concrete Paving Stairs");
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_WALL, "Dark Concrete Paving Wall");
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE, "Dark Concrete Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.MOIST_PAVING, "Moist Paving");
+                addBlock(ECBlockRegistry.MOIST_PAVING_SLAB, "Moist Paving Slab");
+                addBlock(ECBlockRegistry.MOIST_PAVING_STAIRS, "Moist Paving Stairs");
+                addBlock(ECBlockRegistry.MOIST_PAVING_WALL, "Moist Paving Wall");
+                addBlock(ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE, "Moist Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.POLISHED_PAVING, "Polished Paving");
+                addBlock(ECBlockRegistry.POLISHED_PAVING_SLAB, "Polished Paving Slab");
+                addBlock(ECBlockRegistry.POLISHED_PAVING_STAIRS, "Polished Paving Stairs");
+                addBlock(ECBlockRegistry.POLISHED_PAVING_WALL, "Polished Paving Wall");
+                addBlock(ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE, "Polished Paving Pressure Plate");
+
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING, "White Concrete Paving");
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB, "White Concrete Paving Slab");
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS, "White Concrete Paving Stairs");
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL, "White Concrete Paving Wall");
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE, "White Concrete Paving Pressure Plate");
+
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
             case "fr_fr":
@@ -1127,7 +1164,7 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL, "Muret en briques épaisses de terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de terre cuite");
-                
+
                 // Other bricks
                 addBlock(ECBlockRegistry.DARK_BRICKS, "Briques sombres");
                 addBlock(ECBlockRegistry.DARK_BRICKS_SLAB, "Dalle en briques sombres");
@@ -1140,7 +1177,7 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses sombres");
                 addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_WALL, "Muret en briques épaisses sombres");
                 addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses sombres");
-                
+
                 addBlock(ECBlockRegistry.OLD_BRICKS, "Vieilles briques");
                 addBlock(ECBlockRegistry.OLD_BRICKS_SLAB, "Dalle en vieilles briques");
                 addBlock(ECBlockRegistry.OLD_BRICKS_STAIRS, "Escalier en vieilles briques");
@@ -1152,7 +1189,7 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS, "Escalier en vieilles briques épaisses");
                 addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_WALL, "Muret en vieilles briques épaisses");
                 addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en vieilles briques épaisses");
-                
+
                 addBlock(ECBlockRegistry.WEARED_BRICKS, "Briques usées");
                 addBlock(ECBlockRegistry.WEARED_BRICKS_SLAB, "Dalle en briques usées");
                 addBlock(ECBlockRegistry.WEARED_BRICKS_STAIRS, "Escalier en briques usées");
@@ -1164,7 +1201,44 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses usées");
                 addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_WALL, "Muret en briques épaisses usées");
                 addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses usées");
-                
+
+                // Pavings
+                addBlock(ECBlockRegistry.CONCRETE_PAVING, "Pavés en béton");
+                addBlock(ECBlockRegistry.CONCRETE_PAVING_SLAB, "Dalle en pavés de béton");
+                addBlock(ECBlockRegistry.CONCRETE_PAVING_STAIRS, "Escaliers en pavés de béton");
+                addBlock(ECBlockRegistry.CONCRETE_PAVING_WALL, "Muret en pavés de béton");
+                addBlock(ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés de béton");
+
+                addBlock(ECBlockRegistry.DAMAGED_PAVING, "Pavés abîmés");
+                addBlock(ECBlockRegistry.DAMAGED_PAVING_SLAB, "Dalle en pavés abîmés");
+                addBlock(ECBlockRegistry.DAMAGED_PAVING_STAIRS, "Escaliers en pavés abîmés");
+                addBlock(ECBlockRegistry.DAMAGED_PAVING_WALL, "Muret en pavés abîmés");
+                addBlock(ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés abîmés");
+
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING, "Pavés en béton sombre");
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB, "Dalle en pavés de béton sombre");
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_STAIRS, "Escalier eb pavés de béton sombre");
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_WALL, "Muret en pavés de béton sombre");
+                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés de béton sombre");
+
+                addBlock(ECBlockRegistry.MOIST_PAVING, "Pavés moisis");
+                addBlock(ECBlockRegistry.MOIST_PAVING_SLAB, "Dalle en pavés moisis");
+                addBlock(ECBlockRegistry.MOIST_PAVING_STAIRS, "Escalier en pavés moisis");
+                addBlock(ECBlockRegistry.MOIST_PAVING_WALL, "Muret en pavés moisis");
+                addBlock(ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés moisis");
+
+                addBlock(ECBlockRegistry.POLISHED_PAVING, "Pavés polis");
+                addBlock(ECBlockRegistry.POLISHED_PAVING_SLAB, "Dalle en pavés polis");
+                addBlock(ECBlockRegistry.POLISHED_PAVING_STAIRS, "Escalier en pavés polis");
+                addBlock(ECBlockRegistry.POLISHED_PAVING_WALL, "Muret en pavés polis");
+                addBlock(ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés polis");
+
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING, "Pavés en béton clair");
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB, "Dalle en pavés de béton clair");
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS, "Escaliers en pavés de béton clair");
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL, "Murets en pavés de béton clair");
+                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés de béton clair");
+
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
         }

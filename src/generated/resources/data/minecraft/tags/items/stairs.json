@@ -85,6 +85,13 @@
     "embellishcraft:weared_bricks_stairs",
     "embellishcraft:dark_large_bricks_stairs",
     "embellishcraft:old_large_bricks_stairs",
-    "embellishcraft:weared_large_bricks_stairs"
+    "embellishcraft:weared_large_bricks_stairs",
+    "embellishcraft:concrete_paving_stairs",
+    "embellishcraft:damaged_paving_stairs",
+    "embellishcraft:dark_concrete_paving_stairs",
+    "embellishcraft:moist_paving_stairs",
+    "embellishcraft:old_large_bricks_stairs",
+    "embellishcraft:polished_paving_stairs",
+    "embellishcraft:white_concrete_paving_stairs"
   ]
 }

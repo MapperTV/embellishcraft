@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:damaged_paving_pressure_plate"
+    ]
+  },
+  "criteria": {
+    "has_damaged_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:damaged_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:damaged_paving_pressure_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_damaged_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

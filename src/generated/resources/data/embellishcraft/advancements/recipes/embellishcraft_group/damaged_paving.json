@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:damaged_paving"
+    ]
+  },
+  "criteria": {
+    "has_light_gray_concrete_powder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:light_gray_concrete_powder"
+          }
+        ]
+      }
+    },
+    "has_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:cobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:damaged_paving"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_light_gray_concrete_powder",
+      "has_cobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}

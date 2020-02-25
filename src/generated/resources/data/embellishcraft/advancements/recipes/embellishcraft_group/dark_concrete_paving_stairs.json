@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:dark_concrete_paving_stairs"
+    ]
+  },
+  "criteria": {
+    "has_dark_concrete_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:dark_concrete_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:dark_concrete_paving_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_concrete_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

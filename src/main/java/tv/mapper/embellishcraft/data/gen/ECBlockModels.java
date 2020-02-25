@@ -58,13 +58,27 @@ public class ECBlockModels extends BlockModelProvider
         buildPressure("dark_bricks", modLoc("block/dark_bricks"));
         buildPressure("old_bricks", modLoc("block/old_bricks"));
         buildPressure("weared_bricks", modLoc("block/weared_bricks"));
-        
+
         buildWall("dark_large_bricks", modLoc("block/dark_large_bricks"));
         buildWall("old_large_bricks", modLoc("block/old_large_bricks"));
         buildWall("weared_large_bricks", modLoc("block/weared_large_bricks"));
         buildPressure("dark_large_bricks", modLoc("block/dark_large_bricks"));
         buildPressure("old_large_bricks", modLoc("block/old_large_bricks"));
         buildPressure("weared_large_bricks", modLoc("block/weared_large_bricks"));
+
+        // Pavings
+        buildWall("concrete_paving", modLoc("block/concrete_paving"));
+        buildWall("damaged_paving", modLoc("block/damaged_paving"));
+        buildWall("dark_concrete_paving", modLoc("block/dark_concrete_paving"));
+        buildWall("moist_paving", modLoc("block/moist_paving"));
+        buildWall("polished_paving", modLoc("block/polished_paving"));
+        buildWall("white_concrete_paving", modLoc("block/white_concrete_paving"));
+        buildPressure("concrete_paving", modLoc("block/concrete_paving"));
+        buildPressure("damaged_paving", modLoc("block/damaged_paving"));
+        buildPressure("dark_concrete_paving", modLoc("block/dark_concrete_paving"));
+        buildPressure("moist_paving", modLoc("block/moist_paving"));
+        buildPressure("polished_paving", modLoc("block/polished_paving"));
+        buildPressure("white_concrete_paving", modLoc("block/white_concrete_paving"));
 
     }
 
