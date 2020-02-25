@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:dark_bricks_wall"
+    ]
+  },
+  "criteria": {
+    "has_dark_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:dark_bricks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:dark_bricks_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

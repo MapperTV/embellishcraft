@@ -32,46 +32,6 @@ import tv.mapper.mapperbase.util.RegistryUtils;
 @EventBusSubscriber(bus = Bus.MOD)
 public class ECBlocks
 {
-    // Bricks
-
-    public static final Block DARK_BRICKS = null;
-    public static final Block DARK_BRICKS_STAIRS = null;
-    public static final Block DARK_BRICKS_SLAB = null;
-    public static final Block DARK_BRICKS_WALL = null;
-    public static final Block DARK_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block OLD_BRICKS = null;
-    public static final Block OLD_BRICKS_STAIRS = null;
-    public static final Block OLD_BRICKS_SLAB = null;
-    public static final Block OLD_BRICKS_WALL = null;
-    public static final Block OLD_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block WEARED_BRICKS = null;
-    public static final Block WEARED_BRICKS_STAIRS = null;
-    public static final Block WEARED_BRICKS_SLAB = null;
-    public static final Block WEARED_BRICKS_WALL = null;
-    public static final Block WEARED_BRICKS_PRESSURE_PLATE = null;
-
-    // Large bricks
-
-    public static final Block DARK_LARGE_BRICKS = null;
-    public static final Block DARK_LARGE_BRICKS_STAIRS = null;
-    public static final Block DARK_LARGE_BRICKS_SLAB = null;
-    public static final Block DARK_LARGE_BRICKS_WALL = null;
-    public static final Block DARK_LARGE_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block OLD_LARGE_BRICKS = null;
-    public static final Block OLD_LARGE_BRICKS_STAIRS = null;
-    public static final Block OLD_LARGE_BRICKS_SLAB = null;
-    public static final Block OLD_LARGE_BRICKS_WALL = null;
-    public static final Block OLD_LARGE_BRICKS_PRESSURE_PLATE = null;
-
-    public static final Block WEARED_LARGE_BRICKS = null;
-    public static final Block WEARED_LARGE_BRICKS_STAIRS = null;
-    public static final Block WEARED_LARGE_BRICKS_SLAB = null;
-    public static final Block WEARED_LARGE_BRICKS_WALL = null;
-    public static final Block WEARED_LARGE_BRICKS_PRESSURE_PLATE = null;
-
     // Paving
 
     public static final Block CONCRETE_PAVING = null;
@@ -581,18 +541,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        // Bricks
-
-        RegistryUtils.createBlockWithVariants(event, "dark_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "old_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "weared_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-
-        // Large bricks
-
-        RegistryUtils.createBlockWithVariants(event, "dark_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "old_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "weared_large_bricks", true, true, true, true, Material.ROCK, MaterialColor.RED_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-
         // Paving
 
         RegistryUtils.createBlockWithVariants(event, "concrete_paving", true, true, true, true, Material.ROCK, MaterialColor.STONE, SoundType.STONE, ToolType.PICKAXE, 0, 0);
@@ -799,20 +747,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
-        // Bricks
-
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_BRICKS, DARK_BRICKS_STAIRS, DARK_BRICKS_SLAB, DARK_BRICKS_WALL, DARK_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_BRICKS, OLD_BRICKS_STAIRS, OLD_BRICKS_SLAB, OLD_BRICKS_WALL, OLD_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_BRICKS, WEARED_BRICKS_STAIRS, WEARED_BRICKS_SLAB, WEARED_BRICKS_WALL, WEARED_BRICKS_PRESSURE_PLATE);
-
-        // Large bricks
-
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_LARGE_BRICKS, DARK_LARGE_BRICKS_STAIRS, DARK_LARGE_BRICKS_SLAB, DARK_LARGE_BRICKS_WALL,
-            DARK_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, OLD_LARGE_BRICKS, OLD_LARGE_BRICKS_STAIRS, OLD_LARGE_BRICKS_SLAB, OLD_LARGE_BRICKS_WALL, OLD_LARGE_BRICKS_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WEARED_LARGE_BRICKS, WEARED_LARGE_BRICKS_STAIRS, WEARED_LARGE_BRICKS_SLAB, WEARED_LARGE_BRICKS_WALL,
-            WEARED_LARGE_BRICKS_PRESSURE_PLATE);
-
         // Paving
 
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, CONCRETE_PAVING, CONCRETE_PAVING_STAIRS, CONCRETE_PAVING_SLAB, CONCRETE_PAVING_WALL, CONCRETE_PAVING_PRESSURE_PLATE);

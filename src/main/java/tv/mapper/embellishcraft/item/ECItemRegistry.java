@@ -950,6 +950,71 @@ public class ECItemRegistry
     public static final RegistryObject<Item> TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("terracotta_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    // Other bricks
+    public static final RegistryObject<Item> DARK_BRICKS_ITEM = ITEMS.register("dark_bricks", () -> new BlockItem(ECBlockRegistry.DARK_BRICKS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_BRICKS_STAIRS_ITEM = ITEMS.register("dark_bricks_stairs",
+        () -> new BlockItem(ECBlockRegistry.DARK_BRICKS_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_BRICKS_SLAB_ITEM = ITEMS.register("dark_bricks_slab",
+        () -> new BlockItem(ECBlockRegistry.DARK_BRICKS_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_BRICKS_WALL_ITEM = ITEMS.register("dark_bricks_wall",
+        () -> new BlockItem(ECBlockRegistry.DARK_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("dark_bricks_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> DARK_LARGE_BRICKS_ITEM = ITEMS.register("dark_large_bricks",
+        () -> new BlockItem(ECBlockRegistry.DARK_LARGE_BRICKS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_LARGE_BRICKS_STAIRS_ITEM = ITEMS.register("dark_large_bricks_stairs",
+        () -> new BlockItem(ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_LARGE_BRICKS_SLAB_ITEM = ITEMS.register("dark_large_bricks_slab",
+        () -> new BlockItem(ECBlockRegistry.DARK_LARGE_BRICKS_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_LARGE_BRICKS_WALL_ITEM = ITEMS.register("dark_large_bricks_wall",
+        () -> new BlockItem(ECBlockRegistry.DARK_LARGE_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("dark_large_bricks_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> OLD_BRICKS_ITEM = ITEMS.register("old_bricks", () -> new BlockItem(ECBlockRegistry.OLD_BRICKS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> OLD_BRICKS_STAIRS_ITEM = ITEMS.register("old_bricks_stairs",
+        () -> new BlockItem(ECBlockRegistry.OLD_BRICKS_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> OLD_BRICKS_SLAB_ITEM = ITEMS.register("old_bricks_slab",
+        () -> new BlockItem(ECBlockRegistry.OLD_BRICKS_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> OLD_BRICKS_WALL_ITEM = ITEMS.register("old_bricks_wall",
+        () -> new BlockItem(ECBlockRegistry.OLD_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> OLD_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("old_bricks_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> OLD_LARGE_BRICKS_ITEM = ITEMS.register("old_large_bricks",
+        () -> new BlockItem(ECBlockRegistry.OLD_LARGE_BRICKS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> OLD_LARGE_BRICKS_STAIRS_ITEM = ITEMS.register("old_large_bricks_stairs",
+        () -> new BlockItem(ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> OLD_LARGE_BRICKS_SLAB_ITEM = ITEMS.register("old_large_bricks_slab",
+        () -> new BlockItem(ECBlockRegistry.OLD_LARGE_BRICKS_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> OLD_LARGE_BRICKS_WALL_ITEM = ITEMS.register("old_large_bricks_wall",
+        () -> new BlockItem(ECBlockRegistry.OLD_LARGE_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> OLD_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("old_large_bricks_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> WEARED_BRICKS_ITEM = ITEMS.register("weared_bricks",
+        () -> new BlockItem(ECBlockRegistry.WEARED_BRICKS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WEARED_BRICKS_STAIRS_ITEM = ITEMS.register("weared_bricks_stairs",
+        () -> new BlockItem(ECBlockRegistry.WEARED_BRICKS_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WEARED_BRICKS_SLAB_ITEM = ITEMS.register("weared_bricks_slab",
+        () -> new BlockItem(ECBlockRegistry.WEARED_BRICKS_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WEARED_BRICKS_WALL_ITEM = ITEMS.register("weared_bricks_wall",
+        () -> new BlockItem(ECBlockRegistry.WEARED_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WEARED_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("weared_bricks_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.WEARED_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> WEARED_LARGE_BRICKS_ITEM = ITEMS.register("weared_large_bricks",
+        () -> new BlockItem(ECBlockRegistry.WEARED_LARGE_BRICKS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WEARED_LARGE_BRICKS_STAIRS_ITEM = ITEMS.register("weared_large_bricks_stairs",
+        () -> new BlockItem(ECBlockRegistry.WEARED_LARGE_BRICKS_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WEARED_LARGE_BRICKS_SLAB_ITEM = ITEMS.register("weared_large_bricks_slab",
+        () -> new BlockItem(ECBlockRegistry.WEARED_LARGE_BRICKS_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WEARED_LARGE_BRICKS_WALL_ITEM = ITEMS.register("weared_large_bricks_wall",
+        () -> new BlockItem(ECBlockRegistry.WEARED_LARGE_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WEARED_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("weared_large_bricks_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
