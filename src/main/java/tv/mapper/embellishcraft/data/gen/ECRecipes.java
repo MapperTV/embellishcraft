@@ -11,6 +11,7 @@ import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.data.ShapelessRecipeBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
@@ -1676,5 +1677,61 @@ public class ECRecipes extends RecipeProvider
             "###").addCriterion("has_yellow_corrugated_metal_plate", this.hasItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
             "has_yellow_corrugated_metal_plate", this.hasItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        // Wallpapers
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get(), 3).patternLine("  s").patternLine("lps").patternLine("  s").key('s', Blocks.STONE).key('l', Tags.Items.DYES_LIGHT_BLUE).key(
+            'p', Items.PAPER).addCriterion("has_paper", this.hasItem(Items.PAPER)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.WHITE_BLUE_WALLPAPER.get()).addCriterion("has_white_blue_wallpaper",
+            this.hasItem(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get()).addCriterion(
+            "has_white_blue_wallpaper_slab", this.hasItem(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get())).build(consumer, ECConstants.MODID + ":white_blue_wallpaper_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get(), 4).key('#', ECBlockRegistry.WHITE_BLUE_WALLPAPER.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_white_blue_wallpaper", this.hasItem(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH.get()).patternLine("w").patternLine("s").key('w', ECBlockRegistry.WHITE_BLUE_WALLPAPER.get()).key('s',
+            ItemTags.WOODEN_SLABS).addCriterion("has_white_blue_wallpaper", this.hasItem(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get(), 3).patternLine("  s").patternLine("lps").patternLine("g s").key('s', Blocks.STONE).key('l', Tags.Items.DYES_PINK).key('p',
+            Items.PAPER).key('g', Tags.Items.DYES_GRAY).addCriterion("has_paper", this.hasItem(Items.PAPER)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get()).addCriterion(
+            "has_beige_flower_wallpaper", this.hasItem(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get()).addCriterion(
+            "has_beige_flower_wallpaper_slab", this.hasItem(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get())).build(consumer, ECConstants.MODID + ":beige_flower_wallpaper_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS.get(), 4).key('#', ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_beige_flower_wallpaper", this.hasItem(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH.get()).patternLine("w").patternLine("s").key('w', ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get()).key('s',
+            ItemTags.WOODEN_SLABS).addCriterion("has_beige_flower_wallpaper", this.hasItem(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_WALLPAPER.get(), 3).patternLine("  s").patternLine("lps").patternLine("w s").key('s', Blocks.STONE).key('l', Tags.Items.DYES_PINK).key('w',
+            Tags.Items.DYES_WHITE).key('p', Items.PAPER).addCriterion("has_paper", this.hasItem(Items.PAPER)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.BEIGE_WALLPAPER.get()).addCriterion("has_beige_wallpaper",
+            this.hasItem(ECBlockRegistry.BEIGE_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_WALLPAPER.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get()).addCriterion("has_beige_wallpaper_slab",
+            this.hasItem(ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get())).build(consumer, ECConstants.MODID + ":beige_wallpaper_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get(), 4).key('#', ECBlockRegistry.BEIGE_WALLPAPER.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_beige_wallpaper", this.hasItem(ECBlockRegistry.BEIGE_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get()).patternLine("w").patternLine("s").key('w', ECBlockRegistry.BEIGE_WALLPAPER.get()).key('s',
+            ItemTags.WOODEN_SLABS).addCriterion("has_beige_wallpaper", this.hasItem(ECBlockRegistry.BEIGE_WALLPAPER.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_WALLPAPER.get(), 3).patternLine("  s").patternLine("lps").patternLine("  s").key('s', Blocks.STONE).key('l', Tags.Items.DYES_PINK).key('p',
+            Items.PAPER).addCriterion("has_paper", this.hasItem(Items.PAPER)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_WALLPAPER_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.PINK_WALLPAPER.get()).addCriterion("has_pink_wallpaper",
+            this.hasItem(ECBlockRegistry.PINK_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_WALLPAPER.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.PINK_WALLPAPER_SLAB.get()).addCriterion("has_pink_wallpaper_slab",
+            this.hasItem(ECBlockRegistry.PINK_WALLPAPER_SLAB.get())).build(consumer, ECConstants.MODID + ":pink_wallpaper_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_WALLPAPER_STAIRS.get(), 4).key('#', ECBlockRegistry.PINK_WALLPAPER.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_pink_wallpaper", this.hasItem(ECBlockRegistry.PINK_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PINK_WALLPAPER_PLINTH.get()).patternLine("w").patternLine("s").key('w', ECBlockRegistry.PINK_WALLPAPER.get()).key('s',
+            ItemTags.WOODEN_SLABS).addCriterion("has_pink_wallpaper", this.hasItem(ECBlockRegistry.PINK_WALLPAPER.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_GREEN_WALLPAPER.get(), 3).patternLine("  s").patternLine("lps").patternLine("  s").key('s', Blocks.STONE).key('l', Tags.Items.DYES_LIME).key('p',
+            Items.PAPER).addCriterion("has_paper", this.hasItem(Items.PAPER)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.WHITE_GREEN_WALLPAPER.get()).addCriterion("has_white_green_wallpaper",
+            this.hasItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_GREEN_WALLPAPER.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get()).addCriterion(
+            "has_white_green_wallpaper_slab", this.hasItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get())).build(consumer, ECConstants.MODID + ":white_green_wallpaper_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get(), 4).key('#', ECBlockRegistry.WHITE_GREEN_WALLPAPER.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_white_green_wallpaper", this.hasItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get()).patternLine("w").patternLine("s").key('w', ECBlockRegistry.WHITE_GREEN_WALLPAPER.get()).key('s',
+            ItemTags.WOODEN_SLABS).addCriterion("has_white_green_wallpaper", this.hasItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER.get())).build(consumer);
     }
 }

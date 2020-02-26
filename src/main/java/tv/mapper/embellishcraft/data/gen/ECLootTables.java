@@ -773,5 +773,31 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS.get()));
         lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get()));
         lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
+
+        // Wallpapers
+        lootTables.put(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_BLUE_WALLPAPER.get()));
+        lootTables.put(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get()));
+        lootTables.put(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH.get()));
+
+        lootTables.put(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get()));
+        lootTables.put(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get()));
+        lootTables.put(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH.get()));
+
+        lootTables.put(ECBlockRegistry.BEIGE_WALLPAPER.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BEIGE_WALLPAPER.get()));
+        lootTables.put(ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get()));
+        lootTables.put(ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get()));
+        
+        lootTables.put(ECBlockRegistry.PINK_WALLPAPER.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PINK_WALLPAPER.get()));
+        lootTables.put(ECBlockRegistry.PINK_WALLPAPER_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.PINK_WALLPAPER_SLAB.get()));
+        lootTables.put(ECBlockRegistry.PINK_WALLPAPER_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PINK_WALLPAPER_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.PINK_WALLPAPER_PLINTH.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PINK_WALLPAPER_PLINTH.get()));
+
+        lootTables.put(ECBlockRegistry.WHITE_GREEN_WALLPAPER.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_GREEN_WALLPAPER.get()));
+        lootTables.put(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get()));
+        lootTables.put(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get()));
     }
 }

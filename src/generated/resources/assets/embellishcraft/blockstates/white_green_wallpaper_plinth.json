@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "upside_down=false": {
+      "model": "embellishcraft:block/white_green_wallpaper_plinth"
+    },
+    "upside_down=true": {
+      "model": "embellishcraft:block/white_green_wallpaper_plinth",
+      "x": 180
+    }
+  }
+}

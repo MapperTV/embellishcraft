@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "w",
+    "s"
+  ],
+  "key": {
+    "w": {
+      "item": "embellishcraft:beige_wallpaper"
+    },
+    "s": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:beige_wallpaper_plinth"
+  }
+}

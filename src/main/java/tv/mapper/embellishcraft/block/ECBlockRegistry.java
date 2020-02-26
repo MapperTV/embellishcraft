@@ -18,6 +18,7 @@ import tv.mapper.mapperbase.block.CustomPressurePlateBlock;
 import tv.mapper.mapperbase.block.CustomSlabBlock;
 import tv.mapper.mapperbase.block.CustomStairsBlock;
 import tv.mapper.mapperbase.block.CustomWallBlock;
+import tv.mapper.mapperbase.block.UpDownBlock;
 
 public class ECBlockRegistry
 {
@@ -1636,6 +1637,57 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomPressurePlateBlock> PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("pink_corrugated_metal_plate_pressure_plate",
         () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
+
+    // Wallpapers
+    public static final RegistryObject<CustomBlock> WHITE_BLUE_WALLPAPER = BLOCKS.register("white_blue_wallpaper",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> WHITE_BLUE_WALLPAPER_STAIRS = BLOCKS.register("white_blue_wallpaper_stairs",
+        () -> new CustomStairsBlock(() -> WHITE_BLUE_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> WHITE_BLUE_WALLPAPER_SLAB = BLOCKS.register("white_blue_wallpaper_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<UpDownBlock> WHITE_BLUE_WALLPAPER_PLINTH = BLOCKS.register("white_blue_wallpaper_plinth",
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> BEIGE_FLOWER_WALLPAPER = BLOCKS.register("beige_flower_wallpaper",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> BEIGE_FLOWER_WALLPAPER_STAIRS = BLOCKS.register("beige_flower_wallpaper_stairs",
+        () -> new CustomStairsBlock(() -> BEIGE_FLOWER_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> BEIGE_FLOWER_WALLPAPER_SLAB = BLOCKS.register("beige_flower_wallpaper_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<UpDownBlock> BEIGE_FLOWER_WALLPAPER_PLINTH = BLOCKS.register("beige_flower_wallpaper_plinth",
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> BEIGE_WALLPAPER = BLOCKS.register("beige_wallpaper",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> BEIGE_WALLPAPER_STAIRS = BLOCKS.register("beige_wallpaper_stairs",
+        () -> new CustomStairsBlock(() -> BEIGE_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> BEIGE_WALLPAPER_SLAB = BLOCKS.register("beige_wallpaper_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<UpDownBlock> BEIGE_WALLPAPER_PLINTH = BLOCKS.register("beige_wallpaper_plinth",
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> PINK_WALLPAPER = BLOCKS.register("pink_wallpaper",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> PINK_WALLPAPER_STAIRS = BLOCKS.register("pink_wallpaper_stairs",
+        () -> new CustomStairsBlock(() -> PINK_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> PINK_WALLPAPER_SLAB = BLOCKS.register("pink_wallpaper_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<UpDownBlock> PINK_WALLPAPER_PLINTH = BLOCKS.register("pink_wallpaper_plinth",
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> WHITE_GREEN_WALLPAPER = BLOCKS.register("white_green_wallpaper",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> WHITE_GREEN_WALLPAPER_STAIRS = BLOCKS.register("white_green_wallpaper_stairs",
+        () -> new CustomStairsBlock(() -> WHITE_GREEN_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> WHITE_GREEN_WALLPAPER_SLAB = BLOCKS.register("white_green_wallpaper_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<UpDownBlock> WHITE_GREEN_WALLPAPER_PLINTH = BLOCKS.register("white_green_wallpaper_plinth",
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
 
     public static void init()
     {

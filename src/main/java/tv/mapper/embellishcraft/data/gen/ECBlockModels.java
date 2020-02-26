@@ -134,6 +134,24 @@ public class ECBlockModels extends BlockModelProvider
         buildPressure("red_corrugated_metal_plate", modLoc("block/red_corrugated_metal_plate"));
         buildPressure("white_corrugated_metal_plate", modLoc("block/white_corrugated_metal_plate"));
         buildPressure("yellow_corrugated_metal_plate", modLoc("block/yellow_corrugated_metal_plate"));
+
+        // Wallpaper
+        buildWallpaper("white_blue_wallpaper", modLoc("block/white_blue_wallpaper"), modLoc("block/side_wallpaper"), modLoc("block/white_blue_wallpaper_plinth"));
+        buildWallpaper("beige_flower_wallpaper", modLoc("block/beige_flower_wallpaper"), modLoc("block/side_wallpaper"), modLoc("block/beige_flower_wallpaper_plinth"));
+        buildWallpaper("beige_wallpaper", modLoc("block/beige_wallpaper"), modLoc("block/side_wallpaper"), modLoc("block/beige_wallpaper_plinth"));
+        buildWallpaper("pink_wallpaper", modLoc("block/pink_wallpaper"), modLoc("block/side_wallpaper"), modLoc("block/pink_wallpaper_plinth"));
+        buildWallpaper("white_green_wallpaper", modLoc("block/white_green_wallpaper"), modLoc("block/side_wallpaper"), modLoc("block/white_green_wallpaper_plinth"));
+    }
+
+    private void buildWallpaper(String name, ResourceLocation side, ResourceLocation bottom, ResourceLocation plinth)
+    {
+        cubeColumn(name, side, bottom);
+        stairs(name + "_stairs", side, bottom, side);
+        stairsInner(name + "_stairs_inner", side, bottom, side);
+        stairsOuter(name + "_stairs_outer", side, bottom, side);
+        slab(name + "_slab", side, bottom, side);
+        slabTop(name + "_slab_top", side, bottom, side);
+        getBuilder(name + "_plinth").parent(getExistingFile(mcLoc("block/cube_column"))).texture("side", plinth).texture("end", bottom);
     }
 
     private void buildWall(String name, ResourceLocation texture)

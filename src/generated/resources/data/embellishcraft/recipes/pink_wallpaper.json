@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  s",
+    "lps",
+    "  s"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stone"
+    },
+    "l": {
+      "tag": "forge:dyes/pink"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:pink_wallpaper",
+    "count": 3
+  }
+}

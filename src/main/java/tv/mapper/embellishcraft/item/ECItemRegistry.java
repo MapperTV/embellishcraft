@@ -1356,6 +1356,52 @@ public class ECItemRegistry
     public static final RegistryObject<Item> YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("yellow_corrugated_metal_plate_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    // Wallpaper
+    public static final RegistryObject<Item> WHITE_BLUE_WALLPAPER_ITEM = ITEMS.register("white_blue_wallpaper",
+        () -> new BlockItem(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_BLUE_WALLPAPER_STAIRS_ITEM = ITEMS.register("white_blue_wallpaper_stairs",
+        () -> new BlockItem(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_BLUE_WALLPAPER_SLAB_ITEM = ITEMS.register("white_blue_wallpaper_slab",
+        () -> new BlockItem(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_BLUE_WALLPAPER_PLINTH_ITEM = ITEMS.register("white_blue_wallpaper_plinth",
+        () -> new BlockItem(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> BEIGE_FLOWER_WALLPAPER_ITEM = ITEMS.register("beige_flower_wallpaper",
+        () -> new BlockItem(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BEIGE_FLOWER_WALLPAPER_STAIRS_ITEM = ITEMS.register("beige_flower_wallpaper_stairs",
+        () -> new BlockItem(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BEIGE_FLOWER_WALLPAPER_SLAB_ITEM = ITEMS.register("beige_flower_wallpaper_slab",
+        () -> new BlockItem(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BEIGE_FLOWER_WALLPAPER_PLINTH_ITEM = ITEMS.register("beige_flower_wallpaper_plinth",
+        () -> new BlockItem(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> BEIGE_WALLPAPER_ITEM = ITEMS.register("beige_wallpaper",
+        () -> new BlockItem(ECBlockRegistry.BEIGE_WALLPAPER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BEIGE_WALLPAPER_STAIRS_ITEM = ITEMS.register("beige_wallpaper_stairs",
+        () -> new BlockItem(ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BEIGE_WALLPAPER_SLAB_ITEM = ITEMS.register("beige_wallpaper_slab",
+        () -> new BlockItem(ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BEIGE_WALLPAPER_PLINTH_ITEM = ITEMS.register("beige_wallpaper_plinth",
+        () -> new BlockItem(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    
+    public static final RegistryObject<Item> PINK_WALLPAPER_ITEM = ITEMS.register("pink_wallpaper",
+        () -> new BlockItem(ECBlockRegistry.PINK_WALLPAPER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PINK_WALLPAPER_STAIRS_ITEM = ITEMS.register("pink_wallpaper_stairs",
+        () -> new BlockItem(ECBlockRegistry.PINK_WALLPAPER_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PINK_WALLPAPER_SLAB_ITEM = ITEMS.register("pink_wallpaper_slab",
+        () -> new BlockItem(ECBlockRegistry.PINK_WALLPAPER_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PINK_WALLPAPER_PLINTH_ITEM = ITEMS.register("pink_wallpaper_plinth",
+        () -> new BlockItem(ECBlockRegistry.PINK_WALLPAPER_PLINTH.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> WHITE_GREEN_WALLPAPER_ITEM = ITEMS.register("white_green_wallpaper",
+        () -> new BlockItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_GREEN_WALLPAPER_STAIRS_ITEM = ITEMS.register("white_green_wallpaper_stairs",
+        () -> new BlockItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_GREEN_WALLPAPER_SLAB_ITEM = ITEMS.register("white_green_wallpaper_slab",
+        () -> new BlockItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_GREEN_WALLPAPER_PLINTH_ITEM = ITEMS.register("white_green_wallpaper_plinth",
+        () -> new BlockItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

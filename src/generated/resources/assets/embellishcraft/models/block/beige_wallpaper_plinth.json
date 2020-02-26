@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "embellishcraft:block/beige_wallpaper_plinth",
+    "end": "embellishcraft:block/side_wallpaper"
+  }
+}

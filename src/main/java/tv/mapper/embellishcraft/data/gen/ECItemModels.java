@@ -89,6 +89,18 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("red_corrugated_metal_plate", true, true, true, true, true, false);
         registerBlockBasics("white_corrugated_metal_plate", true, true, true, true, true, false);
         registerBlockBasics("yellow_corrugated_metal_plate", true, true, true, true, true, false);
+
+        // Wallpapers
+        registerBlockBasics("white_blue_wallpaper", true, true, true, false, false, false);
+        getBuilder("white_blue_wallpaper_plinth").parent(new UncheckedModelFile(modid + ":block/white_blue_wallpaper_plinth"));
+        registerBlockBasics("beige_flower_wallpaper", true, true, true, false, false, false);
+        getBuilder("beige_flower_wallpaper_plinth").parent(new UncheckedModelFile(modid + ":block/beige_flower_wallpaper_plinth"));
+        registerBlockBasics("beige_wallpaper", true, true, true, false, false, false);
+        getBuilder("beige_wallpaper_plinth").parent(new UncheckedModelFile(modid + ":block/beige_wallpaper_plinth"));
+        registerBlockBasics("pink_wallpaper", true, true, true, false, false, false);
+        getBuilder("pink_wallpaper_plinth").parent(new UncheckedModelFile(modid + ":block/pink_wallpaper_plinth"));
+        registerBlockBasics("white_green_wallpaper", true, true, true, false, false, false);
+        getBuilder("white_green_wallpaper_plinth").parent(new UncheckedModelFile(modid + ":block/white_green_wallpaper_plinth"));
     }
 
     private void registerStone(String name)

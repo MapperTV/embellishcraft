@@ -25,40 +25,12 @@ import tv.mapper.embellishcraft.util.WoodType;
 import tv.mapper.mapperbase.block.AllRotationBlock;
 import tv.mapper.mapperbase.block.CustomDoorBlock;
 import tv.mapper.mapperbase.block.CustomLadderBlock;
-import tv.mapper.mapperbase.block.UpDownBlock;
 import tv.mapper.mapperbase.util.RegistryUtils;
 
 @ObjectHolder(ECConstants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
 public class ECBlocks
 {
-    // Wallpaper
-
-    public static final Block WHITE_BLUE_WALLPAPER = null;
-    public static final Block WHITE_BLUE_WALLPAPER_STAIRS = null;
-    public static final Block WHITE_BLUE_WALLPAPER_SLAB = null;
-    public static final Block WHITE_BLUE_WALLPAPER_PLINTH = null;
-
-    public static final Block BEIGE_WALLPAPER = null;
-    public static final Block BEIGE_WALLPAPER_STAIRS = null;
-    public static final Block BEIGE_WALLPAPER_SLAB = null;
-    public static final Block BEIGE_WALLPAPER_PLINTH = null;
-
-    public static final Block PINK_WALLPAPER = null;
-    public static final Block PINK_WALLPAPER_STAIRS = null;
-    public static final Block PINK_WALLPAPER_SLAB = null;
-    public static final Block PINK_WALLPAPER_PLINTH = null;
-
-    public static final Block BEIGE_FLOWER_WALLPAPER = null;
-    public static final Block BEIGE_FLOWER_WALLPAPER_STAIRS = null;
-    public static final Block BEIGE_FLOWER_WALLPAPER_SLAB = null;
-    public static final Block BEIGE_FLOWER_WALLPAPER_PLINTH = null;
-
-    public static final Block WHITE_GREEN_WALLPAPER = null;
-    public static final Block WHITE_GREEN_WALLPAPER_STAIRS = null;
-    public static final Block WHITE_GREEN_WALLPAPER_SLAB = null;
-    public static final Block WHITE_GREEN_WALLPAPER_PLINTH = null;
-
     // Metal
 
     public static final Block DARK_METAL_FLOOR = null;
@@ -351,25 +323,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        // Wallpaper
-
-        RegistryUtils.createBlockWithVariants(event, "white_blue_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(
-            new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName(
-                "white_blue_wallpaper_plinth"));
-        RegistryUtils.createBlockWithVariants(event, "beige_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName(
-            "beige_wallpaper_plinth"));
-        RegistryUtils.createBlockWithVariants(event, "pink_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.PINK, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(
-            new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.PINK).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("pink_wallpaper_plinth"));
-        RegistryUtils.createBlockWithVariants(event, "beige_flower_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName(
-            "beige_flower_wallpaper_plinth"));
-        RegistryUtils.createBlockWithVariants(event, "white_green_wallpaper", true, true, false, false, Material.ROCK, MaterialColor.LIME, SoundType.STONE, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(
-            new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.LIME).hardnessAndResistance(0.5f).sound(SoundType.STONE), ToolType.PICKAXE).setRegistryName("white_green_wallpaper_plinth"));
-
         // Metal
 
         RegistryUtils.createBlockWithVariants(event, "dark_metal_floor", true, true, true, true, Material.IRON, MaterialColor.STONE, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
@@ -535,19 +488,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
-        // Wallpapers
-
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_BLUE_WALLPAPER, WHITE_BLUE_WALLPAPER_STAIRS, WHITE_BLUE_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(WHITE_BLUE_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_BLUE_WALLPAPER_PLINTH.getRegistryName()));
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_WALLPAPER, BEIGE_WALLPAPER_STAIRS, BEIGE_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(BEIGE_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_WALLPAPER_PLINTH.getRegistryName()));
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, PINK_WALLPAPER, PINK_WALLPAPER_STAIRS, PINK_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(PINK_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PINK_WALLPAPER_PLINTH.getRegistryName()));
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BEIGE_FLOWER_WALLPAPER, BEIGE_FLOWER_WALLPAPER_STAIRS, BEIGE_FLOWER_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(BEIGE_FLOWER_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BEIGE_FLOWER_WALLPAPER_PLINTH.getRegistryName()));
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, WHITE_GREEN_WALLPAPER, WHITE_GREEN_WALLPAPER_STAIRS, WHITE_GREEN_WALLPAPER_SLAB, null, null);
-        event.getRegistry().register(new BlockItem(WHITE_GREEN_WALLPAPER_PLINTH, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(WHITE_GREEN_WALLPAPER_PLINTH.getRegistryName()));
-
         // Metal
 
         RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_METAL_FLOOR, DARK_METAL_FLOOR_STAIRS, DARK_METAL_FLOOR_SLAB, DARK_METAL_FLOOR_WALL, DARK_METAL_FLOOR_PRESSURE_PLATE);

@@ -779,6 +779,32 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL, "Yellow Corrugated Metal Plate Wall");
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Yellow Corrugated Metal Plate Pressure Plate");
 
+                // Wallpapers
+                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER, "White / Blue Wallpaper");
+                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB, "White / Blue Wallpaper Slab");
+                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS, "White / Blue Wallpaper Stairs");
+                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH, "White / Blue Wallpaper With Plinth");
+
+                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER, "Beige / Flower Wallpaper");
+                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB, "Beige / Flower Wallpaper Slab");
+                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS, "Beige / Flower Wallpaper Stairs");
+                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH, "Beige / Flower Wallpaper With Plinth");
+
+                addBlock(ECBlockRegistry.BEIGE_WALLPAPER, "Beige Wallpaper");
+                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_SLAB, "Beige Wallpaper Slab");
+                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_STAIRS, "Beige Wallpaper Stairs");
+                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH, "Beige Wallpaper With Plinth");
+
+                addBlock(ECBlockRegistry.PINK_WALLPAPER, "Pink Wallpaper");
+                addBlock(ECBlockRegistry.PINK_WALLPAPER_SLAB, "Pink Wallpaper Slab");
+                addBlock(ECBlockRegistry.PINK_WALLPAPER_STAIRS, "Pink Wallpaper Stairs");
+                addBlock(ECBlockRegistry.PINK_WALLPAPER_PLINTH, "Pink Wallpaper With Plinth");
+
+                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER, "White / Green Wallpaper");
+                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB, "White / Green Wallpaper Slab");
+                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS, "White / Green Wallpaper Stairs");
+                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH, "White / Green Wallpaper With Plinth");
+
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
             case "fr_fr":
@@ -1542,6 +1568,32 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée jaune");
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée jaune");
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée jaune");
+
+                // Wallpapers
+                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER, "Papier peint bleu et blanc");
+                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB, "Dalle de papier peint bleu et blanc");
+                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS, "Escalier de papier peint bleu et blanc");
+                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH, "Papier peint bleu et blanc avec plinthe");
+
+                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER, "Papier peint beige avec motif fleur");
+                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB, "Dalle de papier peint beige avec motif fleur");
+                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS, "Escalier de papier peint beige avec motif fleur");
+                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH, "Papier peint beige avec motif fleur avec plinthe");
+
+                addBlock(ECBlockRegistry.BEIGE_WALLPAPER, "Papier peint beige");
+                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_SLAB, "Dalle de papier peint beige");
+                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_STAIRS, "Escalier de papier peint beige");
+                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH, "Papier peint beige avec plinthe");
+
+                addBlock(ECBlockRegistry.PINK_WALLPAPER, "Papier peint rose");
+                addBlock(ECBlockRegistry.PINK_WALLPAPER_SLAB, "Dalle de papier peint rose");
+                addBlock(ECBlockRegistry.PINK_WALLPAPER_STAIRS, "Escalier de papier peint rose");
+                addBlock(ECBlockRegistry.PINK_WALLPAPER_PLINTH, "Papier peint rose avec plinthe");
+
+                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER, "Papier peint bleu et vert");
+                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB, "Dalle de papier peint bleu et vert");
+                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS, "Escalier de papier peint bleu et vert");
+                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH, "Papier peint bleu et vert avec plinthe");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;

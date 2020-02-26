@@ -343,6 +343,21 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
         registerStoneVariant("yellow_corrugated_metal_plate", ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB.get(),
             ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);
+
+        // Wallpaper
+        registerStoneVariant("white_blue_wallpaper", ECBlockRegistry.WHITE_BLUE_WALLPAPER.get(), ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get(), null, null,
+            null);
+        upDownBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/white_blue_wallpaper_plinth"));
+        registerStoneVariant("beige_flower_wallpaper", ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS.get(), null,
+            null, null);
+        upDownBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/beige_flower_wallpaper_plinth"));
+        registerStoneVariant("beige_wallpaper", ECBlockRegistry.BEIGE_WALLPAPER.get(), ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get(), null, null, null);
+        upDownBlock(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/beige_wallpaper_plinth"));
+        registerStoneVariant("pink_wallpaper", ECBlockRegistry.PINK_WALLPAPER.get(), ECBlockRegistry.PINK_WALLPAPER_SLAB.get(), ECBlockRegistry.PINK_WALLPAPER_STAIRS.get(), null, null, null);
+        upDownBlock(ECBlockRegistry.PINK_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/pink_wallpaper_plinth"));
+        registerStoneVariant("white_green_wallpaper", ECBlockRegistry.WHITE_GREEN_WALLPAPER.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get(), null,
+            null, null);
+        upDownBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/white_green_wallpaper_plinth"));
     }
 
     /**

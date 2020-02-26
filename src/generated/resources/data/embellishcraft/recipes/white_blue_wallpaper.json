@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  s",
+    "lps",
+    "  s"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stone"
+    },
+    "l": {
+      "tag": "forge:dyes/light_blue"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:white_blue_wallpaper",
+    "count": 3
+  }
+}

@@ -239,5 +239,10 @@ public class ECBlockTags extends BlockTagsProvider
             ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(),
             ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get());
 
+        // Wallpapers
+        this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS.get(), ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get(),
+            ECBlockRegistry.PINK_WALLPAPER_STAIRS.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get());
+        this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(),
+            ECBlockRegistry.PINK_WALLPAPER_SLAB.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get());
     }
 }

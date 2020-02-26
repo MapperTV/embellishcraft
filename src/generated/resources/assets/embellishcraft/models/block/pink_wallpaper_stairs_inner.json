@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "side": "embellishcraft:block/pink_wallpaper",
+    "bottom": "embellishcraft:block/side_wallpaper",
+    "top": "embellishcraft:block/pink_wallpaper"
+  }
+}
