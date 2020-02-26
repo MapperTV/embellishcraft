@@ -779,6 +779,44 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL, "Yellow Corrugated Metal Plate Wall");
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Yellow Corrugated Metal Plate Pressure Plate");
 
+                // Metal blocks
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR, "Dark Metal Floor");
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_SLAB, "Dark Metal Slab");
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_STAIRS, "Dark Metal Stairs");
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_WALL, "Dark Metal Wall");
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE, "Dark Metal Pressure Plate");
+
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR, "Light Metal Floor");
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB, "Light Metal Slab");
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS, "Light Metal Stairs");
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_WALL, "Light Metal Wall");
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE, "Light Metal Pressure Plate");
+
+                addBlock(ECBlockRegistry.RUSTY_PLATE, "Rusty Plate");
+                addBlock(ECBlockRegistry.RUSTY_PLATE_SLAB, "Rusty Plate Slab");
+                addBlock(ECBlockRegistry.RUSTY_PLATE_STAIRS, "Rusty Plate Stairs");
+                addBlock(ECBlockRegistry.RUSTY_PLATE_WALL, "Rusty Plate Wall");
+                addBlock(ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE, "Rusty Plate Pressure Plate");
+
+                addBlock(ECBlockRegistry.IRON_BEAM, "Iron Beam");
+                addBlock(ECBlockRegistry.BOLTED_IRON_BEAM, "Bolted Iron Beam");
+                addBlock(ECBlockRegistry.IRON_BEAM_JUNCTION, "Iron Beam Junction");
+                addBlock(ECBlockRegistry.STEEL_BEAM, "Steel Beam");
+                addBlock(ECBlockRegistry.BOLTED_STEEL_BEAM, "Bolted Steel Beam");
+                addBlock(ECBlockRegistry.STEEL_BEAM_JUNCTION, "Steel Beam Junction");
+
+                addBlock(ECBlockRegistry.AIR_DUCT, "Air duct");
+                addBlock(ECBlockRegistry.VENT_AIR_DUCT, "Vent Air duct");
+                addBlock(ECBlockRegistry.GRID_AIR_DUCT, "Grid Air duct");
+
+                addBlock(ECBlockRegistry.BULKHEAD, "Bulkhead");
+                addBlock(ECBlockRegistry.BULKHEAD_TOP, "Bulkhead Top");
+
+                addBlock(ECBlockRegistry.STEEL_WALL_LADDER, "Steel Wall Ladder");
+                addBlock(ECBlockRegistry.RUSTY_WALL_LADDER, "Rusty Wall Ladder");
+                addBlock(ECBlockRegistry.STEEL_RUNGS, "Steel Rungs");
+                addBlock(ECBlockRegistry.RUSTY_RUNGS, "Rusty Rungs");
+
                 // Wallpapers
                 addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER, "White / Blue Wallpaper");
                 addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB, "White / Blue Wallpaper Slab");
@@ -1568,6 +1606,44 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée jaune");
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée jaune");
                 addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée jaune");
+
+                // Metal blocks
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR, "Sol en métal foncé");
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_SLAB, "Dalle en métal foncé");
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_STAIRS, "Escalier en métal foncé");
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_WALL, "Muret en métal foncé");
+                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE, "Plaque de pression en métal foncé");
+
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR, "Sol en métal clair");
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB, "Dalle en métal clair");
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS, "Escalier en métal clair");
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_WALL, "Muret en métal clair");
+                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE, "Plaque de pression en métal clair");
+
+                addBlock(ECBlockRegistry.RUSTY_PLATE, "Plaque rouillée");
+                addBlock(ECBlockRegistry.RUSTY_PLATE_SLAB, "Dalle en plaque rouillée");
+                addBlock(ECBlockRegistry.RUSTY_PLATE_STAIRS, "Escalier en plaque rouillée");
+                addBlock(ECBlockRegistry.RUSTY_PLATE_WALL, "Muret en plaque rouillée");
+                addBlock(ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE, "Plaque de pression en plaque rouillée");
+
+                addBlock(ECBlockRegistry.IRON_BEAM, "Poutrelle en fer");
+                addBlock(ECBlockRegistry.BOLTED_IRON_BEAM, "Poutrelle rivetée en fer");
+                addBlock(ECBlockRegistry.IRON_BEAM_JUNCTION, "Jonction de poutrelle en fer");
+                addBlock(ECBlockRegistry.STEEL_BEAM, "Poutrelle en acier");
+                addBlock(ECBlockRegistry.BOLTED_STEEL_BEAM, "Poutrelle rivetée en acier");
+                addBlock(ECBlockRegistry.STEEL_BEAM_JUNCTION, "Jonction de poutrelle en acier");
+
+                addBlock(ECBlockRegistry.AIR_DUCT, "Conduit d'aération");
+                addBlock(ECBlockRegistry.VENT_AIR_DUCT, "Conduit d'aération avec ventilation");
+                addBlock(ECBlockRegistry.GRID_AIR_DUCT, "Conduit d'aération avec grille");
+
+                addBlock(ECBlockRegistry.BULKHEAD, "Batardeau");
+                addBlock(ECBlockRegistry.BULKHEAD_TOP, "Sommet de batardeau");
+
+                addBlock(ECBlockRegistry.STEEL_WALL_LADDER, "Échelle murale en acier");
+                addBlock(ECBlockRegistry.RUSTY_WALL_LADDER, "Échelle murale rouillée");
+                addBlock(ECBlockRegistry.STEEL_RUNGS, "Échelons en acier");
+                addBlock(ECBlockRegistry.RUSTY_RUNGS, "Échelons rouillés");
 
                 // Wallpapers
                 addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER, "Papier peint bleu et blanc");

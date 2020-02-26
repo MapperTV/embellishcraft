@@ -239,6 +239,13 @@ public class ECBlockTags extends BlockTagsProvider
             ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(),
             ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get());
 
+        // Metal blocks
+        this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.DARK_METAL_FLOOR_STAIRS.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS.get(), ECBlockRegistry.RUSTY_PLATE_STAIRS.get());
+        this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.DARK_METAL_FLOOR_SLAB.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB.get(), ECBlockRegistry.RUSTY_PLATE_SLAB.get());
+        this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.DARK_METAL_FLOOR_WALL.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_WALL.get(), ECBlockRegistry.RUSTY_PLATE_WALL.get());
+        this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get(),
+            ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE.get());
+
         // Wallpapers
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS.get(), ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get(),
             ECBlockRegistry.PINK_WALLPAPER_STAIRS.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get());

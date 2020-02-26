@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -22,34 +21,13 @@ import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.item.FuelBlockItem;
 import tv.mapper.embellishcraft.item.ModItemGroups;
 import tv.mapper.embellishcraft.util.WoodType;
-import tv.mapper.mapperbase.block.AllRotationBlock;
 import tv.mapper.mapperbase.block.CustomDoorBlock;
-import tv.mapper.mapperbase.block.CustomLadderBlock;
-import tv.mapper.mapperbase.util.RegistryUtils;
 
 @ObjectHolder(ECConstants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
 public class ECBlocks
 {
     // Metal
-
-    public static final Block DARK_METAL_FLOOR = null;
-    public static final Block DARK_METAL_FLOOR_STAIRS = null;
-    public static final Block DARK_METAL_FLOOR_SLAB = null;
-    public static final Block DARK_METAL_FLOOR_WALL = null;
-    public static final Block DARK_METAL_FLOOR_PRESSURE_PLATE = null;
-
-    public static final Block LIGHT_METAL_FLOOR = null;
-    public static final Block LIGHT_METAL_FLOOR_STAIRS = null;
-    public static final Block LIGHT_METAL_FLOOR_SLAB = null;
-    public static final Block LIGHT_METAL_FLOOR_WALL = null;
-    public static final Block LIGHT_METAL_FLOOR_PRESSURE_PLATE = null;
-
-    public static final Block RUSTY_PLATE = null;
-    public static final Block RUSTY_PLATE_STAIRS = null;
-    public static final Block RUSTY_PLATE_SLAB = null;
-    public static final Block RUSTY_PLATE_WALL = null;
-    public static final Block RUSTY_PLATE_PRESSURE_PLATE = null;
 
     public static final Block IRON_BEAM = null;
     public static final Block BOLTED_IRON_BEAM = null;
@@ -323,38 +301,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        // Metal
-
-        RegistryUtils.createBlockWithVariants(event, "dark_metal_floor", true, true, true, true, Material.IRON, MaterialColor.STONE, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "light_metal_floor", true, true, true, true, Material.IRON, MaterialColor.IRON, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "rusty_plate", true, true, true, true, Material.IRON, MaterialColor.ADOBE, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
-
-        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("iron_beam"));
-        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("bolted_iron_beam"));
-        RegistryUtils.createBlockWithVariants(event, "iron_beam_junction", false, false, false, false, Material.IRON, MaterialColor.IRON, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("steel_beam"));
-        event.getRegistry().register(
-            new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("bolted_steel_beam"));
-        RegistryUtils.createBlockWithVariants(event, "steel_beam_junction", false, false, false, false, Material.IRON, MaterialColor.IRON, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
-
-        RegistryUtils.createBlockWithVariants(event, "air_duct", false, false, false, false, Material.IRON, MaterialColor.IRON, SoundType.LANTERN, ToolType.PICKAXE, 0, 0);
-        event.getRegistry().register(new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("vent_air_duct"));
-        event.getRegistry().register(new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)).setRegistryName("grid_air_duct"));
-
-        RegistryUtils.createBlockWithVariants(event, "bulkhead", false, false, false, false, Material.IRON, MaterialColor.STONE, SoundType.METAL, ToolType.PICKAXE, 0, 0);
-        RegistryUtils.createBlockWithVariants(event, "bulkhead_top", false, false, false, false, Material.IRON, MaterialColor.STONE, SoundType.METAL, ToolType.PICKAXE, 0, 0);
-
-        event.getRegistry().register(
-            new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN).notSolid(), ToolType.PICKAXE).setRegistryName(
-                "steel_wall_ladder"));
-        event.getRegistry().register(
-            new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN).notSolid(), ToolType.PICKAXE).setRegistryName(
-                "rusty_wall_ladder"));
-        event.getRegistry().register(
-            new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN).notSolid(), ToolType.PICKAXE).setRegistryName("steel_rungs"));
-        event.getRegistry().register(
-            new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN).notSolid(), ToolType.PICKAXE).setRegistryName("rusty_rungs"));
-
         // Furniture
 
         Block block;
@@ -488,32 +434,6 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
-        // Metal
-
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, DARK_METAL_FLOOR, DARK_METAL_FLOOR_STAIRS, DARK_METAL_FLOOR_SLAB, DARK_METAL_FLOOR_WALL, DARK_METAL_FLOOR_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, LIGHT_METAL_FLOOR, LIGHT_METAL_FLOOR_STAIRS, LIGHT_METAL_FLOOR_SLAB, LIGHT_METAL_FLOOR_WALL,
-            LIGHT_METAL_FLOOR_PRESSURE_PLATE);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, RUSTY_PLATE, RUSTY_PLATE_STAIRS, RUSTY_PLATE_SLAB, RUSTY_PLATE_WALL, RUSTY_PLATE_PRESSURE_PLATE);
-
-        event.getRegistry().register(new BlockItem(IRON_BEAM, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(IRON_BEAM.getRegistryName()));
-        event.getRegistry().register(new BlockItem(BOLTED_IRON_BEAM, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BOLTED_IRON_BEAM.getRegistryName()));
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, IRON_BEAM_JUNCTION, null, null, null, null);
-        event.getRegistry().register(new BlockItem(STEEL_BEAM, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_BEAM.getRegistryName()));
-        event.getRegistry().register(new BlockItem(BOLTED_STEEL_BEAM, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(BOLTED_STEEL_BEAM.getRegistryName()));
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, STEEL_BEAM_JUNCTION, null, null, null, null);
-
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, AIR_DUCT, null, null, null, null);
-        event.getRegistry().register(new BlockItem(VENT_AIR_DUCT, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(VENT_AIR_DUCT.getRegistryName()));
-        event.getRegistry().register(new BlockItem(GRID_AIR_DUCT, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(GRID_AIR_DUCT.getRegistryName()));
-
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BULKHEAD, null, null, null, null);
-        RegistryUtils.createItemBlockWithVariants(event, ModItemGroups.EMBELLISHCRAFT, BULKHEAD_TOP, null, null, null, null);
-
-        event.getRegistry().register(new BlockItem(STEEL_WALL_LADDER, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_WALL_LADDER.getRegistryName()));
-        event.getRegistry().register(new BlockItem(RUSTY_WALL_LADDER, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(RUSTY_WALL_LADDER.getRegistryName()));
-        event.getRegistry().register(new BlockItem(STEEL_RUNGS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_RUNGS.getRegistryName()));
-        event.getRegistry().register(new BlockItem(RUSTY_RUNGS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(RUSTY_RUNGS.getRegistryName()));
-
         // Furniture
 
         event.getRegistry().register(new FuelBlockItem(OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(OAK_CHAIR.getRegistryName()));

@@ -3,6 +3,7 @@ package tv.mapper.embellishcraft.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.PressurePlateBlock;
+import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -12,8 +13,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.mapperbase.block.AllRotationBlock;
 import tv.mapper.mapperbase.block.CustomBlock;
 import tv.mapper.mapperbase.block.CustomButtonBlock;
+import tv.mapper.mapperbase.block.CustomLadderBlock;
 import tv.mapper.mapperbase.block.CustomPressurePlateBlock;
 import tv.mapper.mapperbase.block.CustomSlabBlock;
 import tv.mapper.mapperbase.block.CustomStairsBlock;
@@ -1431,263 +1434,338 @@ public class ECBlockRegistry
 
     // Corrugated Metal Plates
     public static final RegistryObject<CustomBlock> PURPLE_CORRUGATED_METAL_PLATE = BLOCKS.register("purple_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> PURPLE_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("purple_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> PURPLE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> PURPLE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> PURPLE_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("purple_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> PURPLE_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("purple_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("purple_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> RED_CORRUGATED_METAL_PLATE = BLOCKS.register("red_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> RED_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("red_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> RED_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> RED_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> RED_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("red_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> RED_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("red_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("red_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> WHITE_CORRUGATED_METAL_PLATE = BLOCKS.register("white_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> WHITE_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("white_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> WHITE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> WHITE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> WHITE_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("white_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> WHITE_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("white_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("white_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> YELLOW_CORRUGATED_METAL_PLATE = BLOCKS.register("yellow_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> YELLOW_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("yellow_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> YELLOW_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> YELLOW_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> YELLOW_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("yellow_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> YELLOW_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("yellow_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("yellow_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> BLACK_CORRUGATED_METAL_PLATE = BLOCKS.register("black_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> BLACK_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("black_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> BLACK_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> BLACK_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> BLACK_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("black_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> BLACK_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("black_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("black_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> BLUE_CORRUGATED_METAL_PLATE = BLOCKS.register("blue_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> BLUE_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("blue_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> BLUE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> BLUE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> BLUE_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("blue_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> BLUE_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("blue_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("blue_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> BROWN_CORRUGATED_METAL_PLATE = BLOCKS.register("brown_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> BROWN_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("brown_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> BROWN_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> BROWN_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> BROWN_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("brown_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> BROWN_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("brown_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("brown_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> CYAN_CORRUGATED_METAL_PLATE = BLOCKS.register("cyan_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> CYAN_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("cyan_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> CYAN_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> CYAN_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> CYAN_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("cyan_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> CYAN_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("cyan_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("cyan_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> GRAY_CORRUGATED_METAL_PLATE = BLOCKS.register("gray_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> GRAY_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("gray_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> GRAY_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> GRAY_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> GRAY_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("gray_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> GRAY_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("gray_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("gray_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> GREEN_CORRUGATED_METAL_PLATE = BLOCKS.register("green_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> GREEN_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("green_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> GREEN_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> GREEN_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> GREEN_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("green_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> GREEN_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("green_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("green_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> LIGHT_BLUE_CORRUGATED_METAL_PLATE = BLOCKS.register("light_blue_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("light_blue_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> LIGHT_BLUE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> LIGHT_BLUE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("light_blue_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("light_blue_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("light_blue_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> LIGHT_GRAY_CORRUGATED_METAL_PLATE = BLOCKS.register("light_gray_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("light_gray_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> LIGHT_GRAY_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> LIGHT_GRAY_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("light_gray_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("light_gray_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("light_gray_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> LIME_CORRUGATED_METAL_PLATE = BLOCKS.register("lime_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> LIME_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("lime_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> LIME_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> LIME_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> LIME_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("lime_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> LIME_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("lime_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("lime_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> MAGENTA_CORRUGATED_METAL_PLATE = BLOCKS.register("magenta_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> MAGENTA_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("magenta_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> MAGENTA_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> MAGENTA_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> MAGENTA_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("magenta_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> MAGENTA_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("magenta_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("magenta_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> ORANGE_CORRUGATED_METAL_PLATE = BLOCKS.register("orange_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> ORANGE_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("orange_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> ORANGE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> ORANGE_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> ORANGE_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("orange_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> ORANGE_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("orange_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("orange_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> PINK_CORRUGATED_METAL_PLATE = BLOCKS.register("pink_corrugated_metal_plate",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> PINK_CORRUGATED_METAL_PLATE_STAIRS = BLOCKS.register("pink_corrugated_metal_plate_stairs",
-        () -> new CustomStairsBlock(() -> PINK_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomStairsBlock(() -> PINK_CORRUGATED_METAL_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> PINK_CORRUGATED_METAL_PLATE_SLAB = BLOCKS.register("pink_corrugated_metal_plate_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomWallBlock> PINK_CORRUGATED_METAL_PLATE_WALL = BLOCKS.register("pink_corrugated_metal_plate_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE = BLOCKS.register("pink_corrugated_metal_plate_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.BLACK).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE));
+
+    // Metal blocks
+    public static final RegistryObject<CustomBlock> DARK_METAL_FLOOR = BLOCKS.register("dark_metal_floor",
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.OBSIDIAN).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> DARK_METAL_FLOOR_STAIRS = BLOCKS.register("dark_metal_floor_stairs",
+        () -> new CustomStairsBlock(() -> DARK_METAL_FLOOR.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.OBSIDIAN).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> DARK_METAL_FLOOR_SLAB = BLOCKS.register("dark_metal_floor_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.OBSIDIAN).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> DARK_METAL_FLOOR_WALL = BLOCKS.register("dark_metal_floor_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.OBSIDIAN).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> DARK_METAL_FLOOR_PRESSURE_PLATE = BLOCKS.register("dark_metal_floor_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.OBSIDIAN).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.LANTERN), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> LIGHT_METAL_FLOOR = BLOCKS.register("light_metal_floor",
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.CLAY).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> LIGHT_METAL_FLOOR_STAIRS = BLOCKS.register("light_metal_floor_stairs",
+        () -> new CustomStairsBlock(() -> LIGHT_METAL_FLOOR.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.CLAY).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> LIGHT_METAL_FLOOR_SLAB = BLOCKS.register("light_metal_floor_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.CLAY).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> LIGHT_METAL_FLOOR_WALL = BLOCKS.register("light_metal_floor_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.CLAY).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> LIGHT_METAL_FLOOR_PRESSURE_PLATE = BLOCKS.register("light_metal_floor_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.CLAY).doesNotBlockMovement().hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.LANTERN), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> RUSTY_PLATE = BLOCKS.register("rusty_plate",
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> RUSTY_PLATE_STAIRS = BLOCKS.register("rusty_plate_stairs",
+        () -> new CustomStairsBlock(() -> RUSTY_PLATE.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(1.5F, 6.0F).sound(
+            SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> RUSTY_PLATE_SLAB = BLOCKS.register("rusty_plate_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> RUSTY_PLATE_WALL = BLOCKS.register("rusty_plate_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> RUSTY_PLATE_PRESSURE_PLATE = BLOCKS.register("rusty_plate_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA).doesNotBlockMovement().hardnessAndResistance(1.5F,
+            6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+
+    public static final RegistryObject<RotatedPillarBlock> IRON_BEAM = BLOCKS.register("iron_beam",
+        () -> new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)));
+    public static final RegistryObject<RotatedPillarBlock> BOLTED_IRON_BEAM = BLOCKS.register("bolted_iron_beam",
+        () -> new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)));
+    public static final RegistryObject<CustomBlock> IRON_BEAM_JUNCTION = BLOCKS.register("iron_beam_junction",
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+
+    public static final RegistryObject<RotatedPillarBlock> STEEL_BEAM = BLOCKS.register("steel_beam",
+        () -> new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)));
+    public static final RegistryObject<RotatedPillarBlock> BOLTED_STEEL_BEAM = BLOCKS.register("bolted_steel_beam",
+        () -> new RotatedPillarBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN)));
+    public static final RegistryObject<CustomBlock> STEEL_BEAM_JUNCTION = BLOCKS.register("steel_beam_junction",
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> AIR_DUCT = BLOCKS.register("air_duct",
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<AllRotationBlock> VENT_AIR_DUCT = BLOCKS.register("vent_air_duct",
+        () -> new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+    public static final RegistryObject<AllRotationBlock> GRID_AIR_DUCT = BLOCKS.register("grid_air_duct",
+        () -> new AllRotationBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomBlock> BULKHEAD = BLOCKS.register("bulkhead",
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(0.8F).sound(SoundType.METAL), ToolType.PICKAXE));
+    public static final RegistryObject<CustomBlock> BULKHEAD_TOP = BLOCKS.register("bulkhead_top",
+        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(0.8F).sound(SoundType.METAL), ToolType.PICKAXE));
+
+    public static final RegistryObject<CustomLadderBlock> STEEL_WALL_LADDER = BLOCKS.register("steel_wall_ladder",
+        () -> new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.METAL).notSolid(), ToolType.PICKAXE));
+    public static final RegistryObject<CustomLadderBlock> RUSTY_WALL_LADDER = BLOCKS.register("rusty_wall_ladder",
+        () -> new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.METAL).notSolid(), ToolType.PICKAXE));
+    public static final RegistryObject<CustomLadderBlock> STEEL_RUNGS = BLOCKS.register("steel_rungs",
+        () -> new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.METAL).notSolid(), ToolType.PICKAXE));
+    public static final RegistryObject<CustomLadderBlock> RUSTY_RUNGS = BLOCKS.register("rusty_rungs",
+        () -> new CustomLadderBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.8F).sound(SoundType.METAL).notSolid(), ToolType.PICKAXE));
 
     // Wallpapers
     public static final RegistryObject<CustomBlock> WHITE_BLUE_WALLPAPER = BLOCKS.register("white_blue_wallpaper",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> WHITE_BLUE_WALLPAPER_STAIRS = BLOCKS.register("white_blue_wallpaper_stairs",
         () -> new CustomStairsBlock(() -> WHITE_BLUE_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
-            SoundType.METAL), ToolType.PICKAXE));
+            SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> WHITE_BLUE_WALLPAPER_SLAB = BLOCKS.register("white_blue_wallpaper_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<UpDownBlock> WHITE_BLUE_WALLPAPER_PLINTH = BLOCKS.register("white_blue_wallpaper_plinth",
-        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> BEIGE_FLOWER_WALLPAPER = BLOCKS.register("beige_flower_wallpaper",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> BEIGE_FLOWER_WALLPAPER_STAIRS = BLOCKS.register("beige_flower_wallpaper_stairs",
         () -> new CustomStairsBlock(() -> BEIGE_FLOWER_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
-            SoundType.METAL), ToolType.PICKAXE));
+            SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> BEIGE_FLOWER_WALLPAPER_SLAB = BLOCKS.register("beige_flower_wallpaper_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<UpDownBlock> BEIGE_FLOWER_WALLPAPER_PLINTH = BLOCKS.register("beige_flower_wallpaper_plinth",
-        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> BEIGE_WALLPAPER = BLOCKS.register("beige_wallpaper",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> BEIGE_WALLPAPER_STAIRS = BLOCKS.register("beige_wallpaper_stairs",
         () -> new CustomStairsBlock(() -> BEIGE_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
-            SoundType.METAL), ToolType.PICKAXE));
+            SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> BEIGE_WALLPAPER_SLAB = BLOCKS.register("beige_wallpaper_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<UpDownBlock> BEIGE_WALLPAPER_PLINTH = BLOCKS.register("beige_wallpaper_plinth",
-        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> PINK_WALLPAPER = BLOCKS.register("pink_wallpaper",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> PINK_WALLPAPER_STAIRS = BLOCKS.register("pink_wallpaper_stairs",
         () -> new CustomStairsBlock(() -> PINK_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
-            SoundType.METAL), ToolType.PICKAXE));
+            SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> PINK_WALLPAPER_SLAB = BLOCKS.register("pink_wallpaper_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<UpDownBlock> PINK_WALLPAPER_PLINTH = BLOCKS.register("pink_wallpaper_plinth",
-        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
 
     public static final RegistryObject<CustomBlock> WHITE_GREEN_WALLPAPER = BLOCKS.register("white_green_wallpaper",
-        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> WHITE_GREEN_WALLPAPER_STAIRS = BLOCKS.register("white_green_wallpaper_stairs",
         () -> new CustomStairsBlock(() -> WHITE_GREEN_WALLPAPER.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
-            SoundType.METAL), ToolType.PICKAXE));
+            SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<CustomSlabBlock> WHITE_GREEN_WALLPAPER_SLAB = BLOCKS.register("white_green_wallpaper_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
     public static final RegistryObject<UpDownBlock> WHITE_GREEN_WALLPAPER_PLINTH = BLOCKS.register("white_green_wallpaper_plinth",
-        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE));
+        () -> new UpDownBlock(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE));
 
     public static void init()
     {

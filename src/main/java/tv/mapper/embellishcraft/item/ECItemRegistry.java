@@ -1356,6 +1356,67 @@ public class ECItemRegistry
     public static final RegistryObject<Item> YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("yellow_corrugated_metal_plate_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    // Metal blocks
+    public static final RegistryObject<Item> DARK_METAL_FLOOR_ITEM = ITEMS.register("dark_metal_floor",
+        () -> new BlockItem(ECBlockRegistry.DARK_METAL_FLOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_METAL_FLOOR_STAIRS_ITEM = ITEMS.register("dark_metal_floor_stairs",
+        () -> new BlockItem(ECBlockRegistry.DARK_METAL_FLOOR_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_METAL_FLOOR_SLAB_ITEM = ITEMS.register("dark_metal_floor_slab",
+        () -> new BlockItem(ECBlockRegistry.DARK_METAL_FLOOR_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_METAL_FLOOR_WALL_ITEM = ITEMS.register("dark_metal_floor_wall",
+        () -> new BlockItem(ECBlockRegistry.DARK_METAL_FLOOR_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DARK_METAL_FLOOR_PRESSURE_PLATE_ITEM = ITEMS.register("dark_metal_floor_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> LIGHT_METAL_FLOOR_ITEM = ITEMS.register("light_metal_floor",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_METAL_FLOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_METAL_FLOOR_STAIRS_ITEM = ITEMS.register("light_metal_floor_stairs",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_METAL_FLOOR_SLAB_ITEM = ITEMS.register("light_metal_floor_slab",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_METAL_FLOOR_WALL_ITEM = ITEMS.register("light_metal_floor_wall",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_METAL_FLOOR_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> LIGHT_METAL_FLOOR_PRESSURE_PLATE_ITEM = ITEMS.register("light_metal_floor_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> RUSTY_PLATE_ITEM = ITEMS.register("rusty_plate", () -> new BlockItem(ECBlockRegistry.RUSTY_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RUSTY_PLATE_STAIRS_ITEM = ITEMS.register("rusty_plate_stairs",
+        () -> new BlockItem(ECBlockRegistry.RUSTY_PLATE_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RUSTY_PLATE_SLAB_ITEM = ITEMS.register("rusty_plate_slab",
+        () -> new BlockItem(ECBlockRegistry.RUSTY_PLATE_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RUSTY_PLATE_WALL_ITEM = ITEMS.register("rusty_plate_wall",
+        () -> new BlockItem(ECBlockRegistry.RUSTY_PLATE_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RUSTY_PLATE_PRESSURE_PLATE_ITEM = ITEMS.register("rusty_plate_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> IRON_BEAM_ITEM = ITEMS.register("iron_beam", () -> new BlockItem(ECBlockRegistry.IRON_BEAM.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BOLTED_IRON_BEAM_ITEM = ITEMS.register("bolted_iron_beam",
+        () -> new BlockItem(ECBlockRegistry.BOLTED_IRON_BEAM.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> IRON_BEAM_JUNCTION_ITEM = ITEMS.register("iron_beam_junction",
+        () -> new BlockItem(ECBlockRegistry.IRON_BEAM_JUNCTION.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> STEEL_BEAM_ITEM = ITEMS.register("steel_beam", () -> new BlockItem(ECBlockRegistry.STEEL_BEAM.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BOLTED_STEEL_BEAM_ITEM = ITEMS.register("bolted_steel_beam",
+        () -> new BlockItem(ECBlockRegistry.BOLTED_STEEL_BEAM.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> STEEL_BEAM_JUNCTION_ITEM = ITEMS.register("steel_beam_junction",
+        () -> new BlockItem(ECBlockRegistry.STEEL_BEAM_JUNCTION.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> AIR_DUCT_ITEM = ITEMS.register("air_duct", () -> new BlockItem(ECBlockRegistry.AIR_DUCT.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> VENT_AIR_DUCT_ITEM = ITEMS.register("vent_air_duct",
+        () -> new BlockItem(ECBlockRegistry.VENT_AIR_DUCT.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRID_AIR_DUCT_ITEM = ITEMS.register("grid_air_duct",
+        () -> new BlockItem(ECBlockRegistry.GRID_AIR_DUCT.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> BULKHEAD_ITEM = ITEMS.register("bulkhead", () -> new BlockItem(ECBlockRegistry.BULKHEAD.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> BULKHEAD_TOP_ITEM = ITEMS.register("bulkhead_top",
+        () -> new BlockItem(ECBlockRegistry.BULKHEAD_TOP.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> STEEL_WALL_LADDER_ITEM = ITEMS.register("steel_wall_ladder",
+        () -> new BlockItem(ECBlockRegistry.STEEL_WALL_LADDER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RUSTY_WALL_LADDER_ITEM = ITEMS.register("rusty_wall_ladder",
+        () -> new BlockItem(ECBlockRegistry.RUSTY_WALL_LADDER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> STEEL_RUNGS_ITEM = ITEMS.register("steel_rungs", () -> new BlockItem(ECBlockRegistry.STEEL_RUNGS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RUSTY_RUNGS_ITEM = ITEMS.register("rusty_rungs", () -> new BlockItem(ECBlockRegistry.RUSTY_RUNGS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     // Wallpaper
     public static final RegistryObject<Item> WHITE_BLUE_WALLPAPER_ITEM = ITEMS.register("white_blue_wallpaper",
         () -> new BlockItem(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -1383,7 +1444,7 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> BEIGE_WALLPAPER_PLINTH_ITEM = ITEMS.register("beige_wallpaper_plinth",
         () -> new BlockItem(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
-    
+
     public static final RegistryObject<Item> PINK_WALLPAPER_ITEM = ITEMS.register("pink_wallpaper",
         () -> new BlockItem(ECBlockRegistry.PINK_WALLPAPER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> PINK_WALLPAPER_STAIRS_ITEM = ITEMS.register("pink_wallpaper_stairs",

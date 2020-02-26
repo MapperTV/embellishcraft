@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "embellishcraft:block/steel_beam_junction"
+  }
+}

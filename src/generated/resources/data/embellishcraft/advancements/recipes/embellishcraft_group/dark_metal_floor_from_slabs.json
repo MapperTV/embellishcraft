@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:dark_metal_floor_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_dark_metal_floor_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:dark_metal_floor_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:dark_metal_floor_from_slabs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_metal_floor_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

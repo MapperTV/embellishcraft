@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/wall_ladder",
+  "textures": {
+    "material": "mapperbase:block/steel_block",
+    "particle": "mapperbase:block/steel_block"
+  }
+}

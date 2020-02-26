@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " i ",
+    "igi",
+    " i "
+  ],
+  "key": {
+    "i": {
+      "tag": "forge:ingots/steel"
+    },
+    "g": {
+      "item": "minecraft:iron_bars"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:air_duct",
+    "count": 4
+  }
+}

@@ -25,7 +25,7 @@ public class ECGenerators
             @Override
             public boolean exists(ResourceLocation loc, ResourcePackType type, String pathSuffix, String pathPrefix)
             {
-                if(loc.getNamespace() == "biomesoplenty")
+                if(loc.getNamespace() == "mapperbase")
                 {
                     return true;
                 }

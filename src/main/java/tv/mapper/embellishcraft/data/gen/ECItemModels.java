@@ -90,6 +90,31 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("white_corrugated_metal_plate", true, true, true, true, true, false);
         registerBlockBasics("yellow_corrugated_metal_plate", true, true, true, true, true, false);
 
+        // Metal blocks
+
+        registerBlockBasics("dark_metal_floor", true, true, true, true, true, false);
+        registerBlockBasics("light_metal_floor", true, true, true, true, true, false);
+        registerBlockBasics("rusty_plate", true, true, true, true, true, false);
+
+        getBuilder("iron_beam").parent(new UncheckedModelFile(modid + ":block/iron_beam"));
+        getBuilder("bolted_iron_beam").parent(new UncheckedModelFile(modid + ":block/bolted_iron_beam"));
+        getBuilder("iron_beam_junction").parent(new UncheckedModelFile(modid + ":block/iron_beam_junction"));
+        getBuilder("steel_beam").parent(new UncheckedModelFile(modid + ":block/steel_beam"));
+        getBuilder("bolted_steel_beam").parent(new UncheckedModelFile(modid + ":block/bolted_steel_beam"));
+        getBuilder("steel_beam_junction").parent(new UncheckedModelFile(modid + ":block/steel_beam_junction"));
+
+        getBuilder("air_duct").parent(new UncheckedModelFile(modid + ":block/air_duct"));
+        getBuilder("vent_air_duct").parent(new UncheckedModelFile(modid + ":block/vent_air_duct"));
+        getBuilder("grid_air_duct").parent(new UncheckedModelFile(modid + ":block/grid_air_duct"));
+
+        getBuilder("bulkhead").parent(new UncheckedModelFile(modid + ":block/bulkhead"));
+        getBuilder("bulkhead_top").parent(new UncheckedModelFile(modid + ":block/bulkhead_top"));
+
+        getBuilder("steel_wall_ladder").parent(new UncheckedModelFile(modid + ":block/steel_wall_ladder"));
+        getBuilder("steel_rungs").parent(new UncheckedModelFile(modid + ":block/steel_rungs"));
+        getBuilder("rusty_wall_ladder").parent(new UncheckedModelFile(modid + ":block/rusty_wall_ladder"));
+        getBuilder("rusty_rungs").parent(new UncheckedModelFile(modid + ":block/rusty_rungs"));
+
         // Wallpapers
         registerBlockBasics("white_blue_wallpaper", true, true, true, false, false, false);
         getBuilder("white_blue_wallpaper_plinth").parent(new UncheckedModelFile(modid + ":block/white_blue_wallpaper_plinth"));

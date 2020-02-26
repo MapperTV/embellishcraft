@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:rusty_plate"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:rusty_plate_slab",
+    "count": 6
+  }
+}

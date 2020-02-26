@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:steel_beam"
+    },
+    {
+      "item": "mapperbase:bolt"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:bolted_steel_beam"
+  }
+}

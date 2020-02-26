@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:rusty_rungs"
+    ]
+  },
+  "criteria": {
+    "has_steel_rungs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:steel_rungs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:rusty_rungs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_rungs",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -128,6 +128,9 @@
     "embellishcraft:purple_corrugated_metal_plate_pressure_plate",
     "embellishcraft:red_corrugated_metal_plate_pressure_plate",
     "embellishcraft:white_corrugated_metal_plate_pressure_plate",
-    "embellishcraft:yellow_corrugated_metal_plate_pressure_plate"
+    "embellishcraft:yellow_corrugated_metal_plate_pressure_plate",
+    "embellishcraft:dark_metal_floor_pressure_plate",
+    "embellishcraft:light_metal_floor_pressure_plate",
+    "embellishcraft:rusty_plate_pressure_plate"
   ]
 }

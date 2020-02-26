@@ -17,6 +17,7 @@ import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
 import tv.mapper.mapperbase.data.BaseTags;
+import tv.mapper.mapperbase.item.BaseItems;
 
 public class ECRecipes extends RecipeProvider
 {
@@ -1677,6 +1678,82 @@ public class ECRecipes extends RecipeProvider
             "###").addCriterion("has_yellow_corrugated_metal_plate", this.hasItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get()).patternLine("##").addCriterion(
             "has_yellow_corrugated_metal_plate", this.hasItem(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get())).build(consumer);
+
+        // Metal blocks
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_METAL_FLOOR.get(), 4).patternLine("iid").patternLine("ii ").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d', Tags.Items.DYES_GRAY).addCriterion(
+            "has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.LIGHT_METAL_FLOOR.get()).addCriterion("has_light_metal_floor",
+            this.hasItem(ECBlockRegistry.LIGHT_METAL_FLOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_METAL_FLOOR.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB.get()).addCriterion(
+            "has_light_metal_floor_slab", this.hasItem(ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB.get())).build(consumer, ECConstants.MODID + ":light_metal_floor_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS.get(), 4).key('#', ECBlockRegistry.LIGHT_METAL_FLOOR.get()).patternLine("#  ").patternLine("## ").patternLine(
+            "###").addCriterion("has_light_metal_floor", this.hasItem(ECBlockRegistry.LIGHT_METAL_FLOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_METAL_FLOOR_WALL.get(), 6).key('#', ECBlockRegistry.LIGHT_METAL_FLOOR.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_light_metal_floor", this.hasItem(ECBlockRegistry.LIGHT_METAL_FLOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.LIGHT_METAL_FLOOR.get()).patternLine("##").addCriterion("has_light_metal_floor",
+            this.hasItem(ECBlockRegistry.LIGHT_METAL_FLOOR.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_METAL_FLOOR.get(), 4).patternLine("iid").patternLine("ii ").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d', Tags.Items.DYES_BLACK).addCriterion(
+            "has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_METAL_FLOOR_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.DARK_METAL_FLOOR.get()).addCriterion("has_dark_metal_floor",
+            this.hasItem(ECBlockRegistry.DARK_METAL_FLOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_METAL_FLOOR.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.DARK_METAL_FLOOR_SLAB.get()).addCriterion("has_dark_metal_floor_slab",
+            this.hasItem(ECBlockRegistry.DARK_METAL_FLOOR_SLAB.get())).build(consumer, ECConstants.MODID + ":dark_metal_floor_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_METAL_FLOOR_STAIRS.get(), 4).key('#', ECBlockRegistry.DARK_METAL_FLOOR.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_dark_metal_floor", this.hasItem(ECBlockRegistry.DARK_METAL_FLOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_METAL_FLOOR_WALL.get(), 6).key('#', ECBlockRegistry.DARK_METAL_FLOOR.get()).patternLine("###").patternLine("###").addCriterion(
+            "has_dark_metal_floor", this.hasItem(ECBlockRegistry.DARK_METAL_FLOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.DARK_METAL_FLOOR.get()).patternLine("##").addCriterion("has_dark_metal_floor",
+            this.hasItem(ECBlockRegistry.DARK_METAL_FLOOR.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RUSTY_PLATE.get(), 4).patternLine(" i ").patternLine("idi").patternLine(" i ").key('i', BaseTags.ForgeItems.PLATES_STEEL).key('d',
+            Tags.Items.DYES_ORANGE).addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RUSTY_PLATE_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.RUSTY_PLATE.get()).addCriterion("has_rusty_plate",
+            this.hasItem(ECBlockRegistry.RUSTY_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RUSTY_PLATE.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.RUSTY_PLATE_SLAB.get()).addCriterion("has_rusty_plate_slab",
+            this.hasItem(ECBlockRegistry.RUSTY_PLATE_SLAB.get())).build(consumer, ECConstants.MODID + ":rusty_plate_from_slabs");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RUSTY_PLATE_STAIRS.get(), 4).key('#', ECBlockRegistry.RUSTY_PLATE.get()).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion(
+            "has_rusty_plate", this.hasItem(ECBlockRegistry.RUSTY_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RUSTY_PLATE_WALL.get(), 6).key('#', ECBlockRegistry.RUSTY_PLATE.get()).patternLine("###").patternLine("###").addCriterion("has_rusty_plate",
+            this.hasItem(ECBlockRegistry.RUSTY_PLATE.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.RUSTY_PLATE.get()).patternLine("##").addCriterion("has_rusty_plate",
+            this.hasItem(ECBlockRegistry.RUSTY_PLATE.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.IRON_BEAM.get(), 3).patternLine("iii").key('i', Tags.Items.INGOTS_IRON).addCriterion("has_iron_ingot", this.hasItem(Tags.Items.INGOTS_IRON)).build(
+            consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.BOLTED_IRON_BEAM.get()).addIngredient(ECBlockRegistry.IRON_BEAM.get()).addIngredient(BaseItems.BOLT).addCriterion("has_iron_beam",
+            this.hasItem(ECBlockRegistry.IRON_BEAM.get())).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.IRON_BEAM_JUNCTION.get()).addIngredient(ECBlockRegistry.IRON_BEAM.get()).addCriterion("has_iron_beam",
+            this.hasItem(ECBlockRegistry.IRON_BEAM.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_BEAM.get(), 3).patternLine("iii").key('i', BaseTags.ForgeItems.INGOTS_STEEL).addCriterion("has_steel_ingot",
+            this.hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.BOLTED_STEEL_BEAM.get()).addIngredient(ECBlockRegistry.STEEL_BEAM.get()).addIngredient(BaseItems.BOLT).addCriterion("has_steel_beam",
+            this.hasItem(ECBlockRegistry.STEEL_BEAM.get())).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.STEEL_BEAM_JUNCTION.get()).addIngredient(ECBlockRegistry.STEEL_BEAM.get()).addCriterion("has_steel_beam",
+            this.hasItem(ECBlockRegistry.STEEL_BEAM.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.AIR_DUCT.get(), 4).patternLine(" i ").patternLine("igi").patternLine(" i ").key('i', BaseTags.ForgeItems.INGOTS_STEEL).key('g',
+            Blocks.IRON_BARS).addCriterion("has_steel_ingot", this.hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.VENT_AIR_DUCT.get()).addIngredient(ECBlockRegistry.AIR_DUCT.get()).addIngredient(Blocks.IRON_BARS).addCriterion("has_air_duct",
+            this.hasItem(ECBlockRegistry.AIR_DUCT.get())).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.GRID_AIR_DUCT.get()).addIngredient(ECBlockRegistry.VENT_AIR_DUCT.get()).addIngredient(Blocks.IRON_BARS).addCriterion("has_vent_air_duct",
+            this.hasItem(ECBlockRegistry.VENT_AIR_DUCT.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BULKHEAD.get(), 2).patternLine("i").patternLine("i").key('i', ECBlockRegistry.IRON_BEAM.get()).addCriterion("has_iron_beam",
+            this.hasItem(ECBlockRegistry.IRON_BEAM.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.BULKHEAD_TOP.get(), 2).patternLine("c").patternLine("i").key('c', BaseTags.Items.CONCRETE).key('i', ECBlockRegistry.BULKHEAD.get()).addCriterion(
+            "has_bulkhead", this.hasItem(ECBlockRegistry.BULKHEAD.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_WALL_LADDER.get(), 8).patternLine("r r").patternLine("rir").patternLine("r r").key('r', BaseTags.ForgeItems.RODS_STEEL).key('i',
+            BaseTags.ForgeItems.INGOTS_STEEL).addCriterion("has_steel_ingot", this.hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).addCriterion("has_steel_rod", this.hasItem(BaseTags.ForgeItems.RODS_STEEL)).build(
+                consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RUSTY_WALL_LADDER.get(), 8).patternLine("lll").patternLine("lbl").patternLine("lll").key('l', ECBlockRegistry.STEEL_WALL_LADDER.get()).key('b',
+            Items.WATER_BUCKET).addCriterion("has_steel_wall_ladder", this.hasItem(ECBlockRegistry.STEEL_WALL_LADDER.get())).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_RUNGS.get(), 8).patternLine("r r").patternLine(" r ").key('r', BaseTags.ForgeItems.RODS_STEEL).addCriterion("has_steel_rod",
+            this.hasItem(BaseTags.ForgeItems.RODS_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RUSTY_RUNGS.get(), 8).patternLine("lll").patternLine("lbl").patternLine("lll").key('l', ECBlockRegistry.STEEL_RUNGS.get()).key('b',
+            Items.WATER_BUCKET).addCriterion("has_steel_rungs", this.hasItem(ECBlockRegistry.STEEL_RUNGS.get())).build(consumer);
 
         // Wallpapers
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get(), 3).patternLine("  s").patternLine("lps").patternLine("  s").key('s', Blocks.STONE).key('l', Tags.Items.DYES_LIGHT_BLUE).key(

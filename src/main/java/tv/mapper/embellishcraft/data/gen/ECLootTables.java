@@ -774,6 +774,44 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get()));
         lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
 
+        // Metal blocks
+        lootTables.put(ECBlockRegistry.DARK_METAL_FLOOR.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_METAL_FLOOR.get()));
+        lootTables.put(ECBlockRegistry.DARK_METAL_FLOOR_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.DARK_METAL_FLOOR_SLAB.get()));
+        lootTables.put(ECBlockRegistry.DARK_METAL_FLOOR_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_METAL_FLOOR_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.DARK_METAL_FLOOR_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_METAL_FLOOR_WALL.get()));
+        lootTables.put(ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.LIGHT_METAL_FLOOR.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_METAL_FLOOR.get()));
+        lootTables.put(ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB.get()));
+        lootTables.put(ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.LIGHT_METAL_FLOOR_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_METAL_FLOOR_WALL.get()));
+        lootTables.put(ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.RUSTY_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RUSTY_PLATE.get()));
+        lootTables.put(ECBlockRegistry.RUSTY_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.RUSTY_PLATE_SLAB.get()));
+        lootTables.put(ECBlockRegistry.RUSTY_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RUSTY_PLATE_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.RUSTY_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RUSTY_PLATE_WALL.get()));
+        lootTables.put(ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.IRON_BEAM.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.IRON_BEAM.get()));
+        lootTables.put(ECBlockRegistry.BOLTED_IRON_BEAM.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BOLTED_IRON_BEAM.get()));
+        lootTables.put(ECBlockRegistry.IRON_BEAM_JUNCTION.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.IRON_BEAM_JUNCTION.get()));
+        lootTables.put(ECBlockRegistry.STEEL_BEAM.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_BEAM.get()));
+        lootTables.put(ECBlockRegistry.BOLTED_STEEL_BEAM.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BOLTED_STEEL_BEAM.get()));
+        lootTables.put(ECBlockRegistry.STEEL_BEAM_JUNCTION.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_BEAM_JUNCTION.get()));
+
+        lootTables.put(ECBlockRegistry.AIR_DUCT.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.AIR_DUCT.get()));
+        lootTables.put(ECBlockRegistry.VENT_AIR_DUCT.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.VENT_AIR_DUCT.get()));
+        lootTables.put(ECBlockRegistry.GRID_AIR_DUCT.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GRID_AIR_DUCT.get()));
+
+        lootTables.put(ECBlockRegistry.BULKHEAD.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BULKHEAD.get()));
+        lootTables.put(ECBlockRegistry.BULKHEAD_TOP.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BULKHEAD_TOP.get()));
+
+        lootTables.put(ECBlockRegistry.STEEL_WALL_LADDER.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_WALL_LADDER.get()));
+        lootTables.put(ECBlockRegistry.RUSTY_WALL_LADDER.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RUSTY_WALL_LADDER.get()));
+        lootTables.put(ECBlockRegistry.STEEL_RUNGS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_RUNGS.get()));
+        lootTables.put(ECBlockRegistry.RUSTY_RUNGS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RUSTY_RUNGS.get()));
+
         // Wallpapers
         lootTables.put(ECBlockRegistry.WHITE_BLUE_WALLPAPER.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_BLUE_WALLPAPER.get()));
         lootTables.put(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get()));
@@ -789,7 +827,7 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get()));
         lootTables.put(ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get()));
         lootTables.put(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get()));
-        
+
         lootTables.put(ECBlockRegistry.PINK_WALLPAPER.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PINK_WALLPAPER.get()));
         lootTables.put(ECBlockRegistry.PINK_WALLPAPER_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.PINK_WALLPAPER_SLAB.get()));
         lootTables.put(ECBlockRegistry.PINK_WALLPAPER_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PINK_WALLPAPER_STAIRS.get()));

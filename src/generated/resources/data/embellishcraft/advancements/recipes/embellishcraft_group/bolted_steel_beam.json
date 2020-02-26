@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:bolted_steel_beam"
+    ]
+  },
+  "criteria": {
+    "has_steel_beam": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:steel_beam"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:bolted_steel_beam"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_beam",
+      "has_the_recipe"
+    ]
+  ]
+}

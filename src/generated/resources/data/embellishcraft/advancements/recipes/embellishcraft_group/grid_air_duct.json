@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:grid_air_duct"
+    ]
+  },
+  "criteria": {
+    "has_vent_air_duct": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:vent_air_duct"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:grid_air_duct"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_vent_air_duct",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "side": "embellishcraft:block/rusty_plate",
+    "bottom": "embellishcraft:block/rusty_plate",
+    "top": "embellishcraft:block/rusty_plate"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:light_metal_floor_stairs"
+    ]
+  },
+  "criteria": {
+    "has_light_metal_floor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:light_metal_floor"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:light_metal_floor_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_light_metal_floor",
+      "has_the_recipe"
+    ]
+  ]
+}

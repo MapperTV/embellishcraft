@@ -4,6 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
+import tv.mapper.mapperbase.MapperBase;
 
 public class ECBlockModels extends BlockModelProvider
 {
@@ -134,6 +135,28 @@ public class ECBlockModels extends BlockModelProvider
         buildPressure("red_corrugated_metal_plate", modLoc("block/red_corrugated_metal_plate"));
         buildPressure("white_corrugated_metal_plate", modLoc("block/white_corrugated_metal_plate"));
         buildPressure("yellow_corrugated_metal_plate", modLoc("block/yellow_corrugated_metal_plate"));
+
+        // Metal blocks
+        buildWall("dark_metal_floor", modLoc("block/dark_metal_floor"));
+        buildWall("light_metal_floor", modLoc("block/light_metal_floor"));
+        buildWall("rusty_plate", modLoc("block/rusty_plate"));
+
+        buildPressure("dark_metal_floor", modLoc("block/dark_metal_floor"));
+        buildPressure("light_metal_floor", modLoc("block/light_metal_floor"));
+        buildPressure("rusty_plate", modLoc("block/rusty_plate"));
+
+        orientableVertical("vent_air_duct", modLoc("block/air_duct"), modLoc("block/vent_air_duct"));
+        orientableVertical("grid_air_duct", modLoc("block/air_duct"), modLoc("block/grid_air_duct"));
+
+        cubeColumn("bulkhead", modLoc("block/bulkhead"), new ResourceLocation(MapperBase.MODID, "block/concrete"));
+        cubeColumn("bulkhead_top", modLoc("block/bulkhead_top"), new ResourceLocation(MapperBase.MODID, "block/concrete"));
+
+        getBuilder("steel_wall_ladder").parent(getExistingFile(modLoc("block/wall_ladder"))).texture("material", new ResourceLocation(MapperBase.MODID, "block/steel_block")).texture("particle",
+            new ResourceLocation(MapperBase.MODID, "block/steel_block"));
+        getBuilder("rusty_wall_ladder").parent(getExistingFile(modLoc("block/wall_ladder"))).texture("material", modLoc("block/rust")).texture("particle", modLoc("block/rust"));
+        getBuilder("steel_rungs").parent(getExistingFile(modLoc("block/rungs"))).texture("material", new ResourceLocation(MapperBase.MODID, "block/steel_block")).texture("particle",
+            new ResourceLocation(MapperBase.MODID, "block/steel_block"));
+        getBuilder("rusty_rungs").parent(getExistingFile(modLoc("block/rungs"))).texture("material", modLoc("block/rust")).texture("particle", modLoc("block/rust"));
 
         // Wallpaper
         buildWallpaper("white_blue_wallpaper", modLoc("block/white_blue_wallpaper"), modLoc("block/side_wallpaper"), modLoc("block/white_blue_wallpaper_plinth"));

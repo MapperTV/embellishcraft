@@ -308,6 +308,34 @@ public class ECBlockStates extends BaseBlockStates
         registerStoneVariant("yellow_grey_tiles", ECBlockRegistry.YELLOW_GREY_TILES.get(), ECBlockRegistry.YELLOW_GREY_TILES_SLAB.get(), ECBlockRegistry.YELLOW_GREY_TILES_STAIRS.get(),
             ECBlockRegistry.YELLOW_GREY_TILES_WALL.get(), ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get(), null);
 
+        // Metal blocks
+        registerStoneVariant("dark_metal_floor", ECBlockRegistry.DARK_METAL_FLOOR.get(), ECBlockRegistry.DARK_METAL_FLOOR_SLAB.get(), ECBlockRegistry.DARK_METAL_FLOOR_STAIRS.get(),
+            ECBlockRegistry.DARK_METAL_FLOOR_WALL.get(), ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("light_metal_floor", ECBlockRegistry.LIGHT_METAL_FLOOR.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS.get(),
+            ECBlockRegistry.LIGHT_METAL_FLOOR_WALL.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("rusty_plate", ECBlockRegistry.RUSTY_PLATE.get(), ECBlockRegistry.RUSTY_PLATE_SLAB.get(), ECBlockRegistry.RUSTY_PLATE_STAIRS.get(),
+            ECBlockRegistry.RUSTY_PLATE_WALL.get(), ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE.get(), null);
+
+        axisBlock(ECBlockRegistry.IRON_BEAM.get(), modLoc("block/iron_beam"), modLoc("block/iron_beam_junction"));
+        axisBlock(ECBlockRegistry.BOLTED_IRON_BEAM.get(), modLoc("block/bolted_iron_beam"), modLoc("block/iron_beam_junction"));
+        simpleBlock(ECBlockRegistry.IRON_BEAM_JUNCTION.get());
+
+        axisBlock(ECBlockRegistry.STEEL_BEAM.get(), modLoc("block/steel_beam"), modLoc("block/steel_beam_junction"));
+        axisBlock(ECBlockRegistry.BOLTED_STEEL_BEAM.get(), modLoc("block/bolted_steel_beam"), modLoc("block/steel_beam_junction"));
+        simpleBlock(ECBlockRegistry.STEEL_BEAM_JUNCTION.get());
+
+        simpleBlock(ECBlockRegistry.AIR_DUCT.get());
+        directionalBlock(ECBlockRegistry.VENT_AIR_DUCT.get(), new UncheckedModelFile(ECConstants.MODID + ":block/vent_air_duct"));
+        directionalBlock(ECBlockRegistry.GRID_AIR_DUCT.get(), new UncheckedModelFile(ECConstants.MODID + ":block/grid_air_duct"));
+
+        simpleBlock(ECBlockRegistry.BULKHEAD.get());
+        simpleBlock(ECBlockRegistry.BULKHEAD_TOP.get());
+
+        horizontalBlock(ECBlockRegistry.STEEL_WALL_LADDER.get(), new UncheckedModelFile(ECConstants.MODID + ":block/steel_wall_ladder"), 0);
+        horizontalBlock(ECBlockRegistry.RUSTY_WALL_LADDER.get(), new UncheckedModelFile(ECConstants.MODID + ":block/rusty_wall_ladder"), 0);
+        horizontalBlock(ECBlockRegistry.STEEL_RUNGS.get(), new UncheckedModelFile(ECConstants.MODID + ":block/steel_rungs"));
+        horizontalBlock(ECBlockRegistry.RUSTY_RUNGS.get(), new UncheckedModelFile(ECConstants.MODID + ":block/rusty_rungs"));
+
         // Corrugated metal plates
         registerStoneVariant("black_corrugated_metal_plate", ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get(), ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB.get(),
             ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_STAIRS.get(), ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_WALL.get(), ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), null);

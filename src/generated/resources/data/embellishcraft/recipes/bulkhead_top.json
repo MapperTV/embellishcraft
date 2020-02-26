@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "c",
+    "i"
+  ],
+  "key": {
+    "c": {
+      "tag": "mapperbase:concrete"
+    },
+    "i": {
+      "item": "embellishcraft:bulkhead"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:bulkhead_top",
+    "count": 2
+  }
+}
