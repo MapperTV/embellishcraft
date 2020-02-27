@@ -19,6 +19,7 @@ import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.TableBlock;
+import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.gen.BaseBlockStates;
 
 public class ECBlockStates extends BaseBlockStates
@@ -47,119 +48,180 @@ public class ECBlockStates extends BaseBlockStates
     @Override
     protected void registerStatesAndModels()
     {
-        // Basalt
-        registerStoneVariant("basalt", ECBlockRegistry.BASALT.get(), ECBlockRegistry.BASALT_SLAB.get(), ECBlockRegistry.BASALT_STAIRS.get(), ECBlockRegistry.BASALT_WALL.get(),
-            ECBlockRegistry.BASALT_PRESSURE_PLATE.get(), ECBlockRegistry.BASALT_BUTTON.get());
-        registerStoneVariant("basalt_cobblestone", ECBlockRegistry.BASALT_COBBLESTONE.get(), ECBlockRegistry.BASALT_COBBLESTONE_SLAB.get(), ECBlockRegistry.BASALT_COBBLESTONE_STAIRS.get(),
-            ECBlockRegistry.BASALT_COBBLESTONE_WALL.get(), ECBlockRegistry.BASALT_COBBLESTONE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("smooth_basalt", ECBlockRegistry.SMOOTH_BASALT.get(), ECBlockRegistry.SMOOTH_BASALT_SLAB.get(), ECBlockRegistry.SMOOTH_BASALT_STAIRS.get(), ECBlockRegistry.SMOOTH_BASALT_WALL.get(),
-            ECBlockRegistry.SMOOTH_BASALT_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("polished_basalt", ECBlockRegistry.POLISHED_BASALT.get(), ECBlockRegistry.POLISHED_BASALT_SLAB.get(), ECBlockRegistry.POLISHED_BASALT_STAIRS.get(),
-            ECBlockRegistry.POLISHED_BASALT_WALL.get(), ECBlockRegistry.POLISHED_BASALT_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("basalt_paving", ECBlockRegistry.BASALT_PAVING.get(), ECBlockRegistry.BASALT_PAVING_SLAB.get(), ECBlockRegistry.BASALT_PAVING_STAIRS.get(), ECBlockRegistry.BASALT_PAVING_WALL.get(),
-            ECBlockRegistry.BASALT_PAVING_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("basalt_tiles", ECBlockRegistry.BASALT_TILES.get(), ECBlockRegistry.BASALT_TILES_SLAB.get(), ECBlockRegistry.BASALT_TILES_STAIRS.get(), ECBlockRegistry.BASALT_TILES_WALL.get(),
-            ECBlockRegistry.BASALT_TILES_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("basalt_bricks", ECBlockRegistry.BASALT_BRICKS.get(), ECBlockRegistry.BASALT_BRICKS_SLAB.get(), ECBlockRegistry.BASALT_BRICKS_STAIRS.get(), ECBlockRegistry.BASALT_BRICKS_WALL.get(),
-            ECBlockRegistry.BASALT_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("basalt_large_bricks", ECBlockRegistry.BASALT_LARGE_BRICKS.get(), ECBlockRegistry.BASALT_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.BASALT_LARGE_BRICKS_STAIRS.get(),
-            ECBlockRegistry.BASALT_LARGE_BRICKS_WALL.get(), ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("basalt_ornament", ECBlockRegistry.BASALT_ORNAMENT.get(), null, null, null, ECBlockRegistry.BASALT_ORNAMENT_PRESSURE_PLATE.get(), null);
+        // Rocks
+        for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
+        {
+            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_SLABS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-        // Slate
-        registerStoneVariant("slate", ECBlockRegistry.SLATE.get(), ECBlockRegistry.SLATE_SLAB.get(), ECBlockRegistry.SLATE_STAIRS.get(), ECBlockRegistry.SLATE_WALL.get(),
-            ECBlockRegistry.SLATE_PRESSURE_PLATE.get(), ECBlockRegistry.SLATE_BUTTON.get());
-        registerStoneVariant("slate_cobblestone", ECBlockRegistry.SLATE_COBBLESTONE.get(), ECBlockRegistry.SLATE_COBBLESTONE_SLAB.get(), ECBlockRegistry.SLATE_COBBLESTONE_STAIRS.get(),
-            ECBlockRegistry.SLATE_COBBLESTONE_WALL.get(), ECBlockRegistry.SLATE_COBBLESTONE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("smooth_slate", ECBlockRegistry.SMOOTH_SLATE.get(), ECBlockRegistry.SMOOTH_SLATE_SLAB.get(), ECBlockRegistry.SMOOTH_SLATE_STAIRS.get(), ECBlockRegistry.SMOOTH_SLATE_WALL.get(),
-            ECBlockRegistry.SMOOTH_SLATE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("polished_slate", ECBlockRegistry.POLISHED_SLATE.get(), ECBlockRegistry.POLISHED_SLATE_SLAB.get(), ECBlockRegistry.POLISHED_SLATE_STAIRS.get(),
-            ECBlockRegistry.POLISHED_SLATE_WALL.get(), ECBlockRegistry.POLISHED_SLATE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("slate_paving", ECBlockRegistry.SLATE_PAVING.get(), ECBlockRegistry.SLATE_PAVING_SLAB.get(), ECBlockRegistry.SLATE_PAVING_STAIRS.get(), ECBlockRegistry.SLATE_PAVING_WALL.get(),
-            ECBlockRegistry.SLATE_PAVING_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("slate_tiles", ECBlockRegistry.SLATE_TILES.get(), ECBlockRegistry.SLATE_TILES_SLAB.get(), ECBlockRegistry.SLATE_TILES_STAIRS.get(), ECBlockRegistry.SLATE_TILES_WALL.get(),
-            ECBlockRegistry.SLATE_TILES_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("slate_bricks", ECBlockRegistry.SLATE_BRICKS.get(), ECBlockRegistry.SLATE_BRICKS_SLAB.get(), ECBlockRegistry.SLATE_BRICKS_STAIRS.get(), ECBlockRegistry.SLATE_BRICKS_WALL.get(),
-            ECBlockRegistry.SLATE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("slate_large_bricks", ECBlockRegistry.SLATE_LARGE_BRICKS.get(), ECBlockRegistry.SLATE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.SLATE_LARGE_BRICKS_STAIRS.get(),
-            ECBlockRegistry.SLATE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.SLATE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("slate_ornament", ECBlockRegistry.SLATE_ORNAMENT.get(), null, null, null, ECBlockRegistry.SLATE_ORNAMENT_PRESSURE_PLATE.get(), null);
+            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_SLABS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_COBBLESTONE_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_WALLS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-        // Marble
-        registerStoneVariant("marble", ECBlockRegistry.MARBLE.get(), ECBlockRegistry.MARBLE_SLAB.get(), ECBlockRegistry.MARBLE_STAIRS.get(), ECBlockRegistry.MARBLE_WALL.get(),
-            ECBlockRegistry.MARBLE_PRESSURE_PLATE.get(), ECBlockRegistry.MARBLE_BUTTON.get());
-        registerStoneVariant("marble_cobblestone", ECBlockRegistry.MARBLE_COBBLESTONE.get(), ECBlockRegistry.MARBLE_COBBLESTONE_SLAB.get(), ECBlockRegistry.MARBLE_COBBLESTONE_STAIRS.get(),
-            ECBlockRegistry.MARBLE_COBBLESTONE_WALL.get(), ECBlockRegistry.MARBLE_COBBLESTONE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("smooth_marble", ECBlockRegistry.SMOOTH_MARBLE.get(), ECBlockRegistry.SMOOTH_MARBLE_SLAB.get(), ECBlockRegistry.SMOOTH_MARBLE_STAIRS.get(), ECBlockRegistry.SMOOTH_MARBLE_WALL.get(),
-            ECBlockRegistry.SMOOTH_MARBLE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("polished_marble", ECBlockRegistry.POLISHED_MARBLE.get(), ECBlockRegistry.POLISHED_MARBLE_SLAB.get(), ECBlockRegistry.POLISHED_MARBLE_STAIRS.get(),
-            ECBlockRegistry.POLISHED_MARBLE_WALL.get(), ECBlockRegistry.POLISHED_MARBLE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("marble_paving", ECBlockRegistry.MARBLE_PAVING.get(), ECBlockRegistry.MARBLE_PAVING_SLAB.get(), ECBlockRegistry.MARBLE_PAVING_STAIRS.get(), ECBlockRegistry.MARBLE_PAVING_WALL.get(),
-            ECBlockRegistry.MARBLE_PAVING_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("marble_tiles", ECBlockRegistry.MARBLE_TILES.get(), ECBlockRegistry.MARBLE_TILES_SLAB.get(), ECBlockRegistry.MARBLE_TILES_STAIRS.get(), ECBlockRegistry.MARBLE_TILES_WALL.get(),
-            ECBlockRegistry.MARBLE_TILES_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("marble_bricks", ECBlockRegistry.MARBLE_BRICKS.get(), ECBlockRegistry.MARBLE_BRICKS_SLAB.get(), ECBlockRegistry.MARBLE_BRICKS_STAIRS.get(), ECBlockRegistry.MARBLE_BRICKS_WALL.get(),
-            ECBlockRegistry.MARBLE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("marble_large_bricks", ECBlockRegistry.MARBLE_LARGE_BRICKS.get(), ECBlockRegistry.MARBLE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.MARBLE_LARGE_BRICKS_STAIRS.get(),
-            ECBlockRegistry.MARBLE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.MARBLE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("marble_ornament", ECBlockRegistry.MARBLE_ORNAMENT.get(), null, null, null, ECBlockRegistry.MARBLE_ORNAMENT_PRESSURE_PLATE.get(), null);
+            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.SMOOTH_ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_WALLS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.SMOOTH_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-        // Gneiss
-        registerStoneVariant("gneiss", ECBlockRegistry.GNEISS.get(), ECBlockRegistry.GNEISS_SLAB.get(), ECBlockRegistry.GNEISS_STAIRS.get(), ECBlockRegistry.GNEISS_WALL.get(),
-            ECBlockRegistry.GNEISS_PRESSURE_PLATE.get(), ECBlockRegistry.GNEISS_BUTTON.get());
-        registerStoneVariant("gneiss_cobblestone", ECBlockRegistry.GNEISS_COBBLESTONE.get(), ECBlockRegistry.GNEISS_COBBLESTONE_SLAB.get(), ECBlockRegistry.GNEISS_COBBLESTONE_STAIRS.get(),
-            ECBlockRegistry.GNEISS_COBBLESTONE_WALL.get(), ECBlockRegistry.GNEISS_COBBLESTONE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("smooth_gneiss", ECBlockRegistry.SMOOTH_GNEISS.get(), ECBlockRegistry.SMOOTH_GNEISS_SLAB.get(), ECBlockRegistry.SMOOTH_GNEISS_STAIRS.get(), ECBlockRegistry.SMOOTH_GNEISS_WALL.get(),
-            ECBlockRegistry.SMOOTH_GNEISS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("polished_gneiss", ECBlockRegistry.POLISHED_GNEISS.get(), ECBlockRegistry.POLISHED_GNEISS_SLAB.get(), ECBlockRegistry.POLISHED_GNEISS_STAIRS.get(),
-            ECBlockRegistry.POLISHED_GNEISS_WALL.get(), ECBlockRegistry.POLISHED_GNEISS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("gneiss_paving", ECBlockRegistry.GNEISS_PAVING.get(), ECBlockRegistry.GNEISS_PAVING_SLAB.get(), ECBlockRegistry.GNEISS_PAVING_STAIRS.get(), ECBlockRegistry.GNEISS_PAVING_WALL.get(),
-            ECBlockRegistry.GNEISS_PAVING_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("gneiss_tiles", ECBlockRegistry.GNEISS_TILES.get(), ECBlockRegistry.GNEISS_TILES_SLAB.get(), ECBlockRegistry.GNEISS_TILES_STAIRS.get(), ECBlockRegistry.GNEISS_TILES_WALL.get(),
-            ECBlockRegistry.GNEISS_TILES_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("gneiss_bricks", ECBlockRegistry.GNEISS_BRICKS.get(), ECBlockRegistry.GNEISS_BRICKS_SLAB.get(), ECBlockRegistry.GNEISS_BRICKS_STAIRS.get(), ECBlockRegistry.GNEISS_BRICKS_WALL.get(),
-            ECBlockRegistry.GNEISS_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("gneiss_large_bricks", ECBlockRegistry.GNEISS_LARGE_BRICKS.get(), ECBlockRegistry.GNEISS_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.GNEISS_LARGE_BRICKS_STAIRS.get(),
-            ECBlockRegistry.GNEISS_LARGE_BRICKS_WALL.get(), ECBlockRegistry.GNEISS_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("gneiss_ornament", ECBlockRegistry.GNEISS_ORNAMENT.get(), null, null, null, ECBlockRegistry.GNEISS_ORNAMENT_PRESSURE_PLATE.get(), null);
+            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.POLISHED_ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.POLISHED_ROCK_WALLS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.POLISHED_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-        // Jade
-        registerStoneVariant("jade", ECBlockRegistry.JADE.get(), ECBlockRegistry.JADE_SLAB.get(), ECBlockRegistry.JADE_STAIRS.get(), ECBlockRegistry.JADE_WALL.get(), ECBlockRegistry.JADE_PRESSURE_PLATE.get(),
-            ECBlockRegistry.JADE_BUTTON.get());
-        registerStoneVariant("jade_cobblestone", ECBlockRegistry.JADE_COBBLESTONE.get(), ECBlockRegistry.JADE_COBBLESTONE_SLAB.get(), ECBlockRegistry.JADE_COBBLESTONE_STAIRS.get(),
-            ECBlockRegistry.JADE_COBBLESTONE_WALL.get(), ECBlockRegistry.JADE_COBBLESTONE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("smooth_jade", ECBlockRegistry.SMOOTH_JADE.get(), ECBlockRegistry.SMOOTH_JADE_SLAB.get(), ECBlockRegistry.SMOOTH_JADE_STAIRS.get(), ECBlockRegistry.SMOOTH_JADE_WALL.get(),
-            ECBlockRegistry.SMOOTH_JADE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("polished_jade", ECBlockRegistry.POLISHED_JADE.get(), ECBlockRegistry.POLISHED_JADE_SLAB.get(), ECBlockRegistry.POLISHED_JADE_STAIRS.get(), ECBlockRegistry.POLISHED_JADE_WALL.get(),
-            ECBlockRegistry.POLISHED_JADE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("jade_paving", ECBlockRegistry.JADE_PAVING.get(), ECBlockRegistry.JADE_PAVING_SLAB.get(), ECBlockRegistry.JADE_PAVING_STAIRS.get(), ECBlockRegistry.JADE_PAVING_WALL.get(),
-            ECBlockRegistry.JADE_PAVING_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("jade_tiles", ECBlockRegistry.JADE_TILES.get(), ECBlockRegistry.JADE_TILES_SLAB.get(), ECBlockRegistry.JADE_TILES_STAIRS.get(), ECBlockRegistry.JADE_TILES_WALL.get(),
-            ECBlockRegistry.JADE_TILES_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("jade_bricks", ECBlockRegistry.JADE_BRICKS.get(), ECBlockRegistry.JADE_BRICKS_SLAB.get(), ECBlockRegistry.JADE_BRICKS_STAIRS.get(), ECBlockRegistry.JADE_BRICKS_WALL.get(),
-            ECBlockRegistry.JADE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("jade_large_bricks", ECBlockRegistry.JADE_LARGE_BRICKS.get(), ECBlockRegistry.JADE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.JADE_LARGE_BRICKS_STAIRS.get(),
-            ECBlockRegistry.JADE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.JADE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("jade_ornament", ECBlockRegistry.JADE_ORNAMENT.get(), null, null, null, ECBlockRegistry.JADE_ORNAMENT_PRESSURE_PLATE.get(), null);
+            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.ROCK_PAVINGS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_SLABS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_PAVING_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_WALLS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_PAVING_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-        // Larvikite
-        registerStoneVariant("larvikite", ECBlockRegistry.LARVIKITE.get(), ECBlockRegistry.LARVIKITE_SLAB.get(), ECBlockRegistry.LARVIKITE_STAIRS.get(), ECBlockRegistry.LARVIKITE_WALL.get(),
-            ECBlockRegistry.LARVIKITE_PRESSURE_PLATE.get(), ECBlockRegistry.LARVIKITE_BUTTON.get());
-        registerStoneVariant("larvikite_cobblestone", ECBlockRegistry.LARVIKITE_COBBLESTONE.get(), ECBlockRegistry.LARVIKITE_COBBLESTONE_SLAB.get(), ECBlockRegistry.LARVIKITE_COBBLESTONE_STAIRS.get(),
-            ECBlockRegistry.LARVIKITE_COBBLESTONE_WALL.get(), ECBlockRegistry.LARVIKITE_COBBLESTONE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("smooth_larvikite", ECBlockRegistry.SMOOTH_LARVIKITE.get(), ECBlockRegistry.SMOOTH_LARVIKITE_SLAB.get(), ECBlockRegistry.SMOOTH_LARVIKITE_STAIRS.get(),
-            ECBlockRegistry.SMOOTH_LARVIKITE_WALL.get(), ECBlockRegistry.SMOOTH_LARVIKITE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("polished_larvikite", ECBlockRegistry.POLISHED_LARVIKITE.get(), ECBlockRegistry.POLISHED_LARVIKITE_SLAB.get(), ECBlockRegistry.POLISHED_LARVIKITE_STAIRS.get(),
-            ECBlockRegistry.POLISHED_LARVIKITE_WALL.get(), ECBlockRegistry.POLISHED_LARVIKITE_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("larvikite_paving", ECBlockRegistry.LARVIKITE_PAVING.get(), ECBlockRegistry.LARVIKITE_PAVING_SLAB.get(), ECBlockRegistry.LARVIKITE_PAVING_STAIRS.get(),
-            ECBlockRegistry.LARVIKITE_PAVING_WALL.get(), ECBlockRegistry.LARVIKITE_PAVING_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("larvikite_tiles", ECBlockRegistry.LARVIKITE_TILES.get(), ECBlockRegistry.LARVIKITE_TILES_SLAB.get(), ECBlockRegistry.LARVIKITE_TILES_STAIRS.get(),
-            ECBlockRegistry.LARVIKITE_TILES_WALL.get(), ECBlockRegistry.LARVIKITE_TILES_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("larvikite_bricks", ECBlockRegistry.LARVIKITE_BRICKS.get(), ECBlockRegistry.LARVIKITE_BRICKS_SLAB.get(), ECBlockRegistry.LARVIKITE_BRICKS_STAIRS.get(),
-            ECBlockRegistry.LARVIKITE_BRICKS_WALL.get(), ECBlockRegistry.LARVIKITE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("larvikite_large_bricks", ECBlockRegistry.LARVIKITE_LARGE_BRICKS.get(), ECBlockRegistry.LARVIKITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.LARVIKITE_LARGE_BRICKS_STAIRS.get(),
-            ECBlockRegistry.LARVIKITE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("larvikite_ornament", ECBlockRegistry.LARVIKITE_ORNAMENT.get(), null, null, null, ECBlockRegistry.LARVIKITE_ORNAMENT_PRESSURE_PLATE.get(), null);
+            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.ROCK_TILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_TILES_SLABS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_TILES_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_TILES_WALLS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_TILES_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+
+            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.ROCK_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BRICKS_SLABS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_BRICKS_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BRICKS_WALLS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+
+            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_SLABS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_LARGE_BRICKS_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_WALLS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+
+            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), null, null, null,
+                ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+        }
+
+        // // Basalt
+        // registerStoneVariant("basalt", ECBlockRegistry.BASALT.get(), ECBlockRegistry.BASALT_SLAB.get(), ECBlockRegistry.BASALT_STAIRS.get(), ECBlockRegistry.BASALT_WALL.get(),
+        // ECBlockRegistry.BASALT_PRESSURE_PLATE.get(), ECBlockRegistry.BASALT_BUTTON.get());
+        // registerStoneVariant("basalt_cobblestone", ECBlockRegistry.BASALT_COBBLESTONE.get(), ECBlockRegistry.BASALT_COBBLESTONE_SLAB.get(), ECBlockRegistry.BASALT_COBBLESTONE_STAIRS.get(),
+        // ECBlockRegistry.BASALT_COBBLESTONE_WALL.get(), ECBlockRegistry.BASALT_COBBLESTONE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("smooth_basalt", ECBlockRegistry.SMOOTH_BASALT.get(), ECBlockRegistry.SMOOTH_BASALT_SLAB.get(), ECBlockRegistry.SMOOTH_BASALT_STAIRS.get(),
+        // ECBlockRegistry.SMOOTH_BASALT_WALL.get(),
+        // ECBlockRegistry.SMOOTH_BASALT_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("polished_basalt", ECBlockRegistry.POLISHED_BASALT.get(), ECBlockRegistry.POLISHED_BASALT_SLAB.get(), ECBlockRegistry.POLISHED_BASALT_STAIRS.get(),
+        // ECBlockRegistry.POLISHED_BASALT_WALL.get(), ECBlockRegistry.POLISHED_BASALT_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("basalt_paving", ECBlockRegistry.BASALT_PAVING.get(), ECBlockRegistry.BASALT_PAVING_SLAB.get(), ECBlockRegistry.BASALT_PAVING_STAIRS.get(),
+        // ECBlockRegistry.BASALT_PAVING_WALL.get(),
+        // ECBlockRegistry.BASALT_PAVING_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("basalt_tiles", ECBlockRegistry.BASALT_TILES.get(), ECBlockRegistry.BASALT_TILES_SLAB.get(), ECBlockRegistry.BASALT_TILES_STAIRS.get(),
+        // ECBlockRegistry.BASALT_TILES_WALL.get(),
+        // ECBlockRegistry.BASALT_TILES_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("basalt_bricks", ECBlockRegistry.BASALT_BRICKS.get(), ECBlockRegistry.BASALT_BRICKS_SLAB.get(), ECBlockRegistry.BASALT_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.BASALT_BRICKS_WALL.get(),
+        // ECBlockRegistry.BASALT_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("basalt_large_bricks", ECBlockRegistry.BASALT_LARGE_BRICKS.get(), ECBlockRegistry.BASALT_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.BASALT_LARGE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.BASALT_LARGE_BRICKS_WALL.get(), ECBlockRegistry.BASALT_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("basalt_ornament", ECBlockRegistry.BASALT_ORNAMENT.get(), null, null, null, ECBlockRegistry.BASALT_ORNAMENT_PRESSURE_PLATE.get(), null);
+        //
+        // // Slate
+        // registerStoneVariant("slate", ECBlockRegistry.SLATE.get(), ECBlockRegistry.SLATE_SLAB.get(), ECBlockRegistry.SLATE_STAIRS.get(), ECBlockRegistry.SLATE_WALL.get(),
+        // ECBlockRegistry.SLATE_PRESSURE_PLATE.get(), ECBlockRegistry.SLATE_BUTTON.get());
+        // registerStoneVariant("slate_cobblestone", ECBlockRegistry.SLATE_COBBLESTONE.get(), ECBlockRegistry.SLATE_COBBLESTONE_SLAB.get(), ECBlockRegistry.SLATE_COBBLESTONE_STAIRS.get(),
+        // ECBlockRegistry.SLATE_COBBLESTONE_WALL.get(), ECBlockRegistry.SLATE_COBBLESTONE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("smooth_slate", ECBlockRegistry.SMOOTH_SLATE.get(), ECBlockRegistry.SMOOTH_SLATE_SLAB.get(), ECBlockRegistry.SMOOTH_SLATE_STAIRS.get(),
+        // ECBlockRegistry.SMOOTH_SLATE_WALL.get(),
+        // ECBlockRegistry.SMOOTH_SLATE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("polished_slate", ECBlockRegistry.POLISHED_SLATE.get(), ECBlockRegistry.POLISHED_SLATE_SLAB.get(), ECBlockRegistry.POLISHED_SLATE_STAIRS.get(),
+        // ECBlockRegistry.POLISHED_SLATE_WALL.get(), ECBlockRegistry.POLISHED_SLATE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("slate_paving", ECBlockRegistry.SLATE_PAVING.get(), ECBlockRegistry.SLATE_PAVING_SLAB.get(), ECBlockRegistry.SLATE_PAVING_STAIRS.get(),
+        // ECBlockRegistry.SLATE_PAVING_WALL.get(),
+        // ECBlockRegistry.SLATE_PAVING_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("slate_tiles", ECBlockRegistry.SLATE_TILES.get(), ECBlockRegistry.SLATE_TILES_SLAB.get(), ECBlockRegistry.SLATE_TILES_STAIRS.get(),
+        // ECBlockRegistry.SLATE_TILES_WALL.get(),
+        // ECBlockRegistry.SLATE_TILES_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("slate_bricks", ECBlockRegistry.SLATE_BRICKS.get(), ECBlockRegistry.SLATE_BRICKS_SLAB.get(), ECBlockRegistry.SLATE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.SLATE_BRICKS_WALL.get(),
+        // ECBlockRegistry.SLATE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("slate_large_bricks", ECBlockRegistry.SLATE_LARGE_BRICKS.get(), ECBlockRegistry.SLATE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.SLATE_LARGE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.SLATE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.SLATE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("slate_ornament", ECBlockRegistry.SLATE_ORNAMENT.get(), null, null, null, ECBlockRegistry.SLATE_ORNAMENT_PRESSURE_PLATE.get(), null);
+        //
+        // // Marble
+        // registerStoneVariant("marble", ECBlockRegistry.MARBLE.get(), ECBlockRegistry.MARBLE_SLAB.get(), ECBlockRegistry.MARBLE_STAIRS.get(), ECBlockRegistry.MARBLE_WALL.get(),
+        // ECBlockRegistry.MARBLE_PRESSURE_PLATE.get(), ECBlockRegistry.MARBLE_BUTTON.get());
+        // registerStoneVariant("marble_cobblestone", ECBlockRegistry.MARBLE_COBBLESTONE.get(), ECBlockRegistry.MARBLE_COBBLESTONE_SLAB.get(), ECBlockRegistry.MARBLE_COBBLESTONE_STAIRS.get(),
+        // ECBlockRegistry.MARBLE_COBBLESTONE_WALL.get(), ECBlockRegistry.MARBLE_COBBLESTONE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("smooth_marble", ECBlockRegistry.SMOOTH_MARBLE.get(), ECBlockRegistry.SMOOTH_MARBLE_SLAB.get(), ECBlockRegistry.SMOOTH_MARBLE_STAIRS.get(),
+        // ECBlockRegistry.SMOOTH_MARBLE_WALL.get(),
+        // ECBlockRegistry.SMOOTH_MARBLE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("polished_marble", ECBlockRegistry.POLISHED_MARBLE.get(), ECBlockRegistry.POLISHED_MARBLE_SLAB.get(), ECBlockRegistry.POLISHED_MARBLE_STAIRS.get(),
+        // ECBlockRegistry.POLISHED_MARBLE_WALL.get(), ECBlockRegistry.POLISHED_MARBLE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("marble_paving", ECBlockRegistry.MARBLE_PAVING.get(), ECBlockRegistry.MARBLE_PAVING_SLAB.get(), ECBlockRegistry.MARBLE_PAVING_STAIRS.get(),
+        // ECBlockRegistry.MARBLE_PAVING_WALL.get(),
+        // ECBlockRegistry.MARBLE_PAVING_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("marble_tiles", ECBlockRegistry.MARBLE_TILES.get(), ECBlockRegistry.MARBLE_TILES_SLAB.get(), ECBlockRegistry.MARBLE_TILES_STAIRS.get(),
+        // ECBlockRegistry.MARBLE_TILES_WALL.get(),
+        // ECBlockRegistry.MARBLE_TILES_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("marble_bricks", ECBlockRegistry.MARBLE_BRICKS.get(), ECBlockRegistry.MARBLE_BRICKS_SLAB.get(), ECBlockRegistry.MARBLE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.MARBLE_BRICKS_WALL.get(),
+        // ECBlockRegistry.MARBLE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("marble_large_bricks", ECBlockRegistry.MARBLE_LARGE_BRICKS.get(), ECBlockRegistry.MARBLE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.MARBLE_LARGE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.MARBLE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.MARBLE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("marble_ornament", ECBlockRegistry.MARBLE_ORNAMENT.get(), null, null, null, ECBlockRegistry.MARBLE_ORNAMENT_PRESSURE_PLATE.get(), null);
+        //
+        // // Gneiss
+        // registerStoneVariant("gneiss", ECBlockRegistry.GNEISS.get(), ECBlockRegistry.GNEISS_SLAB.get(), ECBlockRegistry.GNEISS_STAIRS.get(), ECBlockRegistry.GNEISS_WALL.get(),
+        // ECBlockRegistry.GNEISS_PRESSURE_PLATE.get(), ECBlockRegistry.GNEISS_BUTTON.get());
+        // registerStoneVariant("gneiss_cobblestone", ECBlockRegistry.GNEISS_COBBLESTONE.get(), ECBlockRegistry.GNEISS_COBBLESTONE_SLAB.get(), ECBlockRegistry.GNEISS_COBBLESTONE_STAIRS.get(),
+        // ECBlockRegistry.GNEISS_COBBLESTONE_WALL.get(), ECBlockRegistry.GNEISS_COBBLESTONE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("smooth_gneiss", ECBlockRegistry.SMOOTH_GNEISS.get(), ECBlockRegistry.SMOOTH_GNEISS_SLAB.get(), ECBlockRegistry.SMOOTH_GNEISS_STAIRS.get(),
+        // ECBlockRegistry.SMOOTH_GNEISS_WALL.get(),
+        // ECBlockRegistry.SMOOTH_GNEISS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("polished_gneiss", ECBlockRegistry.POLISHED_GNEISS.get(), ECBlockRegistry.POLISHED_GNEISS_SLAB.get(), ECBlockRegistry.POLISHED_GNEISS_STAIRS.get(),
+        // ECBlockRegistry.POLISHED_GNEISS_WALL.get(), ECBlockRegistry.POLISHED_GNEISS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("gneiss_paving", ECBlockRegistry.GNEISS_PAVING.get(), ECBlockRegistry.GNEISS_PAVING_SLAB.get(), ECBlockRegistry.GNEISS_PAVING_STAIRS.get(),
+        // ECBlockRegistry.GNEISS_PAVING_WALL.get(),
+        // ECBlockRegistry.GNEISS_PAVING_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("gneiss_tiles", ECBlockRegistry.GNEISS_TILES.get(), ECBlockRegistry.GNEISS_TILES_SLAB.get(), ECBlockRegistry.GNEISS_TILES_STAIRS.get(),
+        // ECBlockRegistry.GNEISS_TILES_WALL.get(),
+        // ECBlockRegistry.GNEISS_TILES_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("gneiss_bricks", ECBlockRegistry.GNEISS_BRICKS.get(), ECBlockRegistry.GNEISS_BRICKS_SLAB.get(), ECBlockRegistry.GNEISS_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.GNEISS_BRICKS_WALL.get(),
+        // ECBlockRegistry.GNEISS_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("gneiss_large_bricks", ECBlockRegistry.GNEISS_LARGE_BRICKS.get(), ECBlockRegistry.GNEISS_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.GNEISS_LARGE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.GNEISS_LARGE_BRICKS_WALL.get(), ECBlockRegistry.GNEISS_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("gneiss_ornament", ECBlockRegistry.GNEISS_ORNAMENT.get(), null, null, null, ECBlockRegistry.GNEISS_ORNAMENT_PRESSURE_PLATE.get(), null);
+        //
+        // // Jade
+        // registerStoneVariant("jade", ECBlockRegistry.JADE.get(), ECBlockRegistry.JADE_SLAB.get(), ECBlockRegistry.JADE_STAIRS.get(), ECBlockRegistry.JADE_WALL.get(),
+        // ECBlockRegistry.JADE_PRESSURE_PLATE.get(),
+        // ECBlockRegistry.JADE_BUTTON.get());
+        // registerStoneVariant("jade_cobblestone", ECBlockRegistry.JADE_COBBLESTONE.get(), ECBlockRegistry.JADE_COBBLESTONE_SLAB.get(), ECBlockRegistry.JADE_COBBLESTONE_STAIRS.get(),
+        // ECBlockRegistry.JADE_COBBLESTONE_WALL.get(), ECBlockRegistry.JADE_COBBLESTONE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("smooth_jade", ECBlockRegistry.SMOOTH_JADE.get(), ECBlockRegistry.SMOOTH_JADE_SLAB.get(), ECBlockRegistry.SMOOTH_JADE_STAIRS.get(),
+        // ECBlockRegistry.SMOOTH_JADE_WALL.get(),
+        // ECBlockRegistry.SMOOTH_JADE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("polished_jade", ECBlockRegistry.POLISHED_JADE.get(), ECBlockRegistry.POLISHED_JADE_SLAB.get(), ECBlockRegistry.POLISHED_JADE_STAIRS.get(),
+        // ECBlockRegistry.POLISHED_JADE_WALL.get(),
+        // ECBlockRegistry.POLISHED_JADE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("jade_paving", ECBlockRegistry.JADE_PAVING.get(), ECBlockRegistry.JADE_PAVING_SLAB.get(), ECBlockRegistry.JADE_PAVING_STAIRS.get(),
+        // ECBlockRegistry.JADE_PAVING_WALL.get(),
+        // ECBlockRegistry.JADE_PAVING_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("jade_tiles", ECBlockRegistry.JADE_TILES.get(), ECBlockRegistry.JADE_TILES_SLAB.get(), ECBlockRegistry.JADE_TILES_STAIRS.get(), ECBlockRegistry.JADE_TILES_WALL.get(),
+        // ECBlockRegistry.JADE_TILES_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("jade_bricks", ECBlockRegistry.JADE_BRICKS.get(), ECBlockRegistry.JADE_BRICKS_SLAB.get(), ECBlockRegistry.JADE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.JADE_BRICKS_WALL.get(),
+        // ECBlockRegistry.JADE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("jade_large_bricks", ECBlockRegistry.JADE_LARGE_BRICKS.get(), ECBlockRegistry.JADE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.JADE_LARGE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.JADE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.JADE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("jade_ornament", ECBlockRegistry.JADE_ORNAMENT.get(), null, null, null, ECBlockRegistry.JADE_ORNAMENT_PRESSURE_PLATE.get(), null);
+        //
+        // // Larvikite
+        // registerStoneVariant("larvikite", ECBlockRegistry.LARVIKITE.get(), ECBlockRegistry.LARVIKITE_SLAB.get(), ECBlockRegistry.LARVIKITE_STAIRS.get(), ECBlockRegistry.LARVIKITE_WALL.get(),
+        // ECBlockRegistry.LARVIKITE_PRESSURE_PLATE.get(), ECBlockRegistry.LARVIKITE_BUTTON.get());
+        // registerStoneVariant("larvikite_cobblestone", ECBlockRegistry.LARVIKITE_COBBLESTONE.get(), ECBlockRegistry.LARVIKITE_COBBLESTONE_SLAB.get(),
+        // ECBlockRegistry.LARVIKITE_COBBLESTONE_STAIRS.get(),
+        // ECBlockRegistry.LARVIKITE_COBBLESTONE_WALL.get(), ECBlockRegistry.LARVIKITE_COBBLESTONE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("smooth_larvikite", ECBlockRegistry.SMOOTH_LARVIKITE.get(), ECBlockRegistry.SMOOTH_LARVIKITE_SLAB.get(), ECBlockRegistry.SMOOTH_LARVIKITE_STAIRS.get(),
+        // ECBlockRegistry.SMOOTH_LARVIKITE_WALL.get(), ECBlockRegistry.SMOOTH_LARVIKITE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("polished_larvikite", ECBlockRegistry.POLISHED_LARVIKITE.get(), ECBlockRegistry.POLISHED_LARVIKITE_SLAB.get(), ECBlockRegistry.POLISHED_LARVIKITE_STAIRS.get(),
+        // ECBlockRegistry.POLISHED_LARVIKITE_WALL.get(), ECBlockRegistry.POLISHED_LARVIKITE_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("larvikite_paving", ECBlockRegistry.LARVIKITE_PAVING.get(), ECBlockRegistry.LARVIKITE_PAVING_SLAB.get(), ECBlockRegistry.LARVIKITE_PAVING_STAIRS.get(),
+        // ECBlockRegistry.LARVIKITE_PAVING_WALL.get(), ECBlockRegistry.LARVIKITE_PAVING_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("larvikite_tiles", ECBlockRegistry.LARVIKITE_TILES.get(), ECBlockRegistry.LARVIKITE_TILES_SLAB.get(), ECBlockRegistry.LARVIKITE_TILES_STAIRS.get(),
+        // ECBlockRegistry.LARVIKITE_TILES_WALL.get(), ECBlockRegistry.LARVIKITE_TILES_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("larvikite_bricks", ECBlockRegistry.LARVIKITE_BRICKS.get(), ECBlockRegistry.LARVIKITE_BRICKS_SLAB.get(), ECBlockRegistry.LARVIKITE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.LARVIKITE_BRICKS_WALL.get(), ECBlockRegistry.LARVIKITE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("larvikite_large_bricks", ECBlockRegistry.LARVIKITE_LARGE_BRICKS.get(), ECBlockRegistry.LARVIKITE_LARGE_BRICKS_SLAB.get(),
+        // ECBlockRegistry.LARVIKITE_LARGE_BRICKS_STAIRS.get(),
+        // ECBlockRegistry.LARVIKITE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.LARVIKITE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        // registerStoneVariant("larvikite_ornament", ECBlockRegistry.LARVIKITE_ORNAMENT.get(), null, null, null, ECBlockRegistry.LARVIKITE_ORNAMENT_PRESSURE_PLATE.get(), null);
 
         // Andesite
         registerStoneVariant("andesite", null, null, null, null, null, ECBlockRegistry.ANDESITE_BUTTON.get());
