@@ -1,6 +1,9 @@
 package tv.mapper.embellishcraft.data.gen;
 
+import java.util.Arrays;
+
 import net.minecraft.data.DataGenerator;
+import net.minecraft.item.DyeColor;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.mapperbase.data.gen.BaseLootTableProvider;
@@ -678,101 +681,19 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get()));
 
         // Corrugated metal plates
-        lootTables.put(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
-
-        lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE.get()));
-        lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB.get()));
-        lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS.get()));
-        lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL.get()));
-        lootTables.put(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE.get()));
+        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        {
+            lootTables.put(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get(),
+                createStandardTable(ECConstants.MODID, ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get(),
+                createStandardTable(ECConstants.MODID, ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get(),
+                createSlabTable(ECConstants.MODID, ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get(),
+                createStandardTable(ECConstants.MODID, ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get(),
+                createStandardTable(ECConstants.MODID, ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get()));
+        }
 
         // Metal blocks
         lootTables.put(ECBlockRegistry.DARK_METAL_FLOOR.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.DARK_METAL_FLOOR.get()));

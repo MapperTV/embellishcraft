@@ -1,6 +1,11 @@
 package tv.mapper.embellishcraft.data.gen;
 
+import java.util.Arrays;
+
+import org.codehaus.plexus.util.StringUtils;
+
 import net.minecraft.data.DataGenerator;
+import net.minecraft.item.DyeColor;
 import net.minecraftforge.common.data.LanguageProvider;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 
@@ -683,101 +688,21 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE, "Yellow-Grey Tiles Pressure Plate");
 
                 // Corrugated metal plates
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE, "Black Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB, "Black Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_STAIRS, "Black Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_WALL, "Black Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Black Corrugated Metal Plate Pressure Plate");
+                for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+                {
+                    String color = DyeColor.byId(j).getName();
+                    String check[] = color.split("_");
+                    if(check.length > 1)
+                        color = StringUtils.capitalise(check[0]) + " " + StringUtils.capitalise(check[1]);
+                    else
+                        color = StringUtils.capitalise(check[0]);
 
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE, "Blue Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_SLAB, "Blue Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_STAIRS, "Blue Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_WALL, "Blue Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Blue Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE, "Brown Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_SLAB, "Brown Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_STAIRS, "Brown Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_WALL, "Brown Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Brown Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE, "Cyan Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_SLAB, "Cyan Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_STAIRS, "Cyan Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_WALL, "Cyan Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Cyan Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE, "Gray Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_SLAB, "Gray Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_STAIRS, "Gray Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_WALL, "Gray Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Gray Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE, "Green Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_SLAB, "Green Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_STAIRS, "Green Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_WALL, "Green Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Green Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE, "Light Blue Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB, "Light Blue Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS, "Light Blue Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL, "Light Blue Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Light Blue Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE, "Light Gray Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB, "Light Gray Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS, "Light Gray Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL, "Light Gray Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Light Gray Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE, "Lime Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_SLAB, "Lime Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_STAIRS, "Lime Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_WALL, "Lime Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Lime Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE, "Magenta Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_SLAB, "Magenta Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_STAIRS, "Magenta Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_WALL, "Magenta Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Magenta Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE, "Orange Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_SLAB, "Orange Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_STAIRS, "Orange Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_WALL, "Orange Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Orange Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE, "Pink Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_SLAB, "Pink Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_STAIRS, "Pink Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_WALL, "Pink Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Pink Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE, "Purple Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_SLAB, "Purple Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_STAIRS, "Purple Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_WALL, "Purple Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Purple Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE, "Red Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_SLAB, "Red Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_STAIRS, "Red Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_WALL, "Red Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Red Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE, "White Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_SLAB, "White Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_STAIRS, "White Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_WALL, "White Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "White Corrugated Metal Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE, "Yellow Corrugated Metal Plate");
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB, "Yellow Corrugated Metal Plate Slab");
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS, "Yellow Corrugated Metal Plate Stairs");
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL, "Yellow Corrugated Metal Plate Wall");
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Yellow Corrugated Metal Plate Pressure Plate");
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate");
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Slab");
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Stairs");
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Wall");
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Pressure Plate");
+                }
 
                 // Metal blocks
                 addBlock(ECBlockRegistry.DARK_METAL_FLOOR, "Dark Metal Floor");
@@ -1511,101 +1436,16 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage jaune-gris");
 
                 // Corrugated metal plates
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE, "Tôle ondulée noire");
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée noire");
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée noire");
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée noire");
-                addBlock(ECBlockRegistry.BLACK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée noire");
+                String frColors[] = {"blanche", "orange", "magenta", "bleu claire", "jaune", "vert claire", "rose", "grise", "gris claire", "cyan", "violette", "bleue", "marron", "verte", "rouge", "noire"};
 
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE, "Tôle ondulée bleue");
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée bleue");
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée bleue");
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée bleue");
-                addBlock(ECBlockRegistry.BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée bleue");
-
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE, "Tôle ondulée marron");
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée marron");
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée marron");
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée marron");
-                addBlock(ECBlockRegistry.BROWN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée marron");
-
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE, "Tôle ondulée cyan");
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée cyan");
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée cyan");
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée cyan");
-                addBlock(ECBlockRegistry.CYAN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée cyan");
-
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE, "Tôle ondulée grise");
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée grise");
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée grise");
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée grise");
-                addBlock(ECBlockRegistry.GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée grise");
-
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE, "Tôle ondulée verte");
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée verte");
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée verte");
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée verte");
-                addBlock(ECBlockRegistry.GREEN_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée verte");
-
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE, "Tôle ondulée bleue clair");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée bleue clair");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée bleue clair");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée bleue clair");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée bleue clair");
-
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE, "Tôle ondulée grise clair");
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée grise clair");
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée grise clair");
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée grise clair");
-                addBlock(ECBlockRegistry.LIGHT_GRAY_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée grise clair");
-
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE, "Tôle ondulée verte claire");
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée verte claire");
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée verte claire");
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée verte claire");
-                addBlock(ECBlockRegistry.LIME_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée verte claire");
-
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE, "Tôle ondulée magenta");
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée magenta");
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée magenta");
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée magenta");
-                addBlock(ECBlockRegistry.MAGENTA_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée magenta");
-
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE, "Tôle ondulée orange");
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée orange");
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée orange");
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée orange");
-                addBlock(ECBlockRegistry.ORANGE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée orange");
-
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE, "Tôle ondulée rose");
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée rose");
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée rose");
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée rose");
-                addBlock(ECBlockRegistry.PINK_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée rose");
-
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE, "Tôle ondulée violette");
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée violette");
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée violette");
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée violette");
-                addBlock(ECBlockRegistry.PURPLE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée violette");
-
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE, "Tôle ondulée rouge");
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée rouge");
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée rouge");
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée rouge");
-                addBlock(ECBlockRegistry.RED_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée rouge");
-
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE, "Tôle ondulée blanche");
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée blanche");
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée blanche");
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée blanche");
-                addBlock(ECBlockRegistry.WHITE_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée blanche");
-
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE, "Tôle ondulée jaune");
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_SLAB, "Dalle en tôle ondulée jaune");
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_STAIRS, "Escalier en tôle ondulée jaune");
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_WALL, "Muret en tôle ondulée jaune");
-                addBlock(ECBlockRegistry.YELLOW_CORRUGATED_METAL_PLATE_PRESSURE_PLATE, "Plaque de pression en tôle ondulée jaune");
+                for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+                {
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)), "Tôle ondulée " + frColors[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)), "Dalle en tôle ondulée " + frColors[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)), "Escalier en tôle ondulée " + frColors[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), "Muret en tôle ondulée " + frColors[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), "Plaque de pression en tôle ondulée " + frColors[j]);
+                }
 
                 // Metal blocks
                 addBlock(ECBlockRegistry.DARK_METAL_FLOOR, "Sol en métal foncé");
