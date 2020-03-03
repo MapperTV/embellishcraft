@@ -20,73 +20,51 @@ import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.item.FuelBlockItem;
 import tv.mapper.embellishcraft.item.ModItemGroups;
-import tv.mapper.embellishcraft.util.WoodType;
+import tv.mapper.embellishcraft.util.WoodsType;
 import tv.mapper.mapperbase.block.CustomDoorBlock;
 
 @ObjectHolder(ECConstants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
 public class ECBlocks
 {
-    // Metal
-
-    public static final Block IRON_BEAM = null;
-    public static final Block BOLTED_IRON_BEAM = null;
-    public static final Block IRON_BEAM_JUNCTION = null;
-
-    public static final Block STEEL_BEAM = null;
-    public static final Block BOLTED_STEEL_BEAM = null;
-    public static final Block STEEL_BEAM_JUNCTION = null;
-
-    public static final Block AIR_DUCT = null;
-    public static final Block VENT_AIR_DUCT = null;
-    public static final Block GRID_AIR_DUCT = null;
-
-    public static final Block BULKHEAD = null;
-    public static final Block BULKHEAD_TOP = null;
-
-    public static final Block STEEL_WALL_LADDER = null;
-    public static final Block RUSTY_WALL_LADDER = null;
-    public static final Block STEEL_RUNGS = null;
-    public static final Block RUSTY_RUNGS = null;
-
     // Furniture
 
-    public static final Block OAK_CHAIR = null;
-    public static final Block DARK_OAK_CHAIR = null;
-    public static final Block BIRCH_CHAIR = null;
-    public static final Block JUNGLE_CHAIR = null;
-    public static final Block SPRUCE_CHAIR = null;
-    public static final Block ACACIA_CHAIR = null;
+    // public static final Block OAK_CHAIR = null;
+    // public static final Block DARK_OAK_CHAIR = null;
+    // public static final Block BIRCH_CHAIR = null;
+    // public static final Block JUNGLE_CHAIR = null;
+    // public static final Block SPRUCE_CHAIR = null;
+    // public static final Block ACACIA_CHAIR = null;
 
-    public static final Block METALLIC_TERRACE_TABLE = null;
-    public static final Block OAK_TERRACE_TABLE = null;
-    public static final Block BIRCH_TERRACE_TABLE = null;
-    public static final Block SPRUCE_TERRACE_TABLE = null;
-    public static final Block JUNGLE_TERRACE_TABLE = null;
-    public static final Block DARK_OAK_TERRACE_TABLE = null;
-    public static final Block ACACIA_TERRACE_TABLE = null;
+    // public static final Block METALLIC_TERRACE_TABLE = null;
+    // public static final Block OAK_TERRACE_TABLE = null;
+    // public static final Block BIRCH_TERRACE_TABLE = null;
+    // public static final Block SPRUCE_TERRACE_TABLE = null;
+    // public static final Block JUNGLE_TERRACE_TABLE = null;
+    // public static final Block DARK_OAK_TERRACE_TABLE = null;
+    // public static final Block ACACIA_TERRACE_TABLE = null;
 
-    public static final Block METALLIC_TERRACE_CHAIR = null;
-    public static final Block OAK_TERRACE_CHAIR = null;
-    public static final Block DARK_OAK_TERRACE_CHAIR = null;
-    public static final Block BIRCH_TERRACE_CHAIR = null;
-    public static final Block SPRUCE_TERRACE_CHAIR = null;
-    public static final Block JUNGLE_TERRACE_CHAIR = null;
-    public static final Block ACACIA_TERRACE_CHAIR = null;
+    // public static final Block METALLIC_TERRACE_CHAIR = null;
+    // public static final Block OAK_TERRACE_CHAIR = null;
+    // public static final Block DARK_OAK_TERRACE_CHAIR = null;
+    // public static final Block BIRCH_TERRACE_CHAIR = null;
+    // public static final Block SPRUCE_TERRACE_CHAIR = null;
+    // public static final Block JUNGLE_TERRACE_CHAIR = null;
+    // public static final Block ACACIA_TERRACE_CHAIR = null;
 
-    public static final Block OAK_TABLE = null;
-    public static final Block DARK_OAK_TABLE = null;
-    public static final Block BIRCH_TABLE = null;
-    public static final Block JUNGLE_TABLE = null;
-    public static final Block SPRUCE_TABLE = null;
-    public static final Block ACACIA_TABLE = null;
+    // public static final Block OAK_TABLE = null;
+    // public static final Block DARK_OAK_TABLE = null;
+    // public static final Block BIRCH_TABLE = null;
+    // public static final Block JUNGLE_TABLE = null;
+    // public static final Block SPRUCE_TABLE = null;
+    // public static final Block ACACIA_TABLE = null;
 
-    public static final Block OAK_FANCY_TABLE = null;
-    public static final Block DARK_OAK_FANCY_TABLE = null;
-    public static final Block BIRCH_FANCY_TABLE = null;
-    public static final Block JUNGLE_FANCY_TABLE = null;
-    public static final Block SPRUCE_FANCY_TABLE = null;
-    public static final Block ACACIA_FANCY_TABLE = null;
+    // public static final Block OAK_FANCY_TABLE = null;
+    // public static final Block DARK_OAK_FANCY_TABLE = null;
+    // public static final Block BIRCH_FANCY_TABLE = null;
+    // public static final Block JUNGLE_FANCY_TABLE = null;
+    // public static final Block SPRUCE_FANCY_TABLE = null;
+    // public static final Block ACACIA_FANCY_TABLE = null;
 
     public static final Block PLATE = null;
 
@@ -303,44 +281,47 @@ public class ECBlocks
     {
         // Furniture
 
-        Block block;
+        // Block block;
 
         for(int i = 0; i < 6; i++)
         {
-            event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                WoodType.byId(i).getName() + "_chair"));
-            event.getRegistry().register(
-                block = new TerraceTableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                    WoodType.byId(i).getName() + "_terrace_table"));
-            RENDER_CUTOUT.add(block);
-            event.getRegistry().register(
-                block = new TerraceChairBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                    WoodType.byId(i).getName() + "_terrace_chair"));
-            RENDER_CUTOUT.add(block);
-            event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                WoodType.byId(i).getName() + "_table"));
-            event.getRegistry().register(new FancyTableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                WoodType.byId(i).getName() + "_fancy_table"));
+            // event.getRegistry().register(new ChairBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD),
+            // ToolType.AXE).setRegistryName(
+            // WoodType.byId(i).getName() + "_chair"));
+            // event.getRegistry().register(
+            // block = new TerraceTableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
+            // WoodType.byId(i).getName() + "_terrace_table"));
+            // RENDER_CUTOUT.add(block);
+            // event.getRegistry().register(
+            // block = new TerraceChairBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
+            // WoodType.byId(i).getName() + "_terrace_chair"));
+            // RENDER_CUTOUT.add(block);
+            // event.getRegistry().register(new TableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD),
+            // ToolType.AXE).setRegistryName(
+            // WoodType.byId(i).getName() + "_table"));
+            // event.getRegistry().register(new FancyTableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD),
+            // ToolType.AXE).setRegistryName(
+            // WoodType.byId(i).getName() + "_fancy_table"));
             event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                WoodType.byId(i).getName() + "_fancy_door"));
+                WoodsType.byId(i).getName() + "_fancy_door"));
             event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                WoodType.byId(i).getName() + "_suspended_stairs"));
+                WoodsType.byId(i).getName() + "_suspended_stairs"));
             // event.getRegistry().register(
             // block = new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY, WoodType.byId(i)).setRegistryName(
             // WoodType.byId(i).getName() + "_fancy_chest"));
             // FANCY_CHESTS.add(block);
 
             event.getRegistry().register(
-                new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName(WoodType.byId(i).getName() + "_wooden_crate"));
+                new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName(WoodsType.byId(i).getName() + "_wooden_crate"));
 
         }
 
-        event.getRegistry().register(
-            new TerraceTableBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
-                "metallic_terrace_table"));
-        event.getRegistry().register(
-            new TerraceChairBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
-                "metallic_terrace_chair"));
+        // event.getRegistry().register(
+        // new TerraceTableBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
+        // "metallic_terrace_table"));
+        // event.getRegistry().register(
+        // new TerraceChairBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE).setRegistryName(
+        // "metallic_terrace_chair"));
 
         event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS, MaterialColor.QUARTZ).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
 
@@ -436,59 +417,72 @@ public class ECBlocks
     {
         // Furniture
 
-        event.getRegistry().register(new FuelBlockItem(OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(OAK_CHAIR.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(DARK_OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_CHAIR.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(BIRCH_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_CHAIR.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(JUNGLE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_CHAIR.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(SPRUCE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_CHAIR.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(ACACIA_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_CHAIR.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(OAK_CHAIR.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(DARK_OAK_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(DARK_OAK_CHAIR.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(BIRCH_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(BIRCH_CHAIR.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(JUNGLE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(JUNGLE_CHAIR.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(SPRUCE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(SPRUCE_CHAIR.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(ACACIA_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(ACACIA_CHAIR.getRegistryName()));
 
-        event.getRegistry().register(new BlockItem(METALLIC_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(OAK_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(OAK_TERRACE_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BIRCH_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_TERRACE_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(SPRUCE_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_TERRACE_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(JUNGLE_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_TERRACE_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(DARK_OAK_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_TERRACE_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(ACACIA_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_TERRACE_TABLE.getRegistryName()));
+        // event.getRegistry().register(new BlockItem(METALLIC_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(OAK_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(OAK_TERRACE_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(BIRCH_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_TERRACE_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(SPRUCE_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_TERRACE_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(JUNGLE_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_TERRACE_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(DARK_OAK_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_TERRACE_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(ACACIA_TERRACE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_TERRACE_TABLE.getRegistryName()));
 
-        event.getRegistry().register(new BlockItem(METALLIC_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(OAK_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(OAK_TERRACE_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(DARK_OAK_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_TERRACE_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BIRCH_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_TERRACE_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(SPRUCE_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_TERRACE_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(JUNGLE_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_TERRACE_CHAIR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(ACACIA_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_TERRACE_CHAIR.getRegistryName()));
+        // event.getRegistry().register(new BlockItem(METALLIC_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(METALLIC_TERRACE_CHAIR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(OAK_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(OAK_TERRACE_CHAIR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(DARK_OAK_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_TERRACE_CHAIR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(BIRCH_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_TERRACE_CHAIR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(SPRUCE_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_TERRACE_CHAIR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(JUNGLE_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_TERRACE_CHAIR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(ACACIA_TERRACE_CHAIR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_TERRACE_CHAIR.getRegistryName()));
 
-        event.getRegistry().register(new FuelBlockItem(OAK_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(OAK_TABLE.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(DARK_OAK_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(DARK_OAK_TABLE.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(BIRCH_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(BIRCH_TABLE.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(JUNGLE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(JUNGLE_TABLE.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(SPRUCE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(SPRUCE_TABLE.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(ACACIA_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime).setRegistryName(ACACIA_TABLE.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(OAK_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(OAK_TABLE.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(DARK_OAK_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(DARK_OAK_TABLE.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(BIRCH_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(BIRCH_TABLE.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(JUNGLE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(JUNGLE_TABLE.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(SPRUCE_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(SPRUCE_TABLE.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(ACACIA_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.chairBurnTime).setRegistryName(ACACIA_TABLE.getRegistryName()));
 
-        event.getRegistry().register(new FuelBlockItem(OAK_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(OAK_FANCY_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(DARK_OAK_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(DARK_OAK_FANCY_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BIRCH_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(BIRCH_FANCY_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(JUNGLE_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(JUNGLE_FANCY_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(SPRUCE_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(SPRUCE_FANCY_TABLE.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(ACACIA_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(ACACIA_FANCY_TABLE.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(OAK_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.couchBurnTime).setRegistryName(OAK_FANCY_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(DARK_OAK_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(DARK_OAK_FANCY_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(BIRCH_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(BIRCH_FANCY_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(JUNGLE_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(JUNGLE_FANCY_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(SPRUCE_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(SPRUCE_FANCY_TABLE.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(ACACIA_FANCY_TABLE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime).setRegistryName(ACACIA_FANCY_TABLE.getRegistryName()));
 
         event.getRegistry().register(new BlockItem(PLATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PLATE.getRegistryName()));
 

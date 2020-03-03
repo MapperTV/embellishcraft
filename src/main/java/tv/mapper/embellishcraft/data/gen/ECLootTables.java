@@ -6,6 +6,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.gen.BaseLootTableProvider;
 
@@ -515,5 +516,19 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get()));
         lootTables.put(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get()));
         lootTables.put(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get()));
+
+        // Furniture
+        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        {
+            lootTables.put(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get()));
+        }
+
+        lootTables.put(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_TERRACE_CHAIR.get()));
+        lootTables.put(ECBlockRegistry.STEEL_TERRACE_TABLE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_TERRACE_TABLE.get()));
+
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/terrace_chair",
+  "textures": {
+    "material": "embellishcraft:block/acacia_terrace_table",
+    "particle": "embellishcraft:block/acacia_terrace_table"
+  }
+}

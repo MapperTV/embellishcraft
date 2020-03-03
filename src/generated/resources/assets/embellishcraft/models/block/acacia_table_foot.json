@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/table_foot",
+  "textures": {
+    "material": "block/acacia_planks",
+    "particle": "block/acacia_planks"
+  }
+}

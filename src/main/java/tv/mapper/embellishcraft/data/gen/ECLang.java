@@ -8,6 +8,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
 import net.minecraftforge.common.data.LanguageProvider;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
 
 public class ECLang extends LanguageProvider
@@ -515,6 +516,24 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS, "White / Green Wallpaper Stairs");
                 addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH, "White / Green Wallpaper With Plinth");
 
+                // Furniture
+                String lang;
+                for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+                {
+                    lang = McWoods.byId(j).getName();
+                    if(lang == "dark_oak")
+                        lang = "dark Oak";
+
+                    addBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Chair"));
+                    addBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Terrace Chair"));
+                    addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Table"));
+                    addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Fancy Table"));
+                    addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Terrace Table"));
+                }
+
+                addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Steel Terrace Chair");
+                addBlock(ECBlockRegistry.STEEL_TERRACE_TABLE, "Steel Terrace Table");
+
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
             case "fr_fr":
@@ -1007,6 +1026,19 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB, "Dalle de papier peint bleu et vert");
                 addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS, "Escalier de papier peint bleu et vert");
                 addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH, "Papier peint bleu et vert avec plinthe");
+
+                // Furniture
+                for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+                {
+                    addBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)), "Chaise en " + McWoods.byId(j).getName("fr_fr"));
+                    addBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)), "Chaise de terrasse en " + McWoods.byId(j).getName("fr_fr"));
+                    addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), "Table en " + McWoods.byId(j).getName("fr_fr"));
+                    addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), "Table massive en " + McWoods.byId(j).getName("fr_fr"));
+                    addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), "Table de terrase en " + McWoods.byId(j).getName("fr_fr"));
+                }
+
+                addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Chaise de terrasse en acier");
+                addBlock(ECBlockRegistry.STEEL_TERRACE_TABLE, "Table de terrasse en acier");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;

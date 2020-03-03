@@ -2,7 +2,8 @@ package tv.mapper.embellishcraft.item;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import tv.mapper.embellishcraft.block.ECBlocks;
+import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.util.McWoods;
 
 public class ModItemGroups
 {
@@ -11,7 +12,7 @@ public class ModItemGroups
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(ECBlocks.SPRUCE_CHAIR);
+            return new ItemStack(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(1)).get());
         }
     };
 }

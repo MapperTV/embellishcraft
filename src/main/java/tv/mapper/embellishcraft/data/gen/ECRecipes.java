@@ -19,6 +19,7 @@ import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
+import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.BaseTags;
 import tv.mapper.mapperbase.item.BaseItems;
@@ -36,8 +37,6 @@ public class ECRecipes extends RecipeProvider
     {
         for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
         {
-            EmbellishCraft.LOGGER.debug(j + ": " + RockType.byId(j).getName() + " , " + ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get());
-
             // Rocks
             CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(ECItemRegistry.ROCKS_COBBLESTONES_ITEMS.get(RockType.byId(j)).get()), ECItemRegistry.ROCKS_ITEMS.get(RockType.byId(j)).get(), 0.1f,
                 200).addCriterion("has_" + RockType.byId(j).getName() + "_cobblestone", this.hasItem(ECItemRegistry.ROCKS_COBBLESTONES_ITEMS.get(RockType.byId(j)).get())).build(consumer,
@@ -1090,5 +1089,24 @@ public class ECRecipes extends RecipeProvider
             "###").addCriterion("has_white_green_wallpaper", this.hasItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get()).patternLine("w").patternLine("s").key('w', ECBlockRegistry.WHITE_GREEN_WALLPAPER.get()).key('s',
             ItemTags.WOODEN_SLABS).addCriterion("has_white_green_wallpaper", this.hasItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER.get())).build(consumer);
+
+        // Furniture
+        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        {
+            EmbellishCraft.LOGGER.debug(j + ": " + McWoods.byId(j).getName() + " , " + ECConstants.McWoodenPressures[j]);
+
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get()).key('W', ECConstants.McWoodenSlabs[j]).key('S', Tags.Items.RODS_WOODEN).patternLine("S  ").patternLine(
+                "SWS").patternLine("S S").setGroup("chairs").addCriterion("has_" + McWoods.byId(j).getName() + "_slab", this.hasItem(ECConstants.McWoodenSlabs[j])).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get()).key('W', ECConstants.McWoodenPressures[j]).key('S', Tags.Items.RODS_WOODEN).patternLine(
+                "S  ").patternLine("SWS").patternLine("S S").setGroup("terrace_chairs").addCriterion("has_" + McWoods.byId(j).getName() + "_pressure_plate",
+                    this.hasItem(ECConstants.McWoodenPressures[j])).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get()).key('W', ECConstants.McWoodenSlabs[j]).key('S', Tags.Items.RODS_WOODEN).patternLine("SWS").patternLine(
+                "S S").patternLine("S S").setGroup("tables").addCriterion("has_" + McWoods.byId(j).getName() + "_slab", this.hasItem(ECConstants.McWoodenSlabs[j])).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get()).key('W', ECConstants.McWoodenPressures[j]).key('S', Tags.Items.RODS_WOODEN).patternLine(
+                "WWW").patternLine(" S ").patternLine(" S ").setGroup("terrace_chairs").addCriterion("has_" + McWoods.byId(j).getName() + "_pressure_plate",
+                    this.hasItem(ECConstants.McWoodenPressures[j])).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get(), 2).key('W', ECConstants.McWoodenPlanks[j]).key('S', ECConstants.McWoodenLogs[j]).patternLine(
+                "WWW").patternLine("S S").patternLine("S S").setGroup("tables").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
+        }
     }
 }

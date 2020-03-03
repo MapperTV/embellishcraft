@@ -19,6 +19,7 @@ import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.TableBlock;
+import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.gen.BaseBlockStates;
 
@@ -286,6 +287,19 @@ public class ECBlockStates extends BaseBlockStates
         registerStoneVariant("white_green_wallpaper", ECBlockRegistry.WHITE_GREEN_WALLPAPER.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get(), null,
             null, null);
         upDownBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/white_green_wallpaper_plinth"));
+
+        // Furniture
+        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        {
+            horizontalBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(ECConstants.MODID + ":block/" + McWoods.byId(j).getName() + "_chair"), 0);
+            horizontalBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(ECConstants.MODID + ":block/" + McWoods.byId(j).getName() + "_terrace_chair"), 0);
+            tableBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get());
+            tableBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get());
+            simpleBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get());
+        }
+
+        simpleBlock(ECBlockRegistry.STEEL_TERRACE_TABLE.get());
+        horizontalBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), new UncheckedModelFile(ECConstants.MODID + ":block/steel_terrace_chair"), 0);
     }
 
     /**
@@ -308,7 +322,9 @@ public class ECBlockStates extends BaseBlockStates
      */
     protected void tableBlock(Block block)
     {
-        String name = block.getRegistryName().toString().replace("embellishcraft-bop:", "");
+
+        String raw[] = block.getRegistryName().toString().split(":");
+        String name = raw[1];
         MultiPartBlockStateBuilder builder = getMultipartBuilder(block).part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_top")).addModel().end();
         builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).uvLock(true).addModel().condition(TableBlock.TABLE_NORTH, true).end();
         builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(90).uvLock(true).addModel().condition(TableBlock.TABLE_EAST, true).end();

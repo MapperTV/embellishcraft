@@ -15,6 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
 
 public class ECItemRegistry
@@ -958,6 +959,38 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> WHITE_GREEN_WALLPAPER_PLINTH_ITEM = ITEMS.register("white_green_wallpaper_plinth",
         () -> new BlockItem(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    // Furniture
+    public static final Map<McWoods, RegistryObject<FuelBlockItem>> CHAIRS_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_chair",
+            () -> new FuelBlockItem(ECBlockRegistry.CHAIR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<McWoods, RegistryObject<FuelBlockItem>> TERRACE_CHAIRS_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_terrace_chair",
+            () -> new FuelBlockItem(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<McWoods, RegistryObject<FuelBlockItem>> TABLE_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_table",
+            () -> new FuelBlockItem(ECBlockRegistry.TABLE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<McWoods, RegistryObject<FuelBlockItem>> FANCY_TABLE_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_fancy_table",
+            () -> new FuelBlockItem(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<McWoods, RegistryObject<FuelBlockItem>> TERRACE_TABLE_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_terrace_table",
+            () -> new FuelBlockItem(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final RegistryObject<Item> STEEL_TERRACE_TABLE_ITEM = ITEMS.register("steel_terrace_table",
+        () -> new BlockItem(ECBlockRegistry.STEEL_TERRACE_TABLE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> STEEL_TERRACE_CHAIR_ITEM = ITEMS.register("steel_terrace_chair",
+        () -> new BlockItem(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static void init()
     {

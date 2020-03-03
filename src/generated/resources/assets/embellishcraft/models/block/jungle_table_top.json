@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/table_top",
+  "textures": {
+    "material": "block/jungle_planks",
+    "particle": "block/jungle_planks"
+  }
+}

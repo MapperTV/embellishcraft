@@ -1,9 +1,13 @@
 package tv.mapper.embellishcraft.data.gen;
 
+import java.util.Arrays;
+
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
+import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.mapperbase.MapperBase;
 
 public class ECBlockModels extends BlockModelProvider
@@ -164,6 +168,43 @@ public class ECBlockModels extends BlockModelProvider
         buildWallpaper("beige_wallpaper", modLoc("block/beige_wallpaper"), modLoc("block/side_wallpaper"), modLoc("block/beige_wallpaper_plinth"));
         buildWallpaper("pink_wallpaper", modLoc("block/pink_wallpaper"), modLoc("block/side_wallpaper"), modLoc("block/pink_wallpaper_plinth"));
         buildWallpaper("white_green_wallpaper", modLoc("block/white_green_wallpaper"), modLoc("block/side_wallpaper"), modLoc("block/white_green_wallpaper_plinth"));
+
+        // furniture
+        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        {
+            getBuilder(McWoods.byId(j).getName() + "_chair").parent(getExistingFile(modLoc("block/chair"))).texture("material", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture(
+                "particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+            getBuilder(McWoods.byId(j).getName() + "_terrace_chair").parent(getExistingFile(modLoc("block/terrace_chair"))).texture("material",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_terrace_table")).texture("particle",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_terrace_table"));
+            getBuilder(McWoods.byId(j).getName() + "_terrace_table").parent(getExistingFile(modLoc("block/terrace_table"))).texture("material",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_terrace_table")).texture("particle",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_terrace_table"));
+
+            getBuilder(McWoods.byId(j).getName() + "_table_foot").parent(getExistingFile(modLoc("block/table_foot"))).texture("material",
+                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+            getBuilder(McWoods.byId(j).getName() + "_table_inventory").parent(getExistingFile(modLoc("block/table_inventory"))).texture("material",
+                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+            getBuilder(McWoods.byId(j).getName() + "_table_top").parent(getExistingFile(modLoc("block/table_top"))).texture("material",
+                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+
+            getBuilder(McWoods.byId(j).getName() + "_fancy_table_foot").parent(getExistingFile(modLoc("block/fancy_table_foot"))).texture("side",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_side")).texture("top",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_top")).texture("particle",
+                        new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+            getBuilder(McWoods.byId(j).getName() + "_fancy_table_inventory").parent(getExistingFile(modLoc("block/fancy_table_inventory"))).texture("side",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_side")).texture("top",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_top"));
+            getBuilder(McWoods.byId(j).getName() + "_fancy_table_top").parent(getExistingFile(modLoc("block/fancy_table_top"))).texture("side",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_side")).texture("top",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_top")).texture("particle",
+                        new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+        }
+
+        getBuilder("steel_terrace_chair").parent(getExistingFile(modLoc("block/terrace_chair"))).texture("material", new ResourceLocation(ECConstants.MODID, "block/steel_terrace_table")).texture("particle",
+            new ResourceLocation(ECConstants.MODID, "block/steel_terrace_table"));
+        getBuilder("steel_terrace_table").parent(getExistingFile(modLoc("block/terrace_table"))).texture("material", new ResourceLocation(ECConstants.MODID, "block/steel_terrace_table")).texture("particle",
+            new ResourceLocation(ECConstants.MODID, "block/steel_terrace_table"));
     }
 
     private void buildWallpaper(String name, ResourceLocation side, ResourceLocation bottom, ResourceLocation plinth)

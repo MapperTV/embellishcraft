@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 import net.minecraft.util.IStringSerializable;
 
-public enum WoodType implements IStringSerializable
+public enum WoodsType implements IStringSerializable
 {
     OAK(0, "oak", "chene"),
     BIRCH(1, "birch", "bouleau"),
@@ -26,16 +26,16 @@ public enum WoodType implements IStringSerializable
     UMBRAN(16, "umbran", "bois sinistre"),
     WILLOW(17, "willow", "saule");
 
-    private static final WoodType[] VALUES = Arrays.stream(values()).sorted(Comparator.comparingInt(WoodType::getId)).toArray((map) ->
+    private static final WoodsType[] VALUES = Arrays.stream(values()).sorted(Comparator.comparingInt(WoodsType::getId)).toArray((map) ->
     {
-        return new WoodType[map];
+        return new WoodsType[map];
     });
 
     private final int id;
     private final String en_us;
     private final String fr_fr;
 
-    private WoodType(int idIn, String en_us, String fr_fr)
+    private WoodsType(int idIn, String en_us, String fr_fr)
     {
         this.id = idIn;
         this.en_us = en_us;
@@ -58,7 +58,7 @@ public enum WoodType implements IStringSerializable
         return this.id;
     }
 
-    public static WoodType byId(int id)
+    public static WoodsType byId(int id)
     {
         if(id < 0 || id >= VALUES.length)
         {
@@ -70,7 +70,7 @@ public enum WoodType implements IStringSerializable
 
     public static String getWoodByID(int id)
     {
-        for(WoodType wood : values())
+        for(WoodsType wood : values())
         {
             if(wood.getId() == id)
                 return wood.getName();
