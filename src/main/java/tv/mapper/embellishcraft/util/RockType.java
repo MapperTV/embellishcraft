@@ -8,12 +8,12 @@ import net.minecraft.util.IStringSerializable;
 
 public enum RockType implements IStringSerializable
 {
-    BASALT(0, "basalt", MaterialColor.BLACK),
-    SLATE(1, "slate", MaterialColor.BLUE_TERRACOTTA),
-    MARBLE(2, "marble", MaterialColor.QUARTZ),
-    GNEISS(3, "gneiss", MaterialColor.WHITE_TERRACOTTA),
-    JADE(4, "jade", MaterialColor.GREEN_TERRACOTTA),
-    LARVIKITE(5, "larvikite", MaterialColor.LIGHT_BLUE_TERRACOTTA);
+    BASALT(0, "basalt", "basalt", MaterialColor.BLACK),
+    SLATE(1, "slate", "ardoise", MaterialColor.BLUE_TERRACOTTA),
+    MARBLE(2, "marble", "marbre", MaterialColor.QUARTZ),
+    GNEISS(3, "gneiss", "gneiss", MaterialColor.WHITE_TERRACOTTA),
+    JADE(4, "jade", "jade", MaterialColor.GREEN_TERRACOTTA),
+    LARVIKITE(5, "larvikite", "larvikite", MaterialColor.LIGHT_BLUE_TERRACOTTA);
 
     private static final RockType[] VALUES = Arrays.stream(values()).sorted(Comparator.comparingInt(RockType::getId)).toArray((type) ->
     {
@@ -22,12 +22,14 @@ public enum RockType implements IStringSerializable
 
     private final int id;
     private final String name;
+    private final String fr_name;
     private final MaterialColor color;
 
-    private RockType(int id, String name, MaterialColor color)
+    private RockType(int id, String name, String fr_name, MaterialColor color)
     {
         this.id = id;
         this.name = name;
+        this.fr_name = fr_name;
         this.color = color;
     }
 
@@ -39,6 +41,11 @@ public enum RockType implements IStringSerializable
     public String getName()
     {
         return this.name;
+    }
+
+    public String getFrName()
+    {
+        return this.fr_name;
     }
 
     public MaterialColor getColor()

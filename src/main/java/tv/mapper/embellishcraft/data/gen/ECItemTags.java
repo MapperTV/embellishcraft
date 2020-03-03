@@ -18,6 +18,7 @@ public class ECItemTags extends ItemTagsProvider
     public void registerTags()
     {
         copy(Tags.Blocks.STONE, Tags.Items.STONE);
+        copy(Tags.Blocks.COBBLESTONE, Tags.Items.COBBLESTONE);
         copy(BlockTags.STAIRS, ItemTags.STAIRS);
         copy(BlockTags.SLABS, ItemTags.SLABS);
         copy(BlockTags.WALLS, ItemTags.WALLS);
