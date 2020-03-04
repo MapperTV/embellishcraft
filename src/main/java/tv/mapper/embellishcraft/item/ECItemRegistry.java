@@ -992,6 +992,15 @@ public class ECItemRegistry
     public static final RegistryObject<Item> STEEL_TERRACE_CHAIR_ITEM = ITEMS.register("steel_terrace_chair",
         () -> new BlockItem(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> COUCH_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_couch",
+            () -> new FuelBlockItem(ECBlockRegistry.COUCH_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<DyeColor, RegistryObject<BlockItem>> TABLE_LAMP_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_table_lamp", () -> new BlockItem(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

@@ -1170,6 +1170,16 @@ public class ECBlockRegistry
     public static final RegistryObject<TerraceChairBlock> STEEL_TERRACE_CHAIR = BLOCKS.register("steel_terrace_chair",
         () -> new TerraceChairBlock(Block.Properties.create(Material.IRON, MaterialColor.GRAY).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE));
 
+    public static final Map<DyeColor, RegistryObject<CouchBlock>> COUCH_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_couch",
+            () -> new CouchBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<DyeColor, RegistryObject<LampBlock>> TABLE_LAMP_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_table_lamp",
+            () -> new LampBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
     public static void init()
     {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "terrace_chairs",
+  "group": "terrace_tables",
   "pattern": [
     "WWW",
     " S ",

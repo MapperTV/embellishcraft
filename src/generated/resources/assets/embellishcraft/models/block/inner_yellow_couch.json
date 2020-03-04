@@ -1,0 +1,9 @@
+{
+  "parent": "embellishcraft:block/inner_couch",
+  "textures": {
+    "fabric": "block/yellow_wool",
+    "base": "block/oak_planks",
+    "back": "block/stripped_oak_log",
+    "particle": "block/yellow_wool"
+  }
+}

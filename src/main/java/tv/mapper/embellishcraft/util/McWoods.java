@@ -7,12 +7,12 @@ import net.minecraft.util.IStringSerializable;
 
 public enum McWoods implements IStringSerializable
 {
-    ACACIA(0, "acacia", "acacia"),
-    BIRCH(1, "birch", "bouleau"),
-    DARK_OAK(2, "dark_oak", "chêne noir"),
-    JUNGLE(3, "jungle", "acajou"),
-    OAK(4, "oak", "chêne"),
-    SPRUCE(5, "spruce", "sapin");
+    ACACIA(0, "acacia", "acacia", "Acacia"),
+    BIRCH(1, "birch", "bouleau", "Birch"),
+    DARK_OAK(2, "dark_oak", "chêne noir", "Dark Oak"),
+    JUNGLE(3, "jungle", "acajou", "Jungle"),
+    OAK(4, "oak", "chêne", "Oak"),
+    SPRUCE(5, "spruce", "sapin", "Spruce");
 
     private static final McWoods[] VALUES = Arrays.stream(values()).sorted(Comparator.comparingInt(McWoods::getId)).toArray((map) ->
     {
@@ -20,12 +20,14 @@ public enum McWoods implements IStringSerializable
     });
 
     private final int id;
+    private final String name;
     private final String en_us;
     private final String fr_fr;
 
-    private McWoods(int idIn, String en_us, String fr_fr)
+    private McWoods(int idIn, String name, String fr_fr, String en_us)
     {
         this.id = idIn;
+        this.name = name;
         this.en_us = en_us;
         this.fr_fr = fr_fr;
     }
@@ -33,7 +35,7 @@ public enum McWoods implements IStringSerializable
     @Override
     public String getName()
     {
-        return getName("en_us");
+        return name;
     }
 
     public String getName(String lang)

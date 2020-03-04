@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/couch_left",
+  "textures": {
+    "fabric": "block/purple_wool",
+    "particle": "block/purple_wool"
+  }
+}

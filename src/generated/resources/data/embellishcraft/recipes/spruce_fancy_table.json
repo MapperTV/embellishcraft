@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "tables",
+  "group": "fancy_tables",
   "pattern": [
     "WWW",
     "S S",

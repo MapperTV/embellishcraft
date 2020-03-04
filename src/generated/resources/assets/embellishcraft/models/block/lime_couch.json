@@ -1,0 +1,9 @@
+{
+  "parent": "embellishcraft:block/couch",
+  "textures": {
+    "fabric": "block/lime_wool",
+    "base": "block/oak_planks",
+    "back": "block/stripped_oak_log",
+    "particle": "block/lime_wool"
+  }
+}

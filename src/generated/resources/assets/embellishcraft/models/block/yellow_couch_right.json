@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/couch_right",
+  "textures": {
+    "fabric": "block/yellow_wool",
+    "particle": "block/yellow_wool"
+  }
+}

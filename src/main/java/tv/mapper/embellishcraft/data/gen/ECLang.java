@@ -520,19 +520,31 @@ public class ECLang extends LanguageProvider
                 String lang;
                 for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
                 {
-                    lang = McWoods.byId(j).getName();
-                    if(lang == "dark_oak")
-                        lang = "dark Oak";
+                    lang = McWoods.byId(j).getName("en_us");
 
-                    addBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Chair"));
-                    addBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Terrace Chair"));
-                    addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Table"));
-                    addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Fancy Table"));
-                    addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), StringUtils.capitalise(lang + " Terrace Table"));
+                    addBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)), lang + " Chair");
+                    addBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)), lang + " Terrace Chair");
+                    addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), lang + " Table");
+                    addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), lang + " Fancy Table");
+                    addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), lang + " Terrace Table");
                 }
 
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Steel Terrace Chair");
                 addBlock(ECBlockRegistry.STEEL_TERRACE_TABLE, "Steel Terrace Table");
+
+                String color;
+
+                for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+                {
+                    String raw[] = DyeColor.byId(j).getName().split("_");
+                    if(raw[0] == "light")
+                        color = StringUtils.capitalise(raw[0]) + " " + StringUtils.capitalise(raw[1]);
+                    else
+                        color = StringUtils.capitalise(raw[0]);
+
+                    addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), color + " Couch");
+                    addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), color + " Table Lamp");
+                }
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
@@ -953,6 +965,7 @@ public class ECLang extends LanguageProvider
 
                 // Corrugated metal plates
                 String frColors[] = {"blanche", "orange", "magenta", "bleu claire", "jaune", "vert claire", "rose", "grise", "gris claire", "cyan", "violette", "bleue", "marron", "verte", "rouge", "noire"};
+                String frColorsM[] = {"blanc", "orange", "magenta", "bleu clair", "jaune", "vert clair", "rose", "gris", "gris clair", "cyan", "violet", "bleu", "marron", "vert", "rouge", "noir"};
 
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
@@ -1039,6 +1052,12 @@ public class ECLang extends LanguageProvider
 
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Chaise de terrasse en acier");
                 addBlock(ECBlockRegistry.STEEL_TERRACE_TABLE, "Table de terrasse en acier");
+
+                for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+                {
+                    addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), "Canapé " + frColorsM[j]);
+                    addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), "Lampe de chevet " + frColors[j]);
+                }
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;

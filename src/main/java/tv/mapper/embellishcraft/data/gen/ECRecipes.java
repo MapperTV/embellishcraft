@@ -1103,10 +1103,23 @@ public class ECRecipes extends RecipeProvider
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get()).key('W', ECConstants.McWoodenSlabs[j]).key('S', Tags.Items.RODS_WOODEN).patternLine("SWS").patternLine(
                 "S S").patternLine("S S").setGroup("tables").addCriterion("has_" + McWoods.byId(j).getName() + "_slab", this.hasItem(ECConstants.McWoodenSlabs[j])).build(consumer);
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get()).key('W', ECConstants.McWoodenPressures[j]).key('S', Tags.Items.RODS_WOODEN).patternLine(
-                "WWW").patternLine(" S ").patternLine(" S ").setGroup("terrace_chairs").addCriterion("has_" + McWoods.byId(j).getName() + "_pressure_plate",
+                "WWW").patternLine(" S ").patternLine(" S ").setGroup("terrace_tables").addCriterion("has_" + McWoods.byId(j).getName() + "_pressure_plate",
                     this.hasItem(ECConstants.McWoodenPressures[j])).build(consumer);
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get(), 2).key('W', ECConstants.McWoodenPlanks[j]).key('S', ECConstants.McWoodenLogs[j]).patternLine(
-                "WWW").patternLine("S S").patternLine("S S").setGroup("tables").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
+                "WWW").patternLine("S S").patternLine("S S").setGroup("fancy_tables").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
+        }
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_TERRACE_CHAIR.get()).key('W', BaseTags.ForgeItems.PLATES_STEEL).key('S', BaseTags.ForgeItems.RODS_STEEL).patternLine("S  ").patternLine(
+            "SWS").patternLine("S S").addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_TERRACE_TABLE.get()).key('W', BaseTags.ForgeItems.PLATES_STEEL).key('S', BaseTags.ForgeItems.RODS_STEEL).patternLine("WWW").patternLine(
+            " S ").patternLine(" S ").addCriterion("has_steel__plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+
+        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        {
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), 3).patternLine("w ").patternLine("ww").patternLine("pp").key('p', ItemTags.WOODEN_SLABS).key('w',
+                ECConstants.McWools[j]).addCriterion("has_" + DyeColor.byId(j).getName() + "_wool", this.hasItem(ECConstants.McWools[j])).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()).patternLine(" w ").patternLine("wgw").patternLine(" p ").key('g', Tags.Items.DUSTS_GLOWSTONE).key('p',
+                ItemTags.PLANKS).key('w', ECConstants.McWools[j]).addCriterion("has_" + DyeColor.byId(j).getName() + "_wool", this.hasItem(ECConstants.McWools[j])).build(consumer);
         }
     }
 }

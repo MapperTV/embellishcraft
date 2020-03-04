@@ -530,5 +530,11 @@ public class ECLootTables extends BaseLootTableProvider
         lootTables.put(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_TERRACE_CHAIR.get()));
         lootTables.put(ECBlockRegistry.STEEL_TERRACE_TABLE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_TERRACE_TABLE.get()));
 
+        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        {
+            lootTables.put(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()));
+        }
+
     }
 }

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "embellishcraft:block/lime_table_lamp"
+    },
+    "lit=true": {
+      "model": "embellishcraft:block/lime_table_lamp_on"
+    }
+  }
+}

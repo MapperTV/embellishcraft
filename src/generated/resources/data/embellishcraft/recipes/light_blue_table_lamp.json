@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " w ",
+    "wgw",
+    " p "
+  ],
+  "key": {
+    "g": {
+      "tag": "forge:dusts/glowstone"
+    },
+    "p": {
+      "tag": "minecraft:planks"
+    },
+    "w": {
+      "item": "minecraft:light_blue_wool"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:light_blue_table_lamp"
+  }
+}

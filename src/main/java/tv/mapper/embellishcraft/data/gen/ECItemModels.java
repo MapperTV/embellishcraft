@@ -3,6 +3,7 @@ package tv.mapper.embellishcraft.data.gen;
 import java.util.Arrays;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.item.DyeColor;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import tv.mapper.embellishcraft.util.McWoods;
@@ -143,6 +144,12 @@ public class ECItemModels extends BaseItemModels
         getBuilder("steel_terrace_table").parent(new UncheckedModelFile(modid + ":block/steel_terrace_table"));
         getBuilder("steel_terrace_chair").parent(new UncheckedModelFile(modid + ":block/steel_terrace_chair"));
 
+        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        {
+            String color = DyeColor.byId(j).getName();
+            getBuilder(color + "_couch").parent(new UncheckedModelFile(modid + ":block/" + color + "_couch"));
+            getBuilder(color + "_table_lamp").parent(new UncheckedModelFile(modid + ":block/" + color + "_table_lamp"));
+        }
     }
 
     private void registerStone(String name)

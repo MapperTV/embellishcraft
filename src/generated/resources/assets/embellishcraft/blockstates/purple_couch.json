@@ -1,0 +1,305 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "facing": "north",
+        "left_end": "true"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch_left",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "right_end": "true"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch_right",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "straight",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "outer_left",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "embellishcraft:block/outer_purple_couch",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "inner_left",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "embellishcraft:block/inner_purple_couch",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "outer_right",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "embellishcraft:block/outer_purple_couch",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "inner_right",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "embellishcraft:block/inner_purple_couch",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "left_end": "true"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch_left",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "right_end": "true"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch_right",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "straight",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "outer_left",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "embellishcraft:block/outer_purple_couch",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "inner_left",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "embellishcraft:block/inner_purple_couch",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "outer_right",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "embellishcraft:block/outer_purple_couch",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "inner_right",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "embellishcraft:block/inner_purple_couch",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "left_end": "true"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch_left",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "right_end": "true"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch_right",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "straight",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "outer_left",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "embellishcraft:block/outer_purple_couch",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "inner_left",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "embellishcraft:block/inner_purple_couch",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "outer_right",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "embellishcraft:block/outer_purple_couch",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "inner_right",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "embellishcraft:block/inner_purple_couch",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "left_end": "true"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch_left",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "right_end": "true"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch_right",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "straight",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "embellishcraft:block/purple_couch",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "outer_left",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "embellishcraft:block/outer_purple_couch",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "inner_left",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "embellishcraft:block/inner_purple_couch",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "outer_right",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "embellishcraft:block/outer_purple_couch",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "shape": "inner_right",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "embellishcraft:block/inner_purple_couch",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

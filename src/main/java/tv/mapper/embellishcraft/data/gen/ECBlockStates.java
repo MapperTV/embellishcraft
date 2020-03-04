@@ -11,13 +11,17 @@ import net.minecraft.block.WallBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.state.properties.StairsShape;
+import net.minecraft.util.Direction;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.block.LampBlock;
 import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
@@ -300,6 +304,12 @@ public class ECBlockStates extends BaseBlockStates
 
         simpleBlock(ECBlockRegistry.STEEL_TERRACE_TABLE.get());
         horizontalBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), new UncheckedModelFile(ECConstants.MODID + ":block/steel_terrace_chair"), 0);
+
+        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        {
+            couchBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), 90);
+            tableLampBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get());
+        }
     }
 
     /**
@@ -330,5 +340,46 @@ public class ECBlockStates extends BaseBlockStates
         builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(90).uvLock(true).addModel().condition(TableBlock.TABLE_EAST, true).end();
         builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(180).uvLock(true).addModel().condition(TableBlock.TABLE_SOUTH, true).end();
         builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(270).uvLock(true).addModel().condition(TableBlock.TABLE_WEST, true).end();
+    }
+
+    protected void couchBlock(CouchBlock block)
+    {
+        couchBlock(block, 0);
+    }
+
+    protected void couchBlock(CouchBlock block, int offset)
+    {
+        String raw[] = block.getRegistryName().toString().split(":");
+        String name = raw[1];
+        MultiPartBlockStateBuilder builder = getMultipartBuilder(block);
+
+        for(Direction dir : Direction.Plane.HORIZONTAL)
+        {
+            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_left")).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
+                CouchBlock.FACING, dir).condition(CouchBlock.LEFT_END, true).end();
+            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_right")).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
+                CouchBlock.FACING, dir).condition(CouchBlock.RIGHT_END, true).end();
+
+            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name)).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
+                CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.STRAIGHT).end();
+
+            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/outer_" + name)).rotationY(((int)(dir.getHorizontalAngle() + 270 + offset) % 360)).uvLock(true).addModel().condition(
+                CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.OUTER_LEFT).end();
+            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/inner_" + name)).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
+                CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.INNER_LEFT).end();
+
+            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/outer_" + name)).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
+                CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.OUTER_RIGHT).end();
+            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/inner_" + name)).rotationY(((int)(dir.getHorizontalAngle() + 90 + offset) % 360)).uvLock(true).addModel().condition(
+                CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.INNER_RIGHT).end();
+        }
+    }
+
+    protected void tableLampBlock(LampBlock block)
+    {
+        String raw[] = block.getRegistryName().toString().split(":");
+        String name = raw[1];
+        getVariantBuilder(block).partialState().with(LampBlock.LIT, true).modelForState().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_on")).addModel().partialState().with(
+            LampBlock.LIT, false).modelForState().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name)).addModel();
     }
 }

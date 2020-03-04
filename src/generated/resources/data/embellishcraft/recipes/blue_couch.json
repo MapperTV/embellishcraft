@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "w ",
+    "ww",
+    "pp"
+  ],
+  "key": {
+    "p": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "w": {
+      "item": "minecraft:blue_wool"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:blue_couch",
+    "count": 3
+  }
+}

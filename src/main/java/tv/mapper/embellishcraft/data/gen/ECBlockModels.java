@@ -3,6 +3,7 @@ package tv.mapper.embellishcraft.data.gen;
 import java.util.Arrays;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.item.DyeColor;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
@@ -205,6 +206,34 @@ public class ECBlockModels extends BlockModelProvider
             new ResourceLocation(ECConstants.MODID, "block/steel_terrace_table"));
         getBuilder("steel_terrace_table").parent(getExistingFile(modLoc("block/terrace_table"))).texture("material", new ResourceLocation(ECConstants.MODID, "block/steel_terrace_table")).texture("particle",
             new ResourceLocation(ECConstants.MODID, "block/steel_terrace_table"));
+
+        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        {
+            buildTableLamp(DyeColor.byId(j).getName());
+            buildCouch(DyeColor.byId(j).getName());
+        }
+    }
+
+    private void buildCouch(String color)
+    {
+        getBuilder(color + "_couch").parent(getExistingFile(modLoc("block/couch"))).texture("fabric", new ResourceLocation("block/" + color + "_wool")).texture("base",
+            new ResourceLocation("block/oak_planks")).texture("back", new ResourceLocation("block/stripped_oak_log")).texture("particle", new ResourceLocation("block/" + color + "_wool"));
+        getBuilder(color + "_couch_right").parent(getExistingFile(modLoc("block/couch_right"))).texture("fabric", new ResourceLocation("block/" + color + "_wool")).texture("particle",
+            new ResourceLocation("block/" + color + "_wool"));
+        getBuilder(color + "_couch_left").parent(getExistingFile(modLoc("block/couch_left"))).texture("fabric", new ResourceLocation("block/" + color + "_wool")).texture("particle",
+            new ResourceLocation("block/" + color + "_wool"));
+        getBuilder("inner_" + color + "_couch").parent(getExistingFile(modLoc("block/inner_couch"))).texture("fabric", new ResourceLocation("block/" + color + "_wool")).texture("base",
+            new ResourceLocation("block/oak_planks")).texture("back", new ResourceLocation("block/stripped_oak_log")).texture("particle", new ResourceLocation("block/" + color + "_wool"));
+        getBuilder("outer_" + color + "_couch").parent(getExistingFile(modLoc("block/outer_couch"))).texture("fabric", new ResourceLocation("block/" + color + "_wool")).texture("base",
+            new ResourceLocation("block/oak_planks")).texture("back", new ResourceLocation("block/stripped_oak_log")).texture("particle", new ResourceLocation("block/" + color + "_wool"));
+    }
+
+    private void buildTableLamp(String color)
+    {
+        getBuilder(color + "_table_lamp").parent(getExistingFile(modLoc("block/table_lamp"))).texture("texture", new ResourceLocation(ECConstants.MODID, "block/" + color + "_table_lamp")).texture("particle",
+            new ResourceLocation(ECConstants.MODID, "block/" + color + "_table_lamp"));
+        getBuilder(color + "_table_lamp_on").parent(getExistingFile(modLoc("block/table_lamp"))).texture("texture", new ResourceLocation(ECConstants.MODID, "block/" + color + "_table_lamp_on")).texture(
+            "particle", new ResourceLocation(ECConstants.MODID, "block/" + color + "_table_lamp_on"));
     }
 
     private void buildWallpaper(String name, ResourceLocation side, ResourceLocation bottom, ResourceLocation plinth)
