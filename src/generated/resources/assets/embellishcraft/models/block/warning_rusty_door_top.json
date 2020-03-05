@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "bottom": "embellishcraft:block/warning_rusty_door_bottom",
+    "top": "embellishcraft:block/warning_rusty_door_top"
+  }
+}

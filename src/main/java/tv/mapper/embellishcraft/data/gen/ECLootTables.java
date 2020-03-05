@@ -545,6 +545,9 @@ public class ECLootTables extends BaseLootTableProvider
                 createCrateTable(McWoods.byId(j).getName() + "_wooden_crate", ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get()));
         }
 
+        lootTables.put(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get()));
+        lootTables.put(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get()));
+
         lootTables.put(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_TERRACE_CHAIR.get()));
         lootTables.put(ECBlockRegistry.STEEL_TERRACE_TABLE.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_TERRACE_TABLE.get()));
 
@@ -556,6 +559,16 @@ public class ECLootTables extends BaseLootTableProvider
         }
 
         lootTables.put(ECBlockRegistry.PLATE.get(), createPlateTable(ECConstants.MODID, ECBlockRegistry.PLATE.get()));
+
+        lootTables.put(ECBlockRegistry.STEEL_DOOR.get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.STEEL_DOOR.get()));
+        lootTables.put(ECBlockRegistry.STURDY_STEEL_DOOR.get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.STURDY_STEEL_DOOR.get()));
+        lootTables.put(ECBlockRegistry.WARNING_STEEL_DOOR.get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.WARNING_STEEL_DOOR.get()));
+        lootTables.put(ECBlockRegistry.WHITE_STEEL_DOOR.get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.WHITE_STEEL_DOOR.get()));
+        lootTables.put(ECBlockRegistry.STURDY_WHITE_STEEL_DOOR.get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.STURDY_WHITE_STEEL_DOOR.get()));
+        lootTables.put(ECBlockRegistry.WARNING_WHITE_STEEL_DOOR.get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.WARNING_WHITE_STEEL_DOOR.get()));
+        lootTables.put(ECBlockRegistry.RUSTY_DOOR.get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.RUSTY_DOOR.get()));
+        lootTables.put(ECBlockRegistry.STURDY_RUSTY_DOOR.get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.STURDY_RUSTY_DOOR.get()));
+        lootTables.put(ECBlockRegistry.WARNING_RUSTY_DOOR.get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.WARNING_RUSTY_DOOR.get()));
     }
 
     protected LootTable.Builder createPlateTable(String modid, Block block)

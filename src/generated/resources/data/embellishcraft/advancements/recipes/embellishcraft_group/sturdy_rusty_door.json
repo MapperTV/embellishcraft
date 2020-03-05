@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:sturdy_rusty_door"
+    ]
+  },
+  "criteria": {
+    "has_sturdy_steel_door": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:sturdy_steel_door"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:sturdy_rusty_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sturdy_steel_door",
+      "has_the_recipe"
+    ]
+  ]
+}

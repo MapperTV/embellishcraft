@@ -1,0 +1,6 @@
+{
+  "parent": "embellishcraft:block/suspended_stairs",
+  "textures": {
+    "all": "embellishcraft:block/steel_beam"
+  }
+}

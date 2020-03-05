@@ -154,13 +154,28 @@ public class ECItemModels extends BaseItemModels
 
         getBuilder("plate").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/plate"));
 
-        // Suspended stairs
+        // Suspended stairs, doors, crates
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
             getBuilder(McWoods.byId(j).getName() + "_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"));
             getBuilder(McWoods.byId(j).getName() + "_fancy_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getName() + "_fancy_door"));
             getBuilder(McWoods.byId(j).getName() + "_wooden_crate").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_wooden_crate"));
         }
+
+        getBuilder("steel_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/steel_suspended_stairs"));
+        getBuilder("rusty_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/rusty_suspended_stairs"));
+
+        // Doors
+        getBuilder("steel_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_door"));
+        getBuilder("sturdy_steel_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/sturdy_steel_door"));
+        getBuilder("warning_steel_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/warning_steel_door"));
+        getBuilder("white_steel_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/white_steel_door"));
+        getBuilder("sturdy_white_steel_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/sturdy_white_steel_door"));
+        getBuilder("warning_white_steel_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/warning_white_steel_door"));
+        getBuilder("rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/rusty_door"));
+        getBuilder("sturdy_rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/sturdy_rusty_door"));
+        getBuilder("warning_rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/warning_rusty_door"));
+
     }
 
     private void registerStone(String name)

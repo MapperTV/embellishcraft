@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "bottom": "embellishcraft:block/white_steel_door_bottom",
+    "top": "embellishcraft:block/white_steel_door_top"
+  }
+}

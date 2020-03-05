@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:ingots/steel"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:steel_door",
+    "count": 3
+  }
+}

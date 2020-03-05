@@ -222,6 +222,8 @@ public class ECBlockModels extends BlockModelProvider
                 new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
         }
 
+        getBuilder("steel_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all", new ResourceLocation(ECConstants.MODID, "block/steel_beam"));
+        getBuilder("rusty_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all", new ResourceLocation(ECConstants.MODID, "block/rust"));
     }
 
     private void buildCouch(String color)

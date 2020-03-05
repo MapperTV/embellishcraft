@@ -325,6 +325,20 @@ public class ECBlockStates extends BaseBlockStates
             doorBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_bottom"),
                 modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_top"));
         }
+
+        horizontalBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), new UncheckedModelFile(ECConstants.MODID + ":block/steel_suspended_stairs"), 0);
+        horizontalBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get(), new UncheckedModelFile(ECConstants.MODID + ":block/rusty_suspended_stairs"), 0);
+
+        // Doors
+        doorBlock(ECBlockRegistry.STEEL_DOOR.get(), modLoc("block/steel_door_bottom"), modLoc("block/steel_door_top"));
+        doorBlock(ECBlockRegistry.STURDY_STEEL_DOOR.get(), modLoc("block/sturdy_steel_door_bottom"), modLoc("block/sturdy_steel_door_top"));
+        doorBlock(ECBlockRegistry.WARNING_STEEL_DOOR.get(), modLoc("block/warning_steel_door_bottom"), modLoc("block/warning_steel_door_top"));
+        doorBlock(ECBlockRegistry.WHITE_STEEL_DOOR.get(), modLoc("block/white_steel_door_bottom"), modLoc("block/white_steel_door_top"));
+        doorBlock(ECBlockRegistry.STURDY_WHITE_STEEL_DOOR.get(), modLoc("block/sturdy_white_steel_door_bottom"), modLoc("block/sturdy_white_steel_door_top"));
+        doorBlock(ECBlockRegistry.WARNING_WHITE_STEEL_DOOR.get(), modLoc("block/warning_white_steel_door_bottom"), modLoc("block/warning_white_steel_door_top"));
+        doorBlock(ECBlockRegistry.RUSTY_DOOR.get(), modLoc("block/rusty_door_bottom"), modLoc("block/rusty_door_top"));
+        doorBlock(ECBlockRegistry.STURDY_RUSTY_DOOR.get(), modLoc("block/sturdy_rusty_door_bottom"), modLoc("block/sturdy_rusty_door_top"));
+        doorBlock(ECBlockRegistry.WARNING_RUSTY_DOOR.get(), modLoc("block/warning_rusty_door_bottom"), modLoc("block/warning_rusty_door_top"));
     }
 
     protected void plateBlock(Block block)

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:white_steel_door"
+    ]
+  },
+  "criteria": {
+    "has_steel_door": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:steel_door"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:white_steel_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_door",
+      "has_the_recipe"
+    ]
+  ]
+}

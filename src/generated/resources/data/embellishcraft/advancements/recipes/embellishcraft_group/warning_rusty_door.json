@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:warning_rusty_door"
+    ]
+  },
+  "criteria": {
+    "has_warning_steel_door": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:warning_steel_door"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:warning_rusty_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_warning_steel_door",
+      "has_the_recipe"
+    ]
+  ]
+}

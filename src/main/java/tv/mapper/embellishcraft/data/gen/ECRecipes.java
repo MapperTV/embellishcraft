@@ -1116,6 +1116,11 @@ public class ECRecipes extends RecipeProvider
                 "W W").patternLine("BWB").setGroup("wooden_crates").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
         }
 
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), 6).key('P', BaseTags.ForgeItems.PLATES_STEEL).key('S', BaseTags.ForgeItems.RODS_STEEL).patternLine("  P").patternLine(
+            " PS").patternLine("PS ").addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get()).addIngredient(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get()).addIngredient(Items.WATER_BUCKET).addCriterion(
+            "has_steel_suspended_stairs", this.hasItem(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get())).build(consumer);
+
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_TERRACE_CHAIR.get()).key('W', BaseTags.ForgeItems.PLATES_STEEL).key('S', BaseTags.ForgeItems.RODS_STEEL).patternLine("S  ").patternLine(
             "SWS").patternLine("S S").addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_TERRACE_TABLE.get()).key('W', BaseTags.ForgeItems.PLATES_STEEL).key('S', BaseTags.ForgeItems.RODS_STEEL).patternLine("WWW").patternLine(
@@ -1142,5 +1147,25 @@ public class ECRecipes extends RecipeProvider
 
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PLATE.get(), 4).key('W', Tags.Items.DYES_WHITE).key('C', Items.CLAY_BALL).patternLine(" C ").patternLine("CWC").patternLine(" C ").addCriterion(
             "has_clay_ball", this.hasItem(Items.CLAY_BALL)).build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_DOOR.get(), 3).key('S', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("SS").patternLine("SS").patternLine("SS").addCriterion("has_steel_ingot",
+            this.hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STURDY_STEEL_DOOR.get()).key('P', BaseTags.ForgeItems.PLATES_STEEL).key('D', ECBlockRegistry.STEEL_DOOR.get()).patternLine("D").patternLine(
+            "P").addCriterion("has_steel_door", this.hasItem(ECBlockRegistry.STEEL_DOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WARNING_STEEL_DOOR.get()).key('P', ECBlockRegistry.STEEL_DOOR.get()).key('D', Tags.Items.DYES_YELLOW).patternLine("D").patternLine("P").addCriterion(
+            "has_steel_door", this.hasItem(ECBlockRegistry.STEEL_DOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WHITE_STEEL_DOOR.get()).key('P', ECBlockRegistry.STEEL_DOOR.get()).key('D', Tags.Items.DYES_WHITE).patternLine("D").patternLine("P").addCriterion(
+            "has_steel_door", this.hasItem(ECBlockRegistry.STEEL_DOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STURDY_WHITE_STEEL_DOOR.get()).key('P', BaseTags.ForgeItems.PLATES_STEEL).key('D', ECBlockRegistry.WHITE_STEEL_DOOR.get()).patternLine("D").patternLine(
+            "P").addCriterion("has_white_steel_door", this.hasItem(ECBlockRegistry.WHITE_STEEL_DOOR.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WARNING_WHITE_STEEL_DOOR.get()).key('P', ECBlockRegistry.WHITE_STEEL_DOOR.get()).key('D', Tags.Items.DYES_YELLOW).patternLine("D").patternLine(
+            "P").addCriterion("has_white_steel_door", this.hasItem(ECBlockRegistry.WHITE_STEEL_DOOR.get())).build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.RUSTY_DOOR.get()).addIngredient(ECBlockRegistry.STEEL_DOOR.get()).addIngredient(Items.WATER_BUCKET).addCriterion("has_steel_door",
+            this.hasItem(ECBlockRegistry.STEEL_DOOR.get())).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.STURDY_RUSTY_DOOR.get()).addIngredient(ECBlockRegistry.STURDY_STEEL_DOOR.get()).addIngredient(Items.WATER_BUCKET).addCriterion(
+            "has_sturdy_steel_door", this.hasItem(ECBlockRegistry.STURDY_STEEL_DOOR.get())).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.WARNING_RUSTY_DOOR.get()).addIngredient(ECBlockRegistry.WARNING_STEEL_DOOR.get()).addIngredient(Items.WATER_BUCKET).addCriterion(
+            "has_warning_steel_door", this.hasItem(ECBlockRegistry.WARNING_STEEL_DOOR.get())).build(consumer);
     }
 }

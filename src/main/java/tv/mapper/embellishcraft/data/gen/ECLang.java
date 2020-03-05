@@ -531,8 +531,10 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)), name + " Fancy Door");
                     addBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)), name + " Suspended Stairs");
                     addBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), name + " Wooden Crate");
-
                 }
+
+                addBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS, "Steel Suspended Stairs");
+                addBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS, "Rusty Suspended Stairs");
 
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Steel Terrace Chair");
                 addBlock(ECBlockRegistry.STEEL_TERRACE_TABLE, "Steel Terrace Table");
@@ -553,6 +555,16 @@ public class ECLang extends LanguageProvider
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Plate");
+
+                addBlock(ECBlockRegistry.STEEL_DOOR, "Steel Door");
+                addBlock(ECBlockRegistry.STURDY_STEEL_DOOR, "Sturdy Steel Door");
+                addBlock(ECBlockRegistry.WARNING_STEEL_DOOR, "Warning Steel Door");
+                addBlock(ECBlockRegistry.WHITE_STEEL_DOOR, "White Steel Door");
+                addBlock(ECBlockRegistry.STURDY_WHITE_STEEL_DOOR, "Sturdy White Steel Door");
+                addBlock(ECBlockRegistry.WARNING_WHITE_STEEL_DOOR, "Warning White Steel Door");
+                addBlock(ECBlockRegistry.RUSTY_DOOR, "Rusty Door");
+                addBlock(ECBlockRegistry.STURDY_RUSTY_DOOR, "Sturdy Rusty Door");
+                addBlock(ECBlockRegistry.WARNING_RUSTY_DOOR, "Warning Rusty Door");
 
                 add("embellishcraft.container.wooden_crate", "Wooden Crate");
 
@@ -1065,6 +1077,9 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), "Caisse en " + name);
                 }
 
+                addBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS, "Escaliers suspendus en acier");
+                addBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS, "Escaliers suspendus rouillés");
+
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Chaise de terrasse en acier");
                 addBlock(ECBlockRegistry.STEEL_TERRACE_TABLE, "Table de terrasse en acier");
 
@@ -1076,6 +1091,16 @@ public class ECLang extends LanguageProvider
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Assiette");
+
+                addBlock(ECBlockRegistry.STEEL_DOOR, "Porte en acier");
+                addBlock(ECBlockRegistry.STURDY_STEEL_DOOR, "Porte renforcée en acier");
+                addBlock(ECBlockRegistry.WARNING_STEEL_DOOR, "Porte en acier avec avertissement");
+                addBlock(ECBlockRegistry.WHITE_STEEL_DOOR, "Porte blanche en acier");
+                addBlock(ECBlockRegistry.STURDY_WHITE_STEEL_DOOR, "Porte renforcée blanche en acier");
+                addBlock(ECBlockRegistry.WARNING_WHITE_STEEL_DOOR, "Porte blanche en acier avec avertissement");
+                addBlock(ECBlockRegistry.RUSTY_DOOR, "Porte rouillée");
+                addBlock(ECBlockRegistry.STURDY_RUSTY_DOOR, "Porte renforcée rouillée");
+                addBlock(ECBlockRegistry.WARNING_RUSTY_DOOR, "Porte renforcée rouillée avec avertissement");
 
                 add("embellishcraft.container.wooden_crate", "Caisse en bois");
 

@@ -1009,11 +1009,33 @@ public class ECItemRegistry
             () -> new FuelBlockItem(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    public static final RegistryObject<Item> STEEL_SUSPENDED_STAIRS_ITEM = ITEMS.register("steel_suspended_stairs",
+        () -> new BlockItem(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RUSTY_SUSPENDED_STAIRS_ITEM = ITEMS.register("rusty_suspended_stairs",
+        () -> new BlockItem(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     // Doors
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> FANCY_DOOR_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
         ITEMS.register(type.getName() + "_fancy_door",
             () -> new FuelBlockItem(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final RegistryObject<Item> STEEL_DOOR_ITEM = ITEMS.register("steel_door", () -> new BlockItem(ECBlockRegistry.STEEL_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> STURDY_STEEL_DOOR_ITEM = ITEMS.register("sturdy_steel_door",
+        () -> new BlockItem(ECBlockRegistry.STURDY_STEEL_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WARNING_STEEL_DOOR_ITEM = ITEMS.register("warning_steel_door",
+        () -> new BlockItem(ECBlockRegistry.WARNING_STEEL_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WHITE_STEEL_DOOR_ITEM = ITEMS.register("white_steel_door",
+        () -> new BlockItem(ECBlockRegistry.WHITE_STEEL_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> STURDY_WHITE_STEEL_DOOR_ITEM = ITEMS.register("sturdy_white_steel_door",
+        () -> new BlockItem(ECBlockRegistry.STURDY_WHITE_STEEL_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WARNING_WHITE_STEEL_DOOR_ITEM = ITEMS.register("warning_white_steel_door",
+        () -> new BlockItem(ECBlockRegistry.WARNING_WHITE_STEEL_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RUSTY_DOOR_ITEM = ITEMS.register("rusty_door", () -> new BlockItem(ECBlockRegistry.RUSTY_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> STURDY_RUSTY_DOOR_ITEM = ITEMS.register("sturdy_rusty_door",
+        () -> new BlockItem(ECBlockRegistry.STURDY_RUSTY_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> WARNING_RUSTY_DOOR_ITEM = ITEMS.register("warning_rusty_door",
+        () -> new BlockItem(ECBlockRegistry.WARNING_RUSTY_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     // Pillows
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> PILLOW_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,

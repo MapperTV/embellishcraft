@@ -24,8 +24,8 @@
     },
     {
       "when": {
-        "shape": "straight",
-        "facing": "north"
+        "facing": "north",
+        "shape": "straight"
       },
       "apply": {
         "model": "embellishcraft:block/brown_couch",
@@ -35,8 +35,8 @@
     },
     {
       "when": {
-        "shape": "outer_left",
-        "facing": "north"
+        "facing": "north",
+        "shape": "outer_left"
       },
       "apply": {
         "model": "embellishcraft:block/outer_brown_couch",
@@ -46,8 +46,8 @@
     },
     {
       "when": {
-        "shape": "inner_left",
-        "facing": "north"
+        "facing": "north",
+        "shape": "inner_left"
       },
       "apply": {
         "model": "embellishcraft:block/inner_brown_couch",
@@ -57,8 +57,8 @@
     },
     {
       "when": {
-        "shape": "outer_right",
-        "facing": "north"
+        "facing": "north",
+        "shape": "outer_right"
       },
       "apply": {
         "model": "embellishcraft:block/outer_brown_couch",
@@ -68,8 +68,8 @@
     },
     {
       "when": {
-        "shape": "inner_right",
-        "facing": "north"
+        "facing": "north",
+        "shape": "inner_right"
       },
       "apply": {
         "model": "embellishcraft:block/inner_brown_couch",
@@ -98,8 +98,8 @@
     },
     {
       "when": {
-        "shape": "straight",
-        "facing": "east"
+        "facing": "east",
+        "shape": "straight"
       },
       "apply": {
         "model": "embellishcraft:block/brown_couch",
@@ -108,8 +108,8 @@
     },
     {
       "when": {
-        "shape": "outer_left",
-        "facing": "east"
+        "facing": "east",
+        "shape": "outer_left"
       },
       "apply": {
         "model": "embellishcraft:block/outer_brown_couch",
@@ -119,8 +119,8 @@
     },
     {
       "when": {
-        "shape": "inner_left",
-        "facing": "east"
+        "facing": "east",
+        "shape": "inner_left"
       },
       "apply": {
         "model": "embellishcraft:block/inner_brown_couch",
@@ -129,8 +129,8 @@
     },
     {
       "when": {
-        "shape": "outer_right",
-        "facing": "east"
+        "facing": "east",
+        "shape": "outer_right"
       },
       "apply": {
         "model": "embellishcraft:block/outer_brown_couch",
@@ -139,8 +139,8 @@
     },
     {
       "when": {
-        "shape": "inner_right",
-        "facing": "east"
+        "facing": "east",
+        "shape": "inner_right"
       },
       "apply": {
         "model": "embellishcraft:block/inner_brown_couch",
@@ -172,8 +172,8 @@
     },
     {
       "when": {
-        "shape": "straight",
-        "facing": "south"
+        "facing": "south",
+        "shape": "straight"
       },
       "apply": {
         "model": "embellishcraft:block/brown_couch",
@@ -183,8 +183,8 @@
     },
     {
       "when": {
-        "shape": "outer_left",
-        "facing": "south"
+        "facing": "south",
+        "shape": "outer_left"
       },
       "apply": {
         "model": "embellishcraft:block/outer_brown_couch",
@@ -193,8 +193,8 @@
     },
     {
       "when": {
-        "shape": "inner_left",
-        "facing": "south"
+        "facing": "south",
+        "shape": "inner_left"
       },
       "apply": {
         "model": "embellishcraft:block/inner_brown_couch",
@@ -204,8 +204,8 @@
     },
     {
       "when": {
-        "shape": "outer_right",
-        "facing": "south"
+        "facing": "south",
+        "shape": "outer_right"
       },
       "apply": {
         "model": "embellishcraft:block/outer_brown_couch",
@@ -215,8 +215,8 @@
     },
     {
       "when": {
-        "shape": "inner_right",
-        "facing": "south"
+        "facing": "south",
+        "shape": "inner_right"
       },
       "apply": {
         "model": "embellishcraft:block/inner_brown_couch",
@@ -248,8 +248,8 @@
     },
     {
       "when": {
-        "shape": "straight",
-        "facing": "west"
+        "facing": "west",
+        "shape": "straight"
       },
       "apply": {
         "model": "embellishcraft:block/brown_couch",
@@ -259,8 +259,8 @@
     },
     {
       "when": {
-        "shape": "outer_left",
-        "facing": "west"
+        "facing": "west",
+        "shape": "outer_left"
       },
       "apply": {
         "model": "embellishcraft:block/outer_brown_couch",
@@ -270,8 +270,8 @@
     },
     {
       "when": {
-        "shape": "inner_left",
-        "facing": "west"
+        "facing": "west",
+        "shape": "inner_left"
       },
       "apply": {
         "model": "embellishcraft:block/inner_brown_couch",
@@ -281,8 +281,8 @@
     },
     {
       "when": {
-        "shape": "outer_right",
-        "facing": "west"
+        "facing": "west",
+        "shape": "outer_right"
       },
       "apply": {
         "model": "embellishcraft:block/outer_brown_couch",
@@ -292,8 +292,8 @@
     },
     {
       "when": {
-        "shape": "inner_right",
-        "facing": "west"
+        "facing": "west",
+        "shape": "inner_right"
       },
       "apply": {
         "model": "embellishcraft:block/inner_brown_couch",
