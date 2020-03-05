@@ -211,6 +211,8 @@ public class ECBlockModels extends BlockModelProvider
         {
             buildTableLamp(DyeColor.byId(j).getName());
             buildCouch(DyeColor.byId(j).getName());
+            getBuilder(DyeColor.byId(j).getName() + "_pillow").parent(getExistingFile(modLoc("block/pillow"))).texture("all", new ResourceLocation("block/" + DyeColor.byId(j).getName() + "_wool")).texture(
+                "particle", new ResourceLocation("block/" + DyeColor.byId(j).getName() + "_wool"));
         }
 
         // Suspended stairs

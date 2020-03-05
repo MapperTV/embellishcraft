@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:orange_pillow_from_white"
+    ]
+  },
+  "criteria": {
+    "has_white_pillow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:white_pillow"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:orange_pillow_from_white"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_white_pillow",
+      "has_the_recipe"
+    ]
+  ]
+}

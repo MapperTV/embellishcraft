@@ -311,6 +311,7 @@ public class ECBlockStates extends BaseBlockStates
         {
             couchBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), 90);
             tableLampBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get());
+            horizontalBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get(), new UncheckedModelFile(ECConstants.MODID + ":block/" + DyeColor.byId(j).getName() + "_pillow"), 0);
         }
 
         plateBlock(ECBlockRegistry.PLATE.get());

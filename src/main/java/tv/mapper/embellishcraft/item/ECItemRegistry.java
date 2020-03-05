@@ -1015,6 +1015,12 @@ public class ECItemRegistry
             () -> new FuelBlockItem(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Pillows
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> PILLOW_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_pillow",
+            () -> new FuelBlockItem(ECBlockRegistry.PILLOW_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

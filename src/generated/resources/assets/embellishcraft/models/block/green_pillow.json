@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/pillow",
+  "textures": {
+    "all": "block/green_wool",
+    "particle": "block/green_wool"
+  }
+}

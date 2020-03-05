@@ -547,6 +547,7 @@ public class ECLang extends LanguageProvider
 
                     addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), name + " Couch");
                     addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), name + " Table Lamp");
+                    addBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)), name + " Pillow");
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Plate");
@@ -1066,6 +1067,7 @@ public class ECLang extends LanguageProvider
                 {
                     addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), "Canapé " + frColorsM[j]);
                     addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), "Lampe de chevet " + frColors[j]);
+                    addBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)), "Coussin " + frColorsM[j]);
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Assiette");

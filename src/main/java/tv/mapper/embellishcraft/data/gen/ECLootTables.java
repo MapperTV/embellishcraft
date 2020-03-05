@@ -545,6 +545,7 @@ public class ECLootTables extends BaseLootTableProvider
         {
             lootTables.put(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get()));
             lootTables.put(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get()));
         }
 
         lootTables.put(ECBlockRegistry.PLATE.get(), createPlateTable(ECConstants.MODID, ECBlockRegistry.PLATE.get()));

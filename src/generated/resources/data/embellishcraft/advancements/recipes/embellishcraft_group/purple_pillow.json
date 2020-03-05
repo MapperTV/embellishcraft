@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:purple_pillow"
+    ]
+  },
+  "criteria": {
+    "has_purple_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:purple_wool"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:purple_pillow"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_purple_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

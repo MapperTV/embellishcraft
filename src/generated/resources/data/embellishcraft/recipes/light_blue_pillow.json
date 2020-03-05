@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "SWS",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:string"
+    },
+    "W": {
+      "item": "minecraft:light_blue_wool"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:light_blue_pillow"
+  }
+}

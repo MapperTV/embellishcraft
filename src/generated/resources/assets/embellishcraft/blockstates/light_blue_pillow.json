@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "facing=north,occupied=false,part=head,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 180
+    },
+    "facing=south,occupied=false,part=head,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow"
+    },
+    "facing=west,occupied=false,part=head,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 90
+    },
+    "facing=east,occupied=false,part=head,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 270
+    },
+    "facing=north,occupied=true,part=head,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 180
+    },
+    "facing=south,occupied=true,part=head,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow"
+    },
+    "facing=west,occupied=true,part=head,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 90
+    },
+    "facing=east,occupied=true,part=head,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 270
+    },
+    "facing=north,occupied=false,part=foot,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 180
+    },
+    "facing=south,occupied=false,part=foot,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow"
+    },
+    "facing=west,occupied=false,part=foot,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 90
+    },
+    "facing=east,occupied=false,part=foot,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 270
+    },
+    "facing=north,occupied=true,part=foot,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 180
+    },
+    "facing=south,occupied=true,part=foot,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow"
+    },
+    "facing=west,occupied=true,part=foot,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 90
+    },
+    "facing=east,occupied=true,part=foot,waterlogged=false": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 270
+    },
+    "facing=north,occupied=false,part=head,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 180
+    },
+    "facing=south,occupied=false,part=head,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow"
+    },
+    "facing=west,occupied=false,part=head,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 90
+    },
+    "facing=east,occupied=false,part=head,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 270
+    },
+    "facing=north,occupied=true,part=head,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 180
+    },
+    "facing=south,occupied=true,part=head,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow"
+    },
+    "facing=west,occupied=true,part=head,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 90
+    },
+    "facing=east,occupied=true,part=head,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 270
+    },
+    "facing=north,occupied=false,part=foot,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 180
+    },
+    "facing=south,occupied=false,part=foot,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow"
+    },
+    "facing=west,occupied=false,part=foot,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 90
+    },
+    "facing=east,occupied=false,part=foot,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 270
+    },
+    "facing=north,occupied=true,part=foot,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 180
+    },
+    "facing=south,occupied=true,part=foot,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow"
+    },
+    "facing=west,occupied=true,part=foot,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 90
+    },
+    "facing=east,occupied=true,part=foot,waterlogged=true": {
+      "model": "embellishcraft:block/light_blue_pillow",
+      "y": 270
+    }
+  }
+}

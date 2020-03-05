@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:white_pillow"
+    },
+    {
+      "tag": "forge:dyes/purple"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:purple_pillow"
+  }
+}

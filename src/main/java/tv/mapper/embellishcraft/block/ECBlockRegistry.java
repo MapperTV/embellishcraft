@@ -1196,6 +1196,11 @@ public class ECBlockRegistry
             () -> new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Pillows
+    public static final Map<DyeColor, RegistryObject<PillowBlock>> PILLOW_BLOCKS = Arrays.stream(DyeColor.values()).map(
+        type -> Pair.of(type, BLOCKS.register(type.getName() + "_pillow", () -> new PillowBlock(type, Block.Properties.create(Material.WOOL).hardnessAndResistance(0.25F).sound(SoundType.CLOTH))))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
     public static void init()
     {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
