@@ -18,10 +18,12 @@ import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
+import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.LampBlock;
+import tv.mapper.embellishcraft.block.PlateBlock;
 import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
@@ -310,6 +312,15 @@ public class ECBlockStates extends BaseBlockStates
             couchBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), 90);
             tableLampBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get());
         }
+
+        plateBlock(ECBlockRegistry.PLATE.get());
+    }
+
+    protected void plateBlock(Block block)
+    {
+        VariantBlockStateBuilder builder = getVariantBuilder(block);
+        for(int i = 1; i < 9; i++)
+            builder.partialState().with(PlateBlock.PLATES, i).modelForState().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/plate_" + i)).addModel();
     }
 
     /**

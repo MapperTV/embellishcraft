@@ -25,6 +25,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
+import tv.mapper.embellishcraft.item.ECItemRegistry;
 
 public class PlateBlock extends Block implements IWaterLoggable
 {
@@ -45,12 +46,6 @@ public class PlateBlock extends Block implements IWaterLoggable
         super(properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(PLATES, 1).with(WATERLOGGED, Boolean.valueOf(false)));
     }
-
-    // @Override
-    // public boolean isSolid(BlockState state)
-    // {
-    // return false;
-    // }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
     {
@@ -83,12 +78,12 @@ public class PlateBlock extends Block implements IWaterLoggable
         if(!player.isCrouching() && state.get(PLATES) < 8)
         {
             ItemStack stack = ItemStack.EMPTY;
-            if(player.getHeldItemMainhand().getItem() == ECBlocks.PLATE.asItem())
+            if(player.getHeldItemMainhand().getItem() == ECItemRegistry.PLATE_ITEM.get())
                 stack = player.getHeldItemMainhand();
-            else if(player.getHeldItemOffhand().getItem() == ECBlocks.PLATE.asItem())
+            else if(player.getHeldItemOffhand().getItem() == ECItemRegistry.PLATE_ITEM.get())
                 stack = player.getHeldItemOffhand();
 
-            if(stack.getItem() == ECBlocks.PLATE.asItem())
+            if(stack.getItem() == ECItemRegistry.PLATE_ITEM.get())
             {
                 worldIn.setBlockState(pos, state.with(PLATES, state.get(PLATES) + 1));
                 if(!worldIn.isRemote)

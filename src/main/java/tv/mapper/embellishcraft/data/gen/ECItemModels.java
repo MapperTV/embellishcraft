@@ -150,6 +150,9 @@ public class ECItemModels extends BaseItemModels
             getBuilder(color + "_couch").parent(new UncheckedModelFile(modid + ":block/" + color + "_couch"));
             getBuilder(color + "_table_lamp").parent(new UncheckedModelFile(modid + ":block/" + color + "_table_lamp"));
         }
+
+        getBuilder("plate").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/plate"));
+
     }
 
     private void registerStone(String name)

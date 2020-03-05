@@ -1180,6 +1180,9 @@ public class ECBlockRegistry
             () -> new LampBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    public static final RegistryObject<PlateBlock> PLATE = BLOCKS.register("plate",
+        () -> new PlateBlock(Block.Properties.create(Material.GLASS, MaterialColor.QUARTZ).hardnessAndResistance(0.25F).sound(SoundType.GLASS)));
+
     public static void init()
     {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());

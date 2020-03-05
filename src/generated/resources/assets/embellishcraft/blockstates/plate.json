@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "plates=1": {
+      "model": "embellishcraft:block/plate_1"
+    },
+    "plates=2": {
+      "model": "embellishcraft:block/plate_2"
+    },
+    "plates=3": {
+      "model": "embellishcraft:block/plate_3"
+    },
+    "plates=4": {
+      "model": "embellishcraft:block/plate_4"
+    },
+    "plates=5": {
+      "model": "embellishcraft:block/plate_5"
+    },
+    "plates=6": {
+      "model": "embellishcraft:block/plate_6"
+    },
+    "plates=7": {
+      "model": "embellishcraft:block/plate_7"
+    },
+    "plates=8": {
+      "model": "embellishcraft:block/plate_8"
+    }
+  }
+}

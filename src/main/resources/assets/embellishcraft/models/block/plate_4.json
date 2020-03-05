@@ -1,8 +1,8 @@
 {
 	"ambientocclusion": false,
     "textures": {
-		"0": "embellishcraft:block/furniture/plate",
-		"particle": "embellishcraft:block/furniture/plate"
+		"0": "embellishcraft:block/plate",
+		"particle": "embellishcraft:block/plate"
 	},
 	"elements": [
 		{

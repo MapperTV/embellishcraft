@@ -546,6 +546,8 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), color + " Table Lamp");
                 }
 
+                addBlock(ECBlockRegistry.PLATE, "Plate");
+
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
             case "fr_fr":
@@ -1058,6 +1060,8 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), "Canapé " + frColorsM[j]);
                     addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), "Lampe de chevet " + frColors[j]);
                 }
+
+                addBlock(ECBlockRegistry.PLATE, "Assiette");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;

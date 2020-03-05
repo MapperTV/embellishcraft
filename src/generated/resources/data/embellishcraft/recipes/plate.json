@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "CWC",
+    " C "
+  ],
+  "key": {
+    "W": {
+      "tag": "forge:dyes/white"
+    },
+    "C": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:plate",
+    "count": 4
+  }
+}

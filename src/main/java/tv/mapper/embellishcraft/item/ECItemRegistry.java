@@ -1001,6 +1001,8 @@ public class ECItemRegistry
         ITEMS.register(type.getName() + "_table_lamp", () -> new BlockItem(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
             Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    public static final RegistryObject<Item> PLATE_ITEM = ITEMS.register("plate", () -> new BlockItem(ECBlockRegistry.PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

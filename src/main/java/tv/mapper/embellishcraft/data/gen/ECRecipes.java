@@ -1121,5 +1121,8 @@ public class ECRecipes extends RecipeProvider
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()).patternLine(" w ").patternLine("wgw").patternLine(" p ").key('g', Tags.Items.DUSTS_GLOWSTONE).key('p',
                 ItemTags.PLANKS).key('w', ECConstants.McWools[j]).addCriterion("has_" + DyeColor.byId(j).getName() + "_wool", this.hasItem(ECConstants.McWools[j])).build(consumer);
         }
+
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PLATE.get(), 4).key('W', Tags.Items.DYES_WHITE).key('C', Items.CLAY_BALL).patternLine(" C ").patternLine("CWC").patternLine(" C ").addCriterion(
+            "has_clay_ball", this.hasItem(Items.CLAY_BALL)).build(consumer);
     }
 }

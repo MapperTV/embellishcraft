@@ -2,10 +2,19 @@ package tv.mapper.embellishcraft.data.gen;
 
 import java.util.Arrays;
 
+import net.minecraft.advancements.criterion.StatePropertiesPredicate;
+import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
+import net.minecraft.world.storage.loot.ConstantRange;
+import net.minecraft.world.storage.loot.ItemLootEntry;
+import net.minecraft.world.storage.loot.LootPool;
+import net.minecraft.world.storage.loot.LootTable;
+import net.minecraft.world.storage.loot.conditions.BlockStateProperty;
+import net.minecraft.world.storage.loot.functions.SetCount;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.block.PlateBlock;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.gen.BaseLootTableProvider;
@@ -536,5 +545,27 @@ public class ECLootTables extends BaseLootTableProvider
             lootTables.put(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()));
         }
 
+        lootTables.put(ECBlockRegistry.PLATE.get(), createPlateTable(ECConstants.MODID, ECBlockRegistry.PLATE.get()));
+    }
+
+    protected LootTable.Builder createPlateTable(String modid, Block block)
+    {
+        String name = block.getRegistryName().toString().replace(modid + ":", "");
+        LootPool.Builder builder = LootPool.builder().name(name).rolls(ConstantRange.of(1)).addEntry(withExplosionDecay(block,
+            ItemLootEntry.builder(block).acceptFunction(SetCount.builder(ConstantRange.of(2)).acceptCondition(
+                BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 2)))).acceptFunction(
+                    SetCount.builder(ConstantRange.of(3)).acceptCondition(
+                        BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 3)))).acceptFunction(
+                            SetCount.builder(ConstantRange.of(4)).acceptCondition(
+                                BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 4)))).acceptFunction(
+                                    SetCount.builder(ConstantRange.of(5)).acceptCondition(
+                                        BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 5)))).acceptFunction(
+                                            SetCount.builder(ConstantRange.of(6)).acceptCondition(
+                                                BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 6)))).acceptFunction(
+                                                    SetCount.builder(ConstantRange.of(7)).acceptCondition(
+                                                        BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 7)))).acceptFunction(
+                                                            SetCount.builder(ConstantRange.of(8)).acceptCondition(
+                                                                BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 8))))));
+        return LootTable.builder().addLootPool(builder);
     }
 }

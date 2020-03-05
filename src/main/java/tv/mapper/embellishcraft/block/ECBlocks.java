@@ -27,7 +27,7 @@ import tv.mapper.mapperbase.block.CustomDoorBlock;
 @EventBusSubscriber(bus = Bus.MOD)
 public class ECBlocks
 {
-    public static final Block PLATE = null;
+//    public static final Block PLATE = null;
 
     public static final Block BROWN_OAK_FANCY_BED = null;
     public static final Block BLACK_OAK_FANCY_BED = null;
@@ -226,7 +226,7 @@ public class ECBlocks
 
         }
 
-        event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS, MaterialColor.QUARTZ).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
+//        event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS, MaterialColor.QUARTZ).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
 
         for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
         {
@@ -283,7 +283,7 @@ public class ECBlocks
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
-        event.getRegistry().register(new BlockItem(PLATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PLATE.getRegistryName()));
+        // event.getRegistry().register(new BlockItem(PLATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PLATE.getRegistryName()));
 
         // for(Block block : FANCY_BEDS_TEISR)
         // event.getRegistry().register(
