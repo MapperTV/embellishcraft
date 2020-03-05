@@ -27,8 +27,6 @@ import tv.mapper.mapperbase.block.CustomDoorBlock;
 @EventBusSubscriber(bus = Bus.MOD)
 public class ECBlocks
 {
-//    public static final Block PLATE = null;
-
     public static final Block BROWN_OAK_FANCY_BED = null;
     public static final Block BLACK_OAK_FANCY_BED = null;
     public static final Block BLUE_OAK_FANCY_BED = null;
@@ -153,12 +151,12 @@ public class ECBlocks
 
     // Doors
 
-    public static final Block OAK_FANCY_DOOR = null;
-    public static final Block BIRCH_FANCY_DOOR = null;
-    public static final Block SPRUCE_FANCY_DOOR = null;
-    public static final Block JUNGLE_FANCY_DOOR = null;
-    public static final Block DARK_OAK_FANCY_DOOR = null;
-    public static final Block ACACIA_FANCY_DOOR = null;
+    // public static final Block OAK_FANCY_DOOR = null;
+    // public static final Block BIRCH_FANCY_DOOR = null;
+    // public static final Block SPRUCE_FANCY_DOOR = null;
+    // public static final Block JUNGLE_FANCY_DOOR = null;
+    // public static final Block DARK_OAK_FANCY_DOOR = null;
+    // public static final Block ACACIA_FANCY_DOOR = null;
 
     public static final Block STEEL_DOOR = null;
     public static final Block STURDY_STEEL_DOOR = null;
@@ -173,12 +171,12 @@ public class ECBlocks
     // Stairs
 
     public static final Block STEEL_SUSPENDED_STAIRS = null;
-    public static final Block OAK_SUSPENDED_STAIRS = null;
-    public static final Block BIRCH_SUSPENDED_STAIRS = null;
-    public static final Block SPRUCE_SUSPENDED_STAIRS = null;
-    public static final Block JUNGLE_SUSPENDED_STAIRS = null;
-    public static final Block DARK_OAK_SUSPENDED_STAIRS = null;
-    public static final Block ACACIA_SUSPENDED_STAIRS = null;
+    // public static final Block OAK_SUSPENDED_STAIRS = null;
+    // public static final Block BIRCH_SUSPENDED_STAIRS = null;
+    // public static final Block SPRUCE_SUSPENDED_STAIRS = null;
+    // public static final Block JUNGLE_SUSPENDED_STAIRS = null;
+    // public static final Block DARK_OAK_SUSPENDED_STAIRS = null;
+    // public static final Block ACACIA_SUSPENDED_STAIRS = null;
 
     // Storage
 
@@ -212,10 +210,12 @@ public class ECBlocks
 
         for(int i = 0; i < 6; i++)
         {
-            event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                WoodsType.byId(i).getName() + "_fancy_door"));
-            event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE).setRegistryName(
-                WoodsType.byId(i).getName() + "_suspended_stairs"));
+            // event.getRegistry().register(new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD),
+            // ToolType.AXE).setRegistryName(
+            // WoodsType.byId(i).getName() + "_fancy_door"));
+            // event.getRegistry().register(new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD),
+            // ToolType.AXE).setRegistryName(
+            // WoodsType.byId(i).getName() + "_suspended_stairs"));
             // event.getRegistry().register(
             // block = new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY, WoodType.byId(i)).setRegistryName(
             // WoodType.byId(i).getName() + "_fancy_chest"));
@@ -226,7 +226,7 @@ public class ECBlocks
 
         }
 
-//        event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS, MaterialColor.QUARTZ).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
+        // event.getRegistry().register(new PlateBlock(Block.Properties.create(Material.GLASS, MaterialColor.QUARTZ).hardnessAndResistance(0.25F).sound(SoundType.GLASS)).setRegistryName("plate"));
 
         for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
         {
@@ -311,17 +311,18 @@ public class ECBlocks
 
         // Door
 
-        event.getRegistry().register(new FuelBlockItem(OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(OAK_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BIRCH_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(BIRCH_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(SPRUCE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(SPRUCE_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(JUNGLE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(JUNGLE_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(DARK_OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(DARK_OAK_FANCY_DOOR.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(ACACIA_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(ACACIA_FANCY_DOOR.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.doorBurnTime).setRegistryName(OAK_FANCY_DOOR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(BIRCH_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(BIRCH_FANCY_DOOR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(SPRUCE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(SPRUCE_FANCY_DOOR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(JUNGLE_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(JUNGLE_FANCY_DOOR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(DARK_OAK_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(DARK_OAK_FANCY_DOOR.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(ACACIA_FANCY_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime).setRegistryName(ACACIA_FANCY_DOOR.getRegistryName()));
 
         event.getRegistry().register(new BlockItem(STEEL_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_DOOR.getRegistryName()));
         event.getRegistry().register(new BlockItem(STURDY_STEEL_DOOR, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STURDY_STEEL_DOOR.getRegistryName()));
@@ -336,18 +337,23 @@ public class ECBlocks
         // Stairs
 
         event.getRegistry().register(new BlockItem(STEEL_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(STEEL_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(OAK_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(BIRCH_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(BIRCH_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(SPRUCE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(SPRUCE_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(JUNGLE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(JUNGLE_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(new FuelBlockItem(DARK_OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(
-            DARK_OAK_SUSPENDED_STAIRS.getRegistryName()));
-        event.getRegistry().register(
-            new FuelBlockItem(ACACIA_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(ACACIA_SUSPENDED_STAIRS.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.suspendedStairBurnTime).setRegistryName(OAK_SUSPENDED_STAIRS.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(BIRCH_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.suspendedStairBurnTime).setRegistryName(BIRCH_SUSPENDED_STAIRS.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(SPRUCE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.suspendedStairBurnTime).setRegistryName(SPRUCE_SUSPENDED_STAIRS.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(JUNGLE_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.suspendedStairBurnTime).setRegistryName(JUNGLE_SUSPENDED_STAIRS.getRegistryName()));
+        // event.getRegistry().register(new FuelBlockItem(DARK_OAK_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime).setRegistryName(
+        // DARK_OAK_SUSPENDED_STAIRS.getRegistryName()));
+        // event.getRegistry().register(
+        // new FuelBlockItem(ACACIA_SUSPENDED_STAIRS, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT),
+        // ECConstants.suspendedStairBurnTime).setRegistryName(ACACIA_SUSPENDED_STAIRS.getRegistryName()));
 
         // Chests
 

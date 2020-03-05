@@ -1107,6 +1107,11 @@ public class ECRecipes extends RecipeProvider
                     this.hasItem(ECConstants.McWoodenPressures[j])).build(consumer);
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get(), 2).key('W', ECConstants.McWoodenPlanks[j]).key('S', ECConstants.McWoodenLogs[j]).patternLine(
                 "WWW").patternLine("S S").patternLine("S S").setGroup("fancy_tables").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), 3).key('P', ECConstants.McWoodenPlanks[j]).key('B', ECConstants.McWoodenButtons[j]).patternLine(
+                "PP").patternLine("PB").patternLine("PP").setGroup("fancy_doors").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), 6).key('P', ECConstants.McWoodenPlanks[j]).key('S', Tags.Items.RODS_WOODEN).patternLine(
+                "  P").patternLine(" PS").patternLine("PS ").setGroup("suspended_stairs").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(
+                    consumer);
         }
 
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_TERRACE_CHAIR.get()).key('W', BaseTags.ForgeItems.PLATES_STEEL).key('S', BaseTags.ForgeItems.RODS_STEEL).patternLine("S  ").patternLine(

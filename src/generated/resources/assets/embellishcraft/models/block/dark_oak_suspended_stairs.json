@@ -1,0 +1,6 @@
+{
+  "parent": "embellishcraft:block/suspended_stairs",
+  "textures": {
+    "all": "block/dark_oak_planks"
+  }
+}

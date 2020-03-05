@@ -8,6 +8,7 @@ import net.minecraft.item.DyeColor;
 import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.BaseTags;
 
@@ -212,5 +213,12 @@ public class ECBlockTags extends BlockTagsProvider
             ECBlockRegistry.PINK_WALLPAPER_STAIRS.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get());
         this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(),
             ECBlockRegistry.PINK_WALLPAPER_SLAB.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get());
+
+        // Doors
+        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        {
+            this.getBuilder(BlockTags.WOODEN_DOORS).add(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get());
+            this.getBuilder(BlockTags.DOORS).add(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get());
+        }
     }
 }

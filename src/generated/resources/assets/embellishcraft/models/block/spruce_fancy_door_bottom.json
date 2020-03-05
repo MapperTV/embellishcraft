@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "embellishcraft:block/spruce_fancy_door_bottom",
+    "top": "embellishcraft:block/spruce_fancy_door_top"
+  }
+}

@@ -25,6 +25,7 @@ import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.block.AllRotationBlock;
 import tv.mapper.mapperbase.block.CustomBlock;
 import tv.mapper.mapperbase.block.CustomButtonBlock;
+import tv.mapper.mapperbase.block.CustomDoorBlock;
 import tv.mapper.mapperbase.block.CustomLadderBlock;
 import tv.mapper.mapperbase.block.CustomPressurePlateBlock;
 import tv.mapper.mapperbase.block.CustomSlabBlock;
@@ -1182,6 +1183,18 @@ public class ECBlockRegistry
 
     public static final RegistryObject<PlateBlock> PLATE = BLOCKS.register("plate",
         () -> new PlateBlock(Block.Properties.create(Material.GLASS, MaterialColor.QUARTZ).hardnessAndResistance(0.25F).sound(SoundType.GLASS)));
+
+    // Stairs
+    public static final Map<McWoods, RegistryObject<SuspendedStairsBlock>> SUSPENDED_STAIRS_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_suspended_stairs",
+            () -> new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    // Doors
+    public static final Map<McWoods, RegistryObject<CustomDoorBlock>> FANCY_DOOR_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_fancy_door",
+            () -> new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static void init()
     {

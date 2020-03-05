@@ -212,6 +212,14 @@ public class ECBlockModels extends BlockModelProvider
             buildTableLamp(DyeColor.byId(j).getName());
             buildCouch(DyeColor.byId(j).getName());
         }
+
+        // Suspended stairs
+        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        {
+            getBuilder(McWoods.byId(j).getName() + "_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all",
+                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+        }
+
     }
 
     private void buildCouch(String color)

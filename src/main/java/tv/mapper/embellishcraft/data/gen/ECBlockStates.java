@@ -314,6 +314,14 @@ public class ECBlockStates extends BaseBlockStates
         }
 
         plateBlock(ECBlockRegistry.PLATE.get());
+
+        // Suspended stairs and fancy doors
+        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        {
+            horizontalBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(ECConstants.MODID + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"), 0);
+            doorBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_bottom"),
+                modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_top"));
+        }
     }
 
     protected void plateBlock(Block block)

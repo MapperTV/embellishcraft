@@ -24,6 +24,7 @@ public class ECItemTags extends ItemTagsProvider
         copy(BlockTags.WALLS, ItemTags.WALLS);
         copy(BaseTags.ForgeBlocks.PRESSURE_PLATES, BaseTags.ForgeItems.PRESSURE_PLATES);
         copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
-
+        copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);
+        copy(BlockTags.DOORS, ItemTags.DOORS);
     }
 }

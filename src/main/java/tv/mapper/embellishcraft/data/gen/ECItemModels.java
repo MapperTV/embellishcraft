@@ -153,6 +153,13 @@ public class ECItemModels extends BaseItemModels
 
         getBuilder("plate").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/plate"));
 
+        // Suspended stairs
+        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        {
+            getBuilder(McWoods.byId(j).getName() + "_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"));
+            getBuilder(McWoods.byId(j).getName() + "_fancy_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getName() + "_fancy_door"));
+
+        }
     }
 
     private void registerStone(String name)

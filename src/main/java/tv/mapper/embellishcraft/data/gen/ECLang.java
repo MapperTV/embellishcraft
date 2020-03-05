@@ -24,6 +24,8 @@ public class ECLang extends LanguageProvider
     @Override
     protected void addTranslations()
     {
+        String name;
+
         switch(lang)
         {
             default:
@@ -516,34 +518,35 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS, "White / Green Wallpaper Stairs");
                 addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH, "White / Green Wallpaper With Plinth");
 
-                // Furniture
-                String lang;
+                // Furniture, doors, suspended stairs
                 for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
                 {
-                    lang = McWoods.byId(j).getName("en_us");
+                    name = McWoods.byId(j).getName("en_us");
 
-                    addBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)), lang + " Chair");
-                    addBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)), lang + " Terrace Chair");
-                    addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), lang + " Table");
-                    addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), lang + " Fancy Table");
-                    addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), lang + " Terrace Table");
+                    addBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)), name + " Chair");
+                    addBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)), name + " Terrace Chair");
+                    addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), name + " Table");
+                    addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), name + " Fancy Table");
+                    addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), name + " Terrace Table");
+                    addBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)), name + " Fancy Door");
+                    addBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)), name + " Suspended Stairs");
                 }
 
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Steel Terrace Chair");
                 addBlock(ECBlockRegistry.STEEL_TERRACE_TABLE, "Steel Terrace Table");
 
-                String color;
+                name = "";
 
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
                     String raw[] = DyeColor.byId(j).getName().split("_");
                     if(raw[0] == "light")
-                        color = StringUtils.capitalise(raw[0]) + " " + StringUtils.capitalise(raw[1]);
+                        name = StringUtils.capitalise(raw[0]) + " " + StringUtils.capitalise(raw[1]);
                     else
-                        color = StringUtils.capitalise(raw[0]);
+                        name = StringUtils.capitalise(raw[0]);
 
-                    addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), color + " Couch");
-                    addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), color + " Table Lamp");
+                    addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), name + " Couch");
+                    addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), name + " Table Lamp");
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Plate");
@@ -1045,11 +1048,15 @@ public class ECLang extends LanguageProvider
                 // Furniture
                 for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
                 {
-                    addBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)), "Chaise en " + McWoods.byId(j).getName("fr_fr"));
-                    addBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)), "Chaise de terrasse en " + McWoods.byId(j).getName("fr_fr"));
-                    addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), "Table en " + McWoods.byId(j).getName("fr_fr"));
-                    addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), "Table massive en " + McWoods.byId(j).getName("fr_fr"));
-                    addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), "Table de terrase en " + McWoods.byId(j).getName("fr_fr"));
+                    name = McWoods.byId(j).getName("fr_fr");
+
+                    addBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)), "Chaise en " + name);
+                    addBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)), "Chaise de terrasse en " + name);
+                    addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), "Table en " + name);
+                    addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), "Table massive en " + name);
+                    addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), "Table de terrase en " + name);
+                    addBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)), "Porte massive en " + name);
+                    addBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)), "Escaliers suspendus en " + name);
                 }
 
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Chaise de terrasse en acier");
