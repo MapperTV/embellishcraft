@@ -518,7 +518,7 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS, "White / Green Wallpaper Stairs");
                 addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH, "White / Green Wallpaper With Plinth");
 
-                // Furniture, doors, suspended stairs
+                // Furniture, doors, suspended stairs, wooden crates
                 for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
                 {
                     name = McWoods.byId(j).getName("en_us");
@@ -530,6 +530,8 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), name + " Terrace Table");
                     addBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)), name + " Fancy Door");
                     addBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)), name + " Suspended Stairs");
+                    addBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), name + " Wooden Crate");
+
                 }
 
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Steel Terrace Chair");
@@ -551,6 +553,8 @@ public class ECLang extends LanguageProvider
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Plate");
+
+                add("embellishcraft.container.wooden_crate", "Wooden Crate");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
@@ -1058,6 +1062,7 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), "Table de terrase en " + name);
                     addBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)), "Porte massive en " + name);
                     addBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)), "Escaliers suspendus en " + name);
+                    addBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), "Caisse en " + name);
                 }
 
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Chaise de terrasse en acier");
@@ -1071,6 +1076,8 @@ public class ECLang extends LanguageProvider
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Assiette");
+
+                add("embellishcraft.container.wooden_crate", "Caisse en bois");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;

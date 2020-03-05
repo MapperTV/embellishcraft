@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:acacia_wooden_crate",
+    "embellishcraft:birch_wooden_crate",
+    "embellishcraft:dark_oak_wooden_crate",
+    "embellishcraft:jungle_wooden_crate",
+    "embellishcraft:oak_wooden_crate",
+    "embellishcraft:spruce_wooden_crate"
+  ]
+}

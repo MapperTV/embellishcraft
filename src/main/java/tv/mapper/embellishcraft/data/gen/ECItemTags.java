@@ -5,6 +5,7 @@ import net.minecraft.data.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
+import tv.mapper.embellishcraft.data.ECTags;
 import tv.mapper.mapperbase.data.BaseTags;
 
 public class ECItemTags extends ItemTagsProvider
@@ -26,5 +27,6 @@ public class ECItemTags extends ItemTagsProvider
         copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
         copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);
         copy(BlockTags.DOORS, ItemTags.DOORS);
+        copy(ECTags.Blocks.WOODEN_CRATES, ECTags.Items.WOODEN_CRATES);
     }
 }

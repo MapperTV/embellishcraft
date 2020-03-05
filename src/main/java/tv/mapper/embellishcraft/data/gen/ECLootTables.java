@@ -7,12 +7,17 @@ import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
 import net.minecraft.world.storage.loot.ConstantRange;
+import net.minecraft.world.storage.loot.DynamicLootEntry;
 import net.minecraft.world.storage.loot.ItemLootEntry;
 import net.minecraft.world.storage.loot.LootPool;
 import net.minecraft.world.storage.loot.LootTable;
 import net.minecraft.world.storage.loot.conditions.BlockStateProperty;
+import net.minecraft.world.storage.loot.functions.CopyName;
+import net.minecraft.world.storage.loot.functions.CopyNbt;
+import net.minecraft.world.storage.loot.functions.SetContents;
 import net.minecraft.world.storage.loot.functions.SetCount;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.block.CrateBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.PlateBlock;
 import tv.mapper.embellishcraft.util.McWoods;
@@ -536,6 +541,8 @@ public class ECLootTables extends BaseLootTableProvider
             lootTables.put(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get(),
+                createCrateTable(McWoods.byId(j).getName() + "_wooden_crate", ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get()));
         }
 
         lootTables.put(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.STEEL_TERRACE_CHAIR.get()));
@@ -569,6 +576,14 @@ public class ECLootTables extends BaseLootTableProvider
                                                         BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 7)))).acceptFunction(
                                                             SetCount.builder(ConstantRange.of(8)).acceptCondition(
                                                                 BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 8))))));
+        return LootTable.builder().addLootPool(builder);
+    }
+
+    protected LootTable.Builder createCrateTable(String name, Block block)
+    {
+        LootPool.Builder builder = LootPool.builder().name(name).rolls(ConstantRange.of(1)).addEntry(ItemLootEntry.builder(block).acceptFunction(CopyName.builder(CopyName.Source.BLOCK_ENTITY)).acceptFunction(
+            CopyNbt.builder(CopyNbt.Source.BLOCK_ENTITY).replaceOperation("Lock", "BlockEntityTag.Lock").replaceOperation("LootTable", "BlockEntityTag.LootTable").replaceOperation("LootTableSeed",
+                "BlockEntityTag.LootTableSeed")).acceptFunction(SetContents.func_215920_b().func_216075_a(DynamicLootEntry.func_216162_a(CrateBlock.CONTENTS))));
         return LootTable.builder().addLootPool(builder);
     }
 }

@@ -1021,6 +1021,12 @@ public class ECItemRegistry
             () -> new FuelBlockItem(ECBlockRegistry.PILLOW_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Crates
+    public static final Map<McWoods, RegistryObject<BlockItem>> WOODEN_CRATE_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_wooden_crate",
+            () -> new BlockItem(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1))))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

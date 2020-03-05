@@ -17,7 +17,6 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.item.ModItemGroups;
-import tv.mapper.embellishcraft.util.WoodsType;
 import tv.mapper.mapperbase.block.CustomDoorBlock;
 
 @ObjectHolder(ECConstants.MODID)
@@ -186,12 +185,12 @@ public class ECBlocks
 
     public static final Block LOCKER = null;
 
-    public static final Block OAK_WOODEN_CRATE = null;
-    public static final Block BIRCH_WOODEN_CRATE = null;
-    public static final Block SPRUCE_WOODEN_CRATE = null;
-    public static final Block JUNGLE_WOODEN_CRATE = null;
-    public static final Block DARK_OAK_WOODEN_CRATE = null;
-    public static final Block ACACIA_WOODEN_CRATE = null;
+    // public static final Block OAK_WOODEN_CRATE = null;
+    // public static final Block BIRCH_WOODEN_CRATE = null;
+    // public static final Block SPRUCE_WOODEN_CRATE = null;
+    // public static final Block JUNGLE_WOODEN_CRATE = null;
+    // public static final Block DARK_OAK_WOODEN_CRATE = null;
+    // public static final Block ACACIA_WOODEN_CRATE = null;
 
     // Lists
 
@@ -218,8 +217,9 @@ public class ECBlocks
             // WoodType.byId(i).getName() + "_fancy_chest"));
             // FANCY_CHESTS.add(block);
 
-            event.getRegistry().register(
-                new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName(WoodsType.byId(i).getName() + "_wooden_crate"));
+            // event.getRegistry().register(
+            // new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName(WoodsType.byId(i).getName() +
+            // "_wooden_crate"));
 
         }
 
@@ -384,12 +384,17 @@ public class ECBlocks
         // event.getRegistry().register(
         // new BlockItem(LOCKER, new Item.Properties().setTEISR(() -> VerticalChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LOCKER.getRegistryName()));
 
-        event.getRegistry().register(new BlockItem(OAK_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(OAK_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(new BlockItem(BIRCH_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(BIRCH_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(new BlockItem(SPRUCE_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(SPRUCE_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(new BlockItem(JUNGLE_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(JUNGLE_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(new BlockItem(DARK_OAK_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(DARK_OAK_WOODEN_CRATE.getRegistryName()));
-        event.getRegistry().register(new BlockItem(ACACIA_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(ACACIA_WOODEN_CRATE.getRegistryName()));
+        // event.getRegistry().register(new BlockItem(OAK_WOODEN_CRATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(OAK_WOODEN_CRATE.getRegistryName()));
+        // event.getRegistry().register(new BlockItem(BIRCH_WOODEN_CRATE, new
+        // Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(BIRCH_WOODEN_CRATE.getRegistryName()));
+        // event.getRegistry().register(new BlockItem(SPRUCE_WOODEN_CRATE, new
+        // Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(SPRUCE_WOODEN_CRATE.getRegistryName()));
+        // event.getRegistry().register(new BlockItem(JUNGLE_WOODEN_CRATE, new
+        // Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(JUNGLE_WOODEN_CRATE.getRegistryName()));
+        // event.getRegistry().register(new BlockItem(DARK_OAK_WOODEN_CRATE, new
+        // Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(DARK_OAK_WOODEN_CRATE.getRegistryName()));
+        // event.getRegistry().register(new BlockItem(ACACIA_WOODEN_CRATE, new
+        // Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1)).setRegistryName(ACACIA_WOODEN_CRATE.getRegistryName()));
 
     }
 }

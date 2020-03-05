@@ -302,6 +302,8 @@ public class ECBlockStates extends BaseBlockStates
             tableBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get());
             tableBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get());
             simpleBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get());
+            simpleBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get());
+
         }
 
         simpleBlock(ECBlockRegistry.STEEL_TERRACE_TABLE.get());

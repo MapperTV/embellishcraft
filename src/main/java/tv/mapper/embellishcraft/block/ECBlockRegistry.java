@@ -1201,6 +1201,11 @@ public class ECBlockRegistry
         type -> Pair.of(type, BLOCKS.register(type.getName() + "_pillow", () -> new PillowBlock(type, Block.Properties.create(Material.WOOL).hardnessAndResistance(0.25F).sound(SoundType.CLOTH))))).collect(
             Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Crates
+    public static final Map<McWoods, RegistryObject<CrateBlock>> WOODEN_CRATE_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_wooden_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD))))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
     public static void init()
     {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());

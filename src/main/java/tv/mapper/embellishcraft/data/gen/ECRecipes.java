@@ -1112,6 +1112,8 @@ public class ECRecipes extends RecipeProvider
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), 6).key('P', ECConstants.McWoodenPlanks[j]).key('S', Tags.Items.RODS_WOODEN).patternLine(
                 "  P").patternLine(" PS").patternLine("PS ").setGroup("suspended_stairs").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(
                     consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get()).key('B', BaseItems.BOLT).key('W', ECConstants.McWoodenPlanks[j]).patternLine("BWB").patternLine(
+                "W W").patternLine("BWB").setGroup("wooden_crates").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
         }
 
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_TERRACE_CHAIR.get()).key('W', BaseTags.ForgeItems.PLATES_STEEL).key('S', BaseTags.ForgeItems.RODS_STEEL).patternLine("S  ").patternLine(
