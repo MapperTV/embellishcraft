@@ -221,6 +221,8 @@ public class ECBlockTags extends BlockTagsProvider
             this.getBuilder(BlockTags.WOODEN_DOORS).add(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get());
             this.getBuilder(BlockTags.DOORS).add(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get());
             this.getBuilder(ECTags.Blocks.WOODEN_CRATES).add(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get());
+            this.getBuilder(Tags.Blocks.CHESTS).add(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get());
+            this.getBuilder(Tags.Blocks.CHESTS_WOODEN).add(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get());
         }
 
         // Doors
