@@ -20,8 +20,11 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.init.ModTileEntityTypes;
+import tv.mapper.embellishcraft.util.CustomChestType;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
+import tv.mapper.embellishcraft.util.WoodsType;
 import tv.mapper.mapperbase.block.AllRotationBlock;
 import tv.mapper.mapperbase.block.CustomBlock;
 import tv.mapper.mapperbase.block.CustomButtonBlock;
@@ -1229,6 +1232,13 @@ public class ECBlockRegistry
     public static final Map<McWoods, RegistryObject<CrateBlock>> WOODEN_CRATE_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
         BLOCKS.register(type.getName() + "_wooden_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD))))).collect(
             Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    // Chests
+    public static final Map<McWoods, RegistryObject<CustomChestBlock>> FANCY_CHEST_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_fancy_chest", () -> new CustomChestBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), () ->
+        {
+            return ModTileEntityTypes.CUSTOM_CHEST;
+        }, CustomChestType.OAK_FANCY, WoodsType.byId(type.getId()))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static void init()
     {

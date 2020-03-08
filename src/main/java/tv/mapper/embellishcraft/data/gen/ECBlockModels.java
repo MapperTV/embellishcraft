@@ -215,11 +215,35 @@ public class ECBlockModels extends BlockModelProvider
                 "particle", new ResourceLocation("block/" + DyeColor.byId(j).getName() + "_wool"));
         }
 
-        // Suspended stairs
+        // Suspended stairs, chests
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
             getBuilder(McWoods.byId(j).getName() + "_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all",
                 new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+            // getBuilder(McWoods.byId(j).getName() + "_fancy_chest").texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+            getBuilder(McWoods.byId(j).getName() + "_fancy_chest").parent(getExistingFile(modLoc("block/chest"))).texture("particle",
+                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("front",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_front")).texture("side",
+                        new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side")).texture("top",
+                            new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_top")).texture("bottom",
+                                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_bottom")).texture("lock",
+                                    new ResourceLocation(ECConstants.MODID, "block/air_duct")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+            getBuilder(McWoods.byId(j).getName() + "_fancy_chest_left").parent(getExistingFile(modLoc("block/chest_left"))).texture("particle",
+                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("front",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_front_right")).texture("side",
+                        new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side")).texture("top",
+                            new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_top_right")).texture("bottom",
+                                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_bottom_right")).texture("back",
+                                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side_left")).texture("lock",
+                                        new ResourceLocation(ECConstants.MODID, "block/air_duct"));
+            getBuilder(McWoods.byId(j).getName() + "_fancy_chest_right").parent(getExistingFile(modLoc("block/chest_right"))).texture("particle",
+                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("front",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_front_left")).texture("side",
+                        new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side")).texture("top",
+                            new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_top_left")).texture("bottom",
+                                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_bottom_left")).texture("back",
+                                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side_right")).texture("lock",
+                                        new ResourceLocation(ECConstants.MODID, "block/air_duct"));
         }
 
         getBuilder("steel_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all", new ResourceLocation(ECConstants.MODID, "block/steel_beam"));

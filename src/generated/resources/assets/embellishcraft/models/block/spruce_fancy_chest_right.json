@@ -1,0 +1,12 @@
+{
+  "parent": "embellishcraft:block/chest_right",
+  "textures": {
+    "particle": "block/spruce_planks",
+    "front": "embellishcraft:block/spruce_fancy_chest_front_left",
+    "side": "embellishcraft:block/spruce_fancy_chest_side",
+    "top": "embellishcraft:block/spruce_fancy_chest_top_left",
+    "bottom": "embellishcraft:block/spruce_fancy_chest_bottom_left",
+    "back": "embellishcraft:block/spruce_fancy_chest_side_right",
+    "lock": "embellishcraft:block/air_duct"
+  }
+}

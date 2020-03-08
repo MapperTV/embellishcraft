@@ -1,0 +1,11 @@
+{
+  "parent": "embellishcraft:block/chest",
+  "textures": {
+    "particle": "block/dark_oak_planks",
+    "front": "embellishcraft:block/dark_oak_fancy_chest_front",
+    "side": "embellishcraft:block/dark_oak_fancy_chest_side",
+    "top": "embellishcraft:block/dark_oak_fancy_chest_top",
+    "bottom": "embellishcraft:block/dark_oak_fancy_chest_bottom",
+    "lock": "embellishcraft:block/air_duct"
+  }
+}

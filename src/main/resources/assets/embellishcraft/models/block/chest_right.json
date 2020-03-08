@@ -1,0 +1,27 @@
+{
+    "parent": "block/cube_all",
+	"ambientocclusion": false,
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [16, 14, 15],
+			"faces": {
+				"north": {"uv": [1, 1, 15, 15], "texture": "#back"},
+				"south": {"uv": [1, 1, 15, 15], "texture": "#front"},
+				"west": {"uv": [1, 1, 15, 15], "texture": "#side"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#top"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#bottom"}
+			}
+		},
+		{
+			"from": [15, 7, 15],
+			"to": [16, 11, 16],
+			"faces": {
+				"south": {"uv": [0, 0, 2, 4], "texture": "#lock"},
+				"west": {"uv": [0, 0, 1, 4], "texture": "#lock"},
+				"up": {"uv": [0, 0, 2, 1], "texture": "#lock"},
+				"down": {"uv": [0, 0, 2, 1], "texture": "#lock"}
+			}
+		}
+	]
+}

@@ -160,6 +160,7 @@ public class ECItemModels extends BaseItemModels
             getBuilder(McWoods.byId(j).getName() + "_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"));
             getBuilder(McWoods.byId(j).getName() + "_fancy_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getName() + "_fancy_door"));
             getBuilder(McWoods.byId(j).getName() + "_wooden_crate").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_wooden_crate"));
+            getBuilder(McWoods.byId(j).getName() + "_fancy_chest").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_fancy_chest"));
         }
 
         getBuilder("steel_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/steel_suspended_stairs"));

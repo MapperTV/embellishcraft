@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=north,type=SINGLE": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest",
+      "y": 180
+    },
+    "facing=south,type=SINGLE": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest"
+    },
+    "facing=west,type=SINGLE": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest",
+      "y": 90
+    },
+    "facing=east,type=SINGLE": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest",
+      "y": 270
+    },
+    "facing=north,type=LEFT": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest_left",
+      "y": 180
+    },
+    "facing=south,type=LEFT": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest_left"
+    },
+    "facing=west,type=LEFT": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest_left",
+      "y": 90
+    },
+    "facing=east,type=LEFT": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest_left",
+      "y": 270
+    },
+    "facing=north,type=RIGHT": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest_right",
+      "y": 180
+    },
+    "facing=south,type=RIGHT": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest_right"
+    },
+    "facing=west,type=RIGHT": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest_right",
+      "y": 90
+    },
+    "facing=east,type=RIGHT": {
+      "model": "embellishcraft:block/dark_oak_fancy_chest_right",
+      "y": 270
+    }
+  }
+}

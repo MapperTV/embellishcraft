@@ -5,12 +5,14 @@ import java.util.function.Function;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ChestBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.WallBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.state.properties.ChestType;
 import net.minecraft.state.properties.StairsShape;
 import net.minecraft.util.Direction;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -303,7 +305,9 @@ public class ECBlockStates extends BaseBlockStates
             tableBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get());
             simpleBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get());
             simpleBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get());
-
+            // getVariantBuilder(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get()).partialState().setModels(
+            // new ConfiguredModel(new UncheckedModelFile(ECConstants.MODID + ":model/" + McWoods.byId(j).getName() + "_fancy_chest")));
+            chestBlock(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get(), 0);
         }
 
         simpleBlock(ECBlockRegistry.STEEL_TERRACE_TABLE.get());
@@ -408,6 +412,25 @@ public class ECBlockStates extends BaseBlockStates
                 CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.OUTER_RIGHT).end();
             builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/inner_" + name)).rotationY(((int)(dir.getHorizontalAngle() + 90 + offset) % 360)).uvLock(true).addModel().condition(
                 CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.INNER_RIGHT).end();
+        }
+    }
+
+    protected void chestBlock(ChestBlock block, int offset)
+    {
+        String raw[] = block.getRegistryName().toString().split(":");
+        String name = raw[1];
+        VariantBlockStateBuilder builder = getVariantBuilder(block);
+        String model;
+
+        for(Direction dir : Direction.Plane.HORIZONTAL)
+        {
+            for(ChestType type : ChestType.VALUES)
+            {
+                model = type == ChestType.SINGLE ? ECConstants.MODID + ":block/" + name : type == ChestType.LEFT ? ECConstants.MODID + ":block/" + name + "_left" : ECConstants.MODID + ":block/" + name + "_right";
+
+                builder.partialState().with(ChestBlock.TYPE, type).with(ChestBlock.FACING, dir).modelForState().modelFile(new UncheckedModelFile(model)).rotationY(
+                    (int)((dir.getHorizontalAngle() + offset) % 360)).addModel();
+            }
         }
     }
 
