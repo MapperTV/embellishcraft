@@ -246,6 +246,16 @@ public class ECBlockModels extends BlockModelProvider
                                         new ResourceLocation(ECConstants.MODID, "block/air_duct"));
         }
 
+        getBuilder("locker_small").parent(getExistingFile(modLoc("block/locker"))).texture("front", new ResourceLocation(ECConstants.MODID, "block/locker_front_small")).texture("side",
+            new ResourceLocation(ECConstants.MODID, "block/locker_side_bottom")).texture("top", new ResourceLocation(ECConstants.MODID, "block/locker_top")).texture("bottom",
+                new ResourceLocation(ECConstants.MODID, "block/locker_bottom")).texture("particle", new ResourceLocation(ECConstants.MODID, "block/locker_side_bottom"));
+        getBuilder("locker_top").parent(getExistingFile(modLoc("block/locker"))).texture("front", new ResourceLocation(ECConstants.MODID, "block/locker_front_top")).texture("side",
+            new ResourceLocation(ECConstants.MODID, "block/locker_side_top")).texture("top", new ResourceLocation(ECConstants.MODID, "block/locker_top")).texture("bottom",
+                new ResourceLocation(ECConstants.MODID, "block/locker_bottom")).texture("particle", new ResourceLocation(ECConstants.MODID, "block/locker_side_top"));
+        getBuilder("locker_bottom").parent(getExistingFile(modLoc("block/locker"))).texture("front", new ResourceLocation(ECConstants.MODID, "block/locker_front_bottom")).texture("side",
+            new ResourceLocation(ECConstants.MODID, "block/locker_side_bottom")).texture("top", new ResourceLocation(ECConstants.MODID, "block/locker_top")).texture("bottom",
+                new ResourceLocation(ECConstants.MODID, "block/locker_bottom")).texture("particle", new ResourceLocation(ECConstants.MODID, "block/locker_side_bottom"));
+
         getBuilder("steel_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all", new ResourceLocation(ECConstants.MODID, "block/steel_beam"));
         getBuilder("rusty_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all", new ResourceLocation(ECConstants.MODID, "block/rust"));
     }

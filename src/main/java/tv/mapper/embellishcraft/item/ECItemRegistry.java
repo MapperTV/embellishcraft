@@ -1055,6 +1055,8 @@ public class ECItemRegistry
             () -> new FuelBlockItem(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chestBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    public static final RegistryObject<Item> LOCKER_ITEM = ITEMS.register("locker", () -> new BlockItem(ECBlockRegistry.LOCKER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

@@ -533,6 +533,9 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), name + " Wooden Crate");
                     addBlock(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)), name + " Fancy Chest");
                 }
+                
+                addBlock(ECBlockRegistry.LOCKER, "Locker");
+
 
                 addBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS, "Steel Suspended Stairs");
                 addBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS, "Rusty Suspended Stairs");
@@ -1078,6 +1081,7 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), "Caisse en " + name);
                     addBlock(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)), "Coffre massif en " + name);
                 }
+                addBlock(ECBlockRegistry.LOCKER, "Casier");
 
                 addBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS, "Escaliers suspendus en acier");
                 addBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS, "Escaliers suspendus rouillés");

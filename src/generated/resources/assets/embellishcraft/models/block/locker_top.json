@@ -1,0 +1,10 @@
+{
+  "parent": "embellishcraft:block/locker",
+  "textures": {
+    "front": "embellishcraft:block/locker_front_top",
+    "side": "embellishcraft:block/locker_side_top",
+    "top": "embellishcraft:block/locker_top",
+    "bottom": "embellishcraft:block/locker_bottom",
+    "particle": "embellishcraft:block/locker_side_top"
+  }
+}

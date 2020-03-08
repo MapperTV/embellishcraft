@@ -1117,6 +1117,8 @@ public class ECRecipes extends RecipeProvider
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get()).key('C', Blocks.CHEST).key('W', ECConstants.McWoodenSlabs[j]).patternLine(" W ").patternLine(
                 "WCW").patternLine(" W ").setGroup("fancy_chests").addCriterion("has_chest", this.hasItem(Blocks.CHEST)).build(consumer);
         }
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.LOCKER.get()).key('P', BaseTags.ForgeItems.PLATES_STEEL).key('I', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("PPP").patternLine("P P").patternLine(
+            "PIP").addCriterion("has_steel_ingot", this.hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), 6).key('P', BaseTags.ForgeItems.PLATES_STEEL).key('S', BaseTags.ForgeItems.RODS_STEEL).patternLine("  P").patternLine(
             " PS").patternLine("PS ").addCriterion("has_steel_plate", this.hasItem(BaseTags.ForgeItems.PLATES_STEEL)).build(consumer);

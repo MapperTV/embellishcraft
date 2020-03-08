@@ -1240,6 +1240,9 @@ public class ECBlockRegistry
             return ModTileEntityTypes.CUSTOM_CHEST;
         }, CustomChestType.OAK_FANCY, WoodsType.byId(type.getId()))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    public static final RegistryObject<VerticalChestBlock> LOCKER = BLOCKS.register("locker",
+        () -> new VerticalChestBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.5F).sound(SoundType.METAL)));
+
     public static void init()
     {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
