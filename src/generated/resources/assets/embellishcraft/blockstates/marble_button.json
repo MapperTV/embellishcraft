@@ -1,115 +1,115 @@
 {
   "variants": {
-    "face=FLOOR,facing=north,powered=false": {
+    "face=floor,facing=north,powered=false": {
       "model": "embellishcraft:block/marble_button"
     },
-    "face=WALL,facing=north,powered=false": {
+    "face=wall,facing=north,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "x": 90,
       "uvlock": true
     },
-    "face=CEILING,facing=north,powered=false": {
+    "face=ceiling,facing=north,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "x": 180
     },
-    "face=FLOOR,facing=south,powered=false": {
+    "face=floor,facing=south,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "y": 180
     },
-    "face=WALL,facing=south,powered=false": {
+    "face=wall,facing=south,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "x": 90,
       "y": 180,
       "uvlock": true
     },
-    "face=CEILING,facing=south,powered=false": {
+    "face=ceiling,facing=south,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "x": 180,
       "y": 180
     },
-    "face=FLOOR,facing=west,powered=false": {
+    "face=floor,facing=west,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "y": 270
     },
-    "face=WALL,facing=west,powered=false": {
+    "face=wall,facing=west,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "x": 90,
       "y": 270,
       "uvlock": true
     },
-    "face=CEILING,facing=west,powered=false": {
+    "face=ceiling,facing=west,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "x": 180,
       "y": 270
     },
-    "face=FLOOR,facing=east,powered=false": {
+    "face=floor,facing=east,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "y": 90
     },
-    "face=WALL,facing=east,powered=false": {
+    "face=wall,facing=east,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "x": 90,
       "y": 90,
       "uvlock": true
     },
-    "face=CEILING,facing=east,powered=false": {
+    "face=ceiling,facing=east,powered=false": {
       "model": "embellishcraft:block/marble_button",
       "x": 180,
       "y": 90
     },
-    "face=FLOOR,facing=north,powered=true": {
+    "face=floor,facing=north,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed"
     },
-    "face=WALL,facing=north,powered=true": {
+    "face=wall,facing=north,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "x": 90,
       "uvlock": true
     },
-    "face=CEILING,facing=north,powered=true": {
+    "face=ceiling,facing=north,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "x": 180
     },
-    "face=FLOOR,facing=south,powered=true": {
+    "face=floor,facing=south,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "y": 180
     },
-    "face=WALL,facing=south,powered=true": {
+    "face=wall,facing=south,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "x": 90,
       "y": 180,
       "uvlock": true
     },
-    "face=CEILING,facing=south,powered=true": {
+    "face=ceiling,facing=south,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "x": 180,
       "y": 180
     },
-    "face=FLOOR,facing=west,powered=true": {
+    "face=floor,facing=west,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "y": 270
     },
-    "face=WALL,facing=west,powered=true": {
+    "face=wall,facing=west,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "x": 90,
       "y": 270,
       "uvlock": true
     },
-    "face=CEILING,facing=west,powered=true": {
+    "face=ceiling,facing=west,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "x": 180,
       "y": 270
     },
-    "face=FLOOR,facing=east,powered=true": {
+    "face=floor,facing=east,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "y": 90
     },
-    "face=WALL,facing=east,powered=true": {
+    "face=wall,facing=east,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "x": 90,
       "y": 90,
       "uvlock": true
     },
-    "face=CEILING,facing=east,powered=true": {
+    "face=ceiling,facing=east,powered=true": {
       "model": "embellishcraft:block/marble_button_pressed",
       "x": 180,
       "y": 90

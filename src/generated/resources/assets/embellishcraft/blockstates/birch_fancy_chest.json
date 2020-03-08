@@ -1,47 +1,47 @@
 {
   "variants": {
-    "facing=north,type=SINGLE": {
+    "facing=north,type=single": {
       "model": "embellishcraft:block/birch_fancy_chest",
       "y": 180
     },
-    "facing=south,type=SINGLE": {
+    "facing=south,type=single": {
       "model": "embellishcraft:block/birch_fancy_chest"
     },
-    "facing=west,type=SINGLE": {
+    "facing=west,type=single": {
       "model": "embellishcraft:block/birch_fancy_chest",
       "y": 90
     },
-    "facing=east,type=SINGLE": {
+    "facing=east,type=single": {
       "model": "embellishcraft:block/birch_fancy_chest",
       "y": 270
     },
-    "facing=north,type=LEFT": {
+    "facing=north,type=left": {
       "model": "embellishcraft:block/birch_fancy_chest_left",
       "y": 180
     },
-    "facing=south,type=LEFT": {
+    "facing=south,type=left": {
       "model": "embellishcraft:block/birch_fancy_chest_left"
     },
-    "facing=west,type=LEFT": {
+    "facing=west,type=left": {
       "model": "embellishcraft:block/birch_fancy_chest_left",
       "y": 90
     },
-    "facing=east,type=LEFT": {
+    "facing=east,type=left": {
       "model": "embellishcraft:block/birch_fancy_chest_left",
       "y": 270
     },
-    "facing=north,type=RIGHT": {
+    "facing=north,type=right": {
       "model": "embellishcraft:block/birch_fancy_chest_right",
       "y": 180
     },
-    "facing=south,type=RIGHT": {
+    "facing=south,type=right": {
       "model": "embellishcraft:block/birch_fancy_chest_right"
     },
-    "facing=west,type=RIGHT": {
+    "facing=west,type=right": {
       "model": "embellishcraft:block/birch_fancy_chest_right",
       "y": 90
     },
-    "facing=east,type=RIGHT": {
+    "facing=east,type=right": {
       "model": "embellishcraft:block/birch_fancy_chest_right",
       "y": 270
     }

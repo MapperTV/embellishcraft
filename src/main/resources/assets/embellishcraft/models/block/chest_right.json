@@ -6,11 +6,11 @@
 			"from": [1, 0, 1],
 			"to": [16, 14, 15],
 			"faces": {
-				"north": {"uv": [1, 1, 15, 15], "texture": "#back"},
-				"south": {"uv": [1, 1, 15, 15], "texture": "#front"},
+				"north": {"uv": [0, 1, 15, 15], "texture": "#back"},
+				"south": {"uv": [1, 1, 16, 15], "texture": "#front"},
 				"west": {"uv": [1, 1, 15, 15], "texture": "#side"},
-				"up": {"uv": [1, 1, 15, 15], "texture": "#top"},
-				"down": {"uv": [1, 1, 15, 15], "texture": "#bottom"}
+				"up": {"uv": [1, 1, 16, 15], "texture": "#top"},
+				"down": {"uv": [1, 1, 16, 15], "texture": "#bottom"}
 			}
 		},
 		{
