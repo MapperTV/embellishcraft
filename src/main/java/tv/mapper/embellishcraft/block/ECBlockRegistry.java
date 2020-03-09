@@ -1176,7 +1176,7 @@ public class ECBlockRegistry
 
     public static final Map<DyeColor, RegistryObject<CouchBlock>> COUCH_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
         BLOCKS.register(type.getName() + "_couch",
-            () -> new CouchBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
+            () -> new CouchBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.CLOTH), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<DyeColor, RegistryObject<LampBlock>> TABLE_LAMP_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
