@@ -258,6 +258,17 @@ public class ECBlockModels extends BlockModelProvider
 
         getBuilder("steel_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all", new ResourceLocation(ECConstants.MODID, "block/steel_beam"));
         getBuilder("rusty_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all", new ResourceLocation(ECConstants.MODID, "block/rust"));
+
+        // Beds
+        getBuilder("black_oak_fancy_bed_head").parent(getExistingFile(modLoc("block/fancy_bed_head"))).texture("head", new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_head")).texture(
+            "head_side", new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_head_side")).texture("head_end",
+                new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_head_end")).texture("under", new ResourceLocation("block/oak_planks")).texture("particle",
+                    new ResourceLocation("block/oak_planks"));
+        getBuilder("black_oak_fancy_bed_foot").parent(getExistingFile(modLoc("block/fancy_bed_foot"))).texture("foot", new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_foot")).texture(
+            "foot_side", new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_foot_side")).texture("foot_end",
+                new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_foot_end")).texture("under", new ResourceLocation("block/oak_planks")).texture("particle",
+                    new ResourceLocation("block/oak_planks"));
+
     }
 
     private void buildCouch(String color)

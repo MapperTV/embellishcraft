@@ -1057,6 +1057,10 @@ public class ECItemRegistry
 
     public static final RegistryObject<Item> LOCKER_ITEM = ITEMS.register("locker", () -> new BlockItem(ECBlockRegistry.LOCKER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    // Beds
+    public static final RegistryObject<FuelBlockItem> BLACK_OAK_FANCY_BED_ITEM = ITEMS.register("black_oak_fancy_bed",
+        () -> new FuelBlockItem(ECBlockRegistry.BLACK_OAK_FANCY_BED.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime));
+
     public static void init()
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

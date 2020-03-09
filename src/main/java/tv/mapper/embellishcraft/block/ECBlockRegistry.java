@@ -1243,6 +1243,10 @@ public class ECBlockRegistry
     public static final RegistryObject<VerticalChestBlock> LOCKER = BLOCKS.register("locker",
         () -> new VerticalChestBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.5F).sound(SoundType.METAL)));
 
+    // Beds
+    public static final RegistryObject<CustomBedBlock> BLACK_OAK_FANCY_BED = BLOCKS.register("black_oak_fancy_bed",
+        () -> new CustomBedBlock(DyeColor.BLACK, WoodsType.OAK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)));
+
     public static void init()
     {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());

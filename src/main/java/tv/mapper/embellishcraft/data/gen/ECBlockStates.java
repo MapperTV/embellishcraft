@@ -3,6 +3,7 @@ package tv.mapper.embellishcraft.data.gen;
 import java.util.Arrays;
 import java.util.function.Function;
 
+import net.minecraft.block.BedBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ChestBlock;
@@ -11,6 +12,7 @@ import net.minecraft.block.StairsBlock;
 import net.minecraft.block.WallBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
+import net.minecraft.state.properties.BedPart;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.ChestType;
 import net.minecraft.state.properties.StairsShape;
@@ -346,6 +348,9 @@ public class ECBlockStates extends BaseBlockStates
         doorBlock(ECBlockRegistry.RUSTY_DOOR.get(), modLoc("block/rusty_door_bottom"), modLoc("block/rusty_door_top"));
         doorBlock(ECBlockRegistry.STURDY_RUSTY_DOOR.get(), modLoc("block/sturdy_rusty_door_bottom"), modLoc("block/sturdy_rusty_door_top"));
         doorBlock(ECBlockRegistry.WARNING_RUSTY_DOOR.get(), modLoc("block/warning_rusty_door_bottom"), modLoc("block/warning_rusty_door_top"));
+
+        // Beds
+        bedBlock(ECBlockRegistry.BLACK_OAK_FANCY_BED.get(), 180);
     }
 
     protected void plateBlock(Block block)
@@ -418,6 +423,25 @@ public class ECBlockStates extends BaseBlockStates
         }
     }
 
+    protected void bedBlock(BedBlock block, int offset)
+    {
+        String raw[] = block.getRegistryName().toString().split(":");
+        String name = raw[1];
+        VariantBlockStateBuilder builder = getVariantBuilder(block);
+        String model;
+
+        for(Direction dir : Direction.Plane.HORIZONTAL)
+        {
+            for(BedPart type : BedPart.values())
+            {
+                model = type == BedPart.HEAD ? ECConstants.MODID + ":block/" + name + "_head" : ECConstants.MODID + ":block/" + name + "_foot";
+
+                builder.partialState().with(BedBlock.PART, type).with(ChestBlock.FACING, dir).modelForState().modelFile(new UncheckedModelFile(model)).rotationY(
+                    (int)((dir.getHorizontalAngle() + offset) % 360)).addModel();
+            }
+        }
+    }
+
     protected void chestBlock(ChestBlock block, int offset)
     {
         String raw[] = block.getRegistryName().toString().split(":");
@@ -448,7 +472,7 @@ public class ECBlockStates extends BaseBlockStates
         {
             for(VerticalChestType type : VerticalChestType.VALUES)
             {
-                model = type == VerticalChestType.SINGLE ? ECConstants.MODID + ":block/" + name + "_small": type == VerticalChestType.TOP ? ECConstants.MODID + ":block/" + name + "_top" : ECConstants.MODID + ":block/" + name + "_bottom";
+                model = type == VerticalChestType.SINGLE ? ECConstants.MODID + ":block/" + name + "_small" : type == VerticalChestType.TOP ? ECConstants.MODID + ":block/" + name + "_top" : ECConstants.MODID + ":block/" + name + "_bottom";
 
                 builder.partialState().with(VerticalChestBlock.TYPE, type).with(ChestBlock.FACING, dir).modelForState().modelFile(new UncheckedModelFile(model)).rotationY(
                     (int)((dir.getHorizontalAngle() + offset) % 360)).addModel();
