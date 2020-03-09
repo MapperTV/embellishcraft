@@ -533,9 +533,8 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), name + " Wooden Crate");
                     addBlock(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)), name + " Fancy Chest");
                 }
-                
-                addBlock(ECBlockRegistry.LOCKER, "Locker");
 
+                addBlock(ECBlockRegistry.LOCKER, "Locker");
 
                 addBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS, "Steel Suspended Stairs");
                 addBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS, "Rusty Suspended Stairs");
@@ -571,6 +570,13 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.WARNING_RUSTY_DOOR, "Warning Rusty Door");
 
                 add("embellishcraft.container.wooden_crate", "Wooden Crate");
+
+                add("embellishcraft.container.locker", "Locker");
+                add("embellishcraft.container.locker_tall", "Tall Locker");
+                add("embellishcraft.message.locker.lock", "This locker is now locked!");
+                add("embellishcraft.message.locker.unlock", "This locker is now unlocked!");
+                add("embellishcraft.message.locker.wrong", "This locker is now yours!");
+                add("embellishcraft.message.locker.locked", "This locker is locked.");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;
@@ -1109,6 +1115,13 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.WARNING_RUSTY_DOOR, "Porte renforcée rouillée avec avertissement");
 
                 add("embellishcraft.container.wooden_crate", "Caisse en bois");
+
+                add("embellishcraft.container.locker", "Casier");
+                add("embellishcraft.container.locker_tall", "Grand casier");
+                add("embellishcraft.message.locker.lock", "Ce casier est maintenant verouillé!");
+                add("embellishcraft.message.locker.unlock", "Ce casier est maintenant déverouillé!");
+                add("embellishcraft.message.locker.wrong", "Ce casier n'est pas à vous!");
+                add("embellishcraft.message.locker.locked", "Ce casier est verouillé.");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
                 break;

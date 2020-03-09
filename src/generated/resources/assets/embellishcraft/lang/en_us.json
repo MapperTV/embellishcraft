@@ -779,6 +779,12 @@
   "block.embellishcraft.yellow_tiles_slab": "Yellow Tiles Slab",
   "block.embellishcraft.yellow_tiles_stairs": "Yellow Tiles Stairs",
   "block.embellishcraft.yellow_tiles_wall": "Yellow Tiles Wall",
+  "embellishcraft.container.locker": "Locker",
+  "embellishcraft.container.locker_tall": "Tall Locker",
   "embellishcraft.container.wooden_crate": "Wooden Crate",
+  "embellishcraft.message.locker.lock": "This locker is now locked!",
+  "embellishcraft.message.locker.locked": "This locker is locked.",
+  "embellishcraft.message.locker.unlock": "This locker is now unlocked!",
+  "embellishcraft.message.locker.wrong": "This locker is now yours!",
   "itemGroup.embellishcraft_group": "EmbellishCraft"
 }

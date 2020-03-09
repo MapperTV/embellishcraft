@@ -779,6 +779,12 @@
   "block.embellishcraft.yellow_tiles_slab": "Dalle en carrelage jaune",
   "block.embellishcraft.yellow_tiles_stairs": "Escalier en carrelage jaune",
   "block.embellishcraft.yellow_tiles_wall": "Muret en carrelage jaune",
+  "embellishcraft.container.locker": "Casier",
+  "embellishcraft.container.locker_tall": "Grand casier",
   "embellishcraft.container.wooden_crate": "Caisse en bois",
+  "embellishcraft.message.locker.lock": "Ce casier est maintenant verouill\u00E9!",
+  "embellishcraft.message.locker.locked": "Ce casier est verouill\u00E9.",
+  "embellishcraft.message.locker.unlock": "Ce casier est maintenant d\u00E9verouill\u00E9!",
+  "embellishcraft.message.locker.wrong": "Ce casier n'est pas \u00E0 vous!",
   "itemGroup.embellishcraft_group": "EmbellishCraft"
 }
