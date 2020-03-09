@@ -20,7 +20,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.init.ModTileEntityTypes;
+import tv.mapper.embellishcraft.tileentity.ModTileEntityTypes;
 import tv.mapper.embellishcraft.util.CustomChestType;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
@@ -1244,8 +1244,31 @@ public class ECBlockRegistry
         () -> new VerticalChestBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.5F).sound(SoundType.METAL)));
 
     // Beds
-    public static final RegistryObject<CustomBedBlock> BLACK_OAK_FANCY_BED = BLOCKS.register("black_oak_fancy_bed",
-        () -> new CustomBedBlock(DyeColor.BLACK, WoodsType.OAK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F)));
+    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> OAK_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_oak_fancy_bed", () -> new CustomBedBlock(type, WoodsType.OAK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> BIRCH_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_birch_fancy_bed", () -> new CustomBedBlock(type, WoodsType.BIRCH, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> SPRUCE_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(
+        type -> Pair.of(type,
+            BLOCKS.register(type.getName() + "_spruce_fancy_bed",
+                () -> new CustomBedBlock(type, WoodsType.SPRUCE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+                    Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> JUNGLE_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(
+        type -> Pair.of(type,
+            BLOCKS.register(type.getName() + "_jungle_fancy_bed",
+                () -> new CustomBedBlock(type, WoodsType.JUNGLE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+                    Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> DARK_OAK_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_dark_oak_fancy_bed",
+            () -> new CustomBedBlock(type, WoodsType.DARK_OAK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> ACACIA_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(
+        type -> Pair.of(type,
+            BLOCKS.register(type.getName() + "_acacia_fancy_bed",
+                () -> new CustomBedBlock(type, WoodsType.ACACIA, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+                    Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static void init()
     {

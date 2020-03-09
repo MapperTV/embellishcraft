@@ -10,7 +10,6 @@ import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import tv.mapper.embellishcraft.init.ModContainers;
 
 public class CrateContainer extends Container
 {

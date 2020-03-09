@@ -1,0 +1,10 @@
+{
+  "parent": "embellishcraft:block/fancy_bed_head",
+  "textures": {
+    "head": "embellishcraft:block/brown_dark_oak_fancy_bed_head",
+    "head_side": "embellishcraft:block/brown_dark_oak_fancy_bed_head_side",
+    "head_end": "embellishcraft:block/dark_oak_fancy_bed_head_end",
+    "under": "block/dark_oak_planks",
+    "particle": "block/dark_oak_planks"
+  }
+}

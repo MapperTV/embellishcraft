@@ -6,7 +6,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.block.CustomBedBlock;
-import tv.mapper.embellishcraft.init.ModTileEntityTypes;
 import tv.mapper.embellishcraft.util.WoodsType;
 
 public class CustomBedTileEntity extends TileEntity

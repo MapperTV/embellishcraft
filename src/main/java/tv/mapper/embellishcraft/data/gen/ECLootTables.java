@@ -559,6 +559,13 @@ public class ECLootTables extends BaseLootTableProvider
             lootTables.put(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get()));
             lootTables.put(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()));
             lootTables.put(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get()));
+
+            lootTables.put(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), createBedTable(ECConstants.MODID, ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), createBedTable(ECConstants.MODID, ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), createBedTable(ECConstants.MODID, ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), createBedTable(ECConstants.MODID, ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), createBedTable(ECConstants.MODID, ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), createBedTable(ECConstants.MODID, ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()));
         }
 
         lootTables.put(ECBlockRegistry.PLATE.get(), createPlateTable(ECConstants.MODID, ECBlockRegistry.PLATE.get()));

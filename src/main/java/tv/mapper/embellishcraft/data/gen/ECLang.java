@@ -547,7 +547,7 @@ public class ECLang extends LanguageProvider
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
                     String raw[] = DyeColor.byId(j).getName().split("_");
-                    if(raw[0] == "light")
+                    if(raw[0].equals("light"))
                         name = StringUtils.capitalise(raw[0]) + " " + StringUtils.capitalise(raw[1]);
                     else
                         name = StringUtils.capitalise(raw[0]);
@@ -555,6 +555,13 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), name + " Couch");
                     addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), name + " Table Lamp");
                     addBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)), name + " Pillow");
+
+                    addBlock(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Acacia Fancy Bed");
+                    addBlock(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Birch Fancy Bed");
+                    addBlock(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Jungle Fancy Bed");
+                    addBlock(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Dark Oak Fancy Bed");
+                    addBlock(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Oak Fancy Bed");
+                    addBlock(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Spruce Fancy Bed");
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Plate");
@@ -1100,6 +1107,13 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), "Canapé " + frColorsM[j]);
                     addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), "Lampe de chevet " + frColors[j]);
                     addBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)), "Coussin " + frColorsM[j]);
+
+                    addBlock(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois d'acajou");
+                    addBlock(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de bouleau");
+                    addBlock(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de jungle");
+                    addBlock(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de chêne sombre");
+                    addBlock(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de chêne");
+                    addBlock(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de sapin");
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Assiette");

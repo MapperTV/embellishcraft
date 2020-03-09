@@ -154,13 +154,19 @@ public class ECItemModels extends BaseItemModels
 
         getBuilder("plate").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/plate"));
 
-        // Suspended stairs, doors, crates
+        // Suspended stairs, doors, crates, beds
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
             getBuilder(McWoods.byId(j).getName() + "_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"));
             getBuilder(McWoods.byId(j).getName() + "_fancy_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getName() + "_fancy_door"));
             getBuilder(McWoods.byId(j).getName() + "_wooden_crate").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_wooden_crate"));
             getBuilder(McWoods.byId(j).getName() + "_fancy_chest").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_fancy_chest"));
+
+            for(int i = 0; i < Arrays.stream(DyeColor.values()).count(); i++)
+            {
+                getBuilder(DyeColor.byId(i).getName() + "_" + McWoods.byId(j).getName() + "_fancy_bed").parent(
+                    new UncheckedModelFile(modid + ":block/" + DyeColor.byId(i).getName() + "_" + McWoods.byId(j).getName() + "_fancy_bed_inventory"));
+            }
         }
         getBuilder("locker").parent(new UncheckedModelFile(modid + ":block/locker_small"));
 

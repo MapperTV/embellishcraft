@@ -1058,8 +1058,30 @@ public class ECItemRegistry
     public static final RegistryObject<Item> LOCKER_ITEM = ITEMS.register("locker", () -> new BlockItem(ECBlockRegistry.LOCKER.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     // Beds
-    public static final RegistryObject<FuelBlockItem> BLACK_OAK_FANCY_BED_ITEM = ITEMS.register("black_oak_fancy_bed",
-        () -> new FuelBlockItem(ECBlockRegistry.BLACK_OAK_FANCY_BED.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime));
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> OAK_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_oak_fancy_bed",
+            () -> new FuelBlockItem(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> BIRCH_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_birch_fancy_bed",
+            () -> new FuelBlockItem(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> SPRUCE_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_spruce_fancy_bed",
+            () -> new FuelBlockItem(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> JUNGLE_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_jungle_fancy_bed",
+            () -> new FuelBlockItem(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> DARK_OAK_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_dark_oak_fancy_bed",
+            () -> new FuelBlockItem(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> ACACIA_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_acacia_fancy_bed",
+            () -> new FuelBlockItem(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static void init()
     {

@@ -5,7 +5,6 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.block.CustomChestBlock;
-import tv.mapper.embellishcraft.init.ModTileEntityTypes;
 import tv.mapper.embellishcraft.util.WoodsType;
 
 public class CustomChestTileEntity extends ChestTileEntity

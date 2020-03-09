@@ -8,7 +8,6 @@ import net.minecraft.network.IPacket;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
-import tv.mapper.embellishcraft.init.ModEntities;
 
 public class EntityChair extends Entity
 {

@@ -24,7 +24,6 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import tv.mapper.embellishcraft.block.CrateBlock;
-import tv.mapper.embellishcraft.init.ModTileEntityTypes;
 import tv.mapper.embellishcraft.inventory.container.CrateContainer;
 
 public class CrateTileEntity extends LockableLootTileEntity implements ISidedInventory

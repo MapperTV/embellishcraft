@@ -1,0 +1,8 @@
+{
+  "parent": "embellishcraft:block/fancy_bed_inventory",
+  "textures": {
+    "bed": "embellishcraft:block/red_jungle_fancy_bed_head",
+    "end": "embellishcraft:block/jungle_fancy_bed_head_end",
+    "under": "block/jungle_planks"
+  }
+}

@@ -260,15 +260,30 @@ public class ECBlockModels extends BlockModelProvider
         getBuilder("rusty_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all", new ResourceLocation(ECConstants.MODID, "block/rust"));
 
         // Beds
-        getBuilder("black_oak_fancy_bed_head").parent(getExistingFile(modLoc("block/fancy_bed_head"))).texture("head", new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_head")).texture(
-            "head_side", new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_head_side")).texture("head_end",
-                new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_head_end")).texture("under", new ResourceLocation("block/oak_planks")).texture("particle",
-                    new ResourceLocation("block/oak_planks"));
-        getBuilder("black_oak_fancy_bed_foot").parent(getExistingFile(modLoc("block/fancy_bed_foot"))).texture("foot", new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_foot")).texture(
-            "foot_side", new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_foot_side")).texture("foot_end",
-                new ResourceLocation(ECConstants.MODID, "block/black_oak_fancy_bed_foot_end")).texture("under", new ResourceLocation("block/oak_planks")).texture("particle",
-                    new ResourceLocation("block/oak_planks"));
+        for(int i = 0; i < Arrays.stream(McWoods.values()).count(); i++)
+        {
+            for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+            {
+                buildBed(DyeColor.byId(j).getName(), McWoods.byId(i).getName());
+            }
+        }
+    }
 
+    private void buildBed(String color, String wood)
+    {
+        getBuilder(color + "_" + wood + "_fancy_bed_head").parent(getExistingFile(modLoc("block/fancy_bed_head"))).texture("head",
+            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_head")).texture("head_side",
+                new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_head_side")).texture("head_end",
+                    new ResourceLocation(ECConstants.MODID, "block/" + wood + "_fancy_bed_head_end")).texture("under", new ResourceLocation("block/" + wood + "_planks")).texture("particle",
+                        new ResourceLocation("block/" + wood + "_planks"));
+        getBuilder(color + "_" + wood + "_fancy_bed_foot").parent(getExistingFile(modLoc("block/fancy_bed_foot"))).texture("foot",
+            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_foot")).texture("foot_side",
+                new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_foot_side")).texture("foot_end",
+                    new ResourceLocation(ECConstants.MODID, "block/" + wood + "_fancy_bed_foot_end")).texture("under", new ResourceLocation("block/" + wood + "_planks")).texture("particle",
+                        new ResourceLocation("block/" + wood + "_planks"));
+        getBuilder(color + "_" + wood + "_fancy_bed_inventory").parent(getExistingFile(modLoc("block/fancy_bed_inventory"))).texture("bed",
+            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_head")).texture("end", new ResourceLocation(ECConstants.MODID, "block/" + wood + "_fancy_bed_head_end")).texture(
+                "under", new ResourceLocation("block/" + wood + "_planks"));
     }
 
     private void buildCouch(String color)

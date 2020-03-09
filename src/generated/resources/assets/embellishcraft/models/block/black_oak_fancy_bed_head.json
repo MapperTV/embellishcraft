@@ -3,7 +3,7 @@
   "textures": {
     "head": "embellishcraft:block/black_oak_fancy_bed_head",
     "head_side": "embellishcraft:block/black_oak_fancy_bed_head_side",
-    "head_end": "embellishcraft:block/black_oak_fancy_bed_head_end",
+    "head_end": "embellishcraft:block/oak_fancy_bed_head_end",
     "under": "block/oak_planks",
     "particle": "block/oak_planks"
   }

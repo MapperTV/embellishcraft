@@ -1,0 +1,8 @@
+{
+  "parent": "embellishcraft:block/fancy_bed_inventory",
+  "textures": {
+    "bed": "embellishcraft:block/yellow_oak_fancy_bed_head",
+    "end": "embellishcraft:block/oak_fancy_bed_head_end",
+    "under": "block/oak_planks"
+  }
+}

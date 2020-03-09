@@ -15,8 +15,8 @@ import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.client.gui.screen.inventory.CrateScreen;
 import tv.mapper.embellishcraft.client.gui.screen.inventory.VerticalChestScreen;
 import tv.mapper.embellishcraft.client.renderer.ChairEntityRenderer;
-import tv.mapper.embellishcraft.init.ModContainers;
-import tv.mapper.embellishcraft.init.ModEntities;
+import tv.mapper.embellishcraft.entity.ModEntities;
+import tv.mapper.embellishcraft.inventory.container.ModContainers;
 import tv.mapper.embellishcraft.util.McWoods;
 
 public class ClientProxy implements IProxy
