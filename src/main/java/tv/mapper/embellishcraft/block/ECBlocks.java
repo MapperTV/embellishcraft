@@ -118,42 +118,10 @@ public class ECBlocks
     // public static List<Block> FANCY_BEDS = new ArrayList<>();
     // public static List<Block> FANCY_BEDS_TEISR = new ArrayList<>();
 
-    // Storage
-
-    // public static final Block OAK_FANCY_CHEST = null;
-    // public static final Block BIRCH_FANCY_CHEST = null;
-    // public static final Block SPRUCE_FANCY_CHEST = null;
-    // public static final Block JUNGLE_FANCY_CHEST = null;
-    // public static final Block DARK_OAK_FANCY_CHEST = null;
-    // public static final Block ACACIA_FANCY_CHEST = null;
-
-    // public static final Block LOCKER = null;
-
-    // Lists
-
-    // public static List<Block> FANCY_CHESTS = new ArrayList<>();
-    // public static List<Block> RENDER_CUTOUT = new ArrayList<>(); // Contains all blocks using cutout render
-
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        // Furniture
-
         // Block block;
-
-        for(int i = 0; i < 6; i++)
-        {
-            // event.getRegistry().register(
-            // block = new CustomChestBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), CustomChestType.OAK_FANCY, WoodType.byId(i)).setRegistryName(
-            // WoodType.byId(i).getName() + "_fancy_chest"));
-            // FANCY_CHESTS.add(block);
-
-            // event.getRegistry().register(
-            // new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD)).setRegistryName(WoodsType.byId(i).getName() +
-            // "_wooden_crate"));
-
-        }
-
         // for(int i = 0; i < 6; i++)
         // {
         // for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
@@ -166,38 +134,14 @@ public class ECBlocks
         //
         // }
         // }
-
-        // event.getRegistry().register(new VerticalChestBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.5F).sound(SoundType.METAL)).setRegistryName("locker"));
-
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
-        // event.getRegistry().register(new BlockItem(PLATE, new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(PLATE.getRegistryName()));
-
         // for(Block block : FANCY_BEDS_TEISR)
         // event.getRegistry().register(
         // new FuelBlockItem(block, new Item.Properties().setTEISR(() -> CustomBedItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime).setRegistryName(
         // block.getRegistryName()));
-
-        // Chests
-
-        // event.getRegistry().register(new FuelBlockItem(OAK_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(
-        // ModItemGroups.EMBELLISHCRAFT), ECConstants.chestBurnTime).setRegistryName(OAK_FANCY_CHEST.getRegistryName()));
-        // event.getRegistry().register(new FuelBlockItem(BIRCH_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(
-        // ModItemGroups.EMBELLISHCRAFT), ECConstants.chestBurnTime).setRegistryName(BIRCH_FANCY_CHEST.getRegistryName()));
-        // event.getRegistry().register(new FuelBlockItem(SPRUCE_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(
-        // ModItemGroups.EMBELLISHCRAFT), ECConstants.chestBurnTime).setRegistryName(SPRUCE_FANCY_CHEST.getRegistryName()));
-        // event.getRegistry().register(new FuelBlockItem(JUNGLE_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(
-        // ModItemGroups.EMBELLISHCRAFT), ECConstants.chestBurnTime).setRegistryName(JUNGLE_FANCY_CHEST.getRegistryName()));
-        // event.getRegistry().register(new FuelBlockItem(DARK_OAK_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(
-        // ModItemGroups.EMBELLISHCRAFT), ECConstants.chestBurnTime).setRegistryName(DARK_OAK_FANCY_CHEST.getRegistryName()));
-        // event.getRegistry().register(new FuelBlockItem(ACACIA_FANCY_CHEST, new Item.Properties().setTEISR(() -> CustomChestItemStackTileEntityRenderer::new).group(
-        // ModItemGroups.EMBELLISHCRAFT), ECConstants.chestBurnTime).setRegistryName(ACACIA_FANCY_CHEST.getRegistryName()));
-        //
-        // event.getRegistry().register(
-        // new BlockItem(LOCKER, new Item.Properties().setTEISR(() -> VerticalChestItemStackTileEntityRenderer::new).group(ModItemGroups.EMBELLISHCRAFT)).setRegistryName(LOCKER.getRegistryName()));
-
     }
 }
