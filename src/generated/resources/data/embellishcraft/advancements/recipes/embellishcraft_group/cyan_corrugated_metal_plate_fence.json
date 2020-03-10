@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:cyan_corrugated_metal_plate_fence"
+    ]
+  },
+  "criteria": {
+    "has_cyan_corrugated_metal_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:cyan_corrugated_metal_plate"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:cyan_corrugated_metal_plate_fence"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cyan_corrugated_metal_plate",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -8,6 +8,7 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.FenceBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
@@ -916,26 +917,27 @@ public class ECBlockRegistry
         BLOCKS.register(type.getName() + "_corrugated_metal_plate",
             () -> new CustomBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
-
     public static final Map<DyeColor, RegistryObject<CustomStairsBlock>> CORRUGATED_METAL_PLATE_STAIRS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(
         type.getName() + "_corrugated_metal_plate_stairs",
         () -> new CustomStairsBlock(() -> CORRUGATED_METAL_PLATE_BLOCKS.get(type).get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-
     public static final Map<DyeColor, RegistryObject<CustomSlabBlock>> CORRUGATED_METAL_PLATE_SLABS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
         BLOCKS.register(type.getName() + "_corrugated_metal_plate_slab",
             () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
-
     public static final Map<DyeColor, RegistryObject<CustomWallBlock>> CORRUGATED_METAL_PLATE_WALLS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
         BLOCKS.register(type.getName() + "_corrugated_metal_plate_wall",
             () -> new CustomWallBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
-
     public static final Map<DyeColor, RegistryObject<CustomPressurePlateBlock>> CORRUGATED_METAL_PLATE_PRESSURE_PLATES = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
         BLOCKS.register(type.getName() + "_corrugated_metal_plate_pressure_plate",
             () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(
                 SoundType.METAL), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<FenceBlock>> CORRUGATED_METAL_PLATE_FENCES = Arrays.stream(DyeColor.values()).map(
+        type -> Pair.of(type,
+            BLOCKS.register(type.getName() + "_corrugated_metal_plate_fence",
+                () -> new FenceBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL))))).collect(
+                    Collectors.toMap(Pair::getKey, Pair::getValue));
 
     // Metal blocks
     public static final RegistryObject<CustomBlock> DARK_METAL_FLOOR = BLOCKS.register("dark_metal_floor",

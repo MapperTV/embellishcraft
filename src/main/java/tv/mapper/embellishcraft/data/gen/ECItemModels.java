@@ -77,22 +77,22 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("yellow_grey_tiles", true, true, true, true, true, false);
 
         // Corrugated metal plates
-        registerBlockBasics("black_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("blue_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("brown_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("cyan_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("gray_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("green_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("light_blue_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("light_gray_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("lime_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("magenta_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("orange_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("pink_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("purple_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("red_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("white_corrugated_metal_plate", true, true, true, true, true, false);
-        registerBlockBasics("yellow_corrugated_metal_plate", true, true, true, true, true, false);
+        registerBlockBasics("black_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("blue_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("brown_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("cyan_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("gray_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("green_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("light_blue_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("light_gray_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("lime_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("magenta_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("orange_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("pink_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("purple_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("red_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("white_corrugated_metal_plate", true, true, true, true, true, true);
+        registerBlockBasics("yellow_corrugated_metal_plate", true, true, true, true, true, true);
 
         // Metal blocks
 

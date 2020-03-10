@@ -200,6 +200,7 @@ public class ECBlockTags extends BlockTagsProvider
             this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get());
             this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get());
             this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get());
+            this.getBuilder(BlockTags.FENCES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get());
         }
 
         // Metal blocks

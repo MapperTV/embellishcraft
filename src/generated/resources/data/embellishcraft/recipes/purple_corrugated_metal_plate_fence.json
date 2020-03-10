@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:rods/steel"
+    },
+    "#": {
+      "item": "embellishcraft:purple_corrugated_metal_plate"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:purple_corrugated_metal_plate_fence",
+    "count": 6
+  }
+}

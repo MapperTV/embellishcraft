@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "embellishcraft:block/red_corrugated_metal_plate"
+  }
+}

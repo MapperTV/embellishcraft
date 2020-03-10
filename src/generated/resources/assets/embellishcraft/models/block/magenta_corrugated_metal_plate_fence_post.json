@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "embellishcraft:block/magenta_corrugated_metal_plate"
+  }
+}

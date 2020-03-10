@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "embellishcraft:block/purple_corrugated_metal_plate"
+  }
+}

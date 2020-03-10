@@ -832,25 +832,25 @@ public class ECItemRegistry
         ITEMS.register(type.getName() + "_corrugated_metal_plate",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
-
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_STAIRS_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
         ITEMS.register(type.getName() + "_corrugated_metal_plate_stairs",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
-
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_SLABS_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
         ITEMS.register(type.getName() + "_corrugated_metal_plate_slab",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
-
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_WALLS_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
         ITEMS.register(type.getName() + "_corrugated_metal_plate_wall",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
-
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_PRESSURE_PLATES_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
         ITEMS.register(type.getName() + "_corrugated_metal_plate_pressure_plate",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_FENCES_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_corrugated_metal_plate_fence",
+            () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     // Metal blocks

@@ -452,6 +452,7 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Stairs");
                     addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Wall");
                     addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Pressure Plate");
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Fence");
                 }
 
                 // Metal blocks
@@ -1003,16 +1004,17 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage jaune-gris");
 
                 // Corrugated metal plates
-                String frColors[] = {"blanche", "orange", "magenta", "bleu claire", "jaune", "vert claire", "rose", "grise", "gris claire", "cyan", "violette", "bleue", "marron", "verte", "rouge", "noire"};
+                String frColorsF[] = {"blanche", "orange", "magenta", "bleu claire", "jaune", "vert claire", "rose", "grise", "gris claire", "cyan", "violette", "bleue", "marron", "verte", "rouge", "noire"};
                 String frColorsM[] = {"blanc", "orange", "magenta", "bleu clair", "jaune", "vert clair", "rose", "gris", "gris clair", "cyan", "violet", "bleu", "marron", "vert", "rouge", "noir"};
 
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)), "Tôle ondulée " + frColors[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)), "Dalle en tôle ondulée " + frColors[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)), "Escalier en tôle ondulée " + frColors[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), "Muret en tôle ondulée " + frColors[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), "Plaque de pression en tôle ondulée " + frColors[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)), "Tôle ondulée " + frColorsF[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)), "Dalle en tôle ondulée " + frColorsF[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)), "Escalier en tôle ondulée " + frColorsF[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), "Muret en tôle ondulée " + frColorsF[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), "Plaque de pression en tôle ondulée " + frColorsF[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)), "Barrière en tôle ondulée " + frColorsF[j]);
                 }
 
                 // Metal blocks
@@ -1105,7 +1107,7 @@ public class ECLang extends LanguageProvider
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
                     addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), "Canapé " + frColorsM[j]);
-                    addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), "Lampe de chevet " + frColors[j]);
+                    addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), "Lampe de chevet " + frColorsF[j]);
                     addBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)), "Coussin " + frColorsM[j]);
 
                     addBlock(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois d'acajou");
