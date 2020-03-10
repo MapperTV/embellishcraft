@@ -6931,6 +6931,7 @@ a63c520eae7844dd697c8f434b921086cf6dce47 data\embellishcraft\tags\items\wooden_c
 cdb8f57fef10e46b2b0ae3a4bbf1a3e9358f4619 data\forge\tags\blocks\chests.json
 cdb8f57fef10e46b2b0ae3a4bbf1a3e9358f4619 data\forge\tags\blocks\chests\wooden.json
 cf27760c55a8fc018347fe288db36f562f1191ff data\forge\tags\blocks\cobblestone.json
+592417e0558620f6bd7a28c9beacd310333b7934 data\forge\tags\blocks\fences.json
 7539c604f3dd68a6e589cc957993f6f2b3354b0a data\forge\tags\blocks\fence_gates.json
 3d4e30ee72dccf1db950a1ea2b2c7cae861b9744 data\forge\tags\blocks\pressure_plates.json
 63f3aabf303f3243b2e1e4bd243902ef5d174baf data\forge\tags\blocks\stone.json

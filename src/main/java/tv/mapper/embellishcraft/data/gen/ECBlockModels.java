@@ -5,13 +5,13 @@ import java.util.Arrays;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.mapperbase.MapperBase;
+import tv.mapper.mapperbase.data.gen.BaseBlockModels;
 
-public class ECBlockModels extends BlockModelProvider
+public class ECBlockModels extends BaseBlockModels
 {
     public ECBlockModels(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper)
     {
@@ -266,26 +266,26 @@ public class ECBlockModels extends BlockModelProvider
         {
             for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
             {
-                buildBed(DyeColor.byId(j).getName(), McWoods.byId(i).getName());
+                buildBed(DyeColor.byId(j).getName(), McWoods.byId(i).getName(), "fancy_bed");
             }
         }
     }
 
-    private void buildBed(String color, String wood)
+    private void buildBed(String color, String wood, String name)
     {
-        getBuilder(color + "_" + wood + "_fancy_bed_head").parent(getExistingFile(modLoc("block/fancy_bed_head"))).texture("head",
-            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_head")).texture("head_side",
-                new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_head_side")).texture("head_end",
-                    new ResourceLocation(ECConstants.MODID, "block/" + wood + "_fancy_bed_head_end")).texture("under", new ResourceLocation("block/" + wood + "_planks")).texture("particle",
+        getBuilder(color + "_" + wood + "_" + name + "_head").parent(getExistingFile(modLoc("block/" + name + "_head"))).texture("head",
+            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_head")).texture("head_side",
+                new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_head_side")).texture("head_end",
+                    new ResourceLocation(ECConstants.MODID, "block/" + wood + "_" + name + "_head_end")).texture("under", new ResourceLocation("block/" + wood + "_planks")).texture("particle",
                         new ResourceLocation("block/" + wood + "_planks"));
-        getBuilder(color + "_" + wood + "_fancy_bed_foot").parent(getExistingFile(modLoc("block/fancy_bed_foot"))).texture("foot",
-            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_foot")).texture("foot_side",
-                new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_foot_side")).texture("foot_end",
-                    new ResourceLocation(ECConstants.MODID, "block/" + wood + "_fancy_bed_foot_end")).texture("under", new ResourceLocation("block/" + wood + "_planks")).texture("particle",
+        getBuilder(color + "_" + wood + "_" + name + "_foot").parent(getExistingFile(modLoc("block/" + name + "_foot"))).texture("foot",
+            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_foot")).texture("foot_side",
+                new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_foot_side")).texture("foot_end",
+                    new ResourceLocation(ECConstants.MODID, "block/" + wood + "_" + name + "_foot_end")).texture("under", new ResourceLocation("block/" + wood + "_planks")).texture("particle",
                         new ResourceLocation("block/" + wood + "_planks"));
-        getBuilder(color + "_" + wood + "_fancy_bed_inventory").parent(getExistingFile(modLoc("block/fancy_bed_inventory"))).texture("bed",
-            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_fancy_bed_head")).texture("end", new ResourceLocation(ECConstants.MODID, "block/" + wood + "_fancy_bed_head_end")).texture(
-                "under", new ResourceLocation("block/" + wood + "_planks"));
+        getBuilder(color + "_" + wood + "_" + name + "_inventory").parent(getExistingFile(modLoc("block/" + name + "_inventory"))).texture("bed",
+            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_head")).texture("end",
+                new ResourceLocation(ECConstants.MODID, "block/" + wood + "_" + name + "_head_end")).texture("under", new ResourceLocation("block/" + wood + "_planks"));
     }
 
     private void buildCouch(String color)
