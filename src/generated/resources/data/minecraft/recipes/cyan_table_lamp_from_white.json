@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:white_table_lamp"
+    },
+    {
+      "tag": "forge:dyes/cyan"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:cyan_table_lamp"
+  }
+}

@@ -1161,6 +1161,31 @@ public class ECRecipes extends RecipeProvider
                 DyeColor.byId(j).getTag()).addCriterion("has_white_pillow", this.hasItem(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(0)).get())).build(consumer,
                     DyeColor.byId(j).getName() + "_pillow_from_white");
 
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get()).addIngredient(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(0)).get()).addIngredient(
+                DyeColor.byId(j).getTag()).addCriterion("has_white_couch", this.hasItem(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(0)).get())).build(consumer,
+                    DyeColor.byId(j).getName() + "_couch_from_white");
+
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()).addIngredient(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(0)).get()).addIngredient(
+                DyeColor.byId(j).getTag()).addCriterion("has_white_table_lamp", this.hasItem(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(0)).get())).build(consumer,
+                    DyeColor.byId(j).getName() + "_table_lamp_from_white");
+
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get()).addIngredient(
+                ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(0)).get()).addIngredient(DyeColor.byId(j).getTag()).addCriterion("has_white_corrugated_metal_plate",
+                    this.hasItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(0)).get())).build(consumer, DyeColor.byId(j).getName() + "_corrugated_metal_plate_from_white");
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get()).addIngredient(
+                ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(0)).get()).addIngredient(DyeColor.byId(j).getTag()).addCriterion("has_white_corrugated_metal_plate_slab",
+                    this.hasItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(0)).get())).build(consumer, DyeColor.byId(j).getName() + "_corrugated_metal_plate_slab_from_white");
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get()).addIngredient(
+                ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(0)).get()).addIngredient(DyeColor.byId(j).getTag()).addCriterion("has_white_corrugated_metal_plate_wall",
+                    this.hasItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(0)).get())).build(consumer, DyeColor.byId(j).getName() + "_corrugated_metal_plate_wall_from_white");
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get()).addIngredient(
+                ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(0)).get()).addIngredient(DyeColor.byId(j).getTag()).addCriterion("has_white_corrugated_metal_plate_stairs",
+                    this.hasItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(0)).get())).build(consumer, DyeColor.byId(j).getName() + "_corrugated_metal_plate_stairs_from_white");
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get()).addIngredient(
+                ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(0)).get()).addIngredient(DyeColor.byId(j).getTag()).addCriterion("has_white_corrugated_metal_plate_pressure_plate",
+                    this.hasItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(0)).get())).build(consumer,
+                        DyeColor.byId(j).getName() + "_corrugated_metal_plate_pressure_plate_from_white");
+
             ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).addIngredient(
                 ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get()).addIngredient(DyeColor.byId(j).getTag()).addCriterion("has_white_acacia_fancy_bed",
                     this.hasItem(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get())).build(consumer, DyeColor.byId(j).getName() + "_acacia_fancy_bed_from_white");

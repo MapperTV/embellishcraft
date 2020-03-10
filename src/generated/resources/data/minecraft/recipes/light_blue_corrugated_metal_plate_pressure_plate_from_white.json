@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:white_corrugated_metal_plate_pressure_plate"
+    },
+    {
+      "tag": "forge:dyes/light_blue"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:light_blue_corrugated_metal_plate_pressure_plate"
+  }
+}

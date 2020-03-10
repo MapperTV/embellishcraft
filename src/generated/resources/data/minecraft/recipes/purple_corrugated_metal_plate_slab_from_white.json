@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:white_corrugated_metal_plate_slab"
+    },
+    {
+      "tag": "forge:dyes/purple"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:purple_corrugated_metal_plate_slab"
+  }
+}

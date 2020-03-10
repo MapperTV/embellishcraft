@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:white_couch"
+    },
+    {
+      "tag": "forge:dyes/brown"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:brown_couch"
+  }
+}

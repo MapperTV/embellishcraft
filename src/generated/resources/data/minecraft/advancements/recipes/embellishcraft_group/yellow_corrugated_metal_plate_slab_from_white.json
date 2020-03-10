@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:yellow_corrugated_metal_plate_slab_from_white"
+    ]
+  },
+  "criteria": {
+    "has_white_corrugated_metal_plate_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:white_corrugated_metal_plate_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:yellow_corrugated_metal_plate_slab_from_white"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_white_corrugated_metal_plate_slab",
+      "has_the_recipe"
+    ]
+  ]
+}
