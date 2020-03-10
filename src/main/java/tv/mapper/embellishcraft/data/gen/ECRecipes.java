@@ -1006,13 +1006,13 @@ public class ECRecipes extends RecipeProvider
 
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.IRON_BEAM.get(), 3).patternLine("iii").key('i', Tags.Items.INGOTS_IRON).addCriterion("has_iron_ingot", this.hasItem(Tags.Items.INGOTS_IRON)).build(
             consumer);
-        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.BOLTED_IRON_BEAM.get()).addIngredient(ECBlockRegistry.IRON_BEAM.get()).addIngredient(BaseItems.BOLT).addCriterion("has_iron_beam",
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.BOLTED_IRON_BEAM.get()).addIngredient(ECBlockRegistry.IRON_BEAM.get()).addIngredient(BaseItems.BOLT.get()).addCriterion("has_iron_beam",
             this.hasItem(ECBlockRegistry.IRON_BEAM.get())).build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.IRON_BEAM_JUNCTION.get()).addIngredient(ECBlockRegistry.IRON_BEAM.get()).addCriterion("has_iron_beam",
             this.hasItem(ECBlockRegistry.IRON_BEAM.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.STEEL_BEAM.get(), 3).patternLine("iii").key('i', BaseTags.ForgeItems.INGOTS_STEEL).addCriterion("has_steel_ingot",
             this.hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.BOLTED_STEEL_BEAM.get()).addIngredient(ECBlockRegistry.STEEL_BEAM.get()).addIngredient(BaseItems.BOLT).addCriterion("has_steel_beam",
+        ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.BOLTED_STEEL_BEAM.get()).addIngredient(ECBlockRegistry.STEEL_BEAM.get()).addIngredient(BaseItems.BOLT.get()).addCriterion("has_steel_beam",
             this.hasItem(ECBlockRegistry.STEEL_BEAM.get())).build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.STEEL_BEAM_JUNCTION.get()).addIngredient(ECBlockRegistry.STEEL_BEAM.get()).addCriterion("has_steel_beam",
             this.hasItem(ECBlockRegistry.STEEL_BEAM.get())).build(consumer);
@@ -1118,8 +1118,8 @@ public class ECRecipes extends RecipeProvider
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), 6).key('P', ECConstants.McWoodenPlanks[j]).key('S', Tags.Items.RODS_WOODEN).patternLine(
                 "  P").patternLine(" PS").patternLine("PS ").setGroup("suspended_stairs").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(
                     consumer);
-            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get()).key('B', BaseItems.BOLT).key('W', ECConstants.McWoodenPlanks[j]).patternLine("BWB").patternLine(
-                "W W").patternLine("BWB").setGroup("wooden_crates").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get()).key('B', BaseItems.BOLT.get()).key('W', ECConstants.McWoodenPlanks[j]).patternLine(
+                "BWB").patternLine("W W").patternLine("BWB").setGroup("wooden_crates").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get()).key('C', Blocks.CHEST).key('W', ECConstants.McWoodenSlabs[j]).patternLine(" W ").patternLine(
                 "WCW").patternLine(" W ").setGroup("fancy_chests").addCriterion("has_chest", this.hasItem(Blocks.CHEST)).build(consumer);
         }

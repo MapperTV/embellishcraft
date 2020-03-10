@@ -321,24 +321,6 @@ public class ECBlockModels extends BaseBlockModels
         getBuilder(name + "_plinth").parent(getExistingFile(mcLoc("block/cube_column"))).texture("side", plinth).texture("end", bottom);
     }
 
-    private void buildWall(String name, ResourceLocation texture)
-    {
-        getBuilder(name + "_wall_inventory").parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", texture);
-    }
-
-    private void buildPressure(String name, ResourceLocation texture)
-    {
-        getBuilder(name + "_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", texture);
-        getBuilder(name + "_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", texture);
-    }
-
-    private void buildButton(String name, ResourceLocation texture)
-    {
-        getBuilder(name + "_button_inventory").parent(getExistingFile(mcLoc("block/button_inventory"))).texture("texture", texture);
-        getBuilder(name + "_button_pressed").parent(getExistingFile(mcLoc("block/button_pressed"))).texture("texture", texture);
-        getBuilder(name + "_button").parent(getExistingFile(mcLoc("block/button"))).texture("texture", texture);
-    }
-
     private void buildAllStoneWall(String name)
     {
         buildWall(name, modLoc("block/" + name));
