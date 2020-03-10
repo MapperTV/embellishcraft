@@ -215,7 +215,6 @@ public class ECBlockModels extends BlockModelProvider
                 "particle", new ResourceLocation("block/" + DyeColor.byId(j).getName() + "_wool"));
             getBuilder(DyeColor.byId(j).getName() + "_corrugated_metal_plate_fence_inventory").parent(getExistingFile(mcLoc("block/fence_inventory"))).texture("texture",
                 modLoc("block/" + DyeColor.byId(j).getName() + "_corrugated_metal_plate"));
-
         }
 
         // Suspended stairs, chests

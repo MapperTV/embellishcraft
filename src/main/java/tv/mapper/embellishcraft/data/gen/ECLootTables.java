@@ -467,6 +467,8 @@ public class ECLootTables extends BaseLootTableProvider
                 createStandardTable(ECConstants.MODID, ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get()));
             lootTables.put(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get(),
                 createStandardTable(ECConstants.MODID, ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get(),
+                createStandardTable(ECConstants.MODID, ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get()));
         }
 
         // Metal blocks

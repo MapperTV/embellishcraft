@@ -150,6 +150,7 @@ public class ECItemModels extends BaseItemModels
             getBuilder(color + "_couch").parent(new UncheckedModelFile(modid + ":block/" + color + "_couch"));
             getBuilder(color + "_table_lamp").parent(new UncheckedModelFile(modid + ":block/" + color + "_table_lamp"));
             getBuilder(color + "_pillow").parent(new UncheckedModelFile(modid + ":block/" + color + "_pillow"));
+            getBuilder(color + "_corrugated_metal_plate_fence_gate").parent(new UncheckedModelFile(modid + ":block/" + color + "_corrugated_metal_plate_fence_gate"));
         }
 
         getBuilder("plate").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/plate"));

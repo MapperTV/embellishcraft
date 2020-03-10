@@ -284,6 +284,7 @@ public class ECBlockStates extends BaseBlockStates
                 ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get(), ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get(),
                 ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get(), ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get(), null);
             fenceBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getName() + "_corrugated_metal_plate"));
+            fenceGateBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getName() + "_corrugated_metal_plate"));
         }
 
         // Wallpaper

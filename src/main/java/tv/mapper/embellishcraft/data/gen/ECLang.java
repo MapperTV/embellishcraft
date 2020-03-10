@@ -453,6 +453,7 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Wall");
                     addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Pressure Plate");
                     addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Fence");
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Fence Gate");
                 }
 
                 // Metal blocks
@@ -1015,6 +1016,7 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), "Muret en tôle ondulée " + frColorsF[j]);
                     addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), "Plaque de pression en tôle ondulée " + frColorsF[j]);
                     addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)), "Barrière en tôle ondulée " + frColorsF[j]);
+                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)), "Portillon en tôle ondulée " + frColorsF[j]);
                 }
 
                 // Metal blocks

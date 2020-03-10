@@ -959,6 +959,9 @@ public class ECRecipes extends RecipeProvider
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get(), 6).key('S', BaseTags.ForgeItems.RODS_STEEL).key('#',
                 ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get()).patternLine("#S#").patternLine("#S#").addCriterion("has_" + DyeColor.byId(j).getName() + "_corrugated_metal_plate",
                     this.hasItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get())).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get(), 6).key('S', BaseTags.ForgeItems.RODS_STEEL).key('#',
+                ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get()).patternLine("S#S").patternLine("S#S").addCriterion("has_" + DyeColor.byId(j).getName() + "_corrugated_metal_plate",
+                    this.hasItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get())).build(consumer);
         }
 
         // Metal blocks
@@ -1191,6 +1194,9 @@ public class ECRecipes extends RecipeProvider
             ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get()).addIngredient(
                 ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(0)).get()).addIngredient(DyeColor.byId(j).getTag()).addCriterion("has_white_corrugated_metal_plate_fence",
                     this.hasItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(0)).get())).build(consumer, DyeColor.byId(j).getName() + "_corrugated_metal_plate_fence_from_white");
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get()).addIngredient(
+                ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(0)).get()).addIngredient(DyeColor.byId(j).getTag()).addCriterion("has_white_corrugated_metal_plate_fence_gate",
+                    this.hasItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(0)).get())).build(consumer, DyeColor.byId(j).getName() + "_corrugated_metal_plate_fence_gate_from_white");
 
             ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).addIngredient(
                 ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get()).addIngredient(DyeColor.byId(j).getTag()).addCriterion("has_white_acacia_fancy_bed",

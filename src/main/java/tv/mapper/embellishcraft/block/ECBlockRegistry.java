@@ -9,6 +9,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
@@ -938,6 +939,10 @@ public class ECBlockRegistry
             BLOCKS.register(type.getName() + "_corrugated_metal_plate_fence",
                 () -> new FenceBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL))))).collect(
                     Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<FenceGateBlock>> CORRUGATED_METAL_PLATE_FENCE_GATES = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_corrugated_metal_plate_fence_gate",
+            () -> new FenceGateBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL))))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
 
     // Metal blocks
     public static final RegistryObject<CustomBlock> DARK_METAL_FLOOR = BLOCKS.register("dark_metal_floor",

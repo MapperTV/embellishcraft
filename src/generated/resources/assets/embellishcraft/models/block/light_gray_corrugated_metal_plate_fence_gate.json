@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_fence_gate",
+  "textures": {
+    "texture": "embellishcraft:block/light_gray_corrugated_metal_plate"
+  }
+}
