@@ -66,5 +66,4 @@ public enum RockType implements IStringSerializable
         }
         return VALUES[id];
     }
-
 }

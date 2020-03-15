@@ -56,12 +56,6 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
         this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    // @Override
-    // public boolean isSolid(BlockState state)
-    // {
-    // return false;
-    // }
-
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
     {
@@ -77,9 +71,7 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
     @Override
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
     {
-        if(!worldIn.getBlockState(pos.down()).isSolid())
-            return false;
-        return true;
+        return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
     }
 
     @Override

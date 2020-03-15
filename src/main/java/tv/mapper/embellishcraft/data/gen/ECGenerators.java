@@ -31,7 +31,7 @@ public class ECGenerators
                 }
                 return delegate.exists(loc, type, pathSuffix, pathPrefix);
             }
-        }; // Temporary to counter the crash when generator can't find files from dependencies
+        };
 
         generator.addProvider(new ECRecipes(generator));
         generator.addProvider(new ECLootTables(generator));

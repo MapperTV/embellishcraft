@@ -33,6 +33,5 @@ public class ECItemTags extends ItemTagsProvider
         copy(Tags.Blocks.CHESTS, Tags.Items.CHESTS);
         copy(Tags.Blocks.CHESTS_WOODEN, Tags.Items.CHESTS_WOODEN);
         copy(BlockTags.BEDS, ItemTags.BEDS);
-
     }
 }

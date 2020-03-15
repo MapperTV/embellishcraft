@@ -41,22 +41,20 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
     public TableBlock(Properties properties)
     {
         super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED,
-            Boolean.valueOf(false)));
+        this.setDefaultState(
+            this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     public TableBlock(Properties properties, ToolType toolType)
     {
         super(properties, toolType);
-        this.setDefaultState(this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED,
-            Boolean.valueOf(false)));
+        this.setDefaultState(
+            this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
     {
-        if(!worldIn.getBlockState(pos.down()).isSolid())
-            return false;
-        return true;
+        return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
     }
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
@@ -181,8 +179,7 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
             worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
         }
 
-        return this.getDefaultState().with(TABLE_NORTH, north).with(TABLE_SOUTH, south).with(TABLE_EAST, east).with(TABLE_WEST, west).with(HAS_FOOT, has_foot).with(WATERLOGGED,
-            stateIn.get(WATERLOGGED));
+        return this.getDefaultState().with(TABLE_NORTH, north).with(TABLE_SOUTH, south).with(TABLE_EAST, east).with(TABLE_WEST, west).with(HAS_FOOT, has_foot).with(WATERLOGGED, stateIn.get(WATERLOGGED));
     }
 
     @SuppressWarnings("deprecation")

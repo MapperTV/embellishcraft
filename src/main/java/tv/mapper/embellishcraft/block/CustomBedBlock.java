@@ -92,5 +92,4 @@ public class CustomBedBlock extends BedBlock
     {
         return BlockRenderType.MODEL;
     }
-
 }

@@ -72,18 +72,10 @@ public class PillowBlock extends BedBlock
         return VoxelShapes.empty();
     }
 
-    // @Override
-    // public boolean isSolid(BlockState state)
-    // {
-    // return false;
-    // }
-
     @Override
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
     {
-        if(!worldIn.getBlockState(pos.down()).isSolid())
-            return false;
-        return true;
+        return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
     }
 
     @Override
@@ -133,8 +125,7 @@ public class PillowBlock extends BedBlock
             else
             {
                 worldIn.removeBlock(pos, false);
-                worldIn.createExplosion((Entity)null, DamageSource.netherBedExplosion(), (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
-                    Explosion.Mode.DESTROY);
+                worldIn.createExplosion((Entity)null, DamageSource.netherBedExplosion(), (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true, Explosion.Mode.DESTROY);
                 return ActionResultType.SUCCESS;
             }
         }
@@ -205,12 +196,4 @@ public class PillowBlock extends BedBlock
     {
         return true;
     }
-
-    // @Override
-    // @OnlyIn(Dist.CLIENT)
-    // public boolean hasCustomBreakingProgress(BlockState state)
-    // {
-    // return false;
-    // }
-
 }

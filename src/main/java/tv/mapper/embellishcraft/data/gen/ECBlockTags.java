@@ -242,6 +242,5 @@ public class ECBlockTags extends BlockTagsProvider
         this.getBuilder(BlockTags.DOORS).add(ECBlockRegistry.STEEL_DOOR.get(), ECBlockRegistry.STURDY_STEEL_DOOR.get(), ECBlockRegistry.WARNING_STEEL_DOOR.get(), ECBlockRegistry.WHITE_STEEL_DOOR.get(),
             ECBlockRegistry.STURDY_WHITE_STEEL_DOOR.get(), ECBlockRegistry.WARNING_WHITE_STEEL_DOOR.get(), ECBlockRegistry.RUSTY_DOOR.get(), ECBlockRegistry.STURDY_RUSTY_DOOR.get(),
             ECBlockRegistry.WARNING_RUSTY_DOOR.get());
-
     }
 }

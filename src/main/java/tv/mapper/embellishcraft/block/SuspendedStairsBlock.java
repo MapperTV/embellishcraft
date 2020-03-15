@@ -121,12 +121,6 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
         }
     }
 
-    // @Override
-    // public boolean isSolid(BlockState state)
-    // {
-    // return false;
-    // }
-
     public SuspendedStairsBlock(Properties properties)
     {
         super(properties);

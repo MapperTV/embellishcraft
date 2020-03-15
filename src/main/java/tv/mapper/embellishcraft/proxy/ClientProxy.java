@@ -45,9 +45,9 @@ public class ClientProxy implements IProxy
             RenderTypeLookup.setRenderLayer(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get(), cutoutPredicate);
             RenderTypeLookup.setRenderLayer(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get(), cutoutPredicate);
         }
+
         RenderTypeLookup.setRenderLayer(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), cutoutPredicate);
         RenderTypeLookup.setRenderLayer(ECBlockRegistry.STEEL_TERRACE_TABLE.get(), cutoutPredicate);
-
     }
 
     @Override

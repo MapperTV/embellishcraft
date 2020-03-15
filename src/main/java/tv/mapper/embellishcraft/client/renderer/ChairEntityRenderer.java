@@ -8,7 +8,6 @@ import tv.mapper.embellishcraft.entity.EntityChair;
 
 public class ChairEntityRenderer extends EntityRenderer<EntityChair>
 {
-
     public ChairEntityRenderer(EntityRendererManager renderManager)
     {
         super(renderManager);

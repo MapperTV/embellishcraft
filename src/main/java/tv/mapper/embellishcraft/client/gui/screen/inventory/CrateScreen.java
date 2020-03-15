@@ -14,7 +14,7 @@ public class CrateScreen extends ContainerScreen<CrateContainer> implements IHas
 {
     private static final ResourceLocation CRATE_SCREEN = new ResourceLocation(ECConstants.MODID, "textures/gui/crate.png");
     private final int inventoryRows;
-    
+
     private static final int WIDTH = 176;
     private static final int HEIGHT = 185;
 
@@ -25,7 +25,7 @@ public class CrateScreen extends ContainerScreen<CrateContainer> implements IHas
         this.inventoryRows = p_i51095_1_.getNumRows();
         this.ySize = 114 + this.inventoryRows * 18;
     }
-    
+
     protected void init()
     {
         super.init();
@@ -53,16 +53,11 @@ public class CrateScreen extends ContainerScreen<CrateContainer> implements IHas
     /**
      * Draws the background layer of this container (behind the items).
      */
+    @SuppressWarnings("deprecation")
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
     {
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
         this.minecraft.getTextureManager().bindTexture(CRATE_SCREEN);
-//        int i = (this.width - this.xSize) / 2;
-//        int j = (this.height - this.ySize) / 2;
-//        this.blit(i, j, 0, 0, this.xSize, this.inventoryRows * 18 + 17);
-//        this.blit(i, j + this.inventoryRows * 18 + 17, 0, 126, this.xSize, 96);
-        
         this.blit(guiLeft, guiTop, 0, 0, WIDTH, HEIGHT);
-
     }
 }

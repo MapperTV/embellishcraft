@@ -15,8 +15,6 @@ import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.entity.EntityChair;
 
-// Big thanks to bl4ckscor3 and its mod "Sit" for this code!
-
 @Mod.EventBusSubscriber
 public class SeatUtil
 {

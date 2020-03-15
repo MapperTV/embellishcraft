@@ -109,9 +109,8 @@ public class PlateBlock extends Block implements IWaterLoggable
         BlockState blockstate = worldIn.getBlockState(blockpos);
         if(blockstate.getBlock() instanceof PlateBlock && blockstate.get(PLATES) == 8)
             return true;
-        else if(!blockstate.isSolid())
-            return false;
-        return true;
+        else
+            return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
     }
 
     @SuppressWarnings("deprecation")

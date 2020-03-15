@@ -1,6 +1,5 @@
 package tv.mapper.embellishcraft.block;
 
-import net.minecraft.block.AirBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.IWaterLoggable;
@@ -55,19 +54,9 @@ public class TerraceTableBlock extends CustomBlock implements IWaterLoggable
         return TERRACE_TABLE;
     }
 
-    // @Override
-    // public boolean isSolid(BlockState state)
-    // {
-    // return true;
-    // }
-
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
     {
-        BlockPos blockpos = pos.down();
-        Block block = worldIn.getBlockState(blockpos).getBlock();
-        if(block instanceof AirBlock)
-            return false;
-        return true;
+        return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
     }
 
     @SuppressWarnings("deprecation")

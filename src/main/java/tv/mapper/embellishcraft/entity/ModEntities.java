@@ -18,8 +18,7 @@ public class ModEntities
     private static final List<EntityType> ENTITY_TYPES = new ArrayList<>();
 
     public static final EntityType<EntityChair> TYPE_CHAIR = buildType(ECConstants.MODID + ":entity_chair",
-        EntityType.Builder.<EntityChair>create((type, world) -> new EntityChair(world), EntityClassification.MISC).size(0.0F, 0.0F).setCustomClientFactory(
-            (spawnEntity, world) -> new EntityChair(world)));
+        EntityType.Builder.<EntityChair>create((type, world) -> new EntityChair(world), EntityClassification.MISC).size(0.0F, 0.0F).setCustomClientFactory((spawnEntity, world) -> new EntityChair(world)));
 
     private static <T extends Entity> EntityType<T> buildType(String id, EntityType.Builder<T> builder)
     {
@@ -30,7 +29,6 @@ public class ModEntities
     }
 
     @SubscribeEvent
-    @SuppressWarnings("unused")
     public static void registerTypes(final RegistryEvent.Register<EntityType<?>> event)
     {
         ENTITY_TYPES.forEach(type -> event.getRegistry().register(type));

@@ -30,13 +30,13 @@ public class FlatterHammerItem extends Item
     {
         return false;
     }
-    
+
     @Override
     public boolean isBookEnchantable(ItemStack stack, ItemStack book)
     {
         return false;
     }
-    
+
     @Override
     public ItemStack getContainerItem(@Nonnull ItemStack stack)
     {

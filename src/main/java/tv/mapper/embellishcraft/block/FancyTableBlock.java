@@ -46,5 +46,4 @@ public class FancyTableBlock extends TableBlock
 
         return shape;
     }
-
 }

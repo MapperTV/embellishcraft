@@ -18,8 +18,6 @@ public class VerticalChestScreen extends ContainerScreen<VerticalChestContainer>
     {
         super(p_i51095_1_, p_i51095_2_, p_i51095_3_);
         this.passEvents = false;
-        // int i = 222;
-        // int j = 114;
         this.inventoryRows = p_i51095_1_.getNumRows();
         this.ySize = 114 + this.inventoryRows * 18;
     }
@@ -43,6 +41,7 @@ public class VerticalChestScreen extends ContainerScreen<VerticalChestContainer>
     /**
      * Draws the background layer of this container (behind the items).
      */
+    @SuppressWarnings("deprecation")
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
     {
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
