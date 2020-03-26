@@ -546,7 +546,7 @@ public class ECLootTables extends BaseLootTableProvider
             lootTables.put(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get(),
-                createCrateTable(McWoods.byId(j).getName() + "_wooden_crate", ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get()));
+                createCrateTable(McWoods.byId(j).getName() + "_wooden_crate", ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get(),
                 createChestTable(McWoods.byId(j).getName() + "_wooden_chest", ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get()));
         }
