@@ -15,16 +15,15 @@ public enum WoodsType implements IStringSerializable
     ACACIA(5, "acacia", "acacia"),
     CHERRY(6, "cherry", "cerisier"),
     DEAD(7, "dead", "bois mort"),
-    ETHEREAL(8, "ethereal", "bois ethere"),
-    FIR(9, "fir", "sapin"),
-    HELLBARK(10, "hellbark", "ecorce infernale"),
-    JACARANDA(11, "jacaranda", "jacaranda"),
-    MAGIC(12, "magic", "bois magique"),
-    MAHOGANY(13, "mahogany", "acajou"),
-    PALM(14, "palm", "palmier"),
-    REDWOOD(15, "redwood", "sequoia"),
-    UMBRAN(16, "umbran", "bois sinistre"),
-    WILLOW(17, "willow", "saule");
+    FIR(8, "fir", "sapin"),
+    HELLBARK(9, "hellbark", "ecorce infernale"),
+    JACARANDA(10, "jacaranda", "jacaranda"),
+    MAGIC(11, "magic", "bois magique"),
+    MAHOGANY(12, "mahogany", "acajou"),
+    PALM(13, "palm", "palmier"),
+    REDWOOD(14, "redwood", "sequoia"),
+    UMBRAN(15, "umbran", "bois sinistre"),
+    WILLOW(16, "willow", "saule");
 
     private static final WoodsType[] VALUES = Arrays.stream(values()).sorted(Comparator.comparingInt(WoodsType::getId)).toArray((map) ->
     {

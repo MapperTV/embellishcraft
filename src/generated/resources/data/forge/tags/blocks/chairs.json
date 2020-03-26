@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:acacia_chair",
+    "embellishcraft:acacia_terrace_chair",
+    "embellishcraft:birch_chair",
+    "embellishcraft:birch_terrace_chair",
+    "embellishcraft:dark_oak_chair",
+    "embellishcraft:dark_oak_terrace_chair",
+    "embellishcraft:jungle_chair",
+    "embellishcraft:jungle_terrace_chair",
+    "embellishcraft:oak_chair",
+    "embellishcraft:oak_terrace_chair",
+    "embellishcraft:spruce_chair",
+    "embellishcraft:spruce_terrace_chair",
+    "embellishcraft:steel_terrace_chair"
+  ]
+}

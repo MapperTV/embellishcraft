@@ -18,6 +18,8 @@ public class ECTags
         public static final Tag<Block> DUCTS = tag("ducts");
         public static final Tag<Block> STEEL_DOORS = tag("steel_doors");
         public static final Tag<Block> FANCY_BEDS = tag("fancy_beds");
+        public static final Tag<Block> SUSPENDED_STAIRS = tag("suspended_stairs");
+        public static final Tag<Block> COUCHES = tag("couches");
 
         private static Tag<Block> tag(String name)
         {
@@ -33,6 +35,8 @@ public class ECTags
         public static final Tag<Item> DUCTS = tag("ducts");
         public static final Tag<Item> STEEL_DOORS = tag("steel_doors");
         public static final Tag<Item> FANCY_BEDS = tag("fancy_beds");
+        public static final Tag<Item> SUSPENDED_STAIRS = tag("suspended_stairs");
+        public static final Tag<Item> COUCHES = tag("couches");
 
         private static Tag<Item> tag(String name)
         {

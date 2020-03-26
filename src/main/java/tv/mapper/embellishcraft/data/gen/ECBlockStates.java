@@ -37,7 +37,7 @@ import tv.mapper.mapperbase.data.gen.BaseBlockStates;
 
 public class ECBlockStates extends BaseBlockStates
 {
-    public ECBlockStates(DataGenerator gen, ExistingFileHelper exFileHelper)
+    public ECBlockStates(DataGenerator gen, String modid, ExistingFileHelper exFileHelper)
     {
         super(gen, ECConstants.MODID, exFileHelper);
     }

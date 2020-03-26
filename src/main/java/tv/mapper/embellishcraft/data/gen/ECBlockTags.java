@@ -193,16 +193,25 @@ public class ECBlockTags extends BlockTagsProvider
             ECBlockRegistry.RED_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.WHITE_TILES_PRESSURE_PLATE.get(), ECBlockRegistry.YELLOW_TILES_PRESSURE_PLATE.get(),
             ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get());
 
-        // Corrugated metal plates
-        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        for(int i = 0; i < Arrays.stream(DyeColor.values()).count(); i++)
         {
-            this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get());
-            this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get());
-            this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get());
-            this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get());
-            this.getBuilder(BlockTags.FENCES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get());
-            this.getBuilder(Tags.Blocks.FENCE_GATES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get());
-            this.getBuilder(Tags.Blocks.FENCES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get());
+            this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(i)).get());
+            this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(i)).get());
+            this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(i)).get());
+            this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(i)).get());
+            this.getBuilder(BlockTags.FENCES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(i)).get());
+            this.getBuilder(Tags.Blocks.FENCE_GATES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(i)).get());
+            this.getBuilder(Tags.Blocks.FENCES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(i)).get());
+
+            this.getBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
+            this.getBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
+            this.getBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
+            this.getBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
+            this.getBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
+            this.getBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
+
+            this.getBuilder(ECTags.Blocks.COUCHES).add(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(i)).get());
+
         }
 
         // Metal blocks
@@ -218,29 +227,37 @@ public class ECBlockTags extends BlockTagsProvider
         this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(),
             ECBlockRegistry.PINK_WALLPAPER_SLAB.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get());
 
-        // Doors and wooden crates
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            this.getBuilder(BlockTags.WOODEN_DOORS).add(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get());
-            this.getBuilder(BlockTags.DOORS).add(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get());
-            this.getBuilder(ECTags.Blocks.WOODEN_CRATES).add(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get());
-            this.getBuilder(Tags.Blocks.CHESTS).add(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get());
-            this.getBuilder(Tags.Blocks.CHESTS_WOODEN).add(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get());
-        }
+            this.getBuilder(ECTags.ForgeBlocks.CHAIRS).add(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get());
+            this.getBuilder(ECTags.ForgeBlocks.CHAIRS).add(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get());
 
-        for(int i = 0; i < Arrays.stream(DyeColor.values()).count(); i++)
-        {
-            this.getBuilder(BlockTags.BEDS).add(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
-            this.getBuilder(BlockTags.BEDS).add(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
-            this.getBuilder(BlockTags.BEDS).add(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
-            this.getBuilder(BlockTags.BEDS).add(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
-            this.getBuilder(BlockTags.BEDS).add(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
-            this.getBuilder(BlockTags.BEDS).add(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
+            this.getBuilder(ECTags.ForgeBlocks.TABLES).add(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get());
+            this.getBuilder(ECTags.ForgeBlocks.TABLES).add(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get());
+            this.getBuilder(ECTags.ForgeBlocks.TABLES).add(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get());
+
+            this.getBuilder(ECTags.Blocks.SUSPENDED_STAIRS).add(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get());
+
+            this.getBuilder(ECTags.Blocks.WOODEN_DOORS).add(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get());
+
+            this.getBuilder(ECTags.Blocks.WOODEN_CRATES).add(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get());
+            this.getBuilder(Tags.Blocks.CHESTS_WOODEN).add(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get());
         }
 
         // Doors
         this.getBuilder(BlockTags.DOORS).add(ECBlockRegistry.STEEL_DOOR.get(), ECBlockRegistry.STURDY_STEEL_DOOR.get(), ECBlockRegistry.WARNING_STEEL_DOOR.get(), ECBlockRegistry.WHITE_STEEL_DOOR.get(),
             ECBlockRegistry.STURDY_WHITE_STEEL_DOOR.get(), ECBlockRegistry.WARNING_WHITE_STEEL_DOOR.get(), ECBlockRegistry.RUSTY_DOOR.get(), ECBlockRegistry.STURDY_RUSTY_DOOR.get(),
             ECBlockRegistry.WARNING_RUSTY_DOOR.get());
+
+        this.getBuilder(ECTags.ForgeBlocks.CHAIRS).add(ECBlockRegistry.STEEL_TERRACE_CHAIR.get());
+        this.getBuilder(ECTags.ForgeBlocks.TABLES).add(ECBlockRegistry.STEEL_TERRACE_TABLE.get());
+        this.getBuilder(ECTags.Blocks.SUSPENDED_STAIRS).add(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get());
+
+        this.getBuilder(Tags.Blocks.CHESTS).add(Tags.Blocks.CHESTS_WOODEN);
+
+        getBuilder(BlockTags.BEDS).add(ECTags.Blocks.FANCY_BEDS);
+        getBuilder(BlockTags.WOODEN_DOORS).add(ECTags.Blocks.WOODEN_DOORS);
+
+        getBuilder(ECTags.ForgeBlocks.CRATES).add(ECTags.Blocks.WOODEN_CRATES);
     }
 }

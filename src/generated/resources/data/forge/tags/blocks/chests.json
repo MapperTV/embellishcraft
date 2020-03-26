@@ -1,11 +1,6 @@
 {
   "replace": false,
   "values": [
-    "embellishcraft:acacia_fancy_chest",
-    "embellishcraft:birch_fancy_chest",
-    "embellishcraft:dark_oak_fancy_chest",
-    "embellishcraft:jungle_fancy_chest",
-    "embellishcraft:oak_fancy_chest",
-    "embellishcraft:spruce_fancy_chest"
+    "#forge:chests/wooden"
   ]
 }

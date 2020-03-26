@@ -1099,8 +1099,6 @@ public class ECRecipes extends RecipeProvider
         // Furniture
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            EmbellishCraft.LOGGER.debug(j + ": " + McWoods.byId(j).getName() + " , " + ECConstants.McWoodenPressures[j]);
-
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get()).key('W', ECConstants.McWoodenSlabs[j]).key('S', Tags.Items.RODS_WOODEN).patternLine("S  ").patternLine(
                 "SWS").patternLine("S S").setGroup("chairs").addCriterion("has_" + McWoods.byId(j).getName() + "_slab", this.hasItem(ECConstants.McWoodenSlabs[j])).build(consumer);
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get()).key('W', ECConstants.McWoodenPressures[j]).key('S', Tags.Items.RODS_WOODEN).patternLine(

@@ -271,7 +271,7 @@ public class ECBlockModels extends BaseBlockModels
         }
     }
 
-    private void buildBed(String color, String wood, String name)
+    protected void buildBed(String color, String wood, String name)
     {
         getBuilder(color + "_" + wood + "_" + name + "_head").parent(getExistingFile(modLoc("block/" + name + "_head"))).texture("head",
             new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_head")).texture("head_side",
@@ -288,7 +288,7 @@ public class ECBlockModels extends BaseBlockModels
                 new ResourceLocation(ECConstants.MODID, "block/" + wood + "_" + name + "_head_end")).texture("under", new ResourceLocation("block/" + wood + "_planks"));
     }
 
-    private void buildCouch(String color)
+    protected void buildCouch(String color)
     {
         getBuilder(color + "_couch").parent(getExistingFile(modLoc("block/couch"))).texture("fabric", new ResourceLocation("block/" + color + "_wool")).texture("base",
             new ResourceLocation("block/oak_planks")).texture("back", new ResourceLocation("block/stripped_oak_log")).texture("particle", new ResourceLocation("block/" + color + "_wool"));
@@ -302,7 +302,7 @@ public class ECBlockModels extends BaseBlockModels
             new ResourceLocation("block/oak_planks")).texture("back", new ResourceLocation("block/stripped_oak_log")).texture("particle", new ResourceLocation("block/" + color + "_wool"));
     }
 
-    private void buildTableLamp(String color)
+    protected void buildTableLamp(String color)
     {
         getBuilder(color + "_table_lamp").parent(getExistingFile(modLoc("block/table_lamp"))).texture("texture", new ResourceLocation(ECConstants.MODID, "block/" + color + "_table_lamp")).texture("particle",
             new ResourceLocation(ECConstants.MODID, "block/" + color + "_table_lamp"));
@@ -310,7 +310,7 @@ public class ECBlockModels extends BaseBlockModels
             "particle", new ResourceLocation(ECConstants.MODID, "block/" + color + "_table_lamp_on"));
     }
 
-    private void buildWallpaper(String name, ResourceLocation side, ResourceLocation bottom, ResourceLocation plinth)
+    protected void buildWallpaper(String name, ResourceLocation side, ResourceLocation bottom, ResourceLocation plinth)
     {
         cubeColumn(name, side, bottom);
         stairs(name + "_stairs", side, bottom, side);
@@ -321,7 +321,7 @@ public class ECBlockModels extends BaseBlockModels
         getBuilder(name + "_plinth").parent(getExistingFile(mcLoc("block/cube_column"))).texture("side", plinth).texture("end", bottom);
     }
 
-    private void buildAllStoneWall(String name)
+    protected void buildAllStoneWall(String name)
     {
         buildWall(name, modLoc("block/" + name));
         buildWall(name + "_cobblestone", modLoc("block/" + name + "_cobblestone"));
@@ -333,7 +333,7 @@ public class ECBlockModels extends BaseBlockModels
         buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
     }
 
-    private void buildAllStonePressure(String name)
+    protected void buildAllStonePressure(String name)
     {
         buildPressure(name, modLoc("block/" + name));
         buildPressure(name + "_cobblestone", modLoc("block/" + name + "_cobblestone"));
@@ -346,14 +346,14 @@ public class ECBlockModels extends BaseBlockModels
         buildPressure(name + "_ornament", modLoc("block/" + name + "_ornament"));
     }
 
-    private void buildAllStone(String name)
+    protected void buildAllStone(String name)
     {
         buildAllStoneWall(name);
         buildAllStonePressure(name);
         buildButton(name, modLoc("block/" + name));
     }
 
-    private void buildMcStone(String name)
+    protected void buildMcStone(String name)
     {
         buildWall("smooth_" + name, modLoc("block/smooth_" + name));
         buildPressure("smooth_" + name, modLoc("block/smooth_" + name));
@@ -374,7 +374,7 @@ public class ECBlockModels extends BaseBlockModels
         buildPressure(name + "_ornament", modLoc("block/" + name + "_ornament"));
     }
 
-    private void buildMcSandstone(String name)
+    protected void buildMcSandstone(String name)
     {
         buildButton(name, mcLoc("block/" + name));
 

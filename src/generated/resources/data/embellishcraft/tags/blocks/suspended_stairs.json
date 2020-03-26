@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:acacia_suspended_stairs",
+    "embellishcraft:birch_suspended_stairs",
+    "embellishcraft:dark_oak_suspended_stairs",
+    "embellishcraft:jungle_suspended_stairs",
+    "embellishcraft:oak_suspended_stairs",
+    "embellishcraft:spruce_suspended_stairs",
+    "embellishcraft:steel_suspended_stairs"
+  ]
+}

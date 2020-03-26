@@ -10,7 +10,6 @@ import tv.mapper.mapperbase.data.BaseTags;
 
 public class ECItemTags extends ItemTagsProvider
 {
-
     public ECItemTags(DataGenerator generatorIn)
     {
         super(generatorIn);
@@ -27,11 +26,25 @@ public class ECItemTags extends ItemTagsProvider
         copy(Tags.Blocks.FENCE_GATES, Tags.Items.FENCE_GATES);
         copy(BaseTags.ForgeBlocks.PRESSURE_PLATES, BaseTags.ForgeItems.PRESSURE_PLATES);
         copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
+
+        copy(ECTags.ForgeBlocks.CHAIRS, ECTags.ForgeItems.CHAIRS);
+        copy(ECTags.ForgeBlocks.TABLES, ECTags.ForgeItems.TABLES);
+
+        copy(ECTags.Blocks.SUSPENDED_STAIRS, ECTags.Items.SUSPENDED_STAIRS);
+        
+        copy(ECTags.Blocks.COUCHES, ECTags.Items.COUCHES);
+
+        copy(ECTags.Blocks.WOODEN_DOORS, ECTags.Items.WOODEN_DOORS);
         copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);
         copy(BlockTags.DOORS, ItemTags.DOORS);
+
         copy(ECTags.Blocks.WOODEN_CRATES, ECTags.Items.WOODEN_CRATES);
+        copy(ECTags.ForgeBlocks.CRATES, ECTags.ForgeItems.CRATES);
+
         copy(Tags.Blocks.CHESTS, Tags.Items.CHESTS);
         copy(Tags.Blocks.CHESTS_WOODEN, Tags.Items.CHESTS_WOODEN);
+
+        copy(ECTags.Blocks.FANCY_BEDS, ECTags.Items.FANCY_BEDS);
         copy(BlockTags.BEDS, ItemTags.BEDS);
     }
 }

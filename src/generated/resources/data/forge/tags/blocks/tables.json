@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:acacia_table",
+    "embellishcraft:acacia_fancy_table",
+    "embellishcraft:acacia_terrace_table",
+    "embellishcraft:birch_table",
+    "embellishcraft:birch_fancy_table",
+    "embellishcraft:birch_terrace_table",
+    "embellishcraft:dark_oak_table",
+    "embellishcraft:dark_oak_fancy_table",
+    "embellishcraft:dark_oak_terrace_table",
+    "embellishcraft:jungle_table",
+    "embellishcraft:jungle_fancy_table",
+    "embellishcraft:jungle_terrace_table",
+    "embellishcraft:oak_table",
+    "embellishcraft:oak_fancy_table",
+    "embellishcraft:oak_terrace_table",
+    "embellishcraft:spruce_table",
+    "embellishcraft:spruce_fancy_table",
+    "embellishcraft:spruce_terrace_table",
+    "embellishcraft:steel_terrace_table"
+  ]
+}
