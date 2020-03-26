@@ -26,14 +26,20 @@ public class SeatUtil
         BlockPos pos = event.getPos();
         Block block = world.getBlockState(pos).getBlock();
 
-        if((block instanceof ChairBlock || block instanceof CouchBlock) && world.getBlockState(pos.up()).isAir(world, pos.up()) && !EntityChair.OCCUPIED.containsKey(pos) && !player.isCrouching())
+        if(!player.isSpectator())
         {
-            event.setCanceled(true);
-            if(event.getSide() == LogicalSide.SERVER)
+            if(!player.isCrouching())
             {
-                EntityChair chair = new EntityChair(world, pos);
-                world.addEntity(chair);
-                player.startRiding(chair);
+                if((block instanceof ChairBlock || block instanceof CouchBlock) && world.getBlockState(pos.up()).isAir(world, pos.up()) && !EntityChair.OCCUPIED.containsKey(pos))
+                {
+                    event.setCanceled(true);
+                    if(event.getSide() == LogicalSide.SERVER)
+                    {
+                        EntityChair chair = new EntityChair(world, pos);
+                        world.addEntity(chair);
+                        player.startRiding(chair);
+                    }
+                }
             }
         }
     }
