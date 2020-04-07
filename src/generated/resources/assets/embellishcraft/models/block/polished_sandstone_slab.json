@@ -1,7 +1,7 @@
 {
   "parent": "block/slab",
   "textures": {
-    "side": "embellishcraft:block/polished_sandstone",
+    "side": "embellishcraft:block/polished_sandstone_side",
     "bottom": "embellishcraft:block/polished_sandstone",
     "top": "embellishcraft:block/polished_sandstone"
   }

@@ -1,7 +1,7 @@
 {
   "parent": "block/slab_top",
   "textures": {
-    "side": "embellishcraft:block/polished_larvikite",
+    "side": "embellishcraft:block/polished_larvikite_side",
     "bottom": "embellishcraft:block/polished_larvikite",
     "top": "embellishcraft:block/polished_larvikite"
   }

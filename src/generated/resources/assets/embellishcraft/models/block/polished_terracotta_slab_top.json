@@ -1,7 +1,7 @@
 {
   "parent": "block/slab_top",
   "textures": {
-    "side": "embellishcraft:block/polished_terracotta",
+    "side": "embellishcraft:block/polished_terracotta_side",
     "bottom": "embellishcraft:block/polished_terracotta",
     "top": "embellishcraft:block/polished_terracotta"
   }
