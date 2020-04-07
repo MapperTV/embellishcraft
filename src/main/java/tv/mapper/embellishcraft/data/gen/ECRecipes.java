@@ -16,7 +16,6 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
 import tv.mapper.embellishcraft.util.McWoods;
@@ -180,10 +179,10 @@ public class ECRecipes extends RecipeProvider
                 "##").addCriterion("has_" + RockType.byId(j).getName() + "_large_bricks", this.hasItem(ECBlockRegistry.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get())).build(consumer);
 
             // Rock ornaments
-            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get()).patternLine("i").patternLine("i").key('i',
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i',
                 ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get()).addCriterion("has_smooth_" + RockType.byId(j).getName() + "_slab",
                     this.hasItem(ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get())).build(consumer, ECConstants.MODID + ":" + RockType.byId(j).getName() + "_ornament_from_smooth_slabs");
-            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get()).patternLine("i").patternLine("i").key('i',
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i',
                 ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get()).addCriterion("has_polished_" + RockType.byId(j).getName() + "_slab",
                     this.hasItem(ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get())).build(consumer);
 
@@ -263,9 +262,9 @@ public class ECRecipes extends RecipeProvider
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.ANDESITE_LARGE_BRICKS.get()).patternLine("##").addCriterion(
             "has_andesite_large_bricks", this.hasItem(ECBlockRegistry.ANDESITE_LARGE_BRICKS.get())).build(consumer);
 
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ANDESITE_ORNAMENT.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SMOOTH_ANDESITE_SLAB.get()).addCriterion("has_smooth_andesite_slab",
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ANDESITE_ORNAMENT.get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i', ECBlockRegistry.SMOOTH_ANDESITE_SLAB.get()).addCriterion("has_smooth_andesite_slab",
             this.hasItem(ECBlockRegistry.SMOOTH_ANDESITE_SLAB.get())).build(consumer, ECConstants.MODID + ":andesite_ornament_from_smooth_slabs");
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ANDESITE_ORNAMENT.get()).patternLine("i").patternLine("i").key('i', Blocks.POLISHED_ANDESITE_SLAB).addCriterion("has_polished_andesite_slab",
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ANDESITE_ORNAMENT.get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i', Blocks.POLISHED_ANDESITE_SLAB).addCriterion("has_polished_andesite_slab",
             this.hasItem(Blocks.POLISHED_ANDESITE_SLAB)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.ANDESITE_ORNAMENT.get()).patternLine("##").addCriterion("has_andesite_ornament",
             this.hasItem(ECBlockRegistry.ANDESITE_ORNAMENT.get())).build(consumer);
@@ -341,9 +340,9 @@ public class ECRecipes extends RecipeProvider
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.DIORITE_LARGE_BRICKS.get()).patternLine("##").addCriterion(
             "has_diorite_large_bricks", this.hasItem(ECBlockRegistry.DIORITE_LARGE_BRICKS.get())).build(consumer);
 
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DIORITE_ORNAMENT.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SMOOTH_DIORITE_SLAB.get()).addCriterion("has_smooth_diorite_slab",
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DIORITE_ORNAMENT.get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i', ECBlockRegistry.SMOOTH_DIORITE_SLAB.get()).addCriterion("has_smooth_diorite_slab",
             this.hasItem(ECBlockRegistry.SMOOTH_DIORITE_SLAB.get())).build(consumer, ECConstants.MODID + ":diorite_ornament_from_smooth_slabs");
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DIORITE_ORNAMENT.get()).patternLine("i").patternLine("i").key('i', Blocks.POLISHED_DIORITE_SLAB).addCriterion("has_polished_diorite_slab",
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DIORITE_ORNAMENT.get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i', Blocks.POLISHED_DIORITE_SLAB).addCriterion("has_polished_diorite_slab",
             this.hasItem(Blocks.POLISHED_DIORITE_SLAB)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.DIORITE_ORNAMENT.get()).patternLine("##").addCriterion("has_diorite_ornament",
             this.hasItem(ECBlockRegistry.DIORITE_ORNAMENT.get())).build(consumer);
@@ -419,9 +418,9 @@ public class ECRecipes extends RecipeProvider
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.GRANITE_LARGE_BRICKS.get()).patternLine("##").addCriterion(
             "has_granite_large_bricks", this.hasItem(ECBlockRegistry.GRANITE_LARGE_BRICKS.get())).build(consumer);
 
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRANITE_ORNAMENT.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.SMOOTH_GRANITE_SLAB.get()).addCriterion("has_smooth_granite_slab",
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRANITE_ORNAMENT.get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i', ECBlockRegistry.SMOOTH_GRANITE_SLAB.get()).addCriterion("has_smooth_granite_slab",
             this.hasItem(ECBlockRegistry.SMOOTH_GRANITE_SLAB.get())).build(consumer, ECConstants.MODID + ":granite_ornament_from_smooth_slabs");
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRANITE_ORNAMENT.get()).patternLine("i").patternLine("i").key('i', Blocks.POLISHED_GRANITE_SLAB).addCriterion("has_polished_granite_slab",
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRANITE_ORNAMENT.get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i', Blocks.POLISHED_GRANITE_SLAB).addCriterion("has_polished_granite_slab",
             this.hasItem(Blocks.POLISHED_GRANITE_SLAB)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.GRANITE_ORNAMENT.get()).patternLine("##").addCriterion("has_granite_ornament",
             this.hasItem(ECBlockRegistry.GRANITE_ORNAMENT.get())).build(consumer);
