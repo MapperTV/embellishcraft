@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:gneiss_tiles"
+  },
+  "result": "embellishcraft:gneiss_tiles_pressure_plate",
+  "count": 2
+}

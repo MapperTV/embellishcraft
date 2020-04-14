@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:smooth_larvikite_pressure_plate_from_smooth_larvikite_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_smooth_larvikite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_larvikite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:smooth_larvikite_pressure_plate_from_smooth_larvikite_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_larvikite",
+      "has_the_recipe"
+    ]
+  ]
+}

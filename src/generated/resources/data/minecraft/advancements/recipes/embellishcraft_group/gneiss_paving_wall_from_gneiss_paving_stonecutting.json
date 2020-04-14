@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:gneiss_paving_wall_from_gneiss_paving_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_gneiss_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:gneiss_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:gneiss_paving_wall_from_gneiss_paving_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gneiss_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

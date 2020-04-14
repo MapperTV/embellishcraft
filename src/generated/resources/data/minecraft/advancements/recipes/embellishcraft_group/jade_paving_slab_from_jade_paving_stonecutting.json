@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:jade_paving_slab_from_jade_paving_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_jade_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:jade_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:jade_paving_slab_from_jade_paving_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jade_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

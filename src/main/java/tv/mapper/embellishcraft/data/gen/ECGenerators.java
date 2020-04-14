@@ -10,6 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.data.gen.recipe.ECStonecutterRecipes;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ECGenerators
@@ -34,6 +35,8 @@ public class ECGenerators
         };
 
         generator.addProvider(new ECRecipes(generator));
+        generator.addProvider(new ECStonecutterRecipes(generator));
+
         generator.addProvider(new ECLootTables(generator));
         generator.addProvider(new ECBlockStates(generator, ECConstants.MODID, helper));
         generator.addProvider(new ECBlockModels(generator, ECConstants.MODID, helper));

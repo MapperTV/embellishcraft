@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:slate"
+  },
+  "result": "embellishcraft:slate_button",
+  "count": 2
+}

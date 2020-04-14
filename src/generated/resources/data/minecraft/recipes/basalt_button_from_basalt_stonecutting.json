@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:basalt"
+  },
+  "result": "embellishcraft:basalt_button",
+  "count": 2
+}

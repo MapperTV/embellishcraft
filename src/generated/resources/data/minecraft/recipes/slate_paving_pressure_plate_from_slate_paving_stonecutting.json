@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:slate_paving"
+  },
+  "result": "embellishcraft:slate_paving_pressure_plate",
+  "count": 2
+}

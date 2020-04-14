@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:larvikite_tiles_pressure_plate_from_larvikite_tiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_larvikite_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:larvikite_tiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:larvikite_tiles_pressure_plate_from_larvikite_tiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_larvikite_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:smooth_jade_wall_from_smooth_jade_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_smooth_jade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_jade"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:smooth_jade_wall_from_smooth_jade_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_jade",
+      "has_the_recipe"
+    ]
+  ]
+}

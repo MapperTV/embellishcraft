@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:marble_tiles_wall_from_marble_tiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_marble_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:marble_tiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:marble_tiles_wall_from_marble_tiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_marble_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}
