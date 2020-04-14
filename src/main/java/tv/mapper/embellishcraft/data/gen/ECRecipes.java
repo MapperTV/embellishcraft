@@ -179,10 +179,10 @@ public class ECRecipes extends RecipeProvider
                 "##").addCriterion("has_" + RockType.byId(j).getName() + "_large_bricks", this.hasItem(ECBlockRegistry.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get())).build(consumer);
 
             // Rock ornaments
-            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i',
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), 2).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i',
                 ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get()).addCriterion("has_smooth_" + RockType.byId(j).getName() + "_slab",
                     this.hasItem(ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get())).build(consumer, ECConstants.MODID + ":" + RockType.byId(j).getName() + "_ornament_from_smooth_slabs");
-            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get()).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i',
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), 2).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i',
                 ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get()).addCriterion("has_polished_" + RockType.byId(j).getName() + "_slab",
                     this.hasItem(ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get())).build(consumer);
 
