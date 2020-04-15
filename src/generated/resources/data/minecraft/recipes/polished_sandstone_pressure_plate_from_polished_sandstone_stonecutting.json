@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:polished_sandstone"
+  },
+  "result": "embellishcraft:polished_sandstone_pressure_plate",
+  "count": 2
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:smooth_andesite"
+  },
+  "result": "embellishcraft:smooth_andesite_slab",
+  "count": 2
+}

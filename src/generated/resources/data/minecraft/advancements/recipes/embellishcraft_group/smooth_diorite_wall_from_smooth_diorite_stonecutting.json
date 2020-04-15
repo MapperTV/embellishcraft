@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:smooth_diorite_wall_from_smooth_diorite_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_smooth_diorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:smooth_diorite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:smooth_diorite_wall_from_smooth_diorite_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_diorite",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:andesite_paving"
+  },
+  "result": "embellishcraft:andesite_paving_pressure_plate",
+  "count": 2
+}

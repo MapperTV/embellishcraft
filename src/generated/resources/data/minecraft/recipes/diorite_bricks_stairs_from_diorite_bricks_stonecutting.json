@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:diorite_bricks"
+  },
+  "result": "embellishcraft:diorite_bricks_stairs",
+  "count": 1
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:granite_ornament"
+  },
+  "result": "embellishcraft:granite_ornament_pressure_plate",
+  "count": 2
+}

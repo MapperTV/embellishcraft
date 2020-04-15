@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:granite_paving_stairs_from_granite_paving_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_granite_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:granite_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:granite_paving_stairs_from_granite_paving_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_granite_paving",
+      "has_the_recipe"
+    ]
+  ]
+}
