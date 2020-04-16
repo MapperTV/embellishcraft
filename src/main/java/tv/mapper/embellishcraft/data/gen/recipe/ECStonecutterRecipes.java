@@ -3,6 +3,7 @@ package tv.mapper.embellishcraft.data.gen.recipe;
 import java.util.Arrays;
 import java.util.function.Consumer;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
@@ -434,62 +435,43 @@ public class ECStonecutterRecipes extends RecipeProvider
                 "red_sandstone_large_bricks_pressure_plate_from_red_sandstone_large_bricks_stonecutting");
 
         // Terracotta
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.TERRACOTTA), ECBlockRegistry.TERRACOTTA_SLAB.get(), 2).addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(
-            consumer, "terracotta_slab_from_terracotta_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.TERRACOTTA), ECBlockRegistry.TERRACOTTA_STAIRS.get()).addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(
-            consumer, "terracotta_stairs_from_terracotta_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.TERRACOTTA), ECBlockRegistry.TERRACOTTA_WALL.get()).addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(consumer,
-            "terracotta_wall_from_terracotta_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.TERRACOTTA), ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get(), 2).addCriterion("has_terracotta",
-            this.hasItem(Blocks.TERRACOTTA)).build(consumer, "terracotta_pressure_plate_from_terracotta_stonecutting");
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.TERRACOTTA), ECBlockRegistry.TERRACOTTA_BUTTON.get(), 2).addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(
             consumer, "terracotta_button_from_terracotta_stonecutting");
+        basicRecipes(consumer, Blocks.TERRACOTTA, ECBlockRegistry.TERRACOTTA_SLAB.get(), ECBlockRegistry.TERRACOTTA_STAIRS.get(), ECBlockRegistry.TERRACOTTA_WALL.get(),
+            ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get());
+        basicRecipes(consumer, ECBlockRegistry.POLISHED_TERRACOTTA.get(), ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get(), ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS.get(),
+            ECBlockRegistry.POLISHED_TERRACOTTA_WALL.get(), ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE.get());
+        basicRecipes(consumer, ECBlockRegistry.TERRACOTTA_PAVING.get(), ECBlockRegistry.TERRACOTTA_PAVING_SLAB.get(), ECBlockRegistry.TERRACOTTA_PAVING_STAIRS.get(),
+            ECBlockRegistry.TERRACOTTA_PAVING_WALL.get(), ECBlockRegistry.TERRACOTTA_PAVING_PRESSURE_PLATE.get());
+        basicRecipes(consumer, ECBlockRegistry.TERRACOTTA_TILES.get(), ECBlockRegistry.TERRACOTTA_TILES_SLAB.get(), ECBlockRegistry.TERRACOTTA_TILES_STAIRS.get(), ECBlockRegistry.TERRACOTTA_TILES_WALL.get(),
+            ECBlockRegistry.TERRACOTTA_TILES_PRESSURE_PLATE.get());
+        basicRecipes(consumer, ECBlockRegistry.TERRACOTTA_BRICKS.get(), ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get(), ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS.get(),
+            ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get(), ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get());
+        basicRecipes(consumer, ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get(),
+            ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get());
 
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.POLISHED_TERRACOTTA.get()), ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get(), 2).addCriterion("has_polished_terracotta",
-            this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA.get())).build(consumer, "polished_terracotta_slab_from_polished_terracotta_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.POLISHED_TERRACOTTA.get()), ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS.get()).addCriterion("has_polished_terracotta",
-            this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA.get())).build(consumer, "polished_terracotta_stairs_from_polished_terracotta_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.POLISHED_TERRACOTTA.get()), ECBlockRegistry.POLISHED_TERRACOTTA_WALL.get()).addCriterion("has_polished_terracotta",
-            this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA.get())).build(consumer, "polished_terracotta_wall_from_polished_terracotta_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.POLISHED_TERRACOTTA.get()), ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE.get(), 2).addCriterion(
-            "has_polished_terracotta", this.hasItem(ECBlockRegistry.POLISHED_TERRACOTTA.get())).build(consumer, "polished_terracotta_pressure_plate_from_polished_terracotta_stonecutting");
-
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_PAVING.get()), ECBlockRegistry.TERRACOTTA_PAVING_SLAB.get(), 2).addCriterion("has_terracotta_paving",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING.get())).build(consumer, "terracotta_paving_slab_from_terracotta_paving_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_PAVING.get()), ECBlockRegistry.TERRACOTTA_PAVING_STAIRS.get()).addCriterion("has_terracotta_paving",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING.get())).build(consumer, "terracotta_paving_stairs_from_terracotta_paving_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_PAVING.get()), ECBlockRegistry.TERRACOTTA_PAVING_WALL.get()).addCriterion("has_terracotta_paving",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING.get())).build(consumer, "terracotta_paving_wall_from_terracotta_paving_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_PAVING.get()), ECBlockRegistry.TERRACOTTA_PAVING_PRESSURE_PLATE.get(), 2).addCriterion("has_terracotta_paving",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_PAVING.get())).build(consumer, "terracotta_paving_pressure_plate_from_terracotta_paving_stonecutting");
-
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_TILES.get()), ECBlockRegistry.TERRACOTTA_TILES_SLAB.get(), 2).addCriterion("has_terracotta_tiles",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_TILES.get())).build(consumer, "terracotta_tiles_slab_from_terracotta_tiles_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_TILES.get()), ECBlockRegistry.TERRACOTTA_TILES_STAIRS.get()).addCriterion("has_terracotta_tiles",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_TILES.get())).build(consumer, "terracotta_tiles_stairs_from_terracotta_tiles_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_TILES.get()), ECBlockRegistry.TERRACOTTA_TILES_WALL.get()).addCriterion("has_terracotta_tiles",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_TILES.get())).build(consumer, "terracotta_tiles_wall_from_terracotta_tiles_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_TILES.get()), ECBlockRegistry.TERRACOTTA_TILES_PRESSURE_PLATE.get(), 2).addCriterion("has_terracotta_tiles",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_TILES.get())).build(consumer, "terracotta_tiles_pressure_plate_from_terracotta_tiles_stonecutting");
-
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_BRICKS.get()), ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get(), 2).addCriterion("has_terracotta_bricks",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS.get())).build(consumer, "terracotta_bricks_slab_from_terracotta_bricks_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_BRICKS.get()), ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS.get()).addCriterion("has_terracotta_bricks",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS.get())).build(consumer, "terracotta_bricks_stairs_from_terracotta_bricks_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_BRICKS.get()), ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get()).addCriterion("has_terracotta_bricks",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS.get())).build(consumer, "terracotta_bricks_wall_from_terracotta_bricks_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_BRICKS.get()), ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get(), 2).addCriterion("has_terracotta_bricks",
-            this.hasItem(ECBlockRegistry.TERRACOTTA_BRICKS.get())).build(consumer, "terracotta_bricks_pressure_plate_from_terracotta_bricks_stonecutting");
-
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get(), 2).addCriterion(
-            "has_terracotta_large_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get())).build(consumer, "terracotta_large_bricks_slab_from_terracotta_large_bricks_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get()).addCriterion(
-            "has_terracotta_large_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get())).build(consumer, "terracotta_large_bricks_stairs_from_terracotta_large_bricks_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get()).addCriterion(
-            "has_terracotta_large_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get())).build(consumer, "terracotta_large_bricks_wall_from_terracotta_large_bricks_stonecutting");
-        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get()), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get(), 2).addCriterion(
-            "has_terracotta_large_bricks", this.hasItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get())).build(consumer, "terracotta_large_bricks_pressure_plate_from_terracotta_large_bricks_stonecutting");
-
+        // Other bricks
+        basicRecipes(consumer, ECBlockRegistry.DARK_BRICKS.get(), ECBlockRegistry.DARK_BRICKS_SLAB.get(), ECBlockRegistry.DARK_BRICKS_STAIRS.get(), ECBlockRegistry.DARK_BRICKS_WALL.get(),
+            ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE.get());
+        basicRecipes(consumer, ECBlockRegistry.DARK_LARGE_BRICKS.get(), ECBlockRegistry.DARK_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS.get(),
+            ECBlockRegistry.DARK_LARGE_BRICKS_WALL.get(), ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE.get());
+        basicRecipes(consumer, ECBlockRegistry.OLD_BRICKS.get(), ECBlockRegistry.OLD_BRICKS_SLAB.get(), ECBlockRegistry.OLD_BRICKS_STAIRS.get(), ECBlockRegistry.OLD_BRICKS_WALL.get(),
+            ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE.get());
+        basicRecipes(consumer, ECBlockRegistry.OLD_LARGE_BRICKS.get(), ECBlockRegistry.OLD_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.OLD_LARGE_BRICKS_WALL.get(),
+            ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE.get());
     }
 
+    private void basicRecipes(Consumer<IFinishedRecipe> consumer, Block base, Block slab, Block stairs, Block wall, Block pressure)
+    {
+        String base_name = base.getRegistryName().getPath();
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(base), slab, 2).addCriterion("has_" + base_name, this.hasItem(base)).build(consumer,
+            base_name + "_slab_from_" + base_name + "_stonecutting");
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(base), stairs).addCriterion("has_" + base_name, this.hasItem(base)).build(consumer,
+            base_name + "_stairs_from_" + base_name + "_stonecutting");
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(base), wall).addCriterion("has_" + base_name, this.hasItem(base)).build(consumer,
+            base_name + "_wall_from_" + base_name + "_stonecutting");
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(base), pressure, 2).addCriterion("has_" + base_name, this.hasItem(base)).build(consumer,
+            base_name + "_pressure_plate_from_" + base_name + "_stonecutting");
+    }
 }

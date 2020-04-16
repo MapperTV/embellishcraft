@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:dark_bricks"
+  },
+  "result": "embellishcraft:dark_bricks_pressure_plate",
+  "count": 2
+}
