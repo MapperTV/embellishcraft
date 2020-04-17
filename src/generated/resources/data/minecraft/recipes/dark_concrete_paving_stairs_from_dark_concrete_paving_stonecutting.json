@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:dark_concrete_paving"
+  },
+  "result": "embellishcraft:dark_concrete_paving_stairs",
+  "count": 1
+}

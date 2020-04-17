@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:light_blue_tiles_pressure_plate_from_light_blue_tiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_light_blue_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:light_blue_tiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:light_blue_tiles_pressure_plate_from_light_blue_tiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_light_blue_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}

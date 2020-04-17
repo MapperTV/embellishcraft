@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:moist_paving_stairs_from_moist_paving_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_moist_paving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:moist_paving"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:moist_paving_stairs_from_moist_paving_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_moist_paving",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:weared_bricks_pressure_plate_from_weared_bricks_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_weared_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:weared_bricks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:weared_bricks_pressure_plate_from_weared_bricks_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_weared_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

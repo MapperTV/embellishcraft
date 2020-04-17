@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:pink_wallpaper"
+  },
+  "result": "embellishcraft:pink_wallpaper_slab",
+  "count": 2
+}

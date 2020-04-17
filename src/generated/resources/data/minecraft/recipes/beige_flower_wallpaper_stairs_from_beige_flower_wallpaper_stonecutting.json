@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:beige_flower_wallpaper"
+  },
+  "result": "embellishcraft:beige_flower_wallpaper_stairs",
+  "count": 1
+}

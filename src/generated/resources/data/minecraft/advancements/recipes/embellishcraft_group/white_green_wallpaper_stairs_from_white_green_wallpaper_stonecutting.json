@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:white_green_wallpaper_stairs_from_white_green_wallpaper_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_white_green_wallpaper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:white_green_wallpaper"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:white_green_wallpaper_stairs_from_white_green_wallpaper_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_white_green_wallpaper",
+      "has_the_recipe"
+    ]
+  ]
+}
