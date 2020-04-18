@@ -199,6 +199,8 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics(name + "_bricks", true, true, true, true, true, false);
         registerBlockBasics(name + "_large_bricks", true, true, true, true, true, false);
         registerBlockBasics(name + "_ornament", true, false, false, false, true, false);
+        registerBlockBasics(name + "_rooftiles", true, true, true, false, false, false);
+
     }
 
     private void registerMcStone(String name)

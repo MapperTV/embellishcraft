@@ -214,6 +214,19 @@ public class ECItemRegistry
             () -> new BlockItem(ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Rock rooftiles
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCKS_ROOFTILES_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_rooftiles", () -> new BlockItem(ECBlockRegistry.ROCK_ROOFTILES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_ROOFTILES_STAIRS_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_rooftiles_stairs", () -> new BlockItem(ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_ROOFTILES_SLABS_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_rooftiles_slab", () -> new BlockItem(ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
     // Andesite
     public static final RegistryObject<Item> SMOOTH_ANDESITE_ITEM = ITEMS.register("smooth_andesite",
         () -> new BlockItem(ECBlockRegistry.SMOOTH_ANDESITE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));

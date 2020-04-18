@@ -70,6 +70,12 @@ public class ECStonecutterRecipes extends RecipeProvider
                 ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get(), 2).addCriterion("has_" + RockType.byId(j).getName() + "_ornament",
                     this.hasItem(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get())).build(consumer,
                         RockType.byId(j).getName() + "_ornament_pressure_plate_from_" + RockType.byId(j).getName() + "_stonecutting");
+
+            SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get()), ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get(), 2).addCriterion(
+                "has_" + RockType.byId(j).getName(), this.hasItem(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get())).build(consumer,
+                    RockType.byId(j).getName() + "_rooftiles_from_" + RockType.byId(j).getName() + "_stonecutting");
+            basicRecipes(consumer, ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get(), null, null);
         }
 
         // Andesite

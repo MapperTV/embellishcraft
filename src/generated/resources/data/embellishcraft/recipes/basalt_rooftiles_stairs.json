@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "embellishcraft:basalt_rooftiles"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:basalt_rooftiles_stairs",
+    "count": 4
+  }
+}

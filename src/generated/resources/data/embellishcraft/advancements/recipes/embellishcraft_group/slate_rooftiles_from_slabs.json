@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:slate_rooftiles_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_slate_rooftiles_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:slate_rooftiles_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:slate_rooftiles_from_slabs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_slate_rooftiles_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

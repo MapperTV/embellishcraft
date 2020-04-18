@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:slate_rooftiles_stairs"
+    ]
+  },
+  "criteria": {
+    "has_slate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:slate_rooftiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:slate_rooftiles_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_slate",
+      "has_the_recipe"
+    ]
+  ]
+}

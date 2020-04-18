@@ -107,6 +107,10 @@ public class ECLootTables extends BaseLootTableProvider
             lootTables.put(ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get(),
                 createStandardTable(ECConstants.MODID, ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get()));
 
+            // Rock rooftiles
+            lootTables.put(ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get(), createSlabTable(ECConstants.MODID, ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get()));
         }
 
         // Andesite

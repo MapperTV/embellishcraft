@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:marble_rooftiles_stairs_from_marble_rooftiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_marble_rooftiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:marble_rooftiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:marble_rooftiles_stairs_from_marble_rooftiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_marble_rooftiles",
+      "has_the_recipe"
+    ]
+  ]
+}

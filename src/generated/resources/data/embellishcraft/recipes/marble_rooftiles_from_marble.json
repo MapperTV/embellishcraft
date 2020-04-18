@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " i ",
+    "i i",
+    " i "
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:marble"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:marble_rooftiles",
+    "count": 4
+  }
+}

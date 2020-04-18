@@ -236,6 +236,19 @@ public class ECBlockRegistry
             () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Rock rooftiles
+    public static final Map<RockType, RegistryObject<CustomBlock>> ROCK_ROOFTILES = Arrays.stream(RockType.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_rooftiles", () -> new CustomBlock(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<CustomStairsBlock>> ROCK_ROOFTILES_STAIRS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, BLOCKS.register(type.getName() + "_rooftiles_stairs",
+        () -> new CustomStairsBlock(() -> ROCK_BLOCKS.get(type).get().getDefaultState(), Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<CustomSlabBlock>> ROCK_ROOFTILES_SLABS = Arrays.stream(RockType.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_rooftiles_slab", () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
     // Andesite
     public static final RegistryObject<CustomBlock> SMOOTH_ANDESITE = BLOCKS.register("smooth_andesite",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE));

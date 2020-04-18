@@ -41,50 +41,47 @@ public class ECBlockTags extends BlockTagsProvider
             this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)).get());
 
             // Smooth rocks
-            // this.getBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.SMOOTH_ROCK_STAIRS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.SMOOTH_ROCK_WALLS.get(RockType.byId(j)).get());
             this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.SMOOTH_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get());
 
             // Polished rocks
-            // this.getBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.POLISHED_ROCK_STAIRS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.POLISHED_ROCK_WALLS.get(RockType.byId(j)).get());
             this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.POLISHED_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get());
 
             // Rocks pavings
-            // this.getBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.ROCK_PAVINGS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.ROCK_PAVING_STAIRS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.ROCK_PAVING_SLABS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.ROCK_PAVING_WALLS.get(RockType.byId(j)).get());
             this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.ROCK_PAVING_PRESSURE_PLATES.get(RockType.byId(j)).get());
 
             // Rocks tiles
-            // this.getBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.ROCK_TILES.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.ROCK_TILES_STAIRS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.ROCK_TILES_SLABS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.ROCK_TILES_WALLS.get(RockType.byId(j)).get());
             this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.ROCK_TILES_PRESSURE_PLATES.get(RockType.byId(j)).get());
 
             // Rocks bricks
-            // this.getBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.ROCK_BRICKS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.ROCK_BRICKS_STAIRS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.ROCK_BRICKS_SLABS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.ROCK_BRICKS_WALLS.get(RockType.byId(j)).get());
             this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.ROCK_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get());
 
             // Rocks large bricks
-            // this.getBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.ROCK_LARGE_BRICKS_STAIRS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.ROCK_LARGE_BRICKS_SLABS.get(RockType.byId(j)).get());
             this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.ROCK_LARGE_BRICKS_WALLS.get(RockType.byId(j)).get());
             this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get());
 
             // Rocks ornaments
-            // this.getBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get());
             this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get());
+
+            // Rock rooftiles
+            this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get());
+            this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get());
         }
 
         this.getBuilder(BlockTags.BUTTONS).add(ECBlockRegistry.ANDESITE_BUTTON.get(), ECBlockRegistry.GRANITE_BUTTON.get(), ECBlockRegistry.DIORITE_BUTTON.get(), ECBlockRegistry.SANDSTONE_BUTTON.get(),

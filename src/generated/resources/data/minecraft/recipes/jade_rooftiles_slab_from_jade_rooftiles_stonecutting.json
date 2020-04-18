@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:jade_rooftiles"
+  },
+  "result": "embellishcraft:jade_rooftiles_slab",
+  "count": 2
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "side": "embellishcraft:block/gneiss_rooftiles",
+    "bottom": "embellishcraft:block/gneiss_rooftiles",
+    "top": "embellishcraft:block/gneiss_rooftiles"
+  }
+}

@@ -92,6 +92,11 @@ public class ECLang extends LanguageProvider
                     // Rock ornaments
                     addBlock(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Ornament");
                     addBlock(ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Ornament Pressure Plate");
+
+                    // Rock rooftiles
+                    addBlock(ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName() + " Rooftiles"));
+                    addBlock(ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Rooftiles Stairs");
+                    addBlock(ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Rooftiles Slab");
                 }
 
                 // Andesite
@@ -656,6 +661,11 @@ public class ECLang extends LanguageProvider
                     // Rock ornaments
                     addBlock(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)), "Ornement en " + RockType.byId(j).getFrName());
                     addBlock(ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)), "Plaque de pression avec ornement en " + RockType.byId(j).getFrName());
+
+                    // Rock rooftiles
+                    addBlock(ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)), "Tuiles " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)), "Escalier en tuiles " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)), "Dalle en tuiles " + de + RockType.byId(j).getFrName());
                 }
 
                 // Andesite

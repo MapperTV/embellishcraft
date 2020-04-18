@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:larvikite_rooftiles_stairs"
+    ]
+  },
+  "criteria": {
+    "has_larvikite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:larvikite_rooftiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:larvikite_rooftiles_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_larvikite",
+      "has_the_recipe"
+    ]
+  ]
+}
