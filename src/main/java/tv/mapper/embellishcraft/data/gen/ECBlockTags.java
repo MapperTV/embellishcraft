@@ -89,9 +89,9 @@ public class ECBlockTags extends BlockTagsProvider
 
         // Andesite
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.SMOOTH_ANDESITE_STAIRS.get(), ECBlockRegistry.ANDESITE_PAVING_STAIRS.get(), ECBlockRegistry.ANDESITE_TILES_STAIRS.get(),
-            ECBlockRegistry.ANDESITE_BRICKS_STAIRS.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_STAIRS.get());
+            ECBlockRegistry.ANDESITE_BRICKS_STAIRS.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.ANDESITE_ROOFTILES_STAIRS.get());
         this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.SMOOTH_ANDESITE_SLAB.get(), ECBlockRegistry.ANDESITE_PAVING_SLAB.get(), ECBlockRegistry.ANDESITE_TILES_SLAB.get(),
-            ECBlockRegistry.ANDESITE_BRICKS_SLAB.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_SLAB.get());
+            ECBlockRegistry.ANDESITE_BRICKS_SLAB.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.ANDESITE_ROOFTILES_SLAB.get());
         this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.SMOOTH_ANDESITE_WALL.get(), ECBlockRegistry.ANDESITE_PAVING_WALL.get(), ECBlockRegistry.ANDESITE_TILES_WALL.get(),
             ECBlockRegistry.ANDESITE_BRICKS_WALL.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_WALL.get());
         this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.SMOOTH_ANDESITE_PRESSURE_PLATE.get(), ECBlockRegistry.ANDESITE_PAVING_PRESSURE_PLATE.get(),
@@ -100,9 +100,9 @@ public class ECBlockTags extends BlockTagsProvider
 
         // Diorite
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.SMOOTH_DIORITE_STAIRS.get(), ECBlockRegistry.DIORITE_PAVING_STAIRS.get(), ECBlockRegistry.DIORITE_TILES_STAIRS.get(),
-            ECBlockRegistry.DIORITE_BRICKS_STAIRS.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_STAIRS.get());
+            ECBlockRegistry.DIORITE_BRICKS_STAIRS.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.DIORITE_ROOFTILES_STAIRS.get());
         this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.SMOOTH_DIORITE_SLAB.get(), ECBlockRegistry.DIORITE_PAVING_SLAB.get(), ECBlockRegistry.DIORITE_TILES_SLAB.get(),
-            ECBlockRegistry.DIORITE_BRICKS_SLAB.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_SLAB.get());
+            ECBlockRegistry.DIORITE_BRICKS_SLAB.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.DIORITE_ROOFTILES_SLAB.get());
         this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.SMOOTH_DIORITE_WALL.get(), ECBlockRegistry.DIORITE_PAVING_WALL.get(), ECBlockRegistry.DIORITE_TILES_WALL.get(),
             ECBlockRegistry.DIORITE_BRICKS_WALL.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_WALL.get());
         this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.SMOOTH_DIORITE_PRESSURE_PLATE.get(), ECBlockRegistry.DIORITE_PAVING_PRESSURE_PLATE.get(),
@@ -111,9 +111,9 @@ public class ECBlockTags extends BlockTagsProvider
 
         // Granite
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.SMOOTH_GRANITE_STAIRS.get(), ECBlockRegistry.GRANITE_PAVING_STAIRS.get(), ECBlockRegistry.GRANITE_TILES_STAIRS.get(),
-            ECBlockRegistry.GRANITE_BRICKS_STAIRS.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_STAIRS.get());
+            ECBlockRegistry.GRANITE_BRICKS_STAIRS.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.GRANITE_ROOFTILES_STAIRS.get());
         this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.SMOOTH_GRANITE_SLAB.get(), ECBlockRegistry.GRANITE_PAVING_SLAB.get(), ECBlockRegistry.GRANITE_TILES_SLAB.get(),
-            ECBlockRegistry.GRANITE_BRICKS_SLAB.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_SLAB.get());
+            ECBlockRegistry.GRANITE_BRICKS_SLAB.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.GRANITE_ROOFTILES_SLAB.get());
         this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.SMOOTH_GRANITE_WALL.get(), ECBlockRegistry.GRANITE_PAVING_WALL.get(), ECBlockRegistry.GRANITE_TILES_WALL.get(),
             ECBlockRegistry.GRANITE_BRICKS_WALL.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_WALL.get());
         this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.SMOOTH_GRANITE_PRESSURE_PLATE.get(), ECBlockRegistry.GRANITE_PAVING_PRESSURE_PLATE.get(),
@@ -122,9 +122,9 @@ public class ECBlockTags extends BlockTagsProvider
 
         // Sandstone
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.POLISHED_SANDSTONE_STAIRS.get(), ECBlockRegistry.SANDSTONE_PAVING_STAIRS.get(), ECBlockRegistry.SANDSTONE_TILES_STAIRS.get(),
-            ECBlockRegistry.SANDSTONE_BRICKS_STAIRS.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get());
+            ECBlockRegistry.SANDSTONE_BRICKS_STAIRS.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS.get());
         this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.POLISHED_SANDSTONE_SLAB.get(), ECBlockRegistry.SANDSTONE_PAVING_SLAB.get(), ECBlockRegistry.SANDSTONE_TILES_SLAB.get(),
-            ECBlockRegistry.SANDSTONE_BRICKS_SLAB.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get());
+            ECBlockRegistry.SANDSTONE_BRICKS_SLAB.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB.get());
         this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get(), ECBlockRegistry.POLISHED_SANDSTONE_WALL.get(), ECBlockRegistry.SANDSTONE_PAVING_WALL.get(),
             ECBlockRegistry.SANDSTONE_TILES_WALL.get(), ECBlockRegistry.SANDSTONE_BRICKS_WALL.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get());
         this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE.get(), ECBlockRegistry.POLISHED_SANDSTONE_PRESSURE_PLATE.get(),
@@ -133,9 +133,9 @@ public class ECBlockTags extends BlockTagsProvider
 
         // Red Sandstone
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.POLISHED_RED_SANDSTONE_STAIRS.get(), ECBlockRegistry.RED_SANDSTONE_PAVING_STAIRS.get(), ECBlockRegistry.RED_SANDSTONE_TILES_STAIRS.get(),
-            ECBlockRegistry.RED_SANDSTONE_BRICKS_STAIRS.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get());
+            ECBlockRegistry.RED_SANDSTONE_BRICKS_STAIRS.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.RED_SANDSTONE_ROOFTILES_STAIRS.get());
         this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.POLISHED_RED_SANDSTONE_SLAB.get(), ECBlockRegistry.RED_SANDSTONE_PAVING_SLAB.get(), ECBlockRegistry.RED_SANDSTONE_TILES_SLAB.get(),
-            ECBlockRegistry.RED_SANDSTONE_BRICKS_SLAB.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get());
+            ECBlockRegistry.RED_SANDSTONE_BRICKS_SLAB.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get());
         this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL.get(), ECBlockRegistry.POLISHED_RED_SANDSTONE_WALL.get(), ECBlockRegistry.RED_SANDSTONE_PAVING_WALL.get(),
             ECBlockRegistry.RED_SANDSTONE_TILES_WALL.get(), ECBlockRegistry.RED_SANDSTONE_BRICKS_WALL.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get());
         this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.SMOOTH_RED_SANDSTONE_PRESSURE_PLATE.get(), ECBlockRegistry.POLISHED_RED_SANDSTONE_PRESSURE_PLATE.get(),
@@ -144,9 +144,10 @@ public class ECBlockTags extends BlockTagsProvider
 
         // Terracotta
         this.getBuilder(BlockTags.STAIRS).add(ECBlockRegistry.TERRACOTTA_STAIRS.get(), ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS.get(), ECBlockRegistry.TERRACOTTA_PAVING_STAIRS.get(),
-            ECBlockRegistry.TERRACOTTA_TILES_STAIRS.get(), ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get());
+            ECBlockRegistry.TERRACOTTA_TILES_STAIRS.get(), ECBlockRegistry.TERRACOTTA_BRICKS_STAIRS.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get(),
+            ECBlockRegistry.TERRACOTTA_ROOFTILES_STAIRS.get());
         this.getBuilder(BlockTags.SLABS).add(ECBlockRegistry.TERRACOTTA_SLAB.get(), ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get(), ECBlockRegistry.TERRACOTTA_PAVING_SLAB.get(),
-            ECBlockRegistry.TERRACOTTA_TILES_SLAB.get(), ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get());
+            ECBlockRegistry.TERRACOTTA_TILES_SLAB.get(), ECBlockRegistry.TERRACOTTA_BRICKS_SLAB.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB.get());
         this.getBuilder(BlockTags.WALLS).add(ECBlockRegistry.TERRACOTTA_WALL.get(), ECBlockRegistry.POLISHED_TERRACOTTA_WALL.get(), ECBlockRegistry.TERRACOTTA_PAVING_WALL.get(),
             ECBlockRegistry.TERRACOTTA_TILES_WALL.get(), ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get());
         this.getBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get(), ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE.get(),

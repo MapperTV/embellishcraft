@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:terracotta_rooftiles"
+  },
+  "result": "embellishcraft:terracotta_rooftiles_slab",
+  "count": 2
+}

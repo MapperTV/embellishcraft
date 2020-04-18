@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:andesite_rooftiles_slab_from_andesite_rooftiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_andesite_rooftiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:andesite_rooftiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:andesite_rooftiles_slab_from_andesite_rooftiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_andesite_rooftiles",
+      "has_the_recipe"
+    ]
+  ]
+}

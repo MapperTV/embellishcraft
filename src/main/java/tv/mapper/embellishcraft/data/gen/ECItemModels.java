@@ -48,6 +48,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("terracotta_tiles", true, true, true, true, true, false);
         registerBlockBasics("terracotta_bricks", true, true, true, true, true, false);
         registerBlockBasics("terracotta_large_bricks", true, true, true, true, true, false);
+        registerBlockBasics("terracotta_rooftiles", true, true, true, false, false, false);
 
         // Other bricks
         registerBlockBasics("dark_bricks", true, true, true, true, true, false);
@@ -212,6 +213,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics(name + "_bricks", true, true, true, true, true, false);
         registerBlockBasics(name + "_large_bricks", true, true, true, true, true, false);
         registerBlockBasics(name + "_ornament", true, false, false, false, true, false);
+        registerBlockBasics(name + "_rooftiles", true, true, true, false, false, false);
     }
 
     private void registerSandstone(String name)
@@ -223,5 +225,6 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics(name + "_tiles", true, true, true, true, true, false);
         registerBlockBasics(name + "_bricks", true, true, true, true, true, false);
         registerBlockBasics(name + "_large_bricks", true, true, true, true, true, false);
+        registerBlockBasics(name + "_rooftiles", true, true, true, false, false, false);
     }
 }

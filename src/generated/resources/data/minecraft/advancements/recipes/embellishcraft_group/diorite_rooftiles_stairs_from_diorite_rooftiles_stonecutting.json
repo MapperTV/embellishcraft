@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:diorite_rooftiles_stairs_from_diorite_rooftiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_diorite_rooftiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:diorite_rooftiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:diorite_rooftiles_stairs_from_diorite_rooftiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_diorite_rooftiles",
+      "has_the_recipe"
+    ]
+  ]
+}

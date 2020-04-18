@@ -98,6 +98,10 @@ public class ECStonecutterRecipes extends RecipeProvider
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.ANDESITE_ORNAMENT.get()), ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE.get(), 2).addCriterion("has_andesite_ornament",
             this.hasItem(ECBlockRegistry.ANDESITE_ORNAMENT.get())).build(consumer, "andesite_ornament_pressure_place_from_andesite_ornament_stonecutting");
 
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.ANDESITE), ECBlockRegistry.ANDESITE_ROOFTILES.get(), 2).addCriterion("has_andesite", this.hasItem(Blocks.ANDESITE)).build(consumer,
+            "andesite_rooftiles_from_andesite_stonecutting");
+        basicRecipes(consumer, ECBlockRegistry.ANDESITE_ROOFTILES.get(), ECBlockRegistry.ANDESITE_ROOFTILES_SLAB.get(), ECBlockRegistry.ANDESITE_ROOFTILES_STAIRS.get(), null, null);
+
         // Diorite
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.DIORITE), ECBlockRegistry.DIORITE_BUTTON.get(), 2).addCriterion("has_diorite", this.hasItem(Blocks.DIORITE)).build(consumer,
             "diorite_button_from_diorite_stonecutting");
@@ -117,6 +121,10 @@ public class ECStonecutterRecipes extends RecipeProvider
             "diorite_ornament_from_diorite_stonecutting");
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.DIORITE_ORNAMENT.get()), ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE.get(), 2).addCriterion("has_diorite_ornament",
             this.hasItem(ECBlockRegistry.DIORITE_ORNAMENT.get())).build(consumer, "diorite_ornament_pressure_place_from_diorite_ornament_stonecutting");
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.DIORITE), ECBlockRegistry.DIORITE_ROOFTILES.get(), 2).addCriterion("has_diorite", this.hasItem(Blocks.DIORITE)).build(consumer,
+            "diorite_rooftiles_from_diorite_stonecutting");
+        basicRecipes(consumer, ECBlockRegistry.DIORITE_ROOFTILES.get(), ECBlockRegistry.DIORITE_ROOFTILES_SLAB.get(), ECBlockRegistry.DIORITE_ROOFTILES_STAIRS.get(), null, null);
 
         // Granite
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.GRANITE), ECBlockRegistry.GRANITE_BUTTON.get(), 2).addCriterion("has_granite", this.hasItem(Blocks.GRANITE)).build(consumer,
@@ -138,6 +146,10 @@ public class ECStonecutterRecipes extends RecipeProvider
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(ECBlockRegistry.GRANITE_ORNAMENT.get()), ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get(), 2).addCriterion("has_granite_ornament",
             this.hasItem(ECBlockRegistry.GRANITE_ORNAMENT.get())).build(consumer, "granite_ornament_pressure_place_from_granite_ornament_stonecutting");
 
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.GRANITE), ECBlockRegistry.GRANITE_ROOFTILES.get(), 2).addCriterion("has_granite", this.hasItem(Blocks.GRANITE)).build(consumer,
+            "granite_rooftiles_from_granite_stonecutting");
+        basicRecipes(consumer, ECBlockRegistry.GRANITE_ROOFTILES.get(), ECBlockRegistry.GRANITE_ROOFTILES_SLAB.get(), ECBlockRegistry.GRANITE_ROOFTILES_STAIRS.get(), null, null);
+
         // Sandstone
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.SANDSTONE), ECBlockRegistry.SANDSTONE_BUTTON.get(), 2).addCriterion("has_sandstone", this.hasItem(Blocks.SANDSTONE)).build(
             consumer, "sandstone_button_from_sandstone_stonecutting");
@@ -157,6 +169,10 @@ public class ECStonecutterRecipes extends RecipeProvider
             ECBlockRegistry.SANDSTONE_BRICKS_PRESSURE_PLATE.get());
         basicRecipes(consumer, ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get());
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.SANDSTONE), ECBlockRegistry.SANDSTONE_ROOFTILES.get(), 2).addCriterion("has_sandstone", this.hasItem(Blocks.SANDSTONE)).build(
+            consumer, "sandstone_rooftiles_from_sandstone_stonecutting");
+        basicRecipes(consumer, ECBlockRegistry.SANDSTONE_ROOFTILES.get(), ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB.get(), ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS.get(), null, null);
 
         // Red Sandstone
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.RED_SANDSTONE), ECBlockRegistry.RED_SANDSTONE_BUTTON.get(), 2).addCriterion("has_red_sandstone",
@@ -178,6 +194,10 @@ public class ECStonecutterRecipes extends RecipeProvider
         basicRecipes(consumer, ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get());
 
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.RED_SANDSTONE), ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get(), 2).addCriterion("has_red_sandstone",
+            this.hasItem(Blocks.RED_SANDSTONE)).build(consumer, "red_sandstone_rooftiles_from_red_sandstone_stonecutting");
+        basicRecipes(consumer, ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get(), ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get(), ECBlockRegistry.RED_SANDSTONE_ROOFTILES_STAIRS.get(), null, null);
+
         // Terracotta
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.TERRACOTTA), ECBlockRegistry.TERRACOTTA_BUTTON.get(), 2).addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(
             consumer, "terracotta_button_from_terracotta_stonecutting");
@@ -193,6 +213,10 @@ public class ECStonecutterRecipes extends RecipeProvider
             ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get(), ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get());
         basicRecipes(consumer, ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get());
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(Blocks.TERRACOTTA), ECBlockRegistry.TERRACOTTA_ROOFTILES.get(), 2).addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(
+            consumer, "terracotta_rooftiles_from_terracotta_stonecutting");
+        basicRecipes(consumer, ECBlockRegistry.TERRACOTTA_ROOFTILES.get(), ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB.get(), ECBlockRegistry.TERRACOTTA_ROOFTILES_STAIRS.get(), null, null);
 
         // Other bricks
         basicRecipes(consumer, ECBlockRegistry.DARK_BRICKS.get(), ECBlockRegistry.DARK_BRICKS_SLAB.get(), ECBlockRegistry.DARK_BRICKS_STAIRS.get(), ECBlockRegistry.DARK_BRICKS_WALL.get(),

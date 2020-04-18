@@ -290,6 +290,13 @@ public class ECItemRegistry
     public static final RegistryObject<Item> ANDESITE_ORNAMENT_PRESSURE_PLATE_ITEM = ITEMS.register("andesite_ornament_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    public static final RegistryObject<Item> ANDESITE_ROOFTILES_ITEM = ITEMS.register("andesite_rooftiles",
+        () -> new BlockItem(ECBlockRegistry.ANDESITE_ROOFTILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ANDESITE_ROOFTILES_STAIRS_ITEM = ITEMS.register("andesite_rooftiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.ANDESITE_ROOFTILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ANDESITE_ROOFTILES_SLAB_ITEM = ITEMS.register("andesite_rooftiles_slab",
+        () -> new BlockItem(ECBlockRegistry.ANDESITE_ROOFTILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     // Diorite
     public static final RegistryObject<Item> SMOOTH_DIORITE_ITEM = ITEMS.register("smooth_diorite",
         () -> new BlockItem(ECBlockRegistry.SMOOTH_DIORITE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -353,6 +360,13 @@ public class ECItemRegistry
     public static final RegistryObject<Item> DIORITE_ORNAMENT_PRESSURE_PLATE_ITEM = ITEMS.register("diorite_ornament_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    public static final RegistryObject<Item> DIORITE_ROOFTILES_ITEM = ITEMS.register("diorite_rooftiles",
+        () -> new BlockItem(ECBlockRegistry.DIORITE_ROOFTILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DIORITE_ROOFTILES_STAIRS_ITEM = ITEMS.register("diorite_rooftiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.DIORITE_ROOFTILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DIORITE_ROOFTILES_SLAB_ITEM = ITEMS.register("diorite_rooftiles_slab",
+        () -> new BlockItem(ECBlockRegistry.DIORITE_ROOFTILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     // Granite
     public static final RegistryObject<Item> SMOOTH_GRANITE_ITEM = ITEMS.register("smooth_granite",
         () -> new BlockItem(ECBlockRegistry.SMOOTH_GRANITE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -415,6 +429,13 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.GRANITE_ORNAMENT.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> GRANITE_ORNAMENT_PRESSURE_PLATE_ITEM = ITEMS.register("granite_ornament_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> GRANITE_ROOFTILES_ITEM = ITEMS.register("granite_rooftiles",
+        () -> new BlockItem(ECBlockRegistry.GRANITE_ROOFTILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRANITE_ROOFTILES_STAIRS_ITEM = ITEMS.register("granite_rooftiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.GRANITE_ROOFTILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRANITE_ROOFTILES_SLAB_ITEM = ITEMS.register("granite_rooftiles_slab",
+        () -> new BlockItem(ECBlockRegistry.GRANITE_ROOFTILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     // Sandstone
     public static final RegistryObject<Item> SANDSTONE_BUTTON_ITEM = ITEMS.register("sandstone_button",
@@ -480,6 +501,13 @@ public class ECItemRegistry
     public static final RegistryObject<Item> SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("sandstone_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    public static final RegistryObject<Item> SANDSTONE_ROOFTILES_ITEM = ITEMS.register("sandstone_rooftiles",
+        () -> new BlockItem(ECBlockRegistry.SANDSTONE_ROOFTILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SANDSTONE_ROOFTILES_STAIRS_ITEM = ITEMS.register("sandstone_rooftiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SANDSTONE_ROOFTILES_SLAB_ITEM = ITEMS.register("sandstone_rooftiles_slab",
+        () -> new BlockItem(ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     // Red Sandstone
     public static final RegistryObject<Item> RED_SANDSTONE_BUTTON_ITEM = ITEMS.register("red_sandstone_button",
         () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_BUTTON.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -543,6 +571,13 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("red_sandstone_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> RED_SANDSTONE_ROOFTILES_ITEM = ITEMS.register("red_sandstone_rooftiles",
+        () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_SANDSTONE_ROOFTILES_STAIRS_ITEM = ITEMS.register("red_sandstone_rooftiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_SANDSTONE_ROOFTILES_SLAB_ITEM = ITEMS.register("red_sandstone_rooftiles_slab",
+        () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     // Terracotta
     public static final RegistryObject<Item> TERRACOTTA_STAIRS_ITEM = ITEMS.register("terracotta_stairs",
@@ -610,6 +645,13 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("terracotta_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> TERRACOTTA_ROOFTILES_ITEM = ITEMS.register("terracotta_rooftiles",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_ROOFTILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_ROOFTILES_STAIRS_ITEM = ITEMS.register("terracotta_rooftiles_stairs",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_ROOFTILES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_ROOFTILES_SLAB_ITEM = ITEMS.register("terracotta_rooftiles_slab",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     // Other bricks
     public static final RegistryObject<Item> DARK_BRICKS_ITEM = ITEMS.register("dark_bricks", () -> new BlockItem(ECBlockRegistry.DARK_BRICKS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));

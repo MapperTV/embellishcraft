@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "side": "embellishcraft:block/andesite_rooftiles",
+    "bottom": "embellishcraft:block/andesite_rooftiles",
+    "top": "embellishcraft:block/andesite_rooftiles"
+  }
+}

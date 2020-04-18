@@ -134,6 +134,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.ANDESITE_ORNAMENT, "Andesite Ornament");
                 addBlock(ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE, "Andesite Ornament Pressure Plate");
 
+                addBlock(ECBlockRegistry.ANDESITE_ROOFTILES, "Andesite Rooftiles");
+                addBlock(ECBlockRegistry.ANDESITE_ROOFTILES_SLAB, "Andesite Rooftiles Slab");
+                addBlock(ECBlockRegistry.ANDESITE_ROOFTILES_STAIRS, "Andesite Rooftiles Stairs");
+
                 // Diorite
                 addBlock(ECBlockRegistry.SMOOTH_DIORITE, "Smooth Diorite");
                 addBlock(ECBlockRegistry.SMOOTH_DIORITE_SLAB, "Smooth Diorite Slab");
@@ -169,6 +173,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.DIORITE_ORNAMENT, "Diorite Ornament");
                 addBlock(ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE, "Diorite Ornament Pressure Plate");
 
+                addBlock(ECBlockRegistry.DIORITE_ROOFTILES, "Diorite Rooftiles");
+                addBlock(ECBlockRegistry.DIORITE_ROOFTILES_SLAB, "Diorite Rooftiles Slab");
+                addBlock(ECBlockRegistry.DIORITE_ROOFTILES_STAIRS, "Diorite Rooftiles Stairs");
+
                 // Granite
                 addBlock(ECBlockRegistry.SMOOTH_GRANITE, "Smooth Granite");
                 addBlock(ECBlockRegistry.SMOOTH_GRANITE_SLAB, "Smooth Granite Slab");
@@ -203,6 +211,10 @@ public class ECLang extends LanguageProvider
 
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT, "Granite Ornament");
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE, "Granite Ornament Pressure Plate");
+
+                addBlock(ECBlockRegistry.GRANITE_ROOFTILES, "Granite Rooftiles");
+                addBlock(ECBlockRegistry.GRANITE_ROOFTILES_SLAB, "Granite Rooftiles Slab");
+                addBlock(ECBlockRegistry.GRANITE_ROOFTILES_STAIRS, "Granite Rooftiles Stairs");
 
                 // Sandstone
                 addBlock(ECBlockRegistry.SANDSTONE_BUTTON, "Sandstone Button");
@@ -240,6 +252,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL, "Sandstone Large Bricks Wall");
                 addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Sandstone Large Bricks Pressure Plate");
 
+                addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES, "Sandstone Rooftiles");
+                addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB, "Sandstone Rooftiles Slab");
+                addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS, "Sandstone Rooftiles Stairs");
+
                 // Red Sandstone
                 addBlock(ECBlockRegistry.RED_SANDSTONE_BUTTON, "Red Sandstone Button");
 
@@ -275,6 +291,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS, "Red Sandstone Large Bricks Stairs");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL, "Red Sandstone Large Bricks Wall");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Red Sandstone Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES, "Red Sandstone Rooftiles");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB, "Red Sandstone Rooftiles Slab");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_STAIRS, "Red Sandstone Rooftiles Stairs");
 
                 // Terracotta
                 addBlock(ECBlockRegistry.TERRACOTTA_SLAB, "Terracotta Slab");
@@ -312,6 +332,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS, "Terracotta Large Bricks Stairs");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL, "Terracotta Large Bricks Wall");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE, "Terracotta Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES, "Terracotta Rooftiles");
+                addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB, "Terracotta Rooftiles Slab");
+                addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES_STAIRS, "Terracotta Rooftiles Stairs");
 
                 // Other bricks
                 addBlock(ECBlockRegistry.DARK_BRICKS, "Dark Bricks");
@@ -704,6 +728,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.ANDESITE_ORNAMENT, "Ornement en andésite");
                 addBlock(ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en andésite");
 
+                addBlock(ECBlockRegistry.ANDESITE_ROOFTILES, "Tuiles d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_ROOFTILES_SLAB, "Dalle en tuile d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_ROOFTILES_STAIRS, "Escalier en tuile d'andésite");
+
                 // Diorite
                 addBlock(ECBlockRegistry.DIORITE_BUTTON, "Bouton en diorite");
 
@@ -739,6 +767,10 @@ public class ECLang extends LanguageProvider
 
                 addBlock(ECBlockRegistry.DIORITE_ORNAMENT, "Ornement en diorite");
                 addBlock(ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en diorite");
+
+                addBlock(ECBlockRegistry.DIORITE_ROOFTILES, "Tuiles de diorite");
+                addBlock(ECBlockRegistry.DIORITE_ROOFTILES_SLAB, "Dalle en tuile de diorite");
+                addBlock(ECBlockRegistry.DIORITE_ROOFTILES_STAIRS, "Escalier en tuile de diorite");
 
                 // Granite
                 addBlock(ECBlockRegistry.GRANITE_BUTTON, "Bouton en granite");
@@ -776,6 +808,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT, "Ornement en granite");
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en granite");
 
+                addBlock(ECBlockRegistry.GRANITE_ROOFTILES, "Tuiles de granite");
+                addBlock(ECBlockRegistry.GRANITE_ROOFTILES_SLAB, "Dalle en tuile de granite");
+                addBlock(ECBlockRegistry.GRANITE_ROOFTILES_STAIRS, "Escalier en tuile de granite");
+
                 // Sandstone
                 addBlock(ECBlockRegistry.SANDSTONE_BUTTON, "Bouton en grès");
 
@@ -811,6 +847,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS, "Escaliers en briques épaisses de grès");
                 addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL, "Muret en briques épaisses de grès");
                 addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Dalle de pression en briques épaisses de grès");
+
+                addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES, "Tuiles de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB, "Dalle en tuile de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS, "Escalier en tuile de grès");
 
                 // Red Sandstone
                 addBlock(ECBlockRegistry.RED_SANDSTONE_BUTTON, "Bouton en grès rouge");
@@ -848,6 +888,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL, "Muret en briques épaisses de grès rouge");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Dalle de pression en briques épaisses de grès rouge");
 
+                addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES, "Tuiles de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB, "Dalle en tuile de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_STAIRS, "Escalier en tuile de grès rouge");
+
                 // Basalt
                 addBlock(ECBlockRegistry.TERRACOTTA_SLAB, "Dalle en terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_STAIRS, "Escalier en terre cuite");
@@ -884,6 +928,10 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL, "Muret en briques épaisses de terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de terre cuite");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES, "Tuiles de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB, "Dalle en tuile de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES_STAIRS, "Escalier en tuile de terre cuite");
 
                 // Other bricks
                 addBlock(ECBlockRegistry.DARK_BRICKS, "Briques sombres");

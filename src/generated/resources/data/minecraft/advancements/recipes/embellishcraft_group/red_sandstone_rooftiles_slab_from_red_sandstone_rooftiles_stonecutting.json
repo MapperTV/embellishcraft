@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:red_sandstone_rooftiles_slab_from_red_sandstone_rooftiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_red_sandstone_rooftiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:red_sandstone_rooftiles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:red_sandstone_rooftiles_slab_from_red_sandstone_rooftiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_red_sandstone_rooftiles",
+      "has_the_recipe"
+    ]
+  ]
+}
