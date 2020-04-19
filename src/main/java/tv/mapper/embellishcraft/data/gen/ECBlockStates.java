@@ -15,8 +15,10 @@ import net.minecraft.item.DyeColor;
 import net.minecraft.state.properties.BedPart;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.ChestType;
+import net.minecraft.state.properties.Half;
 import net.minecraft.state.properties.StairsShape;
 import net.minecraft.util.Direction;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -115,8 +117,10 @@ public class ECBlockStates extends BaseBlockStates
             registerStoneVariant(RockType.byId(j).getName() + "_ornament", ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), null, null, null,
                 ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            registerStoneVariant(RockType.byId(j).getName() + "_rooftiles", ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get(),
-                ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get(), null, null, null);
+            registerStoneVariant(RockType.byId(j).getName() + "_rooftiles", ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get(), null,
+                null, null, null);
+            rooftilesStairsBlock(ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get(), modLoc("block/" + RockType.byId(j).getName() + "_rooftiles"));
+
         }
 
         // Andesite
@@ -132,7 +136,8 @@ public class ECBlockStates extends BaseBlockStates
         registerStoneVariant("andesite_large_bricks", ECBlockRegistry.ANDESITE_LARGE_BRICKS.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.ANDESITE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("andesite_ornament", ECBlockRegistry.ANDESITE_ORNAMENT.get(), null, null, null, ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("andesite_rooftiles", ECBlockRegistry.ANDESITE_ROOFTILES.get(), ECBlockRegistry.ANDESITE_ROOFTILES_SLAB.get(), ECBlockRegistry.ANDESITE_ROOFTILES_STAIRS.get(), null, null, null);
+        registerStoneVariant("andesite_rooftiles", ECBlockRegistry.ANDESITE_ROOFTILES.get(), ECBlockRegistry.ANDESITE_ROOFTILES_SLAB.get(), null, null, null, null);
+        rooftilesStairsBlock(ECBlockRegistry.ANDESITE_ROOFTILES_STAIRS.get(), modLoc("block/andesite_rooftiles"));
 
         // Diorite
         registerStoneVariant("diorite", null, null, null, null, null, ECBlockRegistry.DIORITE_BUTTON.get());
@@ -147,7 +152,8 @@ public class ECBlockStates extends BaseBlockStates
         registerStoneVariant("diorite_large_bricks", ECBlockRegistry.DIORITE_LARGE_BRICKS.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.DIORITE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("diorite_ornament", ECBlockRegistry.DIORITE_ORNAMENT.get(), null, null, null, ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("diorite_rooftiles", ECBlockRegistry.DIORITE_ROOFTILES.get(), ECBlockRegistry.DIORITE_ROOFTILES_SLAB.get(), ECBlockRegistry.DIORITE_ROOFTILES_STAIRS.get(), null, null, null);
+        registerStoneVariant("diorite_rooftiles", ECBlockRegistry.DIORITE_ROOFTILES.get(), ECBlockRegistry.DIORITE_ROOFTILES_SLAB.get(), null, null, null, null);
+        rooftilesStairsBlock(ECBlockRegistry.DIORITE_ROOFTILES_STAIRS.get(), modLoc("block/diorite_rooftiles"));
 
         // Granite
         registerStoneVariant("granite", null, null, null, null, null, ECBlockRegistry.GRANITE_BUTTON.get());
@@ -162,7 +168,8 @@ public class ECBlockStates extends BaseBlockStates
         registerStoneVariant("granite_large_bricks", ECBlockRegistry.GRANITE_LARGE_BRICKS.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.GRANITE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("granite_ornament", ECBlockRegistry.GRANITE_ORNAMENT.get(), null, null, null, ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("granite_rooftiles", ECBlockRegistry.GRANITE_ROOFTILES.get(), ECBlockRegistry.GRANITE_ROOFTILES_SLAB.get(), ECBlockRegistry.GRANITE_ROOFTILES_STAIRS.get(), null, null, null);
+        registerStoneVariant("granite_rooftiles", ECBlockRegistry.GRANITE_ROOFTILES.get(), ECBlockRegistry.GRANITE_ROOFTILES_SLAB.get(), null, null, null, null);
+        rooftilesStairsBlock(ECBlockRegistry.GRANITE_ROOFTILES_STAIRS.get(), modLoc("block/granite_rooftiles"));
 
         // Sandstone
         buttonBlock(ECBlockRegistry.SANDSTONE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_button"), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_button_pressed"),
@@ -182,8 +189,8 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.SANDSTONE_BRICKS_WALL.get(), ECBlockRegistry.SANDSTONE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("sandstone_large_bricks", ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("sandstone_rooftiles", ECBlockRegistry.SANDSTONE_ROOFTILES.get(), ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB.get(), ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS.get(), null, null,
-            null);
+        registerStoneVariant("sandstone_rooftiles", ECBlockRegistry.SANDSTONE_ROOFTILES.get(), ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB.get(), null, null, null, null);
+        rooftilesStairsBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS.get(), modLoc("block/sandstone_rooftiles"));
 
         // Red Sandstone
         buttonBlock(ECBlockRegistry.RED_SANDSTONE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/red_sandstone_button"),
@@ -203,8 +210,8 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.RED_SANDSTONE_BRICKS_WALL.get(), ECBlockRegistry.RED_SANDSTONE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("red_sandstone_large_bricks", ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get(),
             ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("red_sandstone_rooftiles", ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get(), ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get(), ECBlockRegistry.RED_SANDSTONE_ROOFTILES_STAIRS.get(),
-            null, null, null);
+        registerStoneVariant("red_sandstone_rooftiles", ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get(), ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get(), null, null, null, null);
+        rooftilesStairsBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_STAIRS.get(), modLoc("block/red_sandstone_rooftiles"));
 
         // Terracotta
         slabBlock(ECBlockRegistry.TERRACOTTA_SLAB.get(), mcLoc("block/terracotta"), mcLoc("block/terracotta"));
@@ -225,8 +232,8 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get(), ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("terracotta_large_bricks", ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("terracotta_rooftiles", ECBlockRegistry.TERRACOTTA_ROOFTILES.get(), ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB.get(), ECBlockRegistry.TERRACOTTA_ROOFTILES_STAIRS.get(), null, null,
-            null);
+        registerStoneVariant("terracotta_rooftiles", ECBlockRegistry.TERRACOTTA_ROOFTILES.get(), ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB.get(), null, null, null, null);
+        rooftilesStairsBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES_STAIRS.get(), modLoc("block/terracotta_rooftiles"));
 
         // Other bricks
         registerStoneVariant("dark_bricks", ECBlockRegistry.DARK_BRICKS.get(), ECBlockRegistry.DARK_BRICKS_SLAB.get(), ECBlockRegistry.DARK_BRICKS_STAIRS.get(), ECBlockRegistry.DARK_BRICKS_WALL.get(),
@@ -519,5 +526,32 @@ public class ECBlockStates extends BaseBlockStates
         String name = raw[1];
         getVariantBuilder(block).partialState().with(LampBlock.LIT, true).modelForState().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_on")).addModel().partialState().with(
             LampBlock.LIT, false).modelForState().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name)).addModel();
+    }
+
+    private void rooftilesStairsBlock(StairsBlock block, ResourceLocation texture)
+    {
+        String baseName = block.getRegistryName().toString();
+        ModelFile stairs = models().stairs(baseName, texture, texture, texture);
+        ModelFile stairsInner = models().stairsInner(baseName + "_inner", texture, texture, texture);
+        ModelFile stairsOuter = models().stairsOuter(baseName + "_outer", texture, texture, texture);
+
+        getVariantBuilder(block).forAllStatesExcept(state ->
+        {
+            Direction facing = state.get(StairsBlock.FACING);
+            Half half = state.get(StairsBlock.HALF);
+            StairsShape shape = state.get(StairsBlock.SHAPE);
+            int yRot = (int)facing.rotateY().getHorizontalAngle(); // Stairs model is rotated 90 degrees clockwise for some reason
+            if(shape == StairsShape.INNER_LEFT || shape == StairsShape.OUTER_LEFT)
+            {
+                yRot += 270; // Left facing stairs are rotated 90 degrees clockwise
+            }
+            if(shape != StairsShape.STRAIGHT && half == Half.TOP)
+            {
+                yRot += 90; // Top stairs are rotated 90 degrees clockwise
+            }
+            yRot %= 360;
+            return ConfiguredModel.builder().modelFile(shape == StairsShape.STRAIGHT ? stairs : shape == StairsShape.INNER_LEFT || shape == StairsShape.INNER_RIGHT ? stairsInner : stairsOuter).rotationX(
+                half == Half.BOTTOM ? 0 : 180).rotationY(yRot).uvLock(false).build();
+        }, StairsBlock.WATERLOGGED);
     }
 }

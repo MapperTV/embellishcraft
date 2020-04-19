@@ -28,18 +28,37 @@ public class ECBlockModels extends BaseBlockModels
     protected void registerModels()
     {
         buildAllStone("basalt");
+        buildRooftilesStairs("basalt_rooftiles");
+
         buildAllStone("slate");
+        buildRooftilesStairs("slate_rooftiles");
+
         buildAllStone("marble");
+        buildRooftilesStairs("marble_rooftiles");
+
         buildAllStone("gneiss");
+        buildRooftilesStairs("gneiss_rooftiles");
+
         buildAllStone("jade");
+        buildRooftilesStairs("jade_rooftiles");
+
         buildAllStone("larvikite");
+        buildRooftilesStairs("larvikite_rooftiles");
 
         buildMcStone("andesite");
+        buildRooftilesStairs("andesite_rooftiles");
+
         buildMcStone("diorite");
+        buildRooftilesStairs("diorite_rooftiles");
+
         buildMcStone("granite");
+        buildRooftilesStairs("granite_rooftiles");
 
         buildMcSandstone("sandstone");
+        buildRooftilesStairs("sandstone_rooftiles");
+
         buildMcSandstone("red_sandstone");
+        buildRooftilesStairs("red_sandstone_rooftiles");
 
         // Terracotta
         buildWall("terracotta", mcLoc("block/terracotta"));
@@ -56,6 +75,8 @@ public class ECBlockModels extends BaseBlockModels
         buildPressure("terracotta_tiles", modLoc("block/terracotta_tiles"));
         buildPressure("terracotta_bricks", modLoc("block/terracotta_bricks"));
         buildPressure("terracotta_large_bricks", modLoc("block/terracotta_large_bricks"));
+
+        buildRooftilesStairs("terracotta_rooftiles");
 
         // Other bricks
         buildWall("dark_bricks", modLoc("block/dark_bricks"));
@@ -395,5 +416,18 @@ public class ECBlockModels extends BaseBlockModels
 
         buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
         buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+    }
+
+    protected void buildRooftilesStairs(String name)
+    {
+        getBuilder(name + "_stairs").parent(getExistingFile(modLoc("block/rooftiles_stairs"))).texture("top", new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("bottom",
+            new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("side", new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("particle",
+                new ResourceLocation(ECConstants.MODID, "block/" + name));
+        getBuilder(name + "_stairs_inner").parent(getExistingFile(modLoc("block/rooftiles_inner_stairs"))).texture("top", new ResourceLocation(ECConstants.MODID, "block/" + name + "_inner")).texture("bottom",
+            new ResourceLocation(ECConstants.MODID, "block/" + name + "_inner")).texture("side", new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("particle",
+                new ResourceLocation(ECConstants.MODID, "block/" + name));
+        getBuilder(name + "_stairs_outer").parent(getExistingFile(modLoc("block/rooftiles_outer_stairs"))).texture("top", new ResourceLocation(ECConstants.MODID, "block/" + name + "_outer")).texture("bottom",
+            new ResourceLocation(ECConstants.MODID, "block/" + name + "_outer")).texture("side", new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("particle",
+                new ResourceLocation(ECConstants.MODID, "block/" + name));
     }
 }

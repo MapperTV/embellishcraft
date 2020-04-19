@@ -1,8 +1,9 @@
 {
-  "parent": "block/inner_stairs",
+  "parent": "embellishcraft:block/rooftiles_inner_stairs",
   "textures": {
+    "top": "embellishcraft:block/slate_rooftiles_inner",
+    "bottom": "embellishcraft:block/slate_rooftiles_inner",
     "side": "embellishcraft:block/slate_rooftiles",
-    "bottom": "embellishcraft:block/slate_rooftiles",
-    "top": "embellishcraft:block/slate_rooftiles"
+    "particle": "embellishcraft:block/slate_rooftiles"
   }
 }
