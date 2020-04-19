@@ -1,4 +1,4 @@
-package tv.mapper.embellishcraft.data.gen;
+package tv.mapper.embellishcraft.data.gen.recipe;
 
 import java.util.Arrays;
 import java.util.function.Consumer;

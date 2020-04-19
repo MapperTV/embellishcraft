@@ -10,6 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.data.gen.recipe.ECRecipes;
 import tv.mapper.embellishcraft.data.gen.recipe.ECStonecutterRecipes;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
