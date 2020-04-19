@@ -19,6 +19,8 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.text.ITextComponent;
@@ -62,6 +64,7 @@ public class CrateBlock extends ContainerBlock
                 if(inamedcontainerprovider != null)
                 {
                     player.openContainer(inamedcontainerprovider);
+                    world.playSound(null, pos, SoundEvents.BLOCK_WOODEN_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, (float)(0.75f + Math.random() * (1.25f - 0.75f)));
                 }
             }
             else
