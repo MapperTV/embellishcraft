@@ -15,17 +15,14 @@ import net.minecraft.item.DyeColor;
 import net.minecraft.state.properties.BedPart;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.ChestType;
-import net.minecraft.state.properties.Half;
 import net.minecraft.state.properties.StairsShape;
 import net.minecraft.util.Direction;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
-import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.LampBlock;
@@ -41,7 +38,7 @@ public class ECBlockStates extends BaseBlockStates
 {
     public ECBlockStates(DataGenerator gen, String modid, ExistingFileHelper exFileHelper)
     {
-        super(gen, ECConstants.MODID, exFileHelper);
+        super(gen, modid, exFileHelper);
     }
 
     private void registerStoneVariant(String name, Block block, SlabBlock slab, StairsBlock stairs, WallBlock wall, Block pressure, Block button)
@@ -55,9 +52,9 @@ public class ECBlockStates extends BaseBlockStates
         if(wall != null)
             wallBlock(wall, modLoc("block/" + name));
         if(pressure != null)
-            pressurePlateBlock(pressure, new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_pressure_plate"), new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_pressure_plate_down"));
+            pressurePlateBlock(pressure, new UncheckedModelFile(mod_id + ":block/" + name + "_pressure_plate"), new UncheckedModelFile(mod_id + ":block/" + name + "_pressure_plate_down"));
         if(button != null)
-            buttonBlock(button, new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_button"), new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_button_pressed"), 180);
+            buttonBlock(button, new UncheckedModelFile(mod_id + ":block/" + name + "_button"), new UncheckedModelFile(mod_id + ":block/" + name + "_button_pressed"), 180);
     }
 
     private void registerStoneVariantWithSideSlab(String name, Block block, SlabBlock slab, StairsBlock stairs, WallBlock wall, Block pressure, Block button)
@@ -71,9 +68,9 @@ public class ECBlockStates extends BaseBlockStates
         if(wall != null)
             wallBlock(wall, modLoc("block/" + name));
         if(pressure != null)
-            pressurePlateBlock(pressure, new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_pressure_plate"), new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_pressure_plate_down"));
+            pressurePlateBlock(pressure, new UncheckedModelFile(mod_id + ":block/" + name + "_pressure_plate"), new UncheckedModelFile(mod_id + ":block/" + name + "_pressure_plate_down"));
         if(button != null)
-            buttonBlock(button, new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_button"), new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_button_pressed"), 180);
+            buttonBlock(button, new UncheckedModelFile(mod_id + ":block/" + name + "_button"), new UncheckedModelFile(mod_id + ":block/" + name + "_button_pressed"), 180);
     }
 
     @Override
@@ -172,12 +169,11 @@ public class ECBlockStates extends BaseBlockStates
         rooftilesStairsBlock(ECBlockRegistry.GRANITE_ROOFTILES_STAIRS.get(), modLoc("block/granite_rooftiles"));
 
         // Sandstone
-        buttonBlock(ECBlockRegistry.SANDSTONE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_button"), new UncheckedModelFile(ECConstants.MODID + ":block/sandstone_button_pressed"),
-            180);
+        buttonBlock(ECBlockRegistry.SANDSTONE_BUTTON.get(), new UncheckedModelFile(mod_id + ":block/sandstone_button"), new UncheckedModelFile(mod_id + ":block/sandstone_button_pressed"), 180);
 
         wallBlock(ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get(), mcLoc("block/sandstone_top"));
-        pressurePlateBlock(ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_sandstone_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/smooth_sandstone_pressure_plate_down"));
+        pressurePlateBlock(ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(mod_id + ":block/smooth_sandstone_pressure_plate"),
+            new UncheckedModelFile(mod_id + ":block/smooth_sandstone_pressure_plate_down"));
 
         registerStoneVariantWithSideSlab("polished_sandstone", ECBlockRegistry.POLISHED_SANDSTONE.get(), ECBlockRegistry.POLISHED_SANDSTONE_SLAB.get(), ECBlockRegistry.POLISHED_SANDSTONE_STAIRS.get(),
             ECBlockRegistry.POLISHED_SANDSTONE_WALL.get(), ECBlockRegistry.POLISHED_SANDSTONE_PRESSURE_PLATE.get(), null);
@@ -193,12 +189,11 @@ public class ECBlockStates extends BaseBlockStates
         rooftilesStairsBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS.get(), modLoc("block/sandstone_rooftiles"));
 
         // Red Sandstone
-        buttonBlock(ECBlockRegistry.RED_SANDSTONE_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/red_sandstone_button"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/red_sandstone_button_pressed"), 180);
+        buttonBlock(ECBlockRegistry.RED_SANDSTONE_BUTTON.get(), new UncheckedModelFile(mod_id + ":block/red_sandstone_button"), new UncheckedModelFile(mod_id + ":block/red_sandstone_button_pressed"), 180);
 
         wallBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL.get(), mcLoc("block/red_sandstone_top"));
-        pressurePlateBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_red_sandstone_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/smooth_red_sandstone_pressure_plate_down"));
+        pressurePlateBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(mod_id + ":block/smooth_red_sandstone_pressure_plate"),
+            new UncheckedModelFile(mod_id + ":block/smooth_red_sandstone_pressure_plate_down"));
 
         registerStoneVariantWithSideSlab("polished_red_sandstone", ECBlockRegistry.POLISHED_RED_SANDSTONE.get(), ECBlockRegistry.POLISHED_RED_SANDSTONE_SLAB.get(),
             ECBlockRegistry.POLISHED_RED_SANDSTONE_STAIRS.get(), ECBlockRegistry.POLISHED_RED_SANDSTONE_WALL.get(), ECBlockRegistry.POLISHED_RED_SANDSTONE_PRESSURE_PLATE.get(), null);
@@ -217,10 +212,9 @@ public class ECBlockStates extends BaseBlockStates
         slabBlock(ECBlockRegistry.TERRACOTTA_SLAB.get(), mcLoc("block/terracotta"), mcLoc("block/terracotta"));
         stairsBlock(ECBlockRegistry.TERRACOTTA_STAIRS.get(), mcLoc("block/terracotta"));
         wallBlock(ECBlockRegistry.TERRACOTTA_WALL.get(), mcLoc("block/terracotta"));
-        pressurePlateBlock(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get(), new UncheckedModelFile(ECConstants.MODID + ":block/terracotta_pressure_plate"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/terracotta_pressure_plate_down"));
-        buttonBlock(ECBlockRegistry.TERRACOTTA_BUTTON.get(), new UncheckedModelFile(ECConstants.MODID + ":block/terracotta_button"),
-            new UncheckedModelFile(ECConstants.MODID + ":block/terracotta_button_pressed"), 180);
+        pressurePlateBlock(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get(), new UncheckedModelFile(mod_id + ":block/terracotta_pressure_plate"),
+            new UncheckedModelFile(mod_id + ":block/terracotta_pressure_plate_down"));
+        buttonBlock(ECBlockRegistry.TERRACOTTA_BUTTON.get(), new UncheckedModelFile(mod_id + ":block/terracotta_button"), new UncheckedModelFile(mod_id + ":block/terracotta_button_pressed"), 180);
 
         registerStoneVariantWithSideSlab("polished_terracotta", ECBlockRegistry.POLISHED_TERRACOTTA.get(), ECBlockRegistry.POLISHED_TERRACOTTA_SLAB.get(), ECBlockRegistry.POLISHED_TERRACOTTA_STAIRS.get(),
             ECBlockRegistry.POLISHED_TERRACOTTA_WALL.get(), ECBlockRegistry.POLISHED_TERRACOTTA_PRESSURE_PLATE.get(), null);
@@ -301,16 +295,16 @@ public class ECBlockStates extends BaseBlockStates
         simpleBlock(ECBlockRegistry.STEEL_BEAM_JUNCTION.get());
 
         simpleBlock(ECBlockRegistry.AIR_DUCT.get());
-        directionalBlock(ECBlockRegistry.VENT_AIR_DUCT.get(), new UncheckedModelFile(ECConstants.MODID + ":block/vent_air_duct"));
-        directionalBlock(ECBlockRegistry.GRID_AIR_DUCT.get(), new UncheckedModelFile(ECConstants.MODID + ":block/grid_air_duct"));
+        directionalBlock(ECBlockRegistry.VENT_AIR_DUCT.get(), new UncheckedModelFile(mod_id + ":block/vent_air_duct"));
+        directionalBlock(ECBlockRegistry.GRID_AIR_DUCT.get(), new UncheckedModelFile(mod_id + ":block/grid_air_duct"));
 
         simpleBlock(ECBlockRegistry.BULKHEAD.get());
         simpleBlock(ECBlockRegistry.BULKHEAD_TOP.get());
 
-        horizontalBlock(ECBlockRegistry.STEEL_WALL_LADDER.get(), new UncheckedModelFile(ECConstants.MODID + ":block/steel_wall_ladder"), 0);
-        horizontalBlock(ECBlockRegistry.RUSTY_WALL_LADDER.get(), new UncheckedModelFile(ECConstants.MODID + ":block/rusty_wall_ladder"), 0);
-        horizontalBlock(ECBlockRegistry.STEEL_RUNGS.get(), new UncheckedModelFile(ECConstants.MODID + ":block/steel_rungs"));
-        horizontalBlock(ECBlockRegistry.RUSTY_RUNGS.get(), new UncheckedModelFile(ECConstants.MODID + ":block/rusty_rungs"));
+        horizontalBlock(ECBlockRegistry.STEEL_WALL_LADDER.get(), new UncheckedModelFile(mod_id + ":block/steel_wall_ladder"), 0);
+        horizontalBlock(ECBlockRegistry.RUSTY_WALL_LADDER.get(), new UncheckedModelFile(mod_id + ":block/rusty_wall_ladder"), 0);
+        horizontalBlock(ECBlockRegistry.STEEL_RUNGS.get(), new UncheckedModelFile(mod_id + ":block/steel_rungs"));
+        horizontalBlock(ECBlockRegistry.RUSTY_RUNGS.get(), new UncheckedModelFile(mod_id + ":block/rusty_rungs"));
 
         // Corrugated metal plates
         for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
@@ -325,41 +319,41 @@ public class ECBlockStates extends BaseBlockStates
         // Wallpaper
         registerStoneVariant("white_blue_wallpaper", ECBlockRegistry.WHITE_BLUE_WALLPAPER.get(), ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get(), null, null,
             null);
-        upDownBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/white_blue_wallpaper_plinth"));
+        upDownBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH.get(), new UncheckedModelFile(mod_id + ":block/white_blue_wallpaper_plinth"));
         registerStoneVariant("beige_flower_wallpaper", ECBlockRegistry.BEIGE_FLOWER_WALLPAPER.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS.get(), null,
             null, null);
-        upDownBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/beige_flower_wallpaper_plinth"));
+        upDownBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH.get(), new UncheckedModelFile(mod_id + ":block/beige_flower_wallpaper_plinth"));
         registerStoneVariant("beige_wallpaper", ECBlockRegistry.BEIGE_WALLPAPER.get(), ECBlockRegistry.BEIGE_WALLPAPER_SLAB.get(), ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get(), null, null, null);
-        upDownBlock(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/beige_wallpaper_plinth"));
+        upDownBlock(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH.get(), new UncheckedModelFile(mod_id + ":block/beige_wallpaper_plinth"));
         registerStoneVariant("pink_wallpaper", ECBlockRegistry.PINK_WALLPAPER.get(), ECBlockRegistry.PINK_WALLPAPER_SLAB.get(), ECBlockRegistry.PINK_WALLPAPER_STAIRS.get(), null, null, null);
-        upDownBlock(ECBlockRegistry.PINK_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/pink_wallpaper_plinth"));
+        upDownBlock(ECBlockRegistry.PINK_WALLPAPER_PLINTH.get(), new UncheckedModelFile(mod_id + ":block/pink_wallpaper_plinth"));
         registerStoneVariant("white_green_wallpaper", ECBlockRegistry.WHITE_GREEN_WALLPAPER.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB.get(), ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS.get(), null,
             null, null);
-        upDownBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get(), new UncheckedModelFile(ECConstants.MODID + ":block/white_green_wallpaper_plinth"));
+        upDownBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get(), new UncheckedModelFile(mod_id + ":block/white_green_wallpaper_plinth"));
 
         // Furniture
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            horizontalBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(ECConstants.MODID + ":block/" + McWoods.byId(j).getName() + "_chair"), 0);
-            horizontalBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(ECConstants.MODID + ":block/" + McWoods.byId(j).getName() + "_terrace_chair"), 0);
+            horizontalBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getName() + "_chair"), 0);
+            horizontalBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getName() + "_terrace_chair"), 0);
             tableBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get());
             tableBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get());
             simpleBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get());
             simpleBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get());
             // getVariantBuilder(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get()).partialState().setModels(
-            // new ConfiguredModel(new UncheckedModelFile(ECConstants.MODID + ":model/" + McWoods.byId(j).getName() + "_fancy_chest")));
+            // new ConfiguredModel(new UncheckedModelFile(mod_id + ":model/" + McWoods.byId(j).getName() + "_fancy_chest")));
             chestBlock(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get(), 0);
         }
         verticalChestBlock(ECBlockRegistry.LOCKER.get(), 0);
 
         simpleBlock(ECBlockRegistry.STEEL_TERRACE_TABLE.get());
-        horizontalBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), new UncheckedModelFile(ECConstants.MODID + ":block/steel_terrace_chair"), 0);
+        horizontalBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), new UncheckedModelFile(mod_id + ":block/steel_terrace_chair"), 0);
 
         for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
         {
             couchBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), 90);
             tableLampBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get());
-            horizontalBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get(), new UncheckedModelFile(ECConstants.MODID + ":block/" + DyeColor.byId(j).getName() + "_pillow"), 0);
+            horizontalBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + DyeColor.byId(j).getName() + "_pillow"), 0);
             bedBlock(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
             bedBlock(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
             bedBlock(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
@@ -373,13 +367,13 @@ public class ECBlockStates extends BaseBlockStates
         // Suspended stairs and fancy doors
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            horizontalBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(ECConstants.MODID + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"), 0);
+            horizontalBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"), 0);
             doorBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_bottom"),
                 modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_top"));
         }
 
-        horizontalBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), new UncheckedModelFile(ECConstants.MODID + ":block/steel_suspended_stairs"), 0);
-        horizontalBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get(), new UncheckedModelFile(ECConstants.MODID + ":block/rusty_suspended_stairs"), 0);
+        horizontalBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/steel_suspended_stairs"), 0);
+        horizontalBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/rusty_suspended_stairs"), 0);
 
         // Doors
         doorBlock(ECBlockRegistry.STEEL_DOOR.get(), modLoc("block/steel_door_bottom"), modLoc("block/steel_door_top"));
@@ -397,7 +391,7 @@ public class ECBlockStates extends BaseBlockStates
     {
         VariantBlockStateBuilder builder = getVariantBuilder(block);
         for(int i = 1; i < 9; i++)
-            builder.partialState().with(PlateBlock.PLATES, i).modelForState().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/plate_" + i)).addModel();
+            builder.partialState().with(PlateBlock.PLATES, i).modelForState().modelFile(new UncheckedModelFile(mod_id + ":block/plate_" + i)).addModel();
     }
 
     /**
@@ -423,11 +417,11 @@ public class ECBlockStates extends BaseBlockStates
 
         String raw[] = block.getRegistryName().toString().split(":");
         String name = raw[1];
-        MultiPartBlockStateBuilder builder = getMultipartBuilder(block).part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_top")).addModel().end();
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).uvLock(true).addModel().condition(TableBlock.TABLE_NORTH, true).end();
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(90).uvLock(true).addModel().condition(TableBlock.TABLE_EAST, true).end();
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(180).uvLock(true).addModel().condition(TableBlock.TABLE_SOUTH, true).end();
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_foot")).rotationY(270).uvLock(true).addModel().condition(TableBlock.TABLE_WEST, true).end();
+        MultiPartBlockStateBuilder builder = getMultipartBuilder(block).part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_top")).addModel().end();
+        builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_foot")).uvLock(true).addModel().condition(TableBlock.TABLE_NORTH, true).end();
+        builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_foot")).rotationY(90).uvLock(true).addModel().condition(TableBlock.TABLE_EAST, true).end();
+        builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_foot")).rotationY(180).uvLock(true).addModel().condition(TableBlock.TABLE_SOUTH, true).end();
+        builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_foot")).rotationY(270).uvLock(true).addModel().condition(TableBlock.TABLE_WEST, true).end();
     }
 
     protected void couchBlock(CouchBlock block)
@@ -443,22 +437,22 @@ public class ECBlockStates extends BaseBlockStates
 
         for(Direction dir : Direction.Plane.HORIZONTAL)
         {
-            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_left")).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
-                CouchBlock.FACING, dir).condition(CouchBlock.LEFT_END, true).end();
-            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_right")).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
+            builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_left")).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(CouchBlock.FACING,
+                dir).condition(CouchBlock.LEFT_END, true).end();
+            builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_right")).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
                 CouchBlock.FACING, dir).condition(CouchBlock.RIGHT_END, true).end();
 
-            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name)).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
-                CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.STRAIGHT).end();
+            builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name)).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(CouchBlock.FACING,
+                dir).condition(CouchBlock.SHAPE, StairsShape.STRAIGHT).end();
 
-            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/outer_" + name)).rotationY(((int)(dir.getHorizontalAngle() + 270 + offset) % 360)).uvLock(true).addModel().condition(
+            builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/outer_" + name)).rotationY(((int)(dir.getHorizontalAngle() + 270 + offset) % 360)).uvLock(true).addModel().condition(
                 CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.OUTER_LEFT).end();
-            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/inner_" + name)).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
-                CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.INNER_LEFT).end();
+            builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/inner_" + name)).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(CouchBlock.FACING,
+                dir).condition(CouchBlock.SHAPE, StairsShape.INNER_LEFT).end();
 
-            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/outer_" + name)).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(
-                CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.OUTER_RIGHT).end();
-            builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/inner_" + name)).rotationY(((int)(dir.getHorizontalAngle() + 90 + offset) % 360)).uvLock(true).addModel().condition(
+            builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/outer_" + name)).rotationY(((int)(dir.getHorizontalAngle() + offset) % 360)).uvLock(true).addModel().condition(CouchBlock.FACING,
+                dir).condition(CouchBlock.SHAPE, StairsShape.OUTER_RIGHT).end();
+            builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/inner_" + name)).rotationY(((int)(dir.getHorizontalAngle() + 90 + offset) % 360)).uvLock(true).addModel().condition(
                 CouchBlock.FACING, dir).condition(CouchBlock.SHAPE, StairsShape.INNER_RIGHT).end();
         }
     }
@@ -474,7 +468,7 @@ public class ECBlockStates extends BaseBlockStates
         {
             for(BedPart type : BedPart.values())
             {
-                model = type == BedPart.HEAD ? ECConstants.MODID + ":block/" + name + "_head" : ECConstants.MODID + ":block/" + name + "_foot";
+                model = type == BedPart.HEAD ? mod_id + ":block/" + name + "_head" : mod_id + ":block/" + name + "_foot";
 
                 builder.partialState().with(BedBlock.PART, type).with(ChestBlock.FACING, dir).modelForState().modelFile(new UncheckedModelFile(model)).rotationY(
                     (int)((dir.getHorizontalAngle() + offset) % 360)).addModel();
@@ -493,7 +487,7 @@ public class ECBlockStates extends BaseBlockStates
         {
             for(ChestType type : ChestType.VALUES)
             {
-                model = type == ChestType.SINGLE ? ECConstants.MODID + ":block/" + name : type == ChestType.LEFT ? ECConstants.MODID + ":block/" + name + "_left" : ECConstants.MODID + ":block/" + name + "_right";
+                model = type == ChestType.SINGLE ? mod_id + ":block/" + name : type == ChestType.LEFT ? mod_id + ":block/" + name + "_left" : mod_id + ":block/" + name + "_right";
 
                 builder.partialState().with(ChestBlock.TYPE, type).with(ChestBlock.FACING, dir).modelForState().modelFile(new UncheckedModelFile(model)).rotationY(
                     (int)((dir.getHorizontalAngle() + offset) % 360)).addModel();
@@ -512,7 +506,7 @@ public class ECBlockStates extends BaseBlockStates
         {
             for(VerticalChestType type : VerticalChestType.VALUES)
             {
-                model = type == VerticalChestType.SINGLE ? ECConstants.MODID + ":block/" + name + "_small" : type == VerticalChestType.TOP ? ECConstants.MODID + ":block/" + name + "_top" : ECConstants.MODID + ":block/" + name + "_bottom";
+                model = type == VerticalChestType.SINGLE ? mod_id + ":block/" + name + "_small" : type == VerticalChestType.TOP ? mod_id + ":block/" + name + "_top" : mod_id + ":block/" + name + "_bottom";
 
                 builder.partialState().with(VerticalChestBlock.TYPE, type).with(ChestBlock.FACING, dir).modelForState().modelFile(new UncheckedModelFile(model)).rotationY(
                     (int)((dir.getHorizontalAngle() + offset) % 360)).addModel();
@@ -524,34 +518,7 @@ public class ECBlockStates extends BaseBlockStates
     {
         String raw[] = block.getRegistryName().toString().split(":");
         String name = raw[1];
-        getVariantBuilder(block).partialState().with(LampBlock.LIT, true).modelForState().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_on")).addModel().partialState().with(
-            LampBlock.LIT, false).modelForState().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name)).addModel();
-    }
-
-    private void rooftilesStairsBlock(StairsBlock block, ResourceLocation texture)
-    {
-        String baseName = block.getRegistryName().toString();
-        ModelFile stairs = models().stairs(baseName, texture, texture, texture);
-        ModelFile stairsInner = models().stairsInner(baseName + "_inner", texture, texture, texture);
-        ModelFile stairsOuter = models().stairsOuter(baseName + "_outer", texture, texture, texture);
-
-        getVariantBuilder(block).forAllStatesExcept(state ->
-        {
-            Direction facing = state.get(StairsBlock.FACING);
-            Half half = state.get(StairsBlock.HALF);
-            StairsShape shape = state.get(StairsBlock.SHAPE);
-            int yRot = (int)facing.rotateY().getHorizontalAngle(); // Stairs model is rotated 90 degrees clockwise for some reason
-            if(shape == StairsShape.INNER_LEFT || shape == StairsShape.OUTER_LEFT)
-            {
-                yRot += 270; // Left facing stairs are rotated 90 degrees clockwise
-            }
-            if(shape != StairsShape.STRAIGHT && half == Half.TOP)
-            {
-                yRot += 90; // Top stairs are rotated 90 degrees clockwise
-            }
-            yRot %= 360;
-            return ConfiguredModel.builder().modelFile(shape == StairsShape.STRAIGHT ? stairs : shape == StairsShape.INNER_LEFT || shape == StairsShape.INNER_RIGHT ? stairsInner : stairsOuter).rotationX(
-                half == Half.BOTTOM ? 0 : 180).rotationY(yRot).uvLock(false).build();
-        }, StairsBlock.WATERLOGGED);
+        getVariantBuilder(block).partialState().with(LampBlock.LIT, true).modelForState().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_on")).addModel().partialState().with(LampBlock.LIT,
+            false).modelForState().modelFile(new UncheckedModelFile(mod_id + ":block/" + name)).addModel();
     }
 }

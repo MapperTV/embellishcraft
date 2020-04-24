@@ -29,6 +29,6 @@ description='''EmbellishCraft is a mod that adds various decorative elements to 
 [[dependencies.embellishcraft]]
     modId="mapperbase"
     mandatory=true
-    versionRange="[1.15.2-1.0,]"
+    versionRange="[1.15.2-1.1,]"
     ordering="NONE"
     side="BOTH"

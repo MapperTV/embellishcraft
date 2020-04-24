@@ -287,26 +287,24 @@ public class ECBlockModels extends BaseBlockModels
         {
             for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
             {
-                buildBed(DyeColor.byId(j).getName(), McWoods.byId(i).getName(), "fancy_bed");
+                buildBed(DyeColor.byId(j).getName(), McWoods.byId(i).getName(), "fancy_bed", "minecraft");
             }
         }
     }
 
-    protected void buildBed(String color, String wood, String name)
+    protected void buildBed(String color, String wood, String name, String planks_modid)
     {
-        getBuilder(color + "_" + wood + "_" + name + "_head").parent(getExistingFile(modLoc("block/" + name + "_head"))).texture("head",
-            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_head")).texture("head_side",
-                new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_head_side")).texture("head_end",
-                    new ResourceLocation(ECConstants.MODID, "block/" + wood + "_" + name + "_head_end")).texture("under", new ResourceLocation("block/" + wood + "_planks")).texture("particle",
-                        new ResourceLocation("block/" + wood + "_planks"));
-        getBuilder(color + "_" + wood + "_" + name + "_foot").parent(getExistingFile(modLoc("block/" + name + "_foot"))).texture("foot",
-            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_foot")).texture("foot_side",
-                new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_foot_side")).texture("foot_end",
-                    new ResourceLocation(ECConstants.MODID, "block/" + wood + "_" + name + "_foot_end")).texture("under", new ResourceLocation("block/" + wood + "_planks")).texture("particle",
-                        new ResourceLocation("block/" + wood + "_planks"));
-        getBuilder(color + "_" + wood + "_" + name + "_inventory").parent(getExistingFile(modLoc("block/" + name + "_inventory"))).texture("bed",
-            new ResourceLocation(ECConstants.MODID, "block/" + color + "_" + wood + "_" + name + "_head")).texture("end",
-                new ResourceLocation(ECConstants.MODID, "block/" + wood + "_" + name + "_head_end")).texture("under", new ResourceLocation("block/" + wood + "_planks"));
+        getBuilder(color + "_" + wood + "_" + name + "_head").parent(getExistingFile(new ResourceLocation(ECConstants.MODID, "block/" + name + "_head"))).texture("head",
+            new ResourceLocation(modid, "block/" + color + "_" + wood + "_" + name + "_head")).texture("head_side",
+                new ResourceLocation(modid, "block/" + color + "_" + wood + "_" + name + "_head_side")).texture("head_end", new ResourceLocation(modid, "block/" + wood + "_" + name + "_head_end")).texture(
+                    "under", new ResourceLocation(planks_modid, "block/" + wood + "_planks")).texture("particle", new ResourceLocation(planks_modid, "block/" + wood + "_planks"));
+        getBuilder(color + "_" + wood + "_" + name + "_foot").parent(getExistingFile(new ResourceLocation(ECConstants.MODID, "block/" + name + "_foot"))).texture("foot",
+            new ResourceLocation(modid, "block/" + color + "_" + wood + "_" + name + "_foot")).texture("foot_side",
+                new ResourceLocation(modid, "block/" + color + "_" + wood + "_" + name + "_foot_side")).texture("foot_end", new ResourceLocation(modid, "block/" + wood + "_" + name + "_foot_end")).texture(
+                    "under", new ResourceLocation(planks_modid, "block/" + wood + "_planks")).texture("particle", new ResourceLocation(planks_modid, "block/" + wood + "_planks"));
+        getBuilder(color + "_" + wood + "_" + name + "_inventory").parent(getExistingFile(new ResourceLocation(ECConstants.MODID, "block/" + name + "_inventory"))).texture("bed",
+            new ResourceLocation(modid, "block/" + color + "_" + wood + "_" + name + "_head")).texture("end", new ResourceLocation(modid, "block/" + wood + "_" + name + "_head_end")).texture("under",
+                new ResourceLocation(planks_modid, "block/" + wood + "_planks"));
     }
 
     protected void buildCouch(String color)
@@ -416,18 +414,5 @@ public class ECBlockModels extends BaseBlockModels
 
         buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
         buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
-    }
-
-    protected void buildRooftilesStairs(String name)
-    {
-        getBuilder(name + "_stairs").parent(getExistingFile(modLoc("block/rooftiles_stairs"))).texture("top", new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("bottom",
-            new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("side", new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("particle",
-                new ResourceLocation(ECConstants.MODID, "block/" + name));
-        getBuilder(name + "_stairs_inner").parent(getExistingFile(modLoc("block/rooftiles_inner_stairs"))).texture("top", new ResourceLocation(ECConstants.MODID, "block/" + name + "_inner")).texture("bottom",
-            new ResourceLocation(ECConstants.MODID, "block/" + name + "_inner")).texture("side", new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("particle",
-                new ResourceLocation(ECConstants.MODID, "block/" + name));
-        getBuilder(name + "_stairs_outer").parent(getExistingFile(modLoc("block/rooftiles_outer_stairs"))).texture("top", new ResourceLocation(ECConstants.MODID, "block/" + name + "_outer")).texture("bottom",
-            new ResourceLocation(ECConstants.MODID, "block/" + name + "_outer")).texture("side", new ResourceLocation(ECConstants.MODID, "block/" + name)).texture("particle",
-                new ResourceLocation(ECConstants.MODID, "block/" + name));
     }
 }
