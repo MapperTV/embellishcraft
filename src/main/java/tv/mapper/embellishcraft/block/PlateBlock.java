@@ -75,7 +75,7 @@ public class PlateBlock extends Block implements IWaterLoggable
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
     {
-        if(!player.isCrouching() && state.get(PLATES) < 8)
+        if(!player.isSneaking() && state.get(PLATES) < 8)
         {
             ItemStack stack = ItemStack.EMPTY;
             if(player.getHeldItemMainhand().getItem() == ECItemRegistry.PLATE_ITEM.get())

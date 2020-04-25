@@ -211,7 +211,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
         VerticalChestType chesttype = VerticalChestType.SINGLE;
         Direction direction = context.getPlacementHorizontalFacing().getOpposite();
         IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-        boolean flag = context.getPlayer().isCrouching();
+        boolean flag = context.getPlayer().isSneaking();
         Direction direction1 = context.getFace();
 
         if(direction1.getAxis().isVertical() && flag)
@@ -351,7 +351,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
             else
             {
                 // Lock it if it's yours!
-                if(player.isCrouching())
+                if(player.isSneaking())
                 {
                     if(world.isRemote)
                         ECNetwork.EMBELLISHCRAFT_CHANNEL.sendToServer(new LockerLockPacket(pos));

@@ -28,7 +28,7 @@ public class SeatUtil
 
         if(!player.isSpectator())
         {
-            if(!player.isCrouching())
+            if(!player.isSneaking())
             {
                 if((block instanceof ChairBlock || block instanceof CouchBlock) && world.getBlockState(pos.up()).isAir(world, pos.up()) && !EntityChair.OCCUPIED.containsKey(pos))
                 {
