@@ -1,6 +1,8 @@
 package tv.mapper.embellishcraft.block;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -41,6 +43,11 @@ import tv.mapper.mapperbase.block.UpDownBlock;
 public class ECBlockRegistry
 {
     private static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, ECConstants.MODID);
+
+    public static List<RegistryObject<CustomChestBlock>> FANCY_CHESTS = new ArrayList<>();
+    public static List<RegistryObject<CustomBedBlock>> FANCY_BEDS = new ArrayList<>();
+    public static List<RegistryObject<CrateBlock>> CRATES = new ArrayList<>();
+    public static List<RegistryObject<? extends Block>> CUTOUT_BLOCKS = new ArrayList<>();
 
     // Rocks
     public static final Map<RockType, RegistryObject<CustomBlock>> ROCK_BLOCKS = Arrays.stream(RockType.values()).map(
@@ -1251,5 +1258,29 @@ public class ECBlockRegistry
     public static void init()
     {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    }
+
+    public static void postInit()
+    {
+        for(int i = 0; i < 6; i++)
+        {
+            FANCY_CHESTS.add(FANCY_CHEST_BLOCKS.get(McWoods.byId(i)));
+            CUTOUT_BLOCKS.add(TERRACE_CHAIR_BLOCKS.get(McWoods.byId(i)));
+            CUTOUT_BLOCKS.add(TERRACE_TABLE_BLOCKS.get(McWoods.byId(i)));
+            CRATES.add(WOODEN_CRATE_BLOCKS.get(McWoods.byId(i)));
+        }
+
+        CUTOUT_BLOCKS.add(STEEL_TERRACE_CHAIR);
+        CUTOUT_BLOCKS.add(STEEL_TERRACE_TABLE);
+
+        for(int i = 0; i < Arrays.stream(DyeColor.values()).count(); i++)
+        {
+            FANCY_BEDS.add(OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(i)));
+            FANCY_BEDS.add(BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(i)));
+            FANCY_BEDS.add(SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(i)));
+            FANCY_BEDS.add(JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(i)));
+            FANCY_BEDS.add(DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(i)));
+            FANCY_BEDS.add(ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(i)));
+        }
     }
 }

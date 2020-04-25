@@ -1,14 +1,15 @@
 package tv.mapper.embellishcraft.proxy;
 
-import java.util.Arrays;
 import java.util.function.Predicate;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
@@ -17,7 +18,6 @@ import tv.mapper.embellishcraft.client.gui.screen.inventory.VerticalChestScreen;
 import tv.mapper.embellishcraft.client.renderer.ChairEntityRenderer;
 import tv.mapper.embellishcraft.entity.ModEntities;
 import tv.mapper.embellishcraft.inventory.container.ModContainers;
-import tv.mapper.embellishcraft.util.McWoods;
 
 public class ClientProxy implements IProxy
 {
@@ -40,14 +40,9 @@ public class ClientProxy implements IProxy
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
 
         Predicate<RenderType> cutoutPredicate = renderType -> renderType == RenderType.getCutout();
-        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
-        {
-            RenderTypeLookup.setRenderLayer(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get(), cutoutPredicate);
-            RenderTypeLookup.setRenderLayer(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get(), cutoutPredicate);
-        }
 
-        RenderTypeLookup.setRenderLayer(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), cutoutPredicate);
-        RenderTypeLookup.setRenderLayer(ECBlockRegistry.STEEL_TERRACE_TABLE.get(), cutoutPredicate);
+        for(RegistryObject<? extends Block> object : ECBlockRegistry.CUTOUT_BLOCKS)
+            RenderTypeLookup.setRenderLayer(object.get(), cutoutPredicate);
     }
 
     @Override

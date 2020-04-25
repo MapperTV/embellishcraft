@@ -3,6 +3,7 @@ package tv.mapper.embellishcraft.tileentity;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -11,9 +12,10 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.block.CrateBlock;
 import tv.mapper.embellishcraft.block.CustomBedBlock;
+import tv.mapper.embellishcraft.block.CustomChestBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
-import tv.mapper.embellishcraft.util.McWoods;
 
 @ObjectHolder(ECConstants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
@@ -24,36 +26,29 @@ public class ModTileEntityTypes
     public static final TileEntityType<VerticalChestTileEntity> CUSTOM_BED = null;
     public static final TileEntityType<CrateTileEntity> CRATE = null;
 
-    private static List<CustomBedBlock> beds = new ArrayList<CustomBedBlock>();
-
     @SubscribeEvent
     public static void registerTileEntities(final RegistryEvent.Register<TileEntityType<?>> event)
     {
-        event.getRegistry().register(TileEntityType.Builder.create(CustomChestTileEntity::new, ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.BIRCH).get(),
-            ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.DARK_OAK).get(), ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.JUNGLE).get(), ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.OAK).get(),
-            ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.SPRUCE).get(), ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.ACACIA).get()).build(null).setRegistryName("custom_chest"));
+        List<Block> CHESTS = new ArrayList<>();
+        List<Block> BEDS = new ArrayList<>();
+        List<Block> CRATES = new ArrayList<>();
 
-        event.getRegistry().register(TileEntityType.Builder.create(VerticalChestTileEntity::new, ECBlockRegistry.LOCKER.get()).build(null).setRegistryName("vertical_chest"));
-
-        getBeds(new ArrayList<RegistryObject<CustomBedBlock>>(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.values()));
-        getBeds(new ArrayList<RegistryObject<CustomBedBlock>>(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.values()));
-        getBeds(new ArrayList<RegistryObject<CustomBedBlock>>(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.values()));
-        getBeds(new ArrayList<RegistryObject<CustomBedBlock>>(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.values()));
-        getBeds(new ArrayList<RegistryObject<CustomBedBlock>>(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.values()));
-        getBeds(new ArrayList<RegistryObject<CustomBedBlock>>(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.values()));
-        event.getRegistry().register(TileEntityType.Builder.create(CustomBedTileEntity::new, beds.toArray(new CustomBedBlock[beds.size()])).build(null).setRegistryName("custom_bed"));
-
-        event.getRegistry().register(TileEntityType.Builder.create(CrateTileEntity::new, ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.ACACIA).get(),
-            ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.BIRCH).get(), ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.DARK_OAK).get(), ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.JUNGLE).get(),
-            ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.OAK).get(), ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.SPRUCE).get()).build(null).setRegistryName("crate"));
-
-    }
-
-    private static void getBeds(List<RegistryObject<CustomBedBlock>> bedObjects)
-    {
-        for(RegistryObject<CustomBedBlock> bed : bedObjects)
+        for(RegistryObject<CustomChestBlock> object : ECBlockRegistry.FANCY_CHESTS)
         {
-            beds.add(bed.get());
+            CHESTS.add(object.get());
         }
+        for(RegistryObject<CustomBedBlock> object : ECBlockRegistry.FANCY_BEDS)
+        {
+            BEDS.add(object.get());
+        }
+        for(RegistryObject<CrateBlock> object : ECBlockRegistry.CRATES)
+        {
+            CRATES.add(object.get());
+        }
+
+        event.getRegistry().register(TileEntityType.Builder.create(CustomChestTileEntity::new, CHESTS.toArray(new Block[ECBlockRegistry.FANCY_CHESTS.size()])).build(null).setRegistryName("custom_chest"));
+        event.getRegistry().register(TileEntityType.Builder.create(VerticalChestTileEntity::new, ECBlockRegistry.LOCKER.get()).build(null).setRegistryName("vertical_chest"));
+        event.getRegistry().register(TileEntityType.Builder.create(CustomBedTileEntity::new, BEDS.toArray(new CustomBedBlock[ECBlockRegistry.FANCY_BEDS.size()])).build(null).setRegistryName("custom_bed"));
+        event.getRegistry().register(TileEntityType.Builder.create(CrateTileEntity::new, CRATES.toArray(new Block[ECBlockRegistry.CRATES.size()])).build(null).setRegistryName("crate"));
     }
 }

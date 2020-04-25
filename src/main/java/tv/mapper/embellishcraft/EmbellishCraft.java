@@ -31,6 +31,7 @@ public class EmbellishCraft
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EmbellishCraftConfig.COMMON_CONFIG);
 
         ECBlockRegistry.init();
+        ECBlockRegistry.postInit();
         ECItemRegistry.init();
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
