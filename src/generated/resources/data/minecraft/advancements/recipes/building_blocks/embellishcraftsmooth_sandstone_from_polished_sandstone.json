@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:smooth_sandstone"
+      "minecraft:embellishcraftsmooth_sandstone_from_polished_sandstone"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:smooth_sandstone"
+        "recipe": "minecraft:embellishcraftsmooth_sandstone_from_polished_sandstone"
       }
     }
   },

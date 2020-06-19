@@ -376,7 +376,7 @@ public class ECRecipes extends RecipeProvider
             "has_diorite_rooftiles_slab", this.hasItem(ECBlockRegistry.DIORITE_ROOFTILES_SLAB.get())).build(consumer, ECConstants.MODID + ":diorite_rooftiles_from_slabs");
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DIORITE_ROOFTILES_STAIRS.get(), 4).key('#', ECBlockRegistry.DIORITE_ROOFTILES.get()).patternLine("#  ").patternLine("## ").patternLine(
             "###").addCriterion("has_diorite_rooftiles", this.hasItem(ECBlockRegistry.DIORITE_ROOFTILES.get())).build(consumer);
-        
+
         // Granite
         ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.GRANITE_BUTTON.get()).addIngredient(Blocks.GRANITE).addCriterion("has_granite", this.hasItem(Blocks.GRANITE)).build(consumer);
 
@@ -463,7 +463,7 @@ public class ECRecipes extends RecipeProvider
             "has_granite_rooftiles_slab", this.hasItem(ECBlockRegistry.GRANITE_ROOFTILES_SLAB.get())).build(consumer, ECConstants.MODID + ":granite_rooftiles_from_slabs");
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.GRANITE_ROOFTILES_STAIRS.get(), 4).key('#', ECBlockRegistry.GRANITE_ROOFTILES.get()).patternLine("#  ").patternLine("## ").patternLine(
             "###").addCriterion("has_granite_rooftiles", this.hasItem(ECBlockRegistry.GRANITE_ROOFTILES.get())).build(consumer);
-        
+
         // Sandstone
         ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.SANDSTONE_BUTTON.get()).addIngredient(Blocks.SANDSTONE).addCriterion("has_sandstone", this.hasItem(Blocks.SANDSTONE)).build(consumer);
 
@@ -481,7 +481,7 @@ public class ECRecipes extends RecipeProvider
             this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE.get())).build(consumer);
 
         ShapelessRecipeBuilder.shapelessRecipe(Blocks.SMOOTH_SANDSTONE).addIngredient(ECBlockRegistry.POLISHED_SANDSTONE.get()).addCriterion("has_polished_sandstone",
-            this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE.get())).build(consumer);
+            this.hasItem(ECBlockRegistry.POLISHED_SANDSTONE.get())).build(consumer, ECConstants.MODID + "smooth_sandstone_from_polished_sandstone");
         ShapedRecipeBuilder.shapedRecipe(Blocks.SMOOTH_SANDSTONE).patternLine("i").patternLine("i").key('i', Blocks.SMOOTH_SANDSTONE_SLAB).addCriterion("has_smooth_sandstone_slab",
             this.hasItem(Blocks.SMOOTH_SANDSTONE_SLAB)).build(consumer, ECConstants.MODID + ":smooth_sandstone_from_slabs");
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get(), 6).key('#', Blocks.SMOOTH_SANDSTONE).patternLine("###").patternLine("###").addCriterion("has_smooth_sandstone",
@@ -549,7 +549,7 @@ public class ECRecipes extends RecipeProvider
             "has_sandstone_rooftiles_slab", this.hasItem(ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB.get())).build(consumer, ECConstants.MODID + ":sandstone_rooftiles_from_slabs");
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS.get(), 4).key('#', ECBlockRegistry.SANDSTONE_ROOFTILES.get()).patternLine("#  ").patternLine("## ").patternLine(
             "###").addCriterion("has_sandstone_rooftiles", this.hasItem(ECBlockRegistry.SANDSTONE_ROOFTILES.get())).build(consumer);
-        
+
         // Red Sandstone
         ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.RED_SANDSTONE_BUTTON.get()).addIngredient(Blocks.RED_SANDSTONE).addCriterion("has_red_sandstone", this.hasItem(Blocks.RED_SANDSTONE)).build(
             consumer);
@@ -568,7 +568,7 @@ public class ECRecipes extends RecipeProvider
             "has_polished_red_sandstone", this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE.get())).build(consumer);
 
         ShapelessRecipeBuilder.shapelessRecipe(Blocks.SMOOTH_RED_SANDSTONE).addIngredient(ECBlockRegistry.POLISHED_RED_SANDSTONE.get()).addCriterion("has_polished_red_sandstone",
-            this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE.get())).build(consumer);
+            this.hasItem(ECBlockRegistry.POLISHED_RED_SANDSTONE.get())).build(consumer, ECConstants.MODID + "smooth_red_sandstone_from_polished_red_sandstone");
         ShapedRecipeBuilder.shapedRecipe(Blocks.SMOOTH_RED_SANDSTONE).patternLine("i").patternLine("i").key('i', Blocks.SMOOTH_RED_SANDSTONE_SLAB).addCriterion("has_smooth_red_sandstone_slab",
             this.hasItem(Blocks.SMOOTH_RED_SANDSTONE_SLAB)).build(consumer, ECConstants.MODID + ":smooth_red_sandstone_from_slabs");
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL.get(), 6).key('#', Blocks.SMOOTH_RED_SANDSTONE).patternLine("###").patternLine("###").addCriterion("has_smooth_red_sandstone",
@@ -628,15 +628,15 @@ public class ECRecipes extends RecipeProvider
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get()).key('#', ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get()).patternLine("##").addCriterion(
             "has_red_sandstone_large_bricks", this.hasItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get())).build(consumer);
 
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get(), 4).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i', Blocks.RED_SANDSTONE).addCriterion("has_red_sandstone",
-            this.hasItem(Blocks.RED_SANDSTONE)).build(consumer, ECConstants.MODID + ":red_sandstone_rooftiles_from_red_sandstone");
-        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get()).addCriterion("has_red_sandstone_rooftiles",
-            this.hasItem(ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get(), 4).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i', Blocks.RED_SANDSTONE).addCriterion(
+            "has_red_sandstone", this.hasItem(Blocks.RED_SANDSTONE)).build(consumer, ECConstants.MODID + ":red_sandstone_rooftiles_from_red_sandstone");
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get(), 6).patternLine("iii").key('i', ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get()).addCriterion(
+            "has_red_sandstone_rooftiles", this.hasItem(ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get()).patternLine("i").patternLine("i").key('i', ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get()).addCriterion(
             "has_red_sandstone_rooftiles_slab", this.hasItem(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get())).build(consumer, ECConstants.MODID + ":red_sandstone_rooftiles_from_slabs");
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_STAIRS.get(), 4).key('#', ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get()).patternLine("#  ").patternLine("## ").patternLine(
             "###").addCriterion("has_red_sandstone_rooftiles", this.hasItem(ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get())).build(consumer);
-        
+
         // Terracotta
 
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_SLAB.get(), 6).patternLine("iii").key('i', Blocks.TERRACOTTA).addCriterion("has_terracotta", this.hasItem(Blocks.TERRACOTTA)).build(consumer);
@@ -723,7 +723,7 @@ public class ECRecipes extends RecipeProvider
             "has_terracotta_rooftiles_slab", this.hasItem(ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB.get())).build(consumer, ECConstants.MODID + ":terracotta_rooftiles_from_slabs");
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TERRACOTTA_ROOFTILES_STAIRS.get(), 4).key('#', ECBlockRegistry.TERRACOTTA_ROOFTILES.get()).patternLine("#  ").patternLine("## ").patternLine(
             "###").addCriterion("has_terracotta_rooftiles", this.hasItem(ECBlockRegistry.TERRACOTTA_ROOFTILES.get())).build(consumer);
-        
+
         // Other bricks
         ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.DARK_BRICKS.get(), 9).patternLine("iii").patternLine("idi").patternLine("iii").key('i', Blocks.BRICKS).key('d', Blocks.SOUL_SAND).addCriterion(
             "has_soul_sand", this.hasItem(Blocks.SOUL_SAND)).addCriterion("has_bricks", this.hasItem(Blocks.BRICKS)).build(consumer);
