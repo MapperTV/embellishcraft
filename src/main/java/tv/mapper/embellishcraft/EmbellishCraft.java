@@ -24,7 +24,7 @@ import tv.mapper.embellishcraft.world.OreGenerator;
 public class EmbellishCraft
 {
     public static final Logger LOGGER = LogManager.getLogger();
-    public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
+    public static IProxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> ServerProxy::new);
 
     public EmbellishCraft()
     {

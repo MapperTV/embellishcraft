@@ -20,7 +20,7 @@ import tv.mapper.embellishcraft.util.RockType;
 
 public class ECItemRegistry
 {
-    private static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, ECConstants.MODID);
+    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ECConstants.MODID);
 
     // Rocks
     public static final Map<RockType, RegistryObject<BlockItem>> ROCKS_ITEMS = Arrays.stream(RockType.values()).map(

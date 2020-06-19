@@ -42,7 +42,7 @@ import tv.mapper.mapperbase.block.UpDownBlock;
 
 public class ECBlockRegistry
 {
-    private static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, ECConstants.MODID);
+    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ECConstants.MODID);
 
     public static List<RegistryObject<CustomChestBlock>> FANCY_CHESTS = new ArrayList<>();
     public static List<RegistryObject<CustomBedBlock>> FANCY_BEDS = new ArrayList<>();
@@ -1166,7 +1166,7 @@ public class ECBlockRegistry
 
     public static final Map<DyeColor, RegistryObject<LampBlock>> TABLE_LAMP_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
         BLOCKS.register(type.getName() + "_table_lamp",
-            () -> new LampBlock(Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.CLOTH), ToolType.PICKAXE)))).collect(
+            () -> new LampBlock(Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.CLOTH).lightValue(15), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final RegistryObject<PlateBlock> PLATE = BLOCKS.register("plate",
