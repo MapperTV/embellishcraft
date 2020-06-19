@@ -1079,6 +1079,11 @@ public class ECItemRegistry
             () -> new FuelBlockItem(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    public static final Map<McWoods, RegistryObject<FuelBlockItem>> PLAIN_DOOR_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_plain_door",
+            () -> new FuelBlockItem(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
     public static final RegistryObject<Item> STEEL_DOOR_ITEM = ITEMS.register("steel_door", () -> new BlockItem(ECBlockRegistry.STEEL_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> STURDY_STEEL_DOOR_ITEM = ITEMS.register("sturdy_steel_door",
         () -> new BlockItem(ECBlockRegistry.STURDY_STEEL_DOOR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));

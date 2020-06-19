@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "embellishcraft:block/oak_plain_door_bottom",
+    "top": "embellishcraft:block/oak_plain_door_top"
+  }
+}

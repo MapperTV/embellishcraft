@@ -1189,6 +1189,11 @@ public class ECBlockRegistry
             () -> new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    public static final Map<McWoods, RegistryObject<CustomDoorBlock>> PLAIN_DOOR_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getName() + "_plain_door",
+            () -> new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
     public static final RegistryObject<CustomDoorBlock> STEEL_DOOR = BLOCKS.register("steel_door",
         () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
     public static final RegistryObject<CustomDoorBlock> STURDY_STEEL_DOOR = BLOCKS.register("sturdy_steel_door",

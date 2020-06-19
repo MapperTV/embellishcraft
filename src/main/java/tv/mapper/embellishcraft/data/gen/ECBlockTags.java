@@ -237,6 +237,7 @@ public class ECBlockTags extends BlockTagsProvider
             this.getBuilder(ECTags.Blocks.SUSPENDED_STAIRS).add(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get());
 
             this.getBuilder(ECTags.Blocks.WOODEN_DOORS).add(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get());
+            this.getBuilder(ECTags.Blocks.WOODEN_DOORS).add(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)).get());
 
             this.getBuilder(ECTags.Blocks.WOODEN_CRATES).add(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get());
             this.getBuilder(Tags.Blocks.CHESTS_WOODEN).add(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get());

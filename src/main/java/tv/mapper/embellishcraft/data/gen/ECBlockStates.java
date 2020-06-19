@@ -370,6 +370,8 @@ public class ECBlockStates extends BaseBlockStates
             horizontalBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"), 0);
             doorBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_bottom"),
                 modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_top"));
+            doorBlock(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getName() + "_plain_door_bottom"),
+                modLoc("block/" + McWoods.byId(j).getName() + "_plain_door_top"));
         }
 
         horizontalBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/steel_suspended_stairs"), 0);

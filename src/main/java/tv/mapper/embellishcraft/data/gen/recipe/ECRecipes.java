@@ -1178,6 +1178,8 @@ public class ECRecipes extends RecipeProvider
                 "WWW").patternLine("S S").patternLine("S S").setGroup("fancy_tables").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), 3).key('P', ECConstants.McWoodenPlanks[j]).key('B', ECConstants.McWoodenButtons[j]).patternLine(
                 "PP").patternLine("PB").patternLine("PP").setGroup("fancy_doors").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)).get(), 3).key('P', ECConstants.McWoodenLogs[j]).key('B', ECConstants.McWoodenButtons[j]).patternLine(
+                "PP").patternLine("PB").patternLine("PP").setGroup("plain_doors").addCriterion("has_" + McWoods.byId(j).getName() + "_log", this.hasItem(ECConstants.McWoodenLogs[j])).build(consumer);
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), 6).key('P', ECConstants.McWoodenPlanks[j]).key('S', Tags.Items.RODS_WOODEN).patternLine(
                 "  P").patternLine(" PS").patternLine("PS ").setGroup("suspended_stairs").addCriterion("has_" + McWoods.byId(j).getName() + "_planks", this.hasItem(ECConstants.McWoodenPlanks[j])).build(
                     consumer);

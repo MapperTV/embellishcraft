@@ -571,6 +571,7 @@ public class ECLootTables extends BaseLootTableProvider
             lootTables.put(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)).get(), createDoorTable(ECConstants.MODID, ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get(),

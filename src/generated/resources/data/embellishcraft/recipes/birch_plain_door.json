@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "plain_doors",
+  "pattern": [
+    "PP",
+    "PB",
+    "PP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:birch_log"
+    },
+    "B": {
+      "item": "minecraft:birch_button"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:birch_plain_door",
+    "count": 3
+  }
+}
