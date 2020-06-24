@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -41,7 +42,10 @@ public class EmbellishCraft
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        LOGGER.info("EmbellishCraft setup");
+        LOGGER.info("EmbellishCraft: setup started.");
+
+        if(ModList.get().isLoaded("embellishcraft-bop"))
+            LOGGER.info("EmbellishCraft: BoP addon detected.");
 
         proxy.setup(event);
         ECNetwork.registerNetworkPackets();

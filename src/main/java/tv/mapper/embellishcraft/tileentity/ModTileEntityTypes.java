@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.block.CrateBlock;
 import tv.mapper.embellishcraft.block.CustomBedBlock;
 import tv.mapper.embellishcraft.block.CustomChestBlock;
@@ -29,6 +30,8 @@ public class ModTileEntityTypes
     @SubscribeEvent
     public static void registerTileEntities(final RegistryEvent.Register<TileEntityType<?>> event)
     {
+        EmbellishCraft.LOGGER.info("1.3- EmbellishCraft: TE registering.");
+
         List<Block> CHESTS = new ArrayList<>();
         List<Block> BEDS = new ArrayList<>();
         List<Block> CRATES = new ArrayList<>();
@@ -37,6 +40,8 @@ public class ModTileEntityTypes
         {
             CHESTS.add(object.get());
         }
+
+        EmbellishCraft.LOGGER.info("EmbellishCraft: if this line crashes please report to https://github.com/MapperTV/embellishcraft/issues/19");
         for(RegistryObject<CustomBedBlock> object : ECBlockRegistry.FANCY_BEDS)
         {
             BEDS.add(object.get());

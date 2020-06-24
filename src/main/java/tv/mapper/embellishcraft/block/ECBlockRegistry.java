@@ -24,6 +24,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.tileentity.ModTileEntityTypes;
 import tv.mapper.embellishcraft.util.CustomChestType;
 import tv.mapper.embellishcraft.util.McWoods;
@@ -1262,11 +1263,13 @@ public class ECBlockRegistry
 
     public static void init()
     {
+        EmbellishCraft.LOGGER.info("1.1- EmbellishCraft: block registering.");
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     public static void postInit()
     {
+        EmbellishCraft.LOGGER.info("1.2- EmbellishCraft: block listing.");
         for(int i = 0; i < 6; i++)
         {
             FANCY_CHESTS.add(FANCY_CHEST_BLOCKS.get(McWoods.byId(i)));
