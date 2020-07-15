@@ -125,9 +125,9 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         return false;
     }
 
-    public void read(CompoundNBT compound)
+    public void read(BlockState state, CompoundNBT compound)
     {
-        super.read(compound);
+        super.read(state, compound);
         this.chestContents = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
         if(!this.checkLootAndRead(compound))
         {

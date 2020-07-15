@@ -469,7 +469,7 @@ public class ECLang extends LanguageProvider
                 // Corrugated metal plates
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
-                    String color = DyeColor.byId(j).getName();
+                    String color = DyeColor.byId(j).getString();
                     String check[] = color.split("_");
                     if(check.length > 1)
                         color = StringUtils.capitalise(check[0]) + " " + StringUtils.capitalise(check[1]);
@@ -578,7 +578,7 @@ public class ECLang extends LanguageProvider
 
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
-                    String raw[] = DyeColor.byId(j).getName().split("_");
+                    String raw[] = DyeColor.byId(j).getString().split("_");
                     if(raw[0].equals("light"))
                         name = StringUtils.capitalise(raw[0]) + " " + StringUtils.capitalise(raw[1]);
                     else
@@ -614,7 +614,7 @@ public class ECLang extends LanguageProvider
                 add("embellishcraft.container.locker_tall", "Tall Locker");
                 add("embellishcraft.message.locker.lock", "This locker is now locked!");
                 add("embellishcraft.message.locker.unlock", "This locker is now unlocked!");
-                add("embellishcraft.message.locker.wrong", "This locker is now yours!");
+                add("embellishcraft.message.locker.wrong", "This locker is not yours!");
                 add("embellishcraft.message.locker.locked", "This locker is locked.");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");

@@ -1,6 +1,6 @@
 package tv.mapper.embellishcraft.client.renderer;
 
-import net.minecraft.client.renderer.culling.ClippingHelperImpl;
+import net.minecraft.client.renderer.culling.ClippingHelper;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.util.ResourceLocation;
@@ -20,7 +20,7 @@ public class ChairEntityRenderer extends EntityRenderer<EntityChair>
     }
 
     @Override
-    public boolean shouldRender(EntityChair entity, ClippingHelperImpl camera, double camX, double camY, double camZ)
+    public boolean shouldRender(EntityChair entity, ClippingHelper camera, double camX, double camY, double camZ)
     {
         return false;
     }

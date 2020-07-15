@@ -884,31 +884,31 @@ public class ECItemRegistry
 
     // Corrugated metal plates
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_corrugated_metal_plate",
+        ITEMS.register(type.getString() + "_corrugated_metal_plate",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_STAIRS_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_corrugated_metal_plate_stairs",
+        ITEMS.register(type.getString() + "_corrugated_metal_plate_stairs",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_SLABS_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_corrugated_metal_plate_slab",
+        ITEMS.register(type.getString() + "_corrugated_metal_plate_slab",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_WALLS_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_corrugated_metal_plate_wall",
+        ITEMS.register(type.getString() + "_corrugated_metal_plate_wall",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_PRESSURE_PLATES_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_corrugated_metal_plate_pressure_plate",
+        ITEMS.register(type.getString() + "_corrugated_metal_plate_pressure_plate",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_FENCE_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_corrugated_metal_plate_fence",
+        ITEMS.register(type.getString() + "_corrugated_metal_plate_fence",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<BlockItem>> CORRUGATED_METAL_PLATE_FENCE_GATE_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_corrugated_metal_plate_fence_gate",
+        ITEMS.register(type.getString() + "_corrugated_metal_plate_fence_gate",
             () -> new BlockItem(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
@@ -1021,27 +1021,27 @@ public class ECItemRegistry
 
     // Furniture
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> CHAIRS_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_chair",
+        ITEMS.register(type.getString() + "_chair",
             () -> new FuelBlockItem(ECBlockRegistry.CHAIR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> TERRACE_CHAIRS_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_terrace_chair",
+        ITEMS.register(type.getString() + "_terrace_chair",
             () -> new FuelBlockItem(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> TABLE_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_table",
+        ITEMS.register(type.getString() + "_table",
             () -> new FuelBlockItem(ECBlockRegistry.TABLE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> FANCY_TABLE_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_fancy_table",
+        ITEMS.register(type.getString() + "_fancy_table",
             () -> new FuelBlockItem(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> TERRACE_TABLE_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_terrace_table",
+        ITEMS.register(type.getString() + "_terrace_table",
             () -> new FuelBlockItem(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chairBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
@@ -1052,19 +1052,19 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> COUCH_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_couch",
+        ITEMS.register(type.getString() + "_couch",
             () -> new FuelBlockItem(ECBlockRegistry.COUCH_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.couchBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<DyeColor, RegistryObject<BlockItem>> TABLE_LAMP_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_table_lamp", () -> new BlockItem(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+        ITEMS.register(type.getString() + "_table_lamp", () -> new BlockItem(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
             Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final RegistryObject<Item> PLATE_ITEM = ITEMS.register("plate", () -> new BlockItem(ECBlockRegistry.PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     // Stairs
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> SUSPENDED_STAIRS_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_suspended_stairs",
+        ITEMS.register(type.getString() + "_suspended_stairs",
             () -> new FuelBlockItem(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
@@ -1075,12 +1075,12 @@ public class ECItemRegistry
 
     // Doors
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> FANCY_DOOR_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_fancy_door",
+        ITEMS.register(type.getString() + "_fancy_door",
             () -> new FuelBlockItem(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> PLAIN_DOOR_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_plain_door",
+        ITEMS.register(type.getString() + "_plain_door",
             () -> new FuelBlockItem(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
@@ -1103,19 +1103,19 @@ public class ECItemRegistry
 
     // Pillows
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> PILLOW_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_pillow",
+        ITEMS.register(type.getString() + "_pillow",
             () -> new FuelBlockItem(ECBlockRegistry.PILLOW_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     // Crates
     public static final Map<McWoods, RegistryObject<BlockItem>> WOODEN_CRATE_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_wooden_crate",
+        ITEMS.register(type.getString() + "_wooden_crate",
             () -> new BlockItem(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT).maxStackSize(1))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     // Chests
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> FANCY_CHEST_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_fancy_chest",
+        ITEMS.register(type.getString() + "_fancy_chest",
             () -> new FuelBlockItem(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.chestBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
@@ -1123,27 +1123,27 @@ public class ECItemRegistry
 
     // Beds
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> OAK_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_oak_fancy_bed",
+        ITEMS.register(type.getString() + "_oak_fancy_bed",
             () -> new FuelBlockItem(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> BIRCH_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_birch_fancy_bed",
+        ITEMS.register(type.getString() + "_birch_fancy_bed",
             () -> new FuelBlockItem(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> SPRUCE_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_spruce_fancy_bed",
+        ITEMS.register(type.getString() + "_spruce_fancy_bed",
             () -> new FuelBlockItem(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> JUNGLE_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_jungle_fancy_bed",
+        ITEMS.register(type.getString() + "_jungle_fancy_bed",
             () -> new FuelBlockItem(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> DARK_OAK_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_dark_oak_fancy_bed",
+        ITEMS.register(type.getString() + "_dark_oak_fancy_bed",
             () -> new FuelBlockItem(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> ACACIA_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        ITEMS.register(type.getName() + "_acacia_fancy_bed",
+        ITEMS.register(type.getString() + "_acacia_fancy_bed",
             () -> new FuelBlockItem(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 

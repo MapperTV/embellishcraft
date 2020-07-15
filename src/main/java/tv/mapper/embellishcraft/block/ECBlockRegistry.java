@@ -978,32 +978,32 @@ public class ECBlockRegistry
 
     // Corrugated Metal Plates
     public static final Map<DyeColor, RegistryObject<CustomBlock>> CORRUGATED_METAL_PLATE_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_corrugated_metal_plate",
+        BLOCKS.register(type.getString() + "_corrugated_metal_plate",
             () -> new CustomBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<CustomStairsBlock>> CORRUGATED_METAL_PLATE_STAIRS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(
-        type.getName() + "_corrugated_metal_plate_stairs",
+        type.getString() + "_corrugated_metal_plate_stairs",
         () -> new CustomStairsBlock(() -> CORRUGATED_METAL_PLATE_BLOCKS.get(type).get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.BLACK).hardnessAndResistance(1.5F, 6.0F).sound(
             SoundType.METAL), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<CustomSlabBlock>> CORRUGATED_METAL_PLATE_SLABS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_corrugated_metal_plate_slab",
+        BLOCKS.register(type.getString() + "_corrugated_metal_plate_slab",
             () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<CustomWallBlock>> CORRUGATED_METAL_PLATE_WALLS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_corrugated_metal_plate_wall",
+        BLOCKS.register(type.getString() + "_corrugated_metal_plate_wall",
             () -> new CustomWallBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<CustomPressurePlateBlock>> CORRUGATED_METAL_PLATE_PRESSURE_PLATES = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_corrugated_metal_plate_pressure_plate",
+        BLOCKS.register(type.getString() + "_corrugated_metal_plate_pressure_plate",
             () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(
                 SoundType.METAL), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<FenceBlock>> CORRUGATED_METAL_PLATE_FENCES = Arrays.stream(DyeColor.values()).map(
         type -> Pair.of(type,
-            BLOCKS.register(type.getName() + "_corrugated_metal_plate_fence",
+            BLOCKS.register(type.getString() + "_corrugated_metal_plate_fence",
                 () -> new FenceBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL))))).collect(
                     Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<FenceGateBlock>> CORRUGATED_METAL_PLATE_FENCE_GATES = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_corrugated_metal_plate_fence_gate",
+        BLOCKS.register(type.getString() + "_corrugated_metal_plate_fence_gate",
             () -> new FenceGateBlock(Block.Properties.create(Material.IRON, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.METAL))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
@@ -1130,27 +1130,27 @@ public class ECBlockRegistry
 
     // Furniture
     public static final Map<McWoods, RegistryObject<ChairBlock>> CHAIR_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_chair",
+        BLOCKS.register(type.getString() + "_chair",
             () -> new ChairBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<TerraceChairBlock>> TERRACE_CHAIR_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_terrace_chair",
+        BLOCKS.register(type.getString() + "_terrace_chair",
             () -> new TerraceChairBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<TableBlock>> TABLE_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_table",
+        BLOCKS.register(type.getString() + "_table",
             () -> new TableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<FancyTableBlock>> FANCY_TABLE_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_fancy_table",
+        BLOCKS.register(type.getString() + "_fancy_table",
             () -> new FancyTableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<TerraceTableBlock>> TERRACE_TABLE_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_terrace_table",
+        BLOCKS.register(type.getString() + "_terrace_table",
             () -> new TerraceTableBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
@@ -1161,21 +1161,22 @@ public class ECBlockRegistry
         () -> new TerraceChairBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(0.75F, 0.5F).sound(SoundType.LANTERN), ToolType.PICKAXE));
 
     public static final Map<DyeColor, RegistryObject<CouchBlock>> COUCH_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_couch",
+        BLOCKS.register(type.getString() + "_couch",
             () -> new CouchBlock(Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.CLOTH), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
-    public static final Map<DyeColor, RegistryObject<LampBlock>> TABLE_LAMP_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_table_lamp",
-            () -> new LampBlock(Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.CLOTH).lightValue(15), ToolType.PICKAXE)))).collect(
-                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<LampBlock>> TABLE_LAMP_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getString() + "_table_lamp",
+        () -> new LampBlock(Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.CLOTH).setLightLevel((state) ->
+        {
+            return 15;
+        }), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final RegistryObject<PlateBlock> PLATE = BLOCKS.register("plate",
         () -> new PlateBlock(Block.Properties.create(Material.GLASS, MaterialColor.QUARTZ).hardnessAndResistance(0.25F).sound(SoundType.GLASS)));
 
     // Stairs
     public static final Map<McWoods, RegistryObject<SuspendedStairsBlock>> SUSPENDED_STAIRS_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_suspended_stairs",
+        BLOCKS.register(type.getString() + "_suspended_stairs",
             () -> new SuspendedStairsBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
@@ -1186,12 +1187,12 @@ public class ECBlockRegistry
 
     // Doors
     public static final Map<McWoods, RegistryObject<CustomDoorBlock>> FANCY_DOOR_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_fancy_door",
+        BLOCKS.register(type.getString() + "_fancy_door",
             () -> new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final Map<McWoods, RegistryObject<CustomDoorBlock>> PLAIN_DOOR_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_plain_door",
+        BLOCKS.register(type.getString() + "_plain_door",
             () -> new CustomDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD), ToolType.AXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
@@ -1216,17 +1217,17 @@ public class ECBlockRegistry
 
     // Pillows
     public static final Map<DyeColor, RegistryObject<PillowBlock>> PILLOW_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_pillow", () -> new PillowBlock(type, Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(0.25F).sound(SoundType.CLOTH))))).collect(
+        BLOCKS.register(type.getString() + "_pillow", () -> new PillowBlock(type, Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(0.25F).sound(SoundType.CLOTH))))).collect(
             Collectors.toMap(Pair::getKey, Pair::getValue));
 
     // Crates
     public static final Map<McWoods, RegistryObject<CrateBlock>> WOODEN_CRATE_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_wooden_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD))))).collect(
+        BLOCKS.register(type.getString() + "_wooden_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD))))).collect(
             Collectors.toMap(Pair::getKey, Pair::getValue));
 
     // Chests
     public static final Map<McWoods, RegistryObject<CustomChestBlock>> FANCY_CHEST_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_fancy_chest", () -> new CustomChestBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), () ->
+        BLOCKS.register(type.getString() + "_fancy_chest", () -> new CustomChestBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.5F).sound(SoundType.WOOD), () ->
         {
             return ModTileEntityTypes.CUSTOM_CHEST;
         }, CustomChestType.OAK_FANCY, WoodsType.byId(type.getId()))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
@@ -1236,28 +1237,30 @@ public class ECBlockRegistry
 
     // Beds
     public static final Map<DyeColor, RegistryObject<CustomBedBlock>> OAK_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_oak_fancy_bed", () -> new CustomBedBlock(type, WoodsType.OAK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+        BLOCKS.register(type.getString() + "_oak_fancy_bed", () -> new CustomBedBlock(type, WoodsType.OAK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
             Collectors.toMap(Pair::getKey, Pair::getValue));
-    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> BIRCH_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_birch_fancy_bed", () -> new CustomBedBlock(type, WoodsType.BIRCH, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
-            Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> BIRCH_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(
+        type -> Pair.of(type,
+            BLOCKS.register(type.getString() + "_birch_fancy_bed",
+                () -> new CustomBedBlock(type, WoodsType.BIRCH, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+                    Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<CustomBedBlock>> SPRUCE_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(
         type -> Pair.of(type,
-            BLOCKS.register(type.getName() + "_spruce_fancy_bed",
+            BLOCKS.register(type.getString() + "_spruce_fancy_bed",
                 () -> new CustomBedBlock(type, WoodsType.SPRUCE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
                     Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<CustomBedBlock>> JUNGLE_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(
         type -> Pair.of(type,
-            BLOCKS.register(type.getName() + "_jungle_fancy_bed",
+            BLOCKS.register(type.getString() + "_jungle_fancy_bed",
                 () -> new CustomBedBlock(type, WoodsType.JUNGLE, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
                     Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<CustomBedBlock>> DARK_OAK_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
-        BLOCKS.register(type.getName() + "_dark_oak_fancy_bed",
+        BLOCKS.register(type.getString() + "_dark_oak_fancy_bed",
             () -> new CustomBedBlock(type, WoodsType.DARK_OAK, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<DyeColor, RegistryObject<CustomBedBlock>> ACACIA_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(
         type -> Pair.of(type,
-            BLOCKS.register(type.getName() + "_acacia_fancy_bed",
+            BLOCKS.register(type.getString() + "_acacia_fancy_bed",
                 () -> new CustomBedBlock(type, WoodsType.ACACIA, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
                     Collectors.toMap(Pair::getKey, Pair::getValue));
 

@@ -9,8 +9,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.IWaterLoggable;
 import net.minecraft.block.RedstoneTorchBlock;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
@@ -79,9 +79,9 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
     public BlockState getStateForPlacement(BlockItemUseContext context)
     {
         BlockPos blockpos = context.getPos();
-        IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        FluidState FluidState = context.getWorld().getFluidState(blockpos);
 
-        return this.getDefaultState().with(LIT, Boolean.valueOf(context.getWorld().isBlockPowered(context.getPos()))).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        return this.getDefaultState().with(LIT, Boolean.valueOf(context.getWorld().isBlockPowered(context.getPos()))).with(WATERLOGGED, Boolean.valueOf(FluidState.getFluid() == Fluids.WATER));
     }
 
     @SuppressWarnings("deprecation")
@@ -98,11 +98,10 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
         return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
-    @SuppressWarnings("deprecation")
     @Override
-    public int getLightValue(BlockState state)
+    public int getLightValue(BlockState state, IBlockReader world, BlockPos pos)
     {
-        return state.get(LIT) ? super.getLightValue(state) : 0;
+        return state.get(LIT) ? super.getLightValue(state, world, pos) : 0;
     }
 
     @Override
@@ -119,7 +118,7 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
                 }
                 else
                 {
-                    worldIn.setBlockState(pos, state.cycle(LIT), 2);
+                    worldIn.setBlockState(pos, state.func_235896_a_(LIT), 2);
                 }
             }
 
@@ -133,7 +132,7 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
         {
             if(state.get(LIT) && !worldIn.isBlockPowered(pos))
             {
-                worldIn.setBlockState(pos, state.cycle(LIT), 2);
+                worldIn.setBlockState(pos, state.func_235896_a_(LIT), 2);
             }
 
         }
@@ -146,7 +145,7 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
     }
 
     @SuppressWarnings("deprecation")
-    public IFluidState getFluidState(BlockState state)
+    public FluidState getFluidState(BlockState state)
     {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }

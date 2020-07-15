@@ -27,4 +27,10 @@ public enum VerticalChestType implements IStringSerializable
     {
         return VALUES[this.opposite];
     }
+
+    @Override
+    public String getString()
+    {
+        return this.name;
+    }
 }

@@ -43,8 +43,10 @@ public class ECGenerators
         generator.addProvider(new ECBlockModels(generator, ECConstants.MODID, helper));
         generator.addProvider(new ECItemModels(generator, ECConstants.MODID, helper));
 
-        generator.addProvider(new ECBlockTags(generator));
-        generator.addProvider(new ECItemTags(generator));
+        ECBlockTags blockTags = new ECBlockTags(generator);
+
+        generator.addProvider(blockTags);
+        generator.addProvider(new ECItemTags(generator, blockTags));
 
         generator.addProvider(new ECLang(generator, ECConstants.MODID, "en_us"));
         generator.addProvider(new ECLang(generator, ECConstants.MODID, "fr_fr"));

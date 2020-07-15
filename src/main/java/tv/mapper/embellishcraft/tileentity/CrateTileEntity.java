@@ -5,6 +5,7 @@ import java.util.stream.IntStream;
 import javax.annotation.Nonnull;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.ShulkerBoxBlock;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.ISidedInventory;
@@ -67,9 +68,9 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
         return new TranslationTextComponent("embellishcraft.container.wooden_crate");
     }
 
-    public void read(CompoundNBT compound)
+    public void read(BlockState state, CompoundNBT compound)
     {
-        super.read(compound);
+        super.read(state, compound);
         this.loadFromNbt(compound);
     }
 

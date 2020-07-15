@@ -194,33 +194,33 @@ public class ECBlockModels extends BaseBlockModels
         // furniture
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            getBuilder(McWoods.byId(j).getName() + "_chair").parent(getExistingFile(modLoc("block/chair"))).texture("material", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture(
-                "particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
-            getBuilder(McWoods.byId(j).getName() + "_terrace_chair").parent(getExistingFile(modLoc("block/terrace_chair"))).texture("material",
-                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_terrace_table")).texture("particle",
-                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_terrace_table"));
-            getBuilder(McWoods.byId(j).getName() + "_terrace_table").parent(getExistingFile(modLoc("block/terrace_table"))).texture("material",
-                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_terrace_table")).texture("particle",
-                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_terrace_table"));
+            getBuilder(McWoods.byId(j).getString() + "_chair").parent(getExistingFile(modLoc("block/chair"))).texture("material",
+                new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks"));
+            getBuilder(McWoods.byId(j).getString() + "_terrace_chair").parent(getExistingFile(modLoc("block/terrace_chair"))).texture("material",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_terrace_table")).texture("particle",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_terrace_table"));
+            getBuilder(McWoods.byId(j).getString() + "_terrace_table").parent(getExistingFile(modLoc("block/terrace_table"))).texture("material",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_terrace_table")).texture("particle",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_terrace_table"));
 
-            getBuilder(McWoods.byId(j).getName() + "_table_foot").parent(getExistingFile(modLoc("block/table_foot"))).texture("material",
-                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
-            getBuilder(McWoods.byId(j).getName() + "_table_inventory").parent(getExistingFile(modLoc("block/table_inventory"))).texture("material",
-                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
-            getBuilder(McWoods.byId(j).getName() + "_table_top").parent(getExistingFile(modLoc("block/table_top"))).texture("material",
-                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+            getBuilder(McWoods.byId(j).getString() + "_table_foot").parent(getExistingFile(modLoc("block/table_foot"))).texture("material",
+                new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks"));
+            getBuilder(McWoods.byId(j).getString() + "_table_inventory").parent(getExistingFile(modLoc("block/table_inventory"))).texture("material",
+                new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks"));
+            getBuilder(McWoods.byId(j).getString() + "_table_top").parent(getExistingFile(modLoc("block/table_top"))).texture("material",
+                new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks"));
 
-            getBuilder(McWoods.byId(j).getName() + "_fancy_table_foot").parent(getExistingFile(modLoc("block/fancy_table_foot"))).texture("side",
-                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_side")).texture("top",
-                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_top")).texture("particle",
-                        new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
-            getBuilder(McWoods.byId(j).getName() + "_fancy_table_inventory").parent(getExistingFile(modLoc("block/fancy_table_inventory"))).texture("side",
-                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_side")).texture("top",
-                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_top"));
-            getBuilder(McWoods.byId(j).getName() + "_fancy_table_top").parent(getExistingFile(modLoc("block/fancy_table_top"))).texture("side",
-                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_side")).texture("top",
-                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_table_top")).texture("particle",
-                        new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
+            getBuilder(McWoods.byId(j).getString() + "_fancy_table_foot").parent(getExistingFile(modLoc("block/fancy_table_foot"))).texture("side",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_table_side")).texture("top",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_table_top")).texture("particle",
+                        new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks"));
+            getBuilder(McWoods.byId(j).getString() + "_fancy_table_inventory").parent(getExistingFile(modLoc("block/fancy_table_inventory"))).texture("side",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_table_side")).texture("top",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_table_top"));
+            getBuilder(McWoods.byId(j).getString() + "_fancy_table_top").parent(getExistingFile(modLoc("block/fancy_table_top"))).texture("side",
+                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_table_side")).texture("top",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_table_top")).texture("particle",
+                        new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks"));
         }
 
         getBuilder("steel_terrace_chair").parent(getExistingFile(modLoc("block/terrace_chair"))).texture("material", new ResourceLocation(ECConstants.MODID, "block/steel_terrace_table")).texture("particle",
@@ -230,42 +230,42 @@ public class ECBlockModels extends BaseBlockModels
 
         for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
         {
-            buildTableLamp(DyeColor.byId(j).getName());
-            buildCouch(DyeColor.byId(j).getName());
-            getBuilder(DyeColor.byId(j).getName() + "_pillow").parent(getExistingFile(modLoc("block/pillow"))).texture("all", new ResourceLocation("block/" + DyeColor.byId(j).getName() + "_wool")).texture(
-                "particle", new ResourceLocation("block/" + DyeColor.byId(j).getName() + "_wool"));
-            getBuilder(DyeColor.byId(j).getName() + "_corrugated_metal_plate_fence_inventory").parent(getExistingFile(mcLoc("block/fence_inventory"))).texture("texture",
-                modLoc("block/" + DyeColor.byId(j).getName() + "_corrugated_metal_plate"));
+            buildTableLamp(DyeColor.byId(j).getString());
+            buildCouch(DyeColor.byId(j).getString());
+            getBuilder(DyeColor.byId(j).getString() + "_pillow").parent(getExistingFile(modLoc("block/pillow"))).texture("all", new ResourceLocation("block/" + DyeColor.byId(j).getString() + "_wool")).texture(
+                "particle", new ResourceLocation("block/" + DyeColor.byId(j).getString() + "_wool"));
+            getBuilder(DyeColor.byId(j).getString() + "_corrugated_metal_plate_fence_inventory").parent(getExistingFile(mcLoc("block/fence_inventory"))).texture("texture",
+                modLoc("block/" + DyeColor.byId(j).getString() + "_corrugated_metal_plate"));
         }
 
         // Suspended stairs, chests
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            getBuilder(McWoods.byId(j).getName() + "_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all",
-                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
-            // getBuilder(McWoods.byId(j).getName() + "_fancy_chest").texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
-            getBuilder(McWoods.byId(j).getName() + "_fancy_chest").parent(getExistingFile(modLoc("block/chest"))).texture("particle",
-                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("front",
-                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_front")).texture("side",
-                        new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side")).texture("top",
-                            new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_top")).texture("bottom",
-                                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_bottom")).texture("lock",
-                                    new ResourceLocation(ECConstants.MODID, "block/air_duct")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks"));
-            getBuilder(McWoods.byId(j).getName() + "_fancy_chest_left").parent(getExistingFile(modLoc("block/chest_left"))).texture("particle",
-                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("front",
-                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_front_right")).texture("side",
-                        new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side")).texture("top",
-                            new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_top_right")).texture("bottom",
-                                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_bottom_right")).texture("back",
-                                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side_left")).texture("lock",
+            getBuilder(McWoods.byId(j).getString() + "_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs"))).texture("all",
+                new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks"));
+            // getBuilder(McWoods.byId(j).getString() + "_fancy_chest").texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks"));
+            getBuilder(McWoods.byId(j).getString() + "_fancy_chest").parent(getExistingFile(modLoc("block/chest"))).texture("particle",
+                new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks")).texture("front",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_front")).texture("side",
+                        new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_side")).texture("top",
+                            new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_top")).texture("bottom",
+                                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_bottom")).texture("lock",
+                                    new ResourceLocation(ECConstants.MODID, "block/air_duct")).texture("particle", new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks"));
+            getBuilder(McWoods.byId(j).getString() + "_fancy_chest_left").parent(getExistingFile(modLoc("block/chest_left"))).texture("particle",
+                new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks")).texture("front",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_front_right")).texture("side",
+                        new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_side")).texture("top",
+                            new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_top_right")).texture("bottom",
+                                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_bottom_right")).texture("back",
+                                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_side_left")).texture("lock",
                                         new ResourceLocation(ECConstants.MODID, "block/air_duct"));
-            getBuilder(McWoods.byId(j).getName() + "_fancy_chest_right").parent(getExistingFile(modLoc("block/chest_right"))).texture("particle",
-                new ResourceLocation("block/" + McWoods.byId(j).getName() + "_planks")).texture("front",
-                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_front_left")).texture("side",
-                        new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side")).texture("top",
-                            new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_top_left")).texture("bottom",
-                                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_bottom_left")).texture("back",
-                                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getName() + "_fancy_chest_side_right")).texture("lock",
+            getBuilder(McWoods.byId(j).getString() + "_fancy_chest_right").parent(getExistingFile(modLoc("block/chest_right"))).texture("particle",
+                new ResourceLocation("block/" + McWoods.byId(j).getString() + "_planks")).texture("front",
+                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_front_left")).texture("side",
+                        new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_side")).texture("top",
+                            new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_top_left")).texture("bottom",
+                                new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_bottom_left")).texture("back",
+                                    new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_side_right")).texture("lock",
                                         new ResourceLocation(ECConstants.MODID, "block/air_duct"));
         }
 
@@ -287,7 +287,7 @@ public class ECBlockModels extends BaseBlockModels
         {
             for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
             {
-                buildBed(DyeColor.byId(j).getName(), McWoods.byId(i).getName(), "fancy_bed", "minecraft");
+                buildBed(DyeColor.byId(j).getString(), McWoods.byId(i).getString(), "fancy_bed", "minecraft");
             }
         }
     }

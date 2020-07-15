@@ -1,5 +1,7 @@
 package tv.mapper.embellishcraft.block;
 
+import java.util.List;
+
 import javax.annotation.Nullable;
 
 import net.minecraft.block.BedBlock;
@@ -9,9 +11,10 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.DyeColor;
 import net.minecraft.item.ItemStack;
@@ -25,6 +28,7 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -33,10 +37,10 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IExplosionContext;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
-import net.minecraftforge.common.extensions.IForgeDimension;
 
 public class PillowBlock extends BedBlock
 {
@@ -82,54 +86,123 @@ public class PillowBlock extends BedBlock
     public void onBlockPlacedBy(World worldIn, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack)
     {}
 
-    @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
     {
         if(worldIn.isRemote)
         {
-            return ActionResultType.SUCCESS;
-        }
-
-        if(state.get(WATERLOGGED))
-        {
-            player.sendStatusMessage(new TranslationTextComponent("embellishcraft.message.bed.underwater"), true);
-            return ActionResultType.SUCCESS;
+            return ActionResultType.CONSUME;
         }
         else
         {
+            // if(state.get(PART) != BedPart.HEAD)
+            // {
+            // pos = pos.offset(state.get(HORIZONTAL_FACING));
+            // state = worldIn.getBlockState(pos);
+            // if(!state.isIn(this))
+            // {
+            // return ActionResultType.CONSUME;
+            // }
+            // }
 
-            IForgeDimension.SleepResult sleepResult = worldIn.dimension.canSleepAt(player, pos);
-
-            if(sleepResult != IForgeDimension.SleepResult.BED_EXPLODES)
+            if(!func_235330_a_(worldIn))
             {
-                if(sleepResult == IForgeDimension.SleepResult.DENY)
-                    return ActionResultType.SUCCESS;
-                if(state.get(OCCUPIED))
+                worldIn.removeBlock(pos, false);
+                // BlockPos blockpos = pos.offset(state.get(HORIZONTAL_FACING).getOpposite());
+                // if(worldIn.getBlockState(blockpos).isIn(this))
+                // {
+                // worldIn.removeBlock(blockpos, false);
+                // }
+
+                worldIn.func_230546_a_((Entity)null, DamageSource.func_233546_a_(), (IExplosionContext)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
+                    Explosion.Mode.DESTROY);
+                return ActionResultType.SUCCESS;
+            }
+            else if(state.get(OCCUPIED))
+            {
+                if(!this.func_226861_a_(worldIn, pos))
                 {
                     player.sendStatusMessage(new TranslationTextComponent("block.minecraft.bed.occupied"), true);
-                    return ActionResultType.SUCCESS;
                 }
-                else
-                {
-                    player.trySleep(pos).ifLeft((p_220173_1_) ->
-                    {
-                        if(p_220173_1_ != null)
-                        {
-                            player.sendStatusMessage(p_220173_1_.getMessage(), true);
-                        }
 
-                    });
-                    return ActionResultType.SUCCESS;
-                }
+                return ActionResultType.SUCCESS;
             }
             else
             {
-                worldIn.removeBlock(pos, false);
-                worldIn.createExplosion((Entity)null, DamageSource.netherBedExplosion(), (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true, Explosion.Mode.DESTROY);
+                player.trySleep(pos).ifLeft((p_220173_1_) ->
+                {
+                    if(p_220173_1_ != null)
+                    {
+                        player.sendStatusMessage(p_220173_1_.getMessage(), true);
+                    }
+
+                });
                 return ActionResultType.SUCCESS;
             }
         }
     }
+
+    private boolean func_226861_a_(World p_226861_1_, BlockPos p_226861_2_)
+    {
+        List<VillagerEntity> list = p_226861_1_.getEntitiesWithinAABB(VillagerEntity.class, new AxisAlignedBB(p_226861_2_), LivingEntity::isSleeping);
+        if(list.isEmpty())
+        {
+            return false;
+        }
+        else
+        {
+            list.get(0).wakeUp();
+            return true;
+        }
+    }
+    //
+    // @Override
+    // public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+    // {
+    // if(worldIn.isRemote)
+    // {
+    // return ActionResultType.SUCCESS;
+    // }
+    //
+    // if(state.get(WATERLOGGED))
+    // {
+    // player.sendStatusMessage(new TranslationTextComponent("embellishcraft.message.bed.underwater"), true);
+    // return ActionResultType.SUCCESS;
+    // }
+    // else
+    // {
+    //
+    // IForgeDimension.SleepResult sleepResult = worldIn.dimension.canSleepAt(player, pos);
+    //
+    // if(sleepResult != IForgeDimension.SleepResult.BED_EXPLODES)
+    // {
+    // if(sleepResult == IForgeDimension.SleepResult.DENY)
+    // return ActionResultType.SUCCESS;
+    // if(state.get(OCCUPIED))
+    // {
+    // player.sendStatusMessage(new TranslationTextComponent("block.minecraft.bed.occupied"), true);
+    // return ActionResultType.SUCCESS;
+    // }
+    // else
+    // {
+    // player.trySleep(pos).ifLeft((p_220173_1_) ->
+    // {
+    // if(p_220173_1_ != null)
+    // {
+    // player.sendStatusMessage(p_220173_1_.getMessage(), true);
+    // }
+    //
+    // });
+    // return ActionResultType.SUCCESS;
+    // }
+    // }
+    // else
+    // {
+    // worldIn.removeBlock(pos, false);
+    // worldIn.createExplosion((Entity)null, DamageSource.netherBedExplosion(), (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true, Explosion.Mode.DESTROY);
+    // return ActionResultType.SUCCESS;
+    // }
+    // }
+    // }
 
     // @Override
     // public BlockRenderLayer getRenderLayer()
@@ -167,7 +240,7 @@ public class PillowBlock extends BedBlock
     public BlockState getStateForPlacement(BlockItemUseContext context)
     {
         BlockPos blockpos = context.getPos();
-        IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
 
         return this.getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing()).with(PART, BedPart.HEAD).with(WATERLOGGED,
             Boolean.valueOf(Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER)));
@@ -186,7 +259,7 @@ public class PillowBlock extends BedBlock
     }
 
     @SuppressWarnings("deprecation")
-    public IFluidState getFluidState(BlockState state)
+    public FluidState getFluidState(BlockState state)
     {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }

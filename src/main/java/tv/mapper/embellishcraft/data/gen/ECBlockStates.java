@@ -23,6 +23,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.CouchBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.LampBlock;
@@ -50,7 +51,8 @@ public class ECBlockStates extends BaseBlockStates
         if(stairs != null)
             stairsBlock(stairs, modLoc("block/" + name));
         if(wall != null)
-            wallBlock(wall, modLoc("block/" + name));
+            newWallBlock(wall, new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_wall_post"), new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_wall_side"),
+                new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_wall_side_tall"));
         if(pressure != null)
             pressurePlateBlock(pressure, new UncheckedModelFile(mod_id + ":block/" + name + "_pressure_plate"), new UncheckedModelFile(mod_id + ":block/" + name + "_pressure_plate_down"));
         if(button != null)
@@ -66,7 +68,8 @@ public class ECBlockStates extends BaseBlockStates
         if(stairs != null)
             stairsBlock(stairs, modLoc("block/" + name));
         if(wall != null)
-            wallBlock(wall, modLoc("block/" + name));
+            newWallBlock(wall, new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_wall_post"), new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_wall_side"),
+                new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_wall_side_tall"));
         if(pressure != null)
             pressurePlateBlock(pressure, new UncheckedModelFile(mod_id + ":block/" + name + "_pressure_plate"), new UncheckedModelFile(mod_id + ":block/" + name + "_pressure_plate_down"));
         if(button != null)
@@ -79,44 +82,44 @@ public class ECBlockStates extends BaseBlockStates
         // Rocks
         for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
         {
-            registerStoneVariant(RockType.byId(j).getName(), ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_SLABS.get(RockType.byId(j)).get(),
+            registerStoneVariant(RockType.byId(j).getString(), ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_SLABS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_BUTTONS.get(RockType.byId(j)).get());
 
-            registerStoneVariant(RockType.byId(j).getName() + "_cobblestone", ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_SLABS.get(RockType.byId(j)).get(),
+            registerStoneVariant(RockType.byId(j).getString() + "_cobblestone", ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_SLABS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_COBBLESTONE_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_WALLS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            registerStoneVariant("smooth_" + RockType.byId(j).getName(), ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get(),
+            registerStoneVariant("smooth_" + RockType.byId(j).getString(), ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.SMOOTH_ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_WALLS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.SMOOTH_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            registerStoneVariantWithSideSlab("polished_" + RockType.byId(j).getName(), ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get(),
+            registerStoneVariantWithSideSlab("polished_" + RockType.byId(j).getString(), ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.POLISHED_ROCK_STAIRS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.POLISHED_ROCK_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.POLISHED_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            registerStoneVariant(RockType.byId(j).getName() + "_paving", ECBlockRegistry.ROCK_PAVINGS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_SLABS.get(RockType.byId(j)).get(),
+            registerStoneVariant(RockType.byId(j).getString() + "_paving", ECBlockRegistry.ROCK_PAVINGS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_SLABS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_PAVING_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_WALLS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_PAVING_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            registerStoneVariant(RockType.byId(j).getName() + "_tiles", ECBlockRegistry.ROCK_TILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_TILES_SLABS.get(RockType.byId(j)).get(),
+            registerStoneVariant(RockType.byId(j).getString() + "_tiles", ECBlockRegistry.ROCK_TILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_TILES_SLABS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_TILES_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_TILES_WALLS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_TILES_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            registerStoneVariant(RockType.byId(j).getName() + "_bricks", ECBlockRegistry.ROCK_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BRICKS_SLABS.get(RockType.byId(j)).get(),
+            registerStoneVariant(RockType.byId(j).getString() + "_bricks", ECBlockRegistry.ROCK_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BRICKS_SLABS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_BRICKS_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BRICKS_WALLS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            registerStoneVariant(RockType.byId(j).getName() + "_large_bricks", ECBlockRegistry.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_SLABS.get(RockType.byId(j)).get(),
-                ECBlockRegistry.ROCK_LARGE_BRICKS_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_WALLS.get(RockType.byId(j)).get(),
-                ECBlockRegistry.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            registerStoneVariant(RockType.byId(j).getString() + "_large_bricks", ECBlockRegistry.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_LARGE_BRICKS_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_STAIRS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_LARGE_BRICKS_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            registerStoneVariant(RockType.byId(j).getName() + "_ornament", ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), null, null, null,
+            registerStoneVariant(RockType.byId(j).getString() + "_ornament", ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), null, null, null,
                 ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            registerStoneVariant(RockType.byId(j).getName() + "_rooftiles", ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get(), null,
+            registerStoneVariant(RockType.byId(j).getString() + "_rooftiles", ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get(), null,
                 null, null, null);
-            rooftilesStairsBlock(ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get(), modLoc("block/" + RockType.byId(j).getName() + "_rooftiles"));
+            rooftilesStairsBlock(ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get(), modLoc("block/" + RockType.byId(j).getString() + "_rooftiles"));
 
         }
 
@@ -171,7 +174,9 @@ public class ECBlockStates extends BaseBlockStates
         // Sandstone
         buttonBlock(ECBlockRegistry.SANDSTONE_BUTTON.get(), new UncheckedModelFile(mod_id + ":block/sandstone_button"), new UncheckedModelFile(mod_id + ":block/sandstone_button_pressed"), 180);
 
-        wallBlock(ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get(), mcLoc("block/sandstone_top"));
+        // wallBlock(ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get(), mcLoc("block/sandstone_top"));
+        newWallBlock(ECBlockRegistry.SMOOTH_SANDSTONE_WALL.get(), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_sandstone_wall_post"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/smooth_sandstone_wall_side"), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_sandstone_wall_side_tall"));
         pressurePlateBlock(ECBlockRegistry.SMOOTH_SANDSTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(mod_id + ":block/smooth_sandstone_pressure_plate"),
             new UncheckedModelFile(mod_id + ":block/smooth_sandstone_pressure_plate_down"));
 
@@ -191,7 +196,9 @@ public class ECBlockStates extends BaseBlockStates
         // Red Sandstone
         buttonBlock(ECBlockRegistry.RED_SANDSTONE_BUTTON.get(), new UncheckedModelFile(mod_id + ":block/red_sandstone_button"), new UncheckedModelFile(mod_id + ":block/red_sandstone_button_pressed"), 180);
 
-        wallBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL.get(), mcLoc("block/red_sandstone_top"));
+        // wallBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL.get(), mcLoc("block/red_sandstone_top"));
+        newWallBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_WALL.get(), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_red_sandstone_wall_post"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/smooth_red_sandstone_wall_side"), new UncheckedModelFile(ECConstants.MODID + ":block/smooth_red_sandstone_wall_side_tall"));
         pressurePlateBlock(ECBlockRegistry.SMOOTH_RED_SANDSTONE_PRESSURE_PLATE.get(), new UncheckedModelFile(mod_id + ":block/smooth_red_sandstone_pressure_plate"),
             new UncheckedModelFile(mod_id + ":block/smooth_red_sandstone_pressure_plate_down"));
 
@@ -211,7 +218,9 @@ public class ECBlockStates extends BaseBlockStates
         // Terracotta
         slabBlock(ECBlockRegistry.TERRACOTTA_SLAB.get(), mcLoc("block/terracotta"), mcLoc("block/terracotta"));
         stairsBlock(ECBlockRegistry.TERRACOTTA_STAIRS.get(), mcLoc("block/terracotta"));
-        wallBlock(ECBlockRegistry.TERRACOTTA_WALL.get(), mcLoc("block/terracotta"));
+        // wallBlock(ECBlockRegistry.TERRACOTTA_WALL.get(), mcLoc("block/terracotta"));
+        newWallBlock(ECBlockRegistry.TERRACOTTA_WALL.get(), new UncheckedModelFile(ECConstants.MODID + ":block/terracotta_wall_post"), new UncheckedModelFile(ECConstants.MODID + ":block/terracotta_wall_side"),
+            new UncheckedModelFile(ECConstants.MODID + ":block/terracotta_wall_side_tall"));
         pressurePlateBlock(ECBlockRegistry.TERRACOTTA_PRESSURE_PLATE.get(), new UncheckedModelFile(mod_id + ":block/terracotta_pressure_plate"),
             new UncheckedModelFile(mod_id + ":block/terracotta_pressure_plate_down"));
         buttonBlock(ECBlockRegistry.TERRACOTTA_BUTTON.get(), new UncheckedModelFile(mod_id + ":block/terracotta_button"), new UncheckedModelFile(mod_id + ":block/terracotta_button_pressed"), 180);
@@ -309,11 +318,11 @@ public class ECBlockStates extends BaseBlockStates
         // Corrugated metal plates
         for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
         {
-            registerStoneVariant(DyeColor.byId(j).getName() + "_corrugated_metal_plate", ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get(),
+            registerStoneVariant(DyeColor.byId(j).getString() + "_corrugated_metal_plate", ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get(),
                 ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get(), ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get(),
                 ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get(), ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get(), null);
-            fenceBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getName() + "_corrugated_metal_plate"));
-            fenceGateBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getName() + "_corrugated_metal_plate"));
+            fenceBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getString() + "_corrugated_metal_plate"));
+            fenceGateBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getString() + "_corrugated_metal_plate"));
         }
 
         // Wallpaper
@@ -334,14 +343,14 @@ public class ECBlockStates extends BaseBlockStates
         // Furniture
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            horizontalBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getName() + "_chair"), 0);
-            horizontalBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getName() + "_terrace_chair"), 0);
+            horizontalBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getString() + "_chair"), 0);
+            horizontalBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getString() + "_terrace_chair"), 0);
             tableBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)).get());
             tableBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)).get());
             simpleBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get());
             simpleBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get());
             // getVariantBuilder(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get()).partialState().setModels(
-            // new ConfiguredModel(new UncheckedModelFile(mod_id + ":model/" + McWoods.byId(j).getName() + "_fancy_chest")));
+            // new ConfiguredModel(new UncheckedModelFile(mod_id + ":model/" + McWoods.byId(j).getString() + "_fancy_chest")));
             chestBlock(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get(), 0);
         }
         verticalChestBlock(ECBlockRegistry.LOCKER.get(), 0);
@@ -353,7 +362,7 @@ public class ECBlockStates extends BaseBlockStates
         {
             couchBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), 90);
             tableLampBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get());
-            horizontalBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + DyeColor.byId(j).getName() + "_pillow"), 0);
+            horizontalBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + DyeColor.byId(j).getString() + "_pillow"), 0);
             bedBlock(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
             bedBlock(ECBlockRegistry.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
             bedBlock(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
@@ -367,11 +376,11 @@ public class ECBlockStates extends BaseBlockStates
         // Suspended stairs and fancy doors
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            horizontalBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"), 0);
-            doorBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_bottom"),
-                modLoc("block/" + McWoods.byId(j).getName() + "_fancy_door_top"));
-            doorBlock(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getName() + "_plain_door_bottom"),
-                modLoc("block/" + McWoods.byId(j).getName() + "_plain_door_top"));
+            horizontalBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getString() + "_suspended_stairs"), 0);
+            doorBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getString() + "_fancy_door_bottom"),
+                modLoc("block/" + McWoods.byId(j).getString() + "_fancy_door_top"));
+            doorBlock(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getString() + "_plain_door_bottom"),
+                modLoc("block/" + McWoods.byId(j).getString() + "_plain_door_top"));
         }
 
         horizontalBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/steel_suspended_stairs"), 0);
@@ -397,7 +406,7 @@ public class ECBlockStates extends BaseBlockStates
     }
 
     /**
-     * Creates a blockstate file for blocks that have 4 orientations depeding of cardinal (north, south etc). e.g. chairs, suspended stairs...
+     * Creates a blockstate file for blocks that have 4 orientations depending of cardinal (north, south etc). e.g. chairs, suspended stairs...
      */
     protected void orientableBlock(Block block, ModelFile model, int angleOffset)
     {

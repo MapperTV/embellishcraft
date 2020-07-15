@@ -13,8 +13,8 @@ import net.minecraft.block.IWaterLoggable;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.inventory.DoubleSidedInventory;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryHelper;
@@ -210,7 +210,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
     {
         VerticalChestType chesttype = VerticalChestType.SINGLE;
         Direction direction = context.getPlacementHorizontalFacing().getOpposite();
-        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+        FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
         boolean flag = context.getPlayer().isSneaking();
         Direction direction1 = context.getFace();
 
@@ -300,7 +300,7 @@ public class VerticalChestBlock extends ContainerBlock implements IWaterLoggable
     }
 
     @SuppressWarnings("deprecation")
-    public IFluidState getFluidState(BlockState state)
+    public FluidState getFluidState(BlockState state)
     {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }

@@ -135,11 +135,11 @@ public class ECItemModels extends BaseItemModels
         // Furniture
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            getBuilder(McWoods.byId(j).getName() + "_terrace_table").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_terrace_table"));
-            getBuilder(McWoods.byId(j).getName() + "_terrace_chair").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_terrace_chair"));
-            getBuilder(McWoods.byId(j).getName() + "_chair").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_chair"));
-            getBuilder(McWoods.byId(j).getName() + "_table").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_table_inventory"));
-            getBuilder(McWoods.byId(j).getName() + "_fancy_table").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_fancy_table_inventory"));
+            getBuilder(McWoods.byId(j).getString() + "_terrace_table").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_terrace_table"));
+            getBuilder(McWoods.byId(j).getString() + "_terrace_chair").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_terrace_chair"));
+            getBuilder(McWoods.byId(j).getString() + "_chair").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_chair"));
+            getBuilder(McWoods.byId(j).getString() + "_table").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_table_inventory"));
+            getBuilder(McWoods.byId(j).getString() + "_fancy_table").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_fancy_table_inventory"));
         }
 
         getBuilder("steel_terrace_table").parent(new UncheckedModelFile(modid + ":block/steel_terrace_table"));
@@ -147,7 +147,7 @@ public class ECItemModels extends BaseItemModels
 
         for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
         {
-            String color = DyeColor.byId(j).getName();
+            String color = DyeColor.byId(j).getString();
             getBuilder(color + "_couch").parent(new UncheckedModelFile(modid + ":block/" + color + "_couch"));
             getBuilder(color + "_table_lamp").parent(new UncheckedModelFile(modid + ":block/" + color + "_table_lamp"));
             getBuilder(color + "_pillow").parent(new UncheckedModelFile(modid + ":block/" + color + "_pillow"));
@@ -159,16 +159,16 @@ public class ECItemModels extends BaseItemModels
         // Suspended stairs, doors, crates, beds
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
-            getBuilder(McWoods.byId(j).getName() + "_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_suspended_stairs"));
-            getBuilder(McWoods.byId(j).getName() + "_fancy_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getName() + "_fancy_door"));
-            getBuilder(McWoods.byId(j).getName() + "_plain_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getName() + "_plain_door"));
-            getBuilder(McWoods.byId(j).getName() + "_wooden_crate").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_wooden_crate"));
-            getBuilder(McWoods.byId(j).getName() + "_fancy_chest").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getName() + "_fancy_chest"));
+            getBuilder(McWoods.byId(j).getString() + "_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_suspended_stairs"));
+            getBuilder(McWoods.byId(j).getString() + "_fancy_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getString() + "_fancy_door"));
+            getBuilder(McWoods.byId(j).getString() + "_plain_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getString() + "_plain_door"));
+            getBuilder(McWoods.byId(j).getString() + "_wooden_crate").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_wooden_crate"));
+            getBuilder(McWoods.byId(j).getString() + "_fancy_chest").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_fancy_chest"));
 
             for(int i = 0; i < Arrays.stream(DyeColor.values()).count(); i++)
             {
-                getBuilder(DyeColor.byId(i).getName() + "_" + McWoods.byId(j).getName() + "_fancy_bed").parent(
-                    new UncheckedModelFile(modid + ":block/" + DyeColor.byId(i).getName() + "_" + McWoods.byId(j).getName() + "_fancy_bed_inventory"));
+                getBuilder(DyeColor.byId(i).getString() + "_" + McWoods.byId(j).getString() + "_fancy_bed").parent(
+                    new UncheckedModelFile(modid + ":block/" + DyeColor.byId(i).getString() + "_" + McWoods.byId(j).getString() + "_fancy_bed_inventory"));
             }
         }
         getBuilder("locker").parent(new UncheckedModelFile(modid + ":block/locker_small"));

@@ -6,16 +6,16 @@ import net.minecraft.advancements.criterion.StatePropertiesPredicate;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
-import net.minecraft.world.storage.loot.ConstantRange;
-import net.minecraft.world.storage.loot.DynamicLootEntry;
-import net.minecraft.world.storage.loot.ItemLootEntry;
-import net.minecraft.world.storage.loot.LootPool;
-import net.minecraft.world.storage.loot.LootTable;
-import net.minecraft.world.storage.loot.conditions.BlockStateProperty;
-import net.minecraft.world.storage.loot.functions.CopyName;
-import net.minecraft.world.storage.loot.functions.CopyNbt;
-import net.minecraft.world.storage.loot.functions.SetContents;
-import net.minecraft.world.storage.loot.functions.SetCount;
+import net.minecraft.loot.ConstantRange;
+import net.minecraft.loot.DynamicLootEntry;
+import net.minecraft.loot.ItemLootEntry;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.conditions.BlockStateProperty;
+import net.minecraft.loot.functions.CopyName;
+import net.minecraft.loot.functions.CopyNbt;
+import net.minecraft.loot.functions.SetContents;
+import net.minecraft.loot.functions.SetCount;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.CrateBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
@@ -575,9 +575,9 @@ public class ECLootTables extends BaseLootTableProvider
             lootTables.put(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), createStandardTable(ECConstants.MODID, ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get(),
-                createCrateTable(McWoods.byId(j).getName() + "_wooden_crate", ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get()));
+                createCrateTable(McWoods.byId(j).getString() + "_wooden_crate", ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get()));
             lootTables.put(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get(),
-                createChestTable(McWoods.byId(j).getName() + "_wooden_chest", ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get()));
+                createChestTable(McWoods.byId(j).getString() + "_wooden_chest", ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get()));
         }
         lootTables.put(ECBlockRegistry.LOCKER.get(), createChestTable("locker", ECBlockRegistry.LOCKER.get()));
 
@@ -639,7 +639,7 @@ public class ECLootTables extends BaseLootTableProvider
     {
         LootPool.Builder builder = LootPool.builder().name(name).rolls(ConstantRange.of(1)).addEntry(ItemLootEntry.builder(block).acceptFunction(CopyName.builder(CopyName.Source.BLOCK_ENTITY)).acceptFunction(
             CopyNbt.builder(CopyNbt.Source.BLOCK_ENTITY).replaceOperation("Lock", "BlockEntityTag.Lock").replaceOperation("LootTable", "BlockEntityTag.LootTable").replaceOperation("LootTableSeed",
-                "BlockEntityTag.LootTableSeed")).acceptFunction(SetContents.builder().addLootEntry(DynamicLootEntry.func_216162_a(CrateBlock.CONTENTS))));
+                "BlockEntityTag.LootTableSeed")).acceptFunction(SetContents.func_215920_b().func_216075_a(DynamicLootEntry.func_216162_a(CrateBlock.CONTENTS))));
         return LootTable.builder().addLootPool(builder);
     }
 }

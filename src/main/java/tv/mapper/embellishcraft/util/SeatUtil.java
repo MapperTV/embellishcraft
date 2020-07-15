@@ -64,7 +64,7 @@ public class SeatUtil
             if(player instanceof EntityChair)
             {
                 player.remove();
-                EntityChair.OCCUPIED.remove(player.getPosition());
+                EntityChair.OCCUPIED.remove(player.func_233580_cy_());
             }
         }
     }
