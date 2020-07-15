@@ -42,12 +42,12 @@ public enum WoodsType implements IStringSerializable
     }
 
     @Override
-    public String getName()
+    public String getString()
     {
-        return getName("en_us");
+        return getString("en_us");
     }
 
-    public String getName(String lang)
+    public String getString(String lang)
     {
         return lang.equals("fr_fr") ? this.fr_fr : this.en_us;
     }
@@ -72,7 +72,7 @@ public enum WoodsType implements IStringSerializable
         for(WoodsType wood : values())
         {
             if(wood.getId() == id)
-                return wood.getName();
+                return wood.getString();
         }
         return null;
     }

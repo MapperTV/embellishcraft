@@ -27,4 +27,10 @@ public enum CustomChestType implements IStringSerializable
     {
         return this.name;
     }
+
+    @Override
+    public String getString()
+    {
+        return this.name;
+    }
 }

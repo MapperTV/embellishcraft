@@ -66,4 +66,10 @@ public enum RockType implements IStringSerializable
         }
         return VALUES[id];
     }
+
+    @Override
+    public String getString()
+    {
+        return this.name;
+    }
 }

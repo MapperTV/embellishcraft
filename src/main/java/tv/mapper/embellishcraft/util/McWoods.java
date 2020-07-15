@@ -32,12 +32,6 @@ public enum McWoods implements IStringSerializable
         this.fr_fr = fr_fr;
     }
 
-    @Override
-    public String getName()
-    {
-        return name;
-    }
-
     public String getName(String lang)
     {
         return lang.equals("fr_fr") ? this.fr_fr : this.en_us;
@@ -63,8 +57,14 @@ public enum McWoods implements IStringSerializable
         for(McWoods wood : values())
         {
             if(wood.getId() == id)
-                return wood.getName();
+                return wood.getString();
         }
         return null;
+    }
+
+    @Override
+    public String getString()
+    {
+        return this.name;
     }
 }
