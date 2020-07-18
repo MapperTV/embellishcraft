@@ -56,7 +56,7 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
     private int ticksSinceSync;
 
     private boolean isLocked = false;
-    private UUID id = null;
+    private UUID userID = null;
 
     private LazyOptional<IItemHandlerModifiable> chestHandler;
 
@@ -108,19 +108,19 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         return this.isLocked;
     }
 
-    public void setUUID(UUID id)
+    public void setUUID(UUID userID)
     {
-        this.id = id;
+        this.userID = userID;
     }
 
     public UUID getUUID()
     {
-        return this.id;
+        return this.userID;
     }
 
     public boolean hasUUID()
     {
-        if(this.id != null)
+        if(this.userID != null)
             return true;
         return false;
     }
@@ -128,13 +128,14 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
     public void read(BlockState state, CompoundNBT compound)
     {
         super.read(state, compound);
+
         this.chestContents = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
         if(!this.checkLootAndRead(compound))
-        {
             ItemStackHelper.loadAllItems(compound, this.chestContents);
-        }
 
-        this.id = compound.getUniqueId("id");
+        if(compound.hasUniqueId("user_id"))
+            this.userID = compound.getUniqueId("user_id");
+
         this.isLocked = compound.getBoolean("is_locked");
     }
 
@@ -142,13 +143,12 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
     {
         super.write(compound);
         if(!this.checkLootAndWrite(compound))
-        {
             ItemStackHelper.saveAllItems(compound, this.chestContents);
-        }
-        if(id != null)
-            compound.putUniqueId("id", this.id);
-        compound.putBoolean("is_locked", this.isLocked);
 
+        if(this.hasUUID())
+            compound.putUniqueId("user_id", this.userID);
+
+        compound.putBoolean("is_locked", this.isLocked);
         return compound;
     }
 
