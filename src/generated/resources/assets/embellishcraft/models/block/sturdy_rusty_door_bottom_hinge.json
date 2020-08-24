@@ -1,5 +1,5 @@
 {
-  "parent": "block/door_bottom_rh",
+  "parent": "minecraft:block/door_bottom_rh",
   "textures": {
     "bottom": "embellishcraft:block/sturdy_rusty_door_bottom",
     "top": "embellishcraft:block/sturdy_rusty_door_top"

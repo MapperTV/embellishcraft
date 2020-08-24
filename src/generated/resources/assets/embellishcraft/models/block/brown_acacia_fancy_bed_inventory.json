@@ -3,6 +3,6 @@
   "textures": {
     "bed": "embellishcraft:block/brown_acacia_fancy_bed_head",
     "end": "embellishcraft:block/acacia_fancy_bed_head_end",
-    "under": "block/acacia_planks"
+    "under": "minecraft:block/acacia_planks"
   }
 }

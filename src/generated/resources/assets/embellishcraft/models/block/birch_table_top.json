@@ -1,7 +1,7 @@
 {
   "parent": "embellishcraft:block/table_top",
   "textures": {
-    "material": "block/birch_planks",
-    "particle": "block/birch_planks"
+    "material": "minecraft:block/birch_planks",
+    "particle": "minecraft:block/birch_planks"
   }
 }

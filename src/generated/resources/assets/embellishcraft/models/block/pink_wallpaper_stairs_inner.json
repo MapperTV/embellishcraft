@@ -1,5 +1,5 @@
 {
-  "parent": "block/inner_stairs",
+  "parent": "minecraft:block/inner_stairs",
   "textures": {
     "side": "embellishcraft:block/pink_wallpaper",
     "bottom": "embellishcraft:block/side_wallpaper",

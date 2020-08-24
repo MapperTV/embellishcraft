@@ -1,7 +1,7 @@
 {
   "parent": "embellishcraft:block/chest_right",
   "textures": {
-    "particle": "block/spruce_planks",
+    "particle": "minecraft:block/spruce_planks",
     "front": "embellishcraft:block/spruce_fancy_chest_front_left",
     "side": "embellishcraft:block/spruce_fancy_chest_side",
     "top": "embellishcraft:block/spruce_fancy_chest_top_left",

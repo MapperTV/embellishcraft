@@ -3,6 +3,6 @@
   "textures": {
     "side": "embellishcraft:block/jungle_fancy_table_side",
     "top": "embellishcraft:block/jungle_fancy_table_top",
-    "particle": "block/jungle_planks"
+    "particle": "minecraft:block/jungle_planks"
   }
 }

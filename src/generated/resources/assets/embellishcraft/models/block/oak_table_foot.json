@@ -1,7 +1,7 @@
 {
   "parent": "embellishcraft:block/table_foot",
   "textures": {
-    "material": "block/oak_planks",
-    "particle": "block/oak_planks"
+    "material": "minecraft:block/oak_planks",
+    "particle": "minecraft:block/oak_planks"
   }
 }

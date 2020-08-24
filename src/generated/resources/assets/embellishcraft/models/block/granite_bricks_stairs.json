@@ -1,5 +1,5 @@
 {
-  "parent": "block/stairs",
+  "parent": "minecraft:block/stairs",
   "textures": {
     "side": "embellishcraft:block/granite_bricks",
     "bottom": "embellishcraft:block/granite_bricks",

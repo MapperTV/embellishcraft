@@ -4,7 +4,7 @@
     "foot": "embellishcraft:block/pink_birch_fancy_bed_foot",
     "foot_side": "embellishcraft:block/pink_birch_fancy_bed_foot_side",
     "foot_end": "embellishcraft:block/birch_fancy_bed_foot_end",
-    "under": "block/birch_planks",
-    "particle": "block/birch_planks"
+    "under": "minecraft:block/birch_planks",
+    "particle": "minecraft:block/birch_planks"
   }
 }

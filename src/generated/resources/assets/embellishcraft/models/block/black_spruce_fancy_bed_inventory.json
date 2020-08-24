@@ -3,6 +3,6 @@
   "textures": {
     "bed": "embellishcraft:block/black_spruce_fancy_bed_head",
     "end": "embellishcraft:block/spruce_fancy_bed_head_end",
-    "under": "block/spruce_planks"
+    "under": "minecraft:block/spruce_planks"
   }
 }

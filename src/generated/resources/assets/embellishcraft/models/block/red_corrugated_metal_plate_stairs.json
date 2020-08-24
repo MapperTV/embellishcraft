@@ -1,5 +1,5 @@
 {
-  "parent": "block/stairs",
+  "parent": "minecraft:block/stairs",
   "textures": {
     "side": "embellishcraft:block/red_corrugated_metal_plate",
     "bottom": "embellishcraft:block/red_corrugated_metal_plate",

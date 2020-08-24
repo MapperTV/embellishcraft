@@ -1,5 +1,5 @@
 {
-  "parent": "block/slab_top",
+  "parent": "minecraft:block/slab_top",
   "textures": {
     "side": "embellishcraft:block/weared_large_bricks",
     "bottom": "embellishcraft:block/weared_large_bricks",

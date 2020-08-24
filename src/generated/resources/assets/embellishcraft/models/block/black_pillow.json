@@ -1,7 +1,7 @@
 {
   "parent": "embellishcraft:block/pillow",
   "textures": {
-    "all": "block/black_wool",
-    "particle": "block/black_wool"
+    "all": "minecraft:block/black_wool",
+    "particle": "minecraft:block/black_wool"
   }
 }

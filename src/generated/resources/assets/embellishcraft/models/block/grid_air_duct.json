@@ -1,5 +1,5 @@
 {
-  "parent": "block/orientable_vertical",
+  "parent": "minecraft:block/orientable_vertical",
   "textures": {
     "side": "embellishcraft:block/air_duct",
     "front": "embellishcraft:block/grid_air_duct"

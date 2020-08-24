@@ -4,7 +4,7 @@
     "head": "embellishcraft:block/gray_birch_fancy_bed_head",
     "head_side": "embellishcraft:block/gray_birch_fancy_bed_head_side",
     "head_end": "embellishcraft:block/birch_fancy_bed_head_end",
-    "under": "block/birch_planks",
-    "particle": "block/birch_planks"
+    "under": "minecraft:block/birch_planks",
+    "particle": "minecraft:block/birch_planks"
   }
 }

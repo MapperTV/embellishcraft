@@ -1,5 +1,5 @@
 {
-  "parent": "block/door_bottom",
+  "parent": "minecraft:block/door_bottom",
   "textures": {
     "bottom": "embellishcraft:block/warning_rusty_door_bottom",
     "top": "embellishcraft:block/warning_rusty_door_top"

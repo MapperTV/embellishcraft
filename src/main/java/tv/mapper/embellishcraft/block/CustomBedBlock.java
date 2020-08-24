@@ -50,13 +50,13 @@ public class CustomBedBlock extends BedBlock
             switch(direction1)
             {
                 case NORTH:
-                    return VoxelShapes.or(head_n, field_220181_h);
+                    return VoxelShapes.or(head_n, NORTH_FACING_SHAPE);
                 case SOUTH:
-                    return VoxelShapes.or(head_s, field_220182_i);
+                    return VoxelShapes.or(head_s, SOUTH_FACING_SHAPE);
                 case WEST:
-                    return VoxelShapes.or(head_w, field_220183_j);
+                    return VoxelShapes.or(head_w, WEST_FACING_SHAPE);
                 default:
-                    return VoxelShapes.or(head_e, field_220184_k);
+                    return VoxelShapes.or(head_e, EAST_FACING_SHAPE);
             }
         }
         else
@@ -64,13 +64,13 @@ public class CustomBedBlock extends BedBlock
             switch(direction1)
             {
                 case NORTH:
-                    return VoxelShapes.or(foot_n, field_220181_h);
+                    return VoxelShapes.or(foot_n, NORTH_FACING_SHAPE);
                 case SOUTH:
-                    return VoxelShapes.or(foot_s, field_220182_i);
+                    return VoxelShapes.or(foot_s, SOUTH_FACING_SHAPE);
                 case WEST:
-                    return VoxelShapes.or(foot_w, field_220183_j);
+                    return VoxelShapes.or(foot_w, WEST_FACING_SHAPE);
                 default:
-                    return VoxelShapes.or(foot_e, field_220184_k);
+                    return VoxelShapes.or(foot_e, EAST_FACING_SHAPE);
             }
         }
     }

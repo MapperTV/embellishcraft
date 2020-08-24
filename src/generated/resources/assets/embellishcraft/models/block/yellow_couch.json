@@ -1,9 +1,9 @@
 {
   "parent": "embellishcraft:block/couch",
   "textures": {
-    "fabric": "block/yellow_wool",
-    "base": "block/oak_planks",
-    "back": "block/stripped_oak_log",
-    "particle": "block/yellow_wool"
+    "fabric": "minecraft:block/yellow_wool",
+    "base": "minecraft:block/oak_planks",
+    "back": "minecraft:block/stripped_oak_log",
+    "particle": "minecraft:block/yellow_wool"
   }
 }

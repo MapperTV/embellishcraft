@@ -1,7 +1,7 @@
 {
   "parent": "embellishcraft:block/pillow",
   "textures": {
-    "all": "block/yellow_wool",
-    "particle": "block/yellow_wool"
+    "all": "minecraft:block/yellow_wool",
+    "particle": "minecraft:block/yellow_wool"
   }
 }

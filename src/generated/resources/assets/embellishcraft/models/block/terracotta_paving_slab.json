@@ -1,5 +1,5 @@
 {
-  "parent": "block/slab",
+  "parent": "minecraft:block/slab",
   "textures": {
     "side": "embellishcraft:block/terracotta_paving",
     "bottom": "embellishcraft:block/terracotta_paving",

@@ -3,6 +3,6 @@
   "textures": {
     "side": "embellishcraft:block/dark_oak_fancy_table_side",
     "top": "embellishcraft:block/dark_oak_fancy_table_top",
-    "particle": "block/dark_oak_planks"
+    "particle": "minecraft:block/dark_oak_planks"
   }
 }

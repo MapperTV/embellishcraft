@@ -1,5 +1,5 @@
 {
-  "parent": "block/slab",
+  "parent": "minecraft:block/slab",
   "textures": {
     "side": "embellishcraft:block/lime_corrugated_metal_plate",
     "bottom": "embellishcraft:block/lime_corrugated_metal_plate",

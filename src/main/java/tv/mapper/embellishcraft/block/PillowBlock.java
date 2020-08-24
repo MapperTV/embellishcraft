@@ -104,7 +104,7 @@ public class PillowBlock extends BedBlock
             // }
             // }
 
-            if(!func_235330_a_(worldIn))
+            if(!doesBedWork(worldIn))
             {
                 worldIn.removeBlock(pos, false);
                 // BlockPos blockpos = pos.offset(state.get(HORIZONTAL_FACING).getOpposite());
@@ -113,7 +113,7 @@ public class PillowBlock extends BedBlock
                 // worldIn.removeBlock(blockpos, false);
                 // }
 
-                worldIn.func_230546_a_((Entity)null, DamageSource.func_233546_a_(), (IExplosionContext)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
+                worldIn.createExplosion((Entity)null, DamageSource.func_233546_a_(), (IExplosionContext)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
                     Explosion.Mode.DESTROY);
                 return ActionResultType.SUCCESS;
             }

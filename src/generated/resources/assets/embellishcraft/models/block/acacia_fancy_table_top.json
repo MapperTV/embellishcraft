@@ -3,6 +3,6 @@
   "textures": {
     "side": "embellishcraft:block/acacia_fancy_table_side",
     "top": "embellishcraft:block/acacia_fancy_table_top",
-    "particle": "block/acacia_planks"
+    "particle": "minecraft:block/acacia_planks"
   }
 }

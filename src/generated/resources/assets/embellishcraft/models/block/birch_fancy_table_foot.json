@@ -3,6 +3,6 @@
   "textures": {
     "side": "embellishcraft:block/birch_fancy_table_side",
     "top": "embellishcraft:block/birch_fancy_table_top",
-    "particle": "block/birch_planks"
+    "particle": "minecraft:block/birch_planks"
   }
 }

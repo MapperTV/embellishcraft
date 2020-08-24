@@ -1,7 +1,7 @@
 {
   "parent": "embellishcraft:block/couch_right",
   "textures": {
-    "fabric": "block/black_wool",
-    "particle": "block/black_wool"
+    "fabric": "minecraft:block/black_wool",
+    "particle": "minecraft:block/black_wool"
   }
 }

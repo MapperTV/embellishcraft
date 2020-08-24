@@ -1,5 +1,5 @@
 {
-  "parent": "block/stairs",
+  "parent": "minecraft:block/stairs",
   "textures": {
     "side": "embellishcraft:block/rusty_plate",
     "bottom": "embellishcraft:block/rusty_plate",

@@ -1,7 +1,7 @@
 {
   "parent": "embellishcraft:block/chest",
   "textures": {
-    "particle": "block/jungle_planks",
+    "particle": "minecraft:block/jungle_planks",
     "front": "embellishcraft:block/jungle_fancy_chest_front",
     "side": "embellishcraft:block/jungle_fancy_chest_side",
     "top": "embellishcraft:block/jungle_fancy_chest_top",

@@ -4,7 +4,7 @@
     "foot": "embellishcraft:block/orange_dark_oak_fancy_bed_foot",
     "foot_side": "embellishcraft:block/orange_dark_oak_fancy_bed_foot_side",
     "foot_end": "embellishcraft:block/dark_oak_fancy_bed_foot_end",
-    "under": "block/dark_oak_planks",
-    "particle": "block/dark_oak_planks"
+    "under": "minecraft:block/dark_oak_planks",
+    "particle": "minecraft:block/dark_oak_planks"
   }
 }

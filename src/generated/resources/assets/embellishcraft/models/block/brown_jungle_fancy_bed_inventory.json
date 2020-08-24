@@ -3,6 +3,6 @@
   "textures": {
     "bed": "embellishcraft:block/brown_jungle_fancy_bed_head",
     "end": "embellishcraft:block/jungle_fancy_bed_head_end",
-    "under": "block/jungle_planks"
+    "under": "minecraft:block/jungle_planks"
   }
 }

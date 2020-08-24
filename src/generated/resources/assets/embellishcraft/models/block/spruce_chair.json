@@ -1,7 +1,7 @@
 {
   "parent": "embellishcraft:block/chair",
   "textures": {
-    "material": "block/spruce_planks",
-    "particle": "block/spruce_planks"
+    "material": "minecraft:block/spruce_planks",
+    "particle": "minecraft:block/spruce_planks"
   }
 }

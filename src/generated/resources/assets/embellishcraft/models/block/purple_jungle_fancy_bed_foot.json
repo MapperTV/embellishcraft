@@ -4,7 +4,7 @@
     "foot": "embellishcraft:block/purple_jungle_fancy_bed_foot",
     "foot_side": "embellishcraft:block/purple_jungle_fancy_bed_foot_side",
     "foot_end": "embellishcraft:block/jungle_fancy_bed_foot_end",
-    "under": "block/jungle_planks",
-    "particle": "block/jungle_planks"
+    "under": "minecraft:block/jungle_planks",
+    "particle": "minecraft:block/jungle_planks"
   }
 }

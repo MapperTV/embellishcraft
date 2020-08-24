@@ -4,7 +4,7 @@
     "foot": "embellishcraft:block/pink_oak_fancy_bed_foot",
     "foot_side": "embellishcraft:block/pink_oak_fancy_bed_foot_side",
     "foot_end": "embellishcraft:block/oak_fancy_bed_foot_end",
-    "under": "block/oak_planks",
-    "particle": "block/oak_planks"
+    "under": "minecraft:block/oak_planks",
+    "particle": "minecraft:block/oak_planks"
   }
 }

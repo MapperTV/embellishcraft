@@ -1,7 +1,7 @@
 {
   "parent": "embellishcraft:block/chest_left",
   "textures": {
-    "particle": "block/acacia_planks",
+    "particle": "minecraft:block/acacia_planks",
     "front": "embellishcraft:block/acacia_fancy_chest_front_right",
     "side": "embellishcraft:block/acacia_fancy_chest_side",
     "top": "embellishcraft:block/acacia_fancy_chest_top_right",

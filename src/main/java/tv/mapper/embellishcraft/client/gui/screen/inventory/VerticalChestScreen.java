@@ -27,13 +27,14 @@ public class VerticalChestScreen extends ContainerScreen<VerticalChestContainer>
     {
         this.renderBackground(stack);
         super.render(stack, p_render_1_, p_render_2_, p_render_3_);
-        this.func_230459_a_(stack, p_render_1_, p_render_2_);
+        this.renderHoveredTooltip(stack, p_render_1_, p_render_2_);
     }
 
     /**
      * Draw the foreground layer for the GuiContainer (everything in front of the items)
      */
-    protected void func_230451_b_(MatrixStack stack, int mouseX, int mouseY)
+    @Override
+    protected void drawGuiContainerForegroundLayer(MatrixStack stack, int mouseX, int mouseY)
     {
         this.font.drawString(stack, this.title.getString(), 8.0F, 6.0F, 4210752);
         this.font.drawString(stack, this.playerInventory.getDisplayName().getString(), 8.0F, (float)(this.ySize - 96 + 2), 4210752);
@@ -42,8 +43,9 @@ public class VerticalChestScreen extends ContainerScreen<VerticalChestContainer>
     /**
      * Draws the background layer of this container (behind the items).
      */
+    @Override
     @SuppressWarnings("deprecation")
-    protected void func_230450_a_(MatrixStack stack, float partialTicks, int mouseX, int mouseY)
+    protected void drawGuiContainerBackgroundLayer(MatrixStack stack, float partialTicks, int mouseX, int mouseY)
     {
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
         this.minecraft.getTextureManager().bindTexture(CHEST_GUI_TEXTURE);

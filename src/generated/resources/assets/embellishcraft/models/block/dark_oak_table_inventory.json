@@ -1,6 +1,6 @@
 {
   "parent": "embellishcraft:block/table_inventory",
   "textures": {
-    "material": "block/dark_oak_planks"
+    "material": "minecraft:block/dark_oak_planks"
   }
 }

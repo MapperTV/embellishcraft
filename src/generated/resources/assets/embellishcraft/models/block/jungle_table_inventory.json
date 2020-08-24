@@ -1,6 +1,6 @@
 {
   "parent": "embellishcraft:block/table_inventory",
   "textures": {
-    "material": "block/jungle_planks"
+    "material": "minecraft:block/jungle_planks"
   }
 }
