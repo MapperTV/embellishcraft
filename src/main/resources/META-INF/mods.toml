@@ -1,13 +1,14 @@
 modLoader="javafml"
 loaderVersion="[32,)"
-issueTrackerURL="https://github.com/KillerMapper/embellishcraft/issues"
-logoFile="embellishcraft_logo.png"
+license="MIT License"
+issueTrackerURL="https://github.com/MapperTV/embellishcraft/issues"
 [[mods]]
 modId="embellishcraft"
 version="${file.jarVersion}"
 displayName="EmbellishCraft"
 #updateJSONURL="http://myurl.me/"
 displayURL="http://mapper.tv/embellishcraft/"
+logoFile="embellishcraft_logo.png"
 credits="The Forge team and community for the help and resources."
 authors="Mapper"
 description='''EmbellishCraft is a mod that adds various decorative elements to Minecraft.'''
