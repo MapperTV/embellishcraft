@@ -1165,11 +1165,10 @@ public class ECBlockRegistry
             () -> new CouchBlock(Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.CLOTH), ToolType.PICKAXE)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
-    public static final Map<DyeColor, RegistryObject<LampBlock>> TABLE_LAMP_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getString() + "_table_lamp",
-        () -> new LampBlock(Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.CLOTH).setLightLevel((state) ->
-        {
-            return 15;
-        }), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<LampBlock>> TABLE_LAMP_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getString() + "_table_lamp",
+            () -> new LampBlock(Block.Properties.create(Material.WOOL, type.getMapColor()).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.CLOTH).setLightLevel((state) -> 15), ToolType.PICKAXE)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final RegistryObject<PlateBlock> PLATE = BLOCKS.register("plate",
         () -> new PlateBlock(Block.Properties.create(Material.GLASS, MaterialColor.QUARTZ).hardnessAndResistance(0.25F).sound(SoundType.GLASS)));
