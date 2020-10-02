@@ -36,8 +36,8 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.Explosion;
+import net.minecraft.world.ExplosionContext;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IExplosionContext;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
@@ -94,26 +94,10 @@ public class PillowBlock extends BedBlock
         }
         else
         {
-            // if(state.get(PART) != BedPart.HEAD)
-            // {
-            // pos = pos.offset(state.get(HORIZONTAL_FACING));
-            // state = worldIn.getBlockState(pos);
-            // if(!state.isIn(this))
-            // {
-            // return ActionResultType.CONSUME;
-            // }
-            // }
-
             if(!doesBedWork(worldIn))
             {
                 worldIn.removeBlock(pos, false);
-                // BlockPos blockpos = pos.offset(state.get(HORIZONTAL_FACING).getOpposite());
-                // if(worldIn.getBlockState(blockpos).isIn(this))
-                // {
-                // worldIn.removeBlock(blockpos, false);
-                // }
-
-                worldIn.createExplosion((Entity)null, DamageSource.func_233546_a_(), (IExplosionContext)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
+                worldIn.createExplosion((Entity)null, DamageSource.func_233546_a_(), (ExplosionContext)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
                     Explosion.Mode.DESTROY);
                 return ActionResultType.SUCCESS;
             }
@@ -154,61 +138,6 @@ public class PillowBlock extends BedBlock
             return true;
         }
     }
-    //
-    // @Override
-    // public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
-    // {
-    // if(worldIn.isRemote)
-    // {
-    // return ActionResultType.SUCCESS;
-    // }
-    //
-    // if(state.get(WATERLOGGED))
-    // {
-    // player.sendStatusMessage(new TranslationTextComponent("embellishcraft.message.bed.underwater"), true);
-    // return ActionResultType.SUCCESS;
-    // }
-    // else
-    // {
-    //
-    // IForgeDimension.SleepResult sleepResult = worldIn.dimension.canSleepAt(player, pos);
-    //
-    // if(sleepResult != IForgeDimension.SleepResult.BED_EXPLODES)
-    // {
-    // if(sleepResult == IForgeDimension.SleepResult.DENY)
-    // return ActionResultType.SUCCESS;
-    // if(state.get(OCCUPIED))
-    // {
-    // player.sendStatusMessage(new TranslationTextComponent("block.minecraft.bed.occupied"), true);
-    // return ActionResultType.SUCCESS;
-    // }
-    // else
-    // {
-    // player.trySleep(pos).ifLeft((p_220173_1_) ->
-    // {
-    // if(p_220173_1_ != null)
-    // {
-    // player.sendStatusMessage(p_220173_1_.getMessage(), true);
-    // }
-    //
-    // });
-    // return ActionResultType.SUCCESS;
-    // }
-    // }
-    // else
-    // {
-    // worldIn.removeBlock(pos, false);
-    // worldIn.createExplosion((Entity)null, DamageSource.netherBedExplosion(), (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true, Explosion.Mode.DESTROY);
-    // return ActionResultType.SUCCESS;
-    // }
-    // }
-    // }
-
-    // @Override
-    // public BlockRenderLayer getRenderLayer()
-    // {
-    // return BlockRenderLayer.SOLID;
-    // }
 
     @Override
     public BlockRenderType getRenderType(BlockState state)
