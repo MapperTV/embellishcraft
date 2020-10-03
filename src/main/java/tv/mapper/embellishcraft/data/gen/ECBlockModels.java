@@ -5,7 +5,7 @@ import java.util.Arrays;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.ExistingFileHelper;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.mapperbase.MapperBase;

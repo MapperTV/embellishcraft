@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
-import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.mapperbase.data.gen.BaseItemModels;
 

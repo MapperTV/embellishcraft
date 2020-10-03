@@ -7,6 +7,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.item.DyeColor;
 import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.data.ECTags;
 import tv.mapper.embellishcraft.util.McWoods;
@@ -16,9 +18,9 @@ import tv.mapper.mapperbase.data.BaseTags;
 public class ECBlockTags extends BlockTagsProvider
 {
 
-    public ECBlockTags(DataGenerator generatorIn)
+    public ECBlockTags(DataGenerator generatorIn, ExistingFileHelper existingFileHelper)
     {
-        super(generatorIn);
+        super(generatorIn, ECConstants.MODID, existingFileHelper);
     }
 
     public void registerTags()

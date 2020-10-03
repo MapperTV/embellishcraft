@@ -5,7 +5,7 @@ import java.util.Collections;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourcePackType;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.ExistingFileHelper;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
@@ -43,10 +43,10 @@ public class ECGenerators
         generator.addProvider(new ECBlockModels(generator, ECConstants.MODID, helper));
         generator.addProvider(new ECItemModels(generator, ECConstants.MODID, helper));
 
-        ECBlockTags blockTags = new ECBlockTags(generator);
+        ECBlockTags blockTags = new ECBlockTags(generator, helper);
 
         generator.addProvider(blockTags);
-        generator.addProvider(new ECItemTags(generator, blockTags));
+        generator.addProvider(new ECItemTags(generator, blockTags, helper));
 
         generator.addProvider(new ECLang(generator, ECConstants.MODID, "en_us"));
         generator.addProvider(new ECLang(generator, ECConstants.MODID, "fr_fr"));

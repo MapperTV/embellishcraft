@@ -5,14 +5,16 @@ import net.minecraft.data.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.data.ECTags;
 import tv.mapper.mapperbase.data.BaseTags;
 
 public class ECItemTags extends ItemTagsProvider
 {
-    public ECItemTags(DataGenerator generatorIn, ECBlockTags provider)
+    public ECItemTags(DataGenerator generatorIn, ECBlockTags provider, ExistingFileHelper existingFileHelper)
     {
-        super(generatorIn, provider);
+        super(generatorIn, provider, ECConstants.MODID, existingFileHelper);
     }
 
     public void registerTags()
