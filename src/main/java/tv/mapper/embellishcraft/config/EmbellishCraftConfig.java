@@ -58,12 +58,12 @@ public class EmbellishCraftConfig
         public static ForgeConfigSpec.IntValue LARVIKITE_MIN_HEIGHT;
         public static ForgeConfigSpec.IntValue LARVIKITE_MAX_HEIGHT;
 
-        public static ForgeConfigSpec.BooleanValue BASALT_LIST_MODE;
-        public static ForgeConfigSpec.BooleanValue SLATE_LIST_MODE;
-        public static ForgeConfigSpec.BooleanValue MARBLE_LIST_MODE;
-        public static ForgeConfigSpec.BooleanValue GNEISS_LIST_MODE;
-        public static ForgeConfigSpec.BooleanValue JADE_LIST_MODE;
-        public static ForgeConfigSpec.BooleanValue LARVIKITE_LIST_MODE;
+        public static ForgeConfigSpec.BooleanValue BASALT_WHITELIST_MODE;
+        public static ForgeConfigSpec.BooleanValue SLATE_WHITELIST_MODE;
+        public static ForgeConfigSpec.BooleanValue MARBLE_WHITELIST_MODE;
+        public static ForgeConfigSpec.BooleanValue GNEISS_WHITELIST_MODE;
+        public static ForgeConfigSpec.BooleanValue JADE_WHITELIST_MODE;
+        public static ForgeConfigSpec.BooleanValue LARVIKITE_WHITELIST_MODE;
         public static ConfigValue<ArrayList<String>> BASALT_BIOME_LIST;
         public static ConfigValue<ArrayList<String>> SLATE_BIOME_LIST;
         public static ConfigValue<ArrayList<String>> MARBLE_BIOME_LIST;
@@ -136,17 +136,17 @@ public class EmbellishCraftConfig
                 "Biome Blacklist: list here the biomes you do not want a rock to be generated in (syntax: \"modid:biome\". Examples: \"minecraft:plains\", \"biomesoplenty:meadow\"...). Note: you can replace the default values, rocks only generate where stone is. They never generate in the Nether or the End.").push(
                     "blacklist");
 
-            BASALT_LIST_MODE = COMMON_BUILDER.comment("Set to true to switch basalt blacklist to whitelist mode [true / false]").define("basaltWhitelist", false);
+            BASALT_WHITELIST_MODE = COMMON_BUILDER.comment("Set to true to switch basalt blacklist to whitelist mode [true / false]").define("basaltWhitelist", false);
             BASALT_BIOME_LIST = COMMON_BUILDER.comment("List of blacklisted biomes for basalt generation").define("basaltBiomeBlacklist", default_biomes);
-            SLATE_LIST_MODE = COMMON_BUILDER.comment("Set to true to switch slate blacklist to whitelist mode [true / false]").define("slateWhitelist", false);
+            SLATE_WHITELIST_MODE = COMMON_BUILDER.comment("Set to true to switch slate blacklist to whitelist mode [true / false]").define("slateWhitelist", false);
             SLATE_BIOME_LIST = COMMON_BUILDER.comment("List of blacklisted biomes for slate generation").define("slateBiomeBlacklist", default_biomes);
-            MARBLE_LIST_MODE = COMMON_BUILDER.comment("Set to true to switch marble blacklist to whitelist mode [true / false]").define("marbleWhitelist", false);
+            MARBLE_WHITELIST_MODE = COMMON_BUILDER.comment("Set to true to switch marble blacklist to whitelist mode [true / false]").define("marbleWhitelist", false);
             MARBLE_BIOME_LIST = COMMON_BUILDER.comment("List of blacklisted biomes for marble generation").define("marbleBiomeBlacklist", default_biomes);
-            GNEISS_LIST_MODE = COMMON_BUILDER.comment("Set to true to switch gneiss blacklist to whitelist mode [true / false]").define("gneissWhitelist", false);
+            GNEISS_WHITELIST_MODE = COMMON_BUILDER.comment("Set to true to switch gneiss blacklist to whitelist mode [true / false]").define("gneissWhitelist", false);
             GNEISS_BIOME_LIST = COMMON_BUILDER.comment("List of blacklisted biomes for gneiss generation").define("gneissBiomeBlacklist", default_biomes);
-            JADE_LIST_MODE = COMMON_BUILDER.comment("Set to true to switch jade blacklist to whitelist mode [true / false]").define("jadeWhitelist", false);
+            JADE_WHITELIST_MODE = COMMON_BUILDER.comment("Set to true to switch jade blacklist to whitelist mode [true / false]").define("jadeWhitelist", false);
             JADE_BIOME_LIST = COMMON_BUILDER.comment("List of blacklisted biomes for jade generation").define("jadeBiomeBlacklist", default_biomes);
-            LARVIKITE_LIST_MODE = COMMON_BUILDER.comment("Set to true to switch larvikite blacklist to whitelist mode [true / false]").define("larvikiteWhitelist", false);
+            LARVIKITE_WHITELIST_MODE = COMMON_BUILDER.comment("Set to true to switch larvikite blacklist to whitelist mode [true / false]").define("larvikiteWhitelist", false);
             LARVIKITE_BIOME_LIST = COMMON_BUILDER.comment("List of blacklisted biomes for larvikite generation").define("larvikiteBiomeBlacklist", default_biomes);
 
             COMMON_BUILDER.pop();

@@ -3,6 +3,7 @@ package tv.mapper.embellishcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -19,6 +20,7 @@ import tv.mapper.embellishcraft.network.ECNetwork;
 import tv.mapper.embellishcraft.proxy.ClientProxy;
 import tv.mapper.embellishcraft.proxy.IProxy;
 import tv.mapper.embellishcraft.proxy.ServerProxy;
+import tv.mapper.embellishcraft.util.ConfigChecker;
 import tv.mapper.embellishcraft.world.OreGenerator;
 
 @Mod(ECConstants.MODID)
@@ -50,7 +52,9 @@ public class EmbellishCraft
         proxy.setup(event);
         ECNetwork.registerNetworkPackets();
 
-        OreGenerator.setupOregen();
+        ConfigChecker.checkConfig();
+        MinecraftForge.EVENT_BUS.register(new OreGenerator());
+
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
