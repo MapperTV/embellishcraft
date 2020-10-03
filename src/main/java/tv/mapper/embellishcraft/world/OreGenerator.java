@@ -51,10 +51,10 @@ public class OreGenerator
 
         if(generate)
         {
-            if(oreGen == null)
-                oreGen = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(
-                    RockType.BASALT).get().getDefaultState(), CommonConfig.BASALT_SIZE.get())).withPlacement(
-                        Placement.field_242907_l.configure(new TopSolidRangeConfig(CommonConfig.BASALT_MIN_HEIGHT.get(), 0, CommonConfig.BASALT_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
+            oreGen = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(RockType.BASALT).get().getDefaultState(), CommonConfig.BASALT_SIZE.get())).withPlacement(
+                    Placement.field_242907_l.configure(
+                        new TopSolidRangeConfig(CommonConfig.BASALT_MIN_HEIGHT.get(), CommonConfig.BASALT_MIN_HEIGHT.get(), CommonConfig.BASALT_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
                             CommonConfig.BASALT_CHANCE.get());
 
             event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreGen);
@@ -86,10 +86,10 @@ public class OreGenerator
 
         if(generate)
         {
-            if(oreGen == null)
-                oreGen = Feature.ORE.withConfiguration(
-                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(RockType.SLATE).get().getDefaultState(), CommonConfig.SLATE_SIZE.get())).withPlacement(
-                        Placement.field_242907_l.configure(new TopSolidRangeConfig(CommonConfig.SLATE_MIN_HEIGHT.get(), 0, CommonConfig.SLATE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
+            oreGen = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(RockType.SLATE).get().getDefaultState(), CommonConfig.SLATE_SIZE.get())).withPlacement(
+                    Placement.field_242907_l.configure(
+                        new TopSolidRangeConfig(CommonConfig.SLATE_MIN_HEIGHT.get(), CommonConfig.SLATE_MIN_HEIGHT.get(), CommonConfig.SLATE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
                             CommonConfig.SLATE_CHANCE.get());
 
             event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreGen);
@@ -121,10 +121,10 @@ public class OreGenerator
 
         if(generate)
         {
-            if(oreGen == null)
-                oreGen = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(
-                    RockType.MARBLE).get().getDefaultState(), CommonConfig.MARBLE_SIZE.get())).withPlacement(
-                        Placement.field_242907_l.configure(new TopSolidRangeConfig(CommonConfig.MARBLE_MIN_HEIGHT.get(), 0, CommonConfig.MARBLE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
+            oreGen = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(RockType.MARBLE).get().getDefaultState(), CommonConfig.MARBLE_SIZE.get())).withPlacement(
+                    Placement.field_242907_l.configure(
+                        new TopSolidRangeConfig(CommonConfig.MARBLE_MIN_HEIGHT.get(), CommonConfig.MARBLE_MIN_HEIGHT.get(), CommonConfig.MARBLE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
                             CommonConfig.MARBLE_CHANCE.get());
 
             event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreGen);
@@ -156,10 +156,10 @@ public class OreGenerator
 
         if(generate)
         {
-            if(oreGen == null)
-                oreGen = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(
-                    RockType.GNEISS).get().getDefaultState(), CommonConfig.GNEISS_SIZE.get())).withPlacement(
-                        Placement.field_242907_l.configure(new TopSolidRangeConfig(CommonConfig.GNEISS_MIN_HEIGHT.get(), 0, CommonConfig.GNEISS_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
+            oreGen = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(RockType.GNEISS).get().getDefaultState(), CommonConfig.GNEISS_SIZE.get())).withPlacement(
+                    Placement.field_242907_l.configure(
+                        new TopSolidRangeConfig(CommonConfig.GNEISS_MIN_HEIGHT.get(), CommonConfig.GNEISS_MIN_HEIGHT.get(), CommonConfig.GNEISS_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
                             CommonConfig.GNEISS_CHANCE.get());
 
             event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreGen);
@@ -191,10 +191,10 @@ public class OreGenerator
 
         if(generate)
         {
-            if(oreGen == null)
-                oreGen = Feature.ORE.withConfiguration(
-                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(RockType.JADE).get().getDefaultState(), CommonConfig.JADE_SIZE.get())).withPlacement(
-                        Placement.field_242907_l.configure(new TopSolidRangeConfig(CommonConfig.JADE_MIN_HEIGHT.get(), 0, CommonConfig.JADE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
+            oreGen = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(RockType.JADE).get().getDefaultState(), CommonConfig.JADE_SIZE.get())).withPlacement(
+                    Placement.field_242907_l.configure(
+                        new TopSolidRangeConfig(CommonConfig.JADE_MIN_HEIGHT.get(), CommonConfig.JADE_MIN_HEIGHT.get(), CommonConfig.JADE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
                             CommonConfig.JADE_CHANCE.get());
 
             event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreGen);
@@ -229,8 +229,9 @@ public class OreGenerator
             if(oreGen == null)
                 oreGen = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(
                     RockType.LARVIKITE).get().getDefaultState(), CommonConfig.LARVIKITE_SIZE.get())).withPlacement(
-                        Placement.field_242907_l.configure(new TopSolidRangeConfig(CommonConfig.LARVIKITE_MIN_HEIGHT.get(), 0, CommonConfig.LARVIKITE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
-                            CommonConfig.LARVIKITE_CHANCE.get());
+                        Placement.field_242907_l.configure(
+                            new TopSolidRangeConfig(CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
+                                CommonConfig.LARVIKITE_CHANCE.get());
 
             event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreGen);
         }
