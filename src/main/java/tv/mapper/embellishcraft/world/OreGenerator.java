@@ -226,12 +226,11 @@ public class OreGenerator
 
         if(generate)
         {
-            if(oreGen == null)
-                oreGen = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(
-                    RockType.LARVIKITE).get().getDefaultState(), CommonConfig.LARVIKITE_SIZE.get())).withPlacement(
-                        Placement.field_242907_l.configure(
-                            new TopSolidRangeConfig(CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
-                                CommonConfig.LARVIKITE_CHANCE.get());
+            oreGen = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, ECBlockRegistry.ROCK_BLOCKS.get(
+                RockType.LARVIKITE).get().getDefaultState(), CommonConfig.LARVIKITE_SIZE.get())).withPlacement(
+                    Placement.field_242907_l.configure(
+                        new TopSolidRangeConfig(CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MAX_HEIGHT.get()))).func_242728_a().func_242731_b(
+                            CommonConfig.LARVIKITE_CHANCE.get());
 
             event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreGen);
         }
