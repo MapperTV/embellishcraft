@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:rusty_wall_ladder",
+    "embellishcraft:steel_wall_ladder",
+    "embellishcraft:rusty_rungs",
+    "embellishcraft:steel_rungs"
+  ]
+}

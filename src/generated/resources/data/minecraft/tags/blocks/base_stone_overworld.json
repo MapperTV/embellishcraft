@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "embellishcraft:basalt",
+    "embellishcraft:slate",
+    "embellishcraft:marble",
+    "embellishcraft:gneiss",
+    "embellishcraft:jade",
+    "embellishcraft:larvikite"
+  ]
+}

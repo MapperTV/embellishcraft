@@ -29,6 +29,7 @@ public class ECBlockTags extends BlockTagsProvider
         {
             // Rocks
             this.getOrCreateBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get());
+            this.getOrCreateBuilder(BlockTags.BASE_STONE_OVERWORLD).add(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get());
             this.getOrCreateBuilder(BlockTags.STAIRS).add(ECBlockRegistry.ROCK_STAIRS.get(RockType.byId(j)).get());
             this.getOrCreateBuilder(BlockTags.SLABS).add(ECBlockRegistry.ROCK_SLABS.get(RockType.byId(j)).get());
             this.getOrCreateBuilder(BlockTags.WALLS).add(ECBlockRegistry.ROCK_WALLS.get(RockType.byId(j)).get());
@@ -201,6 +202,7 @@ public class ECBlockTags extends BlockTagsProvider
             this.getOrCreateBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(i)).get());
             this.getOrCreateBuilder(BlockTags.FENCES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(i)).get());
             this.getOrCreateBuilder(Tags.Blocks.FENCE_GATES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(i)).get());
+            this.getOrCreateBuilder(BlockTags.FENCE_GATES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(i)).get());
             this.getOrCreateBuilder(Tags.Blocks.FENCES).add(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(i)).get());
 
             this.getOrCreateBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
@@ -220,6 +222,8 @@ public class ECBlockTags extends BlockTagsProvider
         this.getOrCreateBuilder(BlockTags.WALLS).add(ECBlockRegistry.DARK_METAL_FLOOR_WALL.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_WALL.get(), ECBlockRegistry.RUSTY_PLATE_WALL.get());
         this.getOrCreateBuilder(BaseTags.ForgeBlocks.PRESSURE_PLATES).add(ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get(),
             ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE.get());
+
+        this.getOrCreateBuilder(BlockTags.CLIMBABLE).add(ECBlockRegistry.RUSTY_WALL_LADDER.get(), ECBlockRegistry.STEEL_WALL_LADDER.get(), ECBlockRegistry.RUSTY_RUNGS.get(), ECBlockRegistry.STEEL_RUNGS.get());
 
         // Wallpapers
         this.getOrCreateBuilder(BlockTags.STAIRS).add(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get(), ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS.get(), ECBlockRegistry.BEIGE_WALLPAPER_STAIRS.get(),
