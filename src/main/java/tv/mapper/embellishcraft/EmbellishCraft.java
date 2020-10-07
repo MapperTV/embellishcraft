@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.config.ECClientConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
 import tv.mapper.embellishcraft.network.ECNetwork;
@@ -22,6 +23,7 @@ import tv.mapper.embellishcraft.proxy.IProxy;
 import tv.mapper.embellishcraft.proxy.ServerProxy;
 import tv.mapper.embellishcraft.util.ConfigChecker;
 import tv.mapper.embellishcraft.world.OreGenerator;
+import tv.mapper.mapperbase.config.BaseOreGenConfig.CommonConfig;
 
 @Mod(ECConstants.MODID)
 public class EmbellishCraft
@@ -31,6 +33,7 @@ public class EmbellishCraft
 
     public EmbellishCraft()
     {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ECClientConfig.CLIENT_CONFIG);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EmbellishCraftConfig.COMMON_CONFIG);
 
         ECBlockRegistry.init();
@@ -40,6 +43,8 @@ public class EmbellishCraft
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::serverSetup);
+
+        MinecraftForge.EVENT_BUS.register(new OreGenerator());
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -49,12 +54,13 @@ public class EmbellishCraft
         if(ModList.get().isLoaded("embellishcraft-bop"))
             LOGGER.info("EmbellishCraft: BoP addon detected.");
 
+        if(!CommonConfig.BITUMEN_GENERATION.get())
+            LOGGER.info("Worldgen is disabled by config.");
+        else
+            ConfigChecker.checkConfig();
+
         proxy.setup(event);
         ECNetwork.registerNetworkPackets();
-
-        ConfigChecker.checkConfig();
-        MinecraftForge.EVENT_BUS.register(new OreGenerator());
-
     }
 
     private void clientSetup(final FMLClientSetupEvent event)

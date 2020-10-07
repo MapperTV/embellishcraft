@@ -22,6 +22,8 @@ public class EmbellishCraftConfig
 
     public static class CommonConfig
     {
+        public static ForgeConfigSpec.BooleanValue ENABLE_WORLDGEN;
+        
         public static ForgeConfigSpec.BooleanValue BASALT_GENERATION;
         public static ForgeConfigSpec.IntValue BASALT_CHANCE;
         public static ForgeConfigSpec.IntValue BASALT_SIZE;
@@ -89,6 +91,11 @@ public class EmbellishCraftConfig
             default_biomes.add("minecraft:small_end_islands");
             default_biomes.add("minecraft:the_void");
 
+            COMMON_BUILDER.comment("Global Worldgen Settings").push("worldgen");
+            
+            ENABLE_WORLDGEN = COMMON_BUILDER.comment("Set this to false to disable all worldgen [true / false, default: true]").define("enableWorldgen", true);
+
+            COMMON_BUILDER.pop();
             COMMON_BUILDER.comment("Basalt Generation").push("basalt");
 
             BASALT_GENERATION = COMMON_BUILDER.comment("Generate basalt in the world [true / false]").define("basaltGeneration", true);
