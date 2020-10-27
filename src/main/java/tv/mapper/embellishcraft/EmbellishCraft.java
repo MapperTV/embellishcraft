@@ -3,7 +3,6 @@ package tv.mapper.embellishcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -16,14 +15,16 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.config.ECClientConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
+import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;
+import tv.mapper.embellishcraft.inventory.container.ModContainers;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
 import tv.mapper.embellishcraft.network.ECNetwork;
 import tv.mapper.embellishcraft.proxy.ClientProxy;
 import tv.mapper.embellishcraft.proxy.IProxy;
 import tv.mapper.embellishcraft.proxy.ServerProxy;
 import tv.mapper.embellishcraft.util.ConfigChecker;
-import tv.mapper.embellishcraft.world.OreGenerator;
-import tv.mapper.mapperbase.config.BaseOreGenConfig.CommonConfig;
+import tv.mapper.embellishcraft.world.ECFeatures;
+import tv.mapper.embellishcraft.world.ECOreList;
 
 @Mod(ECConstants.MODID)
 public class EmbellishCraft
@@ -39,12 +40,11 @@ public class EmbellishCraft
         ECBlockRegistry.init();
         ECBlockRegistry.postInit();
         ECItemRegistry.init();
+        ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::serverSetup);
-
-        MinecraftForge.EVENT_BUS.register(new OreGenerator());
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -54,10 +54,14 @@ public class EmbellishCraft
         if(ModList.get().isLoaded("embellishcraft-bop"))
             LOGGER.info("EmbellishCraft: BoP addon detected.");
 
-        if(!CommonConfig.BITUMEN_GENERATION.get())
-            LOGGER.info("Worldgen is disabled by config.");
+        if(!CommonConfig.ENABLE_WORLDGEN.get())
+            LOGGER.info("EmbellishCraft worldgen is disabled by config.");
         else
+        {
+            ECOreList.initOres();
             ConfigChecker.checkConfig();
+            ECFeatures.registerFeatures();
+        }
 
         proxy.setup(event);
         ECNetwork.registerNetworkPackets();
