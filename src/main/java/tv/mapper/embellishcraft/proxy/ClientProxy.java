@@ -28,14 +28,14 @@ public class ClientProxy implements IProxy
         // ClientRegistry.bindTileEntitySpecialRenderer(VerticalChestTileEntity.class, new VerticalChestTileEntityRenderer<>());
         // ClientRegistry.bindTileEntitySpecialRenderer(CustomBedTileEntity.class, new CustomBedTileEntityRenderer<>());
 
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X1, VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X2, VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X3, VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X4, VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X5, VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X6, VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.CRATE_4X4, CrateScreen::new);
-        ScreenManager.registerFactory(ModContainers.CRATE_4X8, CrateScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X1.get(), VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X2.get(), VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X3.get(), VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X4.get(), VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X5.get(), VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.VERTICAL_9X6.get(), VerticalChestScreen::new);
+        ScreenManager.registerFactory(ModContainers.CRATE_4X4.get(), CrateScreen::new);
+        ScreenManager.registerFactory(ModContainers.CRATE_4X8.get(), CrateScreen::new);
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
 

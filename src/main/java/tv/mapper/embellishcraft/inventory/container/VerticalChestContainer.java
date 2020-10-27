@@ -23,42 +23,42 @@ public class VerticalChestContainer extends Container
 
     public static VerticalChestContainer createGeneric9X1(int id, PlayerInventory player)
     {
-        return new VerticalChestContainer(ModContainers.VERTICAL_9X1, id, player, 1);
+        return new VerticalChestContainer(ModContainers.VERTICAL_9X1.get(), id, player, 1);
     }
 
     public static VerticalChestContainer createGeneric9X2(int id, PlayerInventory player)
     {
-        return new VerticalChestContainer(ModContainers.VERTICAL_9X2, id, player, 2);
+        return new VerticalChestContainer(ModContainers.VERTICAL_9X2.get(), id, player, 2);
     }
 
     public static VerticalChestContainer createGeneric9X3(int id, PlayerInventory player)
     {
-        return new VerticalChestContainer(ModContainers.VERTICAL_9X3, id, player, 3);
+        return new VerticalChestContainer(ModContainers.VERTICAL_9X3.get(), id, player, 3);
     }
 
     public static VerticalChestContainer createGeneric9X4(int id, PlayerInventory player)
     {
-        return new VerticalChestContainer(ModContainers.VERTICAL_9X4, id, player, 4);
+        return new VerticalChestContainer(ModContainers.VERTICAL_9X4.get(), id, player, 4);
     }
 
     public static VerticalChestContainer createGeneric9X5(int id, PlayerInventory player)
     {
-        return new VerticalChestContainer(ModContainers.VERTICAL_9X5, id, player, 5);
+        return new VerticalChestContainer(ModContainers.VERTICAL_9X5.get(), id, player, 5);
     }
 
     public static VerticalChestContainer createGeneric9X6(int id, PlayerInventory player)
     {
-        return new VerticalChestContainer(ModContainers.VERTICAL_9X6, id, player, 6);
+        return new VerticalChestContainer(ModContainers.VERTICAL_9X6.get(), id, player, 6);
     }
 
     public static VerticalChestContainer createGeneric9X3(int id, PlayerInventory player, IInventory blockEntity)
     {
-        return new VerticalChestContainer(ModContainers.VERTICAL_9X3, id, player, blockEntity, 3);
+        return new VerticalChestContainer(ModContainers.VERTICAL_9X3.get(), id, player, blockEntity, 3);
     }
 
     public static VerticalChestContainer createGeneric9X6(int id, PlayerInventory player, IInventory blockEntity)
     {
-        return new VerticalChestContainer(ModContainers.VERTICAL_9X6, id, player, blockEntity, 6);
+        return new VerticalChestContainer(ModContainers.VERTICAL_9X6.get(), id, player, blockEntity, 6);
     }
 
     public VerticalChestContainer(ContainerType<?> type, int id, PlayerInventory playerInventoryIn, IInventory p_i50092_4_, int rows)

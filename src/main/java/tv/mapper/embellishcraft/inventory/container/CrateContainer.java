@@ -23,22 +23,22 @@ public class CrateContainer extends Container
 
     public static CrateContainer createCrate4X4(int id, PlayerInventory player)
     {
-        return new CrateContainer(ModContainers.CRATE_4X4, id, player, 4);
+        return new CrateContainer(ModContainers.CRATE_4X4.get(), id, player, 4);
     }
 
     public static CrateContainer createCrate4X8(int id, PlayerInventory player)
     {
-        return new CrateContainer(ModContainers.CRATE_4X8, id, player, 8);
+        return new CrateContainer(ModContainers.CRATE_4X8.get(), id, player, 8);
     }
 
     public static CrateContainer createCrate4X4(int id, PlayerInventory player, IInventory blockEntity)
     {
-        return new CrateContainer(ModContainers.CRATE_4X4, id, player, blockEntity, 4);
+        return new CrateContainer(ModContainers.CRATE_4X4.get(), id, player, blockEntity, 4);
     }
 
     public static CrateContainer createCrate4X8(int id, PlayerInventory player, IInventory blockEntity)
     {
-        return new CrateContainer(ModContainers.CRATE_4X8, id, player, blockEntity, 8);
+        return new CrateContainer(ModContainers.CRATE_4X8.get(), id, player, blockEntity, 8);
     }
 
     public CrateContainer(ContainerType<?> type, int id, PlayerInventory playerInventoryIn, IInventory inv, int column)

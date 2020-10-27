@@ -163,7 +163,7 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
         if(Block.getBlockFromItem(itemStackIn.getItem()) instanceof CrateBlock || Block.getBlockFromItem(itemStackIn.getItem()) instanceof ShulkerBoxBlock)
             return false;
         else
-            return false;
+            return true;
     }
 
     @Override
