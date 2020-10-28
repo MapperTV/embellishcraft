@@ -30,7 +30,7 @@ public class SeatUtil
         {
             if(!player.isSneaking())
             {
-                if((block instanceof ChairBlock || block instanceof CouchBlock) && world.getBlockState(pos.up()).isAir(world, pos.up()) && !EntityChair.OCCUPIED.containsKey(pos))
+                if((block instanceof ChairBlock || block instanceof CouchBlock) && world.isAirBlock(pos.up()) && !EntityChair.OCCUPIED.containsKey(pos))
                 {
                     event.setCanceled(true);
                     if(event.getSide() == LogicalSide.SERVER)
