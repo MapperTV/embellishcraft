@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "embellishcraft:block/jungle_wooden_crate"
+    "side": "embellishcraft:block/jungle_wooden_crate",
+    "end": "embellishcraft:block/jungle_wooden_crate_top"
   }
 }

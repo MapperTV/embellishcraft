@@ -267,6 +267,8 @@ public class ECBlockModels extends BaseBlockModels
                                 new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_bottom_left")).texture("back",
                                     new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_side_right")).texture("lock",
                                         new ResourceLocation(ECConstants.MODID, "block/air_duct"));
+            cubeColumn(McWoods.byId(j).getString() + "_wooden_crate", modLoc("block/" + McWoods.byId(j).getString() + "_wooden_crate"),
+                modLoc("block/" + McWoods.byId(j).getString() + "_wooden_crate_top"));
         }
 
         getBuilder("locker_small").parent(getExistingFile(modLoc("block/locker"))).texture("front", new ResourceLocation(ECConstants.MODID, "block/locker_front_small")).texture("side",

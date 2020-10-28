@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "embellishcraft:block/oak_wooden_crate"
+    "side": "embellishcraft:block/oak_wooden_crate",
+    "end": "embellishcraft:block/oak_wooden_crate_top"
   }
 }

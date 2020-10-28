@@ -2,8 +2,8 @@
   "multipart": [
     {
       "when": {
-        "facing": "north",
-        "left_end": "true"
+        "left_end": "true",
+        "facing": "north"
       },
       "apply": {
         "model": "embellishcraft:block/orange_couch_left",
@@ -13,8 +13,8 @@
     },
     {
       "when": {
-        "facing": "north",
-        "right_end": "true"
+        "right_end": "true",
+        "facing": "north"
       },
       "apply": {
         "model": "embellishcraft:block/orange_couch_right",
@@ -78,8 +78,8 @@
     },
     {
       "when": {
-        "facing": "east",
-        "left_end": "true"
+        "left_end": "true",
+        "facing": "east"
       },
       "apply": {
         "model": "embellishcraft:block/orange_couch_left",
@@ -88,8 +88,8 @@
     },
     {
       "when": {
-        "facing": "east",
-        "right_end": "true"
+        "right_end": "true",
+        "facing": "east"
       },
       "apply": {
         "model": "embellishcraft:block/orange_couch_right",
@@ -150,8 +150,8 @@
     },
     {
       "when": {
-        "facing": "south",
-        "left_end": "true"
+        "left_end": "true",
+        "facing": "south"
       },
       "apply": {
         "model": "embellishcraft:block/orange_couch_left",
@@ -161,8 +161,8 @@
     },
     {
       "when": {
-        "facing": "south",
-        "right_end": "true"
+        "right_end": "true",
+        "facing": "south"
       },
       "apply": {
         "model": "embellishcraft:block/orange_couch_right",
@@ -226,8 +226,8 @@
     },
     {
       "when": {
-        "facing": "west",
-        "left_end": "true"
+        "left_end": "true",
+        "facing": "west"
       },
       "apply": {
         "model": "embellishcraft:block/orange_couch_left",
@@ -237,8 +237,8 @@
     },
     {
       "when": {
-        "facing": "west",
-        "right_end": "true"
+        "right_end": "true",
+        "facing": "west"
       },
       "apply": {
         "model": "embellishcraft:block/orange_couch_right",
