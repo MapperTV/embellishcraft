@@ -1,0 +1,11 @@
+{
+  "parent": "embellishcraft:block/chest",
+  "textures": {
+    "particle": "minecraft:block/warped_planks",
+    "front": "embellishcraft:block/warped_fancy_chest_front",
+    "side": "embellishcraft:block/warped_fancy_chest_side",
+    "top": "embellishcraft:block/warped_fancy_chest_top",
+    "bottom": "embellishcraft:block/warped_fancy_chest_bottom",
+    "lock": "embellishcraft:block/air_duct"
+  }
+}

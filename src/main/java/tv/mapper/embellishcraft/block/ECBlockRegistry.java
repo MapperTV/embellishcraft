@@ -1262,6 +1262,14 @@ public class ECBlockRegistry
             BLOCKS.register(type.getString() + "_acacia_fancy_bed",
                 () -> new CustomBedBlock(type, WoodsType.ACACIA, Block.Properties.create(Material.WOOL).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
                     Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> WARPED_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getString() + "_warped_fancy_bed",
+            () -> new CustomBedBlock(type, WoodsType.WARPED, Block.Properties.create(Material.NETHER_WOOD).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<CustomBedBlock>> CRIMSON_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        BLOCKS.register(type.getString() + "_crimson_fancy_bed",
+            () -> new CustomBedBlock(type, WoodsType.CRIMSON, Block.Properties.create(Material.NETHER_WOOD).sound(SoundType.WOOD).hardnessAndResistance(0.2F))))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static void init()
     {
@@ -1272,7 +1280,7 @@ public class ECBlockRegistry
     public static void postInit()
     {
         EmbellishCraft.LOGGER.info("1.2- EmbellishCraft: block listing.");
-        for(int i = 0; i < 6; i++)
+        for(int i = 0; i < 8; i++)
         {
             FANCY_CHESTS.add(FANCY_CHEST_BLOCKS.get(McWoods.byId(i)));
             CUTOUT_BLOCKS.add(TERRACE_CHAIR_BLOCKS.get(McWoods.byId(i)));

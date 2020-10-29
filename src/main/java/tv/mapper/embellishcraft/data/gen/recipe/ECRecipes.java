@@ -1219,6 +1219,10 @@ public class ECRecipes extends RecipeProvider
                 "WWW").patternLine("PPP").setGroup("fancy_beds").addCriterion("has_oak_planks", hasItem(Blocks.OAK_PLANKS)).build(consumer);
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).key('P', Blocks.SPRUCE_PLANKS).key('W', ECConstants.McWools[j]).patternLine("P P").patternLine(
                 "WWW").patternLine("PPP").setGroup("fancy_beds").addCriterion("has_spruce_planks", hasItem(Blocks.SPRUCE_PLANKS)).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).key('P', Blocks.WARPED_PLANKS).key('W', ECConstants.McWools[j]).patternLine("P P").patternLine(
+                "WWW").patternLine("PPP").setGroup("fancy_beds").addCriterion("has_warped_planks", hasItem(Blocks.WARPED_PLANKS)).build(consumer);
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).key('P', Blocks.CRIMSON_PLANKS).key('W', ECConstants.McWools[j]).patternLine(
+                "P P").patternLine("WWW").patternLine("PPP").setGroup("fancy_beds").addCriterion("has_crimson_planks", hasItem(Blocks.CRIMSON_PLANKS)).build(consumer);
         }
 
         for(int j = 1; j < Arrays.stream(DyeColor.values()).count(); j++)

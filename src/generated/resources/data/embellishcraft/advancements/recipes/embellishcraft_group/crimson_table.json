@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:crimson_table"
+    ]
+  },
+  "criteria": {
+    "has_crimson_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:crimson_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:crimson_table"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_crimson_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1146,6 +1146,14 @@ public class ECItemRegistry
         ITEMS.register(type.getString() + "_acacia_fancy_bed",
             () -> new FuelBlockItem(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> WARPED_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getString() + "_warped_fancy_bed",
+            () -> new FuelBlockItem(ECBlockRegistry.WARPED_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, RegistryObject<FuelBlockItem>> CRIMSON_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getString() + "_crimson_fancy_bed",
+            () -> new FuelBlockItem(ECBlockRegistry.CRIMSON_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.bedBurnTime)))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static void init()
     {

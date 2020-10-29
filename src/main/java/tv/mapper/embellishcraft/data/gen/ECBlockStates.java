@@ -369,6 +369,8 @@ public class ECBlockStates extends BaseBlockStates
             bedBlock(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
             bedBlock(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
             bedBlock(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
+            bedBlock(ECBlockRegistry.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
+            bedBlock(ECBlockRegistry.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get(), 180);
         }
 
         plateBlock(ECBlockRegistry.PLATE.get());

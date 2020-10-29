@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/table_foot",
+  "textures": {
+    "material": "minecraft:block/warped_planks",
+    "particle": "minecraft:block/warped_planks"
+  }
+}

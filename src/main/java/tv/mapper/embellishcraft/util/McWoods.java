@@ -12,7 +12,9 @@ public enum McWoods implements IStringSerializable
     DARK_OAK(2, "dark_oak", "chêne noir", "Dark Oak"),
     JUNGLE(3, "jungle", "acajou", "Jungle"),
     OAK(4, "oak", "chêne", "Oak"),
-    SPRUCE(5, "spruce", "sapin", "Spruce");
+    SPRUCE(5, "spruce", "sapin", "Spruce"),
+    WARPED(6, "warped", "bois biscornu", "Warped"),
+    CRIMSON(7, "crimson", "bois carmin", "Crimson");
 
     private static final McWoods[] VALUES = Arrays.stream(values()).sorted(Comparator.comparingInt(McWoods::getId)).toArray((map) ->
     {

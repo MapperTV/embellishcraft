@@ -211,6 +211,8 @@ public class ECBlockTags extends BlockTagsProvider
             this.getOrCreateBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
             this.getOrCreateBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
             this.getOrCreateBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
+            this.getOrCreateBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
+            this.getOrCreateBuilder(ECTags.Blocks.FANCY_BEDS).add(ECBlockRegistry.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(i)).get());
 
             this.getOrCreateBuilder(ECTags.Blocks.COUCHES).add(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(i)).get());
 

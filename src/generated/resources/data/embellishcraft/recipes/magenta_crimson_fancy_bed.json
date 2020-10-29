@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fancy_beds",
+  "pattern": [
+    "P P",
+    "WWW",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:crimson_planks"
+    },
+    "W": {
+      "item": "minecraft:magenta_wool"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:magenta_crimson_fancy_bed"
+  }
+}

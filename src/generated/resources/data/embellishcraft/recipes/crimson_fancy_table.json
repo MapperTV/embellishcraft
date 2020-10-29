@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fancy_tables",
+  "pattern": [
+    "WWW",
+    "S S",
+    "S S"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:crimson_planks"
+    },
+    "S": {
+      "item": "minecraft:crimson_stem"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:crimson_fancy_table",
+    "count": 2
+  }
+}

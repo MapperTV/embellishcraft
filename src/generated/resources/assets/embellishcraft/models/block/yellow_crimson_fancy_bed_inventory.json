@@ -1,0 +1,8 @@
+{
+  "parent": "embellishcraft:block/fancy_bed_inventory",
+  "textures": {
+    "bed": "embellishcraft:block/yellow_crimson_fancy_bed_head",
+    "end": "embellishcraft:block/crimson_fancy_bed_head_end",
+    "under": "minecraft:block/crimson_planks"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fancy_chests",
+  "pattern": [
+    " W ",
+    "WCW",
+    " W "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "W": {
+      "item": "minecraft:warped_slab"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:warped_fancy_chest"
+  }
+}

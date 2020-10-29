@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/table_top",
+  "textures": {
+    "material": "minecraft:block/crimson_planks",
+    "particle": "minecraft:block/crimson_planks"
+  }
+}

@@ -594,6 +594,8 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Dark Oak Fancy Bed");
                     addBlock(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Oak Fancy Bed");
                     addBlock(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Spruce Fancy Bed");
+                    addBlock(ECBlockRegistry.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Warped Fancy Bed");
+                    addBlock(ECBlockRegistry.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Crimson Fancy Bed");
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Plate");
@@ -1178,6 +1180,8 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de chêne sombre");
                     addBlock(ECBlockRegistry.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de chêne");
                     addBlock(ECBlockRegistry.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de sapin");
+                    addBlock(ECBlockRegistry.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois biscornu");
+                    addBlock(ECBlockRegistry.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois carmin");
                 }
 
                 addBlock(ECBlockRegistry.PLATE, "Assiette");

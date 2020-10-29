@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fancy_tables",
+  "pattern": [
+    "WWW",
+    "S S",
+    "S S"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:warped_planks"
+    },
+    "S": {
+      "item": "minecraft:warped_stem"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:warped_fancy_table",
+    "count": 2
+  }
+}
