@@ -1280,7 +1280,7 @@ public class ECBlockRegistry
     public static void postInit()
     {
         EmbellishCraft.LOGGER.info("1.2- EmbellishCraft: block listing.");
-        for(int i = 0; i < 8; i++)
+        for(int i = 0; i < McWoods.values().length; i++)
         {
             FANCY_CHESTS.add(FANCY_CHEST_BLOCKS.get(McWoods.byId(i)));
             CUTOUT_BLOCKS.add(TERRACE_CHAIR_BLOCKS.get(McWoods.byId(i)));
@@ -1291,7 +1291,7 @@ public class ECBlockRegistry
         CUTOUT_BLOCKS.add(STEEL_TERRACE_CHAIR);
         CUTOUT_BLOCKS.add(STEEL_TERRACE_TABLE);
 
-        for(int i = 0; i < Arrays.stream(DyeColor.values()).count(); i++)
+        for(int i = 0; i < DyeColor.values().length; i++)
         {
             FANCY_BEDS.add(OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(i)));
             FANCY_BEDS.add(BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(i)));
