@@ -1,6 +1,5 @@
 package tv.mapper.embellishcraft.data.gen;
 
-import java.util.Arrays;
 import java.util.function.Function;
 
 import net.minecraft.block.BedBlock;
@@ -80,7 +79,7 @@ public class ECBlockStates extends BaseBlockStates
     protected void registerStatesAndModels()
     {
         // Rocks
-        for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
+        for(int j = 0; j < RockType.values().length; j++)
         {
             registerStoneVariant(RockType.byId(j).getString(), ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_SLABS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(),
@@ -316,7 +315,7 @@ public class ECBlockStates extends BaseBlockStates
         horizontalBlock(ECBlockRegistry.RUSTY_RUNGS.get(), new UncheckedModelFile(mod_id + ":block/rusty_rungs"));
 
         // Corrugated metal plates
-        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        for(int j = 0; j < DyeColor.values().length; j++)
         {
             registerStoneVariant(DyeColor.byId(j).getString() + "_corrugated_metal_plate", ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get(),
                 ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get(), ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get(),
@@ -341,7 +340,7 @@ public class ECBlockStates extends BaseBlockStates
         upDownBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH.get(), new UncheckedModelFile(mod_id + ":block/white_green_wallpaper_plinth"));
 
         // Furniture
-        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        for(int j = 0; j < McWoods.values().length; j++)
         {
             horizontalBlock(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getString() + "_chair"), 0);
             horizontalBlock(ECBlockRegistry.TERRACE_CHAIR_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getString() + "_terrace_chair"), 0);
@@ -358,7 +357,7 @@ public class ECBlockStates extends BaseBlockStates
         simpleBlock(ECBlockRegistry.STEEL_TERRACE_TABLE.get());
         horizontalBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR.get(), new UncheckedModelFile(mod_id + ":block/steel_terrace_chair"), 0);
 
-        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        for(int j = 0; j < DyeColor.values().length; j++)
         {
             couchBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), 90);
             tableLampBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get());
@@ -376,7 +375,7 @@ public class ECBlockStates extends BaseBlockStates
         plateBlock(ECBlockRegistry.PLATE.get());
 
         // Suspended stairs and fancy doors
-        for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
+        for(int j = 0; j < McWoods.values().length; j++)
         {
             horizontalBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getString() + "_suspended_stairs"), 0);
             doorBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getString() + "_fancy_door_bottom"),

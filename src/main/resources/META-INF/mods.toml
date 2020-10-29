@@ -16,7 +16,7 @@ description='''EmbellishCraft is a mod that adds various decorative elements to 
 [[dependencies.embellishcraft]]
     modId="forge"
     mandatory=true
-    versionRange="[34,)"
+    versionRange="[34.1.34,)"
     ordering="NONE"
     side="BOTH"
 
