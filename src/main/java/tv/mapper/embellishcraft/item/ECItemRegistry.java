@@ -17,6 +17,7 @@ import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
+import tv.mapper.mapperbase.item.FuelBlockItem;
 
 public class ECItemRegistry
 {
