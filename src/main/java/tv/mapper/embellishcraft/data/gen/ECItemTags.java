@@ -8,7 +8,6 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.data.ECTags;
-import tv.mapper.mapperbase.data.BaseTags;
 
 public class ECItemTags extends ItemTagsProvider
 {
@@ -28,7 +27,7 @@ public class ECItemTags extends ItemTagsProvider
         copy(BlockTags.WALLS, ItemTags.WALLS);
         copy(BlockTags.FENCES, ItemTags.FENCES);
         copy(Tags.Blocks.FENCE_GATES, Tags.Items.FENCE_GATES);
-        copy(BaseTags.ForgeBlocks.PRESSURE_PLATES, BaseTags.ForgeItems.PRESSURE_PLATES);
+        copy(BlockTags.PRESSURE_PLATES, ECTags.ForgeItems.PRESSURE_PLATES);
         copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
 
         copy(ECTags.ForgeBlocks.CHAIRS, ECTags.ForgeItems.CHAIRS);
@@ -39,6 +38,7 @@ public class ECItemTags extends ItemTagsProvider
         copy(ECTags.Blocks.COUCHES, ECTags.Items.COUCHES);
 
         copy(ECTags.Blocks.WOODEN_DOORS, ECTags.Items.WOODEN_DOORS);
+        copy(ECTags.Blocks.DOORS, ECTags.Items.DOORS);
         copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);
         copy(BlockTags.DOORS, ItemTags.DOORS);
 

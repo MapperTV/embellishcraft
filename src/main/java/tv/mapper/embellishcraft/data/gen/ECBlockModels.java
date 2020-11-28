@@ -67,6 +67,7 @@ public class ECBlockModels extends BaseBlockModels
         buildWall("terracotta_tiles", modLoc("block/terracotta_tiles"));
         buildWall("terracotta_bricks", modLoc("block/terracotta_bricks"));
         buildWall("terracotta_large_bricks", modLoc("block/terracotta_large_bricks"));
+        buildWall("terracotta_paving_stones", modLoc("block/terracotta_paving_stones"));
         buildButton("terracotta", mcLoc("block/terracotta"));
 
         buildPressure("terracotta", mcLoc("block/terracotta"));
@@ -75,6 +76,7 @@ public class ECBlockModels extends BaseBlockModels
         buildPressure("terracotta_tiles", modLoc("block/terracotta_tiles"));
         buildPressure("terracotta_bricks", modLoc("block/terracotta_bricks"));
         buildPressure("terracotta_large_bricks", modLoc("block/terracotta_large_bricks"));
+        buildPressure("terracotta_paving_stones", modLoc("block/terracotta_paving_stones"));
 
         buildRooftilesStairs("terracotta_rooftiles");
 
@@ -267,8 +269,7 @@ public class ECBlockModels extends BaseBlockModels
                                 new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_bottom_left")).texture("back",
                                     new ResourceLocation(ECConstants.MODID, "block/" + McWoods.byId(j).getString() + "_fancy_chest_side_right")).texture("lock",
                                         new ResourceLocation(ECConstants.MODID, "block/air_duct"));
-            cubeColumn(McWoods.byId(j).getString() + "_wooden_crate", modLoc("block/" + McWoods.byId(j).getString() + "_wooden_crate"),
-                modLoc("block/" + McWoods.byId(j).getString() + "_wooden_crate_top"));
+            cubeColumn(McWoods.byId(j).getString() + "_wooden_crate", modLoc("block/" + McWoods.byId(j).getString() + "_wooden_crate"), modLoc("block/" + McWoods.byId(j).getString() + "_wooden_crate_top"));
         }
 
         getBuilder("locker_small").parent(getExistingFile(modLoc("block/locker"))).texture("front", new ResourceLocation(ECConstants.MODID, "block/locker_front_small")).texture("side",
@@ -352,6 +353,7 @@ public class ECBlockModels extends BaseBlockModels
         buildWall(name + "_tiles", modLoc("block/" + name + "_tiles"));
         buildWall(name + "_bricks", modLoc("block/" + name + "_bricks"));
         buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+        buildWall(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
     }
 
     protected void buildAllStonePressure(String name)
@@ -364,6 +366,7 @@ public class ECBlockModels extends BaseBlockModels
         buildPressure(name + "_tiles", modLoc("block/" + name + "_tiles"));
         buildPressure(name + "_bricks", modLoc("block/" + name + "_bricks"));
         buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+        buildPressure(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
         buildPressure(name + "_ornament", modLoc("block/" + name + "_ornament"));
     }
 
@@ -392,6 +395,9 @@ public class ECBlockModels extends BaseBlockModels
         buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
         buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
 
+        buildWall(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
+        buildPressure(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
+
         buildPressure(name + "_ornament", modLoc("block/" + name + "_ornament"));
     }
 
@@ -416,5 +422,8 @@ public class ECBlockModels extends BaseBlockModels
 
         buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
         buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+
+        buildWall(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
+        buildPressure(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
     }
 }

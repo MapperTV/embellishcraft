@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "embellishcraft:block/larvikite_paving_stones"
+  }
+}

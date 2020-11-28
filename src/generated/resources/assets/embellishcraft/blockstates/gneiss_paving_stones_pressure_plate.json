@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "embellishcraft:block/gneiss_paving_stones_pressure_plate"
+    },
+    "powered=true": {
+      "model": "embellishcraft:block/gneiss_paving_stones_pressure_plate_down"
+    }
+  }
+}

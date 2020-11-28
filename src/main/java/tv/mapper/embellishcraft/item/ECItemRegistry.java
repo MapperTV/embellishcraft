@@ -205,6 +205,34 @@ public class ECItemRegistry
             () -> new BlockItem(ECBlockRegistry.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
                 Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Rock paving stones
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCKS_PAVING_STONES_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_paving_stones", () -> new BlockItem(ECBlockRegistry.ROCK_PAVING_STONES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+            Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_PAVING_STONES_STAIRS_ITEMS = Arrays.stream(RockType.values()).map(
+        type -> Pair.of(type,
+            ITEMS.register(type.getName() + "_paving_stones_stairs",
+                () -> new BlockItem(ECBlockRegistry.ROCK_PAVING_STONES_STAIRS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+                    Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_PAVING_STONES_SLABS_ITEMS = Arrays.stream(RockType.values()).map(
+        type -> Pair.of(type,
+            ITEMS.register(type.getName() + "_paving_stones_slab",
+                () -> new BlockItem(ECBlockRegistry.ROCK_PAVING_STONES_SLABS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+                    Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_PAVING_STONES_WALLS_ITEMS = Arrays.stream(RockType.values()).map(
+        type -> Pair.of(type,
+            ITEMS.register(type.getName() + "_paving_stones_wall",
+                () -> new BlockItem(ECBlockRegistry.ROCK_PAVING_STONES_WALLS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+                    Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_PAVING_STONES_PRESSURE_PLATES_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type,
+        ITEMS.register(type.getName() + "_paving_stones_pressure_plate",
+            () -> new BlockItem(ECBlockRegistry.ROCK_PAVING_STONES_PRESSURE_PLATES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
+                Collectors.toMap(Pair::getKey, Pair::getValue));
+
     // Rock ornaments
     public static final Map<RockType, RegistryObject<BlockItem>> ROCKS_ORNAMENTS_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type,
         ITEMS.register(type.getName() + "_ornament", () -> new BlockItem(ECBlockRegistry.ROCK_ORNAMENTS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
@@ -286,6 +314,17 @@ public class ECItemRegistry
     public static final RegistryObject<Item> ANDESITE_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("andesite_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    public static final RegistryObject<Item> ANDESITE_PAVING_STONES_ITEM = ITEMS.register("andesite_paving_stones",
+        () -> new BlockItem(ECBlockRegistry.ANDESITE_PAVING_STONES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ANDESITE_PAVING_STONES_STAIRS_ITEM = ITEMS.register("andesite_paving_stones_stairs",
+        () -> new BlockItem(ECBlockRegistry.ANDESITE_PAVING_STONES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ANDESITE_PAVING_STONES_SLAB_ITEM = ITEMS.register("andesite_paving_stones_slab",
+        () -> new BlockItem(ECBlockRegistry.ANDESITE_PAVING_STONES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ANDESITE_PAVING_STONES_WALL_ITEM = ITEMS.register("andesite_paving_stones_wall",
+        () -> new BlockItem(ECBlockRegistry.ANDESITE_PAVING_STONES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> ANDESITE_PAVING_STONES_PRESSURE_PLATE_ITEM = ITEMS.register("andesite_paving_stones_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.ANDESITE_PAVING_STONES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static final RegistryObject<Item> ANDESITE_ORNAMENT_ITEM = ITEMS.register("andesite_ornament",
         () -> new BlockItem(ECBlockRegistry.ANDESITE_ORNAMENT.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> ANDESITE_ORNAMENT_PRESSURE_PLATE_ITEM = ITEMS.register("andesite_ornament_pressure_plate",
@@ -356,6 +395,17 @@ public class ECItemRegistry
     public static final RegistryObject<Item> DIORITE_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("diorite_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    public static final RegistryObject<Item> DIORITE_PAVING_STONES_ITEM = ITEMS.register("diorite_paving_stones",
+        () -> new BlockItem(ECBlockRegistry.DIORITE_PAVING_STONES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DIORITE_PAVING_STONES_STAIRS_ITEM = ITEMS.register("diorite_paving_stones_stairs",
+        () -> new BlockItem(ECBlockRegistry.DIORITE_PAVING_STONES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DIORITE_PAVING_STONES_SLAB_ITEM = ITEMS.register("diorite_paving_stones_slab",
+        () -> new BlockItem(ECBlockRegistry.DIORITE_PAVING_STONES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DIORITE_PAVING_STONES_WALL_ITEM = ITEMS.register("diorite_paving_stones_wall",
+        () -> new BlockItem(ECBlockRegistry.DIORITE_PAVING_STONES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> DIORITE_PAVING_STONES_PRESSURE_PLATE_ITEM = ITEMS.register("diorite_paving_stones_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.DIORITE_PAVING_STONES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static final RegistryObject<Item> DIORITE_ORNAMENT_ITEM = ITEMS.register("diorite_ornament",
         () -> new BlockItem(ECBlockRegistry.DIORITE_ORNAMENT.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> DIORITE_ORNAMENT_PRESSURE_PLATE_ITEM = ITEMS.register("diorite_ornament_pressure_plate",
@@ -425,6 +475,17 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.GRANITE_LARGE_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> GRANITE_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("granite_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> GRANITE_PAVING_STONES_ITEM = ITEMS.register("granite_paving_stones",
+        () -> new BlockItem(ECBlockRegistry.GRANITE_PAVING_STONES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRANITE_PAVING_STONES_STAIRS_ITEM = ITEMS.register("granite_paving_stones_stairs",
+        () -> new BlockItem(ECBlockRegistry.GRANITE_PAVING_STONES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRANITE_PAVING_STONES_SLAB_ITEM = ITEMS.register("granite_paving_stones_slab",
+        () -> new BlockItem(ECBlockRegistry.GRANITE_PAVING_STONES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRANITE_PAVING_STONES_WALL_ITEM = ITEMS.register("granite_paving_stones_wall",
+        () -> new BlockItem(ECBlockRegistry.GRANITE_PAVING_STONES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> GRANITE_PAVING_STONES_PRESSURE_PLATE_ITEM = ITEMS.register("granite_paving_stones_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.GRANITE_PAVING_STONES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> GRANITE_ORNAMENT_ITEM = ITEMS.register("granite_ornament",
         () -> new BlockItem(ECBlockRegistry.GRANITE_ORNAMENT.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -502,6 +563,17 @@ public class ECItemRegistry
     public static final RegistryObject<Item> SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("sandstone_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
+    public static final RegistryObject<Item> SANDSTONE_PAVING_STONES_ITEM = ITEMS.register("sandstone_paving_stones",
+        () -> new BlockItem(ECBlockRegistry.SANDSTONE_PAVING_STONES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SANDSTONE_PAVING_STONES_STAIRS_ITEM = ITEMS.register("sandstone_paving_stones_stairs",
+        () -> new BlockItem(ECBlockRegistry.SANDSTONE_PAVING_STONES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SANDSTONE_PAVING_STONES_SLAB_ITEM = ITEMS.register("sandstone_paving_stones_slab",
+        () -> new BlockItem(ECBlockRegistry.SANDSTONE_PAVING_STONES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SANDSTONE_PAVING_STONES_WALL_ITEM = ITEMS.register("sandstone_paving_stones_wall",
+        () -> new BlockItem(ECBlockRegistry.SANDSTONE_PAVING_STONES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> SANDSTONE_PAVING_STONES_PRESSURE_PLATE_ITEM = ITEMS.register("sandstone_paving_stones_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.SANDSTONE_PAVING_STONES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     public static final RegistryObject<Item> SANDSTONE_ROOFTILES_ITEM = ITEMS.register("sandstone_rooftiles",
         () -> new BlockItem(ECBlockRegistry.SANDSTONE_ROOFTILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> SANDSTONE_ROOFTILES_STAIRS_ITEM = ITEMS.register("sandstone_rooftiles_stairs",
@@ -572,6 +644,17 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("red_sandstone_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> RED_SANDSTONE_PAVING_STONES_ITEM = ITEMS.register("red_sandstone_paving_stones",
+        () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_SANDSTONE_PAVING_STONES_STAIRS_ITEM = ITEMS.register("red_sandstone_paving_stones_stairs",
+        () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_SANDSTONE_PAVING_STONES_SLAB_ITEM = ITEMS.register("red_sandstone_paving_stones_slab",
+        () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_SANDSTONE_PAVING_STONES_WALL_ITEM = ITEMS.register("red_sandstone_paving_stones_wall",
+        () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RED_SANDSTONE_PAVING_STONES_PRESSURE_PLATE_ITEM = ITEMS.register("red_sandstone_paving_stones_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> RED_SANDSTONE_ROOFTILES_ITEM = ITEMS.register("red_sandstone_rooftiles",
         () -> new BlockItem(ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
@@ -646,6 +729,17 @@ public class ECItemRegistry
         () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE_ITEM = ITEMS.register("terracotta_large_bricks_pressure_plate",
         () -> new BlockItem(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_STONES_ITEM = ITEMS.register("terracotta_paving_stones",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING_STONES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_STONES_STAIRS_ITEM = ITEMS.register("terracotta_paving_stones_stairs",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING_STONES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_STONES_SLAB_ITEM = ITEMS.register("terracotta_paving_stones_slab",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING_STONES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_STONES_WALL_ITEM = ITEMS.register("terracotta_paving_stones_wall",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING_STONES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> TERRACOTTA_PAVING_STONES_PRESSURE_PLATE_ITEM = ITEMS.register("terracotta_paving_stones_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.TERRACOTTA_PAVING_STONES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     public static final RegistryObject<Item> TERRACOTTA_ROOFTILES_ITEM = ITEMS.register("terracotta_rooftiles",
         () -> new BlockItem(ECBlockRegistry.TERRACOTTA_ROOFTILES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));

@@ -112,6 +112,10 @@ public class ECBlockStates extends BaseBlockStates
             registerStoneVariant(RockType.byId(j).getString() + "_large_bricks", ECBlockRegistry.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_LARGE_BRICKS_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_STAIRS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_LARGE_BRICKS_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            
+            registerStoneVariant(RockType.byId(j).getString() + "_paving_stones", ECBlockRegistry.ROCK_PAVING_STONES.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_PAVING_STONES_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_STONES_STAIRS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_PAVING_STONES_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_STONES_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             registerStoneVariant(RockType.byId(j).getString() + "_ornament", ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), null, null, null,
                 ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
@@ -134,6 +138,8 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.ANDESITE_BRICKS_WALL.get(), ECBlockRegistry.ANDESITE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("andesite_large_bricks", ECBlockRegistry.ANDESITE_LARGE_BRICKS.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.ANDESITE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("andesite_paving_stones", ECBlockRegistry.ANDESITE_PAVING_STONES.get(), ECBlockRegistry.ANDESITE_PAVING_STONES_SLAB.get(), ECBlockRegistry.ANDESITE_PAVING_STONES_STAIRS.get(),
+            ECBlockRegistry.ANDESITE_PAVING_STONES_WALL.get(), ECBlockRegistry.ANDESITE_PAVING_STONES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("andesite_ornament", ECBlockRegistry.ANDESITE_ORNAMENT.get(), null, null, null, ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE.get(), null);
         registerStoneVariant("andesite_rooftiles", ECBlockRegistry.ANDESITE_ROOFTILES.get(), ECBlockRegistry.ANDESITE_ROOFTILES_SLAB.get(), null, null, null, null);
         rooftilesStairsBlock(ECBlockRegistry.ANDESITE_ROOFTILES_STAIRS.get(), modLoc("block/andesite_rooftiles"));
@@ -150,6 +156,8 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.DIORITE_BRICKS_WALL.get(), ECBlockRegistry.DIORITE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("diorite_large_bricks", ECBlockRegistry.DIORITE_LARGE_BRICKS.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.DIORITE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("diorite_paving_stones", ECBlockRegistry.DIORITE_PAVING_STONES.get(), ECBlockRegistry.DIORITE_PAVING_STONES_SLAB.get(), ECBlockRegistry.DIORITE_PAVING_STONES_STAIRS.get(),
+            ECBlockRegistry.DIORITE_PAVING_STONES_WALL.get(), ECBlockRegistry.DIORITE_PAVING_STONES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("diorite_ornament", ECBlockRegistry.DIORITE_ORNAMENT.get(), null, null, null, ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE.get(), null);
         registerStoneVariant("diorite_rooftiles", ECBlockRegistry.DIORITE_ROOFTILES.get(), ECBlockRegistry.DIORITE_ROOFTILES_SLAB.get(), null, null, null, null);
         rooftilesStairsBlock(ECBlockRegistry.DIORITE_ROOFTILES_STAIRS.get(), modLoc("block/diorite_rooftiles"));
@@ -166,6 +174,8 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.GRANITE_BRICKS_WALL.get(), ECBlockRegistry.GRANITE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("granite_large_bricks", ECBlockRegistry.GRANITE_LARGE_BRICKS.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.GRANITE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("granite_paving_stones", ECBlockRegistry.GRANITE_PAVING_STONES.get(), ECBlockRegistry.GRANITE_PAVING_STONES_SLAB.get(), ECBlockRegistry.GRANITE_PAVING_STONES_STAIRS.get(),
+            ECBlockRegistry.GRANITE_PAVING_STONES_WALL.get(), ECBlockRegistry.GRANITE_PAVING_STONES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("granite_ornament", ECBlockRegistry.GRANITE_ORNAMENT.get(), null, null, null, ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE.get(), null);
         registerStoneVariant("granite_rooftiles", ECBlockRegistry.GRANITE_ROOFTILES.get(), ECBlockRegistry.GRANITE_ROOFTILES_SLAB.get(), null, null, null, null);
         rooftilesStairsBlock(ECBlockRegistry.GRANITE_ROOFTILES_STAIRS.get(), modLoc("block/granite_rooftiles"));
@@ -189,6 +199,8 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.SANDSTONE_BRICKS_WALL.get(), ECBlockRegistry.SANDSTONE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("sandstone_large_bricks", ECBlockRegistry.SANDSTONE_LARGE_BRICKS.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("sandstone_paving_stones", ECBlockRegistry.SANDSTONE_PAVING_STONES.get(), ECBlockRegistry.SANDSTONE_PAVING_STONES_SLAB.get(), ECBlockRegistry.SANDSTONE_PAVING_STONES_STAIRS.get(),
+            ECBlockRegistry.SANDSTONE_PAVING_STONES_WALL.get(), ECBlockRegistry.SANDSTONE_PAVING_STONES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("sandstone_rooftiles", ECBlockRegistry.SANDSTONE_ROOFTILES.get(), ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB.get(), null, null, null, null);
         rooftilesStairsBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS.get(), modLoc("block/sandstone_rooftiles"));
 
@@ -211,6 +223,8 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.RED_SANDSTONE_BRICKS_WALL.get(), ECBlockRegistry.RED_SANDSTONE_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("red_sandstone_large_bricks", ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_SLAB.get(),
             ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL.get(), ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("red_sandstone_paving_stones", ECBlockRegistry.RED_SANDSTONE_PAVING_STONES.get(), ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_SLAB.get(),
+            ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_STAIRS.get(), ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_WALL.get(), ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("red_sandstone_rooftiles", ECBlockRegistry.RED_SANDSTONE_ROOFTILES.get(), ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB.get(), null, null, null, null);
         rooftilesStairsBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_STAIRS.get(), modLoc("block/red_sandstone_rooftiles"));
 
@@ -234,6 +248,8 @@ public class ECBlockStates extends BaseBlockStates
             ECBlockRegistry.TERRACOTTA_BRICKS_WALL.get(), ECBlockRegistry.TERRACOTTA_BRICKS_PRESSURE_PLATE.get(), null);
         registerStoneVariant("terracotta_large_bricks", ECBlockRegistry.TERRACOTTA_LARGE_BRICKS.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_SLAB.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS.get(),
             ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL.get(), ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE.get(), null);
+        registerStoneVariant("terracotta_paving_stones", ECBlockRegistry.TERRACOTTA_PAVING_STONES.get(), ECBlockRegistry.TERRACOTTA_PAVING_STONES_SLAB.get(), ECBlockRegistry.TERRACOTTA_PAVING_STONES_STAIRS.get(),
+            ECBlockRegistry.TERRACOTTA_PAVING_STONES_WALL.get(), ECBlockRegistry.TERRACOTTA_PAVING_STONES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("terracotta_rooftiles", ECBlockRegistry.TERRACOTTA_ROOFTILES.get(), ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB.get(), null, null, null, null);
         rooftilesStairsBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES_STAIRS.get(), modLoc("block/terracotta_rooftiles"));
 

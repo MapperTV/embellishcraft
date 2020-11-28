@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "embellishcraft:block/jade_paving_stones"
+  }
+}

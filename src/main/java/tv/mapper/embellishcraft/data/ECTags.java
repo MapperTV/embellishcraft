@@ -12,6 +12,7 @@ public class ECTags
 {
     public static class Blocks
     {
+        public static final ITag.INamedTag<Block> DOORS = tag("doors");
         public static final ITag.INamedTag<Block> WOODEN_DOORS = tag("wooden_doors");
         public static final ITag.INamedTag<Block> WOODEN_CRATES = tag("wooden_crates");
         public static final ITag.INamedTag<Block> BEAMS = tag("beams");
@@ -29,6 +30,7 @@ public class ECTags
 
     public static class Items
     {
+        public static final ITag.INamedTag<Item> DOORS = tag("doors");
         public static final ITag.INamedTag<Item> WOODEN_DOORS = tag("wooden_doors");
         public static final ITag.INamedTag<Item> WOODEN_CRATES = tag("wooden_crates");
         public static final ITag.INamedTag<Item> BEAMS = tag("beams");
