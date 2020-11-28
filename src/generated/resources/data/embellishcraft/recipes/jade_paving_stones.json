@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " i ",
+    "i i",
+    " i "
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:jade_cobblestone"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:jade_paving_stones",
+    "count": 4
+  }
+}

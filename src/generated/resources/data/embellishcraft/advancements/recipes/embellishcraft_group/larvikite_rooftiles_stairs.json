@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_larvikite": {
+    "has_larvikite_rooftiles": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_larvikite",
+      "has_larvikite_rooftiles",
       "has_the_recipe"
     ]
   ]

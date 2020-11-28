@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_jade": {
+    "has_jade_rooftiles": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_jade",
+      "has_jade_rooftiles",
       "has_the_recipe"
     ]
   ]

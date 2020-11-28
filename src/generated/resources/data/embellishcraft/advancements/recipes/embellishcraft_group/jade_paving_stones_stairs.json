@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:jade_paving_stones_stairs"
+    ]
+  },
+  "criteria": {
+    "has_jade_paving_stones": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:jade_paving_stones"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:jade_paving_stones_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jade_paving_stones",
+      "has_the_recipe"
+    ]
+  ]
+}

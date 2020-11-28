@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:slate_paving_stones"
+    ]
+  },
+  "criteria": {
+    "has_slate_cobblestones": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:slate_cobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:slate_paving_stones"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_slate_cobblestones",
+      "has_the_recipe"
+    ]
+  ]
+}

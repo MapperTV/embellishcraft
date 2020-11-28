@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:gneiss_paving_stones_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_gneiss_paving_stones_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:gneiss_paving_stones_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:gneiss_paving_stones_from_slabs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gneiss_paving_stones_slab",
+      "has_the_recipe"
+    ]
+  ]
+}
