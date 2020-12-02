@@ -1293,19 +1293,19 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomDoorBlock> STEEL_DOOR = BLOCKS.register("steel_door",
         () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
     public static final RegistryObject<CustomDoorBlock> STURDY_STEEL_DOOR = BLOCKS.register("sturdy_steel_door",
-        () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+        () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 1200.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
     public static final RegistryObject<CustomDoorBlock> WARNING_STEEL_DOOR = BLOCKS.register("warning_steel_door",
         () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
     public static final RegistryObject<CustomDoorBlock> WHITE_STEEL_DOOR = BLOCKS.register("white_steel_door",
         () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
     public static final RegistryObject<CustomDoorBlock> STURDY_WHITE_STEEL_DOOR = BLOCKS.register("sturdy_white_steel_door",
-        () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+        () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 1200.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
     public static final RegistryObject<CustomDoorBlock> WARNING_WHITE_STEEL_DOOR = BLOCKS.register("warning_white_steel_door",
         () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
     public static final RegistryObject<CustomDoorBlock> RUSTY_DOOR = BLOCKS.register("rusty_door",
         () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
     public static final RegistryObject<CustomDoorBlock> STURDY_RUSTY_DOOR = BLOCKS.register("sturdy_rusty_door",
-        () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
+        () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 1200.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
     public static final RegistryObject<CustomDoorBlock> WARNING_RUSTY_DOOR = BLOCKS.register("warning_rusty_door",
         () -> new CustomDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
 
