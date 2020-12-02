@@ -161,6 +161,13 @@ public class ECRecipes extends RecipeProvider
                 ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get(), null, null, null);
         }
 
+        // Paving stones
+        ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PAVING_STONES.get(), 4).patternLine(" i ").patternLine("i i").patternLine(" i ").key('i', Blocks.STONE).addCriterion("has_stone",
+            hasItem(Blocks.STONE)).build(consumer);
+
+        CreateBasicRecipes(consumer, ECBlockRegistry.PAVING_STONES.get(), ECBlockRegistry.PAVING_STONES_STAIRS.get(), ECBlockRegistry.PAVING_STONES_SLAB.get(), ECBlockRegistry.PAVING_STONES_WALL.get(),
+            ECBlockRegistry.PAVING_STONES_PRESSURE_PLATE.get(), null);
+
         // Andesite
         ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.ANDESITE_BUTTON.get()).addIngredient(Blocks.ANDESITE).addCriterion("has_andesite", hasItem(Blocks.ANDESITE)).build(consumer);
 

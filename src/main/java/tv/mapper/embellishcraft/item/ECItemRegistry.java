@@ -256,6 +256,18 @@ public class ECItemRegistry
         ITEMS.register(type.getName() + "_rooftiles_slab", () -> new BlockItem(ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(
             Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Paving stones
+    public static final RegistryObject<Item> PAVING_STONES_ITEM = ITEMS.register("paving_stones",
+        () -> new BlockItem(ECBlockRegistry.PAVING_STONES.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PAVING_STONES_STAIRS_ITEM = ITEMS.register("paving_stones_stairs",
+        () -> new BlockItem(ECBlockRegistry.PAVING_STONES_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PAVING_STONES_SLAB_ITEM = ITEMS.register("paving_stones_slab",
+        () -> new BlockItem(ECBlockRegistry.PAVING_STONES_SLAB.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PAVING_STONES_WALL_ITEM = ITEMS.register("paving_stones_wall",
+        () -> new BlockItem(ECBlockRegistry.PAVING_STONES_WALL.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> PAVING_STONES_PRESSURE_PLATE_ITEM = ITEMS.register("paving_stones_pressure_plate",
+        () -> new BlockItem(ECBlockRegistry.PAVING_STONES_PRESSURE_PLATE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+
     // Andesite
     public static final RegistryObject<Item> SMOOTH_ANDESITE_ITEM = ITEMS.register("smooth_andesite",
         () -> new BlockItem(ECBlockRegistry.SMOOTH_ANDESITE.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));

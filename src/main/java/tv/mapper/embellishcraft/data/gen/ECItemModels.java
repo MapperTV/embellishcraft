@@ -33,6 +33,8 @@ public class ECItemModels extends BaseItemModels
         registerStone("jade");
         registerStone("larvikite");
 
+        registerBlockBasics("paving_stones", true, true, true, true, true, false);
+
         registerMcStone("andesite");
         registerMcStone("diorite");
         registerMcStone("granite");

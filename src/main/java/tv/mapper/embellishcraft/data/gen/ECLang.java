@@ -106,6 +106,12 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Rooftiles Slab");
                 }
 
+                addBlock(ECBlockRegistry.PAVING_STONES, "Paving Stones");
+                addBlock(ECBlockRegistry.PAVING_STONES_SLAB, "Paving Stones Slab");
+                addBlock(ECBlockRegistry.PAVING_STONES_STAIRS, "Paving Stones Stairs");
+                addBlock(ECBlockRegistry.PAVING_STONES_WALL, "Paving Stones Wall");
+                addBlock(ECBlockRegistry.PAVING_STONES_PRESSURE_PLATE, "Paving Stones Pressure Plate");
+
                 // Andesite
                 addBlock(ECBlockRegistry.SMOOTH_ANDESITE, "Smooth Andesite");
                 addBlock(ECBlockRegistry.SMOOTH_ANDESITE_SLAB, "Smooth Andesite Slab");
@@ -744,6 +750,12 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)), "Escalier en tuiles " + de + RockType.byId(j).getFrName());
                     addBlock(ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)), "Dalle en tuiles " + de + RockType.byId(j).getFrName());
                 }
+
+                addBlock(ECBlockRegistry.PAVING_STONES, "Pavage");
+                addBlock(ECBlockRegistry.PAVING_STONES_SLAB, "Dalle en pavage");
+                addBlock(ECBlockRegistry.PAVING_STONES_STAIRS, "Escalier en pavage");
+                addBlock(ECBlockRegistry.PAVING_STONES_WALL, "Muret en pavage");
+                addBlock(ECBlockRegistry.PAVING_STONES_PRESSURE_PLATE, "Plaque de pression en pavage");
 
                 // Andesite
                 addBlock(ECBlockRegistry.ANDESITE_BUTTON, "Bouton en andésite");

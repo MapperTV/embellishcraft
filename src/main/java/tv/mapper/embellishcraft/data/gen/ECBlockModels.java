@@ -60,6 +60,9 @@ public class ECBlockModels extends BaseBlockModels
         buildMcSandstone("red_sandstone");
         buildRooftilesStairs("red_sandstone_rooftiles");
 
+        buildWall("paving_stones", modLoc("block/paving_stones"));
+        buildPressure("paving_stones", modLoc("block/paving_stones"));
+
         // Terracotta
         buildWall("terracotta", mcLoc("block/terracotta"));
         buildWall("polished_terracotta", modLoc("block/polished_terracotta"));

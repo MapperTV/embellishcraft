@@ -280,6 +280,19 @@ public class ECBlockRegistry
         BLOCKS.register(type.getName() + "_rooftiles_slab", () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(
             Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Stone paving stones
+    public static final RegistryObject<CustomBlock> PAVING_STONES = BLOCKS.register("paving_stones",
+        () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE));
+    public static final RegistryObject<CustomStairsBlock> PAVING_STONES_STAIRS = BLOCKS.register("paving_stones_stairs",
+        () -> new CustomStairsBlock(() -> Blocks.STONE.getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE));
+    public static final RegistryObject<CustomSlabBlock> PAVING_STONES_SLAB = BLOCKS.register("paving_stones_slab",
+        () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE));
+    public static final RegistryObject<CustomWallBlock> PAVING_STONES_WALL = BLOCKS.register("paving_stones_wall",
+        () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE));
+    public static final RegistryObject<CustomPressurePlateBlock> PAVING_STONES_PRESSURE_PLATE = BLOCKS.register("paving_stones_pressure_plate",
+        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, MaterialColor.STONE).doesNotBlockMovement().hardnessAndResistance(1.5F,
+            6.0F), ToolType.PICKAXE));
+
     // Andesite
     public static final RegistryObject<CustomBlock> SMOOTH_ANDESITE = BLOCKS.register("smooth_andesite",
         () -> new CustomBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE));
