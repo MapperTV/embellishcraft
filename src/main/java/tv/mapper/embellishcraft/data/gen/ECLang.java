@@ -89,6 +89,13 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.ROCK_LARGE_BRICKS_WALLS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Large Bricks Wall");
                     addBlock(ECBlockRegistry.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Large Bricks Pressure Plate");
 
+                    // Rock paving stones
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Paving Stones");
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES_STAIRS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Paving Stones Stairs");
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES_SLABS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Paving Stones Slab");
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES_WALLS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Paving Stones Wall");
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES_PRESSURE_PLATES.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Paving Stones Pressure Plate");
+
                     // Rock ornaments
                     addBlock(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Ornament");
                     addBlock(ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Ornament Pressure Plate");
@@ -131,6 +138,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_WALL, "Andesite Large Bricks Wall");
                 addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE, "Andesite Large Bricks Pressure Plate");
 
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES, "Andesite Paving Stones");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES_SLAB, "Andesite Paving Stones Slab");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES_STAIRS, "Andesite Paving Stones Stairs");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES_WALL, "Andesite Paving Stones Wall");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES_PRESSURE_PLATE, "Andesite Paving Stones Pressure Plate");
+
                 addBlock(ECBlockRegistry.ANDESITE_ORNAMENT, "Andesite Ornament");
                 addBlock(ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE, "Andesite Ornament Pressure Plate");
 
@@ -170,6 +183,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_WALL, "Diorite Large Bricks Wall");
                 addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE, "Diorite Large Bricks Pressure Plate");
 
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES, "Diorite Paving Stones");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES_SLAB, "Diorite Paving Stones Slab");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES_STAIRS, "Diorite Paving Stones Stairs");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES_WALL, "Diorite Paving Stones Wall");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES_PRESSURE_PLATE, "Diorite Paving Stones Pressure Plate");
+
                 addBlock(ECBlockRegistry.DIORITE_ORNAMENT, "Diorite Ornament");
                 addBlock(ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE, "Diorite Ornament Pressure Plate");
 
@@ -208,6 +227,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_STAIRS, "Granite Large Bricks Stairs");
                 addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_WALL, "Granite Large Bricks Wall");
                 addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE, "Granite Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES, "Granite Paving Stones");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES_SLAB, "Granite Paving Stones Slab");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES_STAIRS, "Granite Paving Stones Stairs");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES_WALL, "Granite Paving Stones Wall");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES_PRESSURE_PLATE, "Granite Paving Stones Pressure Plate");
 
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT, "Granite Ornament");
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE, "Granite Ornament Pressure Plate");
@@ -252,6 +277,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL, "Sandstone Large Bricks Wall");
                 addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Sandstone Large Bricks Pressure Plate");
 
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES, "Sandstone Paving Stones");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES_SLAB, "Sandstone Paving Stones Slab");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES_STAIRS, "Sandstone Paving Stones Stairs");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES_WALL, "Sandstone Paving Stones Wall");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES_PRESSURE_PLATE, "Sandstone Paving Stones Pressure Plate");
+
                 addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES, "Sandstone Rooftiles");
                 addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB, "Sandstone Rooftiles Slab");
                 addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS, "Sandstone Rooftiles Stairs");
@@ -291,6 +322,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS, "Red Sandstone Large Bricks Stairs");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL, "Red Sandstone Large Bricks Wall");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Red Sandstone Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES, "Red Sandstone Paving Stones");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_SLAB, "Red Sandstone Paving Stones Slab");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_STAIRS, "Red Sandstone Paving Stones Stairs");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_WALL, "Red Sandstone Paving Stones Wall");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_PRESSURE_PLATE, "Red Sandstone Paving Stones Pressure Plate");
 
                 addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES, "Red Sandstone Rooftiles");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB, "Red Sandstone Rooftiles Slab");
@@ -332,6 +369,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS, "Terracotta Large Bricks Stairs");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL, "Terracotta Large Bricks Wall");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE, "Terracotta Large Bricks Pressure Plate");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES, "Terracotta Paving Stones");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES_SLAB, "Terracotta Paving Stones Slab");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES_STAIRS, "Terracotta Paving Stones Stairs");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES_WALL, "Terracotta Paving Stones Wall");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES_PRESSURE_PLATE, "Terracotta Paving Stones Pressure Plate");
 
                 addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES, "Terracotta Rooftiles");
                 addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB, "Terracotta Rooftiles Slab");
@@ -685,6 +728,13 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.ROCK_LARGE_BRICKS_WALLS.get(RockType.byId(j)), "Muret en briques épaisses " + de + RockType.byId(j).getFrName());
                     addBlock(ECBlockRegistry.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)), "Plaque de pression en briques épaisses " + de + RockType.byId(j).getFrName());
 
+                    // Rock paving stones
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES.get(RockType.byId(j)), "Pavage " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES_STAIRS.get(RockType.byId(j)), "Escalier en pavage " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES_SLABS.get(RockType.byId(j)), "Dalle en pavage " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES_WALLS.get(RockType.byId(j)), "Muret en pavage " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_PAVING_STONES_PRESSURE_PLATES.get(RockType.byId(j)), "Plaque de pression en pavage " + de + RockType.byId(j).getFrName());
+
                     // Rock ornaments
                     addBlock(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)), "Ornement en " + RockType.byId(j).getFrName());
                     addBlock(ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)), "Plaque de pression avec ornement en " + RockType.byId(j).getFrName());
@@ -728,6 +778,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_WALL, "Muret en briques épaisses d'andésite");
                 addBlock(ECBlockRegistry.ANDESITE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses d'andésite");
 
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES, "Pavage d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES_SLAB, "Dalle en pavage d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES_STAIRS, "Escalier en pavage d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES_WALL, "Muret en pavage d'andésite");
+                addBlock(ECBlockRegistry.ANDESITE_PAVING_STONES_PRESSURE_PLATE, "Plaque de pression en pavage d'andésite");
+
                 addBlock(ECBlockRegistry.ANDESITE_ORNAMENT, "Ornement en andésite");
                 addBlock(ECBlockRegistry.ANDESITE_ORNAMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en andésite");
 
@@ -768,6 +824,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_WALL, "Muret en briques épaisses de diorite");
                 addBlock(ECBlockRegistry.DIORITE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de diorite");
 
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES, "Pavage de diorite");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES_SLAB, "Dalle en pavage de diorite");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES_STAIRS, "Escalier en pavage de diorite");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES_WALL, "Muret en pavage de diorite");
+                addBlock(ECBlockRegistry.DIORITE_PAVING_STONES_PRESSURE_PLATE, "Plaque de pression en pavage de diorite");
+
                 addBlock(ECBlockRegistry.DIORITE_ORNAMENT, "Ornement en diorite");
                 addBlock(ECBlockRegistry.DIORITE_ORNAMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en diorite");
 
@@ -807,6 +869,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de granite");
                 addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_WALL, "Muret en briques épaisses de granite");
                 addBlock(ECBlockRegistry.GRANITE_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de granite");
+
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES, "Pavage de granite");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES_SLAB, "Dalle en pavage de granite");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES_STAIRS, "Escalier en pavage de granite");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES_WALL, "Muret en pavage de granite");
+                addBlock(ECBlockRegistry.GRANITE_PAVING_STONES_PRESSURE_PLATE, "Plaque de pression en pavage de granite");
 
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT, "Ornement en granite");
                 addBlock(ECBlockRegistry.GRANITE_ORNAMENT_PRESSURE_PLATE, "Plaque de pression avec ornement en granite");
@@ -851,6 +919,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_WALL, "Muret en briques épaisses de grès");
                 addBlock(ECBlockRegistry.SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Dalle de pression en briques épaisses de grès");
 
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES, "Pavage de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES_SLAB, "Dalle en pavages de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES_STAIRS, "Escalier en pavages de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES_WALL, "Muret en pavages de grès");
+                addBlock(ECBlockRegistry.SANDSTONE_PAVING_STONES_PRESSURE_PLATE, "Plaque de pression en pavages de grès");
+
                 addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES, "Tuiles de grès");
                 addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_SLAB, "Dalle en tuile de grès");
                 addBlock(ECBlockRegistry.SANDSTONE_ROOFTILES_STAIRS, "Escalier en tuile de grès");
@@ -890,6 +964,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_STAIRS, "Escaliers en briques épaisses de grès rouge");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_WALL, "Muret en briques épaisses de grès rouge");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_LARGE_BRICKS_PRESSURE_PLATE, "Dalle de pression en briques épaisses de grès rouge");
+
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES, "Pavage de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_SLAB, "Dalle en pavages de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_STAIRS, "Escalier en pavages de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_WALL, "Muret en pavages de grès rouge");
+                addBlock(ECBlockRegistry.RED_SANDSTONE_PAVING_STONES_PRESSURE_PLATE, "Plaque de pression en pavages de grès rouge");
 
                 addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES, "Tuiles de grès rouge");
                 addBlock(ECBlockRegistry.RED_SANDSTONE_ROOFTILES_SLAB, "Dalle en tuile de grès rouge");
@@ -931,6 +1011,12 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses de terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_WALL, "Muret en briques épaisses de terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses de terre cuite");
+
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES, "Pavage en terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES_SLAB, "Dalle en pavage de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES_STAIRS, "Escalier en pavage de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES_WALL, "Muret en pavage de terre cuite");
+                addBlock(ECBlockRegistry.TERRACOTTA_PAVING_STONES_PRESSURE_PLATE, "Plaque de pression en pavage de terre cuite");
 
                 addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES, "Tuiles de terre cuite");
                 addBlock(ECBlockRegistry.TERRACOTTA_ROOFTILES_SLAB, "Dalle en tuile de terre cuite");
