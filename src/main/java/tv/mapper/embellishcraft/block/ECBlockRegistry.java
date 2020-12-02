@@ -1340,7 +1340,7 @@ public class ECBlockRegistry
         }, CustomChestType.OAK_FANCY, WoodsType.byId(type.getId()))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final RegistryObject<VerticalChestBlock> LOCKER = BLOCKS.register("locker",
-        () -> new VerticalChestBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.5F).sound(SoundType.METAL)));
+        () -> new VerticalChestBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 1200.0F).sound(SoundType.METAL)));
 
     // Beds
     public static final Map<DyeColor, RegistryObject<CustomBedBlock>> OAK_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type,
