@@ -118,7 +118,7 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
                 }
                 else
                 {
-                    worldIn.setBlockState(pos, state.func_235896_a_(LIT), 2);
+                    worldIn.setBlockState(pos, state.cycleValue(LIT), 2);
                 }
             }
 
@@ -132,7 +132,7 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
         {
             if(state.get(LIT) && !worldIn.isBlockPowered(pos))
             {
-                worldIn.setBlockState(pos, state.func_235896_a_(LIT), 2);
+                worldIn.setBlockState(pos, state.cycleValue(LIT), 2);
             }
 
         }

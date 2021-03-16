@@ -97,7 +97,7 @@ public class PillowBlock extends BedBlock
             if(!doesBedWork(worldIn))
             {
                 worldIn.removeBlock(pos, false);
-                worldIn.createExplosion((Entity)null, DamageSource.func_233546_a_(), (ExplosionContext)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
+                worldIn.createExplosion((Entity)null, DamageSource.causeBedExplosionDamage(), (ExplosionContext)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
                     Explosion.Mode.DESTROY);
                 return ActionResultType.SUCCESS;
             }
