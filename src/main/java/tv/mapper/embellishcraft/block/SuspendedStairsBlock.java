@@ -33,8 +33,7 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
     private static final VoxelShape BAR2_N = Block.makeCuboidShape(6.0D, 3.0D, 4.0D, 10.0D, 7.0D, 8.0D);
     private static final VoxelShape BAR3_N = Block.makeCuboidShape(6.0D, 7.0D, 8.0D, 10.0D, 11.0D, 12.0D);
     private static final VoxelShape BAR4_N = Block.makeCuboidShape(6.0D, 11.0D, 12.0D, 10.0D, 15.0D, 16.0D);
-    private static final VoxelShape SHAPE_N = VoxelShapes.or(STEP1_N,
-        VoxelShapes.or(STEP2_N, VoxelShapes.or(STEP3_N, VoxelShapes.or(STEP4_N, VoxelShapes.or(BAR1_N, VoxelShapes.or(BAR2_N, VoxelShapes.or(BAR3_N, BAR4_N)))))));
+    private static final VoxelShape SHAPE_N = VoxelShapes.or(STEP1_N, VoxelShapes.or(STEP2_N, VoxelShapes.or(STEP3_N, VoxelShapes.or(STEP4_N, VoxelShapes.or(BAR1_N, VoxelShapes.or(BAR2_N, VoxelShapes.or(BAR3_N, BAR4_N)))))));
 
     private static final VoxelShape STEP1_W = Block.makeCuboidShape(0.0D, 3.0D, 0.0D, 4.0D, 4.0D, 16.0D);
     private static final VoxelShape STEP2_W = Block.makeCuboidShape(4.0D, 7.0D, 0.0D, 8.0D, 8.0D, 16.0D);
@@ -44,8 +43,7 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
     private static final VoxelShape BAR2_W = Block.makeCuboidShape(4.0D, 3.0D, 6.0D, 8.0D, 7.0D, 10.0D);
     private static final VoxelShape BAR3_W = Block.makeCuboidShape(8.0D, 7.0D, 6.0D, 12.0D, 11.0D, 10.0D);
     private static final VoxelShape BAR4_W = Block.makeCuboidShape(12.0D, 11.0D, 6.0D, 16.0D, 15.0D, 10.0D);
-    private static final VoxelShape SHAPE_W = VoxelShapes.or(STEP1_W,
-        VoxelShapes.or(STEP2_W, VoxelShapes.or(STEP3_W, VoxelShapes.or(STEP4_W, VoxelShapes.or(BAR1_W, VoxelShapes.or(BAR2_W, VoxelShapes.or(BAR3_W, BAR4_W)))))));
+    private static final VoxelShape SHAPE_W = VoxelShapes.or(STEP1_W, VoxelShapes.or(STEP2_W, VoxelShapes.or(STEP3_W, VoxelShapes.or(STEP4_W, VoxelShapes.or(BAR1_W, VoxelShapes.or(BAR2_W, VoxelShapes.or(BAR3_W, BAR4_W)))))));
 
     private static final VoxelShape STEP1_S = Block.makeCuboidShape(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 4.0D);
     private static final VoxelShape STEP2_S = Block.makeCuboidShape(0.0D, 11.0D, 4.0D, 16.0D, 12.0D, 8.0D);
@@ -55,8 +53,7 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
     private static final VoxelShape BAR2_S = Block.makeCuboidShape(6.0D, 3.0D, 8.0D, 10.0D, 7.0D, 12.0D);
     private static final VoxelShape BAR3_S = Block.makeCuboidShape(6.0D, 7.0D, 4.0D, 10.0D, 11.0D, 8.0D);
     private static final VoxelShape BAR4_S = Block.makeCuboidShape(6.0D, 11.0D, 0.0D, 10.0D, 15.0D, 4.0D);
-    private static final VoxelShape SHAPE_S = VoxelShapes.or(STEP1_S,
-        VoxelShapes.or(STEP2_S, VoxelShapes.or(STEP3_S, VoxelShapes.or(STEP4_S, VoxelShapes.or(BAR1_S, VoxelShapes.or(BAR2_S, VoxelShapes.or(BAR3_S, BAR4_S)))))));
+    private static final VoxelShape SHAPE_S = VoxelShapes.or(STEP1_S, VoxelShapes.or(STEP2_S, VoxelShapes.or(STEP3_S, VoxelShapes.or(STEP4_S, VoxelShapes.or(BAR1_S, VoxelShapes.or(BAR2_S, VoxelShapes.or(BAR3_S, BAR4_S)))))));
 
     private static final VoxelShape STEP1_E = Block.makeCuboidShape(0.0D, 15.0D, 0.0D, 4.0D, 16.0D, 16.0D);
     private static final VoxelShape STEP2_E = Block.makeCuboidShape(4.0D, 11.0D, 0.0D, 8.0D, 12.0D, 16.0D);
@@ -66,8 +63,7 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
     private static final VoxelShape BAR2_E = Block.makeCuboidShape(8.0D, 3.0D, 6.0D, 12.0D, 7.0D, 10.0D);
     private static final VoxelShape BAR3_E = Block.makeCuboidShape(4.0D, 7.0D, 6.0D, 8.0D, 11.0D, 10.0D);
     private static final VoxelShape BAR4_E = Block.makeCuboidShape(0.0D, 11.0D, 6.0D, 4.0D, 15.0D, 10.0D);
-    private static final VoxelShape SHAPE_E = VoxelShapes.or(STEP1_E,
-        VoxelShapes.or(STEP2_E, VoxelShapes.or(STEP3_E, VoxelShapes.or(STEP4_E, VoxelShapes.or(BAR1_E, VoxelShapes.or(BAR2_E, VoxelShapes.or(BAR3_E, BAR4_E)))))));
+    private static final VoxelShape SHAPE_E = VoxelShapes.or(STEP1_E, VoxelShapes.or(STEP2_E, VoxelShapes.or(STEP3_E, VoxelShapes.or(STEP4_E, VoxelShapes.or(BAR1_E, VoxelShapes.or(BAR2_E, VoxelShapes.or(BAR3_E, BAR4_E)))))));
 
     private static final VoxelShape STEP1_COL_N = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 8.0D);
     private static final VoxelShape STEP2_COL_N = Block.makeCuboidShape(0.0D, 8.0D, 8.0D, 16.0D, 16.0D, 16.0D);
@@ -124,11 +120,13 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
     public SuspendedStairsBlock(Properties properties)
     {
         super(properties);
+        this.setDefaultState(getStateContainer().getBaseState().with(WATERLOGGED, false));
     }
 
     public SuspendedStairsBlock(Properties properties, ToolType toolType)
     {
         super(properties, toolType);
+        this.setDefaultState(getStateContainer().getBaseState().with(WATERLOGGED, false));
     }
 
     @SuppressWarnings("deprecation")
