@@ -59,7 +59,7 @@ minecraft {
             property 'forge.logging.markers', ''
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'embellishcraft', '--all', '--output', file('src/generated/resources/'), '--existing', sourceSets.main.resources.srcDirs[0], '--input', file('src/main/resources')
+            args '--mod', 'embellishcraft', '--all', '--output', file('src/generated/resources/'), '--existing', sourceSets.main.resources.srcDirs[0], '--existing-mod', 'mapperbase', '--input', file('src/main/resources')
             source sourceSets.main
         }
     }
@@ -73,10 +73,6 @@ repositories {
     maven {
        name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
-    }
-    maven {
-        name = "ModMaven"
-        url = "https://modmaven.k-4u.nl"
     }
     maven {
         url 'https://www.dogforce-games.com/maven/'
