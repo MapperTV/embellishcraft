@@ -1064,7 +1064,11 @@ public class ECRecipes extends RecipeProvider
                 ECConstants.McWools[j]).addCriterion("has_" + DyeColor.byId(j).getString() + "_wool", hasItem(ECConstants.McWools[j])).build(consumer);
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()).patternLine(" w ").patternLine("wgw").patternLine(" p ").key('g', Tags.Items.DUSTS_GLOWSTONE).key('p',
                 ItemTags.PLANKS).key('w', ECConstants.McWools[j]).addCriterion("has_" + DyeColor.byId(j).getString() + "_wool", hasItem(ECConstants.McWools[j])).build(consumer);
-
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.MANUAL_TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()).addIngredient(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()).addIngredient(Blocks.LEVER).addCriterion("has_table_lamp", hasItem(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(0)).get())).build(consumer,
+                    DyeColor.byId(j).getString() + "_manual_table_lamp");
+            ShapelessRecipeBuilder.shapelessRecipe(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()).addIngredient(ECBlockRegistry.MANUAL_TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get()).addCriterion("has_manual_table_lamp", hasItem(ECBlockRegistry.MANUAL_TABLE_LAMP_BLOCKS.get(DyeColor.byId(0)).get())).build(consumer,
+                    DyeColor.byId(j).getString() + "_table_lamp_from_manual");
+            
             ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)).get()).patternLine(" S ").patternLine("SWS").patternLine(" S ").key('S', Tags.Items.STRING).key('W',
                 ECConstants.McWools[j]).addCriterion("has_" + DyeColor.byId(j).getString() + "_wool", hasItem(ECConstants.McWools[j])).build(consumer);
 

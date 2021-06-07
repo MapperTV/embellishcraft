@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "embellishcraft:red_manual_table_lamp"
+    }
+  ],
+  "result": {
+    "item": "embellishcraft:red_table_lamp"
+  }
+}
