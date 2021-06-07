@@ -635,6 +635,7 @@ public class ECLang extends LanguageProvider
 
                     addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), name + " Couch");
                     addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), name + " Table Lamp");
+                    addBlock(ECBlockRegistry.MANUAL_TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), name + " Table Lamp (Manual)");
                     addBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)), name + " Pillow");
 
                     addBlock(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), name + " Acacia Fancy Bed");
@@ -1270,6 +1271,7 @@ public class ECLang extends LanguageProvider
                 {
                     addBlock(ECBlockRegistry.COUCH_BLOCKS.get(DyeColor.byId(j)), "Canapé " + frColorsM[j]);
                     addBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), "Lampe de chevet " + frColorsF[j]);
+                    addBlock(ECBlockRegistry.MANUAL_TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)), "Lampe de chevet " + frColorsF[j] + " (manuelle)");
                     addBlock(ECBlockRegistry.PILLOW_BLOCKS.get(DyeColor.byId(j)), "Coussin " + frColorsM[j]);
 
                     addBlock(ECBlockRegistry.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois d'acajou");

@@ -9,14 +9,20 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.IWaterLoggable;
 import net.minecraft.block.RedstoneTorchBlock;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
@@ -32,6 +38,7 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
 {
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public boolean isManual = false;
 
     private static final VoxelShape BASE = Block.makeCuboidShape(6.0D, 0.0D, 6.0D, 10.0D, 3.0D, 10.0D);
     private static final VoxelShape ROD = Block.makeCuboidShape(7.0D, 3.0D, 7.0D, 9.0D, 4.0D, 9.0D);
@@ -42,18 +49,19 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
 
     private static final VoxelShape LAMP_COL = Block.makeCuboidShape(4.0D, 0.0D, 4.0D, 12.0D, 13.0D, 12.0D);
 
-    public LampBlock(Properties properties)
+    public LampBlock(Properties properties, boolean isManual)
     {
         super(properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false).with(WATERLOGGED, Boolean.valueOf(false)));
-
+        this.isManual = isManual;
     }
 
-    public LampBlock(Properties properties, ToolType toolType)
+    public LampBlock(Properties properties, ToolType toolType, boolean isManual)
     {
         super(properties);
         this.toolType = toolType;
         this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.isManual = isManual;
     }
 
     @Override
@@ -72,6 +80,28 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
     {
         return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
+    }
+
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult result)
+    {
+        if(!world.isRemote)
+        {
+            BlockState blockstate = this.setLit(state, world, pos);
+            float f = blockstate.get(LIT) ? 1.5F : 0.7F;
+            world.playSound((PlayerEntity)null, pos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 0.3F, f);
+            return ActionResultType.CONSUME;
+        }
+        else
+            return ActionResultType.SUCCESS;
+    }
+
+    public BlockState setLit(BlockState state, World world, BlockPos pos)
+    {
+        state = state.cycleValue(LIT);
+        world.setBlockState(pos, state, 3);
+        // this.updateNeighbors(state, world, pos);
+        return state;
     }
 
     @Override
@@ -107,7 +137,7 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
     @Override
     public void neighborChanged(BlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos, boolean isMoving)
     {
-        if(!worldIn.isRemote)
+        if(!worldIn.isRemote && !isManual)
         {
             boolean flag = state.get(LIT);
             if(flag != worldIn.isBlockPowered(pos))
