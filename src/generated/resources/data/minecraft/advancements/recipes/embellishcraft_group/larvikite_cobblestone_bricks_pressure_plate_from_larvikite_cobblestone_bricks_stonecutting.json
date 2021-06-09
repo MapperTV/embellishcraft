@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:larvikite_cobblestone_bricks_pressure_plate_from_larvikite_cobblestone_bricks_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_larvikite_cobblestone_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "embellishcraft:larvikite_cobblestone_bricks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:larvikite_cobblestone_bricks_pressure_plate_from_larvikite_cobblestone_bricks_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_larvikite_cobblestone_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

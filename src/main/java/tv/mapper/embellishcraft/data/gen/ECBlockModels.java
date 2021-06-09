@@ -288,6 +288,7 @@ public class ECBlockModels extends BaseBlockModels
     {
         buildWall(name, modLoc("block/" + name));
         buildWall(name + "_cobblestone", modLoc("block/" + name + "_cobblestone"));
+        buildWall(name + "_cobblestone_bricks", modLoc("block/" + name + "_cobblestone_bricks"));
         buildWall("smooth_" + name, modLoc("block/smooth_" + name));
         buildWall("polished_" + name, modLoc("block/polished_" + name));
         buildWall(name + "_paving", modLoc("block/" + name + "_paving"));
@@ -301,6 +302,7 @@ public class ECBlockModels extends BaseBlockModels
     {
         buildPressure(name, modLoc("block/" + name));
         buildPressure(name + "_cobblestone", modLoc("block/" + name + "_cobblestone"));
+        buildPressure(name + "_cobblestone_bricks", modLoc("block/" + name + "_cobblestone_bricks"));
         buildPressure("smooth_" + name, modLoc("block/smooth_" + name));
         buildPressure("polished_" + name, modLoc("block/polished_" + name));
         buildPressure(name + "_paving", modLoc("block/" + name + "_paving"));

@@ -36,8 +36,13 @@ public class ECStonecutterRecipes extends RecipeProvider
                     RockType.byId(j).getName() + "_ornament_from_" + RockType.byId(j).getName() + "_stonecutting");
 
             basicRecipes(consumer, ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_SLABS.get(RockType.byId(j)).get(),
-                ECBlockRegistry.ROCK_COBBLESTONE_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_WALLS.get(RockType.byId(j)).get(),
-                ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)).get());
+                    ECBlockRegistry.ROCK_COBBLESTONE_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_WALLS.get(RockType.byId(j)).get(),
+                    ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)).get());
+            
+            basicRecipes(consumer, ECBlockRegistry.ROCK_COBBLESTONE_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_SLABS.get(RockType.byId(j)).get(),
+                    ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_WALLS.get(RockType.byId(j)).get(),
+                    ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get());
+            
             basicRecipes(consumer, ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.SMOOTH_ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_WALLS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.SMOOTH_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get());

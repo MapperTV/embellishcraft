@@ -77,6 +77,15 @@ public class ECRecipes extends RecipeProvider
             CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_STAIRS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_COBBLESTONE_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_WALLS.get(RockType.byId(j)).get(),
                 ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            
+            // Cobblestone bricks
+            ShapedRecipeBuilder.shapedRecipe(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS.get(RockType.byId(j)).get(), 4).patternLine("ii").patternLine("ii").key('i',
+                    ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get()).addCriterion("has_" + RockType.byId(j).getString() + "_cobblestone",
+                        hasItem(ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get())).build(consumer);
+            
+            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_COBBLESTONE_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_STAIRS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_WALLS.get(RockType.byId(j)).get(),
+                ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             // Smooth rocks
             CreateBasicRecipes(consumer, ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_STAIRS.get(RockType.byId(j)).get(),

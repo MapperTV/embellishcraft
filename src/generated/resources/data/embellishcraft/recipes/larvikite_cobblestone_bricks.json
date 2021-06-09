@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ii",
+    "ii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:larvikite_cobblestone"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:larvikite_cobblestone_bricks",
+    "count": 4
+  }
+}

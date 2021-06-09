@@ -47,6 +47,17 @@ public class ECItemRegistry
 
     public static final Map<RockType, RegistryObject<BlockItem>> ROCK_COBBLESTONE_PRESSURE_PLATES_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, ITEMS.register(type.getName() + "_cobblestone_pressure_plate", () -> new BlockItem(ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Cobblestones bricks
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCKS_COBBLESTONE_BRICKS_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, ITEMS.register(type.getName() + "_cobblestone_bricks", () -> new BlockItem(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_COBBLESTONE_BRICKS_STAIRS_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, ITEMS.register(type.getName() + "_cobblestone_bricks_stairs", () -> new BlockItem(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_STAIRS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_COBBLESTONE_BRICKS_SLABS_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, ITEMS.register(type.getName() + "_cobblestone_bricks_slab", () -> new BlockItem(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_SLABS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_COBBLESTONE_BRICKS_WALLS_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, ITEMS.register(type.getName() + "_cobblestone_bricks_wall", () -> new BlockItem(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_WALLS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<BlockItem>> ROCK_COBBLESTONE_BRICKS_PRESSURE_PLATES_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, ITEMS.register(type.getName() + "_cobblestone_bricks_pressure_plate", () -> new BlockItem(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_PRESSURE_PLATES.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
     // Smooth rocks
     public static final Map<RockType, RegistryObject<BlockItem>> SMOOTH_ROCK_ITEMS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, ITEMS.register("smooth_" + type.getName(), () -> new BlockItem(ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 

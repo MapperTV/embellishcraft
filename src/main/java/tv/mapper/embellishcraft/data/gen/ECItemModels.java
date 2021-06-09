@@ -198,6 +198,7 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics(name, true, true, true, true, true, false);
         getBuilder(name + "_button").parent(new UncheckedModelFile(modid + ":block/" + name + "_button_inventory"));
         registerBlockBasics(name + "_cobblestone", true, true, true, true, true, false);
+        registerBlockBasics(name + "_cobblestone_bricks", true, true, true, true, true, false);
         registerBlockBasics("smooth_" + name, true, true, true, true, true, false);
         registerBlockBasics("polished_" + name, true, true, true, true, true, false);
         registerBlockBasics(name + "_paving", true, true, true, true, true, false);

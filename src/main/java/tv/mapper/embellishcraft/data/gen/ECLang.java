@@ -47,6 +47,13 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.ROCK_COBBLESTONE_WALLS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Cobblestone Wall");
                     addBlock(ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Cobblestone Pressure Plate");
 
+                    // Cobbletone bricks
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Cobblestone Bricks");
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_STAIRS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Cobblestone Bricks Stairs");
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_SLABS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Cobblestone Bricks Slab");
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_WALLS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Cobblestone Bricks Wall");
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getName()) + " Cobblestone Bricks Pressure Plate");
+
                     // Smooth rocks
                     addBlock(ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)), "Smooth " + StringUtils.capitalise(RockType.byId(j).getName()));
                     addBlock(ECBlockRegistry.SMOOTH_ROCK_STAIRS.get(RockType.byId(j)), "Smooth " + StringUtils.capitalise(RockType.byId(j).getName()) + " Stairs");
@@ -692,6 +699,13 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.ROCK_COBBLESTONE_SLABS.get(RockType.byId(j)), "Dalle en pierres " + de + RockType.byId(j).getFrName());
                     addBlock(ECBlockRegistry.ROCK_COBBLESTONE_WALLS.get(RockType.byId(j)), "Muret en pierres " + de + RockType.byId(j).getFrName());
                     addBlock(ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)), "Plaque de pression en pierres " + de + RockType.byId(j).getFrName());
+
+                    // Cobblestone bricks
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS.get(RockType.byId(j)), "Briques de pierres " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_STAIRS.get(RockType.byId(j)), "Escalier en briques de pierres " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_SLABS.get(RockType.byId(j)), "Dalle en briques de pierres " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_WALLS.get(RockType.byId(j)), "Muret en briques de pierres " + de + RockType.byId(j).getFrName());
+                    addBlock(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)), "Plaque de pression en briques de pierres " + de + RockType.byId(j).getFrName());
 
                     // Smooth rocks
                     addBlock(ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)), StringUtils.capitalise(RockType.byId(j).getFrName()) + " lisse");

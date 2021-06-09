@@ -9,7 +9,7 @@ displayName="EmbellishCraft"
 #updateJSONURL="http://myurl.me/"
 displayURL="http://mapper.tv/embellishcraft/"
 logoFile="embellishcraft_logo.png"
-credits="The Forge team and community for the help and resources."
+credits="The Forge team and community for the help and resources. Quark for the cobblestone brick texture."
 authors="Mapper"
 description='''EmbellishCraft is a mod that adds various decorative elements to Minecraft.'''
 

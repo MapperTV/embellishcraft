@@ -74,6 +74,17 @@ public class ECBlockRegistry
 
     public static final Map<RockType, RegistryObject<CustomPressurePlateBlock>> ROCK_COBBLESTONE_PRESSURE_PLATES = Arrays.stream(RockType.values()).map(type -> Pair.of(type, BLOCKS.register(type.getName() + "_cobblestone_pressure_plate", () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
+    // Cobblestones bricks
+    public static final Map<RockType, RegistryObject<CustomBlock>> ROCK_COBBLESTONE_BRICKS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, BLOCKS.register(type.getName() + "_cobblestone_bricks", () -> new CustomBlock(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<CustomStairsBlock>> ROCK_COBBLESTONE_BRICKS_STAIRS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, BLOCKS.register(type.getName() + "_cobblestone_bricks_stairs", () -> new CustomStairsBlock(() -> ROCK_COBBLESTONES.get(type).get().getDefaultState(), Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<CustomSlabBlock>> ROCK_COBBLESTONE_BRICKS_SLABS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, BLOCKS.register(type.getName() + "_cobblestone_bricks_slab", () -> new CustomSlabBlock(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<CustomWallBlock>> ROCK_COBBLESTONE_BRICKS_WALLS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, BLOCKS.register(type.getName() + "_cobblestone_bricks_wall", () -> new CustomWallBlock(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
+    public static final Map<RockType, RegistryObject<CustomPressurePlateBlock>> ROCK_COBBLESTONE_BRICKS_PRESSURE_PLATES = Arrays.stream(RockType.values()).map(type -> Pair.of(type, BLOCKS.register(type.getName() + "_cobblestone_bricks_pressure_plate", () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+
     // Smooth rocks
     public static final Map<RockType, RegistryObject<CustomBlock>> SMOOTH_ROCK_BLOCKS = Arrays.stream(RockType.values()).map(type -> Pair.of(type, BLOCKS.register("smooth_" + type.getName(), () -> new CustomBlock(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(1.5F, 6.0F), ToolType.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 

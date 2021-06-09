@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "embellishcraft:block/jade_cobblestone_bricks"
+  }
+}

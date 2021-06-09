@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "embellishcraft:block/gneiss_cobblestone_bricks"
+  }
+}

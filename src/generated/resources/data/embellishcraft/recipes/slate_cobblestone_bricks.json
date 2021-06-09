@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ii",
+    "ii"
+  ],
+  "key": {
+    "i": {
+      "item": "embellishcraft:slate_cobblestone"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:slate_cobblestone_bricks",
+    "count": 4
+  }
+}

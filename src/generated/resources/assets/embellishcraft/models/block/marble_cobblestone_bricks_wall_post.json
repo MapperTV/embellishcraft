@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "embellishcraft:block/marble_cobblestone_bricks"
+  }
+}
