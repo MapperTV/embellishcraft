@@ -8,7 +8,7 @@
   ],
   "key": {
     "P": {
-      "item": "minecraft:dark_oak_planks"
+      "item": "minecraft:dark_oak_slab"
     },
     "S": {
       "tag": "forge:rods/wooden"
@@ -16,6 +16,6 @@
   },
   "result": {
     "item": "embellishcraft:dark_oak_suspended_stairs",
-    "count": 6
+    "count": 4
   }
 }

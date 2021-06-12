@@ -655,9 +655,12 @@ public class ECItemRegistry
 
     // Stairs
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> SUSPENDED_STAIRS_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, ITEMS.register(type.getString() + "_suspended_stairs", () -> new FuelBlockItem(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.suspendedStairBurnTime)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<McWoods, RegistryObject<FuelBlockItem>> LARGE_SUSPENDED_STAIRS_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, ITEMS.register(type.getString() + "_large_suspended_stairs", () -> new FuelBlockItem(ECBlockRegistry.LARGE_SUSPENDED_STAIRS_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.largeSuspendedStairBurnTime)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final RegistryObject<Item> STEEL_SUSPENDED_STAIRS_ITEM = ITEMS.register("steel_suspended_stairs", () -> new BlockItem(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
     public static final RegistryObject<Item> RUSTY_SUSPENDED_STAIRS_ITEM = ITEMS.register("rusty_suspended_stairs", () -> new BlockItem(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> STEEL_LARGE_SUSPENDED_STAIRS_ITEM = ITEMS.register("steel_large_suspended_stairs", () -> new BlockItem(ECBlockRegistry.STEEL_LARGE_SUSPENDED_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
+    public static final RegistryObject<Item> RUSTY_LARGE_SUSPENDED_STAIRS_ITEM = ITEMS.register("rusty_large_suspended_stairs", () -> new BlockItem(ECBlockRegistry.RUSTY_LARGE_SUSPENDED_STAIRS.get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT)));
 
     // Doors
     public static final Map<McWoods, RegistryObject<FuelBlockItem>> FANCY_DOOR_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, ITEMS.register(type.getString() + "_fancy_door", () -> new FuelBlockItem(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(type).get(), new Item.Properties().group(ModItemGroups.EMBELLISHCRAFT), ECConstants.doorBurnTime)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "embellishcraft:crimson_large_suspended_stairs"
+    ]
+  },
+  "criteria": {
+    "has_crimson_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:crimson_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "embellishcraft:crimson_large_suspended_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_crimson_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

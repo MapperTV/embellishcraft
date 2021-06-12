@@ -1,0 +1,6 @@
+{
+  "parent": "embellishcraft:block/large_suspended_stairs_text90",
+  "textures": {
+    "all": "embellishcraft:block/rust"
+  }
+}

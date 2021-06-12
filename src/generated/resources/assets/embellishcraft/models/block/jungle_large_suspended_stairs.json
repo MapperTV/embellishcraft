@@ -1,0 +1,6 @@
+{
+  "parent": "embellishcraft:block/large_suspended_stairs",
+  "textures": {
+    "all": "minecraft:block/jungle_planks"
+  }
+}

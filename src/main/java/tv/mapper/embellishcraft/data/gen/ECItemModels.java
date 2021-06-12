@@ -164,6 +164,7 @@ public class ECItemModels extends BaseItemModels
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
             getBuilder(McWoods.byId(j).getString() + "_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_suspended_stairs"));
+            getBuilder(McWoods.byId(j).getString() + "_large_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_large_suspended_stairs"));
             getBuilder(McWoods.byId(j).getString() + "_fancy_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getString() + "_fancy_door"));
             getBuilder(McWoods.byId(j).getString() + "_plain_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/" + McWoods.byId(j).getString() + "_plain_door"));
             getBuilder(McWoods.byId(j).getString() + "_wooden_crate").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getString() + "_wooden_crate"));
@@ -179,6 +180,8 @@ public class ECItemModels extends BaseItemModels
 
         getBuilder("steel_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/steel_suspended_stairs"));
         getBuilder("rusty_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/rusty_suspended_stairs"));
+        getBuilder("steel_large_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/steel_large_suspended_stairs"));
+        getBuilder("rusty_large_suspended_stairs").parent(new UncheckedModelFile(modid + ":block/rusty_large_suspended_stairs"));
 
         // Doors
         getBuilder("steel_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_door"));

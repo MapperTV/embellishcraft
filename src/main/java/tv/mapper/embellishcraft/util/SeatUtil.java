@@ -13,6 +13,7 @@ import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CouchBlock;
+import tv.mapper.embellishcraft.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.entity.EntityChair;
 
 @Mod.EventBusSubscriber
@@ -30,7 +31,7 @@ public class SeatUtil
         {
             if(!player.isSneaking())
             {
-                if((block instanceof ChairBlock || block instanceof CouchBlock) && world.isAirBlock(pos.up()) && !EntityChair.OCCUPIED.containsKey(pos))
+                if((block instanceof ChairBlock || block instanceof CouchBlock || block instanceof SuspendedStairsBlock) && world.isAirBlock(pos.up()) && !EntityChair.OCCUPIED.containsKey(pos))
                 {
                     event.setCanceled(true);
                     if(event.getSide() == LogicalSide.SERVER)

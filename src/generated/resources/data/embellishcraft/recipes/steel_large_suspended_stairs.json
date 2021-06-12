@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  P",
+    " PS",
+    "PS "
+  ],
+  "key": {
+    "P": {
+      "item": "embellishcraft:dark_metal_floor_slab"
+    },
+    "S": {
+      "tag": "forge:rods/steel"
+    }
+  },
+  "result": {
+    "item": "embellishcraft:steel_large_suspended_stairs",
+    "count": 6
+  }
+}

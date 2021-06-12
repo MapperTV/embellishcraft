@@ -1,5 +1,5 @@
 {
-  "parent": "embellishcraft:block/suspended_stairs",
+  "parent": "embellishcraft:block/suspended_stairs_text90",
   "textures": {
     "all": "embellishcraft:block/rust"
   }

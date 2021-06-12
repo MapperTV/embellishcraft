@@ -306,12 +306,15 @@ public class ECBlockStates extends BaseBlockStates
         for(int j = 0; j < McWoods.values().length; j++)
         {
             horizontalBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getString() + "_suspended_stairs"), 0);
+            horizontalBlock(ECBlockRegistry.LARGE_SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)).get(), new UncheckedModelFile(mod_id + ":block/" + McWoods.byId(j).getString() + "_large_suspended_stairs"), 0);
             doorBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getString() + "_fancy_door_bottom"), modLoc("block/" + McWoods.byId(j).getString() + "_fancy_door_top"));
             doorBlock(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getString() + "_plain_door_bottom"), modLoc("block/" + McWoods.byId(j).getString() + "_plain_door_top"));
         }
 
         horizontalBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/steel_suspended_stairs"), 0);
         horizontalBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/rusty_suspended_stairs"), 0);
+        horizontalBlock(ECBlockRegistry.STEEL_LARGE_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/steel_large_suspended_stairs"), 0);
+        horizontalBlock(ECBlockRegistry.RUSTY_LARGE_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/rusty_large_suspended_stairs"), 0);
 
         // Doors
         doorBlock(ECBlockRegistry.STEEL_DOOR.get(), modLoc("block/steel_door_bottom"), modLoc("block/steel_door_top"));

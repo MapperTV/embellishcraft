@@ -8,7 +8,7 @@
   ],
   "key": {
     "P": {
-      "item": "minecraft:spruce_planks"
+      "item": "minecraft:spruce_slab"
     },
     "S": {
       "tag": "forge:rods/wooden"
@@ -16,6 +16,6 @@
   },
   "result": {
     "item": "embellishcraft:spruce_suspended_stairs",
-    "count": 6
+    "count": 4
   }
 }

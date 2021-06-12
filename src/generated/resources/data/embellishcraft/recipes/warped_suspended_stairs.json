@@ -8,7 +8,7 @@
   ],
   "key": {
     "P": {
-      "item": "minecraft:warped_planks"
+      "item": "minecraft:warped_slab"
     },
     "S": {
       "tag": "forge:rods/wooden"
@@ -16,6 +16,6 @@
   },
   "result": {
     "item": "embellishcraft:warped_suspended_stairs",
-    "count": 6
+    "count": 4
   }
 }
