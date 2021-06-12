@@ -1,13 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "SS",
-    "SS",
-    "SS"
+    "BS",
+    "RS",
+    "BS"
   ],
   "key": {
     "S": {
       "tag": "forge:ingots/steel"
+    },
+    "R": {
+      "tag": "forge:rods/steel"
+    },
+    "B": {
+      "item": "mapperbase:bolt"
     }
   },
   "result": {

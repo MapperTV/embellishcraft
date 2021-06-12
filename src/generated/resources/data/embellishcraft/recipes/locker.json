@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "PPP",
+    " P ",
     "P P",
-    "PIP"
+    " I "
   ],
   "key": {
     "P": {
@@ -14,6 +14,7 @@
     }
   },
   "result": {
-    "item": "embellishcraft:locker"
+    "item": "embellishcraft:locker",
+    "count": 2
   }
 }
