@@ -3,12 +3,12 @@ package tv.mapper.embellishcraft.network;
 import java.util.UUID;
 import java.util.function.Supplier;
 
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.network.PacketBuffer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.network.NetworkEvent;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraftforge.fmllegacy.network.NetworkEvent;
 import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.tileentity.VerticalChestTileEntity;
 
@@ -21,12 +21,12 @@ public class LockerUUIDPacket
         this.pos = pos;
     }
 
-    public static void encode(LockerUUIDPacket packet, PacketBuffer buffer)
+    public static void encode(LockerUUIDPacket packet, FriendlyByteBuf buffer)
     {
         buffer.writeBlockPos(packet.pos);
     }
 
-    public static LockerUUIDPacket decode(PacketBuffer buffer)
+    public static LockerUUIDPacket decode(FriendlyByteBuf buffer)
     {
         BlockPos pos = buffer.readBlockPos();
 
@@ -38,10 +38,10 @@ public class LockerUUIDPacket
     {
         context.get().enqueueWork(() ->
         {
-            ServerPlayerEntity player = context.get().getSender();
-            UUID id = player.getUniqueID();
-            World world = player.getServerWorld();
-            TileEntity te = world.getTileEntity(packet.pos);
+            ServerPlayer player = context.get().getSender();
+            UUID id = player.getUUID();
+            Level world = player.getLevel();
+            BlockEntity te = world.getBlockEntity(packet.pos);
 
             if(te instanceof VerticalChestTileEntity)
             {

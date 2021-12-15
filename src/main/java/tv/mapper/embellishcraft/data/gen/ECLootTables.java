@@ -2,23 +2,24 @@ package tv.mapper.embellishcraft.data.gen;
 
 import java.util.Arrays;
 
-import net.minecraft.advancements.criterion.StatePropertiesPredicate;
-import net.minecraft.block.Block;
-import net.minecraft.block.ChestBlock;
-import net.minecraft.block.DoorBlock;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.loot.ConstantRange;
-import net.minecraft.loot.DynamicLootEntry;
-import net.minecraft.loot.ItemLootEntry;
-import net.minecraft.loot.LootPool;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.conditions.BlockStateProperty;
-import net.minecraft.loot.functions.CopyName;
-import net.minecraft.loot.functions.CopyNbt;
-import net.minecraft.loot.functions.SetContents;
-import net.minecraft.loot.functions.SetCount;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ChestBlock;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.DynamicLoot;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.CopyNameFunction;
+import net.minecraft.world.level.storage.loot.functions.CopyNbtFunction;
+import net.minecraft.world.level.storage.loot.functions.SetContainerContents;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.CrateBlock;
 import tv.mapper.embellishcraft.block.CustomBedBlock;
@@ -65,38 +66,21 @@ public class ECLootTables extends BaseLootTableProvider
         for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
         {
             // Rocks
-            lootTables.put(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(),
-                createSilkTable(ECConstants.MODID, ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get()));
+            lootTables.put(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), createSilkTable(ECConstants.MODID, ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get()));
         }
     }
 
     protected LootTable.Builder createPlateTable(String modid, Block block)
     {
         String name = block.getRegistryName().toString().replace(modid + ":", "");
-        LootPool.Builder builder = LootPool.builder().name(name).rolls(ConstantRange.of(1)).addEntry(withExplosionDecay(block,
-            ItemLootEntry.builder(block).acceptFunction(SetCount.builder(ConstantRange.of(2)).acceptCondition(
-                BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 2)))).acceptFunction(
-                    SetCount.builder(ConstantRange.of(3)).acceptCondition(
-                        BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 3)))).acceptFunction(
-                            SetCount.builder(ConstantRange.of(4)).acceptCondition(
-                                BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 4)))).acceptFunction(
-                                    SetCount.builder(ConstantRange.of(5)).acceptCondition(
-                                        BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 5)))).acceptFunction(
-                                            SetCount.builder(ConstantRange.of(6)).acceptCondition(
-                                                BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 6)))).acceptFunction(
-                                                    SetCount.builder(ConstantRange.of(7)).acceptCondition(
-                                                        BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 7)))).acceptFunction(
-                                                            SetCount.builder(ConstantRange.of(8)).acceptCondition(
-                                                                BlockStateProperty.builder(block).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(PlateBlock.PLATES, 8))))));
-        return LootTable.builder().addLootPool(builder);
+        LootPool.Builder builder = LootPool.lootPool().name(name).setRolls(ConstantValue.exactly(1)).add(withExplosionDecay(block, LootItem.lootTableItem(block).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PlateBlock.PLATES, 2)))).apply(SetItemCountFunction.setCount(ConstantValue.exactly(3)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PlateBlock.PLATES, 3)))).apply(SetItemCountFunction.setCount(ConstantValue.exactly(4)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PlateBlock.PLATES, 4)))).apply(SetItemCountFunction.setCount(ConstantValue.exactly(5)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PlateBlock.PLATES, 5)))).apply(SetItemCountFunction.setCount(ConstantValue.exactly(6)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PlateBlock.PLATES, 6)))).apply(SetItemCountFunction.setCount(ConstantValue.exactly(7)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PlateBlock.PLATES, 7)))).apply(SetItemCountFunction.setCount(ConstantValue.exactly(8)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PlateBlock.PLATES, 8))))));
+        return LootTable.lootTable().withPool(builder);
     }
 
     protected LootTable.Builder createCrateTable(String modid, Block block)
     {
         String name = block.getRegistryName().toString().replace(modid + ":", "");
-        LootPool.Builder builder = LootPool.builder().name(name).rolls(ConstantRange.of(1)).addEntry(ItemLootEntry.builder(block).acceptFunction(CopyName.builder(CopyName.Source.BLOCK_ENTITY)).acceptFunction(
-            CopyNbt.builder(CopyNbt.Source.BLOCK_ENTITY).replaceOperation("Lock", "BlockEntityTag.Lock").replaceOperation("LootTable", "BlockEntityTag.LootTable").replaceOperation("LootTableSeed",
-                "BlockEntityTag.LootTableSeed")).acceptFunction(SetContents.builderIn().addLootEntry(DynamicLootEntry.func_216162_a(CrateBlock.CONTENTS))));
-        return LootTable.builder().addLootPool(builder);
+        LootPool.Builder builder = LootPool.lootPool().name(name).setRolls(ConstantValue.exactly(1)).add(LootItem.lootTableItem(block).apply(CopyNameFunction.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY)).apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY).copy("Lock", "BlockEntityTag.Lock").copy("LootTable", "BlockEntityTag.LootTable").copy("LootTableSeed", "BlockEntityTag.LootTableSeed")).apply(SetContainerContents.setContents().withEntry(DynamicLoot.dynamicEntry(CrateBlock.CONTENTS))));
+        return LootTable.lootTable().withPool(builder);
     }
 }

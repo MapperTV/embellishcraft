@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.codehaus.plexus.util.StringUtils;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.item.DyeColor;
+import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.common.data.LanguageProvider;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.util.McWoods;
@@ -525,7 +525,7 @@ public class ECLang extends LanguageProvider
                 // Corrugated metal plates
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
-                    String color = DyeColor.byId(j).getString();
+                    String color = DyeColor.byId(j).getSerializedName();
                     String check[] = color.split("_");
                     if(check.length > 1)
                         color = StringUtils.capitalise(check[0]) + " " + StringUtils.capitalise(check[1]);
@@ -637,7 +637,7 @@ public class ECLang extends LanguageProvider
 
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
-                    String raw[] = DyeColor.byId(j).getString().split("_");
+                    String raw[] = DyeColor.byId(j).getSerializedName().split("_");
                     if(raw[0].equals("light"))
                         name = StringUtils.capitalise(raw[0]) + " " + StringUtils.capitalise(raw[1]);
                     else

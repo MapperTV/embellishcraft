@@ -1,30 +1,32 @@
 package tv.mapper.embellishcraft.tileentity;
 
-import net.minecraft.tileentity.ChestTileEntity;
-import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.ChestBlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.block.CustomChestBlock;
 import tv.mapper.embellishcraft.util.WoodsType;
 
-public class CustomChestTileEntity extends ChestTileEntity
+public class CustomChestTileEntity extends ChestBlockEntity
 {
     private WoodsType wood;
 
-    protected CustomChestTileEntity(TileEntityType<?> typeIn, WoodsType wood)
+    protected CustomChestTileEntity(BlockEntityType<?> typeIn, BlockPos p_155328_, BlockState p_155329_, WoodsType wood)
     {
-        super(typeIn);
+        super(typeIn, p_155328_, p_155329_);
         this.wood = wood;
     }
 
-    public CustomChestTileEntity(WoodsType wood)
+    public CustomChestTileEntity(BlockPos p_155328_, BlockState p_155329_, WoodsType wood)
     {
-        this(ModTileEntityTypes.CUSTOM_CHEST, wood);
+        this(ModTileEntityTypes.CUSTOM_CHEST, p_155328_, p_155329_, wood);
     }
 
-    public CustomChestTileEntity()
+    public CustomChestTileEntity(BlockPos p_155328_, BlockState p_155329_)
     {
-        this(ModTileEntityTypes.CUSTOM_CHEST, null);
+        this(ModTileEntityTypes.CUSTOM_CHEST, p_155328_, p_155329_, null);
     }
 
     // @OnlyIn(Dist.CLIENT)

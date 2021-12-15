@@ -2,22 +2,22 @@ package tv.mapper.embellishcraft.data.gen;
 
 import java.util.Arrays;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.ChestBlock;
-import net.minecraft.block.DoorBlock;
-import net.minecraft.block.FenceBlock;
-import net.minecraft.block.FenceGateBlock;
-import net.minecraft.block.PressurePlateBlock;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
-import net.minecraft.block.WallBlock;
-import net.minecraft.block.material.Material;
-import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ChestBlock;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ChairBlock;
 import tv.mapper.embellishcraft.block.CouchBlock;
@@ -29,8 +29,8 @@ import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
 import tv.mapper.embellishcraft.data.ECTags;
 import tv.mapper.embellishcraft.util.RockType;
-import tv.mapper.mapperbase.block.CustomButtonBlock;
-import tv.mapper.mapperbase.block.CustomLadderBlock;
+import tv.mapper.mapperbase.world.level.block.CustomButtonBlock;
+import tv.mapper.mapperbase.world.level.block.CustomLadderBlock;
 
 public class ECBlockTags extends BlockTagsProvider
 {
@@ -40,67 +40,67 @@ public class ECBlockTags extends BlockTagsProvider
         super(generatorIn, ECConstants.MODID, existingFileHelper);
     }
 
-    public void registerTags()
+    public void addTags()
     {
         for(RegistryObject<Block> object : ECBlockRegistry.BLOCKS.getEntries())
         {
             Block block = object.get();
 
             if(block instanceof WallBlock)
-                this.getOrCreateBuilder(BlockTags.WALLS).add(block);
+                this.tag(BlockTags.WALLS).add(block);
             else if(block instanceof SlabBlock)
-                this.getOrCreateBuilder(BlockTags.SLABS).add(block);
-            else if(block instanceof StairsBlock)
-                this.getOrCreateBuilder(BlockTags.STAIRS).add(block);
+                this.tag(BlockTags.SLABS).add(block);
+            else if(block instanceof StairBlock)
+                this.tag(BlockTags.STAIRS).add(block);
             else if(block instanceof PressurePlateBlock)
-                this.getOrCreateBuilder(BlockTags.PRESSURE_PLATES).add(block);
+                this.tag(BlockTags.PRESSURE_PLATES).add(block);
             else if(block instanceof CustomButtonBlock)
-                this.getOrCreateBuilder(BlockTags.BUTTONS).add(block);
+                this.tag(BlockTags.BUTTONS).add(block);
             else if(block instanceof FenceBlock)
-                this.getOrCreateBuilder(Tags.Blocks.FENCES).add(block);
+                this.tag(Tags.Blocks.FENCES).add(block);
             else if(block instanceof FenceGateBlock)
-                this.getOrCreateBuilder(Tags.Blocks.FENCE_GATES).add(block);
+                this.tag(Tags.Blocks.FENCE_GATES).add(block);
             else if(block instanceof CustomBedBlock)
-                this.getOrCreateBuilder(ECTags.Blocks.FANCY_BEDS).add(block);
+                this.tag(ECTags.Blocks.FANCY_BEDS).add(block);
             else if(block instanceof CouchBlock)
-                this.getOrCreateBuilder(ECTags.Blocks.COUCHES).add(block);
+                this.tag(ECTags.Blocks.COUCHES).add(block);
             else if(block instanceof CustomLadderBlock)
-                this.getOrCreateBuilder(BlockTags.CLIMBABLE).add(block);
+                this.tag(BlockTags.CLIMBABLE).add(block);
             else if(block instanceof ChairBlock)
-                this.getOrCreateBuilder(ECTags.ForgeBlocks.CHAIRS).add(block);
+                this.tag(ECTags.ForgeBlocks.CHAIRS).add(block);
             else if(block instanceof TableBlock || block instanceof TerraceTableBlock)
-                this.getOrCreateBuilder(ECTags.ForgeBlocks.TABLES).add(block);
+                this.tag(ECTags.ForgeBlocks.TABLES).add(block);
             else if(block instanceof SuspendedStairsBlock)
-                this.getOrCreateBuilder(ECTags.Blocks.SUSPENDED_STAIRS).add(block);
+                this.tag(ECTags.Blocks.SUSPENDED_STAIRS).add(block);
             else if(block instanceof DoorBlock)
             {
-                if(block.getDefaultState().getMaterial().equals(Material.WOOD))
-                    this.getOrCreateBuilder(ECTags.Blocks.WOODEN_DOORS).add(block);
-                this.getOrCreateBuilder(ECTags.Blocks.DOORS).add(block);
+                if(block.defaultBlockState().getMaterial().equals(Material.WOOD))
+                    this.tag(ECTags.Blocks.WOODEN_DOORS).add(block);
+                this.tag(ECTags.Blocks.DOORS).add(block);
             }
             else if(block instanceof CrateBlock)
-                this.getOrCreateBuilder(ECTags.Blocks.WOODEN_CRATES).add(block);
+                this.tag(ECTags.Blocks.WOODEN_CRATES).add(block);
             else if(block instanceof ChestBlock)
-                this.getOrCreateBuilder(Tags.Blocks.CHESTS_WOODEN).add(block);
+                this.tag(Tags.Blocks.CHESTS_WOODEN).add(block);
         }
 
         for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
         {
             // Rocks
-            this.getOrCreateBuilder(Tags.Blocks.STONE).add(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get());
-            this.getOrCreateBuilder(BlockTags.BASE_STONE_OVERWORLD).add(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get());
+            this.tag(Tags.Blocks.STONE).add(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get());
+            this.tag(BlockTags.BASE_STONE_OVERWORLD).add(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get());
             // Cobblestones
-            this.getOrCreateBuilder(Tags.Blocks.COBBLESTONE).add(ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get());
+            this.tag(Tags.Blocks.COBBLESTONE).add(ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get());
         }
 
         // Adding tags to existing MC/Forge tags
-        this.getOrCreateBuilder(Tags.Blocks.CHESTS).addTag(Tags.Blocks.CHESTS_WOODEN);
-        this.getOrCreateBuilder(BlockTags.BEDS).addTag(ECTags.Blocks.FANCY_BEDS);
-        this.getOrCreateBuilder(ECTags.ForgeBlocks.CRATES).addTag(ECTags.Blocks.WOODEN_CRATES);
-        this.getOrCreateBuilder(BlockTags.FENCES).addTag(Tags.Blocks.FENCES);
-        this.getOrCreateBuilder(BlockTags.WOODEN_DOORS).addTag(ECTags.Blocks.WOODEN_DOORS);
-        this.getOrCreateBuilder(ECTags.Blocks.DOORS).addTag(ECTags.Blocks.WOODEN_DOORS);
-        this.getOrCreateBuilder(BlockTags.DOORS).addTag(ECTags.Blocks.DOORS);
-        this.getOrCreateBuilder(BlockTags.FENCE_GATES).addTag(Tags.Blocks.FENCE_GATES);
+        this.tag(Tags.Blocks.CHESTS).addTag(Tags.Blocks.CHESTS_WOODEN);
+        this.tag(BlockTags.BEDS).addTag(ECTags.Blocks.FANCY_BEDS);
+        this.tag(ECTags.ForgeBlocks.CRATES).addTag(ECTags.Blocks.WOODEN_CRATES);
+        this.tag(BlockTags.FENCES).addTag(Tags.Blocks.FENCES);
+        this.tag(BlockTags.WOODEN_DOORS).addTag(ECTags.Blocks.WOODEN_DOORS);
+        this.tag(ECTags.Blocks.DOORS).addTag(ECTags.Blocks.WOODEN_DOORS);
+        this.tag(BlockTags.DOORS).addTag(ECTags.Blocks.DOORS);
+        this.tag(BlockTags.FENCE_GATES).addTag(Tags.Blocks.FENCE_GATES);
     }
 }

@@ -1,73 +1,73 @@
 package tv.mapper.embellishcraft.inventory.container;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.inventory.container.Slot;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.Container;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class VerticalChestContainer extends Container
+public class VerticalChestContainer extends AbstractContainerMenu
 {
-    private final IInventory lowerChestInventory;
+    private final Container lowerChestInventory;
     private final int numRows;
 
-    private VerticalChestContainer(ContainerType<?> type, int id, PlayerInventory player, int rows)
+    private VerticalChestContainer(MenuType<?> type, int id, Inventory player, int rows)
     {
-        this(type, id, player, new Inventory(9 * rows), rows);
+        this(type, id, player, new SimpleContainer(9 * rows), rows);
     }
 
-    public static VerticalChestContainer createGeneric9X1(int id, PlayerInventory player)
+    public static VerticalChestContainer createGeneric9X1(int id, Inventory player)
     {
         return new VerticalChestContainer(ModContainers.VERTICAL_9X1.get(), id, player, 1);
     }
 
-    public static VerticalChestContainer createGeneric9X2(int id, PlayerInventory player)
+    public static VerticalChestContainer createGeneric9X2(int id, Inventory player)
     {
         return new VerticalChestContainer(ModContainers.VERTICAL_9X2.get(), id, player, 2);
     }
 
-    public static VerticalChestContainer createGeneric9X3(int id, PlayerInventory player)
+    public static VerticalChestContainer createGeneric9X3(int id, Inventory player)
     {
         return new VerticalChestContainer(ModContainers.VERTICAL_9X3.get(), id, player, 3);
     }
 
-    public static VerticalChestContainer createGeneric9X4(int id, PlayerInventory player)
+    public static VerticalChestContainer createGeneric9X4(int id, Inventory player)
     {
         return new VerticalChestContainer(ModContainers.VERTICAL_9X4.get(), id, player, 4);
     }
 
-    public static VerticalChestContainer createGeneric9X5(int id, PlayerInventory player)
+    public static VerticalChestContainer createGeneric9X5(int id, Inventory player)
     {
         return new VerticalChestContainer(ModContainers.VERTICAL_9X5.get(), id, player, 5);
     }
 
-    public static VerticalChestContainer createGeneric9X6(int id, PlayerInventory player)
+    public static VerticalChestContainer createGeneric9X6(int id, Inventory player)
     {
         return new VerticalChestContainer(ModContainers.VERTICAL_9X6.get(), id, player, 6);
     }
 
-    public static VerticalChestContainer createGeneric9X3(int id, PlayerInventory player, IInventory blockEntity)
+    public static VerticalChestContainer createGeneric9X3(int id, Inventory player, Container blockEntity)
     {
         return new VerticalChestContainer(ModContainers.VERTICAL_9X3.get(), id, player, blockEntity, 3);
     }
 
-    public static VerticalChestContainer createGeneric9X6(int id, PlayerInventory player, IInventory blockEntity)
+    public static VerticalChestContainer createGeneric9X6(int id, Inventory player, Container blockEntity)
     {
         return new VerticalChestContainer(ModContainers.VERTICAL_9X6.get(), id, player, blockEntity, 6);
     }
 
-    public VerticalChestContainer(ContainerType<?> type, int id, PlayerInventory playerInventoryIn, IInventory p_i50092_4_, int rows)
+    public VerticalChestContainer(MenuType<?> type, int id, Inventory playerInventoryIn, Container p_i50092_4_, int rows)
     {
         super(type, id);
-        assertInventorySize(p_i50092_4_, rows * 9);
+        checkContainerSize(p_i50092_4_, rows * 9);
         this.lowerChestInventory = p_i50092_4_;
         this.numRows = rows;
-        p_i50092_4_.openInventory(playerInventoryIn.player);
+        p_i50092_4_.startOpen(playerInventoryIn.player);
         int i = (this.numRows - 4) * 18;
 
         for(int j = 0; j < this.numRows; ++j)
@@ -96,42 +96,42 @@ public class VerticalChestContainer extends Container
     /**
      * Determines whether supplied player can use this container
      */
-    public boolean canInteractWith(PlayerEntity playerIn)
+    public boolean stillValid(Player playerIn)
     {
-        return this.lowerChestInventory.isUsableByPlayer(playerIn);
+        return this.lowerChestInventory.stillValid(playerIn);
     }
 
     /**
      * Handle when the stack in slot {@code index} is shift-clicked. Normally this moves the stack between the player
      * inventory and the other inventory(s).
      */
-    public ItemStack transferStackInSlot(PlayerEntity playerIn, int index)
+    public ItemStack quickMoveStack(Player playerIn, int index)
     {
         ItemStack itemstack = ItemStack.EMPTY;
-        Slot slot = this.inventorySlots.get(index);
-        if(slot != null && slot.getHasStack())
+        Slot slot = this.slots.get(index);
+        if(slot != null && slot.hasItem())
         {
-            ItemStack itemstack1 = slot.getStack();
+            ItemStack itemstack1 = slot.getItem();
             itemstack = itemstack1.copy();
             if(index < this.numRows * 9)
             {
-                if(!this.mergeItemStack(itemstack1, this.numRows * 9, this.inventorySlots.size(), true))
+                if(!this.moveItemStackTo(itemstack1, this.numRows * 9, this.slots.size(), true))
                 {
                     return ItemStack.EMPTY;
                 }
             }
-            else if(!this.mergeItemStack(itemstack1, 0, this.numRows * 9, false))
+            else if(!this.moveItemStackTo(itemstack1, 0, this.numRows * 9, false))
             {
                 return ItemStack.EMPTY;
             }
 
             if(itemstack1.isEmpty())
             {
-                slot.putStack(ItemStack.EMPTY);
+                slot.set(ItemStack.EMPTY);
             }
             else
             {
-                slot.onSlotChanged();
+                slot.setChanged();
             }
         }
 
@@ -141,17 +141,18 @@ public class VerticalChestContainer extends Container
     /**
      * Called when the container is closed.
      */
-    public void onContainerClosed(PlayerEntity playerIn)
+    public void removed(Player playerIn)
     {
-        super.onContainerClosed(playerIn);
-        this.lowerChestInventory.closeInventory(playerIn);
+        super.removed(playerIn);
+        this.lowerChestInventory.stopOpen(playerIn);
     }
 
     /**
      * Gets the inventory associated with this chest container.
-     * @see #field_75155_e
+     * 
+     * @see #container
      */
-    public IInventory getLowerChestInventory()
+    public Container getLowerChestInventory()
     {
         return this.lowerChestInventory;
     }

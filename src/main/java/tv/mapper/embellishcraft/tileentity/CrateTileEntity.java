@@ -4,21 +4,22 @@ import java.util.stream.IntStream;
 
 import javax.annotation.Nonnull;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShulkerBoxBlock;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.tileentity.LockableLootTileEntity;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ShulkerBoxBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -27,26 +28,26 @@ import net.minecraftforge.items.wrapper.InvWrapper;
 import tv.mapper.embellishcraft.block.CrateBlock;
 import tv.mapper.embellishcraft.inventory.container.CrateContainer;
 
-public class CrateTileEntity extends LockableLootTileEntity implements ISidedInventory
+public class CrateTileEntity extends RandomizableContainerBlockEntity implements WorldlyContainer
 {
     private static final int[] SLOTS = IntStream.range(0, 4 * 4).toArray();
     private NonNullList<ItemStack> crateContents = NonNullList.withSize(4 * 4, ItemStack.EMPTY);
     private LazyOptional<IItemHandlerModifiable> crateHandler = LazyOptional.of(this::createHandler);;
 
-    protected CrateTileEntity(TileEntityType<?> typeIn)
+    public CrateTileEntity(BlockEntityType<?> typeIn, BlockPos p_155630_, BlockState p_155631_)
     {
-        super(typeIn);
+        super(typeIn, p_155630_, p_155631_);
     }
 
-    public CrateTileEntity()
+    public CrateTileEntity(BlockPos p_155630_, BlockState p_155631_)
     {
-        this(ModTileEntityTypes.CRATE);
+        this(ModTileEntityTypes.CRATE, p_155630_, p_155631_);
     }
 
     /**
      * Returns the number of slots in the inventory.
      */
-    public int getSizeInventory()
+    public int getContainerSize()
     {
         return 4 * 4;
     }
@@ -63,38 +64,39 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
         return true;
     }
 
-    protected ITextComponent getDefaultName()
+    protected Component getDefaultName()
     {
-        return new TranslationTextComponent("embellishcraft.container.wooden_crate");
+        return new TranslatableComponent("embellishcraft.container.wooden_crate");
     }
 
-    public void read(BlockState state, CompoundNBT compound)
+    @Override
+    public void load(CompoundTag compound)
     {
-        super.read(state, compound);
+        super.load(compound);
         this.loadFromNbt(compound);
     }
 
-    public CompoundNBT write(CompoundNBT compound)
+    @Override
+    public CompoundTag save(CompoundTag compound)
     {
-        super.write(compound);
+        super.save(compound);
         return this.saveToNbt(compound);
     }
 
-    public void loadFromNbt(CompoundNBT compound)
+    public void loadFromNbt(CompoundTag compound)
     {
-        this.crateContents = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
-        if(!this.checkLootAndRead(compound) && compound.contains("Items", 9))
+        this.crateContents = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        if(!this.tryLoadLootTable(compound) && compound.contains("Items", 9))
         {
-            ItemStackHelper.loadAllItems(compound, this.crateContents);
+            ContainerHelper.loadAllItems(compound, this.crateContents);
         }
-
     }
 
-    public CompoundNBT saveToNbt(CompoundNBT compound)
+    public CompoundTag saveToNbt(CompoundTag compound)
     {
-        if(!this.checkLootAndWrite(compound))
+        if(!this.trySaveLootTable(compound))
         {
-            ItemStackHelper.saveAllItems(compound, this.crateContents, false);
+            ContainerHelper.saveAllItems(compound, this.crateContents, false);
         }
 
         return compound;
@@ -110,7 +112,7 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
         this.crateContents = itemsIn;
     }
 
-    protected Container createMenu(int id, PlayerInventory player)
+    protected AbstractContainerMenu createMenu(int id, Inventory player)
     {
         return CrateContainer.createCrate4X4(id, player, this);
     }
@@ -118,7 +120,7 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
     @Override
     public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side)
     {
-        if(!this.removed && cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+        if(!this.remove && cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
             return this.crateHandler.cast();
 
         return super.getCapability(cap, side);
@@ -132,7 +134,7 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
             @Nonnull
             public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate)
             {
-                if(Block.getBlockFromItem(stack.getItem()) instanceof CrateBlock || Block.getBlockFromItem(stack.getItem()) instanceof ShulkerBoxBlock)
+                if(Block.byItem(stack.getItem()) instanceof CrateBlock || Block.byItem(stack.getItem()) instanceof ShulkerBoxBlock)
                     return stack;
 
                 return super.insertItem(slot, stack, simulate);
@@ -144,9 +146,9 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
      * invalidates a tile entity
      */
     @Override
-    public void remove()
+    public void setRemoved()
     {
-        super.remove();
+        super.setRemoved();
         if(crateHandler != null)
             crateHandler.invalidate();
     }
@@ -158,16 +160,16 @@ public class CrateTileEntity extends LockableLootTileEntity implements ISidedInv
     }
 
     @Override
-    public boolean canInsertItem(int index, ItemStack itemStackIn, Direction direction)
+    public boolean canPlaceItemThroughFace(int index, ItemStack itemStackIn, Direction direction)
     {
-        if(Block.getBlockFromItem(itemStackIn.getItem()) instanceof CrateBlock || Block.getBlockFromItem(itemStackIn.getItem()) instanceof ShulkerBoxBlock)
+        if(Block.byItem(itemStackIn.getItem()) instanceof CrateBlock || Block.byItem(itemStackIn.getItem()) instanceof ShulkerBoxBlock)
             return false;
         else
             return true;
     }
 
     @Override
-    public boolean canExtractItem(int index, ItemStack stack, Direction direction)
+    public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction)
     {
         return true;
     }

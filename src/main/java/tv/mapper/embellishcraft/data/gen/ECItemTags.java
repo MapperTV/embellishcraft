@@ -1,7 +1,7 @@
 package tv.mapper.embellishcraft.data.gen;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.ItemTagsProvider;
+import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
@@ -16,7 +16,7 @@ public class ECItemTags extends ItemTagsProvider
         super(generatorIn, provider, ECConstants.MODID, existingFileHelper);
     }
 
-    public void registerTags()
+    public void addTags()
     {
         copy(Tags.Blocks.STONE, Tags.Items.STONE);
         copy(Tags.Blocks.COBBLESTONE, Tags.Items.COBBLESTONE);

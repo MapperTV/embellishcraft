@@ -2,33 +2,34 @@ package tv.mapper.embellishcraft.block;
 
 import java.util.stream.IntStream;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.EnumProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.state.properties.StairsShape;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraftforge.common.ToolType;
-import tv.mapper.mapperbase.block.CustomBlock;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.StairsShape;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import tv.mapper.mapperbase.world.level.block.CustomBlock;
+import tv.mapper.mapperbase.world.level.block.ToolTiers;
+import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
-public class CouchBlock extends CustomBlock implements IWaterLoggable
+public class CouchBlock extends CustomBlock implements SimpleWaterloggedBlock
 {
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
     public static final EnumProperty<StairsShape> SHAPE = BlockStateProperties.STAIRS_SHAPE;
@@ -37,15 +38,15 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    protected static final VoxelShape SLAB_BOTTOM = Block.makeCuboidShape(0.0D, 3.0D, 0.0D, 16.0D, 8.0D, 16.0D);
-    protected static final VoxelShape NWU_CORNER = Block.makeCuboidShape(0.0D, 8.0D, 0.0D, 8.0D, 16.0D, 8.0D);
-    protected static final VoxelShape SWU_CORNER = Block.makeCuboidShape(0.0D, 8.0D, 8.0D, 8.0D, 16.0D, 16.0D);
-    protected static final VoxelShape NEU_CORNER = Block.makeCuboidShape(8.0D, 8.0D, 0.0D, 16.0D, 16.0D, 8.0D);
-    protected static final VoxelShape SEU_CORNER = Block.makeCuboidShape(8.0D, 8.0D, 8.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape SLAB_BOTTOM = Block.box(0.0D, 3.0D, 0.0D, 16.0D, 8.0D, 16.0D);
+    protected static final VoxelShape NWU_CORNER = Block.box(0.0D, 8.0D, 0.0D, 8.0D, 16.0D, 8.0D);
+    protected static final VoxelShape SWU_CORNER = Block.box(0.0D, 8.0D, 8.0D, 8.0D, 16.0D, 16.0D);
+    protected static final VoxelShape NEU_CORNER = Block.box(8.0D, 8.0D, 0.0D, 16.0D, 16.0D, 8.0D);
+    protected static final VoxelShape SEU_CORNER = Block.box(8.0D, 8.0D, 8.0D, 16.0D, 16.0D, 16.0D);
 
     protected static final VoxelShape[] SLAB_BOTTOM_SHAPES = makeShapes(SLAB_BOTTOM, NWU_CORNER, NEU_CORNER, SWU_CORNER, SEU_CORNER);
 
-    private static final int[] field_196522_K = new int[] {12, 5, 3, 10, 14, 13, 7, 11, 13, 7, 11, 14, 8, 4, 1, 2, 4, 1, 2, 8};
+    private static final int[] SHAPE_BY_STATE = new int[] {12, 5, 3, 10, 14, 13, 7, 11, 13, 7, 11, 14, 8, 4, 1, 2, 4, 1, 2, 8};
 
     private static VoxelShape[] makeShapes(VoxelShape slabShape, VoxelShape nwCorner, VoxelShape neCorner, VoxelShape swCorner, VoxelShape seCorner)
     {
@@ -66,76 +67,73 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
         VoxelShape voxelshape = slabShape;
         if((bitfield & 1) != 0)
         {
-            voxelshape = VoxelShapes.or(slabShape, nwCorner);
+            voxelshape = Shapes.or(slabShape, nwCorner);
         }
 
         if((bitfield & 2) != 0)
         {
-            voxelshape = VoxelShapes.or(voxelshape, neCorner);
+            voxelshape = Shapes.or(voxelshape, neCorner);
         }
 
         if((bitfield & 4) != 0)
         {
-            voxelshape = VoxelShapes.or(voxelshape, swCorner);
+            voxelshape = Shapes.or(voxelshape, swCorner);
         }
 
         if((bitfield & 8) != 0)
         {
-            voxelshape = VoxelShapes.or(voxelshape, seCorner);
+            voxelshape = Shapes.or(voxelshape, seCorner);
         }
 
         return voxelshape;
     }
 
-    public CouchBlock(Properties properties)
+    public CouchBlock(Properties properties, ToolTypes tool)
     {
-        super(properties);
-        this.setDefaultState(
-            this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, StairsShape.STRAIGHT).with(LEFT_END, true).with(RIGHT_END, true).with(WATERLOGGED, Boolean.valueOf(false)));
+        super(properties, tool);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(SHAPE, StairsShape.STRAIGHT).setValue(LEFT_END, true).setValue(RIGHT_END, true).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    public CouchBlock(Properties properties, ToolType toolType)
+    public CouchBlock(Properties properties, ToolTypes tool, ToolTiers tier)
     {
-        super(properties);
-        this.toolType = toolType;
-        this.setDefaultState(
-            this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, StairsShape.STRAIGHT).with(LEFT_END, true).with(RIGHT_END, true).with(WATERLOGGED, Boolean.valueOf(false)));
+        super(properties, tool, tier);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(SHAPE, StairsShape.STRAIGHT).setValue(LEFT_END, true).setValue(RIGHT_END, true).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Override
-    public boolean isTransparent(BlockState state)
+    public boolean useShapeForLightOcclusion(BlockState state)
     {
         return true;
     }
 
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
-        return (SLAB_BOTTOM_SHAPES)[field_196522_K[this.getCouchShape(state)]];
+        return (SLAB_BOTTOM_SHAPES)[SHAPE_BY_STATE[this.getCouchShape(state)]];
     }
 
     private int getCouchShape(BlockState state)
     {
-        return state.get(SHAPE).ordinal() * 4 + state.get(FACING).getHorizontalIndex();
+        return state.getValue(SHAPE).ordinal() * 4 + state.getValue(FACING).get2DDataValue();
     }
 
-    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
+    public boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos)
     {
-        return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
+        return canSupportCenter(worldIn, pos.below(), Direction.UP);
     }
 
-    public BlockState getStateForPlacement(BlockItemUseContext context)
+    public BlockState getStateForPlacement(BlockPlaceContext context)
     {
-        IBlockReader iblockreader = context.getWorld();
-        BlockPos blockpos = context.getPos();
-        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        BlockGetter iblockreader = context.getLevel();
+        BlockPos blockpos = context.getClickedPos();
+        FluidState ifluidstate = context.getLevel().getFluidState(blockpos);
 
         BlockState leftstate;
         BlockState rightstate;
         boolean leftend = true;
         boolean rightend = true;
 
-        Direction facing = context.getPlacementHorizontalFacing();
-        StairsShape shape = getShapeProperty(this.getDefaultState().with(FACING, facing), context.getWorld(), blockpos);
+        Direction facing = context.getHorizontalDirection();
+        StairsShape shape = getShapeProperty(this.defaultBlockState().setValue(FACING, facing), context.getLevel(), blockpos);
 
         if(shape == StairsShape.STRAIGHT)
         {
@@ -173,22 +171,22 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
             rightend = false;
         }
 
-        return this.getDefaultState().with(SHAPE, shape).with(FACING, facing).with(LEFT_END, leftend).with(RIGHT_END, rightend).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        return this.defaultBlockState().setValue(SHAPE, shape).setValue(FACING, facing).setValue(LEFT_END, leftend).setValue(RIGHT_END, rightend).setValue(WATERLOGGED, Boolean.valueOf(ifluidstate.getType() == Fluids.WATER));
     }
 
     /**
      * Returns a stair shape property based on the surrounding stairs from the given blockstate and position
      */
-    private static StairsShape getShapeProperty(BlockState state, IBlockReader worldIn, BlockPos pos)
+    private static StairsShape getShapeProperty(BlockState state, BlockGetter worldIn, BlockPos pos)
     {
-        Direction direction = state.get(FACING);
-        BlockState blockstate = worldIn.getBlockState(pos.offset(direction));
+        Direction direction = state.getValue(FACING);
+        BlockState blockstate = worldIn.getBlockState(pos.relative(direction));
         if(isCouchBlock(blockstate))
         {
-            Direction direction1 = blockstate.get(FACING);
-            if(direction1.getAxis() != state.get(FACING).getAxis() && isDifferentCouch(state, worldIn, pos, direction1.getOpposite()))
+            Direction direction1 = blockstate.getValue(FACING);
+            if(direction1.getAxis() != state.getValue(FACING).getAxis() && isDifferentCouch(state, worldIn, pos, direction1.getOpposite()))
             {
-                if(direction1 == direction.rotateYCCW())
+                if(direction1 == direction.getCounterClockWise())
                 {
                     return StairsShape.OUTER_LEFT;
                 }
@@ -197,13 +195,13 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
             }
         }
 
-        BlockState blockstate1 = worldIn.getBlockState(pos.offset(direction.getOpposite()));
+        BlockState blockstate1 = worldIn.getBlockState(pos.relative(direction.getOpposite()));
         if(isCouchBlock(blockstate1))
         {
-            Direction direction2 = blockstate1.get(FACING);
-            if(direction2.getAxis() != state.get(FACING).getAxis() && isDifferentCouch(state, worldIn, pos, direction2))
+            Direction direction2 = blockstate1.getValue(FACING);
+            if(direction2.getAxis() != state.getValue(FACING).getAxis() && isDifferentCouch(state, worldIn, pos, direction2))
             {
-                if(direction2 == direction.rotateYCCW())
+                if(direction2 == direction.getCounterClockWise())
                 {
                     return StairsShape.INNER_LEFT;
                 }
@@ -215,15 +213,15 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
     }
 
     @SuppressWarnings("deprecation")
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
     {
         BlockState leftstate;
         BlockState rightstate;
         boolean leftend;
         boolean rightend;
 
-        StairsShape shape = stateIn.get(SHAPE);
-        Direction direction = stateIn.get(FACING);
+        StairsShape shape = stateIn.getValue(SHAPE);
+        Direction direction = stateIn.getValue(FACING);
 
         if(facing.getAxis().isHorizontal())
             shape = getShapeProperty(stateIn, worldIn, currentPos);
@@ -269,22 +267,21 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
             rightend = false;
         }
 
-        if(stateIn.get(WATERLOGGED))
+        if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
-        if(facing == Direction.DOWN && !this.isValidPosition(stateIn, worldIn, currentPos))
-            return Blocks.AIR.getDefaultState();
+        if(facing == Direction.DOWN && !this.canSurvive(stateIn, worldIn, currentPos))
+            return Blocks.AIR.defaultBlockState();
 
-        return facing.getAxis().isHorizontal() ? stateIn.with(SHAPE, shape).with(LEFT_END, leftend).with(RIGHT_END, rightend) : super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos,
-            facingPos);
+        return facing.getAxis().isHorizontal() ? stateIn.setValue(SHAPE, shape).setValue(LEFT_END, leftend).setValue(RIGHT_END, rightend) : super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
-    private static boolean isDifferentCouch(BlockState state, IBlockReader worldIn, BlockPos pos, Direction face)
+    private static boolean isDifferentCouch(BlockState state, BlockGetter worldIn, BlockPos pos, Direction face)
     {
-        BlockState blockstate = worldIn.getBlockState(pos.offset(face));
-        return !isCouchBlock(blockstate) || blockstate.get(FACING) != state.get(FACING);
+        BlockState blockstate = worldIn.getBlockState(pos.relative(face));
+        return !isCouchBlock(blockstate) || blockstate.getValue(FACING) != state.getValue(FACING);
     }
 
     public static boolean isCouchBlock(BlockState state)
@@ -295,12 +292,13 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
     /**
      * Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed
      * blockstate.
+     * 
      * @deprecated call via {@link IBlockState#withMirror(Mirror)} whenever possible. Implementing/overriding is fine.
      */
     public BlockState mirror(BlockState state, Mirror mirrorIn)
     {
-        Direction direction = state.get(FACING);
-        StairsShape stairsshape = state.get(SHAPE);
+        Direction direction = state.getValue(FACING);
+        StairsShape stairsshape = state.getValue(SHAPE);
         switch(mirrorIn)
         {
             case LEFT_RIGHT:
@@ -309,13 +307,13 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
                     switch(stairsshape)
                     {
                         case INNER_LEFT:
-                            return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.INNER_RIGHT);
+                            return state.rotate(Rotation.CLOCKWISE_180).setValue(SHAPE, StairsShape.INNER_RIGHT);
                         case INNER_RIGHT:
-                            return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.INNER_LEFT);
+                            return state.rotate(Rotation.CLOCKWISE_180).setValue(SHAPE, StairsShape.INNER_LEFT);
                         case OUTER_LEFT:
-                            return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.OUTER_RIGHT);
+                            return state.rotate(Rotation.CLOCKWISE_180).setValue(SHAPE, StairsShape.OUTER_RIGHT);
                         case OUTER_RIGHT:
-                            return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.OUTER_LEFT);
+                            return state.rotate(Rotation.CLOCKWISE_180).setValue(SHAPE, StairsShape.OUTER_LEFT);
                         default:
                             return state.rotate(Rotation.CLOCKWISE_180);
                     }
@@ -327,13 +325,13 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
                     switch(stairsshape)
                     {
                         case INNER_LEFT:
-                            return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.INNER_LEFT);
+                            return state.rotate(Rotation.CLOCKWISE_180).setValue(SHAPE, StairsShape.INNER_LEFT);
                         case INNER_RIGHT:
-                            return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.INNER_RIGHT);
+                            return state.rotate(Rotation.CLOCKWISE_180).setValue(SHAPE, StairsShape.INNER_RIGHT);
                         case OUTER_LEFT:
-                            return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.OUTER_RIGHT);
+                            return state.rotate(Rotation.CLOCKWISE_180).setValue(SHAPE, StairsShape.OUTER_RIGHT);
                         case OUTER_RIGHT:
-                            return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.OUTER_LEFT);
+                            return state.rotate(Rotation.CLOCKWISE_180).setValue(SHAPE, StairsShape.OUTER_LEFT);
                         case STRAIGHT:
                             return state.rotate(Rotation.CLOCKWISE_180);
                     }
@@ -345,7 +343,7 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
         return super.mirror(state, mirrorIn);
     }
 
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(FACING, SHAPE, LEFT_END, RIGHT_END, WATERLOGGED);
     }
@@ -353,6 +351,6 @@ public class CouchBlock extends CustomBlock implements IWaterLoggable
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state)
     {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 }

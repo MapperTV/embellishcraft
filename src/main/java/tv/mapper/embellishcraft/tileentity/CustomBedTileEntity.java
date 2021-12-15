@@ -1,26 +1,28 @@
 package tv.mapper.embellishcraft.tileentity;
 
-import net.minecraft.item.DyeColor;
-import net.minecraft.network.play.server.SUpdateTileEntityPacket;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.block.CustomBedBlock;
 import tv.mapper.embellishcraft.util.WoodsType;
 
-public class CustomBedTileEntity extends TileEntity
+public class CustomBedTileEntity extends BlockEntity
 {
     private DyeColor color;
     private WoodsType wood;
 
-    public CustomBedTileEntity()
+    public CustomBedTileEntity(BlockPos worldPosition, BlockState blockState)
     {
-        super(ModTileEntityTypes.CUSTOM_BED);
+        super(ModTileEntityTypes.CUSTOM_BED, worldPosition, blockState);
     }
 
-    public CustomBedTileEntity(DyeColor color, WoodsType wood)
+    public CustomBedTileEntity(BlockPos worldPosition, BlockState blockState, DyeColor color, WoodsType wood)
     {
-        this();
+        this(worldPosition, blockState);
         this.setColor(color);
         this.setWood(wood);
     }
@@ -29,9 +31,9 @@ public class CustomBedTileEntity extends TileEntity
      * Retrieves packet to send to the client whenever this Tile Entity is resynced via World.notifyBlockUpdate. For
      * modded TE's, this packet comes back to you clientside in {@link #onDataPacket}
      */
-    public SUpdateTileEntityPacket getUpdatePacket()
+    public ClientboundBlockEntityDataPacket getUpdatePacket()
     {
-        return new SUpdateTileEntityPacket(this.pos, 11, this.getUpdateTag());
+        return new ClientboundBlockEntityDataPacket(this.worldPosition, 11, this.getUpdateTag());
     }
 
     @OnlyIn(Dist.CLIENT)

@@ -1,18 +1,18 @@
 package tv.mapper.embellishcraft.block;
 
-import net.minecraft.block.BedBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.item.DyeColor;
-import net.minecraft.state.properties.BedPart;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.BedBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.tileentity.CustomBedTileEntity;
@@ -23,14 +23,14 @@ public class CustomBedBlock extends BedBlock
     protected final WoodsType wood;
     protected final DyeColor bedColor;
 
-    protected static final VoxelShape head_w = Block.makeCuboidShape(0.0D, 9.0D, 0.0D, 2.0D, 16.0D, 16.0D);
-    protected static final VoxelShape head_e = Block.makeCuboidShape(14.0D, 9.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-    protected static final VoxelShape head_s = Block.makeCuboidShape(0.0D, 9.0D, 14.0D, 16.0D, 16.0D, 16.0D);
-    protected static final VoxelShape head_n = Block.makeCuboidShape(0.0D, 9.0D, 0.0D, 16.0D, 16.0D, 2.0D);
-    protected static final VoxelShape foot_w = Block.makeCuboidShape(0.0D, 9.0D, 0.0D, 2.0D, 13.0D, 16.0D);
-    protected static final VoxelShape foot_e = Block.makeCuboidShape(14.0D, 9.0D, 0.0D, 16.0D, 13.0D, 16.0D);
-    protected static final VoxelShape foot_s = Block.makeCuboidShape(0.0D, 9.0D, 14.0D, 16.0D, 13.0D, 16.0D);
-    protected static final VoxelShape foot_n = Block.makeCuboidShape(0.0D, 9.0D, 0.0D, 16.0D, 13.0D, 2.0D);
+    protected static final VoxelShape head_w = Block.box(0.0D, 9.0D, 0.0D, 2.0D, 16.0D, 16.0D);
+    protected static final VoxelShape head_e = Block.box(14.0D, 9.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape head_s = Block.box(0.0D, 9.0D, 14.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape head_n = Block.box(0.0D, 9.0D, 0.0D, 16.0D, 16.0D, 2.0D);
+    protected static final VoxelShape foot_w = Block.box(0.0D, 9.0D, 0.0D, 2.0D, 13.0D, 16.0D);
+    protected static final VoxelShape foot_e = Block.box(14.0D, 9.0D, 0.0D, 16.0D, 13.0D, 16.0D);
+    protected static final VoxelShape foot_s = Block.box(0.0D, 9.0D, 14.0D, 16.0D, 13.0D, 16.0D);
+    protected static final VoxelShape foot_n = Block.box(0.0D, 9.0D, 0.0D, 16.0D, 13.0D, 2.0D);
 
     public CustomBedBlock(DyeColor colorIn, WoodsType wood, Properties properties)
     {
@@ -40,23 +40,23 @@ public class CustomBedBlock extends BedBlock
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
-        Direction direction = state.get(HORIZONTAL_FACING);
-        Direction direction1 = state.get(PART) == BedPart.HEAD ? direction : direction.getOpposite();
+        Direction direction = state.getValue(FACING);
+        Direction direction1 = state.getValue(PART) == BedPart.HEAD ? direction : direction.getOpposite();
 
-        if(state.get(PART) == BedPart.HEAD)
+        if(state.getValue(PART) == BedPart.HEAD)
         {
             switch(direction1)
             {
                 case NORTH:
-                    return VoxelShapes.or(head_n, NORTH_FACING_SHAPE);
+                    return Shapes.or(head_n, NORTH_SHAPE);
                 case SOUTH:
-                    return VoxelShapes.or(head_s, SOUTH_FACING_SHAPE);
+                    return Shapes.or(head_s, SOUTH_SHAPE);
                 case WEST:
-                    return VoxelShapes.or(head_w, WEST_FACING_SHAPE);
+                    return Shapes.or(head_w, WEST_SHAPE);
                 default:
-                    return VoxelShapes.or(head_e, EAST_FACING_SHAPE);
+                    return Shapes.or(head_e, EAST_SHAPE);
             }
         }
         else
@@ -64,21 +64,21 @@ public class CustomBedBlock extends BedBlock
             switch(direction1)
             {
                 case NORTH:
-                    return VoxelShapes.or(foot_n, NORTH_FACING_SHAPE);
+                    return Shapes.or(foot_n, NORTH_SHAPE);
                 case SOUTH:
-                    return VoxelShapes.or(foot_s, SOUTH_FACING_SHAPE);
+                    return Shapes.or(foot_s, SOUTH_SHAPE);
                 case WEST:
-                    return VoxelShapes.or(foot_w, WEST_FACING_SHAPE);
+                    return Shapes.or(foot_w, WEST_SHAPE);
                 default:
-                    return VoxelShapes.or(foot_e, EAST_FACING_SHAPE);
+                    return Shapes.or(foot_e, EAST_SHAPE);
             }
         }
     }
 
     @Override
-    public TileEntity createNewTileEntity(IBlockReader worldIn)
+    public BlockEntity newBlockEntity(BlockPos p_153215_, BlockState p_153216_)
     {
-        return new CustomBedTileEntity(this.bedColor, this.wood);
+        return new CustomBedTileEntity(p_153215_, p_153216_, this.bedColor, this.wood);
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -88,8 +88,8 @@ public class CustomBedBlock extends BedBlock
     }
 
     @Override
-    public BlockRenderType getRenderType(BlockState state)
+    public RenderShape getRenderShape(BlockState state)
     {
-        return BlockRenderType.MODEL;
+        return RenderShape.MODEL;
     }
 }

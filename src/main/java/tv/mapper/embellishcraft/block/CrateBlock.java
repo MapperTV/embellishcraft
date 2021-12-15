@@ -4,41 +4,45 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ContainerBlock;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.item.ItemStack;
-import net.minecraft.loot.LootContext;
-import net.minecraft.loot.LootParameters;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.text.IFormattableTextComponent;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.ToolType;
 import tv.mapper.embellishcraft.tileentity.CrateTileEntity;
+import tv.mapper.mapperbase.world.level.block.ToolManager;
+import tv.mapper.mapperbase.world.level.block.ToolTiers;
+import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
-public class CrateBlock extends ContainerBlock
+public class CrateBlock extends BaseEntityBlock implements ToolManager
 {
+    protected ToolTiers tier;
+    protected ToolTypes tool;
     public static final ResourceLocation CONTENTS = new ResourceLocation("contents");
 
     public CrateBlock(Properties properties)
@@ -47,85 +51,79 @@ public class CrateBlock extends ContainerBlock
     }
 
     @Override
-    public boolean hasTileEntity(BlockState state)
+    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result)
     {
-        return true;
-    }
-
-    @Override
-    public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult result)
-    {
-        if(!world.isRemote)
+        if(!world.isClientSide)
         {
-            TileEntity tileEntity = world.getTileEntity(pos);
+            BlockEntity tileEntity = world.getBlockEntity(pos);
             if(tileEntity instanceof CrateTileEntity)
             {
-                INamedContainerProvider inamedcontainerprovider = this.getContainer(state, world, pos);
+                MenuProvider inamedcontainerprovider = this.getMenuProvider(state, world, pos);
 
                 if(inamedcontainerprovider != null)
                 {
-                    player.openContainer(inamedcontainerprovider);
-                    world.playSound(null, pos, SoundEvents.BLOCK_WOODEN_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, (float)(0.75f + Math.random() * (1.25f - 0.75f)));
+                    player.openMenu(inamedcontainerprovider);
+                    world.playSound(null, pos, SoundEvents.WOODEN_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, (float)(0.75f + Math.random() * (1.25f - 0.75f)));
                 }
             }
             else
             {
                 throw new IllegalStateException("Attempted to open a crate while it was not one!");
             }
-            return ActionResultType.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
-        return ActionResultType.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 
-    public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player)
+    public void playerWillDestroy(Level worldIn, BlockPos pos, BlockState state, Player player)
     {
-        TileEntity tileentity = worldIn.getTileEntity(pos);
+        BlockEntity tileentity = worldIn.getBlockEntity(pos);
         if(tileentity instanceof CrateTileEntity)
         {
             CrateTileEntity crate = (CrateTileEntity)tileentity;
-            if(!worldIn.isRemote && player.isCreative() && !crate.isEmpty())
+            if(!worldIn.isClientSide && player.isCreative() && !crate.isEmpty())
             {
-                ItemStack itemstack = new ItemStack(this.getBlock());
-                CompoundNBT compoundnbt = crate.saveToNbt(new CompoundNBT());
+                ItemStack itemstack = new ItemStack(this.asBlock());
+                CompoundTag compoundnbt = crate.saveToNbt(new CompoundTag());
                 if(!compoundnbt.isEmpty())
                 {
-                    itemstack.setTagInfo("BlockEntityTag", compoundnbt);
+                    itemstack.addTagElement("BlockEntityTag", compoundnbt);
                 }
 
                 if(crate.hasCustomName())
                 {
-                    itemstack.setDisplayName(crate.getCustomName());
+                    itemstack.setHoverName(crate.getCustomName());
                 }
 
                 ItemEntity itementity = new ItemEntity(worldIn, (double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), itemstack);
-                itementity.setDefaultPickupDelay();
-                worldIn.addEntity(itementity);
+                itementity.setDefaultPickUpDelay();
+                worldIn.addFreshEntity(itementity);
             }
             else
             {
-                crate.fillWithLoot(player);
+                crate.unpackLootTable(player);
             }
         }
 
-        super.onBlockHarvested(worldIn, pos, state, player);
+        super.playerWillDestroy(worldIn, pos, state, player);
     }
 
     @OnlyIn(Dist.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+    public void appendHoverText(ItemStack stack, @Nullable BlockGetter worldIn, List<Component> tooltip, TooltipFlag flagIn)
     {
-        super.addInformation(stack, worldIn, tooltip, flagIn);
-        CompoundNBT compoundnbt = stack.getChildTag("BlockEntityTag");
+        super.appendHoverText(stack, worldIn, tooltip, flagIn);
+        CompoundTag compoundnbt = stack.getTagElement("BlockEntityTag");
         if(compoundnbt != null)
         {
             if(compoundnbt.contains("LootTable", 8))
             {
-                tooltip.add(new StringTextComponent("???????"));
+                tooltip.add(new TextComponent("???????"));
             }
 
             if(compoundnbt.contains("Items", 9))
             {
                 NonNullList<ItemStack> nonnulllist = NonNullList.withSize(27, ItemStack.EMPTY);
-                ItemStackHelper.loadAllItems(compoundnbt, nonnulllist);
+                ContainerHelper.loadAllItems(compoundnbt, nonnulllist);
                 int i = 0;
                 int j = 0;
 
@@ -137,8 +135,8 @@ public class CrateBlock extends ContainerBlock
                         if(i <= 4)
                         {
                             ++i;
-                            IFormattableTextComponent itextcomponent = itemstack.getDisplayName().deepCopy();
-                            itextcomponent.appendString(" x").appendString(String.valueOf(itemstack.getCount()));
+                            MutableComponent itextcomponent = itemstack.getHoverName().copy();
+                            itextcomponent.append(" x").append(String.valueOf(itemstack.getCount()));
                             tooltip.add(itextcomponent);
                         }
                     }
@@ -146,7 +144,7 @@ public class CrateBlock extends ContainerBlock
 
                 if(j - i > 0)
                 {
-                    tooltip.add((new TranslationTextComponent("container.shulkerBox.more", j - i)).mergeStyle(TextFormatting.ITALIC));
+                    tooltip.add((new TranslatableComponent("container.shulkerBox.more", j - i)).withStyle(ChatFormatting.ITALIC));
                 }
             }
         }
@@ -156,15 +154,15 @@ public class CrateBlock extends ContainerBlock
     @SuppressWarnings("deprecation")
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder)
     {
-        TileEntity tileentity = builder.get(LootParameters.BLOCK_ENTITY);
+        BlockEntity tileentity = builder.getOptionalParameter(LootContextParams.BLOCK_ENTITY);
         if(tileentity instanceof CrateTileEntity)
         {
             CrateTileEntity crate = (CrateTileEntity)tileentity;
             builder = builder.withDynamicDrop(CONTENTS, (p_220168_1_, p_220168_2_) ->
             {
-                for(int i = 0; i < crate.getSizeInventory(); ++i)
+                for(int i = 0; i < crate.getContainerSize(); ++i)
                 {
-                    p_220168_2_.accept(crate.getStackInSlot(i));
+                    p_220168_2_.accept(crate.getItem(i));
                 }
 
             });
@@ -175,36 +173,41 @@ public class CrateBlock extends ContainerBlock
 
     @SuppressWarnings("deprecation")
     @Override
-    public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving)
+    public void onRemove(BlockState state, Level worldIn, BlockPos pos, BlockState newState, boolean isMoving)
     {
         if(state.getBlock() != newState.getBlock())
         {
-            TileEntity tileentity = worldIn.getTileEntity(pos);
+            BlockEntity tileentity = worldIn.getBlockEntity(pos);
             if(tileentity instanceof CrateTileEntity)
             {
-                worldIn.updateComparatorOutputLevel(pos, state.getBlock());
+                worldIn.updateNeighbourForOutputSignal(pos, state.getBlock());
             }
 
-            super.onReplaced(state, worldIn, pos, newState, isMoving);
+            super.onRemove(state, worldIn, pos, newState, isMoving);
         }
     }
 
     @Override
-    public BlockRenderType getRenderType(BlockState state)
+    public RenderShape getRenderShape(BlockState state)
     {
-        return BlockRenderType.MODEL;
+        return RenderShape.MODEL;
     }
 
     @Override
-    public TileEntity createNewTileEntity(IBlockReader worldIn)
+    public BlockEntity newBlockEntity(BlockPos p_153215_, BlockState p_153216_)
     {
-        return new CrateTileEntity();
+        return new CrateTileEntity(p_153215_, p_153216_);
     }
 
-    @Nullable
     @Override
-    public ToolType getHarvestTool(BlockState state)
+    public ToolTiers getTier()
     {
-        return super.getHarvestTool(state);
+        return this.tier;
+    }
+
+    @Override
+    public ToolTypes getTool()
+    {
+        return this.tool;
     }
 }

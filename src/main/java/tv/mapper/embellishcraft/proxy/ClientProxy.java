@@ -2,21 +2,18 @@ package tv.mapper.embellishcraft.proxy;
 
 import java.util.function.Predicate;
 
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.ScreenManager;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.client.gui.screen.inventory.CrateScreen;
 import tv.mapper.embellishcraft.client.gui.screen.inventory.VerticalChestScreen;
-import tv.mapper.embellishcraft.client.renderer.ChairEntityRenderer;
-import tv.mapper.embellishcraft.entity.ModEntities;
 import tv.mapper.embellishcraft.inventory.container.ModContainers;
 
 public class ClientProxy implements IProxy
@@ -28,31 +25,31 @@ public class ClientProxy implements IProxy
         // ClientRegistry.bindTileEntitySpecialRenderer(VerticalChestTileEntity.class, new VerticalChestTileEntityRenderer<>());
         // ClientRegistry.bindTileEntitySpecialRenderer(CustomBedTileEntity.class, new CustomBedTileEntityRenderer<>());
 
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X1.get(), VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X2.get(), VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X3.get(), VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X4.get(), VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X5.get(), VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.VERTICAL_9X6.get(), VerticalChestScreen::new);
-        ScreenManager.registerFactory(ModContainers.CRATE_4X4.get(), CrateScreen::new);
-        ScreenManager.registerFactory(ModContainers.CRATE_4X8.get(), CrateScreen::new);
+        MenuScreens.register(ModContainers.VERTICAL_9X1.get(), VerticalChestScreen::new);
+        MenuScreens.register(ModContainers.VERTICAL_9X2.get(), VerticalChestScreen::new);
+        MenuScreens.register(ModContainers.VERTICAL_9X3.get(), VerticalChestScreen::new);
+        MenuScreens.register(ModContainers.VERTICAL_9X4.get(), VerticalChestScreen::new);
+        MenuScreens.register(ModContainers.VERTICAL_9X5.get(), VerticalChestScreen::new);
+        MenuScreens.register(ModContainers.VERTICAL_9X6.get(), VerticalChestScreen::new);
+        MenuScreens.register(ModContainers.CRATE_4X4.get(), CrateScreen::new);
+        MenuScreens.register(ModContainers.CRATE_4X8.get(), CrateScreen::new);
 
-        RenderingRegistry.registerEntityRenderingHandler(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
+        // RenderingRegistry.registerEntityRenderingHandler(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
 
-        Predicate<RenderType> cutoutPredicate = renderType -> renderType == RenderType.getCutout();
+        Predicate<RenderType> cutoutPredicate = renderType -> renderType == RenderType.cutout();
 
         for(RegistryObject<? extends Block> object : ECBlockRegistry.CUTOUT_BLOCKS)
-            RenderTypeLookup.setRenderLayer(object.get(), cutoutPredicate);
+            ItemBlockRenderTypes.setRenderLayer(object.get(), cutoutPredicate);
     }
 
     @Override
-    public World getClientWorld()
+    public Level getClientWorld()
     {
-        return Minecraft.getInstance().world;
+        return Minecraft.getInstance().level;
     }
 
     @Override
-    public PlayerEntity getClientPlayer()
+    public Player getClientPlayer()
     {
         return Minecraft.getInstance().player;
     }

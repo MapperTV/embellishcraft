@@ -4,151 +4,151 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.block.RedstoneTorchBlock;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.common.ToolType;
-import tv.mapper.mapperbase.block.CustomBlock;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RedstoneTorchBlock;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import tv.mapper.mapperbase.world.level.block.CustomBlock;
+import tv.mapper.mapperbase.world.level.block.ToolTiers;
+import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
-public class LampBlock extends CustomBlock implements IWaterLoggable
+public class LampBlock extends CustomBlock implements SimpleWaterloggedBlock
 {
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public boolean isManual = false;
 
-    private static final VoxelShape BASE = Block.makeCuboidShape(6.0D, 0.0D, 6.0D, 10.0D, 3.0D, 10.0D);
-    private static final VoxelShape ROD = Block.makeCuboidShape(7.0D, 3.0D, 7.0D, 9.0D, 4.0D, 9.0D);
-    private static final VoxelShape LAMP1 = Block.makeCuboidShape(4.0D, 4.0D, 4.0D, 12.0D, 7.0D, 12.0D);
-    private static final VoxelShape LAMP2 = Block.makeCuboidShape(5.0D, 7.0D, 5.0D, 11.0D, 10.0D, 11.0D);
-    private static final VoxelShape LAMP3 = Block.makeCuboidShape(6.0D, 10.0D, 6.0D, 10.0D, 13.0D, 10.0D);
-    private static final VoxelShape LAMP = VoxelShapes.or(BASE, VoxelShapes.or(ROD, VoxelShapes.or(LAMP1, VoxelShapes.or(LAMP2, LAMP3))));
+    private static final VoxelShape BASE = Block.box(6.0D, 0.0D, 6.0D, 10.0D, 3.0D, 10.0D);
+    private static final VoxelShape ROD = Block.box(7.0D, 3.0D, 7.0D, 9.0D, 4.0D, 9.0D);
+    private static final VoxelShape LAMP1 = Block.box(4.0D, 4.0D, 4.0D, 12.0D, 7.0D, 12.0D);
+    private static final VoxelShape LAMP2 = Block.box(5.0D, 7.0D, 5.0D, 11.0D, 10.0D, 11.0D);
+    private static final VoxelShape LAMP3 = Block.box(6.0D, 10.0D, 6.0D, 10.0D, 13.0D, 10.0D);
+    private static final VoxelShape LAMP = Shapes.or(BASE, Shapes.or(ROD, Shapes.or(LAMP1, Shapes.or(LAMP2, LAMP3))));
 
-    private static final VoxelShape LAMP_COL = Block.makeCuboidShape(4.0D, 0.0D, 4.0D, 12.0D, 13.0D, 12.0D);
+    private static final VoxelShape LAMP_COL = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 13.0D, 12.0D);
 
-    public LampBlock(Properties properties, boolean isManual)
+    public LampBlock(Properties properties, ToolTypes tool, boolean isManual)
     {
-        super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false).with(WATERLOGGED, Boolean.valueOf(false)));
+        super(properties, tool);
+        this.registerDefaultState(this.stateDefinition.any().setValue(LIT, false).setValue(WATERLOGGED, Boolean.valueOf(false)));
         this.isManual = isManual;
     }
 
-    public LampBlock(Properties properties, ToolType toolType, boolean isManual)
+    public LampBlock(Properties properties, ToolTypes tool, ToolTiers tier, boolean isManual)
     {
-        super(properties);
-        this.toolType = toolType;
-        this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false).with(WATERLOGGED, Boolean.valueOf(false)));
+        super(properties, tool, tier);
+        this.registerDefaultState(this.stateDefinition.any().setValue(LIT, false).setValue(WATERLOGGED, Boolean.valueOf(false)));
         this.isManual = isManual;
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
         return LAMP;
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
         return LAMP_COL;
     }
 
     @Override
-    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
+    public boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos)
     {
-        return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
+        return canSupportCenter(worldIn, pos.below(), Direction.UP);
     }
 
     @Override
-    public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult result)
+    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result)
     {
-        if(!world.isRemote)
+        if(!world.isClientSide)
         {
             BlockState blockstate = this.setLit(state, world, pos);
-            float f = blockstate.get(LIT) ? 1.5F : 0.7F;
-            world.playSound((PlayerEntity)null, pos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 0.3F, f);
-            return ActionResultType.CONSUME;
+            float f = blockstate.getValue(LIT) ? 1.5F : 0.7F;
+            world.playSound((Player)null, pos, SoundEvents.FLINTANDSTEEL_USE, SoundSource.BLOCKS, 0.3F, f);
+            return InteractionResult.CONSUME;
         }
         else
-            return ActionResultType.SUCCESS;
+            return InteractionResult.SUCCESS;
     }
 
-    public BlockState setLit(BlockState state, World world, BlockPos pos)
+    public BlockState setLit(BlockState state, Level world, BlockPos pos)
     {
-        state = state.cycleValue(LIT);
-        world.setBlockState(pos, state, 3);
+        state = state.cycle(LIT);
+        world.setBlock(pos, state, 3);
         // this.updateNeighbors(state, world, pos);
         return state;
     }
 
     @Override
     @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext context)
+    public BlockState getStateForPlacement(BlockPlaceContext context)
     {
-        BlockPos blockpos = context.getPos();
-        FluidState FluidState = context.getWorld().getFluidState(blockpos);
+        BlockPos blockpos = context.getClickedPos();
+        FluidState FluidState = context.getLevel().getFluidState(blockpos);
 
-        return this.getDefaultState().with(LIT, Boolean.valueOf(context.getWorld().isBlockPowered(context.getPos()))).with(WATERLOGGED, Boolean.valueOf(FluidState.getFluid() == Fluids.WATER));
+        return this.defaultBlockState().setValue(LIT, Boolean.valueOf(context.getLevel().hasNeighborSignal(context.getClickedPos()))).setValue(WATERLOGGED, Boolean.valueOf(FluidState.getType() == Fluids.WATER));
     }
 
     @SuppressWarnings("deprecation")
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
     {
-        if(stateIn.get(WATERLOGGED))
+        if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
-        if(facing == Direction.DOWN && !this.isValidPosition(stateIn, worldIn, currentPos))
-            return Blocks.AIR.getDefaultState();
+        if(facing == Direction.DOWN && !this.canSurvive(stateIn, worldIn, currentPos))
+            return Blocks.AIR.defaultBlockState();
 
-        return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
     @Override
-    public int getLightValue(BlockState state, IBlockReader world, BlockPos pos)
+    public int getLightEmission(BlockState state, BlockGetter world, BlockPos pos)
     {
-        return state.get(LIT) ? super.getLightValue(state, world, pos) : 0;
+        return state.getValue(LIT) ? super.getLightEmission(state, world, pos) : 0;
     }
 
     @Override
-    public void neighborChanged(BlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos, boolean isMoving)
+    public void neighborChanged(BlockState state, Level worldIn, BlockPos pos, Block blockIn, BlockPos fromPos, boolean isMoving)
     {
-        if(!worldIn.isRemote && !isManual)
+        if(!worldIn.isClientSide && !isManual)
         {
-            boolean flag = state.get(LIT);
-            if(flag != worldIn.isBlockPowered(pos))
+            boolean flag = state.getValue(LIT);
+            if(flag != worldIn.hasNeighborSignal(pos))
             {
                 if(flag)
                 {
-                    worldIn.getPendingBlockTicks().scheduleTick(pos, this, 4);
+                    worldIn.getBlockTicks().scheduleTick(pos, this, 4);
                 }
                 else
                 {
-                    worldIn.setBlockState(pos, state.cycleValue(LIT), 2);
+                    worldIn.setBlock(pos, state.cycle(LIT), 2);
                 }
             }
 
@@ -156,20 +156,20 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
     }
 
     @Override
-    public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random)
+    public void tick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random)
     {
-        if(!worldIn.isRemote)
+        if(!worldIn.isClientSide)
         {
-            if(state.get(LIT) && !worldIn.isBlockPowered(pos))
+            if(state.getValue(LIT) && !worldIn.hasNeighborSignal(pos))
             {
-                worldIn.setBlockState(pos, state.cycleValue(LIT), 2);
+                worldIn.setBlock(pos, state.cycle(LIT), 2);
             }
 
         }
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(LIT, WATERLOGGED);
     }
@@ -177,6 +177,6 @@ public class LampBlock extends CustomBlock implements IWaterLoggable
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state)
     {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 }

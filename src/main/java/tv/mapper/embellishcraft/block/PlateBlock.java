@@ -1,55 +1,55 @@
 package tv.mapper.embellishcraft.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.ItemStack;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
 
-public class PlateBlock extends Block implements IWaterLoggable
+public class PlateBlock extends Block implements SimpleWaterloggedBlock
 {
     public static final IntegerProperty PLATES = IntegerProperty.create("plates", 1, 8);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    VoxelShape plate_1 = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 2.0D, 14.0D);
-    VoxelShape plate_2 = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 4.0D, 14.0D);
-    VoxelShape plate_3 = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 6.0D, 14.0D);
-    VoxelShape plate_4 = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 8.0D, 14.0D);
-    VoxelShape plate_5 = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 10.0D, 14.0D);
-    VoxelShape plate_6 = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
-    VoxelShape plate_7 = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 14.0D, 14.0D);
-    VoxelShape plate_8 = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
+    VoxelShape plate_1 = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 2.0D, 14.0D);
+    VoxelShape plate_2 = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 4.0D, 14.0D);
+    VoxelShape plate_3 = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 6.0D, 14.0D);
+    VoxelShape plate_4 = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 8.0D, 14.0D);
+    VoxelShape plate_5 = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 10.0D, 14.0D);
+    VoxelShape plate_6 = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
+    VoxelShape plate_7 = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 14.0D, 14.0D);
+    VoxelShape plate_8 = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
 
     public PlateBlock(Properties properties)
     {
         super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(PLATES, 1).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.registerDefaultState(this.stateDefinition.any().setValue(PLATES, 1).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
-        switch(state.get(PLATES))
+        switch(state.getValue(PLATES))
         {
             case 1:
                 return plate_1;
@@ -73,63 +73,63 @@ public class PlateBlock extends Block implements IWaterLoggable
     }
 
     @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+    public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit)
     {
-        if(!player.isSneaking() && state.get(PLATES) < 8)
+        if(!player.isShiftKeyDown() && state.getValue(PLATES) < 8)
         {
             ItemStack stack = ItemStack.EMPTY;
-            if(player.getHeldItemMainhand().getItem() == ECItemRegistry.PLATE_ITEM.get())
-                stack = player.getHeldItemMainhand();
-            else if(player.getHeldItemOffhand().getItem() == ECItemRegistry.PLATE_ITEM.get())
-                stack = player.getHeldItemOffhand();
+            if(player.getMainHandItem().getItem() == ECItemRegistry.PLATE_ITEM.get())
+                stack = player.getMainHandItem();
+            else if(player.getOffhandItem().getItem() == ECItemRegistry.PLATE_ITEM.get())
+                stack = player.getOffhandItem();
 
             if(stack.getItem() == ECItemRegistry.PLATE_ITEM.get())
             {
-                worldIn.setBlockState(pos, state.with(PLATES, state.get(PLATES) + 1));
-                if(!worldIn.isRemote)
-                    worldIn.playSound(null, pos, SoundEvents.BLOCK_GLASS_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                worldIn.setBlockAndUpdate(pos, state.setValue(PLATES, state.getValue(PLATES) + 1));
+                if(!worldIn.isClientSide)
+                    worldIn.playSound(null, pos, SoundEvents.GLASS_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
 
                 if(!player.isCreative())
                     stack.setCount(stack.getCount() - 1);
-                return ActionResultType.SUCCESS;
+                return InteractionResult.SUCCESS;
             }
 
         }
-        return ActionResultType.FAIL;
+        return InteractionResult.FAIL;
     }
 
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(PLATES, WATERLOGGED);
     }
 
-    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
+    public boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos)
     {
-        BlockPos blockpos = pos.down();
+        BlockPos blockpos = pos.below();
         BlockState blockstate = worldIn.getBlockState(blockpos);
-        if(blockstate.getBlock() instanceof PlateBlock && blockstate.get(PLATES) == 8)
+        if(blockstate.getBlock() instanceof PlateBlock && blockstate.getValue(PLATES) == 8)
             return true;
         else
-            return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
+            return canSupportCenter(worldIn, pos.below(), Direction.UP);
     }
 
     @SuppressWarnings("deprecation")
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
     {
-        if(stateIn.get(WATERLOGGED))
+        if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
-        if(facing == Direction.DOWN && !this.isValidPosition(stateIn, worldIn, currentPos))
-            return Blocks.AIR.getDefaultState();
+        if(facing == Direction.DOWN && !this.canSurvive(stateIn, worldIn, currentPos))
+            return Blocks.AIR.defaultBlockState();
 
-        return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state)
     {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 }

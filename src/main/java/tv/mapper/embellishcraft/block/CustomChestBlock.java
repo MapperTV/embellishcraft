@@ -2,17 +2,17 @@ package tv.mapper.embellishcraft.block;
 
 import java.util.function.Supplier;
 
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ChestBlock;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.ChestTileEntity;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.ChestBlock;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.ChestBlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.tileentity.CustomChestTileEntity;
@@ -24,26 +24,26 @@ public class CustomChestBlock extends ChestBlock
     private CustomChestType type;
     protected final WoodsType wood;
 
-    public CustomChestBlock(Properties properties, Supplier<TileEntityType<? extends ChestTileEntity>> supplier, CustomChestType type, WoodsType wood)
+    public CustomChestBlock(Properties properties, Supplier<BlockEntityType<? extends ChestBlockEntity>> supplier, CustomChestType type, WoodsType wood)
     {
         super(properties, supplier);
         this.type = type;
         this.wood = wood;
     }
 
-    public TileEntity createNewTileEntity(IBlockReader worldIn)
+    public BlockEntity newBlockEntity(BlockPos p_153215_, BlockState p_153216_, BlockGetter worldIn)
     {
-        return new CustomChestTileEntity(wood);
+        return new CustomChestTileEntity(p_153215_, p_153216_, wood);
     }
 
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack)
+    public void setPlacedBy(Level worldIn, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack)
     {
-        if(stack.hasDisplayName())
+        if(stack.hasCustomHoverName())
         {
-            TileEntity tileentity = worldIn.getTileEntity(pos);
+            BlockEntity tileentity = worldIn.getBlockEntity(pos);
             if(tileentity instanceof CustomChestTileEntity)
             {
-                ((CustomChestTileEntity)tileentity).setCustomName(stack.getDisplayName());
+                ((CustomChestTileEntity)tileentity).setCustomName(stack.getHoverName());
             }
         }
     }
@@ -60,8 +60,8 @@ public class CustomChestBlock extends ChestBlock
     }
 
     @Override
-    public BlockRenderType getRenderType(BlockState state)
+    public RenderShape getRenderShape(BlockState state)
     {
-        return BlockRenderType.MODEL;
+        return RenderShape.MODEL;
     }
 }

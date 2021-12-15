@@ -2,7 +2,7 @@ package tv.mapper.embellishcraft.util;
 
 import java.util.function.Supplier;
 
-import net.minecraft.util.SoundEvent;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.common.util.ForgeSoundType;
 
 public class ModSoundType extends ForgeSoundType

@@ -1,22 +1,22 @@
 package tv.mapper.embellishcraft.inventory.container;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.ShulkerBoxBlock;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.container.Slot;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.Container;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ShulkerBoxBlock;
 import tv.mapper.embellishcraft.block.CrateBlock;
 
 public class CrateSlot extends Slot
 {
-    public CrateSlot(IInventory inventoryIn, int slotIndexIn, int xPosition, int yPosition)
+    public CrateSlot(Container inventoryIn, int slotIndexIn, int xPosition, int yPosition)
     {
         super(inventoryIn, slotIndexIn, xPosition, yPosition);
     }
 
-    public boolean isItemValid(ItemStack stack)
+    public boolean mayPlace(ItemStack stack)
     {
-        if(Block.getBlockFromItem(stack.getItem()) instanceof CrateBlock || Block.getBlockFromItem(stack.getItem()) instanceof ShulkerBoxBlock)
+        if(Block.byItem(stack.getItem()) instanceof CrateBlock || Block.byItem(stack.getItem()) instanceof ShulkerBoxBlock)
             return false;
         else
             return true;

@@ -1,26 +1,26 @@
 package tv.mapper.embellishcraft.client.renderer;
 
-import net.minecraft.client.renderer.culling.ClippingHelper;
+import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.client.renderer.entity.EntityRendererProvider.Context;
+import net.minecraft.resources.ResourceLocation;
 import tv.mapper.embellishcraft.entity.EntityChair;
 
 public class ChairEntityRenderer extends EntityRenderer<EntityChair>
 {
-    public ChairEntityRenderer(EntityRendererManager renderManager)
+    public ChairEntityRenderer(Context renderManager)
     {
         super(renderManager);
     }
 
     @Override
-    public ResourceLocation getEntityTexture(EntityChair entity)
+    public ResourceLocation getTextureLocation(EntityChair entity)
     {
         return null;
     }
 
     @Override
-    public boolean shouldRender(EntityChair entity, ClippingHelper camera, double camX, double camY, double camZ)
+    public boolean shouldRender(EntityChair entity, Frustum camera, double camX, double camY, double camZ)
     {
         return false;
     }

@@ -2,27 +2,27 @@ package tv.mapper.embellishcraft.entity;
 
 import java.util.HashMap;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.network.IPacket;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
 
 public class EntityChair extends Entity
 {
     public static final HashMap<BlockPos, EntityChair> OCCUPIED = new HashMap<BlockPos, EntityChair>();
 
-    public EntityChair(World world)
+    public EntityChair(Level world)
     {
         super(ModEntities.TYPE_CHAIR, world);
-        this.noClip = true;
+        this.noPhysics = true;
     }
 
-    public EntityChair(World world, BlockPos pos)
+    public EntityChair(Level world, BlockPos pos)
     {
         this(world);
-        setPosition(pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5);
+        setPos(pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5);
         OCCUPIED.put(pos, this);
     }
 
@@ -30,41 +30,41 @@ public class EntityChair extends Entity
     public void tick()
     {
 
-        if(!this.world.isRemote)
+        if(!this.level.isClientSide)
         {
-            if(!this.isBeingRidden() || this.world.isAirBlock(new BlockPos(this.getPosX(), this.getPosY(), this.getPosZ())))
+            if(!this.isVehicle() || this.level.isEmptyBlock(new BlockPos(this.getX(), this.getY(), this.getZ())))
             {
-                this.remove();
+                this.remove(Entity.RemovalReason.DISCARDED);
             }
         }
     }
 
     @Override
-    protected void registerData()
+    protected void defineSynchedData()
     {
 
     }
 
     @Override
-    protected void readAdditional(CompoundNBT compound)
+    protected void readAdditionalSaveData(CompoundTag compound)
     {
 
     }
 
     @Override
-    protected void writeAdditional(CompoundNBT compound)
+    protected void addAdditionalSaveData(CompoundTag compound)
     {
 
     }
 
     @Override
-    protected boolean canBeRidden(Entity entity)
+    protected boolean canRide(Entity entity)
     {
         return true;
     }
 
     @Override
-    public IPacket<?> createSpawnPacket()
+    public Packet<?> getAddEntityPacket()
     {
         return NetworkHooks.getEntitySpawningPacket(this);
     }

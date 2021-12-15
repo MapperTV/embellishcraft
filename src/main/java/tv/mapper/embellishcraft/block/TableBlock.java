@@ -1,27 +1,28 @@
 package tv.mapper.embellishcraft.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraftforge.common.ToolType;
-import tv.mapper.mapperbase.block.CustomBlock;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import tv.mapper.mapperbase.world.level.block.CustomBlock;
+import tv.mapper.mapperbase.world.level.block.ToolTiers;
+import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
-public class TableBlock extends CustomBlock implements IWaterLoggable
+public class TableBlock extends CustomBlock implements SimpleWaterloggedBlock
 {
     public static final BooleanProperty TABLE_NORTH = BooleanProperty.create("table_north");
     public static final BooleanProperty TABLE_SOUTH = BooleanProperty.create("table_south");
@@ -31,61 +32,59 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    protected static final VoxelShape plate = Block.makeCuboidShape(0.0D, 14.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape plate = Block.box(0.0D, 14.0D, 0.0D, 16.0D, 16.0D, 16.0D);
 
-    protected static final VoxelShape leg_north = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 2.0D, 14.0D, 2.0D);
-    protected static final VoxelShape leg_east = Block.makeCuboidShape(14.0D, 0.0D, 0.0D, 16.0D, 14.0D, 2.0D);
-    protected static final VoxelShape leg_west = Block.makeCuboidShape(0.0D, 0.0D, 14.0D, 2.0D, 14.0D, 16.0D);
-    protected static final VoxelShape leg_south = Block.makeCuboidShape(14.0D, 0.0D, 14.0D, 16.0D, 14.0D, 16.0D);
+    protected static final VoxelShape leg_north = Block.box(0.0D, 0.0D, 0.0D, 2.0D, 14.0D, 2.0D);
+    protected static final VoxelShape leg_east = Block.box(14.0D, 0.0D, 0.0D, 16.0D, 14.0D, 2.0D);
+    protected static final VoxelShape leg_west = Block.box(0.0D, 0.0D, 14.0D, 2.0D, 14.0D, 16.0D);
+    protected static final VoxelShape leg_south = Block.box(14.0D, 0.0D, 14.0D, 16.0D, 14.0D, 16.0D);
 
-    public TableBlock(Properties properties)
+    public TableBlock(Properties properties, ToolTypes tool)
     {
-        super(properties);
-        this.setDefaultState(
-            this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED, Boolean.valueOf(false)));
+        super(properties, tool);
+        this.registerDefaultState(this.stateDefinition.any().setValue(TABLE_NORTH, true).setValue(TABLE_SOUTH, true).setValue(TABLE_EAST, true).setValue(TABLE_WEST, true).setValue(HAS_FOOT, true).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    public TableBlock(Properties properties, ToolType toolType)
+    public TableBlock(Properties properties, ToolTypes tool, ToolTiers tier)
     {
-        super(properties, toolType);
-        this.setDefaultState(
-            this.stateContainer.getBaseState().with(TABLE_NORTH, true).with(TABLE_SOUTH, true).with(TABLE_EAST, true).with(TABLE_WEST, true).with(HAS_FOOT, true).with(WATERLOGGED, Boolean.valueOf(false)));
+        super(properties, tool, tier);
+        this.registerDefaultState(this.stateDefinition.any().setValue(TABLE_NORTH, true).setValue(TABLE_SOUTH, true).setValue(TABLE_EAST, true).setValue(TABLE_WEST, true).setValue(HAS_FOOT, true).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
+    public boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos)
     {
-        return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
+        return canSupportCenter(worldIn, pos.below(), Direction.UP);
     }
 
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(TABLE_NORTH, TABLE_SOUTH, TABLE_EAST, TABLE_WEST, HAS_FOOT, WATERLOGGED);
     }
 
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
         VoxelShape shape = plate;
 
-        if(state.get(TABLE_NORTH))
-            shape = VoxelShapes.or(shape, leg_north);
+        if(state.getValue(TABLE_NORTH))
+            shape = Shapes.or(shape, leg_north);
 
-        if(state.get(TABLE_SOUTH))
-            shape = VoxelShapes.or(shape, leg_south);
+        if(state.getValue(TABLE_SOUTH))
+            shape = Shapes.or(shape, leg_south);
 
-        if(state.get(TABLE_EAST))
-            shape = VoxelShapes.or(shape, leg_east);
+        if(state.getValue(TABLE_EAST))
+            shape = Shapes.or(shape, leg_east);
 
-        if(state.get(TABLE_WEST))
-            shape = VoxelShapes.or(shape, leg_west);
+        if(state.getValue(TABLE_WEST))
+            shape = Shapes.or(shape, leg_west);
 
         return shape;
     }
 
-    public BlockState getStateForPlacement(BlockItemUseContext context)
+    public BlockState getStateForPlacement(BlockPlaceContext context)
     {
-        IBlockReader iblockreader = context.getWorld();
-        BlockPos blockpos = context.getPos();
-        FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+        BlockGetter iblockreader = context.getLevel();
+        BlockPos blockpos = context.getClickedPos();
+        FluidState ifluidstate = context.getLevel().getFluidState(context.getClickedPos());
         BlockPos blockpos1 = blockpos.north();
         BlockPos blockpos2 = blockpos.east();
         BlockPos blockpos3 = blockpos.south();
@@ -124,16 +123,15 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
         if(north || south || east || west)
             has_foot = true;
 
-        return super.getStateForPlacement(context).with(TABLE_NORTH, north).with(TABLE_SOUTH, south).with(TABLE_EAST, east).with(TABLE_WEST, west).with(HAS_FOOT, has_foot).with(WATERLOGGED,
-            Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        return super.getStateForPlacement(context).setValue(TABLE_NORTH, north).setValue(TABLE_SOUTH, south).setValue(TABLE_EAST, east).setValue(TABLE_WEST, west).setValue(HAS_FOOT, has_foot).setValue(WATERLOGGED, Boolean.valueOf(ifluidstate.getType() == Fluids.WATER));
     }
 
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
     {
-        if(facing == Direction.DOWN && !this.isValidPosition(stateIn, worldIn, currentPos))
-            return Blocks.AIR.getDefaultState();
+        if(facing == Direction.DOWN && !this.canSurvive(stateIn, worldIn, currentPos))
+            return Blocks.AIR.defaultBlockState();
 
-        IBlockReader iblockreader = worldIn;
+        BlockGetter iblockreader = worldIn;
 
         BlockPos blockpos1 = currentPos.north();
         BlockPos blockpos2 = currentPos.east();
@@ -174,17 +172,17 @@ public class TableBlock extends CustomBlock implements IWaterLoggable
         if(north || south || east || west)
             has_foot = true;
 
-        if(stateIn.get(WATERLOGGED))
+        if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
-        return this.getDefaultState().with(TABLE_NORTH, north).with(TABLE_SOUTH, south).with(TABLE_EAST, east).with(TABLE_WEST, west).with(HAS_FOOT, has_foot).with(WATERLOGGED, stateIn.get(WATERLOGGED));
+        return this.defaultBlockState().setValue(TABLE_NORTH, north).setValue(TABLE_SOUTH, south).setValue(TABLE_EAST, east).setValue(TABLE_WEST, west).setValue(HAS_FOOT, has_foot).setValue(WATERLOGGED, stateIn.getValue(WATERLOGGED));
     }
 
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state)
     {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 }

@@ -3,9 +3,9 @@ package tv.mapper.embellishcraft.util;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.StringRepresentable;
 
-public enum WoodsType implements IStringSerializable
+public enum WoodsType implements StringRepresentable
 {
     OAK(0, "oak", "chene"),
     BIRCH(1, "birch", "bouleau"),
@@ -44,7 +44,7 @@ public enum WoodsType implements IStringSerializable
     }
 
     @Override
-    public String getString()
+    public String getSerializedName()
     {
         return getString("en_us");
     }
@@ -74,7 +74,7 @@ public enum WoodsType implements IStringSerializable
         for(WoodsType wood : values())
         {
             if(wood.getId() == id)
-                return wood.getString();
+                return wood.getSerializedName();
         }
         return null;
     }

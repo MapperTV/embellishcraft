@@ -1,26 +1,27 @@
 package tv.mapper.embellishcraft.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraftforge.common.ToolType;
-import tv.mapper.mapperbase.block.CustomBlock;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import tv.mapper.mapperbase.world.level.block.CustomBlock;
+import tv.mapper.mapperbase.world.level.block.ToolTiers;
+import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
-public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
+public class SuspendedStairsBlock extends CustomBlock implements SimpleWaterloggedBlock
 {
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -29,106 +30,106 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
     /* SHAPES */
 
     // Middle bar
-    private static final VoxelShape BAR1_N = Block.makeCuboidShape(6.0D, -1.0D, 0.0D, 10.0D, 3.0D, 4.0D);
-    private static final VoxelShape BAR2_N = Block.makeCuboidShape(6.0D, 3.0D, 4.0D, 10.0D, 7.0D, 8.0D);
-    private static final VoxelShape BAR3_N = Block.makeCuboidShape(6.0D, 7.0D, 8.0D, 10.0D, 11.0D, 12.0D);
-    private static final VoxelShape BAR4_N = Block.makeCuboidShape(6.0D, 11.0D, 12.0D, 10.0D, 15.0D, 16.0D);
-    private static final VoxelShape BAR_N = VoxelShapes.or(BAR1_N, VoxelShapes.or(BAR2_N, VoxelShapes.or(BAR3_N, BAR4_N)));
+    private static final VoxelShape BAR1_N = Block.box(6.0D, -1.0D, 0.0D, 10.0D, 3.0D, 4.0D);
+    private static final VoxelShape BAR2_N = Block.box(6.0D, 3.0D, 4.0D, 10.0D, 7.0D, 8.0D);
+    private static final VoxelShape BAR3_N = Block.box(6.0D, 7.0D, 8.0D, 10.0D, 11.0D, 12.0D);
+    private static final VoxelShape BAR4_N = Block.box(6.0D, 11.0D, 12.0D, 10.0D, 15.0D, 16.0D);
+    private static final VoxelShape BAR_N = Shapes.or(BAR1_N, Shapes.or(BAR2_N, Shapes.or(BAR3_N, BAR4_N)));
 
-    private static final VoxelShape BAR1_W = Block.makeCuboidShape(0.0D, -1.0D, 6.0D, 4.0D, 3.0D, 10.0D);
-    private static final VoxelShape BAR2_W = Block.makeCuboidShape(4.0D, 3.0D, 6.0D, 8.0D, 7.0D, 10.0D);
-    private static final VoxelShape BAR3_W = Block.makeCuboidShape(8.0D, 7.0D, 6.0D, 12.0D, 11.0D, 10.0D);
-    private static final VoxelShape BAR4_W = Block.makeCuboidShape(12.0D, 11.0D, 6.0D, 16.0D, 15.0D, 10.0D);
-    private static final VoxelShape BAR_W = VoxelShapes.or(BAR1_W, VoxelShapes.or(BAR2_W, VoxelShapes.or(BAR3_W, BAR4_W)));
+    private static final VoxelShape BAR1_W = Block.box(0.0D, -1.0D, 6.0D, 4.0D, 3.0D, 10.0D);
+    private static final VoxelShape BAR2_W = Block.box(4.0D, 3.0D, 6.0D, 8.0D, 7.0D, 10.0D);
+    private static final VoxelShape BAR3_W = Block.box(8.0D, 7.0D, 6.0D, 12.0D, 11.0D, 10.0D);
+    private static final VoxelShape BAR4_W = Block.box(12.0D, 11.0D, 6.0D, 16.0D, 15.0D, 10.0D);
+    private static final VoxelShape BAR_W = Shapes.or(BAR1_W, Shapes.or(BAR2_W, Shapes.or(BAR3_W, BAR4_W)));
 
-    private static final VoxelShape BAR1_S = Block.makeCuboidShape(6.0D, -1.0D, 12.0D, 10.0D, 3.0D, 16.0D);
-    private static final VoxelShape BAR2_S = Block.makeCuboidShape(6.0D, 3.0D, 8.0D, 10.0D, 7.0D, 12.0D);
-    private static final VoxelShape BAR3_S = Block.makeCuboidShape(6.0D, 7.0D, 4.0D, 10.0D, 11.0D, 8.0D);
-    private static final VoxelShape BAR4_S = Block.makeCuboidShape(6.0D, 11.0D, 0.0D, 10.0D, 15.0D, 4.0D);
-    private static final VoxelShape BAR_S = VoxelShapes.or(BAR1_S, VoxelShapes.or(BAR2_S, VoxelShapes.or(BAR3_S, BAR4_S)));
+    private static final VoxelShape BAR1_S = Block.box(6.0D, -1.0D, 12.0D, 10.0D, 3.0D, 16.0D);
+    private static final VoxelShape BAR2_S = Block.box(6.0D, 3.0D, 8.0D, 10.0D, 7.0D, 12.0D);
+    private static final VoxelShape BAR3_S = Block.box(6.0D, 7.0D, 4.0D, 10.0D, 11.0D, 8.0D);
+    private static final VoxelShape BAR4_S = Block.box(6.0D, 11.0D, 0.0D, 10.0D, 15.0D, 4.0D);
+    private static final VoxelShape BAR_S = Shapes.or(BAR1_S, Shapes.or(BAR2_S, Shapes.or(BAR3_S, BAR4_S)));
 
-    private static final VoxelShape BAR1_E = Block.makeCuboidShape(12.0D, -1.0D, 6.0D, 16.0D, 3.0D, 10.0D);
-    private static final VoxelShape BAR2_E = Block.makeCuboidShape(8.0D, 3.0D, 6.0D, 12.0D, 7.0D, 10.0D);
-    private static final VoxelShape BAR3_E = Block.makeCuboidShape(4.0D, 7.0D, 6.0D, 8.0D, 11.0D, 10.0D);
-    private static final VoxelShape BAR4_E = Block.makeCuboidShape(0.0D, 11.0D, 6.0D, 4.0D, 15.0D, 10.0D);
-    private static final VoxelShape BAR_E = VoxelShapes.or(BAR1_E, VoxelShapes.or(BAR2_E, VoxelShapes.or(BAR3_E, BAR4_E)));
+    private static final VoxelShape BAR1_E = Block.box(12.0D, -1.0D, 6.0D, 16.0D, 3.0D, 10.0D);
+    private static final VoxelShape BAR2_E = Block.box(8.0D, 3.0D, 6.0D, 12.0D, 7.0D, 10.0D);
+    private static final VoxelShape BAR3_E = Block.box(4.0D, 7.0D, 6.0D, 8.0D, 11.0D, 10.0D);
+    private static final VoxelShape BAR4_E = Block.box(0.0D, 11.0D, 6.0D, 4.0D, 15.0D, 10.0D);
+    private static final VoxelShape BAR_E = Shapes.or(BAR1_E, Shapes.or(BAR2_E, Shapes.or(BAR3_E, BAR4_E)));
 
     // Small steps
-    private static final VoxelShape STEP1_N = Block.makeCuboidShape(0.0D, 3.0D, 0.0D, 16.0D, 4.0D, 4.0D);
-    private static final VoxelShape STEP2_N = Block.makeCuboidShape(0.0D, 7.0D, 4.0D, 16.0D, 8.0D, 8.0D);
-    private static final VoxelShape STEP3_N = Block.makeCuboidShape(0.0D, 11.0D, 8.0D, 16.0D, 12.0D, 12.0D);
-    private static final VoxelShape STEP4_N = Block.makeCuboidShape(0.0D, 15.0D, 12.0D, 16.0D, 16.0D, 16.0D);
-    private static final VoxelShape STEPS_N = VoxelShapes.or(STEP1_N, VoxelShapes.or(STEP2_N, VoxelShapes.or(STEP3_N, STEP4_N)));
+    private static final VoxelShape STEP1_N = Block.box(0.0D, 3.0D, 0.0D, 16.0D, 4.0D, 4.0D);
+    private static final VoxelShape STEP2_N = Block.box(0.0D, 7.0D, 4.0D, 16.0D, 8.0D, 8.0D);
+    private static final VoxelShape STEP3_N = Block.box(0.0D, 11.0D, 8.0D, 16.0D, 12.0D, 12.0D);
+    private static final VoxelShape STEP4_N = Block.box(0.0D, 15.0D, 12.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape STEPS_N = Shapes.or(STEP1_N, Shapes.or(STEP2_N, Shapes.or(STEP3_N, STEP4_N)));
 
-    private static final VoxelShape STEP1_W = Block.makeCuboidShape(0.0D, 3.0D, 0.0D, 4.0D, 4.0D, 16.0D);
-    private static final VoxelShape STEP2_W = Block.makeCuboidShape(4.0D, 7.0D, 0.0D, 8.0D, 8.0D, 16.0D);
-    private static final VoxelShape STEP3_W = Block.makeCuboidShape(8.0D, 11.0D, 0.0D, 12.0D, 12.0D, 16.0D);
-    private static final VoxelShape STEP4_W = Block.makeCuboidShape(12.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-    private static final VoxelShape STEPS_W = VoxelShapes.or(STEP1_W, VoxelShapes.or(STEP2_W, VoxelShapes.or(STEP3_W, STEP4_W)));
+    private static final VoxelShape STEP1_W = Block.box(0.0D, 3.0D, 0.0D, 4.0D, 4.0D, 16.0D);
+    private static final VoxelShape STEP2_W = Block.box(4.0D, 7.0D, 0.0D, 8.0D, 8.0D, 16.0D);
+    private static final VoxelShape STEP3_W = Block.box(8.0D, 11.0D, 0.0D, 12.0D, 12.0D, 16.0D);
+    private static final VoxelShape STEP4_W = Block.box(12.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape STEPS_W = Shapes.or(STEP1_W, Shapes.or(STEP2_W, Shapes.or(STEP3_W, STEP4_W)));
 
-    private static final VoxelShape STEP1_S = Block.makeCuboidShape(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 4.0D);
-    private static final VoxelShape STEP2_S = Block.makeCuboidShape(0.0D, 11.0D, 4.0D, 16.0D, 12.0D, 8.0D);
-    private static final VoxelShape STEP3_S = Block.makeCuboidShape(0.0D, 7.0D, 8.0D, 16.0D, 8.0D, 12.0D);
-    private static final VoxelShape STEP4_S = Block.makeCuboidShape(0.0D, 3.0D, 12.0D, 16.0D, 4.0D, 16.0D);
-    private static final VoxelShape STEPS_S = VoxelShapes.or(STEP1_S, VoxelShapes.or(STEP2_S, VoxelShapes.or(STEP3_S, STEP4_S)));
+    private static final VoxelShape STEP1_S = Block.box(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 4.0D);
+    private static final VoxelShape STEP2_S = Block.box(0.0D, 11.0D, 4.0D, 16.0D, 12.0D, 8.0D);
+    private static final VoxelShape STEP3_S = Block.box(0.0D, 7.0D, 8.0D, 16.0D, 8.0D, 12.0D);
+    private static final VoxelShape STEP4_S = Block.box(0.0D, 3.0D, 12.0D, 16.0D, 4.0D, 16.0D);
+    private static final VoxelShape STEPS_S = Shapes.or(STEP1_S, Shapes.or(STEP2_S, Shapes.or(STEP3_S, STEP4_S)));
 
-    private static final VoxelShape STEP1_E = Block.makeCuboidShape(0.0D, 15.0D, 0.0D, 4.0D, 16.0D, 16.0D);
-    private static final VoxelShape STEP2_E = Block.makeCuboidShape(4.0D, 11.0D, 0.0D, 8.0D, 12.0D, 16.0D);
-    private static final VoxelShape STEP3_E = Block.makeCuboidShape(8.0D, 7.0D, 0.0D, 12.0D, 8.0D, 16.0D);
-    private static final VoxelShape STEP4_E = Block.makeCuboidShape(12.0D, 3.0D, 0.0D, 16.0D, 4.0D, 16.0D);
-    private static final VoxelShape STEPS_E = VoxelShapes.or(STEP1_E, VoxelShapes.or(STEP2_E, VoxelShapes.or(STEP3_E, STEP4_E)));
+    private static final VoxelShape STEP1_E = Block.box(0.0D, 15.0D, 0.0D, 4.0D, 16.0D, 16.0D);
+    private static final VoxelShape STEP2_E = Block.box(4.0D, 11.0D, 0.0D, 8.0D, 12.0D, 16.0D);
+    private static final VoxelShape STEP3_E = Block.box(8.0D, 7.0D, 0.0D, 12.0D, 8.0D, 16.0D);
+    private static final VoxelShape STEP4_E = Block.box(12.0D, 3.0D, 0.0D, 16.0D, 4.0D, 16.0D);
+    private static final VoxelShape STEPS_E = Shapes.or(STEP1_E, Shapes.or(STEP2_E, Shapes.or(STEP3_E, STEP4_E)));
 
     // Large steps
-    private static final VoxelShape STEP1_LARGE_N = Block.makeCuboidShape(0.0D, 6.0D, 0.0D, 16.0D, 8.0D, 8.0D);
-    private static final VoxelShape STEP2_LARGE_N = Block.makeCuboidShape(0.0D, 14.0D, 8.0D, 16.0D, 16.0D, 16.0D);
-    private static final VoxelShape LARGE_N = VoxelShapes.or(STEP1_LARGE_N, STEP2_LARGE_N);
+    private static final VoxelShape STEP1_LARGE_N = Block.box(0.0D, 6.0D, 0.0D, 16.0D, 8.0D, 8.0D);
+    private static final VoxelShape STEP2_LARGE_N = Block.box(0.0D, 14.0D, 8.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape LARGE_N = Shapes.or(STEP1_LARGE_N, STEP2_LARGE_N);
 
-    private static final VoxelShape STEP1_LARGE_W = Block.makeCuboidShape(0.0D, 6.0D, 0.0D, 8.0D, 8.0D, 16.0D);
-    private static final VoxelShape STEP2_LARGE_W = Block.makeCuboidShape(8.0D, 14.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-    private static final VoxelShape LARGE_W = VoxelShapes.or(STEP1_LARGE_W, STEP2_LARGE_W);
+    private static final VoxelShape STEP1_LARGE_W = Block.box(0.0D, 6.0D, 0.0D, 8.0D, 8.0D, 16.0D);
+    private static final VoxelShape STEP2_LARGE_W = Block.box(8.0D, 14.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape LARGE_W = Shapes.or(STEP1_LARGE_W, STEP2_LARGE_W);
 
-    private static final VoxelShape STEP1_LARGE_S = Block.makeCuboidShape(0.0D, 14.0D, 0.0D, 16.0D, 16.0D, 8.0D);
-    private static final VoxelShape STEP2_LARGE_S = Block.makeCuboidShape(0.0D, 6.0D, 8.0D, 16.0D, 8.0D, 16.0D);
-    private static final VoxelShape LARGE_S = VoxelShapes.or(STEP1_LARGE_S, STEP2_LARGE_S);
+    private static final VoxelShape STEP1_LARGE_S = Block.box(0.0D, 14.0D, 0.0D, 16.0D, 16.0D, 8.0D);
+    private static final VoxelShape STEP2_LARGE_S = Block.box(0.0D, 6.0D, 8.0D, 16.0D, 8.0D, 16.0D);
+    private static final VoxelShape LARGE_S = Shapes.or(STEP1_LARGE_S, STEP2_LARGE_S);
 
-    private static final VoxelShape STEP1_LARGE_E = Block.makeCuboidShape(8.0D, 6.0D, 0.0D, 16.0D, 8.0D, 16.0D);
-    private static final VoxelShape STEP2_LARGE_E = Block.makeCuboidShape(0.0D, 14.0D, 0.0D, 8.0D, 16.0D, 16.0D);
-    private static final VoxelShape LARGE_E = VoxelShapes.or(STEP1_LARGE_E, STEP2_LARGE_E);
+    private static final VoxelShape STEP1_LARGE_E = Block.box(8.0D, 6.0D, 0.0D, 16.0D, 8.0D, 16.0D);
+    private static final VoxelShape STEP2_LARGE_E = Block.box(0.0D, 14.0D, 0.0D, 8.0D, 16.0D, 16.0D);
+    private static final VoxelShape LARGE_E = Shapes.or(STEP1_LARGE_E, STEP2_LARGE_E);
 
     // Collision
 
-    private static final VoxelShape STEP1_COL_N = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 8.0D);
-    private static final VoxelShape STEP2_COL_N = Block.makeCuboidShape(0.0D, 8.0D, 8.0D, 16.0D, 16.0D, 16.0D);
-    private static final VoxelShape COL_N = VoxelShapes.or(STEP1_COL_N, STEP2_COL_N);
+    private static final VoxelShape STEP1_COL_N = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 8.0D);
+    private static final VoxelShape STEP2_COL_N = Block.box(0.0D, 8.0D, 8.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape COL_N = Shapes.or(STEP1_COL_N, STEP2_COL_N);
 
-    private static final VoxelShape STEP1_COL_W = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 8.0D, 8.0D, 16.0D);
-    private static final VoxelShape STEP2_COL_W = Block.makeCuboidShape(8.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-    private static final VoxelShape COL_W = VoxelShapes.or(STEP1_COL_W, STEP2_COL_W);
+    private static final VoxelShape STEP1_COL_W = Block.box(0.0D, 0.0D, 0.0D, 8.0D, 8.0D, 16.0D);
+    private static final VoxelShape STEP2_COL_W = Block.box(8.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape COL_W = Shapes.or(STEP1_COL_W, STEP2_COL_W);
 
-    private static final VoxelShape STEP1_COL_S = Block.makeCuboidShape(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 8.0D);
-    private static final VoxelShape STEP2_COL_S = Block.makeCuboidShape(0.0D, 0.0D, 8.0D, 16.0D, 8.0D, 16.0D);
-    private static final VoxelShape COL_S = VoxelShapes.or(STEP1_COL_S, STEP2_COL_S);
+    private static final VoxelShape STEP1_COL_S = Block.box(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 8.0D);
+    private static final VoxelShape STEP2_COL_S = Block.box(0.0D, 0.0D, 8.0D, 16.0D, 8.0D, 16.0D);
+    private static final VoxelShape COL_S = Shapes.or(STEP1_COL_S, STEP2_COL_S);
 
-    private static final VoxelShape STEP1_COL_E = Block.makeCuboidShape(8.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
-    private static final VoxelShape STEP2_COL_E = Block.makeCuboidShape(0.0D, 8.0D, 0.0D, 8.0D, 16.0D, 16.0D);
-    private static final VoxelShape COL_E = VoxelShapes.or(STEP1_COL_E, STEP2_COL_E);
+    private static final VoxelShape STEP1_COL_E = Block.box(8.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
+    private static final VoxelShape STEP2_COL_E = Block.box(0.0D, 8.0D, 0.0D, 8.0D, 16.0D, 16.0D);
+    private static final VoxelShape COL_E = Shapes.or(STEP1_COL_E, STEP2_COL_E);
 
     /// Final shapes
 
-    private static final VoxelShape SHAPE_N = VoxelShapes.or(STEPS_N, BAR_N);
-    private static final VoxelShape SHAPE_W = VoxelShapes.or(STEPS_W, BAR_W);
-    private static final VoxelShape SHAPE_S = VoxelShapes.or(STEPS_S, BAR_S);
-    private static final VoxelShape SHAPE_E = VoxelShapes.or(STEPS_E, BAR_E);
+    private static final VoxelShape SHAPE_N = Shapes.or(STEPS_N, BAR_N);
+    private static final VoxelShape SHAPE_W = Shapes.or(STEPS_W, BAR_W);
+    private static final VoxelShape SHAPE_S = Shapes.or(STEPS_S, BAR_S);
+    private static final VoxelShape SHAPE_E = Shapes.or(STEPS_E, BAR_E);
 
-    private static final VoxelShape SHAPE_LARGE_N = VoxelShapes.or(LARGE_N, BAR_N);
-    private static final VoxelShape SHAPE_LARGE_W = VoxelShapes.or(LARGE_W, BAR_W);
-    private static final VoxelShape SHAPE_LARGE_S = VoxelShapes.or(LARGE_S, BAR_S);
-    private static final VoxelShape SHAPE_LARGE_E = VoxelShapes.or(LARGE_E, BAR_E);
+    private static final VoxelShape SHAPE_LARGE_N = Shapes.or(LARGE_N, BAR_N);
+    private static final VoxelShape SHAPE_LARGE_W = Shapes.or(LARGE_W, BAR_W);
+    private static final VoxelShape SHAPE_LARGE_S = Shapes.or(LARGE_S, BAR_S);
+    private static final VoxelShape SHAPE_LARGE_E = Shapes.or(LARGE_E, BAR_E);
 
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
-        switch((Direction)state.get(FACING))
+        switch((Direction)state.getValue(FACING))
         {
             case NORTH:
                 return !isLarge ? SHAPE_N : SHAPE_LARGE_N;
@@ -144,9 +145,9 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
-        switch((Direction)state.get(FACING))
+        switch((Direction)state.getValue(FACING))
         {
             case NORTH:
                 return COL_N;
@@ -161,40 +162,40 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
         }
     }
 
-    public SuspendedStairsBlock(Properties properties, boolean isLarge)
+    public SuspendedStairsBlock(Properties properties, ToolTypes tool, boolean isLarge)
     {
-        super(properties);
-        this.setDefaultState(getStateContainer().getBaseState().with(WATERLOGGED, false));
+        super(properties, tool);
+        this.registerDefaultState(getStateDefinition().any().setValue(WATERLOGGED, false));
         this.isLarge = isLarge;
     }
 
-    public SuspendedStairsBlock(Properties properties, ToolType toolType, boolean isLarge)
+    public SuspendedStairsBlock(Properties properties, ToolTypes tool, ToolTiers tier, boolean isLarge)
     {
-        super(properties, toolType);
-        this.setDefaultState(getStateContainer().getBaseState().with(WATERLOGGED, false));
+        super(properties, tool, tier);
+        this.registerDefaultState(getStateDefinition().any().setValue(WATERLOGGED, false));
         this.isLarge = isLarge;
     }
 
     @SuppressWarnings("deprecation")
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
     {
-        if(stateIn.get(WATERLOGGED))
+        if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
-        return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context)
+    public BlockState getStateForPlacement(BlockPlaceContext context)
     {
-        BlockPos blockpos = context.getPos();
-        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        BlockPos blockpos = context.getClickedPos();
+        FluidState ifluidstate = context.getLevel().getFluidState(blockpos);
 
-        return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite()).with(WATERLOGGED, Boolean.valueOf(Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER)));
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(WATERLOGGED, Boolean.valueOf(Boolean.valueOf(ifluidstate.getType() == Fluids.WATER)));
     }
 
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(FACING, WATERLOGGED);
     }
@@ -202,7 +203,7 @@ public class SuspendedStairsBlock extends CustomBlock implements IWaterLoggable
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state)
     {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
     public boolean isLagre()

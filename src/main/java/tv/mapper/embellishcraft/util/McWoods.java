@@ -3,9 +3,9 @@ package tv.mapper.embellishcraft.util;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.StringRepresentable;
 
-public enum McWoods implements IStringSerializable
+public enum McWoods implements StringRepresentable
 {
     ACACIA(0, "acacia", "acacia", "Acacia"),
     BIRCH(1, "birch", "bouleau", "Birch"),
@@ -59,13 +59,13 @@ public enum McWoods implements IStringSerializable
         for(McWoods wood : values())
         {
             if(wood.getId() == id)
-                return wood.getString();
+                return wood.getSerializedName();
         }
         return null;
     }
 
     @Override
-    public String getString()
+    public String getSerializedName()
     {
         return this.name;
     }

@@ -2,7 +2,7 @@ package tv.mapper.embellishcraft.util;
 
 import java.util.ArrayList;
 
-import net.minecraft.world.biome.Biome;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;

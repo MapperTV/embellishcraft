@@ -4,61 +4,61 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.block.BedBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.merchant.villager.VillagerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.DyeColor;
-import net.minecraft.item.ItemStack;
-import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BedPart;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.Explosion;
-import net.minecraft.world.ExplosionContext;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.ExplosionDamageCalculator;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.BedBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class PillowBlock extends BedBlock
 {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    private static final VoxelShape SHAPE = Block.makeCuboidShape(2.0D, 0.0D, 4.0D, 14.0D, 3.0D, 12.0D);
-    private static final VoxelShape SHAPE_90 = Block.makeCuboidShape(4.0D, 0.0D, 2.0D, 12.0D, 3.0D, 14.0D);
+    private static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 4.0D, 14.0D, 3.0D, 12.0D);
+    private static final VoxelShape SHAPE_90 = Block.box(4.0D, 0.0D, 2.0D, 12.0D, 3.0D, 14.0D);
 
     public PillowBlock(DyeColor color, Properties properties)
     {
         super(color, properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(PART, BedPart.FOOT).with(HORIZONTAL_FACING, Direction.NORTH).with(OCCUPIED, Boolean.valueOf(false)).with(WATERLOGGED, false));
+        this.registerDefaultState(this.stateDefinition.any().setValue(PART, BedPart.FOOT).setValue(FACING, Direction.NORTH).setValue(OCCUPIED, Boolean.valueOf(false)).setValue(WATERLOGGED, false));
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
-        switch((Direction)state.get(HORIZONTAL_FACING))
+        switch((Direction)state.getValue(FACING))
         {
             case NORTH:
             case SOUTH:
@@ -71,130 +71,128 @@ public class PillowBlock extends BedBlock
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
-        return VoxelShapes.empty();
+        return Shapes.empty();
     }
 
     @Override
-    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
+    public boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos)
     {
-        return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
+        return canSupportCenter(worldIn, pos.below(), Direction.UP);
     }
 
     @Override
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack)
+    public void setPlacedBy(Level worldIn, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack)
     {}
 
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+    public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit)
     {
-        if(worldIn.isRemote)
+        if(worldIn.isClientSide)
         {
-            return ActionResultType.CONSUME;
+            return InteractionResult.CONSUME;
         }
         else
         {
-            if(!doesBedWork(worldIn))
+            if(!canSetSpawn(worldIn))
             {
                 worldIn.removeBlock(pos, false);
-                worldIn.createExplosion((Entity)null, DamageSource.causeBedExplosionDamage(), (ExplosionContext)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true,
-                    Explosion.Mode.DESTROY);
-                return ActionResultType.SUCCESS;
+                worldIn.explode((Entity)null, DamageSource.badRespawnPointExplosion(), (ExplosionDamageCalculator)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true, Explosion.BlockInteraction.DESTROY);
+                return InteractionResult.SUCCESS;
             }
-            else if(state.get(OCCUPIED))
+            else if(state.getValue(OCCUPIED))
             {
-                if(!this.func_226861_a_(worldIn, pos))
+                if(!this.kickVillagerOutOfBed(worldIn, pos))
                 {
-                    player.sendStatusMessage(new TranslationTextComponent("block.minecraft.bed.occupied"), true);
+                    player.displayClientMessage(new TranslatableComponent("block.minecraft.bed.occupied"), true);
                 }
 
-                return ActionResultType.SUCCESS;
+                return InteractionResult.SUCCESS;
             }
             else
             {
-                player.trySleep(pos).ifLeft((p_220173_1_) ->
+                player.startSleepInBed(pos).ifLeft((p_220173_1_) ->
                 {
                     if(p_220173_1_ != null)
                     {
-                        player.sendStatusMessage(p_220173_1_.getMessage(), true);
+                        player.displayClientMessage(p_220173_1_.getMessage(), true);
                     }
 
                 });
-                return ActionResultType.SUCCESS;
+                return InteractionResult.SUCCESS;
             }
         }
     }
 
-    private boolean func_226861_a_(World p_226861_1_, BlockPos p_226861_2_)
+    private boolean kickVillagerOutOfBed(Level p_226861_1_, BlockPos p_226861_2_)
     {
-        List<VillagerEntity> list = p_226861_1_.getEntitiesWithinAABB(VillagerEntity.class, new AxisAlignedBB(p_226861_2_), LivingEntity::isSleeping);
+        List<Villager> list = p_226861_1_.getEntitiesOfClass(Villager.class, new AABB(p_226861_2_), LivingEntity::isSleeping);
         if(list.isEmpty())
         {
             return false;
         }
         else
         {
-            list.get(0).wakeUp();
+            list.get(0).stopSleeping();
             return true;
         }
     }
 
     @Override
-    public BlockRenderType getRenderType(BlockState state)
+    public RenderShape getRenderShape(BlockState state)
     {
-        return BlockRenderType.MODEL;
+        return RenderShape.MODEL;
     }
 
     @Override
-    public TileEntity createNewTileEntity(IBlockReader worldIn)
+    public BlockEntity newBlockEntity(BlockPos p_153215_, BlockState p_153216_)
     {
         return null;
     }
 
     @Override
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
     {
-        if(stateIn.get(WATERLOGGED))
+        if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
-        if(facing == Direction.DOWN && !this.isValidPosition(stateIn, worldIn, currentPos))
-            return Blocks.AIR.getDefaultState();
+        if(facing == Direction.DOWN && !this.canSurvive(stateIn, worldIn, currentPos))
+            return Blocks.AIR.defaultBlockState();
 
         return stateIn;
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context)
+    public BlockState getStateForPlacement(BlockPlaceContext context)
     {
-        BlockPos blockpos = context.getPos();
-        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        BlockPos blockpos = context.getClickedPos();
+        FluidState ifluidstate = context.getLevel().getFluidState(blockpos);
 
-        return this.getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing()).with(PART, BedPart.HEAD).with(WATERLOGGED,
-            Boolean.valueOf(Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER)));
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection()).setValue(PART, BedPart.HEAD).setValue(WATERLOGGED, Boolean.valueOf(Boolean.valueOf(ifluidstate.getType() == Fluids.WATER)));
     }
 
     @Override
-    public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player)
+    public void playerWillDestroy(Level worldIn, BlockPos pos, BlockState state, Player player)
     {
-        worldIn.playEvent(player, 2001, pos, getStateId(state));
+        worldIn.levelEvent(player, 2001, pos, getId(state));
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        builder.add(HORIZONTAL_FACING, PART, OCCUPIED, WATERLOGGED);
+        builder.add(FACING, PART, OCCUPIED, WATERLOGGED);
     }
 
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state)
     {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
     @Override
-    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type)
+    public boolean isPathfindable(BlockState state, BlockGetter worldIn, BlockPos pos, PathComputationType type)
     {
         return true;
     }

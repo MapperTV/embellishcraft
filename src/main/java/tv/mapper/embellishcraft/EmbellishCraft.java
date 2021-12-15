@@ -3,6 +3,8 @@ package tv.mapper.embellishcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -13,9 +15,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.client.renderer.ChairEntityRenderer;
 import tv.mapper.embellishcraft.config.ECClientConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;
+import tv.mapper.embellishcraft.entity.ModEntities;
 import tv.mapper.embellishcraft.inventory.container.ModContainers;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
 import tv.mapper.embellishcraft.network.ECNetwork;
@@ -75,5 +79,11 @@ public class EmbellishCraft
     private void serverSetup(final FMLDedicatedServerSetupEvent event)
     {
         // LOGGER.info("EmbellishCraft server setup");
+    }
+
+    @SubscribeEvent
+    public static void registerLayer(EntityRenderersEvent.RegisterRenderers event)
+    {
+        event.registerEntityRenderer(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
     }
 }

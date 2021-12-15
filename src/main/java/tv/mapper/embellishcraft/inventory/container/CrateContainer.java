@@ -1,53 +1,53 @@
 package tv.mapper.embellishcraft.inventory.container;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.inventory.container.Slot;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.Container;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class CrateContainer extends Container
+public class CrateContainer extends AbstractContainerMenu
 {
     private final int numColumns;
-    private final IInventory crateInventory;
+    private final Container crateInventory;
 
-    private CrateContainer(ContainerType<?> type, int id, PlayerInventory player, int column)
+    private CrateContainer(MenuType<?> type, int id, Inventory player, int column)
     {
-        this(type, id, player, new Inventory(4 * column), column);
+        this(type, id, player, new SimpleContainer(4 * column), column);
     }
 
-    public static CrateContainer createCrate4X4(int id, PlayerInventory player)
+    public static CrateContainer createCrate4X4(int id, Inventory player)
     {
         return new CrateContainer(ModContainers.CRATE_4X4.get(), id, player, 4);
     }
 
-    public static CrateContainer createCrate4X8(int id, PlayerInventory player)
+    public static CrateContainer createCrate4X8(int id, Inventory player)
     {
         return new CrateContainer(ModContainers.CRATE_4X8.get(), id, player, 8);
     }
 
-    public static CrateContainer createCrate4X4(int id, PlayerInventory player, IInventory blockEntity)
+    public static CrateContainer createCrate4X4(int id, Inventory player, Container blockEntity)
     {
         return new CrateContainer(ModContainers.CRATE_4X4.get(), id, player, blockEntity, 4);
     }
 
-    public static CrateContainer createCrate4X8(int id, PlayerInventory player, IInventory blockEntity)
+    public static CrateContainer createCrate4X8(int id, Inventory player, Container blockEntity)
     {
         return new CrateContainer(ModContainers.CRATE_4X8.get(), id, player, blockEntity, 8);
     }
 
-    public CrateContainer(ContainerType<?> type, int id, PlayerInventory playerInventoryIn, IInventory inv, int column)
+    public CrateContainer(MenuType<?> type, int id, Inventory playerInventoryIn, Container inv, int column)
     {
         super(type, id);
-        assertInventorySize(inv, column * 4);
+        checkContainerSize(inv, column * 4);
         this.numColumns = column;
         this.crateInventory = inv;
-        inv.openInventory(playerInventoryIn.player);
+        inv.startOpen(playerInventoryIn.player);
         int i = (this.numColumns - 4) * 18;
 
         for(int j = 0; j < this.numColumns; ++j)
@@ -76,42 +76,42 @@ public class CrateContainer extends Container
     /**
      * Determines whether supplied player can use this container
      */
-    public boolean canInteractWith(PlayerEntity playerIn)
+    public boolean stillValid(Player playerIn)
     {
-        return this.crateInventory.isUsableByPlayer(playerIn);
+        return this.crateInventory.stillValid(playerIn);
     }
 
     /**
      * Handle when the stack in slot {@code index} is shift-clicked. Normally this moves the stack between the player
      * inventory and the other inventory(s).
      */
-    public ItemStack transferStackInSlot(PlayerEntity playerIn, int index)
+    public ItemStack quickMoveStack(Player playerIn, int index)
     {
         ItemStack itemstack = ItemStack.EMPTY;
-        Slot slot = this.inventorySlots.get(index);
-        if(slot != null && slot.getHasStack())
+        Slot slot = this.slots.get(index);
+        if(slot != null && slot.hasItem())
         {
-            ItemStack itemstack1 = slot.getStack();
+            ItemStack itemstack1 = slot.getItem();
             itemstack = itemstack1.copy();
             if(index < this.numColumns * 4)
             {
-                if(!this.mergeItemStack(itemstack1, this.numColumns * 4, this.inventorySlots.size(), true))
+                if(!this.moveItemStackTo(itemstack1, this.numColumns * 4, this.slots.size(), true))
                 {
                     return ItemStack.EMPTY;
                 }
             }
-            else if(!this.mergeItemStack(itemstack1, 0, this.numColumns * 4, false))
+            else if(!this.moveItemStackTo(itemstack1, 0, this.numColumns * 4, false))
             {
                 return ItemStack.EMPTY;
             }
 
             if(itemstack1.isEmpty())
             {
-                slot.putStack(ItemStack.EMPTY);
+                slot.set(ItemStack.EMPTY);
             }
             else
             {
-                slot.onSlotChanged();
+                slot.setChanged();
             }
         }
 
@@ -121,9 +121,9 @@ public class CrateContainer extends Container
     /**
      * Called when the container is closed.
      */
-    public void onContainerClosed(PlayerEntity playerIn)
+    public void removed(Player playerIn)
     {
-        super.onContainerClosed(playerIn);
+        super.removed(playerIn);
     }
 
     @OnlyIn(Dist.CLIENT)

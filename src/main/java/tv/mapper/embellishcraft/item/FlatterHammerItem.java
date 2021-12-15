@@ -2,8 +2,8 @@ package tv.mapper.embellishcraft.item;
 
 import javax.annotation.Nonnull;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 public class FlatterHammerItem extends Item
 {
@@ -14,7 +14,7 @@ public class FlatterHammerItem extends Item
     }
 
     @Override
-    public boolean hasContainerItem()
+    public boolean hasCraftingRemainingItem()
     {
         return true;
     }
@@ -41,11 +41,11 @@ public class FlatterHammerItem extends Item
     public ItemStack getContainerItem(@Nonnull ItemStack stack)
     {
         ItemStack hammer = stack.copy();
-        int damage = hammer.getDamage();
+        int damage = hammer.getDamageValue();
 
         if(damage < hammer.getMaxDamage())
         {
-            hammer.setDamage(damage + 1);
+            hammer.setDamageValue(damage + 1);
             return hammer;
         }
         else

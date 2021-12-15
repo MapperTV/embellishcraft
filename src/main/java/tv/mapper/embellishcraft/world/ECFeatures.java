@@ -1,13 +1,12 @@
 package tv.mapper.embellishcraft.world;
 
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.WorldGenRegistries;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.TopSolidRangeConfig;
+import net.minecraft.core.Registry;
+import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.config.ECClientConfig.ClientConfig;
@@ -17,39 +16,21 @@ import tv.mapper.mapperbase.MapperBase;
 
 public class ECFeatures
 {
-    public static ConfiguredFeature<?, ?> BASALT = Feature.ORE.withConfiguration(
-        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ECBlockRegistry.ROCK_BLOCKS.get(RockType.BASALT).get().getDefaultState(), CommonConfig.BASALT_SIZE.get())).withPlacement(
-            Placement.RANGE.configure(new TopSolidRangeConfig(CommonConfig.BASALT_MIN_HEIGHT.get(), CommonConfig.BASALT_MIN_HEIGHT.get(), CommonConfig.BASALT_MAX_HEIGHT.get()))).square().count(
-                CommonConfig.BASALT_CHANCE.get());
+    public static ConfiguredFeature<?, ?> BASALT = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, ECBlockRegistry.ROCK_BLOCKS.get(RockType.BASALT).get().defaultBlockState(), CommonConfig.BASALT_SIZE.get())).rangeUniform(VerticalAnchor.absolute(CommonConfig.BASALT_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.BASALT_MAX_HEIGHT.get())).squared().count(CommonConfig.BASALT_CHANCE.get());
 
-    public static ConfiguredFeature<?, ?> SLATE = Feature.ORE.withConfiguration(
-        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ECBlockRegistry.ROCK_BLOCKS.get(RockType.SLATE).get().getDefaultState(), CommonConfig.SLATE_SIZE.get())).withPlacement(
-            Placement.RANGE.configure(new TopSolidRangeConfig(CommonConfig.SLATE_MIN_HEIGHT.get(), CommonConfig.SLATE_MIN_HEIGHT.get(), CommonConfig.SLATE_MAX_HEIGHT.get()))).square().count(
-                CommonConfig.SLATE_CHANCE.get());
+    public static ConfiguredFeature<?, ?> SLATE = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, ECBlockRegistry.ROCK_BLOCKS.get(RockType.SLATE).get().defaultBlockState(), CommonConfig.SLATE_SIZE.get())).rangeUniform(VerticalAnchor.absolute(CommonConfig.SLATE_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.SLATE_MAX_HEIGHT.get())).squared().count(CommonConfig.SLATE_CHANCE.get());
 
-    public static ConfiguredFeature<?, ?> MARBLE = Feature.ORE.withConfiguration(
-        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ECBlockRegistry.ROCK_BLOCKS.get(RockType.MARBLE).get().getDefaultState(), CommonConfig.MARBLE_SIZE.get())).withPlacement(
-            Placement.RANGE.configure(new TopSolidRangeConfig(CommonConfig.MARBLE_MIN_HEIGHT.get(), CommonConfig.MARBLE_MIN_HEIGHT.get(), CommonConfig.MARBLE_MAX_HEIGHT.get()))).square().count(
-                CommonConfig.MARBLE_CHANCE.get());
+    public static ConfiguredFeature<?, ?> MARBLE = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, ECBlockRegistry.ROCK_BLOCKS.get(RockType.MARBLE).get().defaultBlockState(), CommonConfig.MARBLE_SIZE.get())).rangeUniform(VerticalAnchor.absolute(CommonConfig.MARBLE_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.MARBLE_MAX_HEIGHT.get())).squared().count(CommonConfig.MARBLE_CHANCE.get());
 
-    public static ConfiguredFeature<?, ?> GNEISS = Feature.ORE.withConfiguration(
-        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ECBlockRegistry.ROCK_BLOCKS.get(RockType.GNEISS).get().getDefaultState(), CommonConfig.GNEISS_SIZE.get())).withPlacement(
-            Placement.RANGE.configure(new TopSolidRangeConfig(CommonConfig.GNEISS_MIN_HEIGHT.get(), CommonConfig.GNEISS_MIN_HEIGHT.get(), CommonConfig.GNEISS_MAX_HEIGHT.get()))).square().count(
-                CommonConfig.GNEISS_CHANCE.get());
+    public static ConfiguredFeature<?, ?> GNEISS = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, ECBlockRegistry.ROCK_BLOCKS.get(RockType.GNEISS).get().defaultBlockState(), CommonConfig.GNEISS_SIZE.get())).rangeUniform(VerticalAnchor.absolute(CommonConfig.GNEISS_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.GNEISS_MAX_HEIGHT.get())).squared().count(CommonConfig.GNEISS_CHANCE.get());
 
-    public static ConfiguredFeature<?, ?> JADE = Feature.ORE.withConfiguration(
-        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ECBlockRegistry.ROCK_BLOCKS.get(RockType.JADE).get().getDefaultState(), CommonConfig.JADE_SIZE.get())).withPlacement(
-            Placement.RANGE.configure(new TopSolidRangeConfig(CommonConfig.JADE_MIN_HEIGHT.get(), CommonConfig.JADE_MIN_HEIGHT.get(), CommonConfig.JADE_MAX_HEIGHT.get()))).square().count(
-                CommonConfig.JADE_CHANCE.get());
+    public static ConfiguredFeature<?, ?> JADE = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, ECBlockRegistry.ROCK_BLOCKS.get(RockType.JADE).get().defaultBlockState(), CommonConfig.JADE_SIZE.get())).rangeUniform(VerticalAnchor.absolute(CommonConfig.JADE_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.JADE_MAX_HEIGHT.get())).squared().count(CommonConfig.JADE_CHANCE.get());
 
-    public static ConfiguredFeature<?, ?> LARVIKITE = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ECBlockRegistry.ROCK_BLOCKS.get(
-        RockType.LARVIKITE).get().getDefaultState(), CommonConfig.LARVIKITE_SIZE.get())).withPlacement(
-            Placement.RANGE.configure(new TopSolidRangeConfig(CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MIN_HEIGHT.get(), CommonConfig.LARVIKITE_MAX_HEIGHT.get()))).square().count(
-                CommonConfig.LARVIKITE_CHANCE.get());
+    public static ConfiguredFeature<?, ?> LARVIKITE = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, ECBlockRegistry.ROCK_BLOCKS.get(RockType.LARVIKITE).get().defaultBlockState(), CommonConfig.LARVIKITE_SIZE.get())).rangeUniform(VerticalAnchor.absolute(CommonConfig.LARVIKITE_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.LARVIKITE_MAX_HEIGHT.get())).squared().count(CommonConfig.LARVIKITE_CHANCE.get());
 
     public static void registerFeatures()
     {
-        Registry<ConfiguredFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_FEATURE;
+        Registry<ConfiguredFeature<?, ?>> registry = BuiltinRegistries.CONFIGURED_FEATURE;
 
         Registry.register(registry, new ResourceLocation(ECConstants.MODID, "basalt"), BASALT);
         Registry.register(registry, new ResourceLocation(ECConstants.MODID, "slate"), SLATE);

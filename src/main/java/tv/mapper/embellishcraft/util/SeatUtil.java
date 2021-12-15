@@ -1,10 +1,11 @@
 package tv.mapper.embellishcraft.util;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.Entity.RemovalReason;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.event.entity.EntityMountEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.event.world.BlockEvent.BreakEvent;
@@ -22,22 +23,22 @@ public class SeatUtil
     @SubscribeEvent
     public static void onRightClickBlock(RightClickBlock event)
     {
-        PlayerEntity player = event.getPlayer();
-        World world = event.getWorld();
+        Player player = event.getPlayer();
+        Level world = event.getWorld();
         BlockPos pos = event.getPos();
         Block block = world.getBlockState(pos).getBlock();
 
         if(!player.isSpectator())
         {
-            if(!player.isSneaking())
+            if(!player.isShiftKeyDown())
             {
-                if((block instanceof ChairBlock || block instanceof CouchBlock || block instanceof SuspendedStairsBlock) && world.isAirBlock(pos.up()) && !EntityChair.OCCUPIED.containsKey(pos))
+                if((block instanceof ChairBlock || block instanceof CouchBlock || block instanceof SuspendedStairsBlock) && world.isEmptyBlock(pos.above()) && !EntityChair.OCCUPIED.containsKey(pos))
                 {
                     event.setCanceled(true);
                     if(event.getSide() == LogicalSide.SERVER)
                     {
                         EntityChair chair = new EntityChair(world, pos);
-                        world.addEntity(chair);
+                        world.addFreshEntity(chair);
                         player.startRiding(chair);
                     }
                 }
@@ -50,7 +51,7 @@ public class SeatUtil
     {
         if(EntityChair.OCCUPIED.containsKey(event.getPos()))
         {
-            EntityChair.OCCUPIED.get(event.getPos()).remove();
+            EntityChair.OCCUPIED.get(event.getPos()).remove(RemovalReason.DISCARDED);
             EntityChair.OCCUPIED.remove(event.getPos());
         }
     }
@@ -64,8 +65,8 @@ public class SeatUtil
 
             if(player instanceof EntityChair)
             {
-                player.remove();
-                EntityChair.OCCUPIED.remove(player.getPosition());
+                player.remove(RemovalReason.DISCARDED);
+                EntityChair.OCCUPIED.remove(player.blockPosition());
             }
         }
     }

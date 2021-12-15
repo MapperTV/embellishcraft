@@ -3,35 +3,34 @@ package tv.mapper.embellishcraft.tileentity;
 import java.util.UUID;
 import java.util.stream.IntStream;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.DoubleSidedInventory;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.tileentity.IChestLid;
-import net.minecraft.tileentity.ITickableTileEntity;
-import net.minecraft.tileentity.LockableLootTileEntity;
-import net.minecraft.tileentity.LockableTileEntity;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
+import net.minecraft.world.CompoundContainer;
+import net.minecraft.world.Container;
+import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.LidBlockEntity;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.AABB;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.capabilities.Capability;
@@ -44,8 +43,8 @@ import tv.mapper.embellishcraft.inventory.container.VerticalChestContainer;
 import tv.mapper.embellishcraft.item.wrapper.CustomInvWrapper;
 import tv.mapper.embellishcraft.state.properties.VerticalChestType;
 
-@OnlyIn(value = Dist.CLIENT, _interface = IChestLid.class)
-public class VerticalChestTileEntity extends LockableLootTileEntity implements IChestLid, ITickableTileEntity, ISidedInventory
+@OnlyIn(value = Dist.CLIENT, _interface = LidBlockEntity.class)
+public class VerticalChestTileEntity extends RandomizableContainerBlockEntity implements LidBlockEntity, WorldlyContainer
 {
     private static final int[] SLOTS = IntStream.range(0, 4 * 4).toArray();
     private NonNullList<ItemStack> chestContents = NonNullList.withSize(27, ItemStack.EMPTY);
@@ -60,20 +59,20 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
 
     private LazyOptional<IItemHandlerModifiable> chestHandler;
 
-    protected VerticalChestTileEntity(TileEntityType<?> typeIn)
+    protected VerticalChestTileEntity(BlockEntityType<?> typeIn, BlockPos p_155328_, BlockState p_155329_)
     {
-        super(typeIn);
+        super(typeIn, p_155328_, p_155329_);
     }
 
-    public VerticalChestTileEntity()
+    public VerticalChestTileEntity(BlockPos p_155328_, BlockState p_155329_)
     {
-        this(ModTileEntityTypes.VERTICAL_CHEST);
+        this(ModTileEntityTypes.VERTICAL_CHEST, p_155328_, p_155329_);
     }
 
     /**
      * Returns the number of slots in the inventory.
      */
-    public int getSizeInventory()
+    public int getContainerSize()
     {
         return 27;
     }
@@ -90,9 +89,9 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         return true;
     }
 
-    protected ITextComponent getDefaultName()
+    protected Component getDefaultName()
     {
-        return new TranslationTextComponent("embellishcraft.container.locker");
+        return new TranslatableComponent("embellishcraft.container.locker");
     }
 
     public void lockIt()
@@ -125,28 +124,28 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         return false;
     }
 
-    public void read(BlockState state, CompoundNBT compound)
+    public void load(BlockState state, CompoundTag compound)
     {
-        super.read(state, compound);
+        super.load(compound);
 
-        this.chestContents = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
-        if(!this.checkLootAndRead(compound))
-            ItemStackHelper.loadAllItems(compound, this.chestContents);
+        this.chestContents = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        if(!this.tryLoadLootTable(compound))
+            ContainerHelper.loadAllItems(compound, this.chestContents);
 
-        if(compound.hasUniqueId("user_id"))
-            this.userID = compound.getUniqueId("user_id");
+        if(compound.hasUUID("user_id"))
+            this.userID = compound.getUUID("user_id");
 
         this.isLocked = compound.getBoolean("is_locked");
     }
 
-    public CompoundNBT write(CompoundNBT compound)
+    public CompoundTag save(CompoundTag compound)
     {
-        super.write(compound);
-        if(!this.checkLootAndWrite(compound))
-            ItemStackHelper.saveAllItems(compound, this.chestContents);
+        super.save(compound);
+        if(!this.trySaveLootTable(compound))
+            ContainerHelper.saveAllItems(compound, this.chestContents);
 
         if(this.hasUUID())
-            compound.putUniqueId("user_id", this.userID);
+            compound.putUUID("user_id", this.userID);
 
         compound.putBoolean("is_locked", this.isLocked);
         return compound;
@@ -154,15 +153,15 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
 
     public void tick()
     {
-        int i = this.pos.getX();
-        int j = this.pos.getY();
-        int k = this.pos.getZ();
+        int i = this.worldPosition.getX();
+        int j = this.worldPosition.getY();
+        int k = this.worldPosition.getZ();
         ++this.ticksSinceSync;
-        this.numPlayersUsing = calculatePlayersUsingSync(this.world, this, this.ticksSinceSync, i, j, k, this.numPlayersUsing);
+        this.numPlayersUsing = calculatePlayersUsingSync(this.level, this, this.ticksSinceSync, i, j, k, this.numPlayersUsing);
         this.prevLidAngle = this.lidAngle;
         if(this.numPlayersUsing > 0 && this.lidAngle == 0.0F)
         {
-            this.playSound(SoundEvents.BLOCK_IRON_DOOR_OPEN);
+            this.playSound(SoundEvents.IRON_DOOR_OPEN);
         }
 
         if(this.numPlayersUsing == 0 && this.lidAngle > 0.0F || this.numPlayersUsing > 0 && this.lidAngle < 1.0F)
@@ -184,7 +183,7 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
 
             if(this.lidAngle < 0.5F && f1 >= 0.5F)
             {
-                this.playSound(SoundEvents.BLOCK_IRON_DOOR_CLOSE);
+                this.playSound(SoundEvents.IRON_DOOR_CLOSE);
             }
 
             if(this.lidAngle < 0.0F)
@@ -194,9 +193,9 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         }
     }
 
-    public static int calculatePlayersUsingSync(World p_213977_0_, LockableTileEntity p_213977_1_, int p_213977_2_, int p_213977_3_, int p_213977_4_, int p_213977_5_, int p_213977_6_)
+    public static int calculatePlayersUsingSync(Level p_213977_0_, BaseContainerBlockEntity p_213977_1_, int p_213977_2_, int p_213977_3_, int p_213977_4_, int p_213977_5_, int p_213977_6_)
     {
-        if(!p_213977_0_.isRemote && p_213977_6_ != 0 && (p_213977_2_ + p_213977_3_ + p_213977_4_ + p_213977_5_) % 200 == 0)
+        if(!p_213977_0_.isClientSide && p_213977_6_ != 0 && (p_213977_2_ + p_213977_3_ + p_213977_4_ + p_213977_5_) % 200 == 0)
         {
             p_213977_6_ = calculatePlayersUsing(p_213977_0_, p_213977_1_, p_213977_3_, p_213977_4_, p_213977_5_);
         }
@@ -204,17 +203,16 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         return p_213977_6_;
     }
 
-    public static int calculatePlayersUsing(World p_213976_0_, LockableTileEntity p_213976_1_, int p_213976_2_, int p_213976_3_, int p_213976_4_)
+    public static int calculatePlayersUsing(Level p_213976_0_, BaseContainerBlockEntity p_213976_1_, int p_213976_2_, int p_213976_3_, int p_213976_4_)
     {
         int i = 0;
 
-        for(PlayerEntity playerentity : p_213976_0_.getEntitiesWithinAABB(PlayerEntity.class,
-            new AxisAlignedBB((double)((float)p_213976_2_ - 5.0F), (double)((float)p_213976_3_ - 5.0F), (double)((float)p_213976_4_ - 5.0F), (double)((float)(p_213976_2_ + 1) + 5.0F), (double)((float)(p_213976_3_ + 1) + 5.0F), (double)((float)(p_213976_4_ + 1) + 5.0F))))
+        for(Player playerentity : p_213976_0_.getEntitiesOfClass(Player.class, new AABB((double)((float)p_213976_2_ - 5.0F), (double)((float)p_213976_3_ - 5.0F), (double)((float)p_213976_4_ - 5.0F), (double)((float)(p_213976_2_ + 1) + 5.0F), (double)((float)(p_213976_3_ + 1) + 5.0F), (double)((float)(p_213976_4_ + 1) + 5.0F))))
         {
-            if(playerentity.openContainer instanceof VerticalChestContainer)
+            if(playerentity.containerMenu instanceof VerticalChestContainer)
             {
-                IInventory iinventory = ((VerticalChestContainer)playerentity.openContainer).getLowerChestInventory();
-                if(iinventory == p_213976_1_ || iinventory instanceof DoubleSidedInventory && ((DoubleSidedInventory)iinventory).isPartOfLargeChest(p_213976_1_))
+                Container iinventory = ((VerticalChestContainer)playerentity.containerMenu).getLowerChestInventory();
+                if(iinventory == p_213976_1_ || iinventory instanceof CompoundContainer && ((CompoundContainer)iinventory).contains(p_213976_1_))
                 {
                     ++i;
                 }
@@ -226,20 +224,20 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
 
     private void playSound(SoundEvent soundIn)
     {
-        VerticalChestType chesttype = this.getBlockState().get(VerticalChestBlock.TYPE);
+        VerticalChestType chesttype = this.getBlockState().getValue(VerticalChestBlock.TYPE);
         if(chesttype != VerticalChestType.BOTTOM)
         {
-            double d0 = (double)this.pos.getX() + 0.5D;
-            double d1 = (double)this.pos.getY() + 0.5D;
-            double d2 = (double)this.pos.getZ() + 0.5D;
+            double d0 = (double)this.worldPosition.getX() + 0.5D;
+            double d1 = (double)this.worldPosition.getY() + 0.5D;
+            double d2 = (double)this.worldPosition.getZ() + 0.5D;
             if(chesttype == VerticalChestType.TOP)
             {
                 Direction direction = VerticalChestBlock.getDirectionToAttached(this.getBlockState());
-                d0 += (double)direction.getXOffset() * 0.5D;
-                d2 += (double)direction.getZOffset() * 0.5D;
+                d0 += (double)direction.getStepX() * 0.5D;
+                d2 += (double)direction.getStepZ() * 0.5D;
             }
 
-            this.world.playSound((PlayerEntity)null, d0, d1, d2, soundIn, SoundCategory.BLOCKS, 0.5F, this.world.rand.nextFloat() * 0.1F + 0.9F);
+            this.level.playSound((Player)null, d0, d1, d2, soundIn, SoundSource.BLOCKS, 0.5F, this.level.random.nextFloat() * 0.1F + 0.9F);
         }
     }
 
@@ -247,7 +245,7 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
      * See {@link Block#eventReceived} for more information. This must return true serverside before it is called
      * clientside.
      */
-    public boolean receiveClientEvent(int id, int type)
+    public boolean triggerEvent(int id, int type)
     {
         if(id == 1)
         {
@@ -256,11 +254,11 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         }
         else
         {
-            return super.receiveClientEvent(id, type);
+            return super.triggerEvent(id, type);
         }
     }
 
-    public void openInventory(PlayerEntity player)
+    public void startOpen(Player player)
     {
         if(!player.isSpectator())
         {
@@ -272,7 +270,7 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
 
     }
 
-    public void closeInventory(PlayerEntity player)
+    public void stopOpen(Player player)
     {
         if(!player.isSpectator())
         {
@@ -287,8 +285,8 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         Block block = this.getBlockState().getBlock();
         if(block instanceof VerticalChestBlock)
         {
-            this.world.addBlockEvent(this.pos, block, 1, this.numPlayersUsing);
-            this.world.notifyNeighborsOfStateChange(this.pos, block);
+            this.level.blockEvent(this.worldPosition, block, 1, this.numPlayersUsing);
+            this.level.updateNeighborsAt(this.worldPosition, block);
         }
     }
 
@@ -303,17 +301,17 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
     }
 
     @OnlyIn(Dist.CLIENT)
-    public float getLidAngle(float partialTicks)
+    public float getOpenNess(float partialTicks)
     {
-        return MathHelper.lerp(partialTicks, this.prevLidAngle, this.lidAngle);
+        return Mth.lerp(partialTicks, this.prevLidAngle, this.lidAngle);
     }
 
-    public static int getPlayersUsing(IBlockReader reader, BlockPos posIn)
+    public static int getPlayersUsing(BlockGetter reader, BlockPos posIn)
     {
         BlockState blockstate = reader.getBlockState(posIn);
-        if(blockstate.hasTileEntity())
+        if(blockstate.hasBlockEntity())
         {
-            TileEntity tileentity = reader.getTileEntity(posIn);
+            BlockEntity tileentity = reader.getBlockEntity(posIn);
             if(tileentity instanceof VerticalChestTileEntity)
             {
                 return ((VerticalChestTileEntity)tileentity).numPlayersUsing;
@@ -330,26 +328,15 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         otherChest.setItems(nonnulllist);
     }
 
-    protected Container createMenu(int id, PlayerInventory player)
+    protected AbstractContainerMenu createMenu(int id, Inventory player)
     {
         return VerticalChestContainer.createGeneric9X3(id, player, this);
     }
 
     @Override
-    public void updateContainingBlockInfo()
-    {
-        super.updateContainingBlockInfo();
-        if(this.chestHandler != null)
-        {
-            this.chestHandler.invalidate();
-            this.chestHandler = null;
-        }
-    }
-
-    @Override
     public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side)
     {
-        if(!this.removed && cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+        if(!this.remove && cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
         {
             if(this.chestHandler == null)
                 this.chestHandler = LazyOptional.of(this::createHandler);
@@ -365,21 +352,21 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
         {
             return new CustomInvWrapper(this, this);
         }
-        VerticalChestType type = state.get(VerticalChestBlock.TYPE);
+        VerticalChestType type = state.getValue(VerticalChestBlock.TYPE);
         if(type != VerticalChestType.SINGLE)
         {
-            BlockPos opos = this.getPos().offset(VerticalChestBlock.getDirectionToAttached(state));
-            BlockState ostate = this.getWorld().getBlockState(opos);
+            BlockPos opos = this.getBlockPos().relative(VerticalChestBlock.getDirectionToAttached(state));
+            BlockState ostate = this.getLevel().getBlockState(opos);
             if(state.getBlock() == ostate.getBlock())
             {
-                VerticalChestType otype = ostate.get(VerticalChestBlock.TYPE);
-                if(otype != VerticalChestType.SINGLE && type != otype && state.get(VerticalChestBlock.FACING) == ostate.get(VerticalChestBlock.FACING))
+                VerticalChestType otype = ostate.getValue(VerticalChestBlock.TYPE);
+                if(otype != VerticalChestType.SINGLE && type != otype && state.getValue(VerticalChestBlock.FACING) == ostate.getValue(VerticalChestBlock.FACING))
                 {
-                    TileEntity ote = this.getWorld().getTileEntity(opos);
+                    BlockEntity ote = this.getLevel().getBlockEntity(opos);
                     if(ote instanceof VerticalChestTileEntity)
                     {
-                        IInventory top = type == VerticalChestType.TOP ? this : (IInventory)ote;
-                        IInventory bottom = type == VerticalChestType.TOP ? (IInventory)ote : this;
+                        Container top = type == VerticalChestType.TOP ? this : (Container)ote;
+                        Container bottom = type == VerticalChestType.TOP ? (Container)ote : this;
                         return new CombinedInvWrapper(new CustomInvWrapper(top, this), new CustomInvWrapper(bottom, this));
                     }
                 }
@@ -392,9 +379,9 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
      * invalidates a tile entity
      */
     @Override
-    public void remove()
+    public void setRemoved()
     {
-        super.remove();
+        super.setRemoved();
         if(chestHandler != null)
             chestHandler.invalidate();
     }
@@ -414,13 +401,13 @@ public class VerticalChestTileEntity extends LockableLootTileEntity implements I
     }
 
     @Override
-    public boolean canInsertItem(int index, ItemStack itemStackIn, Direction direction)
+    public boolean canPlaceItemThroughFace(int index, ItemStack itemStackIn, Direction direction)
     {
         return !isLocked;
     }
 
     @Override
-    public boolean canExtractItem(int index, ItemStack stack, Direction direction)
+    public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction)
     {
         return !isLocked;
     }

@@ -1,105 +1,98 @@
 package tv.mapper.embellishcraft.block;
 
-import javax.annotation.Nullable;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import tv.mapper.mapperbase.world.level.block.CustomBlock;
+import tv.mapper.mapperbase.world.level.block.ToolTiers;
+import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraftforge.common.ToolType;
-
-public class ChairBlock extends Block implements IWaterLoggable
+public class ChairBlock extends CustomBlock implements SimpleWaterloggedBlock
 {
     // Need to figure a way to rotate VoxelShapes because this is just stupid
-    private static final VoxelShape SOUTH_LEFT_FRONT_LEG = Block.makeCuboidShape(11.0D, 0.0D, 11.0D, 13.0D, 7.0D, 13.0D);
-    private static final VoxelShape SOUTH_RIGHT_FRONT_LEG = Block.makeCuboidShape(3.0D, 0.0D, 11.0D, 5.0D, 7.0D, 13.0D);
-    private static final VoxelShape SOUTH_LEFT_BACK_LEG = Block.makeCuboidShape(11.0D, 0.0D, 2.0D, 13.0D, 16.0D, 4.0D);
-    private static final VoxelShape SOUTH_RIGHT_BACK_LEG = Block.makeCuboidShape(3.0D, 0.0D, 2.0D, 5.0D, 16.0D, 4.0D);
-    private static final VoxelShape SOUTH_SIT = Block.makeCuboidShape(3.0D, 7.0D, 4.0D, 13.0D, 8.0D, 13.0D);
-    private static final VoxelShape SOUTH_BACK = Block.makeCuboidShape(5.0D, 12.0D, 3.0D, 11.0D, 14.0D, 4.0D);
-    private static final VoxelShape SOUTH_CHAIR_AABB = VoxelShapes.or(SOUTH_LEFT_FRONT_LEG,
-        VoxelShapes.or(SOUTH_RIGHT_FRONT_LEG, VoxelShapes.or(SOUTH_LEFT_BACK_LEG, VoxelShapes.or(SOUTH_SIT, VoxelShapes.or(SOUTH_BACK, SOUTH_RIGHT_BACK_LEG)))));
+    private static final VoxelShape SOUTH_LEFT_FRONT_LEG = Block.box(11.0D, 0.0D, 11.0D, 13.0D, 7.0D, 13.0D);
+    private static final VoxelShape SOUTH_RIGHT_FRONT_LEG = Block.box(3.0D, 0.0D, 11.0D, 5.0D, 7.0D, 13.0D);
+    private static final VoxelShape SOUTH_LEFT_BACK_LEG = Block.box(11.0D, 0.0D, 2.0D, 13.0D, 16.0D, 4.0D);
+    private static final VoxelShape SOUTH_RIGHT_BACK_LEG = Block.box(3.0D, 0.0D, 2.0D, 5.0D, 16.0D, 4.0D);
+    private static final VoxelShape SOUTH_SIT = Block.box(3.0D, 7.0D, 4.0D, 13.0D, 8.0D, 13.0D);
+    private static final VoxelShape SOUTH_BACK = Block.box(5.0D, 12.0D, 3.0D, 11.0D, 14.0D, 4.0D);
+    private static final VoxelShape SOUTH_CHAIR_AABB = Shapes.or(SOUTH_LEFT_FRONT_LEG, Shapes.or(SOUTH_RIGHT_FRONT_LEG, Shapes.or(SOUTH_LEFT_BACK_LEG, Shapes.or(SOUTH_SIT, Shapes.or(SOUTH_BACK, SOUTH_RIGHT_BACK_LEG)))));
 
-    private static final VoxelShape SOUTH_COL_BACK = Block.makeCuboidShape(3.0D, 0.0D, 2.0D, 13.0D, 16.0D, 4.0D);
-    private static final VoxelShape SOUTH_COL_SIT = Block.makeCuboidShape(3.0D, 0.0D, 4.0D, 13.0D, 8.0D, 13.0D);
-    private static final VoxelShape SOUTH_COL = VoxelShapes.or(SOUTH_COL_BACK, SOUTH_COL_SIT);
+    private static final VoxelShape SOUTH_COL_BACK = Block.box(3.0D, 0.0D, 2.0D, 13.0D, 16.0D, 4.0D);
+    private static final VoxelShape SOUTH_COL_SIT = Block.box(3.0D, 0.0D, 4.0D, 13.0D, 8.0D, 13.0D);
+    private static final VoxelShape SOUTH_COL = Shapes.or(SOUTH_COL_BACK, SOUTH_COL_SIT);
 
-    private static final VoxelShape WEST_LEFT_FRONT_LEG = Block.makeCuboidShape(3.0D, 0.0D, 11.0D, 5.0D, 7.0D, 13.0D);
-    private static final VoxelShape WEST_RIGHT_FRONT_LEG = Block.makeCuboidShape(3.0D, 0.0D, 3.0D, 5.0D, 7.0D, 5.0D);
-    private static final VoxelShape WEST_LEFT_BACK_LEG = Block.makeCuboidShape(12.0D, 0.0D, 11.0D, 14.0D, 16.0D, 13.0D);
-    private static final VoxelShape WEST_RIGHT_BACK_LEG = Block.makeCuboidShape(12.0D, 0.0D, 3.0D, 14.0D, 16.0D, 5.0D);
-    private static final VoxelShape WEST_SIT = Block.makeCuboidShape(3.0D, 7.0D, 3.0D, 12.0D, 8.0D, 13.0D);
-    private static final VoxelShape WEST_BACK = Block.makeCuboidShape(12.0D, 12.0D, 5.0D, 13.0D, 14.0D, 11.0D);
-    private static final VoxelShape WEST_CHAIR_AABB = VoxelShapes.or(WEST_LEFT_FRONT_LEG,
-        VoxelShapes.or(WEST_RIGHT_FRONT_LEG, VoxelShapes.or(WEST_LEFT_BACK_LEG, VoxelShapes.or(WEST_SIT, VoxelShapes.or(WEST_BACK, WEST_RIGHT_BACK_LEG)))));
+    private static final VoxelShape WEST_LEFT_FRONT_LEG = Block.box(3.0D, 0.0D, 11.0D, 5.0D, 7.0D, 13.0D);
+    private static final VoxelShape WEST_RIGHT_FRONT_LEG = Block.box(3.0D, 0.0D, 3.0D, 5.0D, 7.0D, 5.0D);
+    private static final VoxelShape WEST_LEFT_BACK_LEG = Block.box(12.0D, 0.0D, 11.0D, 14.0D, 16.0D, 13.0D);
+    private static final VoxelShape WEST_RIGHT_BACK_LEG = Block.box(12.0D, 0.0D, 3.0D, 14.0D, 16.0D, 5.0D);
+    private static final VoxelShape WEST_SIT = Block.box(3.0D, 7.0D, 3.0D, 12.0D, 8.0D, 13.0D);
+    private static final VoxelShape WEST_BACK = Block.box(12.0D, 12.0D, 5.0D, 13.0D, 14.0D, 11.0D);
+    private static final VoxelShape WEST_CHAIR_AABB = Shapes.or(WEST_LEFT_FRONT_LEG, Shapes.or(WEST_RIGHT_FRONT_LEG, Shapes.or(WEST_LEFT_BACK_LEG, Shapes.or(WEST_SIT, Shapes.or(WEST_BACK, WEST_RIGHT_BACK_LEG)))));
 
-    private static final VoxelShape WEST_COL_BACK = Block.makeCuboidShape(12.0D, 0.0D, 3.0D, 14.0D, 16.0D, 13.0D);
-    private static final VoxelShape WEST_COL_SIT = Block.makeCuboidShape(3.0D, 0.0D, 3.0D, 12.0D, 8.0D, 13.0D);
-    private static final VoxelShape WEST_COL = VoxelShapes.or(WEST_COL_BACK, WEST_COL_SIT);
+    private static final VoxelShape WEST_COL_BACK = Block.box(12.0D, 0.0D, 3.0D, 14.0D, 16.0D, 13.0D);
+    private static final VoxelShape WEST_COL_SIT = Block.box(3.0D, 0.0D, 3.0D, 12.0D, 8.0D, 13.0D);
+    private static final VoxelShape WEST_COL = Shapes.or(WEST_COL_BACK, WEST_COL_SIT);
 
-    private static final VoxelShape NORTH_LEFT_FRONT_LEG = Block.makeCuboidShape(3.0D, 0.0D, 3.0D, 5.0D, 7.0D, 5.0D);
-    private static final VoxelShape NORTH_RIGHT_FRONT_LEG = Block.makeCuboidShape(11.0D, 0.0D, 3.0D, 13.0D, 7.0D, 5.0D);
-    private static final VoxelShape NORTH_LEFT_BACK_LEG = Block.makeCuboidShape(3.0D, 0.0D, 12.0D, 5.0D, 16.0D, 14.0D);
-    private static final VoxelShape NORTH_RIGHT_BACK_LEG = Block.makeCuboidShape(11.0D, 0.0D, 12.0D, 13.0D, 16.0D, 14.0D);
-    private static final VoxelShape NORTH_SIT = Block.makeCuboidShape(3.0D, 7.0D, 3.0D, 13.0D, 8.0D, 12.0D);
-    private static final VoxelShape NORTH_BACK = Block.makeCuboidShape(5.0D, 12.0D, 12.0D, 11.0D, 14.0D, 13.0D);
-    private static final VoxelShape NORTH_CHAIR_AABB = VoxelShapes.or(NORTH_LEFT_FRONT_LEG,
-        VoxelShapes.or(NORTH_RIGHT_FRONT_LEG, VoxelShapes.or(NORTH_LEFT_BACK_LEG, VoxelShapes.or(NORTH_SIT, VoxelShapes.or(NORTH_BACK, NORTH_RIGHT_BACK_LEG)))));
+    private static final VoxelShape NORTH_LEFT_FRONT_LEG = Block.box(3.0D, 0.0D, 3.0D, 5.0D, 7.0D, 5.0D);
+    private static final VoxelShape NORTH_RIGHT_FRONT_LEG = Block.box(11.0D, 0.0D, 3.0D, 13.0D, 7.0D, 5.0D);
+    private static final VoxelShape NORTH_LEFT_BACK_LEG = Block.box(3.0D, 0.0D, 12.0D, 5.0D, 16.0D, 14.0D);
+    private static final VoxelShape NORTH_RIGHT_BACK_LEG = Block.box(11.0D, 0.0D, 12.0D, 13.0D, 16.0D, 14.0D);
+    private static final VoxelShape NORTH_SIT = Block.box(3.0D, 7.0D, 3.0D, 13.0D, 8.0D, 12.0D);
+    private static final VoxelShape NORTH_BACK = Block.box(5.0D, 12.0D, 12.0D, 11.0D, 14.0D, 13.0D);
+    private static final VoxelShape NORTH_CHAIR_AABB = Shapes.or(NORTH_LEFT_FRONT_LEG, Shapes.or(NORTH_RIGHT_FRONT_LEG, Shapes.or(NORTH_LEFT_BACK_LEG, Shapes.or(NORTH_SIT, Shapes.or(NORTH_BACK, NORTH_RIGHT_BACK_LEG)))));
 
-    private static final VoxelShape NORTH_COL_BACK = Block.makeCuboidShape(3.0D, 0.0D, 12.0D, 13.0D, 16.0D, 14.0D);
-    private static final VoxelShape NORTH_COL_SIT = Block.makeCuboidShape(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 12.0D);
-    private static final VoxelShape NORTH_COL = VoxelShapes.or(NORTH_COL_BACK, NORTH_COL_SIT);
+    private static final VoxelShape NORTH_COL_BACK = Block.box(3.0D, 0.0D, 12.0D, 13.0D, 16.0D, 14.0D);
+    private static final VoxelShape NORTH_COL_SIT = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 12.0D);
+    private static final VoxelShape NORTH_COL = Shapes.or(NORTH_COL_BACK, NORTH_COL_SIT);
 
-    private static final VoxelShape EAST_LEFT_FRONT_LEG = Block.makeCuboidShape(11.0D, 0.0D, 3.0D, 13.0D, 7.0D, 5.0D);
-    private static final VoxelShape EAST_RIGHT_FRONT_LEG = Block.makeCuboidShape(11.0D, 0.0D, 11.0D, 13.0D, 7.0D, 13.0D);
-    private static final VoxelShape EAST_LEFT_BACK_LEG = Block.makeCuboidShape(2.0D, 0.0D, 3.0D, 4.0D, 16.0D, 5.0D);
-    private static final VoxelShape EAST_RIGHT_BACK_LEG = Block.makeCuboidShape(2.0D, 0.0D, 11.0D, 4.0D, 16.0D, 13.0D);
-    private static final VoxelShape EAST_SIT = Block.makeCuboidShape(4.0D, 7.0D, 3.0D, 13.0D, 8.0D, 13.0D);
-    private static final VoxelShape EAST_BACK = Block.makeCuboidShape(3.0D, 12.0D, 5.0D, 4.0D, 14.0D, 11.0D);
-    private static final VoxelShape EAST_CHAIR_AABB = VoxelShapes.or(EAST_LEFT_FRONT_LEG,
-        VoxelShapes.or(EAST_RIGHT_FRONT_LEG, VoxelShapes.or(EAST_LEFT_BACK_LEG, VoxelShapes.or(EAST_SIT, VoxelShapes.or(EAST_BACK, EAST_RIGHT_BACK_LEG)))));
+    private static final VoxelShape EAST_LEFT_FRONT_LEG = Block.box(11.0D, 0.0D, 3.0D, 13.0D, 7.0D, 5.0D);
+    private static final VoxelShape EAST_RIGHT_FRONT_LEG = Block.box(11.0D, 0.0D, 11.0D, 13.0D, 7.0D, 13.0D);
+    private static final VoxelShape EAST_LEFT_BACK_LEG = Block.box(2.0D, 0.0D, 3.0D, 4.0D, 16.0D, 5.0D);
+    private static final VoxelShape EAST_RIGHT_BACK_LEG = Block.box(2.0D, 0.0D, 11.0D, 4.0D, 16.0D, 13.0D);
+    private static final VoxelShape EAST_SIT = Block.box(4.0D, 7.0D, 3.0D, 13.0D, 8.0D, 13.0D);
+    private static final VoxelShape EAST_BACK = Block.box(3.0D, 12.0D, 5.0D, 4.0D, 14.0D, 11.0D);
+    private static final VoxelShape EAST_CHAIR_AABB = Shapes.or(EAST_LEFT_FRONT_LEG, Shapes.or(EAST_RIGHT_FRONT_LEG, Shapes.or(EAST_LEFT_BACK_LEG, Shapes.or(EAST_SIT, Shapes.or(EAST_BACK, EAST_RIGHT_BACK_LEG)))));
 
-    private static final VoxelShape EAST_COL_BACK = Block.makeCuboidShape(2.0D, 0.0D, 3.0D, 4.0D, 16.0D, 13.0D);
-    private static final VoxelShape EAST_COL_SIT = Block.makeCuboidShape(4.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
-    private static final VoxelShape EAST_COL = VoxelShapes.or(EAST_COL_BACK, EAST_COL_SIT);
+    private static final VoxelShape EAST_COL_BACK = Block.box(2.0D, 0.0D, 3.0D, 4.0D, 16.0D, 13.0D);
+    private static final VoxelShape EAST_COL_SIT = Block.box(4.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
+    private static final VoxelShape EAST_COL = Shapes.or(EAST_COL_BACK, EAST_COL_SIT);
 
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    protected ToolType toolType = null;
-
-    public ChairBlock(Properties properties)
+    public ChairBlock(Properties properties, ToolTypes tool)
     {
-        super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
+        super(properties, tool);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    public ChairBlock(Properties properties, ToolType toolType)
+    public ChairBlock(Properties properties, ToolTypes tool, ToolTiers tier)
     {
-        super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
-        this.toolType = toolType;
+        super(properties, tool, tier);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
-        switch((Direction)state.get(FACING))
+        switch((Direction)state.getValue(FACING))
         {
             case NORTH:
                 return NORTH_CHAIR_AABB;
@@ -115,9 +108,9 @@ public class ChairBlock extends Block implements IWaterLoggable
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
     {
-        switch((Direction)state.get(FACING))
+        switch((Direction)state.getValue(FACING))
         {
             case NORTH:
                 return NORTH_COL;
@@ -132,45 +125,35 @@ public class ChairBlock extends Block implements IWaterLoggable
         }
     }
 
-    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
+    public boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos)
     {
-        return hasEnoughSolidSide(worldIn, pos.down(), Direction.UP);
-    }
-
-    @Nullable
-    @Override
-    public ToolType getHarvestTool(BlockState state)
-    {
-        if(toolType != null)
-            return this.toolType;
-        else
-            return super.getHarvestTool(state);
+        return canSupportCenter(worldIn, pos.below(), Direction.UP);
     }
 
     @SuppressWarnings("deprecation")
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
     {
-        if(stateIn.get(WATERLOGGED))
+        if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
-        if(facing == Direction.DOWN && !this.isValidPosition(stateIn, worldIn, currentPos))
-            return Blocks.AIR.getDefaultState();
+        if(facing == Direction.DOWN && !this.canSurvive(stateIn, worldIn, currentPos))
+            return Blocks.AIR.defaultBlockState();
 
-        return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context)
+    public BlockState getStateForPlacement(BlockPlaceContext context)
     {
-        BlockPos blockpos = context.getPos();
-        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        BlockPos blockpos = context.getClickedPos();
+        FluidState ifluidstate = context.getLevel().getFluidState(blockpos);
 
-        return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite()).with(WATERLOGGED, Boolean.valueOf(Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER)));
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(WATERLOGGED, Boolean.valueOf(Boolean.valueOf(ifluidstate.getType() == Fluids.WATER)));
     }
 
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(FACING, WATERLOGGED);
     }
@@ -178,6 +161,6 @@ public class ChairBlock extends Block implements IWaterLoggable
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state)
     {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 }

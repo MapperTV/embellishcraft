@@ -1,8 +1,8 @@
 package tv.mapper.embellishcraft.state.properties;
 
-import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.StringRepresentable;
 
-public enum VerticalChestType implements IStringSerializable
+public enum VerticalChestType implements StringRepresentable
 {
     SINGLE("single", 0),
     TOP("top", 2),
@@ -29,7 +29,7 @@ public enum VerticalChestType implements IStringSerializable
     }
 
     @Override
-    public String getString()
+    public String getSerializedName()
     {
         return this.name;
     }

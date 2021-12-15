@@ -1,8 +1,8 @@
 package tv.mapper.embellishcraft.util;
 
-import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.StringRepresentable;
 
-public enum CustomChestType implements IStringSerializable
+public enum CustomChestType implements StringRepresentable
 {
     OAK_FANCY("oak_fancy"),
     BIRCH_FANCY("birch_fancy"),
@@ -29,7 +29,7 @@ public enum CustomChestType implements IStringSerializable
     }
 
     @Override
-    public String getString()
+    public String getSerializedName()
     {
         return this.name;
     }

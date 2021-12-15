@@ -2,8 +2,8 @@ package tv.mapper.embellishcraft.item.wrapper;
 
 import javax.annotation.Nonnull;
 
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.Container;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import tv.mapper.embellishcraft.tileentity.VerticalChestTileEntity;
 
@@ -11,7 +11,7 @@ public class CustomInvWrapper extends InvWrapper
 {
     private VerticalChestTileEntity te;
 
-    public CustomInvWrapper(IInventory inv, VerticalChestTileEntity te)
+    public CustomInvWrapper(Container inv, VerticalChestTileEntity te)
     {
         super(inv);
         this.te = te;
