@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:granite_rooftiles"
+            "items": [
+              "embellishcraft:granite_rooftiles"
+            ]
           }
         ]
       }

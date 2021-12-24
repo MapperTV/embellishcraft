@@ -2,12 +2,9 @@ package tv.mapper.embellishcraft.proxy;
 
 import java.util.function.Predicate;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -42,15 +39,15 @@ public class ClientProxy implements IProxy
             ItemBlockRenderTypes.setRenderLayer(object.get(), cutoutPredicate);
     }
 
-    @Override
-    public Level getClientWorld()
-    {
-        return Minecraft.getInstance().level;
-    }
-
-    @Override
-    public Player getClientPlayer()
-    {
-        return Minecraft.getInstance().player;
-    }
+    // @Override
+    // public Level getClientWorld()
+    // {
+    // return Minecraft.getInstance().level;
+    // }
+    //
+    // @Override
+    // public Player getClientPlayer()
+    // {
+    // return Minecraft.getInstance().player;
+    // }
 }

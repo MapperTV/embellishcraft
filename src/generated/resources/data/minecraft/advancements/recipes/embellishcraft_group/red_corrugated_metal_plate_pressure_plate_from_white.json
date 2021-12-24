@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:white_corrugated_metal_plate_pressure_plate"
+            "items": [
+              "embellishcraft:white_corrugated_metal_plate_pressure_plate"
+            ]
           }
         ]
       }

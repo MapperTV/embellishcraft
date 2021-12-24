@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:steel_suspended_stairs"
+            "items": [
+              "embellishcraft:steel_suspended_stairs"
+            ]
           }
         ]
       }

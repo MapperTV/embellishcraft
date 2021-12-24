@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:pink_corrugated_metal_plate"
+            "items": [
+              "embellishcraft:pink_corrugated_metal_plate"
+            ]
           }
         ]
       }

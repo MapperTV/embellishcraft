@@ -28,6 +28,7 @@ import tv.mapper.embellishcraft.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
 import tv.mapper.embellishcraft.data.ECTags;
+import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.world.level.block.CustomButtonBlock;
 import tv.mapper.mapperbase.world.level.block.CustomLadderBlock;
@@ -87,10 +88,10 @@ public class ECBlockTags extends BlockTagsProvider
         for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
         {
             // Rocks
-            this.tag(Tags.Blocks.STONE).add(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get());
-            this.tag(BlockTags.BASE_STONE_OVERWORLD).add(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get());
+            this.tag(Tags.Blocks.STONE).add(InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get());
+            this.tag(BlockTags.BASE_STONE_OVERWORLD).add(InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get());
             // Cobblestones
-            this.tag(Tags.Blocks.COBBLESTONE).add(ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get());
+            this.tag(Tags.Blocks.COBBLESTONE).add(InitRockBlocks.ROCK_COBBLESTONES.get(RockType.byId(j)).get());
         }
 
         // Adding tags to existing MC/Forge tags

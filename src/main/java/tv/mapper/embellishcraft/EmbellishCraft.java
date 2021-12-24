@@ -3,8 +3,7 @@ package tv.mapper.embellishcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -26,9 +25,11 @@ import tv.mapper.embellishcraft.network.ECNetwork;
 import tv.mapper.embellishcraft.proxy.ClientProxy;
 import tv.mapper.embellishcraft.proxy.IProxy;
 import tv.mapper.embellishcraft.proxy.ServerProxy;
+import tv.mapper.embellishcraft.rocks.world.ECFeatures;
+import tv.mapper.embellishcraft.rocks.world.ECOreList;
+import tv.mapper.embellishcraft.rocks.world.items.InitRockItems;
+import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
 import tv.mapper.embellishcraft.util.ConfigChecker;
-import tv.mapper.embellishcraft.world.ECFeatures;
-import tv.mapper.embellishcraft.world.ECOreList;
 
 @Mod(ECConstants.MODID)
 public class EmbellishCraft
@@ -41,9 +42,14 @@ public class EmbellishCraft
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ECClientConfig.CLIENT_CONFIG);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EmbellishCraftConfig.COMMON_CONFIG);
 
+        // Register Blocks
         ECBlockRegistry.init();
+        InitRockBlocks.init();
         ECBlockRegistry.postInit();
+        // Register Items
         ECItemRegistry.init();
+        InitRockItems.init();
+        
         ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -73,7 +79,8 @@ public class EmbellishCraft
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-        // LOGGER.info("EmbellishCraft client setup");
+        LOGGER.info("◘ EmbellishCraft client setup");
+        EntityRenderers.register(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
     }
 
     private void serverSetup(final FMLDedicatedServerSetupEvent event)
@@ -81,9 +88,9 @@ public class EmbellishCraft
         // LOGGER.info("EmbellishCraft server setup");
     }
 
-    @SubscribeEvent
-    public static void registerLayer(EntityRenderersEvent.RegisterRenderers event)
-    {
-        event.registerEntityRenderer(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
-    }
+    // @SubscribeEvent
+    // public static void registerLayer(EntityRenderersEvent.RegisterRenderers event)
+    // {
+    // event.registerEntityRenderer(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
+    // }
 }

@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:rusty_plate_slab"
+            "items": [
+              "embellishcraft:rusty_plate_slab"
+            ]
           }
         ]
       }

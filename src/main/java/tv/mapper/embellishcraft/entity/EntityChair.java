@@ -34,7 +34,7 @@ public class EntityChair extends Entity
         {
             if(!this.isVehicle() || this.level.isEmptyBlock(new BlockPos(this.getX(), this.getY(), this.getZ())))
             {
-                this.remove(Entity.RemovalReason.DISCARDED);
+                this.remove(Entity.RemovalReason.KILLED);
             }
         }
     }

@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:steel_rungs"
+            "items": [
+              "embellishcraft:steel_rungs"
+            ]
           }
         ]
       }

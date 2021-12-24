@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:basalt_ornament"
+            "items": [
+              "embellishcraft:basalt_ornament"
+            ]
           }
         ]
       }

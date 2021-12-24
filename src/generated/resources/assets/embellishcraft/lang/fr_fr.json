@@ -1129,5 +1129,7 @@
   "embellishcraft.message.locker.locked": "Ce casier est verouill\u00E9.",
   "embellishcraft.message.locker.unlock": "Ce casier est maintenant d\u00E9verouill\u00E9!",
   "embellishcraft.message.locker.wrong": "Ce casier n'est pas \u00E0 vous!",
-  "itemGroup.embellishcraft_group": "EmbellishCraft"
+  "embellishcraft.message.temp.seat": "S'asseoir est d\u00E9sactiv\u00E9 pour le moment.",
+  "itemGroup.embellishcraft_group": "EmbellishCraft",
+  "itemGroup.embellishcraft_rocks_group": "EmbellishCraft - Roches"
 }

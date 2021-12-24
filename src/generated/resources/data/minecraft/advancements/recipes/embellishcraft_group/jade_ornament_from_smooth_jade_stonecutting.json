@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:smooth_jade"
+            "items": [
+              "embellishcraft:smooth_jade"
+            ]
           }
         ]
       }

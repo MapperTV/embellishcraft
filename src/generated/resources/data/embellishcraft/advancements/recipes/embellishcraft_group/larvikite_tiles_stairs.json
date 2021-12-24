@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:larvikite_tiles"
+            "items": [
+              "embellishcraft:larvikite_tiles"
+            ]
           }
         ]
       }

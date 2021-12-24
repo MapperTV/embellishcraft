@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:larvikite_paving_slab"
+            "items": [
+              "embellishcraft:larvikite_paving_slab"
+            ]
           }
         ]
       }

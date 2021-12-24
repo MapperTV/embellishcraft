@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:andesite_tiles"
+            "items": [
+              "embellishcraft:andesite_tiles"
+            ]
           }
         ]
       }

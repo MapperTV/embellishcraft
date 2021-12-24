@@ -23,6 +23,8 @@ import net.minecraftforge.common.Tags;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
+import tv.mapper.embellishcraft.rocks.world.items.InitRockItems;
+import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.BaseTags;
@@ -65,70 +67,70 @@ public class ECRecipes extends BaseRecipes
         for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
         {
             // Rocks
-            SimpleCookingRecipeBuilder.smelting(Ingredient.of(ECItemRegistry.ROCKS_COBBLESTONES_ITEMS.get(RockType.byId(j)).get()), ECItemRegistry.ROCKS_ITEMS.get(RockType.byId(j)).get(), 0.1f, 200).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_cobblestone", has(ECItemRegistry.ROCKS_COBBLESTONES_ITEMS.get(RockType.byId(j)).get())).save(consumer, ECConstants.MODID + ":" + RockType.byId(j).getSerializedName() + "_from_cobblestone_smelting");
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(InitRockItems.ROCKS_COBBLESTONES_ITEMS.get(RockType.byId(j)).get()), InitRockItems.ROCKS_ITEMS.get(RockType.byId(j)).get(), 0.1f, 200).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_cobblestone", has(InitRockItems.ROCKS_COBBLESTONES_ITEMS.get(RockType.byId(j)).get())).save(consumer, ECConstants.MODID + ":" + RockType.byId(j).getSerializedName() + "_from_cobblestone_smelting");
 
-            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BUTTONS.get(RockType.byId(j)).get());
+            CreateBasicRecipes(consumer, InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_BUTTONS.get(RockType.byId(j)).get());
 
             // Cobblestones
-            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            CreateBasicRecipes(consumer, InitRockBlocks.ROCK_COBBLESTONES.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONE_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONE_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONE_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONE_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             // Cobblestone bricks
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_COBBLESTONE_BRICKS.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_cobblestone", has(ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get())).save(consumer);
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_COBBLESTONE_BRICKS.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', InitRockBlocks.ROCK_COBBLESTONES.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_cobblestone", has(InitRockBlocks.ROCK_COBBLESTONES.get(RockType.byId(j)).get())).save(consumer);
 
-            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_COBBLESTONE_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            CreateBasicRecipes(consumer, InitRockBlocks.ROCK_COBBLESTONE_BRICKS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONE_BRICKS_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONE_BRICKS_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONE_BRICKS_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             // Smooth rocks
-            CreateBasicRecipes(consumer, ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.SMOOTH_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            CreateBasicRecipes(consumer, InitRockBlocks.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get(), InitRockBlocks.SMOOTH_ROCK_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.SMOOTH_ROCK_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.SMOOTH_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
-            SimpleCookingRecipeBuilder.smelting(Ingredient.of(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get()), ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get(), 0.1f, 200).unlockedBy("has_" + RockType.byId(j).getSerializedName(), has(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer, ECConstants.MODID + ":smooth_" + RockType.byId(j).getSerializedName() + "_from_smelting");
-            ShapelessRecipeBuilder.shapeless(ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get()).requires(ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_polished_" + RockType.byId(j).getSerializedName(), has(ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer);
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get()), InitRockBlocks.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get(), 0.1f, 200).unlockedBy("has_" + RockType.byId(j).getSerializedName(), has(InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer, ECConstants.MODID + ":smooth_" + RockType.byId(j).getSerializedName() + "_from_smelting");
+            ShapelessRecipeBuilder.shapeless(InitRockBlocks.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get()).requires(InitRockBlocks.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_polished_" + RockType.byId(j).getSerializedName(), has(InitRockBlocks.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer);
 
             // Polished rocks
-            ShapelessRecipeBuilder.shapeless(ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get()).requires(ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_smooth_" + RockType.byId(j).getSerializedName(), has(ECBlockRegistry.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer);
+            ShapelessRecipeBuilder.shapeless(InitRockBlocks.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get()).requires(InitRockBlocks.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_smooth_" + RockType.byId(j).getSerializedName(), has(InitRockBlocks.SMOOTH_ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer);
 
-            CreateBasicRecipes(consumer, ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.POLISHED_ROCK_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.POLISHED_ROCK_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.POLISHED_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            CreateBasicRecipes(consumer, InitRockBlocks.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get(), InitRockBlocks.POLISHED_ROCK_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.POLISHED_ROCK_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.POLISHED_ROCK_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             // Rock pavings
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_PAVINGS.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_polished_" + RockType.byId(j).getSerializedName(), has(ECBlockRegistry.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer);
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_PAVINGS.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', InitRockBlocks.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_polished_" + RockType.byId(j).getSerializedName(), has(InitRockBlocks.POLISHED_ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer);
 
-            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_PAVINGS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            CreateBasicRecipes(consumer, InitRockBlocks.ROCK_PAVINGS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_PAVING_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_PAVING_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_PAVING_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_PAVING_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             // Rock tiles
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_TILES.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', ECBlockRegistry.ROCK_PAVINGS.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_paving", has(ECBlockRegistry.ROCK_PAVINGS.get(RockType.byId(j)).get())).save(consumer);
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_TILES.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', InitRockBlocks.ROCK_PAVINGS.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_paving", has(InitRockBlocks.ROCK_PAVINGS.get(RockType.byId(j)).get())).save(consumer);
 
-            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_TILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_TILES_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_TILES_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_TILES_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_TILES_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            CreateBasicRecipes(consumer, InitRockBlocks.ROCK_TILES.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_TILES_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_TILES_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_TILES_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_TILES_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             // Rock bricks
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_BRICKS.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName(), has(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer);
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_BRICKS.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName(), has(InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer);
 
-            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BRICKS_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BRICKS_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BRICKS_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            CreateBasicRecipes(consumer, InitRockBlocks.ROCK_BRICKS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_BRICKS_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_BRICKS_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_BRICKS_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             // Rock large bricks
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', ECBlockRegistry.ROCK_BRICKS.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_bricks", has(ECBlockRegistry.ROCK_BRICKS.get(RockType.byId(j)).get())).save(consumer);
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get(), 4).pattern("ii").pattern("ii").define('i', InitRockBlocks.ROCK_BRICKS.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_bricks", has(InitRockBlocks.ROCK_BRICKS.get(RockType.byId(j)).get())).save(consumer);
 
-            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            CreateBasicRecipes(consumer, InitRockBlocks.ROCK_LARGE_BRICKS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_LARGE_BRICKS_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_LARGE_BRICKS_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_LARGE_BRICKS_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_LARGE_BRICKS_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             // Rock paving stones
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_PAVING_STONES.get(RockType.byId(j)).get(), 4).pattern(" i ").pattern("i i").pattern(" i ").define('i', ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_cobblestones", has(ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get())).save(consumer);
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_PAVING_STONES.get(RockType.byId(j)).get(), 4).pattern(" i ").pattern("i i").pattern(" i ").define('i', InitRockBlocks.ROCK_COBBLESTONES.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_cobblestones", has(InitRockBlocks.ROCK_COBBLESTONES.get(RockType.byId(j)).get())).save(consumer);
 
-            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_PAVING_STONES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_STONES_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_STONES_SLABS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_STONES_WALLS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_PAVING_STONES_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
+            CreateBasicRecipes(consumer, InitRockBlocks.ROCK_PAVING_STONES.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_PAVING_STONES_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_PAVING_STONES_SLABS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_PAVING_STONES_WALLS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_PAVING_STONES_PRESSURE_PLATES.get(RockType.byId(j)).get(), null);
 
             // Rock ornaments
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), 2).pattern(" i ").pattern("i i").pattern(" i ").define('i', ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get()).unlockedBy("has_smooth_" + RockType.byId(j).getSerializedName() + "_slab", has(ECBlockRegistry.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get())).save(consumer, ECConstants.MODID + ":" + RockType.byId(j).getSerializedName() + "_ornament_from_smooth_slabs");
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), 2).pattern(" i ").pattern("i i").pattern(" i ").define('i', ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get()).unlockedBy("has_polished_" + RockType.byId(j).getSerializedName() + "_slab", has(ECBlockRegistry.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get())).save(consumer);
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), 2).pattern(" i ").pattern("i i").pattern(" i ").define('i', InitRockBlocks.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get()).unlockedBy("has_smooth_" + RockType.byId(j).getSerializedName() + "_slab", has(InitRockBlocks.SMOOTH_ROCK_SLABS.get(RockType.byId(j)).get())).save(consumer, ECConstants.MODID + ":" + RockType.byId(j).getSerializedName() + "_ornament_from_smooth_slabs");
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_ORNAMENTS.get(RockType.byId(j)).get(), 2).pattern(" i ").pattern("i i").pattern(" i ").define('i', InitRockBlocks.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get()).unlockedBy("has_polished_" + RockType.byId(j).getSerializedName() + "_slab", has(InitRockBlocks.POLISHED_ROCK_SLABS.get(RockType.byId(j)).get())).save(consumer);
 
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get()).define('#', ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get()).pattern("##").unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_ornament", has(ECBlockRegistry.ROCK_ORNAMENTS.get(RockType.byId(j)).get())).save(consumer);
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_ORNAMENT_PRESSURE_PLATES.get(RockType.byId(j)).get()).define('#', InitRockBlocks.ROCK_ORNAMENTS.get(RockType.byId(j)).get()).pattern("##").unlockedBy("has_" + RockType.byId(j).getSerializedName() + "_ornament", has(InitRockBlocks.ROCK_ORNAMENTS.get(RockType.byId(j)).get())).save(consumer);
 
             // Rock rooftiles
-            ShapedRecipeBuilder.shaped(ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get(), 4).pattern(" i ").pattern("i i").pattern(" i ").define('i', ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName(), has(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer, ECConstants.MODID + ":" + RockType.byId(j).getSerializedName() + "_rooftiles_from_" + RockType.byId(j).getSerializedName());
+            ShapedRecipeBuilder.shaped(InitRockBlocks.ROCK_ROOFTILES.get(RockType.byId(j)).get(), 4).pattern(" i ").pattern("i i").pattern(" i ").define('i', InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get()).unlockedBy("has_" + RockType.byId(j).getSerializedName(), has(InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get())).save(consumer, ECConstants.MODID + ":" + RockType.byId(j).getSerializedName() + "_rooftiles_from_" + RockType.byId(j).getSerializedName());
 
-            CreateBasicRecipes(consumer, ECBlockRegistry.ROCK_ROOFTILES.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get(), null, null, null);
+            CreateBasicRecipes(consumer, InitRockBlocks.ROCK_ROOFTILES.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_ROOFTILES_STAIRS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_ROOFTILES_SLABS.get(RockType.byId(j)).get(), null, null, null);
         }
 
         // Paving stones
-        ShapedRecipeBuilder.shaped(ECBlockRegistry.PAVING_STONES.get(), 4).pattern(" i ").pattern("i i").pattern(" i ").define('i', Blocks.STONE).unlockedBy("has_stone", has(Blocks.STONE)).save(consumer);
+        ShapedRecipeBuilder.shaped(InitRockBlocks.PAVING_STONES.get(), 4).pattern(" i ").pattern("i i").pattern(" i ").define('i', Blocks.STONE).unlockedBy("has_stone", has(Blocks.STONE)).save(consumer);
 
-        CreateBasicRecipes(consumer, ECBlockRegistry.PAVING_STONES.get(), ECBlockRegistry.PAVING_STONES_STAIRS.get(), ECBlockRegistry.PAVING_STONES_SLAB.get(), ECBlockRegistry.PAVING_STONES_WALL.get(), ECBlockRegistry.PAVING_STONES_PRESSURE_PLATE.get(), null);
+        CreateBasicRecipes(consumer, InitRockBlocks.PAVING_STONES.get(), InitRockBlocks.PAVING_STONES_STAIRS.get(), InitRockBlocks.PAVING_STONES_SLAB.get(), InitRockBlocks.PAVING_STONES_WALL.get(), InitRockBlocks.PAVING_STONES_PRESSURE_PLATE.get(), null);
 
         // Andesite
         ShapelessRecipeBuilder.shapeless(ECBlockRegistry.ANDESITE_BUTTON.get()).requires(Blocks.ANDESITE).unlockedBy("has_andesite", has(Blocks.ANDESITE)).save(consumer);

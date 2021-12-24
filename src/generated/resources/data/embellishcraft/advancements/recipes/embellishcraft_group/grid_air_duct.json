@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:vent_air_duct"
+            "items": [
+              "embellishcraft:vent_air_duct"
+            ]
           }
         ]
       }

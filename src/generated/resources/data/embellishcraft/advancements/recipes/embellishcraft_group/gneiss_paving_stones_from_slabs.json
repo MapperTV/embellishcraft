@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:gneiss_paving_stones_slab"
+            "items": [
+              "embellishcraft:gneiss_paving_stones_slab"
+            ]
           }
         ]
       }

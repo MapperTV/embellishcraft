@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:marble_ornament"
+            "items": [
+              "embellishcraft:marble_ornament"
+            ]
           }
         ]
       }

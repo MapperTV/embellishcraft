@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:steel_wall_ladder"
+            "items": [
+              "embellishcraft:steel_wall_ladder"
+            ]
           }
         ]
       }

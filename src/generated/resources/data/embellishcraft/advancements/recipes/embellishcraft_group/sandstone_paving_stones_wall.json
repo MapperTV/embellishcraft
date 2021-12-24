@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:sandstone_paving_stones"
+            "items": [
+              "embellishcraft:sandstone_paving_stones"
+            ]
           }
         ]
       }

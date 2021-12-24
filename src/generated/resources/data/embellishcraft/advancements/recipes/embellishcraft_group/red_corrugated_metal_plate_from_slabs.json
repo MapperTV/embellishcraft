@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:red_corrugated_metal_plate_slab"
+            "items": [
+              "embellishcraft:red_corrugated_metal_plate_slab"
+            ]
           }
         ]
       }

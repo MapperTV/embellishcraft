@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:gray_corrugated_metal_plate"
+            "items": [
+              "embellishcraft:gray_corrugated_metal_plate"
+            ]
           }
         ]
       }

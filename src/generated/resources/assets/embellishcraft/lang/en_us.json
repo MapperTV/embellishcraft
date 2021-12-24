@@ -1129,5 +1129,7 @@
   "embellishcraft.message.locker.locked": "This locker is locked.",
   "embellishcraft.message.locker.unlock": "This locker is now unlocked!",
   "embellishcraft.message.locker.wrong": "This locker is not yours!",
-  "itemGroup.embellishcraft_group": "EmbellishCraft"
+  "embellishcraft.message.temp.seat": "Sitting down is currently disabled.",
+  "itemGroup.embellishcraft_group": "EmbellishCraft",
+  "itemGroup.embellishcraft_rocks_group": "EmbellishCraft - Rocks"
 }

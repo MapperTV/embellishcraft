@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:smooth_andesite_slab"
+            "items": [
+              "embellishcraft:smooth_andesite_slab"
+            ]
           }
         ]
       }

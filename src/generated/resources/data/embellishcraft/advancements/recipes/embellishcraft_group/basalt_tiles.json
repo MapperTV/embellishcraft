@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:basalt_paving"
+            "items": [
+              "embellishcraft:basalt_paving"
+            ]
           }
         ]
       }

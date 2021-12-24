@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:steel_beam"
+            "items": [
+              "embellishcraft:steel_beam"
+            ]
           }
         ]
       }

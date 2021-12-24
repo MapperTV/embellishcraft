@@ -25,6 +25,7 @@ import tv.mapper.embellishcraft.block.CrateBlock;
 import tv.mapper.embellishcraft.block.CustomBedBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.PlateBlock;
+import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.gen.BaseLootTableProvider;
 
@@ -44,7 +45,7 @@ public class ECLootTables extends BaseLootTableProvider
         {
             Block block = object.get();
 
-            if(!ECBlockRegistry.ROCK_BLOCKS.containsKey(block))
+            if(!InitRockBlocks.ROCK_BLOCKS.containsKey(block))
             {
                 if(block instanceof SlabBlock)
                     lootTables.put(block, createSlabTable(ECConstants.MODID, block));
@@ -66,8 +67,26 @@ public class ECLootTables extends BaseLootTableProvider
         for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
         {
             // Rocks
-            lootTables.put(ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), createSilkTable(ECConstants.MODID, ECBlockRegistry.ROCK_BLOCKS.get(RockType.byId(j)).get(), ECBlockRegistry.ROCK_COBBLESTONES.get(RockType.byId(j)).get()));
+            lootTables.put(InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get(), createSilkTable(ECConstants.MODID, InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONES.get(RockType.byId(j)).get()));
         }
+    }
+
+    public void addStandardTable(Block block)
+    {
+        if(block instanceof SlabBlock)
+            lootTables.put(block, createSlabTable(ECConstants.MODID, block));
+        else if(block instanceof CustomBedBlock)
+            lootTables.put(block, createBedTable(ECConstants.MODID, block));
+        else if(block instanceof DoorBlock)
+            lootTables.put(block, createDoorTable(ECConstants.MODID, block));
+        else if(block instanceof CrateBlock)
+            lootTables.put(block, createCrateTable(ECConstants.MODID, block));
+        else if(block instanceof ChestBlock)
+            lootTables.put(block, createChestTable(block.getRegistryName().toString(), block));
+        else if(block instanceof PlateBlock)
+            lootTables.put(block, createPlateTable(ECConstants.MODID, block));
+        else
+            lootTables.put(block, createStandardTable(ECConstants.MODID, block));
     }
 
     protected LootTable.Builder createPlateTable(String modid, Block block)

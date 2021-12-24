@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:smooth_larvikite"
+            "items": [
+              "embellishcraft:smooth_larvikite"
+            ]
           }
         ]
       }

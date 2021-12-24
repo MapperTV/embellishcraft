@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:slate_cobblestone_bricks_slab"
+            "items": [
+              "embellishcraft:slate_cobblestone_bricks_slab"
+            ]
           }
         ]
       }

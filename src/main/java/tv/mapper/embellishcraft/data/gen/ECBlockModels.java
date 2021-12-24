@@ -3,8 +3,8 @@ package tv.mapper.embellishcraft.data.gen;
 import java.util.Arrays;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.util.McWoods;
@@ -27,24 +27,6 @@ public class ECBlockModels extends BaseBlockModels
     @Override
     protected void registerModels()
     {
-        buildAllStone("basalt");
-        buildRooftilesStairs("basalt_rooftiles");
-
-        buildAllStone("slate");
-        buildRooftilesStairs("slate_rooftiles");
-
-        buildAllStone("marble");
-        buildRooftilesStairs("marble_rooftiles");
-
-        buildAllStone("gneiss");
-        buildRooftilesStairs("gneiss_rooftiles");
-
-        buildAllStone("jade");
-        buildRooftilesStairs("jade_rooftiles");
-
-        buildAllStone("larvikite");
-        buildRooftilesStairs("larvikite_rooftiles");
-
         buildMcStone("andesite");
         buildRooftilesStairs("andesite_rooftiles");
 
@@ -59,9 +41,6 @@ public class ECBlockModels extends BaseBlockModels
 
         buildMcSandstone("red_sandstone");
         buildRooftilesStairs("red_sandstone_rooftiles");
-
-        buildWall("paving_stones", modLoc("block/paving_stones"));
-        buildPressure("paving_stones", modLoc("block/paving_stones"));
 
         // Terracotta
         buildWall("terracotta", mcLoc("block/terracotta"));
@@ -179,8 +158,8 @@ public class ECBlockModels extends BaseBlockModels
         orientableVertical("vent_air_duct", modLoc("block/air_duct"), modLoc("block/vent_air_duct"));
         orientableVertical("grid_air_duct", modLoc("block/air_duct"), modLoc("block/grid_air_duct"));
 
-        cubeColumn("bulkhead", modLoc("block/bulkhead"), new ResourceLocation(MapperBase.MODID, "block/concrete"));
-        cubeColumn("bulkhead_top", modLoc("block/bulkhead_top"), new ResourceLocation(MapperBase.MODID, "block/concrete"));
+        cubeColumn("bulkhead", modLoc("block/bulkhead"), modLoc("block/concrete"));
+        cubeColumn("bulkhead_top", modLoc("block/bulkhead_top"), modLoc("block/concrete"));
 
         getBuilder("steel_wall_ladder").parent(getExistingFile(modLoc("block/wall_ladder"))).texture("material", new ResourceLocation(MapperBase.MODID, "block/steel_block")).texture("particle", new ResourceLocation(MapperBase.MODID, "block/steel_block"));
         getBuilder("rusty_wall_ladder").parent(getExistingFile(modLoc("block/wall_ladder"))).texture("material", modLoc("block/rust")).texture("particle", modLoc("block/rust"));

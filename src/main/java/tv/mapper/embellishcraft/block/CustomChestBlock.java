@@ -18,17 +18,32 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import tv.mapper.embellishcraft.tileentity.CustomChestTileEntity;
 import tv.mapper.embellishcraft.util.CustomChestType;
 import tv.mapper.embellishcraft.util.WoodsType;
+import tv.mapper.mapperbase.world.level.block.ToolManager;
+import tv.mapper.mapperbase.world.level.block.ToolTiers;
+import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
-public class CustomChestBlock extends ChestBlock
+public class CustomChestBlock extends ChestBlock implements ToolManager
 {
     private CustomChestType type;
     protected final WoodsType wood;
-
-    public CustomChestBlock(Properties properties, Supplier<BlockEntityType<? extends ChestBlockEntity>> supplier, CustomChestType type, WoodsType wood)
+    protected ToolTiers tier;
+    protected ToolTypes tool;
+    
+    public CustomChestBlock(Properties properties, Supplier<BlockEntityType<? extends ChestBlockEntity>> supplier, CustomChestType type, WoodsType wood, ToolTypes tool)
     {
         super(properties, supplier);
         this.type = type;
         this.wood = wood;
+        this.tool = tool;
+    }
+    
+    public CustomChestBlock(Properties properties, Supplier<BlockEntityType<? extends ChestBlockEntity>> supplier, CustomChestType type, WoodsType wood, ToolTypes tool, ToolTiers tier)
+    {
+        super(properties, supplier);
+        this.type = type;
+        this.wood = wood;
+        this.tool = tool;
+        this.tier = tier;
     }
 
     public BlockEntity newBlockEntity(BlockPos p_153215_, BlockState p_153216_, BlockGetter worldIn)
@@ -63,5 +78,17 @@ public class CustomChestBlock extends ChestBlock
     public RenderShape getRenderShape(BlockState state)
     {
         return RenderShape.MODEL;
+    }
+
+    @Override
+    public ToolTiers getTier()
+    {
+        return this.tier;
+    }
+
+    @Override
+    public ToolTypes getTool()
+    {
+        return this.tool;
     }
 }

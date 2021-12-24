@@ -26,32 +26,6 @@ public class ECItemModels extends BaseItemModels
     @Override
     protected void registerModels()
     {
-        registerStone("basalt");
-        registerStone("slate");
-        registerStone("marble");
-        registerStone("gneiss");
-        registerStone("jade");
-        registerStone("larvikite");
-
-        registerBlockBasics("paving_stones", true, true, true, true, true, false);
-
-        registerMcStone("andesite");
-        registerMcStone("diorite");
-        registerMcStone("granite");
-
-        registerSandstone("sandstone");
-        registerSandstone("red_sandstone");
-
-        // Terracotta
-        registerBlockBasics("terracotta", false, true, true, true, true, false);
-        getBuilder("terracotta_button").parent(new UncheckedModelFile(modid + ":block/terracotta_button_inventory"));
-        registerBlockBasics("polished_terracotta", true, true, true, true, true, false);
-        registerBlockBasics("terracotta_paving", true, true, true, true, true, false);
-        registerBlockBasics("terracotta_tiles", true, true, true, true, true, false);
-        registerBlockBasics("terracotta_bricks", true, true, true, true, true, false);
-        registerBlockBasics("terracotta_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics("terracotta_paving_stones", true, true, true, true, true, false);
-        registerBlockBasics("terracotta_rooftiles", true, true, true, false, false, false);
 
         // Other bricks
         registerBlockBasics("dark_bricks", true, true, true, true, true, false);
@@ -99,7 +73,6 @@ public class ECItemModels extends BaseItemModels
         registerBlockBasics("yellow_corrugated_metal_plate", true, true, true, true, true, true);
 
         // Metal blocks
-
         registerBlockBasics("dark_metal_floor", true, true, true, true, true, false);
         registerBlockBasics("light_metal_floor", true, true, true, true, true, false);
         registerBlockBasics("rusty_plate", true, true, true, true, true, false);
@@ -172,8 +145,7 @@ public class ECItemModels extends BaseItemModels
 
             for(int i = 0; i < Arrays.stream(DyeColor.values()).count(); i++)
             {
-                getBuilder(DyeColor.byId(i).getSerializedName() + "_" + McWoods.byId(j).getSerializedName() + "_fancy_bed").parent(
-                    new UncheckedModelFile(modid + ":block/" + DyeColor.byId(i).getSerializedName() + "_" + McWoods.byId(j).getSerializedName() + "_fancy_bed_inventory"));
+                getBuilder(DyeColor.byId(i).getSerializedName() + "_" + McWoods.byId(j).getSerializedName() + "_fancy_bed").parent(new UncheckedModelFile(modid + ":block/" + DyeColor.byId(i).getSerializedName() + "_" + McWoods.byId(j).getSerializedName() + "_fancy_bed_inventory"));
             }
         }
         getBuilder("locker").parent(new UncheckedModelFile(modid + ":block/locker_small"));
@@ -193,50 +165,5 @@ public class ECItemModels extends BaseItemModels
         getBuilder("rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/rusty_door"));
         getBuilder("sturdy_rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/sturdy_rusty_door"));
         getBuilder("warning_rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/warning_rusty_door"));
-
-    }
-
-    private void registerStone(String name)
-    {
-        registerBlockBasics(name, true, true, true, true, true, false);
-        getBuilder(name + "_button").parent(new UncheckedModelFile(modid + ":block/" + name + "_button_inventory"));
-        registerBlockBasics(name + "_cobblestone", true, true, true, true, true, false);
-        registerBlockBasics(name + "_cobblestone_bricks", true, true, true, true, true, false);
-        registerBlockBasics("smooth_" + name, true, true, true, true, true, false);
-        registerBlockBasics("polished_" + name, true, true, true, true, true, false);
-        registerBlockBasics(name + "_paving", true, true, true, true, true, false);
-        registerBlockBasics(name + "_tiles", true, true, true, true, true, false);
-        registerBlockBasics(name + "_bricks", true, true, true, true, true, false);
-        registerBlockBasics(name + "_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics(name + "_paving_stones", true, true, true, true, true, false);
-        registerBlockBasics(name + "_ornament", true, false, false, false, true, false);
-        registerBlockBasics(name + "_rooftiles", true, true, true, false, false, false);
-
-    }
-
-    private void registerMcStone(String name)
-    {
-        registerBlockBasics("smooth_" + name, true, true, true, true, true, false);
-        getBuilder(name + "_button").parent(new UncheckedModelFile(modid + ":block/" + name + "_button_inventory"));
-        registerBlockBasics(name + "_paving", true, true, true, true, true, false);
-        registerBlockBasics(name + "_tiles", true, true, true, true, true, false);
-        registerBlockBasics(name + "_bricks", true, true, true, true, true, false);
-        registerBlockBasics(name + "_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics(name + "_paving_stones", true, true, true, true, true, false);
-        registerBlockBasics(name + "_ornament", true, false, false, false, true, false);
-        registerBlockBasics(name + "_rooftiles", true, true, true, false, false, false);
-    }
-
-    private void registerSandstone(String name)
-    {
-        getBuilder(name + "_button").parent(new UncheckedModelFile(modid + ":block/" + name + "_button_inventory"));
-        registerBlockBasics("smooth_" + name, false, false, false, true, true, false);
-        registerBlockBasics("polished_" + name, true, true, true, true, true, false);
-        registerBlockBasics(name + "_paving", true, true, true, true, true, false);
-        registerBlockBasics(name + "_tiles", true, true, true, true, true, false);
-        registerBlockBasics(name + "_bricks", true, true, true, true, true, false);
-        registerBlockBasics(name + "_large_bricks", true, true, true, true, true, false);
-        registerBlockBasics(name + "_paving_stones", true, true, true, true, true, false);
-        registerBlockBasics(name + "_rooftiles", true, true, true, false, false, false);
     }
 }

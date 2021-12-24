@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:white_blue_wallpaper_slab"
+            "items": [
+              "embellishcraft:white_blue_wallpaper_slab"
+            ]
           }
         ]
       }

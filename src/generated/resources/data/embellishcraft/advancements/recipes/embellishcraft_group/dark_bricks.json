@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:soul_sand"
+            "items": [
+              "minecraft:soul_sand"
+            ]
           }
         ]
       }
@@ -21,7 +23,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:bricks"
+            "items": [
+              "minecraft:bricks"
+            ]
           }
         ]
       }

@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "embellishcraft:concrete_tiles"
+            "items": [
+              "embellishcraft:concrete_tiles"
+            ]
           }
         ]
       }
