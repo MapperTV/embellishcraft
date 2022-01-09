@@ -8,6 +8,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.common.data.LanguageProvider;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.rocks.data.gen.RockLang;
 import tv.mapper.embellishcraft.util.McWoods;
 
 public class ECLang extends LanguageProvider
@@ -24,6 +25,8 @@ public class ECLang extends LanguageProvider
     protected void addTranslations()
     {
         String name;
+
+        RockLang.addRockTranslations(this, lang);
 
         switch(lang)
         {

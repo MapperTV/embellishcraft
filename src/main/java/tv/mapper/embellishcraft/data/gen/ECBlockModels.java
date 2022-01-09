@@ -27,41 +27,6 @@ public class ECBlockModels extends BaseBlockModels
     @Override
     protected void registerModels()
     {
-        buildMcStone("andesite");
-        buildRooftilesStairs("andesite_rooftiles");
-
-        buildMcStone("diorite");
-        buildRooftilesStairs("diorite_rooftiles");
-
-        buildMcStone("granite");
-        buildRooftilesStairs("granite_rooftiles");
-
-        buildMcSandstone("sandstone");
-        buildRooftilesStairs("sandstone_rooftiles");
-
-        buildMcSandstone("red_sandstone");
-        buildRooftilesStairs("red_sandstone_rooftiles");
-
-        // Terracotta
-        buildWall("terracotta", mcLoc("block/terracotta"));
-        buildWall("polished_terracotta", modLoc("block/polished_terracotta"));
-        buildWall("terracotta_paving", modLoc("block/terracotta_paving"));
-        buildWall("terracotta_tiles", modLoc("block/terracotta_tiles"));
-        buildWall("terracotta_bricks", modLoc("block/terracotta_bricks"));
-        buildWall("terracotta_large_bricks", modLoc("block/terracotta_large_bricks"));
-        buildWall("terracotta_paving_stones", modLoc("block/terracotta_paving_stones"));
-        buildButton("terracotta", mcLoc("block/terracotta"));
-
-        buildPressure("terracotta", mcLoc("block/terracotta"));
-        buildPressure("polished_terracotta", modLoc("block/polished_terracotta"));
-        buildPressure("terracotta_paving", modLoc("block/terracotta_paving"));
-        buildPressure("terracotta_tiles", modLoc("block/terracotta_tiles"));
-        buildPressure("terracotta_bricks", modLoc("block/terracotta_bricks"));
-        buildPressure("terracotta_large_bricks", modLoc("block/terracotta_large_bricks"));
-        buildPressure("terracotta_paving_stones", modLoc("block/terracotta_paving_stones"));
-
-        buildRooftilesStairs("terracotta_rooftiles");
-
         // Other bricks
         buildWall("dark_bricks", modLoc("block/dark_bricks"));
         buildWall("old_bricks", modLoc("block/old_bricks"));

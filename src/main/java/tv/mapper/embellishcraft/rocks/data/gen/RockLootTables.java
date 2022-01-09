@@ -1,10 +1,14 @@
 package tv.mapper.embellishcraft.rocks.data.gen;
 
+import java.util.Arrays;
+
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fmllegacy.RegistryObject;
+import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.data.gen.ECLootTables;
 import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
+import tv.mapper.embellishcraft.util.RockType;
 
 public class RockLootTables extends ECLootTables
 {
@@ -26,5 +30,10 @@ public class RockLootTables extends ECLootTables
             }
         }
 
+        for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
+        {
+            // Rocks
+            lootTables.put(InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get(), createSilkTable(ECConstants.MODID, InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONES.get(RockType.byId(j)).get()));
+        }
     }
 }

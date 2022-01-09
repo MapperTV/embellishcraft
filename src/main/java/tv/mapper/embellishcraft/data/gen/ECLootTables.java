@@ -1,7 +1,5 @@
 package tv.mapper.embellishcraft.data.gen;
 
-import java.util.Arrays;
-
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
@@ -25,8 +23,6 @@ import tv.mapper.embellishcraft.block.CrateBlock;
 import tv.mapper.embellishcraft.block.CustomBedBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.PlateBlock;
-import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
-import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.gen.BaseLootTableProvider;
 
 public class ECLootTables extends BaseLootTableProvider
@@ -37,37 +33,12 @@ public class ECLootTables extends BaseLootTableProvider
         super(dataGeneratorIn);
     }
 
-    @SuppressWarnings("unlikely-arg-type")
     @Override
     protected void addTables()
     {
         for(RegistryObject<Block> object : ECBlockRegistry.BLOCKS.getEntries())
         {
-            Block block = object.get();
-
-            if(!InitRockBlocks.ROCK_BLOCKS.containsKey(block))
-            {
-                if(block instanceof SlabBlock)
-                    lootTables.put(block, createSlabTable(ECConstants.MODID, block));
-                else if(block instanceof CustomBedBlock)
-                    lootTables.put(block, createBedTable(ECConstants.MODID, block));
-                else if(block instanceof DoorBlock)
-                    lootTables.put(block, createDoorTable(ECConstants.MODID, block));
-                else if(block instanceof CrateBlock)
-                    lootTables.put(block, createCrateTable(ECConstants.MODID, block));
-                else if(block instanceof ChestBlock)
-                    lootTables.put(block, createChestTable(block.getRegistryName().toString(), block));
-                else if(block instanceof PlateBlock)
-                    lootTables.put(block, createPlateTable(ECConstants.MODID, block));
-                else
-                    lootTables.put(block, createStandardTable(ECConstants.MODID, block));
-            }
-        }
-
-        for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
-        {
-            // Rocks
-            lootTables.put(InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get(), createSilkTable(ECConstants.MODID, InitRockBlocks.ROCK_BLOCKS.get(RockType.byId(j)).get(), InitRockBlocks.ROCK_COBBLESTONES.get(RockType.byId(j)).get()));
+            addStandardTable(object.get());
         }
     }
 

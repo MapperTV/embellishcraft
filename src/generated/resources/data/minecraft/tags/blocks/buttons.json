@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "embellishcraft:basalt_button",
+    "embellishcraft:slate_button",
+    "embellishcraft:marble_button",
+    "embellishcraft:gneiss_button",
+    "embellishcraft:jade_button",
+    "embellishcraft:larvikite_button",
     "embellishcraft:andesite_button",
     "embellishcraft:diorite_button",
     "embellishcraft:granite_button",

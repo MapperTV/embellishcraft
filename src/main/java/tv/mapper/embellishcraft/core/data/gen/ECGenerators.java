@@ -18,7 +18,9 @@ import tv.mapper.embellishcraft.data.gen.recipe.ECStonecutterRecipes;
 import tv.mapper.embellishcraft.rocks.data.gen.RockBlockModels;
 import tv.mapper.embellishcraft.rocks.data.gen.RockBlockStates;
 import tv.mapper.embellishcraft.rocks.data.gen.RockItemModels;
-import tv.mapper.embellishcraft.rocks.data.gen.RockLang;
+import tv.mapper.embellishcraft.rocks.data.gen.RockLootTables;
+import tv.mapper.embellishcraft.rocks.data.gen.recipe.RockRecipes;
+import tv.mapper.embellishcraft.rocks.data.gen.recipe.RockStoneCutter;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ECGenerators
@@ -31,8 +33,11 @@ public class ECGenerators
 
         generator.addProvider(new ECRecipes(generator));
         generator.addProvider(new ECStonecutterRecipes(generator));
+        generator.addProvider(new RockRecipes(generator));
+        generator.addProvider(new RockStoneCutter(generator));
 
         generator.addProvider(new ECLootTables(generator));
+        generator.addProvider(new RockLootTables(generator));
 
         // Block States
         generator.addProvider(new ECBlockStates(generator, ECConstants.MODID, existingFileHelper));
@@ -54,7 +59,5 @@ public class ECGenerators
         // Lang
         generator.addProvider(new ECLang(generator, ECConstants.MODID, "en_us"));
         generator.addProvider(new ECLang(generator, ECConstants.MODID, "fr_fr"));
-        generator.addProvider(new RockLang(generator, ECConstants.MODID, "en_us"));
-        generator.addProvider(new RockLang(generator, ECConstants.MODID, "fr_fr"));
     }
 }
