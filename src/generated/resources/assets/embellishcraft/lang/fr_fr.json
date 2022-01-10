@@ -1131,5 +1131,6 @@
   "embellishcraft.message.locker.wrong": "Ce casier n'est pas \u00E0 vous!",
   "embellishcraft.message.temp.seat": "S'asseoir est d\u00E9sactiv\u00E9 pour le moment.",
   "itemGroup.embellishcraft_group": "EmbellishCraft",
+  "itemGroup.embellishcraft_industrial_group": "EmbellishCraft - Industriel",
   "itemGroup.embellishcraft_rocks_group": "EmbellishCraft - Roches"
 }

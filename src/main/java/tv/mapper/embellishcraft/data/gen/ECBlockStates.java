@@ -103,39 +103,6 @@ public class ECBlockStates extends BaseBlockStates
         registerStoneVariant("yellow_tiles", ECBlockRegistry.YELLOW_TILES.get(), ECBlockRegistry.YELLOW_TILES_SLAB.get(), ECBlockRegistry.YELLOW_TILES_STAIRS.get(), ECBlockRegistry.YELLOW_TILES_WALL.get(), ECBlockRegistry.YELLOW_TILES_PRESSURE_PLATE.get(), null);
         registerStoneVariant("yellow_grey_tiles", ECBlockRegistry.YELLOW_GREY_TILES.get(), ECBlockRegistry.YELLOW_GREY_TILES_SLAB.get(), ECBlockRegistry.YELLOW_GREY_TILES_STAIRS.get(), ECBlockRegistry.YELLOW_GREY_TILES_WALL.get(), ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE.get(), null);
 
-        // Metal blocks
-        registerStoneVariant("dark_metal_floor", ECBlockRegistry.DARK_METAL_FLOOR.get(), ECBlockRegistry.DARK_METAL_FLOOR_SLAB.get(), ECBlockRegistry.DARK_METAL_FLOOR_STAIRS.get(), ECBlockRegistry.DARK_METAL_FLOOR_WALL.get(), ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("light_metal_floor", ECBlockRegistry.LIGHT_METAL_FLOOR.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_WALL.get(), ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("rusty_plate", ECBlockRegistry.RUSTY_PLATE.get(), ECBlockRegistry.RUSTY_PLATE_SLAB.get(), ECBlockRegistry.RUSTY_PLATE_STAIRS.get(), ECBlockRegistry.RUSTY_PLATE_WALL.get(), ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE.get(), null);
-
-        axisBlock(ECBlockRegistry.IRON_BEAM.get(), modLoc("block/iron_beam"), modLoc("block/iron_beam_junction"));
-        axisBlock(ECBlockRegistry.BOLTED_IRON_BEAM.get(), modLoc("block/bolted_iron_beam"), modLoc("block/iron_beam_junction"));
-        simpleBlock(ECBlockRegistry.IRON_BEAM_JUNCTION.get());
-
-        axisBlock(ECBlockRegistry.STEEL_BEAM.get(), modLoc("block/steel_beam"), modLoc("block/steel_beam_junction"));
-        axisBlock(ECBlockRegistry.BOLTED_STEEL_BEAM.get(), modLoc("block/bolted_steel_beam"), modLoc("block/steel_beam_junction"));
-        simpleBlock(ECBlockRegistry.STEEL_BEAM_JUNCTION.get());
-
-        simpleBlock(ECBlockRegistry.AIR_DUCT.get());
-        directionalBlock(ECBlockRegistry.VENT_AIR_DUCT.get(), new UncheckedModelFile(mod_id + ":block/vent_air_duct"));
-        directionalBlock(ECBlockRegistry.GRID_AIR_DUCT.get(), new UncheckedModelFile(mod_id + ":block/grid_air_duct"));
-
-        simpleBlock(ECBlockRegistry.BULKHEAD.get());
-        simpleBlock(ECBlockRegistry.BULKHEAD_TOP.get());
-
-        horizontalBlock(ECBlockRegistry.STEEL_WALL_LADDER.get(), new UncheckedModelFile(mod_id + ":block/steel_wall_ladder"), 0);
-        horizontalBlock(ECBlockRegistry.RUSTY_WALL_LADDER.get(), new UncheckedModelFile(mod_id + ":block/rusty_wall_ladder"), 0);
-        horizontalBlock(ECBlockRegistry.STEEL_RUNGS.get(), new UncheckedModelFile(mod_id + ":block/steel_rungs"));
-        horizontalBlock(ECBlockRegistry.RUSTY_RUNGS.get(), new UncheckedModelFile(mod_id + ":block/rusty_rungs"));
-
-        // Corrugated metal plates
-        for(int j = 0; j < DyeColor.values().length; j++)
-        {
-            registerStoneVariant(DyeColor.byId(j).getSerializedName() + "_corrugated_metal_plate", ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get(), ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get(), ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get(), ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get(), ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get(), null);
-            fenceBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getSerializedName() + "_corrugated_metal_plate"));
-            fenceGateBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getSerializedName() + "_corrugated_metal_plate"));
-        }
-
         // Wallpaper
         registerStoneVariant("white_blue_wallpaper", ECBlockRegistry.WHITE_BLUE_WALLPAPER.get(), ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB.get(), ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS.get(), null, null, null);
         upDownBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH.get(), new UncheckedModelFile(mod_id + ":block/white_blue_wallpaper_plinth"));
@@ -192,22 +159,6 @@ public class ECBlockStates extends BaseBlockStates
             doorBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getSerializedName() + "_fancy_door_bottom"), modLoc("block/" + McWoods.byId(j).getSerializedName() + "_fancy_door_top"));
             doorBlock(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)).get(), modLoc("block/" + McWoods.byId(j).getSerializedName() + "_plain_door_bottom"), modLoc("block/" + McWoods.byId(j).getSerializedName() + "_plain_door_top"));
         }
-
-        horizontalBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/steel_suspended_stairs"), 0);
-        horizontalBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/rusty_suspended_stairs"), 0);
-        horizontalBlock(ECBlockRegistry.STEEL_LARGE_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/steel_large_suspended_stairs"), 0);
-        horizontalBlock(ECBlockRegistry.RUSTY_LARGE_SUSPENDED_STAIRS.get(), new UncheckedModelFile(mod_id + ":block/rusty_large_suspended_stairs"), 0);
-
-        // Doors
-        doorBlock(ECBlockRegistry.STEEL_DOOR.get(), modLoc("block/steel_door_bottom"), modLoc("block/steel_door_top"));
-        doorBlock(ECBlockRegistry.STURDY_STEEL_DOOR.get(), modLoc("block/sturdy_steel_door_bottom"), modLoc("block/sturdy_steel_door_top"));
-        doorBlock(ECBlockRegistry.WARNING_STEEL_DOOR.get(), modLoc("block/warning_steel_door_bottom"), modLoc("block/warning_steel_door_top"));
-        doorBlock(ECBlockRegistry.WHITE_STEEL_DOOR.get(), modLoc("block/white_steel_door_bottom"), modLoc("block/white_steel_door_top"));
-        doorBlock(ECBlockRegistry.STURDY_WHITE_STEEL_DOOR.get(), modLoc("block/sturdy_white_steel_door_bottom"), modLoc("block/sturdy_white_steel_door_top"));
-        doorBlock(ECBlockRegistry.WARNING_WHITE_STEEL_DOOR.get(), modLoc("block/warning_white_steel_door_bottom"), modLoc("block/warning_white_steel_door_top"));
-        doorBlock(ECBlockRegistry.RUSTY_DOOR.get(), modLoc("block/rusty_door_bottom"), modLoc("block/rusty_door_top"));
-        doorBlock(ECBlockRegistry.STURDY_RUSTY_DOOR.get(), modLoc("block/sturdy_rusty_door_bottom"), modLoc("block/sturdy_rusty_door_top"));
-        doorBlock(ECBlockRegistry.WARNING_RUSTY_DOOR.get(), modLoc("block/warning_rusty_door_bottom"), modLoc("block/warning_rusty_door_top"));
     }
 
     protected void plateBlock(Block block)

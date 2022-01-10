@@ -8,6 +8,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.common.data.LanguageProvider;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.industrial.data.gen.IndustrialLang;
 import tv.mapper.embellishcraft.rocks.data.gen.RockLang;
 import tv.mapper.embellishcraft.util.McWoods;
 
@@ -26,7 +27,8 @@ public class ECLang extends LanguageProvider
     {
         String name;
 
-        RockLang.addRockTranslations(this, lang);
+        RockLang.addTranslations(this, lang);
+        IndustrialLang.addTranslations(this, lang);
 
         switch(lang)
         {
@@ -161,63 +163,6 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.YELLOW_GREY_TILES_WALL, "Yellow-Grey Tiles Wall");
                 addBlock(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE, "Yellow-Grey Tiles Pressure Plate");
 
-                // Corrugated metal plates
-                for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
-                {
-                    String color = DyeColor.byId(j).getSerializedName();
-                    String check[] = color.split("_");
-                    if(check.length > 1)
-                        color = StringUtils.capitalise(check[0]) + " " + StringUtils.capitalise(check[1]);
-                    else
-                        color = StringUtils.capitalise(check[0]);
-
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate");
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Slab");
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Stairs");
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Wall");
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Pressure Plate");
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Fence");
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)), color + " Corrugated Metal Plate Fence Gate");
-                }
-
-                // Metal blocks
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR, "Dark Metal Floor");
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_SLAB, "Dark Metal Slab");
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_STAIRS, "Dark Metal Stairs");
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_WALL, "Dark Metal Wall");
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE, "Dark Metal Pressure Plate");
-
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR, "Light Metal Floor");
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB, "Light Metal Slab");
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS, "Light Metal Stairs");
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_WALL, "Light Metal Wall");
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE, "Light Metal Pressure Plate");
-
-                addBlock(ECBlockRegistry.RUSTY_PLATE, "Rusty Plate");
-                addBlock(ECBlockRegistry.RUSTY_PLATE_SLAB, "Rusty Plate Slab");
-                addBlock(ECBlockRegistry.RUSTY_PLATE_STAIRS, "Rusty Plate Stairs");
-                addBlock(ECBlockRegistry.RUSTY_PLATE_WALL, "Rusty Plate Wall");
-                addBlock(ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE, "Rusty Plate Pressure Plate");
-
-                addBlock(ECBlockRegistry.IRON_BEAM, "Iron Beam");
-                addBlock(ECBlockRegistry.BOLTED_IRON_BEAM, "Bolted Iron Beam");
-                addBlock(ECBlockRegistry.IRON_BEAM_JUNCTION, "Iron Beam Junction");
-                addBlock(ECBlockRegistry.STEEL_BEAM, "Steel Beam");
-                addBlock(ECBlockRegistry.BOLTED_STEEL_BEAM, "Bolted Steel Beam");
-                addBlock(ECBlockRegistry.STEEL_BEAM_JUNCTION, "Steel Beam Junction");
-
-                addBlock(ECBlockRegistry.AIR_DUCT, "Air duct");
-                addBlock(ECBlockRegistry.VENT_AIR_DUCT, "Vent Air duct");
-                addBlock(ECBlockRegistry.GRID_AIR_DUCT, "Grid Air duct");
-
-                addBlock(ECBlockRegistry.BULKHEAD, "Bulkhead");
-                addBlock(ECBlockRegistry.BULKHEAD_TOP, "Bulkhead Top");
-
-                addBlock(ECBlockRegistry.STEEL_WALL_LADDER, "Steel Wall Ladder");
-                addBlock(ECBlockRegistry.RUSTY_WALL_LADDER, "Rusty Wall Ladder");
-                addBlock(ECBlockRegistry.STEEL_RUNGS, "Steel Rungs");
-                addBlock(ECBlockRegistry.RUSTY_RUNGS, "Rusty Rungs");
-
                 // Wallpapers
                 addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER, "White / Blue Wallpaper");
                 addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB, "White / Blue Wallpaper Slab");
@@ -264,11 +209,6 @@ public class ECLang extends LanguageProvider
 
                 addBlock(ECBlockRegistry.LOCKER, "Locker");
 
-                addBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS, "Steel Suspended Stairs");
-                addBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS, "Rusty Suspended Stairs");
-                addBlock(ECBlockRegistry.STEEL_LARGE_SUSPENDED_STAIRS, "Steel Large Suspended Stairs");
-                addBlock(ECBlockRegistry.RUSTY_LARGE_SUSPENDED_STAIRS, "Rusty Large Suspended Stairs");
-
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Steel Terrace Chair");
                 addBlock(ECBlockRegistry.STEEL_TERRACE_TABLE, "Steel Terrace Table");
 
@@ -299,16 +239,6 @@ public class ECLang extends LanguageProvider
 
                 addBlock(ECBlockRegistry.PLATE, "Plate");
 
-                addBlock(ECBlockRegistry.STEEL_DOOR, "Steel Door");
-                addBlock(ECBlockRegistry.STURDY_STEEL_DOOR, "Sturdy Steel Door");
-                addBlock(ECBlockRegistry.WARNING_STEEL_DOOR, "Warning Steel Door");
-                addBlock(ECBlockRegistry.WHITE_STEEL_DOOR, "White Steel Door");
-                addBlock(ECBlockRegistry.STURDY_WHITE_STEEL_DOOR, "Sturdy White Steel Door");
-                addBlock(ECBlockRegistry.WARNING_WHITE_STEEL_DOOR, "Warning White Steel Door");
-                addBlock(ECBlockRegistry.RUSTY_DOOR, "Rusty Door");
-                addBlock(ECBlockRegistry.STURDY_RUSTY_DOOR, "Sturdy Rusty Door");
-                addBlock(ECBlockRegistry.WARNING_RUSTY_DOOR, "Warning Rusty Door");
-
                 add("embellishcraft.container.wooden_crate", "Wooden Crate");
 
                 add("embellishcraft.container.locker", "Locker");
@@ -321,9 +251,11 @@ public class ECLang extends LanguageProvider
                 add("embellishcraft.message.temp.seat", "Sitting down is currently disabled.");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
-                add("itemGroup.embellishcraft_rocks_group", "EmbellishCraft - Rocks");
                 break;
             case "fr_fr":
+                String frColorsF[] = {"blanche", "orange", "magenta", "bleu claire", "jaune", "vert claire", "rose", "grise", "gris claire", "cyan", "violette", "bleue", "marron", "verte", "rouge", "noire"};
+                String frColorsM[] = {"blanc", "orange", "magenta", "bleu clair", "jaune", "vert clair", "rose", "gris", "gris clair", "cyan", "violet", "bleu", "marron", "vert", "rouge", "noir"};
+
                 // Other bricks
                 addBlock(ECBlockRegistry.DARK_BRICKS, "Briques sombres");
                 addBlock(ECBlockRegistry.DARK_BRICKS_SLAB, "Dalle en briques sombres");
@@ -453,59 +385,6 @@ public class ECLang extends LanguageProvider
                 addBlock(ECBlockRegistry.YELLOW_GREY_TILES_WALL, "Muret en carrelage jaune-gris");
                 addBlock(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage jaune-gris");
 
-                // Corrugated metal plates
-                String frColorsF[] = {"blanche", "orange", "magenta", "bleu claire", "jaune", "vert claire", "rose", "grise", "gris claire", "cyan", "violette", "bleue", "marron", "verte", "rouge", "noire"};
-                String frColorsM[] = {"blanc", "orange", "magenta", "bleu clair", "jaune", "vert clair", "rose", "gris", "gris clair", "cyan", "violet", "bleu", "marron", "vert", "rouge", "noir"};
-
-                for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
-                {
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)), "Tôle ondulée " + frColorsF[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)), "Dalle en tôle ondulée " + frColorsF[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)), "Escalier en tôle ondulée " + frColorsF[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), "Muret en tôle ondulée " + frColorsF[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), "Plaque de pression en tôle ondulée " + frColorsF[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)), "Barrière en tôle ondulée " + frColorsF[j]);
-                    addBlock(ECBlockRegistry.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)), "Portillon en tôle ondulée " + frColorsF[j]);
-                }
-
-                // Metal blocks
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR, "Sol en métal foncé");
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_SLAB, "Dalle en métal foncé");
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_STAIRS, "Escalier en métal foncé");
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_WALL, "Muret en métal foncé");
-                addBlock(ECBlockRegistry.DARK_METAL_FLOOR_PRESSURE_PLATE, "Plaque de pression en métal foncé");
-
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR, "Sol en métal clair");
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_SLAB, "Dalle en métal clair");
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_STAIRS, "Escalier en métal clair");
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_WALL, "Muret en métal clair");
-                addBlock(ECBlockRegistry.LIGHT_METAL_FLOOR_PRESSURE_PLATE, "Plaque de pression en métal clair");
-
-                addBlock(ECBlockRegistry.RUSTY_PLATE, "Plaque rouillée");
-                addBlock(ECBlockRegistry.RUSTY_PLATE_SLAB, "Dalle en plaque rouillée");
-                addBlock(ECBlockRegistry.RUSTY_PLATE_STAIRS, "Escalier en plaque rouillée");
-                addBlock(ECBlockRegistry.RUSTY_PLATE_WALL, "Muret en plaque rouillée");
-                addBlock(ECBlockRegistry.RUSTY_PLATE_PRESSURE_PLATE, "Plaque de pression en plaque rouillée");
-
-                addBlock(ECBlockRegistry.IRON_BEAM, "Poutrelle en fer");
-                addBlock(ECBlockRegistry.BOLTED_IRON_BEAM, "Poutrelle rivetée en fer");
-                addBlock(ECBlockRegistry.IRON_BEAM_JUNCTION, "Jonction de poutrelle en fer");
-                addBlock(ECBlockRegistry.STEEL_BEAM, "Poutrelle en acier");
-                addBlock(ECBlockRegistry.BOLTED_STEEL_BEAM, "Poutrelle rivetée en acier");
-                addBlock(ECBlockRegistry.STEEL_BEAM_JUNCTION, "Jonction de poutrelle en acier");
-
-                addBlock(ECBlockRegistry.AIR_DUCT, "Conduit d'aération");
-                addBlock(ECBlockRegistry.VENT_AIR_DUCT, "Conduit d'aération avec ventilation");
-                addBlock(ECBlockRegistry.GRID_AIR_DUCT, "Conduit d'aération avec grille");
-
-                addBlock(ECBlockRegistry.BULKHEAD, "Batardeau");
-                addBlock(ECBlockRegistry.BULKHEAD_TOP, "Sommet de batardeau");
-
-                addBlock(ECBlockRegistry.STEEL_WALL_LADDER, "Échelle murale en acier");
-                addBlock(ECBlockRegistry.RUSTY_WALL_LADDER, "Échelle murale rouillée");
-                addBlock(ECBlockRegistry.STEEL_RUNGS, "Échelons en acier");
-                addBlock(ECBlockRegistry.RUSTY_RUNGS, "Échelons rouillés");
-
                 // Wallpapers
                 addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER, "Papier peint bleu et blanc");
                 addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB, "Dalle de papier peint bleu et blanc");
@@ -551,11 +430,6 @@ public class ECLang extends LanguageProvider
                 }
                 addBlock(ECBlockRegistry.LOCKER, "Casier");
 
-                addBlock(ECBlockRegistry.STEEL_SUSPENDED_STAIRS, "Escaliers suspendus en acier");
-                addBlock(ECBlockRegistry.RUSTY_SUSPENDED_STAIRS, "Escaliers suspendus rouillés");
-                addBlock(ECBlockRegistry.STEEL_LARGE_SUSPENDED_STAIRS, "Escaliers larges suspendus en acier");
-                addBlock(ECBlockRegistry.RUSTY_LARGE_SUSPENDED_STAIRS, "Escaliers larges suspendus rouillés");
-
                 addBlock(ECBlockRegistry.STEEL_TERRACE_CHAIR, "Chaise de terrasse en acier");
                 addBlock(ECBlockRegistry.STEEL_TERRACE_TABLE, "Table de terrasse en acier");
 
@@ -578,16 +452,6 @@ public class ECLang extends LanguageProvider
 
                 addBlock(ECBlockRegistry.PLATE, "Assiette");
 
-                addBlock(ECBlockRegistry.STEEL_DOOR, "Porte en acier");
-                addBlock(ECBlockRegistry.STURDY_STEEL_DOOR, "Porte renforcée en acier");
-                addBlock(ECBlockRegistry.WARNING_STEEL_DOOR, "Porte en acier avec avertissement");
-                addBlock(ECBlockRegistry.WHITE_STEEL_DOOR, "Porte blanche en acier");
-                addBlock(ECBlockRegistry.STURDY_WHITE_STEEL_DOOR, "Porte renforcée blanche en acier");
-                addBlock(ECBlockRegistry.WARNING_WHITE_STEEL_DOOR, "Porte blanche en acier avec avertissement");
-                addBlock(ECBlockRegistry.RUSTY_DOOR, "Porte rouillée");
-                addBlock(ECBlockRegistry.STURDY_RUSTY_DOOR, "Porte renforcée rouillée");
-                addBlock(ECBlockRegistry.WARNING_RUSTY_DOOR, "Porte renforcée rouillée avec avertissement");
-
                 add("embellishcraft.container.wooden_crate", "Caisse en bois");
 
                 add("embellishcraft.container.locker", "Casier");
@@ -600,7 +464,6 @@ public class ECLang extends LanguageProvider
                 add("embellishcraft.message.temp.seat", "S'asseoir est désactivé pour le moment.");
 
                 add("itemGroup.embellishcraft_group", "EmbellishCraft");
-                add("itemGroup.embellishcraft_rocks_group", "EmbellishCraft - Roches");
                 break;
         }
     }

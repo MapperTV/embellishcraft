@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.industrial.world.level.blocks.InitIndustrialBlocks;
 import tv.mapper.mapperbase.world.item.BaseItems;
 
 @Mod.EventBusSubscriber
@@ -33,13 +33,13 @@ public class BoltEvent
 
         if(player.getMainHandItem().getItem() == BaseItems.BOLT.get())
         {
-            if(block == ECBlockRegistry.IRON_BEAM.get())
+            if(block == InitIndustrialBlocks.IRON_BEAM.get())
             {
-                newBlock = ECBlockRegistry.BOLTED_IRON_BEAM.get();
+                newBlock = InitIndustrialBlocks.BOLTED_IRON_BEAM.get();
             }
-            else if(block == ECBlockRegistry.STEEL_BEAM.get())
+            else if(block == InitIndustrialBlocks.STEEL_BEAM.get())
             {
-                newBlock = ECBlockRegistry.BOLTED_STEEL_BEAM.get();
+                newBlock = InitIndustrialBlocks.BOLTED_STEEL_BEAM.get();
             }
 
             if(newBlock != Blocks.AIR)
@@ -62,13 +62,13 @@ public class BoltEvent
         }
         else if(player.getMainHandItem().getItem() == BaseItems.FLATTER_HAMMER.get())
         {
-            if(block == ECBlockRegistry.BOLTED_IRON_BEAM.get())
+            if(block == InitIndustrialBlocks.BOLTED_IRON_BEAM.get())
             {
-                newBlock = ECBlockRegistry.IRON_BEAM.get();
+                newBlock = InitIndustrialBlocks.IRON_BEAM.get();
             }
-            else if(block == ECBlockRegistry.BOLTED_STEEL_BEAM.get())
+            else if(block == InitIndustrialBlocks.BOLTED_STEEL_BEAM.get())
             {
-                newBlock = ECBlockRegistry.STEEL_BEAM.get();
+                newBlock = InitIndustrialBlocks.STEEL_BEAM.get();
             }
 
             if(newBlock != Blocks.AIR)

@@ -10,10 +10,7 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -27,10 +24,8 @@ import tv.mapper.embellishcraft.tileentity.ModTileEntityTypes;
 import tv.mapper.embellishcraft.util.CustomChestType;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.WoodsType;
-import tv.mapper.mapperbase.world.level.block.AllRotationBlock;
 import tv.mapper.mapperbase.world.level.block.CustomBlock;
 import tv.mapper.mapperbase.world.level.block.CustomDoorBlock;
-import tv.mapper.mapperbase.world.level.block.CustomLadderBlock;
 import tv.mapper.mapperbase.world.level.block.CustomPressurePlateBlock;
 import tv.mapper.mapperbase.world.level.block.CustomSlabBlock;
 import tv.mapper.mapperbase.world.level.block.CustomStairsBlock;
@@ -176,54 +171,6 @@ public class ECBlockRegistry
     public static final RegistryObject<CustomWallBlock> YELLOW_GREY_TILES_WALL = BLOCKS.register("yellow_grey_tiles_wall", () -> new CustomWallBlock(Block.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).strength(1.5F, 6.0F), ToolTypes.PICKAXE));
     public static final RegistryObject<CustomPressurePlateBlock> YELLOW_GREY_TILES_PRESSURE_PLATE = BLOCKS.register("yellow_grey_tiles_pressure_plate", () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).noCollission().strength(1.5F, 6.0F), ToolTypes.PICKAXE));
 
-    // Corrugated Metal Plates
-    public static final Map<DyeColor, RegistryObject<CustomBlock>> CORRUGATED_METAL_PLATE_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_corrugated_metal_plate", () -> new CustomBlock(Block.Properties.of(Material.METAL, type.getMaterialColor()).strength(1.5F, 6.0F).sound(SoundType.METAL), ToolTypes.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-    public static final Map<DyeColor, RegistryObject<CustomStairsBlock>> CORRUGATED_METAL_PLATE_STAIRS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_corrugated_metal_plate_stairs", () -> new CustomStairsBlock(() -> CORRUGATED_METAL_PLATE_BLOCKS.get(type).get().defaultBlockState(), Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLACK).strength(1.5F, 6.0F).sound(SoundType.METAL), ToolTypes.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-    public static final Map<DyeColor, RegistryObject<CustomSlabBlock>> CORRUGATED_METAL_PLATE_SLABS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_corrugated_metal_plate_slab", () -> new CustomSlabBlock(Block.Properties.of(Material.METAL, type.getMaterialColor()).strength(1.5F, 6.0F).sound(SoundType.METAL), ToolTypes.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-    public static final Map<DyeColor, RegistryObject<CustomWallBlock>> CORRUGATED_METAL_PLATE_WALLS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_corrugated_metal_plate_wall", () -> new CustomWallBlock(Block.Properties.of(Material.METAL, type.getMaterialColor()).strength(1.5F, 6.0F).sound(SoundType.METAL), ToolTypes.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-    public static final Map<DyeColor, RegistryObject<CustomPressurePlateBlock>> CORRUGATED_METAL_PLATE_PRESSURE_PLATES = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_corrugated_metal_plate_pressure_plate", () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.of(Material.METAL, type.getMaterialColor()).strength(1.5F, 6.0F).sound(SoundType.METAL), ToolTypes.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-    public static final Map<DyeColor, RegistryObject<FenceBlock>> CORRUGATED_METAL_PLATE_FENCES = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_corrugated_metal_plate_fence", () -> new FenceBlock(Block.Properties.of(Material.METAL, type.getMaterialColor()).strength(1.5F, 6.0F).sound(SoundType.METAL))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-    public static final Map<DyeColor, RegistryObject<FenceGateBlock>> CORRUGATED_METAL_PLATE_FENCE_GATES = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_corrugated_metal_plate_fence_gate", () -> new FenceGateBlock(Block.Properties.of(Material.METAL, type.getMaterialColor()).strength(1.5F, 6.0F).sound(SoundType.METAL))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-
-    // Metal blocks
-    public static final RegistryObject<CustomBlock> DARK_METAL_FLOOR = BLOCKS.register("dark_metal_floor", () -> new CustomBlock(Block.Properties.of(Material.METAL, MaterialColor.PODZOL).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomStairsBlock> DARK_METAL_FLOOR_STAIRS = BLOCKS.register("dark_metal_floor_stairs", () -> new CustomStairsBlock(() -> DARK_METAL_FLOOR.get().defaultBlockState(), Block.Properties.of(Material.METAL, MaterialColor.PODZOL).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomSlabBlock> DARK_METAL_FLOOR_SLAB = BLOCKS.register("dark_metal_floor_slab", () -> new CustomSlabBlock(Block.Properties.of(Material.METAL, MaterialColor.PODZOL).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomWallBlock> DARK_METAL_FLOOR_WALL = BLOCKS.register("dark_metal_floor_wall", () -> new CustomWallBlock(Block.Properties.of(Material.METAL, MaterialColor.PODZOL).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> DARK_METAL_FLOOR_PRESSURE_PLATE = BLOCKS.register("dark_metal_floor_pressure_plate", () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.of(Material.METAL, MaterialColor.PODZOL).noCollission().strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-
-    public static final RegistryObject<CustomBlock> LIGHT_METAL_FLOOR = BLOCKS.register("light_metal_floor", () -> new CustomBlock(Block.Properties.of(Material.METAL, MaterialColor.CLAY).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomStairsBlock> LIGHT_METAL_FLOOR_STAIRS = BLOCKS.register("light_metal_floor_stairs", () -> new CustomStairsBlock(() -> LIGHT_METAL_FLOOR.get().defaultBlockState(), Block.Properties.of(Material.METAL, MaterialColor.CLAY).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomSlabBlock> LIGHT_METAL_FLOOR_SLAB = BLOCKS.register("light_metal_floor_slab", () -> new CustomSlabBlock(Block.Properties.of(Material.METAL, MaterialColor.CLAY).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomWallBlock> LIGHT_METAL_FLOOR_WALL = BLOCKS.register("light_metal_floor_wall", () -> new CustomWallBlock(Block.Properties.of(Material.METAL, MaterialColor.CLAY).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> LIGHT_METAL_FLOOR_PRESSURE_PLATE = BLOCKS.register("light_metal_floor_pressure_plate", () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.of(Material.METAL, MaterialColor.CLAY).noCollission().strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-
-    public static final RegistryObject<CustomBlock> RUSTY_PLATE = BLOCKS.register("rusty_plate", () -> new CustomBlock(Block.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_ORANGE).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomStairsBlock> RUSTY_PLATE_STAIRS = BLOCKS.register("rusty_plate_stairs", () -> new CustomStairsBlock(() -> RUSTY_PLATE.get().defaultBlockState(), Block.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_ORANGE).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomSlabBlock> RUSTY_PLATE_SLAB = BLOCKS.register("rusty_plate_slab", () -> new CustomSlabBlock(Block.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_ORANGE).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomWallBlock> RUSTY_PLATE_WALL = BLOCKS.register("rusty_plate_wall", () -> new CustomWallBlock(Block.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_ORANGE).strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> RUSTY_PLATE_PRESSURE_PLATE = BLOCKS.register("rusty_plate_pressure_plate", () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_ORANGE).noCollission().strength(1.5F, 6.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-
-    public static final RegistryObject<RotatedPillarBlock> IRON_BEAM = BLOCKS.register("iron_beam", () -> new RotatedPillarBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN)));
-    public static final RegistryObject<RotatedPillarBlock> BOLTED_IRON_BEAM = BLOCKS.register("bolted_iron_beam", () -> new RotatedPillarBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN)));
-    public static final RegistryObject<CustomBlock> IRON_BEAM_JUNCTION = BLOCKS.register("iron_beam_junction", () -> new CustomBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-
-    public static final RegistryObject<RotatedPillarBlock> STEEL_BEAM = BLOCKS.register("steel_beam", () -> new RotatedPillarBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN)));
-    public static final RegistryObject<RotatedPillarBlock> BOLTED_STEEL_BEAM = BLOCKS.register("bolted_steel_beam", () -> new RotatedPillarBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN)));
-    public static final RegistryObject<CustomBlock> STEEL_BEAM_JUNCTION = BLOCKS.register("steel_beam_junction", () -> new CustomBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-
-    public static final RegistryObject<CustomBlock> AIR_DUCT = BLOCKS.register("air_duct", () -> new CustomBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<AllRotationBlock> VENT_AIR_DUCT = BLOCKS.register("vent_air_duct", () -> new AllRotationBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<AllRotationBlock> GRID_AIR_DUCT = BLOCKS.register("grid_air_duct", () -> new AllRotationBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-
-    public static final RegistryObject<CustomBlock> BULKHEAD = BLOCKS.register("bulkhead", () -> new CustomBlock(Block.Properties.of(Material.METAL, MaterialColor.STONE).strength(0.8F).sound(SoundType.METAL), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomBlock> BULKHEAD_TOP = BLOCKS.register("bulkhead_top", () -> new CustomBlock(Block.Properties.of(Material.METAL, MaterialColor.STONE).strength(0.8F).sound(SoundType.METAL), ToolTypes.PICKAXE));
-
-    public static final RegistryObject<CustomLadderBlock> STEEL_WALL_LADDER = BLOCKS.register("steel_wall_ladder", () -> new CustomLadderBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN).noOcclusion(), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomLadderBlock> RUSTY_WALL_LADDER = BLOCKS.register("rusty_wall_ladder", () -> new CustomLadderBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN).noOcclusion(), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomLadderBlock> STEEL_RUNGS = BLOCKS.register("steel_rungs", () -> new CustomLadderBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN).noOcclusion(), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomLadderBlock> RUSTY_RUNGS = BLOCKS.register("rusty_rungs", () -> new CustomLadderBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(0.8F).sound(SoundType.LANTERN).noOcclusion(), ToolTypes.PICKAXE));
-
     // Wallpapers
     public static final RegistryObject<CustomBlock> WHITE_BLUE_WALLPAPER = BLOCKS.register("white_blue_wallpaper", () -> new CustomBlock(Block.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F), ToolTypes.PICKAXE));
     public static final RegistryObject<CustomStairsBlock> WHITE_BLUE_WALLPAPER_STAIRS = BLOCKS.register("white_blue_wallpaper_stairs", () -> new CustomStairsBlock(() -> WHITE_BLUE_WALLPAPER.get().defaultBlockState(), Block.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F), ToolTypes.PICKAXE));
@@ -276,25 +223,9 @@ public class ECBlockRegistry
     public static final Map<McWoods, RegistryObject<SuspendedStairsBlock>> SUSPENDED_STAIRS_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_suspended_stairs", () -> new SuspendedStairsBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD), ToolTypes.AXE, false)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
     public static final Map<McWoods, RegistryObject<SuspendedStairsBlock>> LARGE_SUSPENDED_STAIRS_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_large_suspended_stairs", () -> new SuspendedStairsBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD), ToolTypes.AXE, true)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
-    public static final RegistryObject<SuspendedStairsBlock> STEEL_SUSPENDED_STAIRS = BLOCKS.register("steel_suspended_stairs", () -> new SuspendedStairsBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE, false));
-    public static final RegistryObject<SuspendedStairsBlock> RUSTY_SUSPENDED_STAIRS = BLOCKS.register("rusty_suspended_stairs", () -> new SuspendedStairsBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE, false));
-    public static final RegistryObject<SuspendedStairsBlock> STEEL_LARGE_SUSPENDED_STAIRS = BLOCKS.register("steel_large_suspended_stairs", () -> new SuspendedStairsBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE, true));
-    public static final RegistryObject<SuspendedStairsBlock> RUSTY_LARGE_SUSPENDED_STAIRS = BLOCKS.register("rusty_large_suspended_stairs", () -> new SuspendedStairsBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE, true));
-
     // Doors
     public static final Map<McWoods, RegistryObject<CustomDoorBlock>> FANCY_DOOR_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_fancy_door", () -> new CustomDoorBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD), ToolTypes.AXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-
     public static final Map<McWoods, RegistryObject<CustomDoorBlock>> PLAIN_DOOR_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_plain_door", () -> new CustomDoorBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD), ToolTypes.AXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
-
-    public static final RegistryObject<CustomDoorBlock> STEEL_DOOR = BLOCKS.register("steel_door", () -> new CustomDoorBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomDoorBlock> STURDY_STEEL_DOOR = BLOCKS.register("sturdy_steel_door", () -> new CustomDoorBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(5.0F, 1200.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomDoorBlock> WARNING_STEEL_DOOR = BLOCKS.register("warning_steel_door", () -> new CustomDoorBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomDoorBlock> WHITE_STEEL_DOOR = BLOCKS.register("white_steel_door", () -> new CustomDoorBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomDoorBlock> STURDY_WHITE_STEEL_DOOR = BLOCKS.register("sturdy_white_steel_door", () -> new CustomDoorBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(5.0F, 1200.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomDoorBlock> WARNING_WHITE_STEEL_DOOR = BLOCKS.register("warning_white_steel_door", () -> new CustomDoorBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomDoorBlock> RUSTY_DOOR = BLOCKS.register("rusty_door", () -> new CustomDoorBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomDoorBlock> STURDY_RUSTY_DOOR = BLOCKS.register("sturdy_rusty_door", () -> new CustomDoorBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(5.0F, 1200.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
-    public static final RegistryObject<CustomDoorBlock> WARNING_RUSTY_DOOR = BLOCKS.register("warning_rusty_door", () -> new CustomDoorBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
 
     // Pillows
     public static final Map<DyeColor, RegistryObject<PillowBlock>> PILLOW_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, BLOCKS.register(type.getSerializedName() + "_pillow", () -> new PillowBlock(type, Block.Properties.of(Material.WOOL, type.getMaterialColor()).strength(0.25F).sound(SoundType.WOOL))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));

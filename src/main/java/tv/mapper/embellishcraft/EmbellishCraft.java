@@ -19,6 +19,8 @@ import tv.mapper.embellishcraft.config.ECClientConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;
 import tv.mapper.embellishcraft.entity.ModEntities;
+import tv.mapper.embellishcraft.industrial.world.items.InitIndustrialItems;
+import tv.mapper.embellishcraft.industrial.world.level.blocks.InitIndustrialBlocks;
 import tv.mapper.embellishcraft.inventory.container.ModContainers;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
 import tv.mapper.embellishcraft.network.ECNetwork;
@@ -45,11 +47,13 @@ public class EmbellishCraft
         // Register Blocks
         ECBlockRegistry.init();
         InitRockBlocks.init();
+        InitIndustrialBlocks.init();
         ECBlockRegistry.postInit();
         // Register Items
         ECItemRegistry.init();
         InitRockItems.init();
-        
+        InitIndustrialItems.init();
+
         ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
