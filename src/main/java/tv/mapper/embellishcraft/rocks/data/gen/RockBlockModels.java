@@ -12,12 +12,6 @@ public class RockBlockModels extends ECBlockModels
     }
 
     @Override
-    public String getName()
-    {
-        return "EmbellishCraft Rock Block Models";
-    }
-
-    @Override
     protected void registerModels()
     {
         buildAllStone("basalt");

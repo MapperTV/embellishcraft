@@ -16,7 +16,6 @@ import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.world.level.block.CustomBlock;
 import tv.mapper.mapperbase.world.level.block.CustomButtonBlock;
@@ -437,7 +436,6 @@ public class InitRockBlocks
 
     public static void init()
     {
-        EmbellishCraft.LOGGER.info("1.1a- EmbellishCraft: rock block registering.");
         ROCK_BLOCK_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

@@ -14,12 +14,6 @@ public class RockItemModels extends ECItemModels
     }
 
     @Override
-    public String getName()
-    {
-        return "EmbellishCraft Item Models";
-    }
-
-    @Override
     protected void registerModels()
     {
         registerStone("basalt");
