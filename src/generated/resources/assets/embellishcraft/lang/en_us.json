@@ -1130,6 +1130,7 @@
   "embellishcraft.message.locker.unlock": "This locker is now unlocked!",
   "embellishcraft.message.locker.wrong": "This locker is not yours!",
   "embellishcraft.message.temp.seat": "Sitting down is currently disabled.",
+  "itemGroup.embellishcraft_building_group": "EmbellishCraft - Building",
   "itemGroup.embellishcraft_group": "EmbellishCraft",
   "itemGroup.embellishcraft_industrial_group": "EmbellishCraft - Industrial",
   "itemGroup.embellishcraft_rocks_group": "EmbellishCraft - Rocks"

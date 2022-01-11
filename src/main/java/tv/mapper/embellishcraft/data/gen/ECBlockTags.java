@@ -26,6 +26,7 @@ import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.block.TableBlock;
 import tv.mapper.embellishcraft.block.TerraceTableBlock;
+import tv.mapper.embellishcraft.building.world.level.blocks.InitBuildingBlocks;
 import tv.mapper.embellishcraft.data.ECTags;
 import tv.mapper.embellishcraft.industrial.world.level.blocks.InitIndustrialBlocks;
 import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
@@ -50,10 +51,13 @@ public class ECBlockTags extends BaseBlockTags
             addTagsFromBlockType(object.get());
         for(RegistryObject<Block> object : InitIndustrialBlocks.INDUSTRIAL_BLOCK_REGISTRY.getEntries())
             addTagsFromBlockType(object.get());
+        for(RegistryObject<Block> object : InitBuildingBlocks.BUILDING_BLOCK_REGISTRY.getEntries())
+            addTagsFromBlockType(object.get());
 
         // registerToolTags(ECBlockRegistry.BLOCKS);
         registerToolTags(InitRockBlocks.ROCK_BLOCK_REGISTRY);
         registerToolTags(InitIndustrialBlocks.INDUSTRIAL_BLOCK_REGISTRY);
+        registerToolTags(InitBuildingBlocks.BUILDING_BLOCK_REGISTRY);
 
         for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
         {

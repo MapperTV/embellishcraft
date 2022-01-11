@@ -14,6 +14,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.building.world.items.InitBuildingItems;
+import tv.mapper.embellishcraft.building.world.level.blocks.InitBuildingBlocks;
 import tv.mapper.embellishcraft.client.renderer.ChairEntityRenderer;
 import tv.mapper.embellishcraft.config.ECClientConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
@@ -48,11 +50,13 @@ public class EmbellishCraft
         ECBlockRegistry.init();
         InitRockBlocks.init();
         InitIndustrialBlocks.init();
+        InitBuildingBlocks.init();
         ECBlockRegistry.postInit();
         // Register Items
         ECItemRegistry.init();
         InitRockItems.init();
         InitIndustrialItems.init();
+        InitBuildingItems.init();
 
         ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 

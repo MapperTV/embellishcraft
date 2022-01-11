@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "embellishcraft:steel_suspended_stairs",
+    "embellishcraft:rusty_suspended_stairs",
+    "embellishcraft:steel_large_suspended_stairs",
+    "embellishcraft:rusty_large_suspended_stairs",
     "embellishcraft:acacia_suspended_stairs",
     "embellishcraft:birch_suspended_stairs",
     "embellishcraft:dark_oak_suspended_stairs",
@@ -16,10 +20,6 @@
     "embellishcraft:oak_large_suspended_stairs",
     "embellishcraft:spruce_large_suspended_stairs",
     "embellishcraft:warped_large_suspended_stairs",
-    "embellishcraft:crimson_large_suspended_stairs",
-    "embellishcraft:steel_suspended_stairs",
-    "embellishcraft:rusty_suspended_stairs",
-    "embellishcraft:steel_large_suspended_stairs",
-    "embellishcraft:rusty_large_suspended_stairs"
+    "embellishcraft:crimson_large_suspended_stairs"
   ]
 }

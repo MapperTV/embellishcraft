@@ -6,6 +6,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.building.data.gen.BuildingBlockModels;
+import tv.mapper.embellishcraft.building.data.gen.BuildingBlockStates;
+import tv.mapper.embellishcraft.building.data.gen.BuildingItemModels;
+import tv.mapper.embellishcraft.building.data.gen.BuildingLootTables;
+import tv.mapper.embellishcraft.building.data.gen.recipe.BuildingRecipes;
+import tv.mapper.embellishcraft.building.data.gen.recipe.BuildingStoneCutter;
 import tv.mapper.embellishcraft.data.gen.ECBlockModels;
 import tv.mapper.embellishcraft.data.gen.ECBlockStates;
 import tv.mapper.embellishcraft.data.gen.ECBlockTags;
@@ -41,25 +47,31 @@ public class ECGenerators
         generator.addProvider(new RockRecipes(generator));
         generator.addProvider(new RockStoneCutter(generator));
         generator.addProvider(new IndustrialRecipes(generator));
+        generator.addProvider(new BuildingRecipes(generator));
+        generator.addProvider(new BuildingStoneCutter(generator));
 
         generator.addProvider(new ECLootTables(generator));
         generator.addProvider(new RockLootTables(generator));
         generator.addProvider(new IndustrialLootTables(generator));
+        generator.addProvider(new BuildingLootTables(generator));
 
         // Block States
         generator.addProvider(new ECBlockStates(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new RockBlockStates(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new IndustrialBlockStates(generator, ECConstants.MODID, existingFileHelper));
+        generator.addProvider(new BuildingBlockStates(generator, ECConstants.MODID, existingFileHelper));
 
         // Block Models
         generator.addProvider(new ECBlockModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new RockBlockModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new IndustrialBlockModels(generator, ECConstants.MODID, existingFileHelper));
+        generator.addProvider(new BuildingBlockModels(generator, ECConstants.MODID, existingFileHelper));
 
         // Item Models
         generator.addProvider(new ECItemModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new RockItemModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new IndustrialItemModels(generator, ECConstants.MODID, existingFileHelper));
+        generator.addProvider(new BuildingItemModels(generator, ECConstants.MODID, existingFileHelper));
 
         ECBlockTags blockTags = new ECBlockTags(generator, existingFileHelper);
 

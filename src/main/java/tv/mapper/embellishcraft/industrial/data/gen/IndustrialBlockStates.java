@@ -19,9 +19,9 @@ public class IndustrialBlockStates extends ECBlockStates
     protected void registerStatesAndModels()
     {
         // Metal blocks
-        registerStoneVariant("dark_metal_floor", InitIndustrialBlocks.DARK_METAL_FLOOR.get(), InitIndustrialBlocks.DARK_METAL_FLOOR_SLAB.get(), InitIndustrialBlocks.DARK_METAL_FLOOR_STAIRS.get(), InitIndustrialBlocks.DARK_METAL_FLOOR_WALL.get(), InitIndustrialBlocks.DARK_METAL_FLOOR_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("light_metal_floor", InitIndustrialBlocks.LIGHT_METAL_FLOOR.get(), InitIndustrialBlocks.LIGHT_METAL_FLOOR_SLAB.get(), InitIndustrialBlocks.LIGHT_METAL_FLOOR_STAIRS.get(), InitIndustrialBlocks.LIGHT_METAL_FLOOR_WALL.get(), InitIndustrialBlocks.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get(), null);
-        registerStoneVariant("rusty_plate", InitIndustrialBlocks.RUSTY_PLATE.get(), InitIndustrialBlocks.RUSTY_PLATE_SLAB.get(), InitIndustrialBlocks.RUSTY_PLATE_STAIRS.get(), InitIndustrialBlocks.RUSTY_PLATE_WALL.get(), InitIndustrialBlocks.RUSTY_PLATE_PRESSURE_PLATE.get(), null);
+        registerBlockstateVariants("dark_metal_floor", InitIndustrialBlocks.DARK_METAL_FLOOR.get(), InitIndustrialBlocks.DARK_METAL_FLOOR_SLAB.get(), InitIndustrialBlocks.DARK_METAL_FLOOR_STAIRS.get(), InitIndustrialBlocks.DARK_METAL_FLOOR_WALL.get(), InitIndustrialBlocks.DARK_METAL_FLOOR_PRESSURE_PLATE.get(), null);
+        registerBlockstateVariants("light_metal_floor", InitIndustrialBlocks.LIGHT_METAL_FLOOR.get(), InitIndustrialBlocks.LIGHT_METAL_FLOOR_SLAB.get(), InitIndustrialBlocks.LIGHT_METAL_FLOOR_STAIRS.get(), InitIndustrialBlocks.LIGHT_METAL_FLOOR_WALL.get(), InitIndustrialBlocks.LIGHT_METAL_FLOOR_PRESSURE_PLATE.get(), null);
+        registerBlockstateVariants("rusty_plate", InitIndustrialBlocks.RUSTY_PLATE.get(), InitIndustrialBlocks.RUSTY_PLATE_SLAB.get(), InitIndustrialBlocks.RUSTY_PLATE_STAIRS.get(), InitIndustrialBlocks.RUSTY_PLATE_WALL.get(), InitIndustrialBlocks.RUSTY_PLATE_PRESSURE_PLATE.get(), null);
 
         axisBlock(InitIndustrialBlocks.IRON_BEAM.get(), modLoc("block/iron_beam"), modLoc("block/iron_beam_junction"));
         axisBlock(InitIndustrialBlocks.BOLTED_IRON_BEAM.get(), modLoc("block/bolted_iron_beam"), modLoc("block/iron_beam_junction"));
@@ -46,7 +46,7 @@ public class IndustrialBlockStates extends ECBlockStates
         // Corrugated metal plates
         for(int j = 0; j < DyeColor.values().length; j++)
         {
-            registerStoneVariant(DyeColor.byId(j).getSerializedName() + "_corrugated_metal_plate", InitIndustrialBlocks.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get(), InitIndustrialBlocks.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get(), InitIndustrialBlocks.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get(), InitIndustrialBlocks.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get(), InitIndustrialBlocks.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get(), null);
+            registerBlockstateVariants(DyeColor.byId(j).getSerializedName() + "_corrugated_metal_plate", InitIndustrialBlocks.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)).get(), InitIndustrialBlocks.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)).get(), InitIndustrialBlocks.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)).get(), InitIndustrialBlocks.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)).get(), InitIndustrialBlocks.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)).get(), null);
             fenceBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getSerializedName() + "_corrugated_metal_plate"));
             fenceGateBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)).get(), modLoc("block/" + DyeColor.byId(j).getSerializedName() + "_corrugated_metal_plate"));
         }

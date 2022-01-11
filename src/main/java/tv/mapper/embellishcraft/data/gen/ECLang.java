@@ -8,6 +8,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.common.data.LanguageProvider;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
+import tv.mapper.embellishcraft.building.data.gen.BuildingLang;
 import tv.mapper.embellishcraft.industrial.data.gen.IndustrialLang;
 import tv.mapper.embellishcraft.rocks.data.gen.RockLang;
 import tv.mapper.embellishcraft.util.McWoods;
@@ -29,166 +30,12 @@ public class ECLang extends LanguageProvider
 
         RockLang.addTranslations(this, lang);
         IndustrialLang.addTranslations(this, lang);
+        BuildingLang.addTranslations(this, lang);
 
         switch(lang)
         {
             default:
             case "en_us":
-                // Other bricks
-                addBlock(ECBlockRegistry.DARK_BRICKS, "Dark Bricks");
-                addBlock(ECBlockRegistry.DARK_BRICKS_SLAB, "Dark Bricks Slab");
-                addBlock(ECBlockRegistry.DARK_BRICKS_STAIRS, "Dark Bricks Stairs");
-                addBlock(ECBlockRegistry.DARK_BRICKS_WALL, "Dark Bricks Wall");
-                addBlock(ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE, "Dark Bricks Pressure Plate");
-
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS, "Dark Large Bricks");
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_SLAB, "Dark Large Bricks Slab");
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS, "Dark Large Bricks Stairs");
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_WALL, "Dark Large Bricks Wall");
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE, "Dark Large Bricks Pressure Plate");
-
-                addBlock(ECBlockRegistry.OLD_BRICKS, "Old Bricks");
-                addBlock(ECBlockRegistry.OLD_BRICKS_SLAB, "Old Bricks Slab");
-                addBlock(ECBlockRegistry.OLD_BRICKS_STAIRS, "Old Bricks Stairs");
-                addBlock(ECBlockRegistry.OLD_BRICKS_WALL, "Old Bricks Wall");
-                addBlock(ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE, "Old Bricks Pressure Plate");
-
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS, "Old Large Bricks");
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_SLAB, "Old Large Bricks Slab");
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS, "Old Large Bricks Stairs");
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_WALL, "Old Large Bricks Wall");
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE, "Old Large Bricks Pressure Plate");
-
-                addBlock(ECBlockRegistry.WEARED_BRICKS, "Weared Bricks");
-                addBlock(ECBlockRegistry.WEARED_BRICKS_SLAB, "Weared Bricks Slab");
-                addBlock(ECBlockRegistry.WEARED_BRICKS_STAIRS, "Weared Bricks Stairs");
-                addBlock(ECBlockRegistry.WEARED_BRICKS_WALL, "Weared Bricks Wall");
-                addBlock(ECBlockRegistry.WEARED_BRICKS_PRESSURE_PLATE, "Weared Bricks Pressure Plate");
-
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS, "Weared Large Bricks");
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_SLAB, "Weared Large Bricks Slab");
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_STAIRS, "Weared Large Bricks Stairs");
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_WALL, "Weared Large Bricks Wall");
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE, "Weared Large Bricks Pressure Plate");
-
-                // Pavings
-                addBlock(ECBlockRegistry.CONCRETE_PAVING, "Concrete Paving");
-                addBlock(ECBlockRegistry.CONCRETE_PAVING_SLAB, "Concrete Paving Slab");
-                addBlock(ECBlockRegistry.CONCRETE_PAVING_STAIRS, "Concrete Paving Stairs");
-                addBlock(ECBlockRegistry.CONCRETE_PAVING_WALL, "Concrete Paving Wall");
-                addBlock(ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE, "Concrete Paving Pressure Plate");
-
-                addBlock(ECBlockRegistry.DAMAGED_PAVING, "Damaged Paving");
-                addBlock(ECBlockRegistry.DAMAGED_PAVING_SLAB, "Damaged Paving Slab");
-                addBlock(ECBlockRegistry.DAMAGED_PAVING_STAIRS, "Damaged Paving Stairs");
-                addBlock(ECBlockRegistry.DAMAGED_PAVING_WALL, "Damaged Paving Wall");
-                addBlock(ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE, "Damaged Paving Pressure Plate");
-
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING, "Dark Concrete Paving");
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB, "Dark Concrete Paving Slab");
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_STAIRS, "Dark Concrete Paving Stairs");
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_WALL, "Dark Concrete Paving Wall");
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE, "Dark Concrete Paving Pressure Plate");
-
-                addBlock(ECBlockRegistry.MOIST_PAVING, "Moist Paving");
-                addBlock(ECBlockRegistry.MOIST_PAVING_SLAB, "Moist Paving Slab");
-                addBlock(ECBlockRegistry.MOIST_PAVING_STAIRS, "Moist Paving Stairs");
-                addBlock(ECBlockRegistry.MOIST_PAVING_WALL, "Moist Paving Wall");
-                addBlock(ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE, "Moist Paving Pressure Plate");
-
-                addBlock(ECBlockRegistry.POLISHED_PAVING, "Polished Paving");
-                addBlock(ECBlockRegistry.POLISHED_PAVING_SLAB, "Polished Paving Slab");
-                addBlock(ECBlockRegistry.POLISHED_PAVING_STAIRS, "Polished Paving Stairs");
-                addBlock(ECBlockRegistry.POLISHED_PAVING_WALL, "Polished Paving Wall");
-                addBlock(ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE, "Polished Paving Pressure Plate");
-
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING, "White Concrete Paving");
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB, "White Concrete Paving Slab");
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS, "White Concrete Paving Stairs");
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL, "White Concrete Paving Wall");
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE, "White Concrete Paving Pressure Plate");
-
-                // Tiles
-                addBlock(ECBlockRegistry.CONCRETE_TILES, "Concrete Tiles");
-                addBlock(ECBlockRegistry.CONCRETE_TILES_SLAB, "Concrete Tiles Slab");
-                addBlock(ECBlockRegistry.CONCRETE_TILES_STAIRS, "Concrete Tiles Stairs");
-                addBlock(ECBlockRegistry.CONCRETE_TILES_WALL, "Concrete Tiles Wall");
-                addBlock(ECBlockRegistry.CONCRETE_TILES_PRESSURE_PLATE, "Concrete Tiles Pressure Plate");
-
-                addBlock(ECBlockRegistry.SKYBLUE_TILES, "Skyblue Tiles");
-                addBlock(ECBlockRegistry.SKYBLUE_TILES_SLAB, "Skyblue Tiles Slab");
-                addBlock(ECBlockRegistry.SKYBLUE_TILES_STAIRS, "Skyblue Tiles Stairs");
-                addBlock(ECBlockRegistry.SKYBLUE_TILES_WALL, "Skyblue Tiles Wall");
-                addBlock(ECBlockRegistry.SKYBLUE_TILES_PRESSURE_PLATE, "Skyblue Tiles Pressure Plate");
-
-                addBlock(ECBlockRegistry.ORANGE_TILES, "Orange Tiles");
-                addBlock(ECBlockRegistry.ORANGE_TILES_SLAB, "Orange Tiles Slab");
-                addBlock(ECBlockRegistry.ORANGE_TILES_STAIRS, "Orange Tiles Stairs");
-                addBlock(ECBlockRegistry.ORANGE_TILES_WALL, "Orange Tiles Wall");
-                addBlock(ECBlockRegistry.ORANGE_TILES_PRESSURE_PLATE, "Orange Tiles Pressure Plate");
-
-                addBlock(ECBlockRegistry.BLUE_TILES, "Blue Tiles");
-                addBlock(ECBlockRegistry.BLUE_TILES_SLAB, "Blue Tiles Slab");
-                addBlock(ECBlockRegistry.BLUE_TILES_STAIRS, "Blue Tiles Stairs");
-                addBlock(ECBlockRegistry.BLUE_TILES_WALL, "Blue Tiles Wall");
-                addBlock(ECBlockRegistry.BLUE_TILES_PRESSURE_PLATE, "Blue Tiles Pressure Plate");
-
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES, "Light Blue Tiles");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES_SLAB, "Light Blue Tiles Slab");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES_STAIRS, "Light Blue Tiles Stairs");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES_WALL, "Light Blue Tiles Wall");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES_PRESSURE_PLATE, "Light Blue Tiles Pressure Plate");
-
-                addBlock(ECBlockRegistry.RED_TILES, "Red Tiles");
-                addBlock(ECBlockRegistry.RED_TILES_SLAB, "Red Tiles Slab");
-                addBlock(ECBlockRegistry.RED_TILES_STAIRS, "Red Tiles Stairs");
-                addBlock(ECBlockRegistry.RED_TILES_WALL, "Red Tiles Wall");
-                addBlock(ECBlockRegistry.RED_TILES_PRESSURE_PLATE, "Red Tiles Pressure Plate");
-
-                addBlock(ECBlockRegistry.WHITE_TILES, "White Tiles");
-                addBlock(ECBlockRegistry.WHITE_TILES_SLAB, "White Tiles Slab");
-                addBlock(ECBlockRegistry.WHITE_TILES_STAIRS, "White Tiles Stairs");
-                addBlock(ECBlockRegistry.WHITE_TILES_WALL, "White Tiles Wall");
-                addBlock(ECBlockRegistry.WHITE_TILES_PRESSURE_PLATE, "White Tiles Pressure Plate");
-
-                addBlock(ECBlockRegistry.YELLOW_TILES, "Yellow Tiles");
-                addBlock(ECBlockRegistry.YELLOW_TILES_SLAB, "Yellow Tiles Slab");
-                addBlock(ECBlockRegistry.YELLOW_TILES_STAIRS, "Yellow Tiles Stairs");
-                addBlock(ECBlockRegistry.YELLOW_TILES_WALL, "Yellow Tiles Wall");
-                addBlock(ECBlockRegistry.YELLOW_TILES_PRESSURE_PLATE, "Yellow Tiles Pressure Plate");
-
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES, "Yellow-Grey Tiles");
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES_SLAB, "Yellow-Grey Tiles Slab");
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES_STAIRS, "Yellow-Grey Tiles Stairs");
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES_WALL, "Yellow-Grey Tiles Wall");
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE, "Yellow-Grey Tiles Pressure Plate");
-
-                // Wallpapers
-                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER, "White / Blue Wallpaper");
-                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB, "White / Blue Wallpaper Slab");
-                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS, "White / Blue Wallpaper Stairs");
-                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH, "White / Blue Wallpaper With Plinth");
-
-                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER, "Beige / Flower Wallpaper");
-                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB, "Beige / Flower Wallpaper Slab");
-                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS, "Beige / Flower Wallpaper Stairs");
-                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH, "Beige / Flower Wallpaper With Plinth");
-
-                addBlock(ECBlockRegistry.BEIGE_WALLPAPER, "Beige Wallpaper");
-                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_SLAB, "Beige Wallpaper Slab");
-                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_STAIRS, "Beige Wallpaper Stairs");
-                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH, "Beige Wallpaper With Plinth");
-
-                addBlock(ECBlockRegistry.PINK_WALLPAPER, "Pink Wallpaper");
-                addBlock(ECBlockRegistry.PINK_WALLPAPER_SLAB, "Pink Wallpaper Slab");
-                addBlock(ECBlockRegistry.PINK_WALLPAPER_STAIRS, "Pink Wallpaper Stairs");
-                addBlock(ECBlockRegistry.PINK_WALLPAPER_PLINTH, "Pink Wallpaper With Plinth");
-
-                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER, "White / Green Wallpaper");
-                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB, "White / Green Wallpaper Slab");
-                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS, "White / Green Wallpaper Stairs");
-                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH, "White / Green Wallpaper With Plinth");
-
                 // Furniture, doors, suspended stairs, wooden crates
                 for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
                 {
@@ -199,10 +46,6 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), name + " Table");
                     addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), name + " Fancy Table");
                     addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), name + " Terrace Table");
-                    addBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)), name + " Fancy Door");
-                    addBlock(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)), name + " Plain Door");
-                    addBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)), name + " Suspended Stairs");
-                    addBlock(ECBlockRegistry.LARGE_SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)), name + " Large Suspended Stairs");
                     addBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), name + " Wooden Crate");
                     addBlock(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)), name + " Fancy Chest");
                 }
@@ -256,161 +99,6 @@ public class ECLang extends LanguageProvider
                 String frColorsF[] = {"blanche", "orange", "magenta", "bleu claire", "jaune", "vert claire", "rose", "grise", "gris claire", "cyan", "violette", "bleue", "marron", "verte", "rouge", "noire"};
                 String frColorsM[] = {"blanc", "orange", "magenta", "bleu clair", "jaune", "vert clair", "rose", "gris", "gris clair", "cyan", "violet", "bleu", "marron", "vert", "rouge", "noir"};
 
-                // Other bricks
-                addBlock(ECBlockRegistry.DARK_BRICKS, "Briques sombres");
-                addBlock(ECBlockRegistry.DARK_BRICKS_SLAB, "Dalle en briques sombres");
-                addBlock(ECBlockRegistry.DARK_BRICKS_STAIRS, "Escalier en briques sombres");
-                addBlock(ECBlockRegistry.DARK_BRICKS_WALL, "Muret en briques sombres");
-                addBlock(ECBlockRegistry.DARK_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques sombres");
-
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS, "Briques épaisses sombres");
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_SLAB, "Dalle en briques épaisses sombres");
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses sombres");
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_WALL, "Muret en briques épaisses sombres");
-                addBlock(ECBlockRegistry.DARK_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses sombres");
-
-                addBlock(ECBlockRegistry.OLD_BRICKS, "Vieilles briques");
-                addBlock(ECBlockRegistry.OLD_BRICKS_SLAB, "Dalle en vieilles briques");
-                addBlock(ECBlockRegistry.OLD_BRICKS_STAIRS, "Escalier en vieilles briques");
-                addBlock(ECBlockRegistry.OLD_BRICKS_WALL, "Muret en vieilles briques");
-                addBlock(ECBlockRegistry.OLD_BRICKS_PRESSURE_PLATE, "Plaque de pression en vieilles briques");
-
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS, "Vieilles briques épaisses");
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_SLAB, "Dalle en vieilles briques épaisses");
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_STAIRS, "Escalier en vieilles briques épaisses");
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_WALL, "Muret en vieilles briques épaisses");
-                addBlock(ECBlockRegistry.OLD_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en vieilles briques épaisses");
-
-                addBlock(ECBlockRegistry.WEARED_BRICKS, "Briques usées");
-                addBlock(ECBlockRegistry.WEARED_BRICKS_SLAB, "Dalle en briques usées");
-                addBlock(ECBlockRegistry.WEARED_BRICKS_STAIRS, "Escalier en briques usées");
-                addBlock(ECBlockRegistry.WEARED_BRICKS_WALL, "Muret en briques usées");
-                addBlock(ECBlockRegistry.WEARED_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques usées");
-
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS, "Briques épaisses usées");
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_SLAB, "Dalle en briques épaisses usées");
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_STAIRS, "Escalier en briques épaisses usées");
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_WALL, "Muret en briques épaisses usées");
-                addBlock(ECBlockRegistry.WEARED_LARGE_BRICKS_PRESSURE_PLATE, "Plaque de pression en briques épaisses usées");
-
-                // Pavings
-                addBlock(ECBlockRegistry.CONCRETE_PAVING, "Pavés en béton");
-                addBlock(ECBlockRegistry.CONCRETE_PAVING_SLAB, "Dalle en pavés de béton");
-                addBlock(ECBlockRegistry.CONCRETE_PAVING_STAIRS, "Escaliers en pavés de béton");
-                addBlock(ECBlockRegistry.CONCRETE_PAVING_WALL, "Muret en pavés de béton");
-                addBlock(ECBlockRegistry.CONCRETE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés de béton");
-
-                addBlock(ECBlockRegistry.DAMAGED_PAVING, "Pavés abîmés");
-                addBlock(ECBlockRegistry.DAMAGED_PAVING_SLAB, "Dalle en pavés abîmés");
-                addBlock(ECBlockRegistry.DAMAGED_PAVING_STAIRS, "Escaliers en pavés abîmés");
-                addBlock(ECBlockRegistry.DAMAGED_PAVING_WALL, "Muret en pavés abîmés");
-                addBlock(ECBlockRegistry.DAMAGED_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés abîmés");
-
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING, "Pavés en béton sombre");
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_SLAB, "Dalle en pavés de béton sombre");
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_STAIRS, "Escalier eb pavés de béton sombre");
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_WALL, "Muret en pavés de béton sombre");
-                addBlock(ECBlockRegistry.DARK_CONCRETE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés de béton sombre");
-
-                addBlock(ECBlockRegistry.MOIST_PAVING, "Pavés moisis");
-                addBlock(ECBlockRegistry.MOIST_PAVING_SLAB, "Dalle en pavés moisis");
-                addBlock(ECBlockRegistry.MOIST_PAVING_STAIRS, "Escalier en pavés moisis");
-                addBlock(ECBlockRegistry.MOIST_PAVING_WALL, "Muret en pavés moisis");
-                addBlock(ECBlockRegistry.MOIST_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés moisis");
-
-                addBlock(ECBlockRegistry.POLISHED_PAVING, "Pavés polis");
-                addBlock(ECBlockRegistry.POLISHED_PAVING_SLAB, "Dalle en pavés polis");
-                addBlock(ECBlockRegistry.POLISHED_PAVING_STAIRS, "Escalier en pavés polis");
-                addBlock(ECBlockRegistry.POLISHED_PAVING_WALL, "Muret en pavés polis");
-                addBlock(ECBlockRegistry.POLISHED_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés polis");
-
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING, "Pavés en béton clair");
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_SLAB, "Dalle en pavés de béton clair");
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_STAIRS, "Escaliers en pavés de béton clair");
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_WALL, "Murets en pavés de béton clair");
-                addBlock(ECBlockRegistry.WHITE_CONCRETE_PAVING_PRESSURE_PLATE, "Plaque de pression en pavés de béton clair");
-
-                // Tiles
-                addBlock(ECBlockRegistry.CONCRETE_TILES, "Carrelage en béton");
-                addBlock(ECBlockRegistry.CONCRETE_TILES_SLAB, "Dalle de carrelage en béton");
-                addBlock(ECBlockRegistry.CONCRETE_TILES_STAIRS, "Escaliers en carrelage de béton");
-                addBlock(ECBlockRegistry.CONCRETE_TILES_WALL, "Muret en carrelage de béton");
-                addBlock(ECBlockRegistry.CONCRETE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage de béton");
-
-                addBlock(ECBlockRegistry.SKYBLUE_TILES, "Carrelage bleu ciel");
-                addBlock(ECBlockRegistry.SKYBLUE_TILES_SLAB, "Dalle en carrelage bleu ciel");
-                addBlock(ECBlockRegistry.SKYBLUE_TILES_STAIRS, "Escalier en carrelage bleu ciel");
-                addBlock(ECBlockRegistry.SKYBLUE_TILES_WALL, "Muret en carrelage bleu ciel");
-                addBlock(ECBlockRegistry.SKYBLUE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage bleu ciel");
-
-                addBlock(ECBlockRegistry.ORANGE_TILES, "Carrelage orange");
-                addBlock(ECBlockRegistry.ORANGE_TILES_SLAB, "Dalle en carrelage orange");
-                addBlock(ECBlockRegistry.ORANGE_TILES_STAIRS, "Escalier en carrelage orange");
-                addBlock(ECBlockRegistry.ORANGE_TILES_WALL, "Muret en carrelage orange");
-                addBlock(ECBlockRegistry.ORANGE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage orange");
-
-                addBlock(ECBlockRegistry.BLUE_TILES, "Carrelage bleu");
-                addBlock(ECBlockRegistry.BLUE_TILES_SLAB, "Dalle en carrelage bleu");
-                addBlock(ECBlockRegistry.BLUE_TILES_STAIRS, "Escalier en carrelage bleu");
-                addBlock(ECBlockRegistry.BLUE_TILES_WALL, "Muret en carrelage bleu");
-                addBlock(ECBlockRegistry.BLUE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage bleu");
-
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES, "Carrelage bleu clair");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES_SLAB, "Dalle en carrelage bleu clair");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES_STAIRS, "Escalier en carrelage bleu clair");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES_WALL, "Muret en carrelage bleu clair");
-                addBlock(ECBlockRegistry.LIGHT_BLUE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage bleu clair");
-
-                addBlock(ECBlockRegistry.RED_TILES, "Carrelage rouge");
-                addBlock(ECBlockRegistry.RED_TILES_SLAB, "Dalle en carrelage rouge");
-                addBlock(ECBlockRegistry.RED_TILES_STAIRS, "Escalier en carrelage rouge");
-                addBlock(ECBlockRegistry.RED_TILES_WALL, "Muret en carrelage rouge");
-                addBlock(ECBlockRegistry.RED_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage rouge");
-
-                addBlock(ECBlockRegistry.WHITE_TILES, "Carrelage blanc");
-                addBlock(ECBlockRegistry.WHITE_TILES_SLAB, "Dalle en carrelage blanc");
-                addBlock(ECBlockRegistry.WHITE_TILES_STAIRS, "Escalier en carrelage blanc");
-                addBlock(ECBlockRegistry.WHITE_TILES_WALL, "Muret en carrelage blanc");
-                addBlock(ECBlockRegistry.WHITE_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage blanc");
-
-                addBlock(ECBlockRegistry.YELLOW_TILES, "Carrelage jaune");
-                addBlock(ECBlockRegistry.YELLOW_TILES_SLAB, "Dalle en carrelage jaune");
-                addBlock(ECBlockRegistry.YELLOW_TILES_STAIRS, "Escalier en carrelage jaune");
-                addBlock(ECBlockRegistry.YELLOW_TILES_WALL, "Muret en carrelage jaune");
-                addBlock(ECBlockRegistry.YELLOW_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage jaune");
-
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES, "Carrelage jaune-gris");
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES_SLAB, "Dalle en carrelage jaune-gris");
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES_STAIRS, "Escalier en carrelage jaune-gris");
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES_WALL, "Muret en carrelage jaune-gris");
-                addBlock(ECBlockRegistry.YELLOW_GREY_TILES_PRESSURE_PLATE, "Plaque de pression en carrelage jaune-gris");
-
-                // Wallpapers
-                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER, "Papier peint bleu et blanc");
-                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_SLAB, "Dalle de papier peint bleu et blanc");
-                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_STAIRS, "Escalier de papier peint bleu et blanc");
-                addBlock(ECBlockRegistry.WHITE_BLUE_WALLPAPER_PLINTH, "Papier peint bleu et blanc avec plinthe");
-
-                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER, "Papier peint beige avec motif fleur");
-                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_SLAB, "Dalle de papier peint beige avec motif fleur");
-                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_STAIRS, "Escalier de papier peint beige avec motif fleur");
-                addBlock(ECBlockRegistry.BEIGE_FLOWER_WALLPAPER_PLINTH, "Papier peint beige avec motif fleur avec plinthe");
-
-                addBlock(ECBlockRegistry.BEIGE_WALLPAPER, "Papier peint beige");
-                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_SLAB, "Dalle de papier peint beige");
-                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_STAIRS, "Escalier de papier peint beige");
-                addBlock(ECBlockRegistry.BEIGE_WALLPAPER_PLINTH, "Papier peint beige avec plinthe");
-
-                addBlock(ECBlockRegistry.PINK_WALLPAPER, "Papier peint rose");
-                addBlock(ECBlockRegistry.PINK_WALLPAPER_SLAB, "Dalle de papier peint rose");
-                addBlock(ECBlockRegistry.PINK_WALLPAPER_STAIRS, "Escalier de papier peint rose");
-                addBlock(ECBlockRegistry.PINK_WALLPAPER_PLINTH, "Papier peint rose avec plinthe");
-
-                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER, "Papier peint bleu et vert");
-                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_SLAB, "Dalle de papier peint bleu et vert");
-                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_STAIRS, "Escalier de papier peint bleu et vert");
-                addBlock(ECBlockRegistry.WHITE_GREEN_WALLPAPER_PLINTH, "Papier peint bleu et vert avec plinthe");
-
                 // Furniture
                 for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
                 {
@@ -421,10 +109,6 @@ public class ECLang extends LanguageProvider
                     addBlock(ECBlockRegistry.TABLE_BLOCKS.get(McWoods.byId(j)), "Table en " + name);
                     addBlock(ECBlockRegistry.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), "Table massive en " + name);
                     addBlock(ECBlockRegistry.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), "Table de terrase en " + name);
-                    addBlock(ECBlockRegistry.FANCY_DOOR_BLOCKS.get(McWoods.byId(j)), "Porte ornementale en " + name);
-                    addBlock(ECBlockRegistry.PLAIN_DOOR_BLOCKS.get(McWoods.byId(j)), "Porte massive en " + name);
-                    addBlock(ECBlockRegistry.SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)), "Escaliers suspendus en " + name);
-                    addBlock(ECBlockRegistry.LARGE_SUSPENDED_STAIRS_BLOCKS.get(McWoods.byId(j)), "Escaliers larges suspendus en " + name);
                     addBlock(ECBlockRegistry.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), "Caisse en " + name);
                     addBlock(ECBlockRegistry.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)), "Coffre massif en " + name);
                 }

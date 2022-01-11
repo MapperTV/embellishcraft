@@ -70,4 +70,90 @@ public class RockBlockModels extends ECBlockModels
 
         buildRooftilesStairs("terracotta_rooftiles");
     }
+
+    protected void buildAllStoneWall(String name)
+    {
+        buildWall(name, modLoc("block/" + name));
+        buildWall(name + "_cobblestone", modLoc("block/" + name + "_cobblestone"));
+        buildWall(name + "_cobblestone_bricks", modLoc("block/" + name + "_cobblestone_bricks"));
+        buildWall("smooth_" + name, modLoc("block/smooth_" + name));
+        buildWall("polished_" + name, modLoc("block/polished_" + name));
+        buildWall(name + "_paving", modLoc("block/" + name + "_paving"));
+        buildWall(name + "_tiles", modLoc("block/" + name + "_tiles"));
+        buildWall(name + "_bricks", modLoc("block/" + name + "_bricks"));
+        buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+        buildWall(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
+    }
+
+    protected void buildAllStonePressure(String name)
+    {
+        buildPressure(name, modLoc("block/" + name));
+        buildPressure(name + "_cobblestone", modLoc("block/" + name + "_cobblestone"));
+        buildPressure(name + "_cobblestone_bricks", modLoc("block/" + name + "_cobblestone_bricks"));
+        buildPressure("smooth_" + name, modLoc("block/smooth_" + name));
+        buildPressure("polished_" + name, modLoc("block/polished_" + name));
+        buildPressure(name + "_paving", modLoc("block/" + name + "_paving"));
+        buildPressure(name + "_tiles", modLoc("block/" + name + "_tiles"));
+        buildPressure(name + "_bricks", modLoc("block/" + name + "_bricks"));
+        buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+        buildPressure(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
+        buildPressure(name + "_ornament", modLoc("block/" + name + "_ornament"));
+    }
+
+    protected void buildAllStone(String name)
+    {
+        buildAllStoneWall(name);
+        buildAllStonePressure(name);
+        buildButton(name, modLoc("block/" + name));
+    }
+
+    protected void buildMcStone(String name)
+    {
+        buildWall("smooth_" + name, modLoc("block/smooth_" + name));
+        buildPressure("smooth_" + name, modLoc("block/smooth_" + name));
+        buildButton(name, mcLoc("block/" + name));
+
+        buildWall(name + "_paving", modLoc("block/" + name + "_paving"));
+        buildPressure(name + "_paving", modLoc("block/" + name + "_paving"));
+
+        buildWall(name + "_tiles", modLoc("block/" + name + "_tiles"));
+        buildPressure(name + "_tiles", modLoc("block/" + name + "_tiles"));
+
+        buildWall(name + "_bricks", modLoc("block/" + name + "_bricks"));
+        buildPressure(name + "_bricks", modLoc("block/" + name + "_bricks"));
+
+        buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+        buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+
+        buildWall(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
+        buildPressure(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
+
+        buildPressure(name + "_ornament", modLoc("block/" + name + "_ornament"));
+    }
+
+    protected void buildMcSandstone(String name)
+    {
+        buildButton(name, mcLoc("block/" + name));
+
+        buildWall("smooth_" + name, mcLoc("block/" + name + "_top"));
+        buildPressure("smooth_" + name, mcLoc("block/" + name + "_top"));
+
+        buildWall("polished_" + name, modLoc("block/polished_" + name));
+        buildPressure("polished_" + name, modLoc("block/polished_" + name));
+
+        buildWall(name + "_paving", modLoc("block/" + name + "_paving"));
+        buildPressure(name + "_paving", modLoc("block/" + name + "_paving"));
+
+        buildWall(name + "_tiles", modLoc("block/" + name + "_tiles"));
+        buildPressure(name + "_tiles", modLoc("block/" + name + "_tiles"));
+
+        buildWall(name + "_bricks", modLoc("block/" + name + "_bricks"));
+        buildPressure(name + "_bricks", modLoc("block/" + name + "_bricks"));
+
+        buildWall(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+        buildPressure(name + "_large_bricks", modLoc("block/" + name + "_large_bricks"));
+
+        buildWall(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
+        buildPressure(name + "_paving_stones", modLoc("block/" + name + "_paving_stones"));
+    }
 }

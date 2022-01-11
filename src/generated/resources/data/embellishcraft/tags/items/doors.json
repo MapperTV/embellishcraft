@@ -1,6 +1,15 @@
 {
   "replace": false,
   "values": [
+    "embellishcraft:steel_door",
+    "embellishcraft:sturdy_steel_door",
+    "embellishcraft:warning_steel_door",
+    "embellishcraft:white_steel_door",
+    "embellishcraft:sturdy_white_steel_door",
+    "embellishcraft:warning_white_steel_door",
+    "embellishcraft:rusty_door",
+    "embellishcraft:sturdy_rusty_door",
+    "embellishcraft:warning_rusty_door",
     "embellishcraft:acacia_fancy_door",
     "embellishcraft:birch_fancy_door",
     "embellishcraft:dark_oak_fancy_door",
@@ -17,15 +26,6 @@
     "embellishcraft:spruce_plain_door",
     "embellishcraft:warped_plain_door",
     "embellishcraft:crimson_plain_door",
-    "embellishcraft:steel_door",
-    "embellishcraft:sturdy_steel_door",
-    "embellishcraft:warning_steel_door",
-    "embellishcraft:white_steel_door",
-    "embellishcraft:sturdy_white_steel_door",
-    "embellishcraft:warning_white_steel_door",
-    "embellishcraft:rusty_door",
-    "embellishcraft:sturdy_rusty_door",
-    "embellishcraft:warning_rusty_door",
     "#embellishcraft:wooden_doors"
   ]
 }

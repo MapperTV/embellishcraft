@@ -28,7 +28,6 @@ public class IndustrialRecipes extends ECRecipes
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
     {
-
         // Corrugated metal plates
         for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
         {
