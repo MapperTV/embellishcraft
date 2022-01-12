@@ -38,7 +38,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.wrapper.CombinedInvWrapper;
-import tv.mapper.embellishcraft.block.VerticalChestBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.VerticalChestBlock;
 import tv.mapper.embellishcraft.inventory.container.VerticalChestContainer;
 import tv.mapper.embellishcraft.item.wrapper.CustomInvWrapper;
 import tv.mapper.embellishcraft.state.properties.VerticalChestType;

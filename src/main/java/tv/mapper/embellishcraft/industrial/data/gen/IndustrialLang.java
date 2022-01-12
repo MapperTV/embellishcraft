@@ -6,12 +6,11 @@ import org.codehaus.plexus.util.StringUtils;
 
 import net.minecraft.world.item.DyeColor;
 import tv.mapper.embellishcraft.data.gen.ECLang;
-import tv.mapper.embellishcraft.industrial.world.level.blocks.InitIndustrialBlocks;
+import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 
 public class IndustrialLang
 {
     public static void addTranslations(ECLang provider, String lang)
-
     {
         switch(lang)
         {

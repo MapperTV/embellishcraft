@@ -25,7 +25,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.wrapper.InvWrapper;
-import tv.mapper.embellishcraft.block.CrateBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.CrateBlock;
 import tv.mapper.embellishcraft.inventory.container.CrateContainer;
 
 public class CrateTileEntity extends RandomizableContainerBlockEntity implements WorldlyContainer

@@ -21,6 +21,11 @@ import tv.mapper.embellishcraft.data.gen.ECLang;
 import tv.mapper.embellishcraft.data.gen.ECLootTables;
 import tv.mapper.embellishcraft.data.gen.recipe.ECRecipes;
 import tv.mapper.embellishcraft.data.gen.recipe.ECStonecutterRecipes;
+import tv.mapper.embellishcraft.furniture.data.gen.FurnitureBlockModels;
+import tv.mapper.embellishcraft.furniture.data.gen.FurnitureBlockStates;
+import tv.mapper.embellishcraft.furniture.data.gen.FurnitureItemModels;
+import tv.mapper.embellishcraft.furniture.data.gen.FurnitureLootTables;
+import tv.mapper.embellishcraft.furniture.data.gen.recipe.FurnitureRecipes;
 import tv.mapper.embellishcraft.industrial.data.gen.IndustrialBlockModels;
 import tv.mapper.embellishcraft.industrial.data.gen.IndustrialBlockStates;
 import tv.mapper.embellishcraft.industrial.data.gen.IndustrialItemModels;
@@ -42,36 +47,45 @@ public class ECGenerators
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
+        // Recipes
         generator.addProvider(new ECRecipes(generator));
-        generator.addProvider(new ECStonecutterRecipes(generator));
         generator.addProvider(new RockRecipes(generator));
-        generator.addProvider(new RockStoneCutter(generator));
         generator.addProvider(new IndustrialRecipes(generator));
         generator.addProvider(new BuildingRecipes(generator));
+        generator.addProvider(new FurnitureRecipes(generator));
+        
+        // Stonecutter
+        generator.addProvider(new ECStonecutterRecipes(generator));
+        generator.addProvider(new RockStoneCutter(generator));
         generator.addProvider(new BuildingStoneCutter(generator));
 
+        // Loot Tables
         generator.addProvider(new ECLootTables(generator));
         generator.addProvider(new RockLootTables(generator));
         generator.addProvider(new IndustrialLootTables(generator));
         generator.addProvider(new BuildingLootTables(generator));
+        generator.addProvider(new FurnitureLootTables(generator));
 
         // Block States
         generator.addProvider(new ECBlockStates(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new RockBlockStates(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new IndustrialBlockStates(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new BuildingBlockStates(generator, ECConstants.MODID, existingFileHelper));
+        generator.addProvider(new FurnitureBlockStates(generator, ECConstants.MODID, existingFileHelper));
 
         // Block Models
         generator.addProvider(new ECBlockModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new RockBlockModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new IndustrialBlockModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new BuildingBlockModels(generator, ECConstants.MODID, existingFileHelper));
+        generator.addProvider(new FurnitureBlockModels(generator, ECConstants.MODID, existingFileHelper));
 
         // Item Models
         generator.addProvider(new ECItemModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new RockItemModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new IndustrialItemModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new BuildingItemModels(generator, ECConstants.MODID, existingFileHelper));
+        generator.addProvider(new FurnitureItemModels(generator, ECConstants.MODID, existingFileHelper));
 
         ECBlockTags blockTags = new ECBlockTags(generator, existingFileHelper);
 

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.codehaus.plexus.util.StringUtils;
 
 import tv.mapper.embellishcraft.data.gen.ECLang;
-import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
+import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
 import tv.mapper.embellishcraft.util.RockType;
 
 public class RockLang

@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import tv.mapper.embellishcraft.block.CustomBedBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.CustomBedBlock;
 import tv.mapper.embellishcraft.util.WoodsType;
 
 public class CustomBedTileEntity extends BlockEntity

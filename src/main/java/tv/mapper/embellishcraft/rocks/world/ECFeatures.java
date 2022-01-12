@@ -10,7 +10,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.config.ECClientConfig.ClientConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;
-import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
+import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.MapperBase;
 

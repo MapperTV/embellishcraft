@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import tv.mapper.embellishcraft.industrial.world.level.blocks.InitIndustrialBlocks;
+import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 import tv.mapper.mapperbase.world.item.BaseItems;
 
 @Mod.EventBusSubscriber

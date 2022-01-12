@@ -19,10 +19,10 @@ import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.block.CrateBlock;
-import tv.mapper.embellishcraft.block.CustomBedBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
-import tv.mapper.embellishcraft.block.PlateBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.CrateBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.CustomBedBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.PlateBlock;
 import tv.mapper.mapperbase.data.gen.BaseLootTableProvider;
 
 public class ECLootTables extends BaseLootTableProvider

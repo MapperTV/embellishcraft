@@ -5,7 +5,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.data.gen.ECBlockStates;
-import tv.mapper.embellishcraft.industrial.world.level.blocks.InitIndustrialBlocks;
+import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 
 public class IndustrialBlockStates extends ECBlockStates
 {

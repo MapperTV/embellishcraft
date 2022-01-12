@@ -13,8 +13,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.data.gen.recipe.ECRecipes;
-import tv.mapper.embellishcraft.rocks.world.items.InitRockItems;
-import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
+import tv.mapper.embellishcraft.rocks.world.item.InitRockItems;
+import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
 import tv.mapper.embellishcraft.util.RockType;
 
 public class RockRecipes extends ECRecipes

@@ -5,7 +5,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ShulkerBoxBlock;
-import tv.mapper.embellishcraft.block.CrateBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.CrateBlock;
 
 public class CrateSlot extends Slot
 {

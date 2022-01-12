@@ -12,10 +12,10 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBloc
 import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import tv.mapper.embellishcraft.block.ChairBlock;
-import tv.mapper.embellishcraft.block.CouchBlock;
-import tv.mapper.embellishcraft.block.SuspendedStairsBlock;
+import tv.mapper.embellishcraft.building.world.level.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.entity.EntityChair;
+import tv.mapper.embellishcraft.furniture.world.level.block.ChairBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.CouchBlock;
 
 @Mod.EventBusSubscriber
 public class SeatUtil

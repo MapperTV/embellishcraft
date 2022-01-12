@@ -3,7 +3,7 @@ package tv.mapper.embellishcraft.building.data.gen;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tv.mapper.embellishcraft.building.world.level.blocks.InitBuildingBlocks;
+import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
 import tv.mapper.embellishcraft.data.gen.ECBlockStates;
 import tv.mapper.embellishcraft.util.McWoods;
 

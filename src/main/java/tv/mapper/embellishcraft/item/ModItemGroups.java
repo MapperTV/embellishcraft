@@ -4,10 +4,10 @@ import java.util.Random;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import tv.mapper.embellishcraft.block.ECBlockRegistry;
-import tv.mapper.embellishcraft.building.world.items.InitBuildingItems;
-import tv.mapper.embellishcraft.industrial.world.items.InitIndustrialItems;
-import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
+import tv.mapper.embellishcraft.building.world.item.InitBuildingItems;
+import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
+import tv.mapper.embellishcraft.industrial.world.item.InitIndustrialItems;
+import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
 import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.embellishcraft.util.RockType;
 
@@ -20,7 +20,7 @@ public class ModItemGroups
         @Override
         public ItemStack makeIcon()
         {
-            return new ItemStack(ECBlockRegistry.CHAIR_BLOCKS.get(McWoods.byId(rand.nextInt(5))).get());
+            return new ItemStack(InitFurnitureBlocks.CHAIR_BLOCKS.get(McWoods.byId(rand.nextInt(5))).get());
         }
     };
 
@@ -48,6 +48,15 @@ public class ModItemGroups
         public ItemStack makeIcon()
         {
             return new ItemStack(InitBuildingItems.DARK_BRICKS_ITEM.get());
+        }
+    };
+    
+    public static final CreativeModeTab EMBELLISHCRAFT_FURNITURE = new CreativeModeTab("embellishcraft_furniture_group")
+    {
+        @Override
+        public ItemStack makeIcon()
+        {
+            return new ItemStack(InitFurnitureBlocks.CHAIR_BLOCKS.get(McWoods.byId(rand.nextInt(5))).get());
         }
     };
 }

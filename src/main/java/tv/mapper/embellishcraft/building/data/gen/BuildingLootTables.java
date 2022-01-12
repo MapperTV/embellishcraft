@@ -4,7 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.data.gen.ECLootTables;
-import tv.mapper.embellishcraft.industrial.world.level.blocks.InitIndustrialBlocks;
+import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 
 public class BuildingLootTables extends ECLootTables
 {

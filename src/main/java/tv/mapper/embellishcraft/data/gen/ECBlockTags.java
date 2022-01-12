@@ -18,18 +18,19 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.block.ChairBlock;
-import tv.mapper.embellishcraft.block.CouchBlock;
-import tv.mapper.embellishcraft.block.CrateBlock;
-import tv.mapper.embellishcraft.block.CustomBedBlock;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
-import tv.mapper.embellishcraft.block.SuspendedStairsBlock;
-import tv.mapper.embellishcraft.block.TableBlock;
-import tv.mapper.embellishcraft.block.TerraceTableBlock;
-import tv.mapper.embellishcraft.building.world.level.blocks.InitBuildingBlocks;
+import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
+import tv.mapper.embellishcraft.building.world.level.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.data.ECTags;
-import tv.mapper.embellishcraft.industrial.world.level.blocks.InitIndustrialBlocks;
-import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
+import tv.mapper.embellishcraft.furniture.world.level.block.ChairBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.CouchBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.CrateBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.CustomBedBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
+import tv.mapper.embellishcraft.furniture.world.level.block.TableBlock;
+import tv.mapper.embellishcraft.furniture.world.level.block.TerraceTableBlock;
+import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
+import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
 import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.data.gen.BaseBlockTags;
 import tv.mapper.mapperbase.world.level.block.CustomButtonBlock;
@@ -53,11 +54,14 @@ public class ECBlockTags extends BaseBlockTags
             addTagsFromBlockType(object.get());
         for(RegistryObject<Block> object : InitBuildingBlocks.BUILDING_BLOCK_REGISTRY.getEntries())
             addTagsFromBlockType(object.get());
+        for(RegistryObject<Block> object : InitFurnitureBlocks.FURNITURE_BLOCK_REGISTRY.getEntries())
+            addTagsFromBlockType(object.get());
 
         // registerToolTags(ECBlockRegistry.BLOCKS);
         registerToolTags(InitRockBlocks.ROCK_BLOCK_REGISTRY);
         registerToolTags(InitIndustrialBlocks.INDUSTRIAL_BLOCK_REGISTRY);
         registerToolTags(InitBuildingBlocks.BUILDING_BLOCK_REGISTRY);
+        registerToolTags(InitFurnitureBlocks.FURNITURE_BLOCK_REGISTRY);
 
         for(int j = 0; j < Arrays.stream(RockType.values()).count(); j++)
         {

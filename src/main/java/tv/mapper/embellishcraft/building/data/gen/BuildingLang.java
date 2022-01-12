@@ -2,7 +2,7 @@ package tv.mapper.embellishcraft.building.data.gen;
 
 import java.util.Arrays;
 
-import tv.mapper.embellishcraft.building.world.level.blocks.InitBuildingBlocks;
+import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
 import tv.mapper.embellishcraft.data.gen.ECLang;
 import tv.mapper.embellishcraft.util.McWoods;
 

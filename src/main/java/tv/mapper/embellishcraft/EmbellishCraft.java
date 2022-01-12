@@ -14,15 +14,17 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tv.mapper.embellishcraft.block.ECBlockRegistry;
-import tv.mapper.embellishcraft.building.world.items.InitBuildingItems;
-import tv.mapper.embellishcraft.building.world.level.blocks.InitBuildingBlocks;
+import tv.mapper.embellishcraft.building.world.item.InitBuildingItems;
+import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
 import tv.mapper.embellishcraft.client.renderer.ChairEntityRenderer;
 import tv.mapper.embellishcraft.config.ECClientConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig;
 import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;
 import tv.mapper.embellishcraft.entity.ModEntities;
-import tv.mapper.embellishcraft.industrial.world.items.InitIndustrialItems;
-import tv.mapper.embellishcraft.industrial.world.level.blocks.InitIndustrialBlocks;
+import tv.mapper.embellishcraft.furniture.world.item.InitFurnitureItems;
+import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
+import tv.mapper.embellishcraft.industrial.world.item.InitIndustrialItems;
+import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 import tv.mapper.embellishcraft.inventory.container.ModContainers;
 import tv.mapper.embellishcraft.item.ECItemRegistry;
 import tv.mapper.embellishcraft.network.ECNetwork;
@@ -31,8 +33,8 @@ import tv.mapper.embellishcraft.proxy.IProxy;
 import tv.mapper.embellishcraft.proxy.ServerProxy;
 import tv.mapper.embellishcraft.rocks.world.ECFeatures;
 import tv.mapper.embellishcraft.rocks.world.ECOreList;
-import tv.mapper.embellishcraft.rocks.world.items.InitRockItems;
-import tv.mapper.embellishcraft.rocks.world.level.blocks.InitRockBlocks;
+import tv.mapper.embellishcraft.rocks.world.item.InitRockItems;
+import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
 import tv.mapper.embellishcraft.util.ConfigChecker;
 
 @Mod(ECConstants.MODID)
@@ -51,12 +53,15 @@ public class EmbellishCraft
         InitRockBlocks.init();
         InitIndustrialBlocks.init();
         InitBuildingBlocks.init();
-        ECBlockRegistry.postInit();
+        InitFurnitureBlocks.init();
+        InitFurnitureBlocks.postInit();
+
         // Register Items
         ECItemRegistry.init();
         InitRockItems.init();
         InitIndustrialItems.init();
         InitBuildingItems.init();
+        InitFurnitureItems.init();
 
         ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 

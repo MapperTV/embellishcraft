@@ -8,9 +8,9 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fmllegacy.RegistryObject;
-import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.client.gui.screen.inventory.CrateScreen;
 import tv.mapper.embellishcraft.client.gui.screen.inventory.VerticalChestScreen;
+import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
 import tv.mapper.embellishcraft.inventory.container.ModContainers;
 
 public class ClientProxy implements IProxy
@@ -35,7 +35,7 @@ public class ClientProxy implements IProxy
 
         Predicate<RenderType> cutoutPredicate = renderType -> renderType == RenderType.cutout();
 
-        for(RegistryObject<? extends Block> object : ECBlockRegistry.CUTOUT_BLOCKS)
+        for(RegistryObject<? extends Block> object : InitFurnitureBlocks.CUTOUT_BLOCKS)
             ItemBlockRenderTypes.setRenderLayer(object.get(), cutoutPredicate);
     }
 
