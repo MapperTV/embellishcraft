@@ -12,7 +12,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.data.gen.recipe.ECRecipes;
+import tv.mapper.embellishcraft.core.data.gen.recipe.ECRecipes;
 import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 import tv.mapper.mapperbase.data.BaseTags;
 import tv.mapper.mapperbase.world.item.BaseItems;

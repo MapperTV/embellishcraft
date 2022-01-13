@@ -2,7 +2,7 @@ package tv.mapper.embellishcraft.rocks.data.gen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tv.mapper.embellishcraft.data.gen.ECBlockModels;
+import tv.mapper.embellishcraft.core.data.gen.ECBlockModels;
 
 public class RockBlockModels extends ECBlockModels
 {

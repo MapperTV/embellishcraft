@@ -1,4 +1,4 @@
-package tv.mapper.embellishcraft.data;
+package tv.mapper.embellishcraft.core.data;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;

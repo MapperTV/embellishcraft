@@ -4,12 +4,11 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tv.mapper.embellishcraft.data.gen.ECBlockStates;
+import tv.mapper.embellishcraft.core.data.gen.ECBlockStates;
 import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 
 public class IndustrialBlockStates extends ECBlockStates
 {
-
     public IndustrialBlockStates(DataGenerator gen, String modid, ExistingFileHelper exFileHelper)
     {
         super(gen, modid, exFileHelper);

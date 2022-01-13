@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.data.gen.ECBlockModels;
+import tv.mapper.embellishcraft.core.data.gen.ECBlockModels;
 import tv.mapper.mapperbase.MapperBase;
 
 public class IndustrialBlockModels extends ECBlockModels

@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
-import tv.mapper.embellishcraft.data.gen.recipe.ECStonecutterRecipes;
+import tv.mapper.embellishcraft.core.data.gen.recipe.ECStonecutterRecipes;
 
 public class BuildingStoneCutter extends ECStonecutterRecipes
 {

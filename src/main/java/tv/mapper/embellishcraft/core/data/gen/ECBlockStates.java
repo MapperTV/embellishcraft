@@ -1,9 +1,8 @@
-package tv.mapper.embellishcraft.data.gen;
+package tv.mapper.embellishcraft.core.data.gen;
 
 import java.util.function.Function;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
@@ -15,8 +14,6 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.block.ECBlockRegistry;
-import tv.mapper.embellishcraft.block.LampBlock;
 import tv.mapper.mapperbase.data.gen.BaseBlockStates;
 
 public class ECBlockStates extends BaseBlockStates
@@ -28,15 +25,11 @@ public class ECBlockStates extends BaseBlockStates
 
     @Override
     protected void registerStatesAndModels()
-    {
+    {}
 
-        for(int j = 0; j < DyeColor.values().length; j++)
-        {
-            tableLampBlock(ECBlockRegistry.TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get());
-            tableLampBlock(ECBlockRegistry.MANUAL_TABLE_LAMP_BLOCKS.get(DyeColor.byId(j)).get());
-        }
-    }
-
+    /**
+     * Creates a blockstate file for blocks with slab, stairs, wall, pressure plate and button variants.
+     */
     protected void registerBlockstateVariants(String name, Block block, SlabBlock slab, StairBlock stairs, WallBlock wall, Block pressure, Block button)
     {
         if(block != null)
@@ -53,6 +46,9 @@ public class ECBlockStates extends BaseBlockStates
             buttonBlock(button, new UncheckedModelFile(mod_id + ":block/" + name + "_button"), new UncheckedModelFile(mod_id + ":block/" + name + "_button_pressed"), 180);
     }
 
+    /**
+     * Creates a blockstate file for blocks with slab, stairs, wall, pressure plate and button variants. The slab will use a dedicated side texture.
+     */
     protected void registerBlockstateVariantsWithSideSlab(String name, Block block, SlabBlock slab, StairBlock stairs, WallBlock wall, Block pressure, Block button)
     {
         if(block != null)
@@ -77,15 +73,11 @@ public class ECBlockStates extends BaseBlockStates
         orientableBlock(block, $ -> model, angleOffset);
     }
 
+    /**
+     * Creates a blockstate file for blocks that have 6 orientations.
+     */
     protected void orientableBlock(Block block, Function<BlockState, ModelFile> modelFunc, int angleOffset)
     {
         getVariantBuilder(block).forAllStatesExcept(state -> ConfiguredModel.builder().modelFile(modelFunc.apply(state)).rotationY(((int)state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + angleOffset) % 360).build(), BlockStateProperties.WATERLOGGED);
-    }
-
-    protected void tableLampBlock(LampBlock block)
-    {
-        String raw[] = block.getRegistryName().toString().split(":");
-        String name = raw[1];
-        getVariantBuilder(block).partialState().with(LampBlock.LIT, true).modelForState().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_on")).addModel().partialState().with(LampBlock.LIT, false).modelForState().modelFile(new UncheckedModelFile(mod_id + ":block/" + name)).addModel();
     }
 }

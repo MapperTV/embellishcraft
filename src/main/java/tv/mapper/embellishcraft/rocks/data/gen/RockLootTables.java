@@ -6,7 +6,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.data.gen.ECLootTables;
+import tv.mapper.embellishcraft.core.data.gen.ECLootTables;
 import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
 import tv.mapper.embellishcraft.util.RockType;
 

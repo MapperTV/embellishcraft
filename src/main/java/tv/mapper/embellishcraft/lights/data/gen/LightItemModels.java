@@ -1,4 +1,4 @@
-package tv.mapper.embellishcraft.data.gen;
+package tv.mapper.embellishcraft.lights.data.gen;
 
 import java.util.Arrays;
 
@@ -6,19 +6,13 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tv.mapper.mapperbase.data.gen.BaseItemModels;
+import tv.mapper.embellishcraft.core.data.gen.ECItemModels;
 
-public class ECItemModels extends BaseItemModels
+public class LightItemModels extends ECItemModels
 {
-    public ECItemModels(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper)
+    public LightItemModels(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper)
     {
         super(generator, modid, existingFileHelper);
-    }
-
-    @Override
-    public String getName()
-    {
-        return "EmbellishCraft Item Models";
     }
 
     @Override

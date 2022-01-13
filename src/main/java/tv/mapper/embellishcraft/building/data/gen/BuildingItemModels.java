@@ -5,7 +5,7 @@ import java.util.Arrays;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tv.mapper.embellishcraft.data.gen.ECItemModels;
+import tv.mapper.embellishcraft.core.data.gen.ECItemModels;
 import tv.mapper.embellishcraft.util.McWoods;
 
 public class BuildingItemModels extends ECItemModels

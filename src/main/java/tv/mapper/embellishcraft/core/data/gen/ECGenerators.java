@@ -12,15 +12,8 @@ import tv.mapper.embellishcraft.building.data.gen.BuildingItemModels;
 import tv.mapper.embellishcraft.building.data.gen.BuildingLootTables;
 import tv.mapper.embellishcraft.building.data.gen.recipe.BuildingRecipes;
 import tv.mapper.embellishcraft.building.data.gen.recipe.BuildingStoneCutter;
-import tv.mapper.embellishcraft.data.gen.ECBlockModels;
-import tv.mapper.embellishcraft.data.gen.ECBlockStates;
-import tv.mapper.embellishcraft.data.gen.ECBlockTags;
-import tv.mapper.embellishcraft.data.gen.ECItemModels;
-import tv.mapper.embellishcraft.data.gen.ECItemTags;
-import tv.mapper.embellishcraft.data.gen.ECLang;
-import tv.mapper.embellishcraft.data.gen.ECLootTables;
-import tv.mapper.embellishcraft.data.gen.recipe.ECRecipes;
-import tv.mapper.embellishcraft.data.gen.recipe.ECStonecutterRecipes;
+import tv.mapper.embellishcraft.core.data.gen.recipe.ECRecipes;
+import tv.mapper.embellishcraft.core.data.gen.recipe.ECStonecutterRecipes;
 import tv.mapper.embellishcraft.furniture.data.gen.FurnitureBlockModels;
 import tv.mapper.embellishcraft.furniture.data.gen.FurnitureBlockStates;
 import tv.mapper.embellishcraft.furniture.data.gen.FurnitureItemModels;
@@ -31,6 +24,11 @@ import tv.mapper.embellishcraft.industrial.data.gen.IndustrialBlockStates;
 import tv.mapper.embellishcraft.industrial.data.gen.IndustrialItemModels;
 import tv.mapper.embellishcraft.industrial.data.gen.IndustrialLootTables;
 import tv.mapper.embellishcraft.industrial.data.gen.recipe.IndustrialRecipes;
+import tv.mapper.embellishcraft.lights.data.gen.LightBlockModels;
+import tv.mapper.embellishcraft.lights.data.gen.LightBlockStates;
+import tv.mapper.embellishcraft.lights.data.gen.LightItemModels;
+import tv.mapper.embellishcraft.lights.data.gen.LightLootTables;
+import tv.mapper.embellishcraft.lights.data.gen.recipe.LightRecipes;
 import tv.mapper.embellishcraft.rocks.data.gen.RockBlockModels;
 import tv.mapper.embellishcraft.rocks.data.gen.RockBlockStates;
 import tv.mapper.embellishcraft.rocks.data.gen.RockItemModels;
@@ -53,7 +51,8 @@ public class ECGenerators
         generator.addProvider(new IndustrialRecipes(generator));
         generator.addProvider(new BuildingRecipes(generator));
         generator.addProvider(new FurnitureRecipes(generator));
-        
+        generator.addProvider(new LightRecipes(generator));
+
         // Stonecutter
         generator.addProvider(new ECStonecutterRecipes(generator));
         generator.addProvider(new RockStoneCutter(generator));
@@ -65,6 +64,7 @@ public class ECGenerators
         generator.addProvider(new IndustrialLootTables(generator));
         generator.addProvider(new BuildingLootTables(generator));
         generator.addProvider(new FurnitureLootTables(generator));
+        generator.addProvider(new LightLootTables(generator));
 
         // Block States
         generator.addProvider(new ECBlockStates(generator, ECConstants.MODID, existingFileHelper));
@@ -72,6 +72,7 @@ public class ECGenerators
         generator.addProvider(new IndustrialBlockStates(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new BuildingBlockStates(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new FurnitureBlockStates(generator, ECConstants.MODID, existingFileHelper));
+        generator.addProvider(new LightBlockStates(generator, ECConstants.MODID, existingFileHelper));
 
         // Block Models
         generator.addProvider(new ECBlockModels(generator, ECConstants.MODID, existingFileHelper));
@@ -79,6 +80,7 @@ public class ECGenerators
         generator.addProvider(new IndustrialBlockModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new BuildingBlockModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new FurnitureBlockModels(generator, ECConstants.MODID, existingFileHelper));
+        generator.addProvider(new LightBlockModels(generator, ECConstants.MODID, existingFileHelper));
 
         // Item Models
         generator.addProvider(new ECItemModels(generator, ECConstants.MODID, existingFileHelper));
@@ -86,6 +88,7 @@ public class ECGenerators
         generator.addProvider(new IndustrialItemModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new BuildingItemModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new FurnitureItemModels(generator, ECConstants.MODID, existingFileHelper));
+        generator.addProvider(new LightItemModels(generator, ECConstants.MODID, existingFileHelper));
 
         ECBlockTags blockTags = new ECBlockTags(generator, existingFileHelper);
 

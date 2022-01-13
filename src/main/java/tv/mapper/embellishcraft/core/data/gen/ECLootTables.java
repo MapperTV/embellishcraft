@@ -1,4 +1,4 @@
-package tv.mapper.embellishcraft.data.gen;
+package tv.mapper.embellishcraft.core.data.gen;
 
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.DataGenerator;
@@ -17,9 +17,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.furniture.world.level.block.CrateBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.CustomBedBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.PlateBlock;
@@ -27,19 +25,9 @@ import tv.mapper.mapperbase.data.gen.BaseLootTableProvider;
 
 public class ECLootTables extends BaseLootTableProvider
 {
-
     public ECLootTables(DataGenerator dataGeneratorIn)
     {
         super(dataGeneratorIn);
-    }
-
-    @Override
-    protected void addTables()
-    {
-        for(RegistryObject<Block> object : ECBlockRegistry.BLOCKS.getEntries())
-        {
-            addStandardTable(object.get());
-        }
     }
 
     public void addStandardTable(Block block)
@@ -73,4 +61,8 @@ public class ECLootTables extends BaseLootTableProvider
         LootPool.Builder builder = LootPool.lootPool().name(name).setRolls(ConstantValue.exactly(1)).add(LootItem.lootTableItem(block).apply(CopyNameFunction.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY)).apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY).copy("Lock", "BlockEntityTag.Lock").copy("LootTable", "BlockEntityTag.LootTable").copy("LootTableSeed", "BlockEntityTag.LootTableSeed")).apply(SetContainerContents.setContents().withEntry(DynamicLoot.dynamicEntry(CrateBlock.CONTENTS))));
         return LootTable.lootTable().withPool(builder);
     }
+
+    @Override
+    protected void addTables()
+    {}
 }

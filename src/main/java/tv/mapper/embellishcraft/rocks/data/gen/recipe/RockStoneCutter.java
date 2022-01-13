@@ -8,7 +8,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
-import tv.mapper.embellishcraft.data.gen.recipe.ECStonecutterRecipes;
+import tv.mapper.embellishcraft.core.data.gen.recipe.ECStonecutterRecipes;
 import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
 import tv.mapper.embellishcraft.util.RockType;
 

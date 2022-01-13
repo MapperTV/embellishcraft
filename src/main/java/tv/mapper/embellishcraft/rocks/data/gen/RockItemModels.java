@@ -3,7 +3,7 @@ package tv.mapper.embellishcraft.rocks.data.gen;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tv.mapper.embellishcraft.data.gen.ECItemModels;
+import tv.mapper.embellishcraft.core.data.gen.ECItemModels;
 
 public class RockItemModels extends ECItemModels
 {

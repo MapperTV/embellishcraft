@@ -13,7 +13,7 @@ import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tv.mapper.embellishcraft.data.gen.ECBlockStates;
+import tv.mapper.embellishcraft.core.data.gen.ECBlockStates;
 import tv.mapper.embellishcraft.furniture.world.level.block.CouchBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
 import tv.mapper.embellishcraft.furniture.world.level.block.PlateBlock;

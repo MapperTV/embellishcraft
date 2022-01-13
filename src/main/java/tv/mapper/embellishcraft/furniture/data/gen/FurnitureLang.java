@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.codehaus.plexus.util.StringUtils;
 
 import net.minecraft.world.item.DyeColor;
-import tv.mapper.embellishcraft.data.gen.ECLang;
+import tv.mapper.embellishcraft.core.data.gen.ECLang;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
 import tv.mapper.embellishcraft.util.McWoods;
 

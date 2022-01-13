@@ -1,4 +1,4 @@
-package tv.mapper.embellishcraft.data.gen;
+package tv.mapper.embellishcraft.core.data.gen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -7,7 +7,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.data.ECTags;
+import tv.mapper.embellishcraft.core.data.ECTags;
 
 public class ECItemTags extends ItemTagsProvider
 {

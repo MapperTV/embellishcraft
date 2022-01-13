@@ -13,7 +13,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import tv.mapper.embellishcraft.block.ECBlockRegistry;
 import tv.mapper.embellishcraft.building.world.item.InitBuildingItems;
 import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
 import tv.mapper.embellishcraft.client.renderer.ChairEntityRenderer;
@@ -26,7 +25,8 @@ import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
 import tv.mapper.embellishcraft.industrial.world.item.InitIndustrialItems;
 import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 import tv.mapper.embellishcraft.inventory.container.ModContainers;
-import tv.mapper.embellishcraft.item.ECItemRegistry;
+import tv.mapper.embellishcraft.lights.world.item.InitLightItems;
+import tv.mapper.embellishcraft.lights.world.level.block.InitLightBlocks;
 import tv.mapper.embellishcraft.network.ECNetwork;
 import tv.mapper.embellishcraft.proxy.ClientProxy;
 import tv.mapper.embellishcraft.proxy.IProxy;
@@ -49,19 +49,19 @@ public class EmbellishCraft
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EmbellishCraftConfig.COMMON_CONFIG);
 
         // Register Blocks
-        ECBlockRegistry.init();
         InitRockBlocks.init();
         InitIndustrialBlocks.init();
         InitBuildingBlocks.init();
         InitFurnitureBlocks.init();
         InitFurnitureBlocks.postInit();
+        InitLightBlocks.init();
 
         // Register Items
-        ECItemRegistry.init();
         InitRockItems.init();
         InitIndustrialItems.init();
         InitBuildingItems.init();
         InitFurnitureItems.init();
+        InitLightItems.init();
 
         ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
@@ -92,7 +92,6 @@ public class EmbellishCraft
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-        LOGGER.info("◘ EmbellishCraft client setup");
         EntityRenderers.register(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
     }
 

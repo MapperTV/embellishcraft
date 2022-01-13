@@ -1,14 +1,14 @@
-package tv.mapper.embellishcraft.furniture.data.gen;
+package tv.mapper.embellishcraft.lights.data.gen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.core.data.gen.ECLootTables;
-import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
+import tv.mapper.embellishcraft.lights.world.level.block.InitLightBlocks;
 
-public class FurnitureLootTables extends ECLootTables
+public class LightLootTables extends ECLootTables
 {
-    public FurnitureLootTables(DataGenerator dataGeneratorIn)
+    public LightLootTables(DataGenerator dataGeneratorIn)
     {
         super(dataGeneratorIn);
     }
@@ -16,7 +16,7 @@ public class FurnitureLootTables extends ECLootTables
     @Override
     protected void addTables()
     {
-        for(RegistryObject<Block> object : InitFurnitureBlocks.FURNITURE_BLOCK_REGISTRY.getEntries())
+        for(RegistryObject<Block> object : InitLightBlocks.LIGHT_BLOCK_REGISTRY.getEntries())
         {
             addStandardTable(object.get());
         }

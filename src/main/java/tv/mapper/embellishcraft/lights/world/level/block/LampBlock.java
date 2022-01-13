@@ -1,4 +1,4 @@
-package tv.mapper.embellishcraft.block;
+package tv.mapper.embellishcraft.lights.world.level.block;
 
 import java.util.Random;
 
