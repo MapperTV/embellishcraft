@@ -13,7 +13,7 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.mapperbase.data.gen.BaseBlockStates;
 
 public class ECBlockStates extends BaseBlockStates

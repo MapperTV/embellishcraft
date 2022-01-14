@@ -2,7 +2,7 @@ package tv.mapper.embellishcraft.rocks.world;
 
 import java.util.ArrayList;
 
-import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;
+import tv.mapper.embellishcraft.core.config.EmbellishCraftConfig.CommonConfig;
 import tv.mapper.mapperbase.world.CustomOre;
 import tv.mapper.mapperbase.world.OreList;
 

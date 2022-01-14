@@ -1,12 +1,12 @@
 package tv.mapper.embellishcraft.core.data;
 
 import net.minecraft.world.level.block.Block;
+import tv.mapper.embellishcraft.core.ECConstants;
 import net.minecraft.world.item.Item;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.Tag;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
-import tv.mapper.embellishcraft.ECConstants;
 
 public class ECTags
 {

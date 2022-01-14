@@ -12,10 +12,10 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
-import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.gen.recipe.ECRecipes;
+import tv.mapper.embellishcraft.core.util.McWoods;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
-import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.mapperbase.data.BaseTags;
 import tv.mapper.mapperbase.world.item.BaseItems;
 

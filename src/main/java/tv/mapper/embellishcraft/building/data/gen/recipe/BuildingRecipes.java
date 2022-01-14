@@ -11,10 +11,10 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
-import tv.mapper.embellishcraft.ECConstants;
 import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
+import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.gen.recipe.ECRecipes;
-import tv.mapper.embellishcraft.util.McWoods;
+import tv.mapper.embellishcraft.core.util.McWoods;
 
 public class BuildingRecipes extends ECRecipes
 {

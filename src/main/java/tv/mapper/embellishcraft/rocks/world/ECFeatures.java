@@ -7,11 +7,11 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import tv.mapper.embellishcraft.ECConstants;
-import tv.mapper.embellishcraft.config.ECClientConfig.ClientConfig;
-import tv.mapper.embellishcraft.config.EmbellishCraftConfig.CommonConfig;
+import tv.mapper.embellishcraft.core.ECConstants;
+import tv.mapper.embellishcraft.core.config.ECClientConfig.ClientConfig;
+import tv.mapper.embellishcraft.core.config.EmbellishCraftConfig.CommonConfig;
+import tv.mapper.embellishcraft.core.util.RockType;
 import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
-import tv.mapper.embellishcraft.util.RockType;
 import tv.mapper.mapperbase.MapperBase;
 
 public class ECFeatures

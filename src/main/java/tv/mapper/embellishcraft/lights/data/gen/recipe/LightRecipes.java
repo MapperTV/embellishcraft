@@ -11,7 +11,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
-import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.gen.recipe.ECRecipes;
 import tv.mapper.embellishcraft.lights.world.level.block.InitLightBlocks;
 

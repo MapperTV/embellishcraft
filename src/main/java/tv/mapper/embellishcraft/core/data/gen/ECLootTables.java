@@ -17,7 +17,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.furniture.world.level.block.CrateBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.CustomBedBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.PlateBlock;

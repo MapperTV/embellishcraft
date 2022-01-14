@@ -6,7 +6,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.core.data.gen.ECBlockModels;
-import tv.mapper.embellishcraft.util.McWoods;
+import tv.mapper.embellishcraft.core.util.McWoods;
 
 public class BuildingBlockModels extends ECBlockModels
 {

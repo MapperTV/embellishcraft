@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
 import tv.mapper.embellishcraft.core.data.gen.ECLang;
-import tv.mapper.embellishcraft.util.McWoods;
+import tv.mapper.embellishcraft.core.util.McWoods;
 
 public class BuildingLang
 {

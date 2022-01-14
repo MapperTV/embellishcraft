@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
-import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.mapperbase.data.gen.BaseRecipes;
 
 public class ECRecipes extends BaseRecipes

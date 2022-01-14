@@ -13,10 +13,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.core.ECConstants;
+import tv.mapper.embellishcraft.core.util.McWoods;
+import tv.mapper.embellishcraft.core.world.item.ModItemGroups;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
-import tv.mapper.embellishcraft.item.ModItemGroups;
-import tv.mapper.embellishcraft.util.McWoods;
 import tv.mapper.mapperbase.world.item.FuelBlockItem;
 
 public class InitFurnitureItems

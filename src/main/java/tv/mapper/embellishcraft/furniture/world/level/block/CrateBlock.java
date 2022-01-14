@@ -34,7 +34,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import tv.mapper.embellishcraft.tileentity.CrateTileEntity;
+import tv.mapper.embellishcraft.furniture.world.level.block.entity.CrateTileEntity;
 import tv.mapper.mapperbase.world.level.block.ToolManager;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;

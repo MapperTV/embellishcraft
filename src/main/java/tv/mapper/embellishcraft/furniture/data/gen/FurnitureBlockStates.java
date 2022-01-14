@@ -14,13 +14,13 @@ import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.core.data.gen.ECBlockStates;
+import tv.mapper.embellishcraft.core.util.McWoods;
 import tv.mapper.embellishcraft.furniture.world.level.block.CouchBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
 import tv.mapper.embellishcraft.furniture.world.level.block.PlateBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.TableBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.VerticalChestBlock;
-import tv.mapper.embellishcraft.state.properties.VerticalChestType;
-import tv.mapper.embellishcraft.util.McWoods;
+import tv.mapper.embellishcraft.furniture.world.level.block.state.VerticalChestType;
 
 public class FurnitureBlockStates extends ECBlockStates
 {

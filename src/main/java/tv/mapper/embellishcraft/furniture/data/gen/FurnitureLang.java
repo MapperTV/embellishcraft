@@ -5,9 +5,10 @@ import java.util.Arrays;
 import org.codehaus.plexus.util.StringUtils;
 
 import net.minecraft.world.item.DyeColor;
+import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.gen.ECLang;
+import tv.mapper.embellishcraft.core.util.McWoods;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
-import tv.mapper.embellishcraft.util.McWoods;
 
 public class FurnitureLang
 {
@@ -19,7 +20,6 @@ public class FurnitureLang
         {
             default:
             case "en_us":
-                // Furniture, doors, suspended stairs, wooden crates
                 for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
                 {
                     name = McWoods.byId(j).getName("en_us");
@@ -77,9 +77,6 @@ public class FurnitureLang
                 provider.add("itemGroup.embellishcraft_furniture_group", "EmbellishCraft - Furniture");
                 break;
             case "fr_fr":
-                String frColorsM[] = {"blanc", "orange", "magenta", "bleu clair", "jaune", "vert clair", "rose", "gris", "gris clair", "cyan", "violet", "bleu", "marron", "vert", "rouge", "noir"};
-
-                // Furniture
                 for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
                 {
                     name = McWoods.byId(j).getName("fr_fr");
@@ -99,17 +96,17 @@ public class FurnitureLang
 
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
-                    provider.addBlock(InitFurnitureBlocks.COUCH_BLOCKS.get(DyeColor.byId(j)), "Canapé " + frColorsM[j]);
-                    provider.addBlock(InitFurnitureBlocks.PILLOW_BLOCKS.get(DyeColor.byId(j)), "Coussin " + frColorsM[j]);
+                    provider.addBlock(InitFurnitureBlocks.COUCH_BLOCKS.get(DyeColor.byId(j)), "Canapé " + ECConstants.frColorsM[j]);
+                    provider.addBlock(InitFurnitureBlocks.PILLOW_BLOCKS.get(DyeColor.byId(j)), "Coussin " + ECConstants.frColorsM[j]);
 
-                    provider.addBlock(InitFurnitureBlocks.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois d'acajou");
-                    provider.addBlock(InitFurnitureBlocks.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de bouleau");
-                    provider.addBlock(InitFurnitureBlocks.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de jungle");
-                    provider.addBlock(InitFurnitureBlocks.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de chêne sombre");
-                    provider.addBlock(InitFurnitureBlocks.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de chêne");
-                    provider.addBlock(InitFurnitureBlocks.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois de sapin");
-                    provider.addBlock(InitFurnitureBlocks.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois biscornu");
-                    provider.addBlock(InitFurnitureBlocks.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + frColorsM[j] + " en bois carmin");
+                    provider.addBlock(InitFurnitureBlocks.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + ECConstants.frColorsM[j] + " en bois d'acajou");
+                    provider.addBlock(InitFurnitureBlocks.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + ECConstants.frColorsM[j] + " en bois de bouleau");
+                    provider.addBlock(InitFurnitureBlocks.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + ECConstants.frColorsM[j] + " en bois de jungle");
+                    provider.addBlock(InitFurnitureBlocks.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + ECConstants.frColorsM[j] + " en bois de chêne sombre");
+                    provider.addBlock(InitFurnitureBlocks.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + ECConstants.frColorsM[j] + " en bois de chêne");
+                    provider.addBlock(InitFurnitureBlocks.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + ECConstants.frColorsM[j] + " en bois de sapin");
+                    provider.addBlock(InitFurnitureBlocks.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + ECConstants.frColorsM[j] + " en bois biscornu");
+                    provider.addBlock(InitFurnitureBlocks.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(j)), "Lit massif " + ECConstants.frColorsM[j] + " en bois carmin");
                 }
 
                 provider.addBlock(InitFurnitureBlocks.PLATE, "Assiette");

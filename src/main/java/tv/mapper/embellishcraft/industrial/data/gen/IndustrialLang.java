@@ -5,6 +5,7 @@ import java.util.Arrays;
 import org.codehaus.plexus.util.StringUtils;
 
 import net.minecraft.world.item.DyeColor;
+import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.gen.ECLang;
 import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 
@@ -90,17 +91,15 @@ public class IndustrialLang
 
                 break;
             case "fr_fr":
-                String frColorsF[] = {"blanche", "orange", "magenta", "bleu claire", "jaune", "vert claire", "rose", "grise", "gris claire", "cyan", "violette", "bleue", "marron", "verte", "rouge", "noire"};
-
                 for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
                 {
-                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)), "Tôle ondulée " + frColorsF[j]);
-                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)), "Dalle en tôle ondulée " + frColorsF[j]);
-                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)), "Escalier en tôle ondulée " + frColorsF[j]);
-                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), "Muret en tôle ondulée " + frColorsF[j]);
-                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), "Plaque de pression en tôle ondulée " + frColorsF[j]);
-                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)), "Barrière en tôle ondulée " + frColorsF[j]);
-                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)), "Portillon en tôle ondulée " + frColorsF[j]);
+                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_BLOCKS.get(DyeColor.byId(j)), "Tôle ondulée " + ECConstants.frColorsF[j]);
+                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_SLABS.get(DyeColor.byId(j)), "Dalle en tôle ondulée " + ECConstants.frColorsF[j]);
+                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_STAIRS.get(DyeColor.byId(j)), "Escalier en tôle ondulée " + ECConstants.frColorsF[j]);
+                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_WALLS.get(DyeColor.byId(j)), "Muret en tôle ondulée " + ECConstants.frColorsF[j]);
+                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_PRESSURE_PLATES.get(DyeColor.byId(j)), "Plaque de pression en tôle ondulée " + ECConstants.frColorsF[j]);
+                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_FENCES.get(DyeColor.byId(j)), "Barrière en tôle ondulée " + ECConstants.frColorsF[j]);
+                    provider.addBlock(InitIndustrialBlocks.CORRUGATED_METAL_PLATE_FENCE_GATES.get(DyeColor.byId(j)), "Portillon en tôle ondulée " + ECConstants.frColorsF[j]);
                 }
 
                 provider.addBlock(InitIndustrialBlocks.DARK_METAL_FLOOR, "Sol en métal foncé");

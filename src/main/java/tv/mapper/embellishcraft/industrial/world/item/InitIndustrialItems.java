@@ -13,9 +13,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.core.ECConstants;
+import tv.mapper.embellishcraft.core.world.item.ModItemGroups;
 import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
-import tv.mapper.embellishcraft.item.ModItemGroups;
 
 public class InitIndustrialItems
 {

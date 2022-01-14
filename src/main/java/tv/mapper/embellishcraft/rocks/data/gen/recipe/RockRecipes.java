@@ -11,11 +11,11 @@ import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
-import tv.mapper.embellishcraft.ECConstants;
+import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.gen.recipe.ECRecipes;
+import tv.mapper.embellishcraft.core.util.RockType;
 import tv.mapper.embellishcraft.rocks.world.item.InitRockItems;
 import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
-import tv.mapper.embellishcraft.util.RockType;
 
 public class RockRecipes extends ECRecipes
 {
