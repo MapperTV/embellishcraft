@@ -21,15 +21,13 @@ import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.util.McWoods;
 import tv.mapper.embellishcraft.core.util.WoodsType;
-import tv.mapper.embellishcraft.core.world.block.entity.ModTileEntityTypes;
-import tv.mapper.embellishcraft.furniture.util.CustomChestType;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
 public class InitFurnitureBlocks
 {
     public static final DeferredRegister<Block> FURNITURE_BLOCK_REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, ECConstants.MODID);
 
-    public static List<RegistryObject<CustomChestBlock>> FANCY_CHESTS = new ArrayList<>();
+    // public static List<RegistryObject<CustomChestBlock>> FANCY_CHESTS = new ArrayList<>();
     public static List<RegistryObject<CustomBedBlock>> FANCY_BEDS = new ArrayList<>();
     public static List<RegistryObject<CrateBlock>> CRATES = new ArrayList<>();
     public static List<RegistryObject<? extends Block>> CUTOUT_BLOCKS = new ArrayList<>();
@@ -59,12 +57,15 @@ public class InitFurnitureBlocks
     public static final Map<McWoods, RegistryObject<CrateBlock>> WOODEN_CRATE_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, FURNITURE_BLOCK_REGISTRY.register(type.getSerializedName() + "_wooden_crate", () -> new CrateBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(2.5F).sound(SoundType.WOOD), ToolTypes.AXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
     // Chests
-    public static final Map<McWoods, RegistryObject<CustomChestBlock>> FANCY_CHEST_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, FURNITURE_BLOCK_REGISTRY.register(type.getSerializedName() + "_fancy_chest", () -> new CustomChestBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(2.5F).sound(SoundType.WOOD), () ->
-    {
-        return ModTileEntityTypes.CUSTOM_CHEST;
-    }, CustomChestType.OAK_FANCY, WoodsType.byId(type.getId()), ToolTypes.AXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+    // public static final Map<McWoods, RegistryObject<CustomChestBlock>> FANCY_CHEST_BLOCKS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+    // FURNITURE_BLOCK_REGISTRY.register(type.getSerializedName() + "_fancy_chest", () -> new CustomChestBlock(Block.Properties.of(Material.WOOD,
+    // MaterialColor.WOOD).strength(2.5F).sound(SoundType.WOOD), () ->
+    // {
+    // return ModTileEntityTypes.CUSTOM_CHEST;
+    // }, CustomChestType.OAK_FANCY, WoodsType.byId(type.getId()), ToolTypes.AXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
-    public static final RegistryObject<VerticalChestBlock> LOCKER = FURNITURE_BLOCK_REGISTRY.register("locker", () -> new VerticalChestBlock(Block.Properties.of(Material.METAL).strength(5F, 1200.0F).sound(SoundType.METAL).requiresCorrectToolForDrops(), ToolTypes.PICKAXE));
+    // public static final RegistryObject<VerticalChestBlock> LOCKER = FURNITURE_BLOCK_REGISTRY.register("locker", () -> new VerticalChestBlock(Block.Properties.of(Material.METAL).strength(5F,
+    // 1200.0F).sound(SoundType.METAL).requiresCorrectToolForDrops(), ToolTypes.PICKAXE));
 
     // Beds
     public static final Map<DyeColor, RegistryObject<CustomBedBlock>> OAK_FANCY_BED_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, FURNITURE_BLOCK_REGISTRY.register(type.getSerializedName() + "_oak_fancy_bed", () -> new CustomBedBlock(type, WoodsType.OAK, Block.Properties.of(Material.WOOL).sound(SoundType.WOOD).strength(0.2F), ToolTypes.AXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
@@ -86,7 +87,7 @@ public class InitFurnitureBlocks
         EmbellishCraft.LOGGER.info("1.2- EmbellishCraft: block listing.");
         for(int i = 0; i < McWoods.values().length; i++)
         {
-            FANCY_CHESTS.add(FANCY_CHEST_BLOCKS.get(McWoods.byId(i)));
+            // FANCY_CHESTS.add(FANCY_CHEST_BLOCKS.get(McWoods.byId(i)));
             CUTOUT_BLOCKS.add(TERRACE_CHAIR_BLOCKS.get(McWoods.byId(i)));
             CUTOUT_BLOCKS.add(TERRACE_TABLE_BLOCKS.get(McWoods.byId(i)));
             CRATES.add(WOODEN_CRATE_BLOCKS.get(McWoods.byId(i)));

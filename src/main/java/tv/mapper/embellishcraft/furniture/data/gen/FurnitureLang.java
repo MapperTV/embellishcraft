@@ -30,10 +30,10 @@ public class FurnitureLang
                     provider.addBlock(InitFurnitureBlocks.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), name + " Fancy Table");
                     provider.addBlock(InitFurnitureBlocks.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), name + " Terrace Table");
                     provider.addBlock(InitFurnitureBlocks.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), name + " Wooden Crate");
-                    provider.addBlock(InitFurnitureBlocks.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)), name + " Fancy Chest");
+                    // provider.addBlock(InitFurnitureBlocks.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)), name + " Fancy Chest");
                 }
 
-                provider.addBlock(InitFurnitureBlocks.LOCKER, "Locker");
+                // provider.addBlock(InitFurnitureBlocks.LOCKER, "Locker");
 
                 provider.addBlock(InitFurnitureBlocks.STEEL_TERRACE_CHAIR, "Steel Terrace Chair");
                 provider.addBlock(InitFurnitureBlocks.STEEL_TERRACE_TABLE, "Steel Terrace Table");
@@ -72,7 +72,7 @@ public class FurnitureLang
                 provider.add("embellishcraft.message.locker.wrong", "This locker is not yours!");
                 provider.add("embellishcraft.message.locker.locked", "This locker is locked.");
 
-                provider.add("embellishcraft.message.temp.seat", "Sitting down is currently disabled.");
+                provider.add("embellishcraft.message.temp.seat", "Sitting down is currently disabled in this version.");
 
                 provider.add("itemGroup.embellishcraft_furniture_group", "EmbellishCraft - Furniture");
                 break;
@@ -87,9 +87,9 @@ public class FurnitureLang
                     provider.addBlock(InitFurnitureBlocks.FANCY_TABLE_BLOCKS.get(McWoods.byId(j)), "Table massive en " + name);
                     provider.addBlock(InitFurnitureBlocks.TERRACE_TABLE_BLOCKS.get(McWoods.byId(j)), "Table de terrase en " + name);
                     provider.addBlock(InitFurnitureBlocks.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)), "Caisse en " + name);
-                    provider.addBlock(InitFurnitureBlocks.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)), "Coffre massif en " + name);
+                    // provider.addBlock(InitFurnitureBlocks.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)), "Coffre massif en " + name);
                 }
-                provider.addBlock(InitFurnitureBlocks.LOCKER, "Casier");
+                // provider.addBlock(InitFurnitureBlocks.LOCKER, "Casier");
 
                 provider.addBlock(InitFurnitureBlocks.STEEL_TERRACE_CHAIR, "Chaise de terrasse en acier");
                 provider.addBlock(InitFurnitureBlocks.STEEL_TERRACE_TABLE, "Table de terrasse en acier");
@@ -120,7 +120,7 @@ public class FurnitureLang
                 provider.add("embellishcraft.message.locker.wrong", "Ce casier n'est pas à vous!");
                 provider.add("embellishcraft.message.locker.locked", "Ce casier est verouillé.");
 
-                provider.add("embellishcraft.message.temp.seat", "S'asseoir est désactivé pour le moment.");
+                provider.add("embellishcraft.message.temp.seat", "S'asseoir est désactivé pour le moment dans cette version.");
 
                 provider.add("itemGroup.embellishcraft_furniture_group", "EmbellishCraft - Mobilier");
                 break;

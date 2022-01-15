@@ -1,12 +1,12 @@
 package tv.mapper.embellishcraft.core.data;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import tv.mapper.embellishcraft.core.ECConstants;
-import net.minecraft.world.item.Item;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.Tag;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
 
 public class ECTags
 {
@@ -51,9 +51,6 @@ public class ECTags
         public static final Tag.Named<Block> CHAIRS = tag("chairs");
         public static final Tag.Named<Block> TABLES = tag("tables");
         public static final Tag.Named<Block> CRATES = tag("crates");
-        public static final Tag.Named<Block> PRESSURE_PLATES = tag("pressure_plates");
-
-        public static final Tag.Named<Block> STORAGE_BLOCKS_STEEL = tag("storage_blocks/steel");
 
         private static Tag.Named<Block> tag(String name)
         {
@@ -66,19 +63,6 @@ public class ECTags
         public static final Tag.Named<Item> CHAIRS = tag("chairs");
         public static final Tag.Named<Item> TABLES = tag("tables");
         public static final Tag.Named<Item> CRATES = tag("crates");
-        public static final Tag.Named<Item> PRESSURE_PLATES = tag("pressure_plates");
-
-        public static final Tag.Named<Item> PLATES = tag("plates");
-        public static final Tag.Named<Item> PLATES_IRON = tag("plates/iron");
-        public static final Tag.Named<Item> PLATES_STEEL = tag("plates/steel");
-
-        public static final Tag.Named<Item> RODS_IRON = tag("rods/iron");
-        public static final Tag.Named<Item> RODS_STEEL = tag("rods/steel");
-
-        public static final Tag.Named<Item> INGOTS_STEEL = tag("ingots/steel");
-        public static final Tag.Named<Item> NUGGETS_STEEL = tag("nuggets/steel");
-
-        public static final Tag.Named<Item> STORAGE_BLOCKS_STEEL = tag("storage_blocks/steel");
 
         private static Tag.Named<Item> tag(String name)
         {

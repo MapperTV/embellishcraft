@@ -85,7 +85,7 @@ public class LampBlock extends CustomBlock implements SimpleWaterloggedBlock
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result)
     {
-        if(!world.isClientSide)
+        if(!world.isClientSide && this.isManual)
         {
             BlockState blockstate = this.setLit(state, world, pos);
             float f = blockstate.getValue(LIT) ? 1.5F : 0.7F;
@@ -100,7 +100,6 @@ public class LampBlock extends CustomBlock implements SimpleWaterloggedBlock
     {
         state = state.cycle(LIT);
         world.setBlock(pos, state, 3);
-        // this.updateNeighbors(state, world, pos);
         return state;
     }
 
@@ -151,7 +150,6 @@ public class LampBlock extends CustomBlock implements SimpleWaterloggedBlock
                     worldIn.setBlock(pos, state.cycle(LIT), 2);
                 }
             }
-
         }
     }
 
@@ -164,7 +162,6 @@ public class LampBlock extends CustomBlock implements SimpleWaterloggedBlock
             {
                 worldIn.setBlock(pos, state.cycle(LIT), 2);
             }
-
         }
     }
 

@@ -45,13 +45,13 @@ public class FurnitureItemModels extends ECItemModels
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
         {
             getBuilder(McWoods.byId(j).getSerializedName() + "_wooden_crate").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getSerializedName() + "_wooden_crate"));
-            getBuilder(McWoods.byId(j).getSerializedName() + "_fancy_chest").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getSerializedName() + "_fancy_chest"));
+            // getBuilder(McWoods.byId(j).getSerializedName() + "_fancy_chest").parent(new UncheckedModelFile(modid + ":block/" + McWoods.byId(j).getSerializedName() + "_fancy_chest"));
 
             for(int i = 0; i < Arrays.stream(DyeColor.values()).count(); i++)
             {
                 getBuilder(DyeColor.byId(i).getSerializedName() + "_" + McWoods.byId(j).getSerializedName() + "_fancy_bed").parent(new UncheckedModelFile(modid + ":block/" + DyeColor.byId(i).getSerializedName() + "_" + McWoods.byId(j).getSerializedName() + "_fancy_bed_inventory"));
             }
         }
-        getBuilder("locker").parent(new UncheckedModelFile(modid + ":block/locker_small"));
+        // getBuilder("locker").parent(new UncheckedModelFile(modid + ":block/locker_small"));
     }
 }

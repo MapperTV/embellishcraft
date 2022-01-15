@@ -8,6 +8,7 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.ECTags;
+import tv.mapper.mapperbase.data.BaseTags;
 
 public class ECItemTags extends ItemTagsProvider
 {
@@ -27,7 +28,7 @@ public class ECItemTags extends ItemTagsProvider
         copy(BlockTags.WALLS, ItemTags.WALLS);
         copy(BlockTags.FENCES, ItemTags.FENCES);
         copy(Tags.Blocks.FENCE_GATES, Tags.Items.FENCE_GATES);
-        copy(BlockTags.PRESSURE_PLATES, ECTags.ForgeItems.PRESSURE_PLATES);
+        copy(BlockTags.PRESSURE_PLATES, BaseTags.ForgeItems.PRESSURE_PLATES);
         copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
 
         copy(ECTags.ForgeBlocks.CHAIRS, ECTags.ForgeItems.CHAIRS);
@@ -45,8 +46,8 @@ public class ECItemTags extends ItemTagsProvider
         copy(ECTags.Blocks.WOODEN_CRATES, ECTags.Items.WOODEN_CRATES);
         copy(ECTags.ForgeBlocks.CRATES, ECTags.ForgeItems.CRATES);
 
-        copy(Tags.Blocks.CHESTS, Tags.Items.CHESTS);
-        copy(Tags.Blocks.CHESTS_WOODEN, Tags.Items.CHESTS_WOODEN);
+        // copy(Tags.Blocks.CHESTS, Tags.Items.CHESTS);
+        // copy(Tags.Blocks.CHESTS_WOODEN, Tags.Items.CHESTS_WOODEN);
 
         copy(ECTags.Blocks.FANCY_BEDS, ECTags.Items.FANCY_BEDS);
         copy(BlockTags.BEDS, ItemTags.BEDS);

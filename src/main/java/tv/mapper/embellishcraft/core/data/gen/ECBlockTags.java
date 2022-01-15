@@ -5,7 +5,6 @@ import java.util.Arrays;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -73,7 +72,7 @@ public class ECBlockTags extends BaseBlockTags
         }
 
         // Adding tags to existing MC/Forge tags
-        this.tag(Tags.Blocks.CHESTS).addTag(Tags.Blocks.CHESTS_WOODEN);
+        // this.tag(Tags.Blocks.CHESTS).addTag(Tags.Blocks.CHESTS_WOODEN);
         this.tag(BlockTags.BEDS).addTag(ECTags.Blocks.FANCY_BEDS);
         this.tag(ECTags.ForgeBlocks.CRATES).addTag(ECTags.Blocks.WOODEN_CRATES);
         this.tag(BlockTags.FENCES).addTag(Tags.Blocks.FENCES);
@@ -119,7 +118,7 @@ public class ECBlockTags extends BaseBlockTags
         }
         else if(block instanceof CrateBlock)
             this.tag(ECTags.Blocks.WOODEN_CRATES).add(block);
-        else if(block instanceof ChestBlock)
-            this.tag(Tags.Blocks.CHESTS_WOODEN).add(block);
+        // else if(block instanceof ChestBlock)
+        // this.tag(Tags.Blocks.CHESTS_WOODEN).add(block);
     }
 }

@@ -48,9 +48,12 @@ public class InitFurnitureItems
     public static final Map<McWoods, RegistryObject<BlockItem>> WOODEN_CRATE_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, FURNITURE_ITEM_REGISTRY.register(type.getSerializedName() + "_wooden_crate", () -> new BlockItem(InitFurnitureBlocks.WOODEN_CRATE_BLOCKS.get(type).get(), new Item.Properties().tab(ModItemGroups.EMBELLISHCRAFT_FURNITURE).stacksTo(1))))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
     // Chests
-    public static final Map<McWoods, RegistryObject<FuelBlockItem>> FANCY_CHEST_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type, FURNITURE_ITEM_REGISTRY.register(type.getSerializedName() + "_fancy_chest", () -> new FuelBlockItem(InitFurnitureBlocks.FANCY_CHEST_BLOCKS.get(type).get(), new Item.Properties().tab(ModItemGroups.EMBELLISHCRAFT_FURNITURE), ECConstants.chestBurnTime)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+    // public static final Map<McWoods, RegistryObject<FuelBlockItem>> FANCY_CHEST_ITEMS = Arrays.stream(McWoods.values()).map(type -> Pair.of(type,
+    // FURNITURE_ITEM_REGISTRY.register(type.getSerializedName() + "_fancy_chest", () -> new FuelBlockItem(InitFurnitureBlocks.FANCY_CHEST_BLOCKS.get(type).get(), new
+    // Item.Properties().tab(ModItemGroups.EMBELLISHCRAFT_FURNITURE), ECConstants.chestBurnTime)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
-    public static final RegistryObject<Item> LOCKER_ITEM = FURNITURE_ITEM_REGISTRY.register("locker", () -> new BlockItem(InitFurnitureBlocks.LOCKER.get(), new Item.Properties().tab(ModItemGroups.EMBELLISHCRAFT_FURNITURE)));
+    // public static final RegistryObject<Item> LOCKER_ITEM = FURNITURE_ITEM_REGISTRY.register("locker", () -> new BlockItem(InitFurnitureBlocks.LOCKER.get(), new
+    // Item.Properties().tab(ModItemGroups.EMBELLISHCRAFT_FURNITURE)));
 
     // Beds
     public static final Map<DyeColor, RegistryObject<FuelBlockItem>> OAK_FANCY_BED_ITEMS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, FURNITURE_ITEM_REGISTRY.register(type.getSerializedName() + "_oak_fancy_bed", () -> new FuelBlockItem(InitFurnitureBlocks.OAK_FANCY_BED_BLOCKS.get(type).get(), new Item.Properties().tab(ModItemGroups.EMBELLISHCRAFT_FURNITURE), ECConstants.bedBurnTime)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));

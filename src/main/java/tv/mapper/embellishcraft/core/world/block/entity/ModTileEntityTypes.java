@@ -15,7 +15,6 @@ import tv.mapper.embellishcraft.EmbellishCraft;
 import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.furniture.world.level.block.CrateBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.CustomBedBlock;
-import tv.mapper.embellishcraft.furniture.world.level.block.CustomChestBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
 import tv.mapper.embellishcraft.furniture.world.level.block.entity.CrateTileEntity;
 import tv.mapper.embellishcraft.furniture.world.level.block.entity.CustomBedTileEntity;
@@ -36,14 +35,14 @@ public class ModTileEntityTypes
     {
         EmbellishCraft.LOGGER.info("1.3- EmbellishCraft: TE registering.");
 
-        List<Block> CHESTS = new ArrayList<>();
+        // List<Block> CHESTS = new ArrayList<>();
         List<Block> BEDS = new ArrayList<>();
         List<Block> CRATES = new ArrayList<>();
 
-        for(RegistryObject<CustomChestBlock> object : InitFurnitureBlocks.FANCY_CHESTS)
-        {
-            CHESTS.add(object.get());
-        }
+        // for(RegistryObject<CustomChestBlock> object : InitFurnitureBlocks.FANCY_CHESTS)
+        // {
+        // CHESTS.add(object.get());
+        // }
 
         EmbellishCraft.LOGGER.info("EmbellishCraft: if this line crashes please report to https://github.com/MapperTV/embellishcraft/issues/19");
         for(RegistryObject<CustomBedBlock> object : InitFurnitureBlocks.FANCY_BEDS)
@@ -55,8 +54,9 @@ public class ModTileEntityTypes
             CRATES.add(object.get());
         }
 
-        event.getRegistry().register(BlockEntityType.Builder.of(CustomChestTileEntity::new, CHESTS.toArray(new Block[InitFurnitureBlocks.FANCY_CHESTS.size()])).build(null).setRegistryName("custom_chest"));
-        event.getRegistry().register(BlockEntityType.Builder.of(VerticalChestTileEntity::new, InitFurnitureBlocks.LOCKER.get()).build(null).setRegistryName("vertical_chest"));
+        // event.getRegistry().register(BlockEntityType.Builder.of(CustomChestTileEntity::new, CHESTS.toArray(new
+        // Block[InitFurnitureBlocks.FANCY_CHESTS.size()])).build(null).setRegistryName("custom_chest"));
+        // event.getRegistry().register(BlockEntityType.Builder.of(VerticalChestTileEntity::new, InitFurnitureBlocks.LOCKER.get()).build(null).setRegistryName("vertical_chest"));
         event.getRegistry().register(BlockEntityType.Builder.of(CustomBedTileEntity::new, BEDS.toArray(new CustomBedBlock[InitFurnitureBlocks.FANCY_BEDS.size()])).build(null).setRegistryName("custom_bed"));
         event.getRegistry().register(BlockEntityType.Builder.of(CrateTileEntity::new, CRATES.toArray(new Block[InitFurnitureBlocks.CRATES.size()])).build(null).setRegistryName("crate"));
     }

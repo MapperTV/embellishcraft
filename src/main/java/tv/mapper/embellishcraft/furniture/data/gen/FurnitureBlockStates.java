@@ -43,9 +43,9 @@ public class FurnitureBlockStates extends ECBlockStates
             simpleBlock(InitFurnitureBlocks.WOODEN_CRATE_BLOCKS.get(McWoods.byId(j)).get());
             // getVariantBuilder(InitFurnitureBlocks.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get()).partialState().setModels(
             // new ConfiguredModel(new UncheckedModelFile(mod_id + ":model/" + McWoods.byId(j).getString() + "_fancy_chest")));
-            chestBlock(InitFurnitureBlocks.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get(), 0);
+            // chestBlock(InitFurnitureBlocks.FANCY_CHEST_BLOCKS.get(McWoods.byId(j)).get(), 0);
         }
-        verticalChestBlock(InitFurnitureBlocks.LOCKER.get(), 0);
+        // verticalChestBlock(InitFurnitureBlocks.LOCKER.get(), 0);
 
         simpleBlock(InitFurnitureBlocks.STEEL_TERRACE_TABLE.get());
         horizontalBlock(InitFurnitureBlocks.STEEL_TERRACE_CHAIR.get(), new UncheckedModelFile(mod_id + ":block/steel_terrace_chair"), 0);
@@ -134,6 +134,7 @@ public class FurnitureBlockStates extends ECBlockStates
         }
     }
 
+    @SuppressWarnings("unused")
     private void chestBlock(ChestBlock block, int offset)
     {
         String raw[] = block.getRegistryName().toString().split(":");
@@ -152,6 +153,7 @@ public class FurnitureBlockStates extends ECBlockStates
         }
     }
 
+    @SuppressWarnings("unused")
     private void verticalChestBlock(VerticalChestBlock block, int offset)
     {
         String raw[] = block.getRegistryName().toString().split(":");
