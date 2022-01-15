@@ -3,7 +3,6 @@ package tv.mapper.embellishcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -20,12 +19,9 @@ import tv.mapper.embellishcraft.core.config.ConfigChecker;
 import tv.mapper.embellishcraft.core.config.ECClientConfig;
 import tv.mapper.embellishcraft.core.config.EmbellishCraftConfig;
 import tv.mapper.embellishcraft.core.config.EmbellishCraftConfig.CommonConfig;
-import tv.mapper.embellishcraft.core.network.ECNetwork;
 import tv.mapper.embellishcraft.core.proxy.ClientProxy;
 import tv.mapper.embellishcraft.core.proxy.IProxy;
 import tv.mapper.embellishcraft.core.proxy.ServerProxy;
-import tv.mapper.embellishcraft.core.world.entity.ModEntities;
-import tv.mapper.embellishcraft.furniture.client.renderer.blockentity.ChairEntityRenderer;
 import tv.mapper.embellishcraft.furniture.world.inventory.ModContainers;
 import tv.mapper.embellishcraft.furniture.world.item.InitFurnitureItems;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
@@ -87,13 +83,13 @@ public class EmbellishCraft
             ECFeatures.registerFeatures();
         }
 
-        proxy.setup(event);
-        ECNetwork.registerNetworkPackets();
+         proxy.setup(event);
+        // ECNetwork.registerNetworkPackets();
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-        EntityRenderers.register(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
+        // EntityRenderers.register(ModEntities.TYPE_CHAIR, ChairEntityRenderer::new);
     }
 
     private void serverSetup(final FMLDedicatedServerSetupEvent event)

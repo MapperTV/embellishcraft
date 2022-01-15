@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import tv.mapper.embellishcraft.furniture.client.gui.screens.inventory.CrateScreen;
-import tv.mapper.embellishcraft.furniture.client.gui.screens.inventory.VerticalChestScreen;
 import tv.mapper.embellishcraft.furniture.world.inventory.ModContainers;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
 
@@ -22,12 +21,12 @@ public class ClientProxy implements IProxy
         // ClientRegistry.bindTileEntitySpecialRenderer(VerticalChestTileEntity.class, new VerticalChestTileEntityRenderer<>());
         // ClientRegistry.bindTileEntitySpecialRenderer(CustomBedTileEntity.class, new CustomBedTileEntityRenderer<>());
 
-        MenuScreens.register(ModContainers.VERTICAL_9X1.get(), VerticalChestScreen::new);
-        MenuScreens.register(ModContainers.VERTICAL_9X2.get(), VerticalChestScreen::new);
-        MenuScreens.register(ModContainers.VERTICAL_9X3.get(), VerticalChestScreen::new);
-        MenuScreens.register(ModContainers.VERTICAL_9X4.get(), VerticalChestScreen::new);
-        MenuScreens.register(ModContainers.VERTICAL_9X5.get(), VerticalChestScreen::new);
-        MenuScreens.register(ModContainers.VERTICAL_9X6.get(), VerticalChestScreen::new);
+        // MenuScreens.register(ModContainers.VERTICAL_9X1.get(), VerticalChestScreen::new);
+        // MenuScreens.register(ModContainers.VERTICAL_9X2.get(), VerticalChestScreen::new);
+        // MenuScreens.register(ModContainers.VERTICAL_9X3.get(), VerticalChestScreen::new);
+        // MenuScreens.register(ModContainers.VERTICAL_9X4.get(), VerticalChestScreen::new);
+        // MenuScreens.register(ModContainers.VERTICAL_9X5.get(), VerticalChestScreen::new);
+        // MenuScreens.register(ModContainers.VERTICAL_9X6.get(), VerticalChestScreen::new);
         MenuScreens.register(ModContainers.CRATE_4X4.get(), CrateScreen::new);
         MenuScreens.register(ModContainers.CRATE_4X8.get(), CrateScreen::new);
 

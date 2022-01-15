@@ -19,15 +19,14 @@ import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
 import tv.mapper.embellishcraft.furniture.world.level.block.entity.CrateTileEntity;
 import tv.mapper.embellishcraft.furniture.world.level.block.entity.CustomBedTileEntity;
 import tv.mapper.embellishcraft.furniture.world.level.block.entity.CustomChestTileEntity;
-import tv.mapper.embellishcraft.furniture.world.level.block.entity.VerticalChestTileEntity;
 
 @ObjectHolder(ECConstants.MODID)
 @EventBusSubscriber(bus = Bus.MOD)
 public class ModTileEntityTypes
 {
     public static final BlockEntityType<CustomChestTileEntity> CUSTOM_CHEST = null;
-    public static final BlockEntityType<VerticalChestTileEntity> VERTICAL_CHEST = null;
-    public static final BlockEntityType<VerticalChestTileEntity> CUSTOM_BED = null;
+    // public static final BlockEntityType<VerticalChestTileEntity> VERTICAL_CHEST = null;
+    public static final BlockEntityType<CustomBedTileEntity> CUSTOM_BED = null;
     public static final BlockEntityType<CrateTileEntity> CRATE = null;
 
     @SubscribeEvent

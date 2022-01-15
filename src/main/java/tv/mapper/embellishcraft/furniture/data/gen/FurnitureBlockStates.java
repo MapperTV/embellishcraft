@@ -19,8 +19,6 @@ import tv.mapper.embellishcraft.furniture.world.level.block.CouchBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
 import tv.mapper.embellishcraft.furniture.world.level.block.PlateBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.TableBlock;
-import tv.mapper.embellishcraft.furniture.world.level.block.VerticalChestBlock;
-import tv.mapper.embellishcraft.furniture.world.level.block.state.VerticalChestType;
 
 public class FurnitureBlockStates extends ECBlockStates
 {
@@ -153,22 +151,21 @@ public class FurnitureBlockStates extends ECBlockStates
         }
     }
 
-    @SuppressWarnings("unused")
-    private void verticalChestBlock(VerticalChestBlock block, int offset)
-    {
-        String raw[] = block.getRegistryName().toString().split(":");
-        String name = raw[1];
-        VariantBlockStateBuilder builder = getVariantBuilder(block);
-        String model;
-
-        for(Direction dir : Direction.Plane.HORIZONTAL)
-        {
-            for(VerticalChestType type : VerticalChestType.VALUES)
-            {
-                model = type == VerticalChestType.SINGLE ? mod_id + ":block/" + name + "_small" : type == VerticalChestType.TOP ? mod_id + ":block/" + name + "_top" : mod_id + ":block/" + name + "_bottom";
-
-                builder.partialState().with(VerticalChestBlock.TYPE, type).with(ChestBlock.FACING, dir).modelForState().modelFile(new UncheckedModelFile(model)).rotationY((int)((dir.toYRot() + offset) % 360)).addModel();
-            }
-        }
-    }
+//    private void verticalChestBlock(VerticalChestBlock block, int offset)
+//    {
+//        String raw[] = block.getRegistryName().toString().split(":");
+//        String name = raw[1];
+//        VariantBlockStateBuilder builder = getVariantBuilder(block);
+//        String model;
+//
+//        for(Direction dir : Direction.Plane.HORIZONTAL)
+//        {
+//            for(VerticalChestType type : VerticalChestType.VALUES)
+//            {
+//                model = type == VerticalChestType.SINGLE ? mod_id + ":block/" + name + "_small" : type == VerticalChestType.TOP ? mod_id + ":block/" + name + "_top" : mod_id + ":block/" + name + "_bottom";
+//
+//                builder.partialState().with(VerticalChestBlock.TYPE, type).with(ChestBlock.FACING, dir).modelForState().modelFile(new UncheckedModelFile(model)).rotationY((int)((dir.toYRot() + offset) % 360)).addModel();
+//            }
+//        }
+//    }
 }
