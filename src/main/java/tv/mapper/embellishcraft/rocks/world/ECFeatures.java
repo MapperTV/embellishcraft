@@ -7,6 +7,7 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.config.ECClientConfig.ClientConfig;
 import tv.mapper.embellishcraft.core.config.EmbellishCraftConfig.CommonConfig;
@@ -16,6 +17,8 @@ import tv.mapper.mapperbase.MapperBase;
 
 public class ECFeatures
 {
+    public static PlacedFeature BASALT_F = 
+    
     public static ConfiguredFeature<?, ?> BASALT = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, InitRockBlocks.ROCK_BLOCKS.get(RockType.BASALT).get().defaultBlockState(), CommonConfig.BASALT_SIZE.get())).rangeUniform(VerticalAnchor.absolute(CommonConfig.BASALT_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.BASALT_MAX_HEIGHT.get())).squared().count(CommonConfig.BASALT_CHANCE.get());
 
     public static ConfiguredFeature<?, ?> SLATE = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, InitRockBlocks.ROCK_BLOCKS.get(RockType.SLATE).get().defaultBlockState(), CommonConfig.SLATE_SIZE.get())).rangeUniform(VerticalAnchor.absolute(CommonConfig.SLATE_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.SLATE_MAX_HEIGHT.get())).squared().count(CommonConfig.SLATE_CHANCE.get());

@@ -18,6 +18,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import tv.mapper.embellishcraft.core.ECConstants;
+import tv.mapper.embellishcraft.core.world.block.entity.ModTileEntityTypes;
 import tv.mapper.embellishcraft.furniture.world.level.block.CrateBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.CustomBedBlock;
 import tv.mapper.embellishcraft.furniture.world.level.block.PlateBlock;
@@ -58,7 +59,7 @@ public class ECLootTables extends BaseLootTableProvider
     protected LootTable.Builder createCrateTable(String modid, Block block)
     {
         String name = block.getRegistryName().toString().replace(modid + ":", "");
-        LootPool.Builder builder = LootPool.lootPool().name(name).setRolls(ConstantValue.exactly(1)).add(LootItem.lootTableItem(block).apply(CopyNameFunction.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY)).apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY).copy("Lock", "BlockEntityTag.Lock").copy("LootTable", "BlockEntityTag.LootTable").copy("LootTableSeed", "BlockEntityTag.LootTableSeed")).apply(SetContainerContents.setContents().withEntry(DynamicLoot.dynamicEntry(CrateBlock.CONTENTS))));
+        LootPool.Builder builder = LootPool.lootPool().name(name).setRolls(ConstantValue.exactly(1)).add(LootItem.lootTableItem(block).apply(CopyNameFunction.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY)).apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY).copy("Lock", "BlockEntityTag.Lock").copy("LootTable", "BlockEntityTag.LootTable").copy("LootTableSeed", "BlockEntityTag.LootTableSeed")).apply(SetContainerContents.setContents(ModTileEntityTypes.CRATE).withEntry(DynamicLoot.dynamicEntry(CrateBlock.CONTENTS))));
         return LootTable.lootTable().withPool(builder);
     }
 

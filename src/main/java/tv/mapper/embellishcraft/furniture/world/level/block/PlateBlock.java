@@ -127,7 +127,7 @@ public class PlateBlock extends CustomBlock implements SimpleWaterloggedBlock
     {
         if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+            worldIn.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
         if(facing == Direction.DOWN && !this.canSurvive(stateIn, worldIn, currentPos))

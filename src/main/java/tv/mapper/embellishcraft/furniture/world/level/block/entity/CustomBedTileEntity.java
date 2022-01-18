@@ -34,7 +34,7 @@ public class CustomBedTileEntity extends BlockEntity
      */
     public ClientboundBlockEntityDataPacket getUpdatePacket()
     {
-        return new ClientboundBlockEntityDataPacket(this.worldPosition, 11, this.getUpdateTag());
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 
     @OnlyIn(Dist.CLIENT)

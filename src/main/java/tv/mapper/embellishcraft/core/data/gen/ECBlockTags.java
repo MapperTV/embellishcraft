@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
 import tv.mapper.embellishcraft.building.world.level.block.SuspendedStairsBlock;
 import tv.mapper.embellishcraft.core.ECConstants;

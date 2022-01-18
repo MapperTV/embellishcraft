@@ -118,7 +118,7 @@ public class LampBlock extends CustomBlock implements SimpleWaterloggedBlock
     {
         if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+            worldIn.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
         if(facing == Direction.DOWN && !this.canSurvive(stateIn, worldIn, currentPos))
@@ -143,7 +143,7 @@ public class LampBlock extends CustomBlock implements SimpleWaterloggedBlock
             {
                 if(flag)
                 {
-                    worldIn.getBlockTicks().scheduleTick(pos, this, 4);
+                    worldIn.scheduleTick(pos, this, 4);
                 }
                 else
                 {

@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 import tv.mapper.embellishcraft.furniture.client.gui.screens.inventory.CrateScreen;
 import tv.mapper.embellishcraft.furniture.world.inventory.ModContainers;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;

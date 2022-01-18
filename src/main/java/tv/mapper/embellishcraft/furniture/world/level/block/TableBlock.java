@@ -174,7 +174,7 @@ public class TableBlock extends CustomBlock implements SimpleWaterloggedBlock
 
         if(stateIn.getValue(WATERLOGGED))
         {
-            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+            worldIn.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
         return this.defaultBlockState().setValue(TABLE_NORTH, north).setValue(TABLE_SOUTH, south).setValue(TABLE_EAST, east).setValue(TABLE_WEST, west).setValue(HAS_FOOT, has_foot).setValue(WATERLOGGED, stateIn.getValue(WATERLOGGED));
