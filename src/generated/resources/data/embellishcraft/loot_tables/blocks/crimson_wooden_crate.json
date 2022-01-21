@@ -36,6 +36,7 @@
             },
             {
               "function": "minecraft:set_contents",
+              "type": "embellishcraft:crate",
               "entries": [
                 {
                   "type": "minecraft:dynamic",

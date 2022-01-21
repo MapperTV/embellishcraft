@@ -84,37 +84,33 @@ public class CrateBlock extends BaseEntityBlock implements ToolManager
         return InteractionResult.SUCCESS;
     }
 
-    public void playerWillDestroy(Level worldIn, BlockPos pos, BlockState state, Player player)
+    public void playerWillDestroy(Level pLevel, BlockPos pPos, BlockState pState, Player pPlayer)
     {
-        BlockEntity tileentity = worldIn.getBlockEntity(pos);
-        if(tileentity instanceof CrateTileEntity)
+        BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+
+        if(blockEntity instanceof CrateTileEntity)
         {
-            CrateTileEntity crate = (CrateTileEntity)tileentity;
-            if(!worldIn.isClientSide && player.isCreative() && !crate.isEmpty())
+            CrateTileEntity crateBlockEntity = (CrateTileEntity)blockEntity;
+            if(!pLevel.isClientSide && pPlayer.isCreative() && !crateBlockEntity.isEmpty())
             {
                 ItemStack itemstack = new ItemStack(this.asBlock());
-                CompoundTag compoundnbt = crate.saveToNbt(new CompoundTag());
-                if(!compoundnbt.isEmpty())
+                blockEntity.saveToItem(itemstack);
+                if(crateBlockEntity.hasCustomName())
                 {
-                    itemstack.addTagElement("BlockEntityTag", compoundnbt);
+                    itemstack.setHoverName(crateBlockEntity.getCustomName());
                 }
 
-                if(crate.hasCustomName())
-                {
-                    itemstack.setHoverName(crate.getCustomName());
-                }
-
-                ItemEntity itementity = new ItemEntity(worldIn, (double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), itemstack);
+                ItemEntity itementity = new ItemEntity(pLevel, (double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, itemstack);
                 itementity.setDefaultPickUpDelay();
-                worldIn.addFreshEntity(itementity);
+                pLevel.addFreshEntity(itementity);
             }
             else
             {
-                crate.unpackLootTable(player);
+                crateBlockEntity.unpackLootTable(pPlayer);
             }
         }
 
-        super.playerWillDestroy(worldIn, pos, state, player);
+        super.playerWillDestroy(pLevel, pPos, pState, pPlayer);
     }
 
     @OnlyIn(Dist.CLIENT)

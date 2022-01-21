@@ -70,38 +70,64 @@ public class CrateTileEntity extends RandomizableContainerBlockEntity implements
         return new TranslatableComponent("embellishcraft.container.wooden_crate");
     }
 
-    @Override
-    public void load(CompoundTag compound)
+    // @Override
+    // public void load(CompoundTag compound)
+    // {
+    // super.load(compound);
+    // this.loadFromNbt(compound);
+    // }
+
+    // @Override
+    // public CompoundTag save(CompoundTag compound)
+    // {
+    // super.save(compound);
+    // return this.saveToNbt(compound);
+    // }
+
+    public void load(CompoundTag pTag)
     {
-        super.load(compound);
-        this.loadFromNbt(compound);
+        super.load(pTag);
+        this.loadFromTag(pTag);
     }
 
-    @Override
-    public CompoundTag save(CompoundTag compound)
+    protected void saveAdditional(CompoundTag pTag)
     {
-        super.save(compound);
-        return this.saveToNbt(compound);
+        super.saveAdditional(pTag);
+        if(!this.trySaveLootTable(pTag))
+        {
+            ContainerHelper.saveAllItems(pTag, this.crateContents, false);
+        }
+
     }
 
-    public void loadFromNbt(CompoundTag compound)
+    public void loadFromTag(CompoundTag pTag)
     {
         this.crateContents = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-        if(!this.tryLoadLootTable(compound) && compound.contains("Items", 9))
+        if(!this.tryLoadLootTable(pTag) && pTag.contains("Items", 9))
         {
-            ContainerHelper.loadAllItems(compound, this.crateContents);
-        }
-    }
-
-    public CompoundTag saveToNbt(CompoundTag compound)
-    {
-        if(!this.trySaveLootTable(compound))
-        {
-            ContainerHelper.saveAllItems(compound, this.crateContents, false);
+            ContainerHelper.loadAllItems(pTag, this.crateContents);
         }
 
-        return compound;
     }
+
+    // public void loadFromNbt(CompoundTag compound)
+    // {
+    // this.crateContents = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+    // if(!this.tryLoadLootTable(compound) && compound.contains("Items", 9))
+    // {
+    // ContainerHelper.loadAllItems(compound, this.crateContents);
+    // }
+    // }
+    //
+    // public CompoundTag saveToNbt(CompoundTag compound)
+    // {
+    // if(!this.trySaveLootTable(compound))
+    // {
+    // ContainerHelper.saveAllItems(compound, this.crateContents, false);
+    // }
+    //
+    // return compound;
+    // }
 
     protected NonNullList<ItemStack> getItems()
     {

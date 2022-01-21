@@ -29,7 +29,6 @@ import tv.mapper.embellishcraft.industrial.world.item.InitIndustrialItems;
 import tv.mapper.embellishcraft.industrial.world.level.block.InitIndustrialBlocks;
 import tv.mapper.embellishcraft.lights.world.item.InitLightItems;
 import tv.mapper.embellishcraft.lights.world.level.block.InitLightBlocks;
-import tv.mapper.embellishcraft.rocks.world.ECFeatures;
 import tv.mapper.embellishcraft.rocks.world.ECOreList;
 import tv.mapper.embellishcraft.rocks.world.item.InitRockItems;
 import tv.mapper.embellishcraft.rocks.world.level.block.InitRockBlocks;
@@ -80,10 +79,9 @@ public class EmbellishCraft
         {
             ECOreList.initOres();
             ConfigChecker.checkConfig();
-            ECFeatures.registerFeatures();
         }
 
-         proxy.setup(event);
+        proxy.setup(event);
         // ECNetwork.registerNetworkPackets();
     }
 
