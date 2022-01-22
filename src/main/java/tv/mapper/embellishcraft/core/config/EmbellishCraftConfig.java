@@ -121,7 +121,7 @@ public class EmbellishCraftConfig
             BASALT_GENERATION = COMMON_BUILDER.comment("Generate basalt in the world [true / false]").define("basaltGeneration", true);
             BASALT_SIZE = COMMON_BUILDER.comment("Size of basalt pockets [0-100, default: 33]").defineInRange("basaltSize", 56, 0, 100);
             BASALT_CHANCE = COMMON_BUILDER.comment("Amount of of basalt pocket being generated [0-20, default: 5]").defineInRange("basaltChance", 5, 0, 20);
-            BASALT_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for basalt pocket generation [-63~319, default: -56]").defineInRange("basaltMinHeight", -56, -63, 319);
+            BASALT_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for basalt pocket generation [-63~318, default: -56]").defineInRange("basaltMinHeight", -56, -63, 319);
             BASALT_MAX_HEIGHT = COMMON_BUILDER.comment("Maximal height for basalt pocket generation, must be higher than minimal height [-63~319, default: 8]").defineInRange("basaltMaxHeight", 8, -64, 384);
 
             COMMON_BUILDER.pop();
@@ -130,7 +130,7 @@ public class EmbellishCraftConfig
             SLATE_GENERATION = COMMON_BUILDER.comment("Generate slate in the world [true / false]").define("slateGeneration", true);
             SLATE_SIZE = COMMON_BUILDER.comment("Size of slate pockets [0-100, default: 48]").defineInRange("slateSize", 48, 0, 100);
             SLATE_CHANCE = COMMON_BUILDER.comment("Amount of of slate pocket being generated [0-20, default: 3]").defineInRange("slateChance", 3, 0, 20);
-            SLATE_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for slate pocket generation [-63~319, default: 32]").defineInRange("slateMinHeight", 32, -63, 318);
+            SLATE_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for slate pocket generation [-63~318, default: 32]").defineInRange("slateMinHeight", 32, -63, 318);
             SLATE_MAX_HEIGHT = COMMON_BUILDER.comment("Maximal height for slate pocket generation, must be higher than minimal height [-63~319, default: 128]").defineInRange("slateMaxHeight", 128, -63, 319);
 
             COMMON_BUILDER.pop();
@@ -139,7 +139,7 @@ public class EmbellishCraftConfig
             MARBLE_GENERATION = COMMON_BUILDER.comment("Generate marble in the world [true / false]").define("marbleGeneration", true);
             MARBLE_SIZE = COMMON_BUILDER.comment("Size of marble pockets [0-100, default: 32]").defineInRange("marbleSize", 32, 0, 100);
             MARBLE_CHANCE = COMMON_BUILDER.comment("Amount of of marble pocket being generated [0-20, default: 3]").defineInRange("marbleChance", 3, 0, 20);
-            MARBLE_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for marble pocket generation [-63~319, default: 64]").defineInRange("marbleMinHeight", 64, -63, 318);
+            MARBLE_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for marble pocket generation [-63~318, default: 64]").defineInRange("marbleMinHeight", 64, -63, 318);
             MARBLE_MAX_HEIGHT = COMMON_BUILDER.comment("Maximal height for marble pocket generation, must be higher than minimal height [-63~319, default: 196]").defineInRange("marbleMaxHeight", 196, -63, 319);
 
             COMMON_BUILDER.pop();
@@ -148,7 +148,7 @@ public class EmbellishCraftConfig
             GNEISS_GENERATION = COMMON_BUILDER.comment("Generate gneiss in the world [true / false]").define("gneissGeneration", true);
             GNEISS_SIZE = COMMON_BUILDER.comment("Size of gneiss pockets [0-100, default: 16]").defineInRange("gneissSize", 32, 0, 100);
             GNEISS_CHANCE = COMMON_BUILDER.comment("Amount of of gneiss pocket being generated [0-20, default: 2]").defineInRange("gneissChance", 2, 0, 20);
-            GNEISS_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for gneiss pocket generation [-63~319, default: 16]").defineInRange("gneissMinHeight", 16, -63, 318);
+            GNEISS_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for gneiss pocket generation [-63~318, default: 16]").defineInRange("gneissMinHeight", 16, -63, 318);
             GNEISS_MAX_HEIGHT = COMMON_BUILDER.comment("Maximal height for gneiss pocket generation, must be higher than minimal height [-63~319, default: 64]").defineInRange("gneissMaxHeight", 64, -63, 319);
 
             COMMON_BUILDER.pop();
@@ -157,7 +157,7 @@ public class EmbellishCraftConfig
             JADE_GENERATION = COMMON_BUILDER.comment("Generate jade in the world [true / false]").define("jadeGeneration", true);
             JADE_SIZE = COMMON_BUILDER.comment("Size of jade pockets [0-100, default: 15]").defineInRange("jadeSize", 16, 0, 100);
             JADE_CHANCE = COMMON_BUILDER.comment("Amount of of jade pocket being generated [0-20, default: 5]").defineInRange("jadeChance", 3, 0, 20);
-            JADE_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for jade pocket generation, [-63~319, default: 50]").defineInRange("jadeMinHeight", 72, -63, 318);
+            JADE_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for jade pocket generation, [-63~318, default: 50]").defineInRange("jadeMinHeight", 72, -63, 318);
             JADE_MAX_HEIGHT = COMMON_BUILDER.comment("Maximal height for jade pocket generation, must be higher than minimal height [-63~319, default: 100]").defineInRange("jadeMaxHeight", 192, -63, 319);
 
             COMMON_BUILDER.pop();
@@ -166,7 +166,7 @@ public class EmbellishCraftConfig
             LARVIKITE_GENERATION = COMMON_BUILDER.comment("Generate larvikite in the world [true / false]").define("larvikiteGeneration", true);
             LARVIKITE_SIZE = COMMON_BUILDER.comment("Size of larvikite pockets [0-100, default: 15]").defineInRange("larvikiteSize", 48, 0, 100);
             LARVIKITE_CHANCE = COMMON_BUILDER.comment("Amount of of larvikite pocket being generated [0-20, default: 5]").defineInRange("larvikiteChance", 1, 0, 20);
-            LARVIKITE_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for larvikite pocket generation, [-63~319, default: 50]").defineInRange("larvikiteMinHeight", 48, -63, 318);
+            LARVIKITE_MIN_HEIGHT = COMMON_BUILDER.comment("Minimal height for larvikite pocket generation, [-63~318, default: 50]").defineInRange("larvikiteMinHeight", 48, -63, 318);
             LARVIKITE_MAX_HEIGHT = COMMON_BUILDER.comment("Maximal height for larvikite pocket generation, must be higher than minimal height [-63~319, default: 100]").defineInRange("larvikiteMaxHeight", 72, -63, 319);
 
             COMMON_BUILDER.pop();
