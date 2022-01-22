@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:orange_crimson_fancy_bed_from_white"
+    ]
+  },
+  "criteria": {
+    "has_white_crimson_fancy_bed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "embellishcraft:white_crimson_fancy_bed"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:orange_crimson_fancy_bed_from_white"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_white_crimson_fancy_bed",
+      "has_the_recipe"
+    ]
+  ]
+}

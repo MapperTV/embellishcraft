@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
@@ -28,9 +27,9 @@ public class ECOreList
 
     public static PlacedFeature GNEISS = PlacementUtils.register("gneiss", FeatureUtils.register("gneiss", Feature.ORE.configured(new OreConfiguration(OreFeatures.STONE_ORE_REPLACEABLES, InitRockBlocks.ROCK_BLOCKS.get(RockType.GNEISS).get().defaultBlockState(), CommonConfig.GNEISS_SIZE.get()))).placed(BaseOreGenerator.commonOrePlacement(CommonConfig.GNEISS_CHANCE.get(), HeightRangePlacement.uniform(VerticalAnchor.absolute(CommonConfig.GNEISS_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.GNEISS_MAX_HEIGHT.get())))));
 
-    public static PlacedFeature JADE = PlacementUtils.register("jade", FeatureUtils.register("jade", Feature.ORE.configured(new OreConfiguration(OreFeatures.STONE_ORE_REPLACEABLES, Blocks.BIRCH_SLAB.defaultBlockState(), CommonConfig.JADE_SIZE.get()))).placed(BaseOreGenerator.commonOrePlacement(CommonConfig.JADE_CHANCE.get(), HeightRangePlacement.uniform(VerticalAnchor.absolute(CommonConfig.JADE_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.JADE_MAX_HEIGHT.get())))));
+    public static PlacedFeature JADE = PlacementUtils.register("jade", FeatureUtils.register("jade", Feature.ORE.configured(new OreConfiguration(OreFeatures.STONE_ORE_REPLACEABLES, InitRockBlocks.ROCK_BLOCKS.get(RockType.JADE).get().defaultBlockState(), CommonConfig.JADE_SIZE.get()))).placed(BaseOreGenerator.commonOrePlacement(CommonConfig.JADE_CHANCE.get(), HeightRangePlacement.uniform(VerticalAnchor.absolute(CommonConfig.JADE_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.JADE_MAX_HEIGHT.get())))));
 
-    public static PlacedFeature LARVIKITE = PlacementUtils.register("larvikite", FeatureUtils.register("larvikite", Feature.ORE.configured(new OreConfiguration(OreFeatures.STONE_ORE_REPLACEABLES, Blocks.DARK_OAK_SLAB.defaultBlockState(), CommonConfig.LARVIKITE_SIZE.get()))).placed(BaseOreGenerator.commonOrePlacement(CommonConfig.LARVIKITE_CHANCE.get(), HeightRangePlacement.uniform(VerticalAnchor.absolute(CommonConfig.LARVIKITE_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.LARVIKITE_MAX_HEIGHT.get())))));
+    public static PlacedFeature LARVIKITE = PlacementUtils.register("larvikite", FeatureUtils.register("larvikite", Feature.ORE.configured(new OreConfiguration(OreFeatures.STONE_ORE_REPLACEABLES, InitRockBlocks.ROCK_BLOCKS.get(RockType.LARVIKITE).get().defaultBlockState(), CommonConfig.LARVIKITE_SIZE.get()))).placed(BaseOreGenerator.commonOrePlacement(CommonConfig.LARVIKITE_CHANCE.get(), HeightRangePlacement.uniform(VerticalAnchor.absolute(CommonConfig.LARVIKITE_MIN_HEIGHT.get()), VerticalAnchor.absolute(CommonConfig.LARVIKITE_MAX_HEIGHT.get())))));
 
     public static final CustomOre basalt = new CustomOre("basalt", BASALT, CommonConfig.BASALT_GENERATION.get(), CommonConfig.BASALT_WHITELIST_MODE.get(), CommonConfig.BASALT_BIOME_LIST.get());
     public static final CustomOre slate = new CustomOre("slate", SLATE, CommonConfig.SLATE_GENERATION.get(), CommonConfig.SLATE_WHITELIST_MODE.get(), CommonConfig.SLATE_BIOME_LIST.get());

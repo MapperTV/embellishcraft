@@ -43,7 +43,10 @@ public class FurnitureRecipes extends ECRecipes
             ShapedRecipeBuilder.shaped(InitFurnitureBlocks.COUCH_BLOCKS.get(DyeColor.byId(j)).get(), 3).pattern("w ").pattern("ww").pattern("pp").define('p', ItemTags.WOODEN_SLABS).define('w', ECConstants.McWools[j]).unlockedBy("has_" + DyeColor.byId(j).getSerializedName() + "_wool", has(ECConstants.McWools[j])).save(consumer);
 
             ShapedRecipeBuilder.shaped(InitFurnitureBlocks.PILLOW_BLOCKS.get(DyeColor.byId(j)).get()).pattern(" S ").pattern("SWS").pattern(" S ").define('S', Tags.Items.STRING).define('W', ECConstants.McWools[j]).unlockedBy("has_" + DyeColor.byId(j).getSerializedName() + "_wool", has(ECConstants.McWools[j])).save(consumer);
+        }
 
+        for(int j = 0; j < Arrays.stream(DyeColor.values()).count(); j++)
+        {
             ShapedRecipeBuilder.shaped(InitFurnitureBlocks.ACACIA_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).define('P', Blocks.ACACIA_PLANKS).define('W', ECConstants.McWools[j]).pattern("P P").pattern("WWW").pattern("PPP").group("fancy_beds").unlockedBy("has_acacia_planks", has(Blocks.ACACIA_PLANKS)).save(consumer);
             ShapedRecipeBuilder.shaped(InitFurnitureBlocks.BIRCH_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).define('P', Blocks.BIRCH_PLANKS).define('W', ECConstants.McWools[j]).pattern("P P").pattern("WWW").pattern("PPP").group("fancy_beds").unlockedBy("has_birch_planks", has(Blocks.BIRCH_PLANKS)).save(consumer);
             ShapedRecipeBuilder.shaped(InitFurnitureBlocks.DARK_OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).define('P', Blocks.DARK_OAK_PLANKS).define('W', ECConstants.McWools[j]).pattern("P P").pattern("WWW").pattern("PPP").group("fancy_beds").unlockedBy("has_dark_oak_planks", has(Blocks.DARK_OAK_PLANKS)).save(consumer);
@@ -53,7 +56,6 @@ public class FurnitureRecipes extends ECRecipes
             ShapedRecipeBuilder.shaped(InitFurnitureBlocks.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).define('P', Blocks.WARPED_PLANKS).define('W', ECConstants.McWools[j]).pattern("P P").pattern("WWW").pattern("PPP").group("fancy_beds").unlockedBy("has_warped_planks", has(Blocks.WARPED_PLANKS)).save(consumer);
             ShapedRecipeBuilder.shaped(InitFurnitureBlocks.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).define('P', Blocks.CRIMSON_PLANKS).define('W', ECConstants.McWools[j]).pattern("P P").pattern("WWW").pattern("PPP").group("fancy_beds").unlockedBy("has_crimson_planks", has(Blocks.CRIMSON_PLANKS)).save(consumer);
         }
-
         for(int j = 1; j < Arrays.stream(DyeColor.values()).count(); j++)
         {
             ShapelessRecipeBuilder.shapeless(InitFurnitureBlocks.PILLOW_BLOCKS.get(DyeColor.byId(j)).get()).requires(InitFurnitureBlocks.PILLOW_BLOCKS.get(DyeColor.byId(0)).get()).requires(DyeColor.byId(j).getTag()).unlockedBy("has_white_pillow", has(InitFurnitureBlocks.PILLOW_BLOCKS.get(DyeColor.byId(0)).get())).save(consumer, DyeColor.byId(j).getSerializedName() + "_pillow_from_white");
@@ -66,6 +68,8 @@ public class FurnitureRecipes extends ECRecipes
             ShapelessRecipeBuilder.shapeless(InitFurnitureBlocks.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).requires(InitFurnitureBlocks.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get()).requires(DyeColor.byId(j).getTag()).unlockedBy("has_white_jungle_fancy_bed", has(InitFurnitureBlocks.JUNGLE_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get())).save(consumer, DyeColor.byId(j).getSerializedName() + "_jungle_fancy_bed_from_white");
             ShapelessRecipeBuilder.shapeless(InitFurnitureBlocks.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).requires(InitFurnitureBlocks.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get()).requires(DyeColor.byId(j).getTag()).unlockedBy("has_white_oak_fancy_bed", has(InitFurnitureBlocks.OAK_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get())).save(consumer, DyeColor.byId(j).getSerializedName() + "_oak_fancy_bed_from_white");
             ShapelessRecipeBuilder.shapeless(InitFurnitureBlocks.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).requires(InitFurnitureBlocks.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get()).requires(DyeColor.byId(j).getTag()).unlockedBy("has_white_spruce_fancy_bed", has(InitFurnitureBlocks.SPRUCE_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get())).save(consumer, DyeColor.byId(j).getSerializedName() + "_spruce_fancy_bed_from_white");
+            ShapelessRecipeBuilder.shapeless(InitFurnitureBlocks.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).requires(InitFurnitureBlocks.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get()).requires(DyeColor.byId(j).getTag()).unlockedBy("has_white_warped_fancy_bed", has(InitFurnitureBlocks.WARPED_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get())).save(consumer, DyeColor.byId(j).getSerializedName() + "_warped_fancy_bed_from_white");
+            ShapelessRecipeBuilder.shapeless(InitFurnitureBlocks.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(j)).get()).requires(InitFurnitureBlocks.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get()).requires(DyeColor.byId(j).getTag()).unlockedBy("has_white_crimson_fancy_bed", has(InitFurnitureBlocks.CRIMSON_FANCY_BED_BLOCKS.get(DyeColor.byId(0)).get())).save(consumer, DyeColor.byId(j).getSerializedName() + "_crimson_fancy_bed_from_white");
         }
 
         // ShapedRecipeBuilder.shaped(InitFurnitureBlocks.LOCKER.get(), 2).define('P', BaseTags.ForgeItems.PLATES_STEEL).define('I', BaseTags.ForgeItems.INGOTS_STEEL).pattern(" P ").pattern("P
