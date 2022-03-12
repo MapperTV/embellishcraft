@@ -22,6 +22,7 @@ import tv.mapper.embellishcraft.core.config.EmbellishCraftConfig.CommonConfig;
 import tv.mapper.embellishcraft.core.proxy.ClientProxy;
 import tv.mapper.embellishcraft.core.proxy.IProxy;
 import tv.mapper.embellishcraft.core.proxy.ServerProxy;
+import tv.mapper.embellishcraft.furniture.world.entity.InitFurnitureEntities;
 import tv.mapper.embellishcraft.furniture.world.inventory.ModContainers;
 import tv.mapper.embellishcraft.furniture.world.item.InitFurnitureItems;
 import tv.mapper.embellishcraft.furniture.world.level.block.InitFurnitureBlocks;
@@ -58,6 +59,9 @@ public class EmbellishCraft
         InitBuildingItems.init();
         InitFurnitureItems.init();
         InitLightItems.init();
+
+        // Register Entities
+        InitFurnitureEntities.init();
 
         ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
