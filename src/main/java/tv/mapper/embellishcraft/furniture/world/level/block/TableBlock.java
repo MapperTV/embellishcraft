@@ -5,7 +5,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -15,6 +14,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -49,11 +49,6 @@ public class TableBlock extends CustomBlock implements SimpleWaterloggedBlock
     {
         super(properties, tool, tier);
         this.registerDefaultState(this.stateDefinition.any().setValue(TABLE_NORTH, true).setValue(TABLE_SOUTH, true).setValue(TABLE_EAST, true).setValue(TABLE_WEST, true).setValue(HAS_FOOT, true).setValue(WATERLOGGED, Boolean.valueOf(false)));
-    }
-
-    public boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos)
-    {
-        return canSupportCenter(worldIn, pos.below(), Direction.UP);
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
@@ -93,39 +88,45 @@ public class TableBlock extends CustomBlock implements SimpleWaterloggedBlock
         BlockState state_east = iblockreader.getBlockState(blockpos2);
         BlockState state_south = iblockreader.getBlockState(blockpos3);
         BlockState state_west = iblockreader.getBlockState(blockpos4);
-        boolean north = true;
-        boolean south = true;
-        boolean east = true;
-        boolean west = true;
+
+        boolean north = false;
+        boolean south = false;
+        boolean east = false;
+        boolean west = false;
         boolean has_foot = false;
 
-        if(state_west.getBlock() == this)
+        if(isFaceFull(iblockreader.getBlockState(blockpos.below()).getShape(iblockreader, blockpos.below()), Direction.UP))
         {
-            west = false;
-            north = false;
-        }
-        if(state_north.getBlock() == this)
-        {
-            north = false;
-            east = false;
-        }
-        if(state_east.getBlock() == this)
-        {
-            east = false;
-            south = false;
-        }
-        if(state_south.getBlock() == this)
-        {
-            south = false;
-            west = false;
-        }
+            if(state_west.getBlock() != this)
+            {
+                west = true;
+                north = true;
+            }
+            if(state_north.getBlock() != this)
+            {
+                north = true;
+                east = true;
+            }
+            if(state_east.getBlock() != this)
+            {
+                east = true;
+                south = true;
+            }
+            if(state_south.getBlock() != this)
+            {
+                south = true;
+                west = true;
+            }
 
-        if(north || south || east || west)
-            has_foot = true;
+            if(north || south || east || west)
+                has_foot = true;
+
+        }
 
         return super.getStateForPlacement(context).setValue(TABLE_NORTH, north).setValue(TABLE_SOUTH, south).setValue(TABLE_EAST, east).setValue(TABLE_WEST, west).setValue(HAS_FOOT, has_foot).setValue(WATERLOGGED, Boolean.valueOf(ifluidstate.getType() == Fluids.WATER));
     }
 
+    @SuppressWarnings("deprecation")
     public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
     {
         if(facing == Direction.DOWN && !this.canSurvive(stateIn, worldIn, currentPos))
@@ -172,6 +173,15 @@ public class TableBlock extends CustomBlock implements SimpleWaterloggedBlock
         if(north || south || east || west)
             has_foot = true;
 
+        if(!isFaceFull(iblockreader.getBlockState(currentPos.below()).getShape(iblockreader, currentPos.below()), Direction.UP))
+        {
+            north = false;
+            south = false;
+            east = false;
+            west = false;
+            has_foot = false;
+        }
+
         if(stateIn.getValue(WATERLOGGED))
         {
             worldIn.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
@@ -184,5 +194,11 @@ public class TableBlock extends CustomBlock implements SimpleWaterloggedBlock
     public FluidState getFluidState(BlockState state)
     {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+
+    @Override
+    public boolean isPathfindable(BlockState pState, BlockGetter pLevel, BlockPos pPos, PathComputationType pType)
+    {
+        return false;
     }
 }
