@@ -90,7 +90,7 @@ public class ECGenerators
         generator.addProvider(new FurnitureItemModels(generator, ECConstants.MODID, existingFileHelper));
         generator.addProvider(new LightItemModels(generator, ECConstants.MODID, existingFileHelper));
 
-        ECBlockTags blockTags = new ECBlockTags(generator, existingFileHelper);
+        ECBlockTags blockTags = new ECBlockTags(generator, ECConstants.MODID, existingFileHelper);
 
         generator.addProvider(blockTags);
         generator.addProvider(new ECItemTags(generator, blockTags, existingFileHelper));

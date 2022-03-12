@@ -18,7 +18,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import tv.mapper.embellishcraft.building.world.level.block.InitBuildingBlocks;
 import tv.mapper.embellishcraft.building.world.level.block.SuspendedStairsBlock;
-import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.ECTags;
 import tv.mapper.embellishcraft.core.util.RockType;
 import tv.mapper.embellishcraft.furniture.world.level.block.ChairBlock;
@@ -37,9 +36,9 @@ import tv.mapper.mapperbase.world.level.block.CustomLadderBlock;
 
 public class ECBlockTags extends BaseBlockTags
 {
-    public ECBlockTags(DataGenerator generatorIn, ExistingFileHelper existingFileHelper)
+    public ECBlockTags(DataGenerator generatorIn, String modid, ExistingFileHelper existingFileHelper)
     {
-        super(generatorIn, ECConstants.MODID, existingFileHelper);
+        super(generatorIn, modid, existingFileHelper);
     }
 
     @Override
@@ -82,7 +81,7 @@ public class ECBlockTags extends BaseBlockTags
         this.tag(BlockTags.FENCE_GATES).addTag(Tags.Blocks.FENCE_GATES);
     }
 
-    private void addTagsFromBlockType(Block block)
+    protected void addTagsFromBlockType(Block block)
     {
         if(block instanceof WallBlock)
             this.tag(BlockTags.WALLS).add(block);

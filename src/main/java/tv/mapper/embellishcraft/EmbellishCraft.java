@@ -70,7 +70,7 @@ public class EmbellishCraft
     {
         LOGGER.info("EmbellishCraft: setup started.");
 
-        if(ModList.get().isLoaded("embellishcraft-bop"))
+        if(ModList.get().isLoaded("embellishcraft_bop"))
             LOGGER.info("EmbellishCraft: BoP addon detected.");
 
         if(!CommonConfig.ENABLE_WORLDGEN.get())

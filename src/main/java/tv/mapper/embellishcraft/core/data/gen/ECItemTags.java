@@ -17,6 +17,7 @@ public class ECItemTags extends ItemTagsProvider
         super(generatorIn, provider, ECConstants.MODID, existingFileHelper);
     }
 
+    @Override
     public void addTags()
     {
         copy(Tags.Blocks.STONE, Tags.Items.STONE);
