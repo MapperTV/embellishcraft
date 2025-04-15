@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "embellishcraft:block/green_tiles_slab"
+    },
+    "type=double": {
+      "model": "embellishcraft:block/green_tiles"
+    },
+    "type=top": {
+      "model": "embellishcraft:block/green_tiles_slab_top"
+    }
+  }
+}

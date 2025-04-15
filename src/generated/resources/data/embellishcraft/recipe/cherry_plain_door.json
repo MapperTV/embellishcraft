@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "plain_doors",
+  "key": {
+    "B": {
+      "item": "minecraft:cherry_button"
+    },
+    "P": {
+      "item": "minecraft:cherry_log"
+    }
+  },
+  "pattern": [
+    "PP",
+    "PB",
+    "PP"
+  ],
+  "result": {
+    "count": 3,
+    "id": "embellishcraft:cherry_plain_door"
+  }
+}

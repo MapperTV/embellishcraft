@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/sturdy_table_inventory",
+  "textures": {
+    "side": "embellishcraft:block/cherry_sturdy_table_side",
+    "top": "embellishcraft:block/cherry_sturdy_table_top"
+  }
+}

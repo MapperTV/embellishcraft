@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:andesite_paving"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:andesite_paving_wall"
+  }
+}

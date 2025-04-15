@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:water_bucket"
+    },
+    "l": {
+      "item": "embellishcraft:steel_wall_ladder"
+    }
+  },
+  "pattern": [
+    "lll",
+    "lbl",
+    "lll"
+  ],
+  "result": {
+    "count": 8,
+    "id": "embellishcraft:rusty_wall_ladder"
+  }
+}

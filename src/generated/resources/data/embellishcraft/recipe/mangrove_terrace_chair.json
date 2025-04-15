@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "terrace_chairs",
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "W": {
+      "item": "minecraft:mangrove_pressure_plate"
+    }
+  },
+  "pattern": [
+    "S  ",
+    "SWS",
+    "S S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:mangrove_terrace_chair"
+  }
+}

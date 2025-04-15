@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d": {
+      "tag": "c:dyes/white"
+    },
+    "i": {
+      "item": "embellishcraft:blue_tiles"
+    }
+  },
+  "pattern": [
+    "iii",
+    "idi",
+    "iii"
+  ],
+  "result": {
+    "count": 8,
+    "id": "embellishcraft:skyblue_tiles"
+  }
+}

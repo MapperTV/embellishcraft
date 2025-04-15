@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "embellishcraft:white_corrugated_metal_plate_stairs"
+    },
+    {
+      "tag": "c:dyes/red"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:red_corrugated_metal_plate_stairs"
+  }
+}

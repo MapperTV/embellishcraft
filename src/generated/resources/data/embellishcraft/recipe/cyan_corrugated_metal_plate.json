@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "d": {
+      "tag": "c:dyes/cyan"
+    },
+    "i": {
+      "tag": "c:plates/steel"
+    }
+  },
+  "pattern": [
+    "iii",
+    "idi",
+    "iii"
+  ],
+  "result": {
+    "count": 16,
+    "id": "embellishcraft:cyan_corrugated_metal_plate"
+  }
+}

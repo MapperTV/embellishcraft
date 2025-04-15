@@ -1,0 +1,370 @@
+{
+  "values": {
+    "embellishcraft:acacia_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:acacia_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:acacia_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:acacia_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:acacia_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:acacia_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:acacia_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:acacia_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:acacia_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:birch_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:birch_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:birch_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:birch_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:birch_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:birch_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:birch_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:birch_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:birch_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:black_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:black_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:blue_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:blue_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:brown_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:brown_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:cherry_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:cherry_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:cherry_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:cherry_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:cherry_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:cherry_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:cherry_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:cherry_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:cherry_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:crimson_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:crimson_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:crimson_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:crimson_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:crimson_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:crimson_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:crimson_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:crimson_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:crimson_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:cyan_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:cyan_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:dark_oak_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:dark_oak_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:dark_oak_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:dark_oak_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:dark_oak_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:dark_oak_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:dark_oak_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:dark_oak_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:dark_oak_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:gray_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:gray_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:green_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:green_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:jungle_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:jungle_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:jungle_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:jungle_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:jungle_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:jungle_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:jungle_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:jungle_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:jungle_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:light_blue_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:light_blue_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:light_gray_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:light_gray_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:lime_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:lime_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:magenta_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:magenta_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:mangrove_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:mangrove_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:mangrove_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:mangrove_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:mangrove_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:mangrove_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:mangrove_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:mangrove_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:mangrove_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:oak_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:oak_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:oak_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:oak_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:oak_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:oak_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:oak_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:oak_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:oak_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:orange_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:orange_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:pink_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:pink_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:purple_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:purple_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:red_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:red_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:spruce_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:spruce_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:spruce_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:spruce_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:spruce_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:spruce_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:spruce_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:spruce_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:spruce_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:warped_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:warped_fancy_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:warped_large_suspended_stairs": {
+      "burn_time": 250
+    },
+    "embellishcraft:warped_plain_door": {
+      "burn_time": 200
+    },
+    "embellishcraft:warped_sturdy_table": {
+      "burn_time": 800
+    },
+    "embellishcraft:warped_suspended_stairs": {
+      "burn_time": 150
+    },
+    "embellishcraft:warped_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:warped_terrace_chair": {
+      "burn_time": 600
+    },
+    "embellishcraft:warped_terrace_table": {
+      "burn_time": 600
+    },
+    "embellishcraft:white_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:white_pillow": {
+      "burn_time": 200
+    },
+    "embellishcraft:yellow_couch": {
+      "burn_time": 800
+    },
+    "embellishcraft:yellow_pillow": {
+      "burn_time": 200
+    }
+  }
+}

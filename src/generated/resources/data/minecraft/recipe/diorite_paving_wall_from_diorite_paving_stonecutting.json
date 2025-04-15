@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:diorite_paving"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:diorite_paving_wall"
+  }
+}

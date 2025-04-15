@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_crates",
+  "key": {
+    "B": {
+      "item": "mapperbase:rivet"
+    },
+    "W": {
+      "item": "minecraft:mangrove_planks"
+    }
+  },
+  "pattern": [
+    "BWB",
+    "W W",
+    "BWB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:mangrove_wooden_crate"
+  }
+}

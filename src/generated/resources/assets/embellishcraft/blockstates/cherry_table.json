@@ -1,0 +1,48 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "embellishcraft:block/cherry_table_top"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/cherry_table_foot",
+        "uvlock": true
+      },
+      "when": {
+        "table_north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/cherry_table_foot",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "table_east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/cherry_table_foot",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "table_south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/cherry_table_foot",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "table_west": "true"
+      }
+    }
+  ]
+}

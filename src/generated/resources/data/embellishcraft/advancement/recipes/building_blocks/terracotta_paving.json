@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_terracotta": {
+      "conditions": {
+        "items": [
+          {
+            "items": "embellishcraft:polished_terracotta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "embellishcraft:terracotta_paving"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_terracotta"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "embellishcraft:terracotta_paving"
+    ]
+  }
+}

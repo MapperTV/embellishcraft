@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "embellishcraft:polished_gneiss"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:smooth_gneiss"
+  }
+}

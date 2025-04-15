@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:green_tiles"
+  },
+  "result": {
+    "count": 2,
+    "id": "embellishcraft:green_tiles_pressure_plate"
+  }
+}

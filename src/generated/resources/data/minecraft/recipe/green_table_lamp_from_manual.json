@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "embellishcraft:green_manual_table_lamp"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:green_table_lamp"
+  }
+}

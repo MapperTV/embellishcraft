@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "plain_doors",
+  "key": {
+    "B": {
+      "item": "minecraft:acacia_button"
+    },
+    "P": {
+      "item": "minecraft:acacia_log"
+    }
+  },
+  "pattern": [
+    "PP",
+    "PB",
+    "PP"
+  ],
+  "result": {
+    "count": 3,
+    "id": "embellishcraft:acacia_plain_door"
+  }
+}

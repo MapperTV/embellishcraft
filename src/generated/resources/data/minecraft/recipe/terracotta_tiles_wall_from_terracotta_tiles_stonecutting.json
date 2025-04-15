@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:terracotta_tiles"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:terracotta_tiles_wall"
+  }
+}

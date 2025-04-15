@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "terrace_chairs",
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "W": {
+      "item": "minecraft:dark_oak_pressure_plate"
+    }
+  },
+  "pattern": [
+    "S  ",
+    "SWS",
+    "S S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:dark_oak_terrace_chair"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "embellishcraft:block/magenta_tiles",
+    "side": "embellishcraft:block/magenta_tiles",
+    "top": "embellishcraft:block/magenta_tiles"
+  }
+}

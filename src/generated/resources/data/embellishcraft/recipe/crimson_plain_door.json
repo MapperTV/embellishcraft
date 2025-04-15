@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "plain_doors",
+  "key": {
+    "B": {
+      "item": "minecraft:crimson_button"
+    },
+    "P": {
+      "item": "minecraft:crimson_stem"
+    }
+  },
+  "pattern": [
+    "PP",
+    "PB",
+    "PP"
+  ],
+  "result": {
+    "count": 3,
+    "id": "embellishcraft:crimson_plain_door"
+  }
+}

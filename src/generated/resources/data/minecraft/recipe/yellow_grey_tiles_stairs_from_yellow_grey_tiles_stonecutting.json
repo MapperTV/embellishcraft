@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:yellow_grey_tiles"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:yellow_grey_tiles_stairs"
+  }
+}

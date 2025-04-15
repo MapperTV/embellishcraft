@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "embellishcraft:granite_rooftiles"
-  },
-  "result": "embellishcraft:granite_rooftiles_stairs"
-}

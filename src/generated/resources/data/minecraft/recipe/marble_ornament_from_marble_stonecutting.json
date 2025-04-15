@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:marble"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:marble_ornament"
+  }
+}

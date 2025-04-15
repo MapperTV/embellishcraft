@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "fancy_doors",
+  "key": {
+    "B": {
+      "item": "minecraft:jungle_button"
+    },
+    "P": {
+      "item": "minecraft:jungle_planks"
+    }
+  },
+  "pattern": [
+    "PP",
+    "PB",
+    "PP"
+  ],
+  "result": {
+    "count": 3,
+    "id": "embellishcraft:jungle_fancy_door"
+  }
+}

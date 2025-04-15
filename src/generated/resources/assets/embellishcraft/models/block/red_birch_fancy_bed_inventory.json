@@ -1,8 +1,0 @@
-{
-  "parent": "embellishcraft:block/fancy_bed_inventory",
-  "textures": {
-    "bed": "embellishcraft:block/red_birch_fancy_bed_head",
-    "end": "embellishcraft:block/birch_fancy_bed_head_end",
-    "under": "minecraft:block/birch_planks"
-  }
-}

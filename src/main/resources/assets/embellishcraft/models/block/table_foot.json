@@ -3,8 +3,8 @@
 	"elements": [
 		{
 			"name": "table_foot",
-			"from": [0, 0, 0],
-			"to": [2, 14, 2],
+			"from": [1, 0, 1],
+			"to": [3, 14, 3],
 			"color": 6,
 			"faces": {
 				"north": {"uv": [0, 13, 14, 15], "rotation": 90, "texture": "#material"},

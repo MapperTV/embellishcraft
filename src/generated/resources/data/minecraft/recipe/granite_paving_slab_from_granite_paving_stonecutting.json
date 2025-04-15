@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:granite_paving"
+  },
+  "result": {
+    "count": 2,
+    "id": "embellishcraft:granite_paving_slab"
+  }
+}

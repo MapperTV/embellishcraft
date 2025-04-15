@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:polished_paving"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:polished_paving_stairs"
+  }
+}

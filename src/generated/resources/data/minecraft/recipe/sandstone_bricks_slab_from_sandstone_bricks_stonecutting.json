@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:sandstone_bricks"
+  },
+  "result": {
+    "count": 2,
+    "id": "embellishcraft:sandstone_bricks_slab"
+  }
+}

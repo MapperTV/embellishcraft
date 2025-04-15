@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:slate"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:slate_stairs"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "embellishcraft:iron_beam"
+    },
+    {
+      "item": "mapperbase:rivet"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:bolted_iron_beam"
+  }
+}

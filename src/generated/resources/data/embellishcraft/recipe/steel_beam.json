@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "i": {
+      "tag": "c:ingots/steel"
+    }
+  },
+  "pattern": [
+    "iii"
+  ],
+  "result": {
+    "count": 9,
+    "id": "embellishcraft:steel_beam"
+  }
+}

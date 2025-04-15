@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "embellishcraft:white_steel_door"
+    },
+    "P": {
+      "tag": "c:plates/steel"
+    }
+  },
+  "pattern": [
+    "D",
+    "P"
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:sturdy_white_steel_door"
+  }
+}

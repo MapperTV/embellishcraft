@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:white_concrete_paving"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:white_concrete_paving_wall"
+  }
+}

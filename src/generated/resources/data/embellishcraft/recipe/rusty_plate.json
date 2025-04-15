@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d": {
+      "tag": "c:dyes/orange"
+    },
+    "i": {
+      "tag": "c:plates/steel"
+    }
+  },
+  "pattern": [
+    " i ",
+    "idi",
+    " i "
+  ],
+  "result": {
+    "count": 8,
+    "id": "embellishcraft:rusty_plate"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "i": {
+      "item": "embellishcraft:gneiss_cobblestone"
+    }
+  },
+  "pattern": [
+    " i ",
+    "i i",
+    " i "
+  ],
+  "result": {
+    "count": 4,
+    "id": "embellishcraft:gneiss_paving_stones"
+  }
+}

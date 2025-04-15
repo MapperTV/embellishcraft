@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "c:rods/steel"
+    },
+    "W": {
+      "tag": "c:plates/steel"
+    }
+  },
+  "pattern": [
+    "S  ",
+    "SWS",
+    "S S"
+  ],
+  "result": {
+    "count": 4,
+    "id": "embellishcraft:steel_terrace_chair"
+  }
+}

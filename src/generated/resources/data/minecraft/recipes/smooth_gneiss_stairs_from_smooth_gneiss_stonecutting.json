@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "embellishcraft:smooth_gneiss"
-  },
-  "result": "embellishcraft:smooth_gneiss_stairs"
-}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "embellishcraft:larvikite"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:larvikite_button"
+  }
+}

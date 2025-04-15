@@ -1,0 +1,6 @@
+{
+  "parent": "embellishcraft:block/table_inventory",
+  "textures": {
+    "material": "minecraft:block/mangrove_planks"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "d": {
+      "tag": "c:dyes/light_gray"
+    },
+    "i": {
+      "tag": "c:plates/steel"
+    }
+  },
+  "pattern": [
+    "iii",
+    "idi",
+    "iii"
+  ],
+  "result": {
+    "count": 16,
+    "id": "embellishcraft:light_gray_corrugated_metal_plate"
+  }
+}

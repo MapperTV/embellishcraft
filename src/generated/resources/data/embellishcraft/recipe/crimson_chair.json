@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "chairs",
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "W": {
+      "item": "minecraft:crimson_slab"
+    }
+  },
+  "pattern": [
+    "S  ",
+    "SWS",
+    "S S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:crimson_chair"
+  }
+}

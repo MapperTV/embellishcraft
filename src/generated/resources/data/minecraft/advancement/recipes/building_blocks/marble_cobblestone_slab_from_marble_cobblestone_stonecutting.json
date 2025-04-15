@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_marble_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "embellishcraft:marble_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:marble_cobblestone_slab_from_marble_cobblestone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_marble_cobblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:marble_cobblestone_slab_from_marble_cobblestone_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/table_foot",
+  "textures": {
+    "material": "minecraft:block/mangrove_planks",
+    "particle": "minecraft:block/mangrove_planks"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "i": {
+      "item": "embellishcraft:beige_flower_wallpaper_slab"
+    }
+  },
+  "pattern": [
+    "i",
+    "i"
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:beige_flower_wallpaper"
+  }
+}

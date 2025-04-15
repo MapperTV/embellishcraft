@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d": {
+      "tag": "minecraft:soul_fire_base_blocks"
+    },
+    "i": {
+      "item": "minecraft:bricks"
+    }
+  },
+  "pattern": [
+    "iii",
+    "idi",
+    "iii"
+  ],
+  "result": {
+    "count": 9,
+    "id": "embellishcraft:weared_bricks"
+  }
+}

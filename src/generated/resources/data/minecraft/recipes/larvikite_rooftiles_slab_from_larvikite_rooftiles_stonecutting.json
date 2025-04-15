@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "embellishcraft:larvikite_rooftiles"
-  },
-  "result": "embellishcraft:larvikite_rooftiles_slab"
-}

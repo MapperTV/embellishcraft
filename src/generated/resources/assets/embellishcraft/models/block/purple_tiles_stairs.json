@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "embellishcraft:block/purple_tiles",
+    "side": "embellishcraft:block/purple_tiles",
+    "top": "embellishcraft:block/purple_tiles"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "embellishcraft:block/sturdy_table_foot",
+  "textures": {
+    "particle": "minecraft:block/birch_planks",
+    "side": "embellishcraft:block/birch_sturdy_table_side",
+    "top": "embellishcraft:block/birch_sturdy_table_top"
+  }
+}

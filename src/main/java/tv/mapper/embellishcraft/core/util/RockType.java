@@ -1,10 +1,10 @@
 package tv.mapper.embellishcraft.core.util;
 
-import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.level.material.MapColor;
-
 import java.util.Arrays;
 import java.util.Comparator;
+
+import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.level.material.MapColor;
 
 public enum RockType implements StringRepresentable
 {

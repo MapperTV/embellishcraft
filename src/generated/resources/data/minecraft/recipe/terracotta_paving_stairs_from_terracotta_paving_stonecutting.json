@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:terracotta_paving"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:terracotta_paving_stairs"
+  }
+}

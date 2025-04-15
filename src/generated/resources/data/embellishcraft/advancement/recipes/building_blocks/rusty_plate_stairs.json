@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rusty_plate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "embellishcraft:rusty_plate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "embellishcraft:rusty_plate_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rusty_plate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "embellishcraft:rusty_plate_stairs"
+    ]
+  }
+}

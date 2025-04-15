@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "embellishcraft:polished_jade"
-  },
-  "result": "embellishcraft:polished_jade_stairs"
-}

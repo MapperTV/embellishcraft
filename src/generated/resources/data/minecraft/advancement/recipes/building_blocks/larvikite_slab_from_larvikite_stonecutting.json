@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_larvikite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "embellishcraft:larvikite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:larvikite_slab_from_larvikite_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_larvikite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:larvikite_slab_from_larvikite_stonecutting"
+    ]
+  }
+}

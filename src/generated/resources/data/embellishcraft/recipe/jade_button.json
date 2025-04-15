@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "embellishcraft:jade"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:jade_button"
+  }
+}

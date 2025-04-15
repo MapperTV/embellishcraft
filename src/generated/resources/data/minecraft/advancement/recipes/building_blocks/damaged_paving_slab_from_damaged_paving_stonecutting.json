@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_damaged_paving": {
+      "conditions": {
+        "items": [
+          {
+            "items": "embellishcraft:damaged_paving"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:damaged_paving_slab_from_damaged_paving_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_damaged_paving"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:damaged_paving_slab_from_damaged_paving_stonecutting"
+    ]
+  }
+}

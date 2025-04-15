@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "p": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "w": {
+      "item": "minecraft:cyan_wool"
+    }
+  },
+  "pattern": [
+    "w ",
+    "ww",
+    "pp"
+  ],
+  "result": {
+    "count": 3,
+    "id": "embellishcraft:cyan_couch"
+  }
+}

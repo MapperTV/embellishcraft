@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "suspended_stairs",
+  "key": {
+    "P": {
+      "item": "minecraft:birch_planks"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "  P",
+    " PS",
+    "PS "
+  ],
+  "result": {
+    "count": 4,
+    "id": "embellishcraft:birch_large_suspended_stairs"
+  }
+}

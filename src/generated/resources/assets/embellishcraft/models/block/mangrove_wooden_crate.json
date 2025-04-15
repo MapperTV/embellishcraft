@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "embellishcraft:block/mangrove_wooden_crate_top",
+    "side": "embellishcraft:block/mangrove_wooden_crate"
+  }
+}

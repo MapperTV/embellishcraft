@@ -1,8 +1,0 @@
-{
-  "parent": "embellishcraft:block/fancy_table_top",
-  "textures": {
-    "particle": "minecraft:block/birch_planks",
-    "side": "embellishcraft:block/birch_fancy_table_side",
-    "top": "embellishcraft:block/birch_fancy_table_top"
-  }
-}

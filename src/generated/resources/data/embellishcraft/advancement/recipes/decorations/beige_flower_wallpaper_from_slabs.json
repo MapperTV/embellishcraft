@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_beige_flower_wallpaper_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "embellishcraft:beige_flower_wallpaper_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "embellishcraft:beige_flower_wallpaper_from_slabs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_beige_flower_wallpaper_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "embellishcraft:beige_flower_wallpaper_from_slabs"
+    ]
+  }
+}

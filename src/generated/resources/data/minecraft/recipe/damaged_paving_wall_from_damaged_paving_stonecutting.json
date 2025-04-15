@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:damaged_paving"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:damaged_paving_wall"
+  }
+}

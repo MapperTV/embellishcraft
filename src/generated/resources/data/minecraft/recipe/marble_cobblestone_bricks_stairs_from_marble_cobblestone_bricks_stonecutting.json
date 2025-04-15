@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:marble_cobblestone_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:marble_cobblestone_bricks_stairs"
+  }
+}

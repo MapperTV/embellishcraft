@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "tag": "c:dyes/gray"
+    },
+    "l": {
+      "tag": "c:dyes/pink"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    },
+    "s": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "  s",
+    "lps",
+    "g s"
+  ],
+  "result": {
+    "count": 3,
+    "id": "embellishcraft:beige_flower_wallpaper"
+  }
+}

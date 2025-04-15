@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "embellishcraft:smooth_jade"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:polished_jade"
+  }
+}

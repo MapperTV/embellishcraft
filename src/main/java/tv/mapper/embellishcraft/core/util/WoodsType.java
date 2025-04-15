@@ -7,6 +7,7 @@ import net.minecraft.util.StringRepresentable;
 
 public enum WoodsType implements StringRepresentable
 {
+    // Vanilla
     OAK(0, "oak", "chene"),
     BIRCH(1, "birch", "bouleau"),
     SPRUCE(2, "spruce", "sapin"),
@@ -16,16 +17,19 @@ public enum WoodsType implements StringRepresentable
     WARPED(6, "warped", "bois biscornu"),
     CRIMSON(7, "crimson", "bois carmin"),
     CHERRY(8, "cherry", "cerisier"),
-    DEAD(9, "dead", "bois mort"),
-    FIR(10, "fir", "sapin"),
-    HELLBARK(11, "hellbark", "ecorce infernale"),
-    JACARANDA(12, "jacaranda", "jacaranda"),
-    MAGIC(13, "magic", "bois magique"),
-    MAHOGANY(14, "mahogany", "acajou"),
-    PALM(15, "palm", "palmier"),
-    REDWOOD(16, "redwood", "sequoia"),
-    UMBRAN(17, "umbran", "bois sinistre"),
-    WILLOW(18, "willow", "saule");
+    MANGROVE(9, "mangrove", "paletuvier"),
+    PALE_OAK(10, "pale_oak", "chene pale"), // 1.21.4+
+    // BoP
+    DEAD(11, "dead", "bois mort"),
+    FIR(12, "fir", "sapin"),
+    HELLBARK(13, "hellbark", "ecorce infernale"),
+    JACARANDA(14, "jacaranda", "jacaranda"),
+    MAGIC(15, "magic", "bois magique"),
+    MAHOGANY(16, "mahogany", "acajou"),
+    PALM(17, "palm", "palmier"),
+    REDWOOD(18, "redwood", "sequoia"),
+    UMBRAN(19, "umbran", "bois sinistre"),
+    WILLOW(20, "willow", "saule");
 
     private static final WoodsType[] VALUES = Arrays.stream(values()).sorted(Comparator.comparingInt(WoodsType::getId)).toArray((map) ->
     {

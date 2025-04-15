@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "tables",
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "W": {
+      "item": "minecraft:birch_slab"
+    }
+  },
+  "pattern": [
+    "SWS",
+    "S S",
+    "S S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:birch_table"
+  }
+}

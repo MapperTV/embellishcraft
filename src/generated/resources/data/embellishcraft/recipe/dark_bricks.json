@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d": {
+      "item": "minecraft:gray_concrete_powder"
+    },
+    "i": {
+      "item": "minecraft:bricks"
+    }
+  },
+  "pattern": [
+    "iii",
+    "idi",
+    "iii"
+  ],
+  "result": {
+    "count": 9,
+    "id": "embellishcraft:dark_bricks"
+  }
+}

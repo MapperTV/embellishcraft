@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "embellishcraft:item/mangrove_plain_door"
+  }
+}

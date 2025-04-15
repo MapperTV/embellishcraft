@@ -1,6 +1,6 @@
 package tv.mapper.embellishcraft.core.proxy;
 
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 
 public class ServerProxy implements IProxy
 {

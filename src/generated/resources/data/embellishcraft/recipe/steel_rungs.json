@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "r": {
+      "tag": "c:rods/steel"
+    }
+  },
+  "pattern": [
+    "r r",
+    " r "
+  ],
+  "result": {
+    "count": 8,
+    "id": "embellishcraft:steel_rungs"
+  }
+}

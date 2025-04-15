@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "embellishcraft:smooth_granite"
-  },
-  "result": "embellishcraft:smooth_granite_stairs"
-}

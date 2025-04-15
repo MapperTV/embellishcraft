@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:red_sandstone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:red_sandstone_button"
+  }
+}

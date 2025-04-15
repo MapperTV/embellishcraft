@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "embellishcraft:block/cyan_tiles_slab"
+    },
+    "type=double": {
+      "model": "embellishcraft:block/cyan_tiles"
+    },
+    "type=top": {
+      "model": "embellishcraft:block/cyan_tiles_slab_top"
+    }
+  }
+}

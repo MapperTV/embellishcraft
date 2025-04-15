@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "embellishcraft:beige_flower_wallpaper"
-  },
-  "result": "embellishcraft:beige_flower_wallpaper_slab"
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "embellishcraft:red_sandstone_tiles"
-  },
-  "result": "embellishcraft:red_sandstone_tiles_wall"
-}

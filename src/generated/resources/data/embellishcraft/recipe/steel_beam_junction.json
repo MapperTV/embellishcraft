@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "embellishcraft:steel_beam"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:steel_beam_junction"
+  }
+}

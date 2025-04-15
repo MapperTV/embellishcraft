@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "embellishcraft:marble_tiles"
-  },
-  "result": "embellishcraft:marble_tiles_slab"
-}

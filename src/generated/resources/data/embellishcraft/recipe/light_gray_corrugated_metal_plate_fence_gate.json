@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "embellishcraft:light_gray_corrugated_metal_plate"
+    },
+    "S": {
+      "tag": "c:rods/steel"
+    }
+  },
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "result": {
+    "count": 6,
+    "id": "embellishcraft:light_gray_corrugated_metal_plate_fence_gate"
+  }
+}

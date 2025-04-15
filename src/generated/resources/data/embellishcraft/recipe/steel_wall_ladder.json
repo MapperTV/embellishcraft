@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "i": {
+      "tag": "c:ingots/steel"
+    },
+    "r": {
+      "tag": "c:rods/steel"
+    }
+  },
+  "pattern": [
+    "r r",
+    "iri",
+    "r r"
+  ],
+  "result": {
+    "count": 16,
+    "id": "embellishcraft:steel_wall_ladder"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "s": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "w": {
+      "item": "embellishcraft:white_green_wallpaper"
+    }
+  },
+  "pattern": [
+    "w",
+    "s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:white_green_wallpaper_plinth"
+  }
+}

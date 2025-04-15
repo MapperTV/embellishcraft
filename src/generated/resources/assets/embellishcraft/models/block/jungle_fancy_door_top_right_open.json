@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right_open",
+  "textures": {
+    "bottom": "embellishcraft:block/jungle_fancy_door_bottom",
+    "top": "embellishcraft:block/jungle_fancy_door_top"
+  }
+}

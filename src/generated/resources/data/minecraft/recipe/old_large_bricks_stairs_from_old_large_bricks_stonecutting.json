@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:old_large_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:old_large_bricks_stairs"
+  }
+}

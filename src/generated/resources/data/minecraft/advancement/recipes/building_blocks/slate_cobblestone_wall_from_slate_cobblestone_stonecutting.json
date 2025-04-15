@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_slate_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "embellishcraft:slate_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:slate_cobblestone_wall_from_slate_cobblestone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_slate_cobblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:slate_cobblestone_wall_from_slate_cobblestone_stonecutting"
+    ]
+  }
+}

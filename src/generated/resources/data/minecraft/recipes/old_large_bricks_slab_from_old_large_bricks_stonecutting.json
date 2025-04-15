@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "embellishcraft:old_large_bricks"
-  },
-  "result": "embellishcraft:old_large_bricks_slab"
-}

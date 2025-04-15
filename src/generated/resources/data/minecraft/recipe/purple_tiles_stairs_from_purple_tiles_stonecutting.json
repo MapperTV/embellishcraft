@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embellishcraft:purple_tiles"
+  },
+  "result": {
+    "count": 1,
+    "id": "embellishcraft:purple_tiles_stairs"
+  }
+}
