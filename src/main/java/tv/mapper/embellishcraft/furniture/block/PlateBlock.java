@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -103,6 +104,23 @@ public class PlateBlock extends CustomBlock implements SimpleWaterloggedBlock
             }
 
         }
+        else if(player.isShiftKeyDown() && state.getValue(PLATES) > 0)
+        {
+            if(state.getValue(PLATES) == 1)
+                worldIn.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
+            else
+                worldIn.setBlockAndUpdate(pos, state.setValue(PLATES, state.getValue(PLATES) - 1));
+
+            if(!worldIn.isClientSide)
+                worldIn.playSound(null, pos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, SoundSource.BLOCKS, 1.0F, 1.0F);
+
+            if(!player.isCreative())
+            {
+                ItemStack drop = new ItemStack(InitFurnitureBlocks.PLATE.get());
+                Containers.dropItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
+            }
+        }
+
         return InteractionResult.FAIL;
     }
 
