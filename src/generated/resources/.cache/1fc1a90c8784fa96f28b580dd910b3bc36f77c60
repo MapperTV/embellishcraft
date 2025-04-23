@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-01T22:22:56.4779809	EmbellishCraft Furniture Item Models
+// 1.21.1	2025-04-21T23:28:08.0566141	EmbellishCraft Furniture Item Models
 9d22d1cc02fe75aa874a5a04cdc296e1787b52f4 assets/embellishcraft/models/item/acacia_chair.json
 d24bce336b316bd3a3b39eee8e7564df779fd8ff assets/embellishcraft/models/item/acacia_sturdy_table.json
 44a83c4072656d3a258fb2767a6561cf6e2cfe19 assets/embellishcraft/models/item/acacia_table.json
@@ -71,7 +71,7 @@ c76069fbdeb7a678c7717a28b59452eecbad94e6 assets/embellishcraft/models/item/orang
 0de234e0a367dc0f01eb8a530bd8650ace131a00 assets/embellishcraft/models/item/orange_pillow.json
 f70fcd9a791f1bbfcb0fe00b8ad8b3234a7114ba assets/embellishcraft/models/item/pink_couch.json
 66564720acdf4f0c0d39ae037c089e24fb11faf2 assets/embellishcraft/models/item/pink_pillow.json
-b55e43bbef1b47505a1b5659e9caae96fd6bb7b3 assets/embellishcraft/models/item/plate.json
+fb75c2728deaf5d37119d9460121ed73de50fdd8 assets/embellishcraft/models/item/plate.json
 2f1b5b024027872ede57457694d2f273d65b24fd assets/embellishcraft/models/item/purple_couch.json
 b15c77a95c36d97ea2feafd958bd8a0b1ff12b6e assets/embellishcraft/models/item/purple_pillow.json
 e32554b0e120fcaed548fc5a422a578d12b8219f assets/embellishcraft/models/item/red_couch.json

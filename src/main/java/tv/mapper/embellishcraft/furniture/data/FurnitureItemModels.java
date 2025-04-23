@@ -39,7 +39,7 @@ public class FurnitureItemModels extends ECItemModels
             getBuilder(color + "_pillow").parent(new UncheckedModelFile(modid + ":block/" + color + "_pillow"));
         }
 
-        getBuilder("plate").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/plate"));
+        getBuilder("plate").parent(new UncheckedModelFile(modid + ":block/plate_1"));
 
         // Crates, chests, beds
         for(int j = 0; j < Arrays.stream(McWoods.values()).count(); j++)
