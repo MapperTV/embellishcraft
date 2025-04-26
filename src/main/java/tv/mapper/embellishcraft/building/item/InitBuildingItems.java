@@ -111,48 +111,6 @@ public class InitBuildingItems
     public static final DeferredItem<BlockItem> SKYBLUE_TILES_WALL_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("skyblue_tiles_wall", InitBuildingBlocks.SKYBLUE_TILES_WALL);
     public static final DeferredItem<BlockItem> SKYBLUE_TILES_PRESSURE_PLATE_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("skyblue_tiles_pressure_plate", InitBuildingBlocks.SKYBLUE_TILES_PRESSURE_PLATE);
 
-    // public static final DeferredItem<BlockItem> ORANGE_TILES_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("orange_tiles", InitBuildingBlocks.ORANGE_TILES);
-    // public static final DeferredItem<BlockItem> ORANGE_TILES_STAIRS_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("orange_tiles_stairs", InitBuildingBlocks.ORANGE_TILES_STAIRS);
-    // public static final DeferredItem<BlockItem> ORANGE_TILES_SLAB_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("orange_tiles_slab", InitBuildingBlocks.ORANGE_TILES_SLAB);
-    // public static final DeferredItem<BlockItem> ORANGE_TILES_WALL_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("orange_tiles_wall", InitBuildingBlocks.ORANGE_TILES_WALL);
-    // public static final DeferredItem<BlockItem> ORANGE_TILES_PRESSURE_PLATE_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("orange_tiles_pressure_plate",
-    // InitBuildingBlocks.ORANGE_TILES_PRESSURE_PLATE);
-    //
-    // public static final DeferredItem<BlockItem> BLUE_TILES_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("blue_tiles", InitBuildingBlocks.BLUE_TILES);
-    // public static final DeferredItem<BlockItem> BLUE_TILES_STAIRS_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("blue_tiles_stairs", InitBuildingBlocks.BLUE_TILES_STAIRS);
-    // public static final DeferredItem<BlockItem> BLUE_TILES_SLAB_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("blue_tiles_slab", InitBuildingBlocks.BLUE_TILES_SLAB);
-    // public static final DeferredItem<BlockItem> BLUE_TILES_WALL_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("blue_tiles_wall", InitBuildingBlocks.BLUE_TILES_WALL);
-    // public static final DeferredItem<BlockItem> BLUE_TILES_PRESSURE_PLATE_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("blue_tiles_pressure_plate",
-    // InitBuildingBlocks.BLUE_TILES_PRESSURE_PLATE);
-    //
-    // public static final DeferredItem<BlockItem> LIGHT_BLUE_TILES_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("light_blue_tiles", InitBuildingBlocks.LIGHT_BLUE_TILES);
-    // public static final DeferredItem<BlockItem> LIGHT_BLUE_TILES_STAIRS_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("light_blue_tiles_stairs", InitBuildingBlocks.LIGHT_BLUE_TILES_STAIRS);
-    // public static final DeferredItem<BlockItem> LIGHT_BLUE_TILES_SLAB_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("light_blue_tiles_slab", InitBuildingBlocks.LIGHT_BLUE_TILES_SLAB);
-    // public static final DeferredItem<BlockItem> LIGHT_BLUE_TILES_WALL_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("light_blue_tiles_wall", InitBuildingBlocks.LIGHT_BLUE_TILES_WALL);
-    // public static final DeferredItem<BlockItem> LIGHT_BLUE_TILES_PRESSURE_PLATE_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("light_blue_tiles_pressure_plate",
-    // InitBuildingBlocks.LIGHT_BLUE_TILES_PRESSURE_PLATE);
-    //
-    // public static final DeferredItem<BlockItem> RED_TILES_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("red_tiles", InitBuildingBlocks.RED_TILES);
-    // public static final DeferredItem<BlockItem> RED_TILES_STAIRS_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("red_tiles_stairs", InitBuildingBlocks.RED_TILES_STAIRS);
-    // public static final DeferredItem<BlockItem> RED_TILES_SLAB_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("red_tiles_slab", InitBuildingBlocks.RED_TILES_SLAB);
-    // public static final DeferredItem<BlockItem> RED_TILES_WALL_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("red_tiles_wall", InitBuildingBlocks.RED_TILES_WALL);
-    // public static final DeferredItem<BlockItem> RED_TILES_PRESSURE_PLATE_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("red_tiles_pressure_plate",
-    // InitBuildingBlocks.RED_TILES_PRESSURE_PLATE);
-    //
-    // public static final DeferredItem<BlockItem> WHITE_TILES_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("white_tiles", InitBuildingBlocks.WHITE_TILES);
-    // public static final DeferredItem<BlockItem> WHITE_TILES_STAIRS_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("white_tiles_stairs", InitBuildingBlocks.WHITE_TILES_STAIRS);
-    // public static final DeferredItem<BlockItem> WHITE_TILES_SLAB_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("white_tiles_slab", InitBuildingBlocks.WHITE_TILES_SLAB);
-    // public static final DeferredItem<BlockItem> WHITE_TILES_WALL_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("white_tiles_wall", InitBuildingBlocks.WHITE_TILES_WALL);
-    // public static final DeferredItem<BlockItem> WHITE_TILES_PRESSURE_PLATE_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("white_tiles_pressure_plate",
-    // InitBuildingBlocks.WHITE_TILES_PRESSURE_PLATE);
-    //
-    // public static final DeferredItem<BlockItem> YELLOW_TILES_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("yellow_tiles", InitBuildingBlocks.YELLOW_TILES);
-    // public static final DeferredItem<BlockItem> YELLOW_TILES_STAIRS_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("yellow_tiles_stairs", InitBuildingBlocks.YELLOW_TILES_STAIRS);
-    // public static final DeferredItem<BlockItem> YELLOW_TILES_SLAB_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("yellow_tiles_slab", InitBuildingBlocks.YELLOW_TILES_SLAB);
-    // public static final DeferredItem<BlockItem> YELLOW_TILES_WALL_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("yellow_tiles_wall", InitBuildingBlocks.YELLOW_TILES_WALL);
-    // public static final DeferredItem<BlockItem> YELLOW_TILES_PRESSURE_PLATE_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("yellow_tiles_pressure_plate",
-    // InitBuildingBlocks.YELLOW_TILES_PRESSURE_PLATE);
-
     public static final DeferredItem<BlockItem> YELLOW_GREY_TILES_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("yellow_grey_tiles", InitBuildingBlocks.YELLOW_GREY_TILES);
     public static final DeferredItem<BlockItem> YELLOW_GREY_TILES_STAIRS_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("yellow_grey_tiles_stairs", InitBuildingBlocks.YELLOW_GREY_TILES_STAIRS);
     public static final DeferredItem<BlockItem> YELLOW_GREY_TILES_SLAB_ITEM = BUILDING_ITEM_REGISTRY.registerSimpleBlockItem("yellow_grey_tiles_slab", InitBuildingBlocks.YELLOW_GREY_TILES_SLAB);
