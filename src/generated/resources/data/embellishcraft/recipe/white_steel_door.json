@@ -1,17 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "D": {
-      "tag": "c:dyes/white"
-    },
-    "P": {
+  "ingredients": [
+    {
       "item": "embellishcraft:steel_door"
+    },
+    {
+      "tag": "c:dyes/white"
     }
-  },
-  "pattern": [
-    "D",
-    "P"
   ],
   "result": {
     "count": 1,

@@ -1,17 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "D": {
-      "item": "embellishcraft:white_steel_door"
-    },
-    "P": {
+  "ingredients": [
+    {
       "tag": "c:plates/steel"
+    },
+    {
+      "item": "embellishcraft:white_steel_door"
     }
-  },
-  "pattern": [
-    "D",
-    "P"
   ],
   "result": {
     "count": 1,
