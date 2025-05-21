@@ -40,7 +40,7 @@ public class InitFurnitureBlocks
 
     public static final DeferredBlock<TerraceChairBlock> STEEL_TERRACE_CHAIR = FURNITURE_BLOCK_REGISTRY.register("steel_terrace_chair", () -> new TerraceChairBlock(Block.Properties.of().sound(SoundType.METAL).mapColor(MapColor.METAL).strength(0.75F, 0.5F).sound(SoundType.LANTERN), ToolTypes.PICKAXE));
 
-    public static final Map<DyeColor, DeferredBlock<CouchBlock>> COUCH_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, FURNITURE_BLOCK_REGISTRY.register(type.getSerializedName() + "_couch", () -> new CouchBlock(Block.Properties.of().sound(SoundType.WOOL).mapColor(type.getMapColor()).strength(1.5F, 6.0F).sound(SoundType.WOOL), ToolTypes.PICKAXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+    public static final Map<DyeColor, DeferredBlock<CouchBlock>> COUCH_BLOCKS = Arrays.stream(DyeColor.values()).map(type -> Pair.of(type, FURNITURE_BLOCK_REGISTRY.register(type.getSerializedName() + "_couch", () -> new CouchBlock(Block.Properties.of().sound(SoundType.WOOL).mapColor(type.getMapColor()).strength(1.5F, 6.0F).sound(SoundType.WOOL), ToolTypes.AXE)))).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
 
     public static final DeferredBlock<PlateBlock> PLATE = FURNITURE_BLOCK_REGISTRY.register("plate", () -> new PlateBlock(Block.Properties.of().sound(SoundType.GLASS).mapColor(MapColor.QUARTZ).strength(0.25F).sound(SoundType.GLASS), ToolTypes.NONE));
 

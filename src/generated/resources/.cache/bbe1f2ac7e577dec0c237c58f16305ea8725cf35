@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-01T22:22:56.4774478	Tags for minecraft:block mod id embellishcraft
+// 1.21.1	2025-05-20T22:49:27.8199211	Tags for minecraft:block mod id embellishcraft
 9127275fc1f4460869ee85ec44751025c0d4f999 data/c/tags/block/chairs.json
 fdca98bf16a2b9dbaa57c3f519136ede454224b7 data/c/tags/block/cobblestones.json
 5d71925f64007ead008683a90835eaae1ba5db65 data/c/tags/block/fences.json
@@ -24,8 +24,8 @@ be648badfdf0b36f62682af6c8499e8b4fb45710 data/minecraft/tags/block/climbable.jso
 f313121bdd828c2af312709a595ebc46a167cc46 data/minecraft/tags/block/doors.json
 f78912f9da23bd47b84f867d92ab9ca7488025bc data/minecraft/tags/block/fences.json
 bb5f31c76fdb1d6a620aa466e6963a1d07fbb182 data/minecraft/tags/block/fence_gates.json
-7ec9c614e981f1d5d66c0437e09e77e090cc196e data/minecraft/tags/block/mineable/axe.json
-fe591d7fd001600ec3f02725b571a2aedfb3957c data/minecraft/tags/block/mineable/pickaxe.json
+9b634333f04b91c1810079fbab3ffc164c25dd4f data/minecraft/tags/block/mineable/axe.json
+f35a73ea3937de06a62ca17e221edfc3cd91e534 data/minecraft/tags/block/mineable/pickaxe.json
 7ddeb49a19410ca73a259d71d31e44e8dd2895fa data/minecraft/tags/block/pressure_plates.json
 fa288676402966be6e0a023e990300fd87bad28c data/minecraft/tags/block/slabs.json
 9cbf3eafde48c73620cc61634e8b0d2596d050ad data/minecraft/tags/block/stairs.json
