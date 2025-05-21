@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/catwalk_railguard",
+  "textures": {
+    "guardrail": "embellishcraft:block/steel_beam",
+    "particle": "embellishcraft:block/steel_beam"
+  }
+}

@@ -1,11 +1,17 @@
 package tv.mapper.embellishcraft.industrial.data;
 
+import java.util.Objects;
+
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ModelFile.UncheckedModelFile;
+import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.ECBlockStates;
+import tv.mapper.embellishcraft.industrial.block.CatwalkBlock;
 import tv.mapper.embellishcraft.industrial.block.InitIndustrialBlocks;
 
 public class IndustrialBlockStates extends ECBlockStates
@@ -66,5 +72,25 @@ public class IndustrialBlockStates extends ECBlockStates
         doorBlock(InitIndustrialBlocks.RUSTY_DOOR.get(), modLoc("block/rusty_door_bottom"), modLoc("block/rusty_door_top"));
         doorBlock(InitIndustrialBlocks.STURDY_RUSTY_DOOR.get(), modLoc("block/sturdy_rusty_door_bottom"), modLoc("block/sturdy_rusty_door_top"));
         doorBlock(InitIndustrialBlocks.WARNING_RUSTY_DOOR.get(), modLoc("block/warning_rusty_door_bottom"), modLoc("block/warning_rusty_door_top"));
+
+        // Catwalks
+
+        catwalkBlock(InitIndustrialBlocks.IRON_CATWALK.get());
+
+    }
+
+    /**
+     * Creates a blockstate file for the modular catwalk blocks
+     */
+    private void catwalkBlock(Block block)
+    {
+        String name = Objects.requireNonNull(BuiltInRegistries.BLOCK.getKey(block)).getPath();
+        MultiPartBlockStateBuilder builder = getMultipartBuilder(block);
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_floor_bottom")).addModel().condition(CatwalkBlock.IS_UP, false).condition(CatwalkBlock.HAS_FLOOR, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_floor_top")).addModel().condition(CatwalkBlock.IS_UP, true).condition(CatwalkBlock.HAS_FLOOR, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_NORTH, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).rotationY(90).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_EAST, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).rotationY(180).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_SOUTH, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).rotationY(270).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_WEST, true).end();
     }
 }

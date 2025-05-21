@@ -7,6 +7,7 @@ import net.minecraft.world.item.DyeColor;
 import net.neoforged.neoforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.core.data.ECItemModels;
+import tv.mapper.embellishcraft.core.util.McWoods;
 
 public class IndustrialItemModels extends ECItemModels
 {
@@ -70,5 +71,8 @@ public class IndustrialItemModels extends ECItemModels
         getBuilder("rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/rusty_door"));
         getBuilder("sturdy_rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/sturdy_rusty_door"));
         getBuilder("warning_rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/warning_rusty_door"));
+        
+        // Catwalks
+        getBuilder("iron_catwalk").parent(new UncheckedModelFile(modid + ":block/iron_catwalk_inventory"));
     }
 }

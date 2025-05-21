@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-18T21:57:17.1352596	EmbellishCraft Industrial Loot Tables
+// 1.21.1	2025-05-14T23:05:26.3597522	EmbellishCraft Industrial Loot Tables
 0c4e0dc1a2ed1e54b26da003fa4c7fe22a3e07a5 data/embellishcraft/loot_table/blocks/air_duct.json
 1f7180e7f3ca008048631d2cc3b74f6734156a27 data/embellishcraft/loot_table/blocks/black_corrugated_metal_plate.json
 7a2b58e132ff5746ca90e4a39edf2712076bb003 data/embellishcraft/loot_table/blocks/black_corrugated_metal_plate_fence.json
@@ -54,6 +54,7 @@ d0074c1cf8392a13209df2c7261f38abeb9826da data/embellishcraft/loot_table/blocks/g
 41d1ce9a6e40be8911de0615ce02081e034e3ee1 data/embellishcraft/loot_table/blocks/grid_air_duct.json
 fc6f5f99121cb9864719a6bb72c3e43b00aa403e data/embellishcraft/loot_table/blocks/iron_beam.json
 350646bca07d35d314a598cba768ba6c56f5e568 data/embellishcraft/loot_table/blocks/iron_beam_junction.json
+289200e24fb9695e23b32c6a07bafa46ac538341 data/embellishcraft/loot_table/blocks/iron_catwalk.json
 ba3c83081ff83a32a837f2d18525b6fa321a7063 data/embellishcraft/loot_table/blocks/light_blue_corrugated_metal_plate.json
 c6fa0f6659e9e5d51bd9cb59df6ae6744df4f07e data/embellishcraft/loot_table/blocks/light_blue_corrugated_metal_plate_fence.json
 53be3d7397a10dcb0335d40e744f318b7dd7a69f data/embellishcraft/loot_table/blocks/light_blue_corrugated_metal_plate_fence_gate.json

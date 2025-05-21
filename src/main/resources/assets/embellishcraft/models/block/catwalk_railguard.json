@@ -1,0 +1,27 @@
+{
+	"ambientocclusion": false,
+	"elements": [
+		{
+			"name": "catwalk_railguard_body",
+			"from": [1, 1, 1],
+			"to": [15, 17, 2],
+			"faces": {
+				"north": {"uv": [0, 0, 14, 16], "texture": "#guardrail"},
+				"south": {"uv": [0, 0, 14, 16], "texture": "#guardrail"}
+			}
+		},
+		{
+			"name": "catwalk_railguard_top",
+			"from": [0, 17, 0],
+			"to": [16, 18, 3],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#guardrail"},
+				"east": {"uv": [0, 0, 3, 1], "texture": "#guardrail"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#guardrail"},
+				"west": {"uv": [0, 0, 3, 1], "texture": "#guardrail"},
+				"up": {"uv": [0, 0, 16, 3], "texture": "#guardrail"},
+				"down": {"uv": [0, 0, 16, 3], "texture": "#guardrail"}
+			}
+		}
+	]
+}

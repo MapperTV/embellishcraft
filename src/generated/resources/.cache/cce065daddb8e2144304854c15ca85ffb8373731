@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-18T21:57:17.1337199	EmbellishCraft Industrial Item Models
+// 1.21.1	2025-05-14T23:05:26.3577516	EmbellishCraft Industrial Item Models
 71468b5bb1ccd318d786f053f46fe8b7a1b7cbd8 assets/embellishcraft/models/item/air_duct.json
 c5e31ebb19f699bd4b937e6f65e6e4767ed33aaa assets/embellishcraft/models/item/black_corrugated_metal_plate.json
 e0ee8b9060d6c228b86d901c5eb66aff2ef53ac9 assets/embellishcraft/models/item/black_corrugated_metal_plate_fence.json
@@ -54,6 +54,7 @@ acb0d3d366a213186e47934c62c9b25ff2a3eae4 assets/embellishcraft/models/item/green
 b4612827f689e3982767234cce2ff4df5c35a224 assets/embellishcraft/models/item/grid_air_duct.json
 409812bdeb43e6a333eb59dc987183d023ca36b0 assets/embellishcraft/models/item/iron_beam.json
 0e511691eda602f1ee2aec0fe3b6c248295376fb assets/embellishcraft/models/item/iron_beam_junction.json
+8875b755f44847806f1e9d6ab766001885f00b5f assets/embellishcraft/models/item/iron_catwalk.json
 eebbd22a6ca5cb2b3c12424913561ca702a89687 assets/embellishcraft/models/item/light_blue_corrugated_metal_plate.json
 e1d148c24ad29f8b72cdac26ddf43443cc000f39 assets/embellishcraft/models/item/light_blue_corrugated_metal_plate_fence.json
 d2e4feb3ea8e6b6a1a66db0ffc70b3786a8d96ea assets/embellishcraft/models/item/light_blue_corrugated_metal_plate_fence_gate.json
