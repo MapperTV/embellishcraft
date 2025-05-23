@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "embellishcraft:steel_wall_ladder"
+    }
+  ],
+  "results": [
+    {
+      "id": "embellishcraft:rusty_wall_ladder"
+    }
+  ]
+}

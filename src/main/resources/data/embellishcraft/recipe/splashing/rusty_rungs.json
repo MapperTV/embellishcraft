@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "embellishcraft:steel_rungs"
+    }
+  ],
+  "results": [
+    {
+      "id": "embellishcraft:rusty_rungs"
+    }
+  ]
+}
