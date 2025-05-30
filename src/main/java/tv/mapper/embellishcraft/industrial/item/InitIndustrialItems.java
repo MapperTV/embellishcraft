@@ -78,4 +78,5 @@ public class InitIndustrialItems
     public static final DeferredItem<BlockItem> WARNING_RUSTY_DOOR_ITEM = INDUSTRIAL_ITEM_REGISTRY.registerSimpleBlockItem("warning_rusty_door", InitIndustrialBlocks.WARNING_RUSTY_DOOR);
 
     public static final DeferredItem<BlockItem> IRON_CATWALK_ITEM = INDUSTRIAL_ITEM_REGISTRY.registerSimpleBlockItem("iron_catwalk", InitIndustrialBlocks.IRON_CATWALK);
+    public static final DeferredItem<BlockItem> IRON_GUARDRAIL_ITEM = INDUSTRIAL_ITEM_REGISTRY.registerSimpleBlockItem("iron_cguardrail", InitIndustrialBlocks.IRON_GUARDRAIL);
 }

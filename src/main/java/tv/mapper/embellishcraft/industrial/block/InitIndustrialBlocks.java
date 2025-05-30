@@ -95,4 +95,5 @@ public class InitIndustrialBlocks
     public static final DeferredBlock<CustomDoorBlock> WARNING_RUSTY_DOOR = INDUSTRIAL_BLOCK_REGISTRY.register("warning_rusty_door", () -> new CustomDoorBlock(BlockSetType.IRON, Block.Properties.of().sound(SoundType.METAL).mapColor(MapColor.METAL).strength(3.0F).sound(SoundType.LANTERN).requiresCorrectToolForDrops(), ToolTypes.PICKAXE));
 
     public static final DeferredBlock<CatwalkBlock> IRON_CATWALK = INDUSTRIAL_BLOCK_REGISTRY.register("iron_catwalk", () -> new CatwalkBlock(Block.Properties.of().sound(SoundType.METAL).mapColor(MapColor.METAL).strength(3.0F).sound(SoundType.LANTERN).requiresCorrectToolForDrops(), ToolTypes.PICKAXE));
+    public static final DeferredBlock<GuardrailBlock> IRON_GUARDRAIL = INDUSTRIAL_BLOCK_REGISTRY.register("iron_guardrail", () -> new GuardrailBlock(Block.Properties.of().sound(SoundType.METAL).mapColor(MapColor.METAL).strength(3.0F).sound(SoundType.LANTERN).requiresCorrectToolForDrops(), ToolTypes.PICKAXE));
 }

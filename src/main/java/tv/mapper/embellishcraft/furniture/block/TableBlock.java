@@ -148,30 +148,6 @@ public class TableBlock extends CustomBlock implements SimpleWaterloggedBlock
         boolean west = true;
         boolean has_foot = false;
 
-        if(state_west.getBlock() == this)
-        {
-            west = false;
-            north = false;
-        }
-        if(state_north.getBlock() == this)
-        {
-            north = false;
-            east = false;
-        }
-        if(state_east.getBlock() == this)
-        {
-            east = false;
-            south = false;
-        }
-        if(state_south.getBlock() == this)
-        {
-            south = false;
-            west = false;
-        }
-
-        if(north || south || east || west)
-            has_foot = true;
-
         if(!isFaceFull(iblockreader.getBlockState(currentPos.below()).getShape(iblockreader, currentPos.below()), Direction.UP))
         {
             north = false;
@@ -179,6 +155,32 @@ public class TableBlock extends CustomBlock implements SimpleWaterloggedBlock
             east = false;
             west = false;
             has_foot = false;
+        }
+        else
+        {
+            if(state_west.getBlock() == this)
+            {
+                west = false;
+                north = false;
+            }
+            if(state_north.getBlock() == this)
+            {
+                north = false;
+                east = false;
+            }
+            if(state_east.getBlock() == this)
+            {
+                east = false;
+                south = false;
+            }
+            if(state_south.getBlock() == this)
+            {
+                south = false;
+                west = false;
+            }
+
+            if(north || south || east || west)
+                has_foot = true;
         }
 
         if(stateIn.getValue(WATERLOGGED))
