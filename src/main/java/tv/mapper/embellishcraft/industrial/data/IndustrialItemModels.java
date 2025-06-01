@@ -72,6 +72,7 @@ public class IndustrialItemModels extends ECItemModels
         getBuilder("warning_rusty_door").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/warning_rusty_door"));
 
         // Catwalks
-        getBuilder("iron_catwalk").parent(new UncheckedModelFile(modid + ":block/iron_catwalk_inventory"));
+        getBuilder("iron_catwalk").parent(new UncheckedModelFile(modid + ":block/iron_catwalk"));
+        getBuilder("iron_guardrail").parent(new UncheckedModelFile(modid + ":block/iron_guardrail"));
     }
 }

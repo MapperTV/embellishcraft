@@ -11,7 +11,7 @@ import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import tv.mapper.embellishcraft.core.ECConstants;
 import tv.mapper.embellishcraft.core.data.ECBlockStates;
-import tv.mapper.embellishcraft.industrial.block.CatwalkBlock;
+import tv.mapper.embellishcraft.industrial.block.GuardrailBlock;
 import tv.mapper.embellishcraft.industrial.block.InitIndustrialBlocks;
 
 public class IndustrialBlockStates extends ECBlockStates
@@ -75,22 +75,44 @@ public class IndustrialBlockStates extends ECBlockStates
 
         // Catwalks
 
-        catwalkBlock(InitIndustrialBlocks.IRON_CATWALK.get());
+        // catwalkBlock(InitIndustrialBlocks.IRON_CATWALK.get());
+        simpleBlock(InitIndustrialBlocks.IRON_CATWALK.get());
+        guardrailBlock(InitIndustrialBlocks.IRON_GUARDRAIL.get());
 
     }
 
     /**
      * Creates a blockstate file for the modular catwalk blocks
      */
-    private void catwalkBlock(Block block)
+    // private void catwalkBlock(Block block)
+    // {
+    // String name = Objects.requireNonNull(BuiltInRegistries.BLOCK.getKey(block)).getPath();
+    // MultiPartBlockStateBuilder builder = getMultipartBuilder(block);
+    // builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_floor_bottom")).addModel().condition(CatwalkBlock.IS_UP, false).condition(CatwalkBlock.HAS_FLOOR,
+    // true).end();
+    // builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_floor_top")).addModel().condition(CatwalkBlock.IS_UP, true).condition(CatwalkBlock.HAS_FLOOR,
+    // true).end();
+    // builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_NORTH, true).end();
+    // builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).rotationY(90).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_EAST, true).end();
+    // builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).rotationY(180).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_SOUTH, true).end();
+    // builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).rotationY(270).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_WEST, true).end();
+    // }
+
+    /**
+     * Creates a blockstate file for the modular catwalk blocks
+     */
+    private void guardrailBlock(Block block)
     {
         String name = Objects.requireNonNull(BuiltInRegistries.BLOCK.getKey(block)).getPath();
         MultiPartBlockStateBuilder builder = getMultipartBuilder(block);
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_floor_bottom")).addModel().condition(CatwalkBlock.IS_UP, false).condition(CatwalkBlock.HAS_FLOOR, true).end();
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_floor_top")).addModel().condition(CatwalkBlock.IS_UP, true).condition(CatwalkBlock.HAS_FLOOR, true).end();
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_NORTH, true).end();
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).rotationY(90).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_EAST, true).end();
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).rotationY(180).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_SOUTH, true).end();
-        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_railguard")).rotationY(270).uvLock(true).addModel().condition(CatwalkBlock.GUARDRAIL_WEST, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name)).uvLock(true).addModel().condition(GuardrailBlock.GUARDRAIL_NORTH, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name)).rotationY(90).uvLock(true).addModel().condition(GuardrailBlock.GUARDRAIL_EAST, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name)).rotationY(180).uvLock(true).addModel().condition(GuardrailBlock.GUARDRAIL_SOUTH, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name)).rotationY(270).uvLock(true).addModel().condition(GuardrailBlock.GUARDRAIL_WEST, true).end();
+
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_corner")).uvLock(true).addModel().condition(GuardrailBlock.CORNER_NW, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_corner")).rotationY(90).uvLock(true).addModel().condition(GuardrailBlock.CORNER_NE, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_corner")).rotationY(180).uvLock(true).addModel().condition(GuardrailBlock.CORNER_SE, true).end();
+        builder.part().modelFile(new UncheckedModelFile(ECConstants.MODID + ":block/" + name + "_corner")).rotationY(270).uvLock(true).addModel().condition(GuardrailBlock.CORNER_SW, true).end();
     }
 }

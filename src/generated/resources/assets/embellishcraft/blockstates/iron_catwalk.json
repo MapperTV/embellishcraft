@@ -1,61 +1,7 @@
 {
-  "multipart": [
-    {
-      "apply": {
-        "model": "embellishcraft:block/iron_catwalk_floor_bottom"
-      },
-      "when": {
-        "has_floor": "true",
-        "is_up": "false"
-      }
-    },
-    {
-      "apply": {
-        "model": "embellishcraft:block/iron_catwalk_floor_top"
-      },
-      "when": {
-        "has_floor": "true",
-        "is_up": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "embellishcraft:block/iron_catwalk_railguard",
-        "uvlock": true
-      },
-      "when": {
-        "guardrail_north": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "embellishcraft:block/iron_catwalk_railguard",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "guardrail_east": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "embellishcraft:block/iron_catwalk_railguard",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "guardrail_south": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "embellishcraft:block/iron_catwalk_railguard",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "guardrail_west": "true"
-      }
+  "variants": {
+    "": {
+      "model": "embellishcraft:block/iron_catwalk"
     }
-  ]
+  }
 }

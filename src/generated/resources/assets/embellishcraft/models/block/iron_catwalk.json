@@ -1,0 +1,7 @@
+{
+  "parent": "embellishcraft:block/catwalk",
+  "textures": {
+    "material": "embellishcraft:block/steel_beam_junction",
+    "particle": "embellishcraft:block/steel_beam_junction"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "embellishcraft:block/iron_guardrail",
+        "uvlock": true
+      },
+      "when": {
+        "guardrail_north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/iron_guardrail",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "guardrail_east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/iron_guardrail",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "guardrail_south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/iron_guardrail",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "guardrail_west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/iron_guardrail_corner",
+        "uvlock": true
+      },
+      "when": {
+        "corner_nw": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/iron_guardrail_corner",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "corner_ne": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/iron_guardrail_corner",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "corner_se": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "embellishcraft:block/iron_guardrail_corner",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "corner_sw": "true"
+      }
+    }
+  ]
+}

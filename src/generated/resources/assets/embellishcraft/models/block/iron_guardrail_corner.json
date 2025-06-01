@@ -1,0 +1,6 @@
+{
+  "parent": "embellishcraft:block/guardrail_corner",
+  "textures": {
+    "material": "embellishcraft:block/steel_beam_junction"
+  }
+}

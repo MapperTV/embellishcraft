@@ -51,25 +51,32 @@ public class IndustrialBlockModels extends ECBlockModels
         getBuilder("rusty_suspended_stairs").parent(getExistingFile(modLoc("block/suspended_stairs_text90"))).texture("all", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/rust"));
         getBuilder("steel_large_suspended_stairs").parent(getExistingFile(modLoc("block/large_suspended_stairs_text90"))).texture("all", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam"));
         getBuilder("rusty_large_suspended_stairs").parent(getExistingFile(modLoc("block/large_suspended_stairs_text90"))).texture("all", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/rust"));
-        
-        // Catwalks
-        getBuilder("iron_catwalk_floor_bottom").parent(getExistingFile(modLoc("block/catwalk_floor_bottom")))
-        .texture("top", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"))
-        .texture("side", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/warning_steel_door_bottom"))
-        .texture("particle", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"));
-        
-        getBuilder("iron_catwalk_floor_top").parent(getExistingFile(modLoc("block/catwalk_floor_top")))
-        .texture("top", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"))
-        .texture("side", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/warning_steel_door_bottom"))
-        .texture("particle", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"));
 
-        getBuilder("iron_catwalk_railguard").parent(getExistingFile(modLoc("block/catwalk_railguard")))
-        .texture("guardrail", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam"))
-        .texture("particle", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam"));
-        
-        getBuilder("iron_catwalk_inventory").parent(getExistingFile(modLoc("block/catwalk_inventory")))
-        .texture("top", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"))
-        .texture("side", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/warning_steel_door_bottom"))
-        .texture("guardrail", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam"));
+        // Catwalks
+
+        getBuilder("iron_catwalk").parent(getExistingFile(modLoc("block/catwalk"))).texture("material", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction")).texture("particle", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"));
+
+        // getBuilder("iron_catwalk_floor_bottom").parent(getExistingFile(modLoc("block/catwalk_floor_bottom")))
+        // .texture("top", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"))
+        // .texture("side", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/warning_steel_door_bottom"))
+        // .texture("particle", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"));
+        //
+        // getBuilder("iron_catwalk_floor_top").parent(getExistingFile(modLoc("block/catwalk_floor_top")))
+        // .texture("top", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"))
+        // .texture("side", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/warning_steel_door_bottom"))
+        // .texture("particle", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"));
+        //
+        // getBuilder("iron_catwalk_railguard").parent(getExistingFile(modLoc("block/catwalk_railguard")))
+        // .texture("guardrail", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam"))
+        // .texture("particle", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam"));
+        //
+        // getBuilder("iron_catwalk_inventory").parent(getExistingFile(modLoc("block/catwalk_inventory")))
+        // .texture("top", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"))
+        // .texture("side", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/warning_steel_door_bottom"))
+        // .texture("guardrail", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam"));
+
+        // Railguards
+        getBuilder("iron_guardrail").parent(getExistingFile(modLoc("block/guardrail"))).texture("material", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"));
+        getBuilder("iron_guardrail_corner").parent(getExistingFile(modLoc("block/guardrail_corner"))).texture("material", ResourceLocation.fromNamespaceAndPath(ECConstants.MODID, "block/steel_beam_junction"));
     }
 }
