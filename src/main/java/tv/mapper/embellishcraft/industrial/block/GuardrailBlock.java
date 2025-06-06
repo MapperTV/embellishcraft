@@ -73,13 +73,13 @@ public class GuardrailBlock extends CustomBlock
             shape = Shapes.or(shape, guardrail_east);
         if(state.getValue(GUARDRAIL_WEST))
             shape = Shapes.or(shape, guardrail_west);
-        
+
         if(state.getValue(CORNER_NW))
-            shape = Shapes.or(shape, corner_nw);        
+            shape = Shapes.or(shape, corner_nw);
         if(state.getValue(CORNER_SW))
-            shape = Shapes.or(shape, corner_sw);        
+            shape = Shapes.or(shape, corner_sw);
         if(state.getValue(CORNER_SE))
-            shape = Shapes.or(shape, corner_se);        
+            shape = Shapes.or(shape, corner_se);
         if(state.getValue(CORNER_NE))
             shape = Shapes.or(shape, corner_ne);
 
@@ -125,4 +125,53 @@ public class GuardrailBlock extends CustomBlock
 
         return this.defaultBlockState().setValue(GUARDRAIL_NORTH, north).setValue(GUARDRAIL_SOUTH, south).setValue(GUARDRAIL_EAST, east).setValue(GUARDRAIL_WEST, west).setValue(CORNER_NW, corner_nw).setValue(CORNER_NE, corner_ne).setValue(CORNER_SW, corner_sw).setValue(CORNER_SE, corner_se).setValue(WATERLOGGED, Boolean.valueOf(Boolean.valueOf(context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER)));
     }
+
+    // @Override
+    // public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit)
+    // {
+    // if(player.getMainHandItem().getItem() instanceof GuairdrailItemBlock)
+    // {
+    // EmbellishCraft.LOGGER.debug("Test: " + hit.distanceTo(player));
+    //
+    // }
+
+    // if(!player.isShiftKeyDown() && state.getValue(PLATES) < 8)
+    // {
+    // ItemStack stack = ItemStack.EMPTY;
+    // if(player.getMainHandItem().getItem() == InitFurnitureItems.PLATE_ITEM.get())
+    // stack = player.getMainHandItem();
+    // else if(player.getOffhandItem().getItem() == InitFurnitureItems.PLATE_ITEM.get())
+    // stack = player.getOffhandItem();
+    //
+    // if(stack.getItem() == InitFurnitureItems.PLATE_ITEM.get())
+    // {
+    // worldIn.setBlockAndUpdate(pos, state.setValue(PLATES, state.getValue(PLATES) + 1));
+    // if(!worldIn.isClientSide)
+    // worldIn.playSound(null, pos, SoundEvents.GLASS_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+    //
+    // if(!player.isCreative())
+    // stack.setCount(stack.getCount() - 1);
+    // return InteractionResult.SUCCESS;
+    // }
+    //
+    // }
+    // else if(player.isShiftKeyDown() && state.getValue(PLATES) > 0)
+    // {
+    // if(state.getValue(PLATES) == 1)
+    // worldIn.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
+    // else
+    // worldIn.setBlockAndUpdate(pos, state.setValue(PLATES, state.getValue(PLATES) - 1));
+    //
+    // if(!worldIn.isClientSide)
+    // worldIn.playSound(null, pos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, SoundSource.BLOCKS, 1.0F, 1.0F);
+    //
+    // if(!player.isCreative())
+    // {
+    // ItemStack drop = new ItemStack(InitFurnitureBlocks.PLATE.get());
+    // Containers.dropItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
+    // }
+    // }
+
+    // return InteractionResult.FAIL;
+    // }
 }

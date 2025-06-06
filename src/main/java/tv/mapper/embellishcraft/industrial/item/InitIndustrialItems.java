@@ -8,6 +8,7 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import tv.mapper.embellishcraft.core.ECConstants;
@@ -78,5 +79,5 @@ public class InitIndustrialItems
     public static final DeferredItem<BlockItem> WARNING_RUSTY_DOOR_ITEM = INDUSTRIAL_ITEM_REGISTRY.registerSimpleBlockItem("warning_rusty_door", InitIndustrialBlocks.WARNING_RUSTY_DOOR);
 
     public static final DeferredItem<BlockItem> IRON_CATWALK_ITEM = INDUSTRIAL_ITEM_REGISTRY.registerSimpleBlockItem("iron_catwalk", InitIndustrialBlocks.IRON_CATWALK);
-    public static final DeferredItem<BlockItem> IRON_GUARDRAIL_ITEM = INDUSTRIAL_ITEM_REGISTRY.registerSimpleBlockItem("iron_cguardrail", InitIndustrialBlocks.IRON_GUARDRAIL);
+    public static final DeferredItem<GuairdrailItemBlock> IRON_GUARDRAIL_ITEM = INDUSTRIAL_ITEM_REGISTRY.register("iron_guardrail", () -> new GuairdrailItemBlock(InitIndustrialBlocks.IRON_GUARDRAIL.get(), new Item.Properties()));
 }
