@@ -88,7 +88,7 @@ public class IndustrialRecipes extends ECRecipes
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, InitIndustrialBlocks.STEEL_SUSPENDED_STAIRS.get(), 8).define('P', BaseTags.Items.PLATES_STEEL).define('S', BaseTags.Items.RODS_STEEL).pattern("  P").pattern(" PS").pattern("PS ").unlockedBy("has_steel_plate", has(BaseTags.Items.PLATES_STEEL)).save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, InitIndustrialBlocks.RUSTY_SUSPENDED_STAIRS.get()).requires(InitIndustrialBlocks.STEEL_SUSPENDED_STAIRS.get()).requires(Items.WATER_BUCKET).unlockedBy("has_steel_suspended_stairs", has(InitIndustrialBlocks.STEEL_SUSPENDED_STAIRS.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, InitIndustrialBlocks.STEEL_LARGE_SUSPENDED_STAIRS.get(), 8).define('P', InitIndustrialBlocks.DARK_METAL_FLOOR_SLAB.get()).define('S', BaseTags.Items.RODS_STEEL).pattern("  P").pattern(" PS").pattern("PS ").unlockedBy("has_steel_plate", has(BaseTags.Items.PLATES_STEEL)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, InitIndustrialBlocks.RUSTY_LARGE_SUSPENDED_STAIRS.get()).requires(InitIndustrialBlocks.STEEL_SUSPENDED_STAIRS.get()).requires(Items.WATER_BUCKET).unlockedBy("has_steel_suspended_stairs", has(InitIndustrialBlocks.STEEL_SUSPENDED_STAIRS.get())).save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, InitIndustrialBlocks.RUSTY_LARGE_SUSPENDED_STAIRS.get()).requires(InitIndustrialBlocks.STEEL_LARGE_SUSPENDED_STAIRS.get()).requires(Items.WATER_BUCKET).unlockedBy("has_steel_large_suspended_stairs", has(InitIndustrialBlocks.STEEL_LARGE_SUSPENDED_STAIRS.get())).save(consumer);
 
         for(int j = 1; j < Arrays.stream(DyeColor.values()).count(); j++)
         {

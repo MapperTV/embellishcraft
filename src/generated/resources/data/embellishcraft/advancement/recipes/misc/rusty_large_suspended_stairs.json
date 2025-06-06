@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_steel_suspended_stairs": {
+    "has_steel_large_suspended_stairs": {
       "conditions": {
         "items": [
           {
-            "items": "embellishcraft:steel_suspended_stairs"
+            "items": "embellishcraft:steel_large_suspended_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_steel_suspended_stairs"
+      "has_steel_large_suspended_stairs"
     ]
   ],
   "rewards": {
